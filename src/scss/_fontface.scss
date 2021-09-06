@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'IBMPlexSans.woff';
+    src: url('../assets/fonts/subset-IBMPlexSans.woff2') format('woff2'),
+    url('../assets/fonts/subset-IBMPlexSans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'subset-IBMPlexSans.woff';
+    src: url('../assets/fonts/subset-IBMPlexSans-Bold.woff2') format('woff2'),
+    url('../assets/fonts/subset-IBMPlexSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}

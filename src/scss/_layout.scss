@@ -1,0 +1,11 @@
+.layout__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  //background-color: var(--main-background);
+}
+
+.layout__content {
+  flex: 1 1 100%;
+}
