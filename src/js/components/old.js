@@ -129,19 +129,19 @@ export const oldInit = () => {
       $(this).addClass('active');
       parrent.find('.app-header__language-body').slideToggle(400);
     });
-    $('.faq-block__item-title, .faq-block__item-icon').on('click', function (e) {
-      e.preventDefault();
-      var $this = $(this);
-      $this.closest('.faq-block__item').toggleClass('opened');
-
-      if ($this.closest('.faq-block__item').hasClass('opened')) {
-        setTimeout(function () {
-          $this.closest('.faq-block__item').find('.faq-block__item-body').slideToggle(400);
-        }, 100);
-      } else {
-        $this.closest('.faq-block__item').find('.faq-block__item-body').css('display', 'none');
-      }
-    });
+    // $('.faq-block__item-title, .faq-block__item-icon').on('click', function (e) {
+    //   e.preventDefault();
+    //   var $this = $(this);
+    //   $this.closest('.faq-block__item').toggleClass('opened');
+    //
+    //   if ($this.closest('.faq-block__item').hasClass('opened')) {
+    //     setTimeout(function () {
+    //       $this.closest('.faq-block__item').find('.faq-block__item-body').slideToggle(400);
+    //     }, 100);
+    //   } else {
+    //     $this.closest('.faq-block__item').find('.faq-block__item-body').css('display', 'none');
+    //   }
+    // });
 
     function yaMapInit() {
       if (typeof ymaps === "undefined" ? "undefined" : _typeof(ymaps)) {

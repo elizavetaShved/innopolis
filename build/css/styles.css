@@ -951,7 +951,6 @@ a.site-btn--1.disabled,
   right: 0;
   top: 50%;
   border-style: solid;
-  border: 5px 3px 0 3px;
   border-color: #fff transparent transparent; }
 
 .app-header__language-body {
@@ -1188,9 +1187,24 @@ html.is-locked {
   border-bottom: 1px solid #414455;
   margin-bottom: 34px;
   padding-bottom: 34px;
-  position: relative; }
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  padding-right: 64px; }
+  .faq-block__item.mod-open {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px; }
+    @media screen and (max-width: 1023px) {
+      .faq-block__item.mod-open {
+        grid-template-columns: 1fr; } }
+    .faq-block__item.mod-open .faq-block__item-body {
+      width: 100%;
+      max-height: 200px;
+      -webkit-transition: max-height 1s;
+      transition: max-height 1s; }
 
-.faq-block__item.opened .faq-block__item-icon {
+.faq-block__item.mod-open .faq-block__item-icon {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg); }
 
@@ -1233,14 +1247,16 @@ html.is-locked {
   color: #fff;
   font-size: 18px;
   font-weight: 600;
-  padding-right: 64px;
   cursor: pointer; }
 
 .faq-block__item-body {
-  padding-top: 34px;
   font-size: 14px;
   color: #fff;
-  display: none; }
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 500ms;
+  transition: max-height 500ms;
+  width: 0; }
 
 .faq-block__item-body ul {
   padding: 0;
@@ -2346,29 +2362,7 @@ html.is-locked {
   .faq-block {
     padding: 94px 0 170px; }
   .faq-block__item {
-    padding-right: 60px;
-    display: -ms-flexbox;
-    display: -webkit-box;
-    display: flex; }
-  .faq-block__item-title {
-    -ms-flex: 0 0 100%;
-    -webkit-box-flex: 0;
-            flex: 0 0 100%; }
-  .faq-block__item-body {
-    -ms-flex: 0 0;
-    -webkit-box-flex: 0;
-            flex: 0 0; }
-  .faq-block__item.opened .faq-block__item-title {
-    -ms-flex: 0 0 48%;
-    -webkit-box-flex: 0;
-            flex: 0 0 48%;
-    margin-right: 4%; }
-  .faq-block__item.opened .faq-block__item-body {
-    -ms-flex: 0 0 48%;
-    -webkit-box-flex: 0;
-            flex: 0 0 48%; }
-  .faq-block__item-title {
-    padding-right: 0; }
+    padding-right: 60px; }
   .faq-block__item-body {
     padding-top: 0; }
   .hero-block {
