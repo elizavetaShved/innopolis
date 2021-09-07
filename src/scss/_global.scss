@@ -1,5 +1,11 @@
 @import 'sizes';
 
+body {
+  &.mod-no-scroll {
+    overflow: hidden;
+  }
+}
+
 .gl__page-content {
   padding-left: var(--page-content-padding-fl);
   padding-right: var(--page-content-padding-fl);

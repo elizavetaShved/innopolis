@@ -3,18 +3,20 @@ import './lazyload';
 import detectTouch from './detectTouch';
 import customSelects from './customSelects';
 
-import { newsComponent } from './components/news-component';
-import { programComponent } from './components/program-component';
-import { speakersComponent } from './components/speakers-component';
+import { NewsComponent } from './components/news-component';
+import { ProgramComponent } from './components/program-component';
+import { SpeakersComponent } from './components/speakers-component';
 import { oldInit } from './components/old';
+import { OldCommon } from './components/old-common';
 
 document.addEventListener('DOMContentLoaded', function () {
   switch (window.location.href.split('/')[1]) {
     case '':
       oldInit();
-      new newsComponent();
-      new programComponent();
-      new speakersComponent();
+      new OldCommon();
+      new NewsComponent();
+      new ProgramComponent();
+      new SpeakersComponent();
       break;
   }
 

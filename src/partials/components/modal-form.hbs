@@ -1,0 +1,103 @@
+<div class="modal" id="modal-{{type}}-host">
+  <div class="modal__container">
+    <form class="modal__content" data-need-validation data-parsley-focus="none">
+      <div class="modal__header">
+        <div class="modal__title">
+          {{title}}
+        </div>
+        <button type="button" class="modal__close-btn">
+          <svg width="20" height="20" aria-hidden="true" class="modal__close-icon">
+            <use xlink:href="#close"></use>
+          </svg>
+        </button>
+      </div>
+
+      <ul class="modal__inputs-list">
+        <li class="gl__input-container">
+          <div class="gl__input-title">ФИО</div>
+          <label class="gl__input-wrapper">
+            <input type="text"
+                   class="gl__input"
+                   placeholder="Иванов Анатолий Иванович"
+                   data-parsley-required=""
+                   data-parsley-minlength="2"
+                   name="name-{{type}}"
+                   required>
+          </label>
+        </li>
+        <li class="gl__input-container">
+          <div class="gl__input-title">Организация</div>
+          <label class="gl__input-wrapper">
+            <input type="text"
+                   class="gl__input"
+                   placeholder="Какую организацию Вы представляете?"
+                   data-parsley-required=""
+                   data-parsley-minlength="2"
+                   name="organization-{{type}}"
+                   required>
+          </label>
+        </li>
+        <li class="gl__input-container">
+          <div class="gl__input-title">E-mail</div>
+          <label class="gl__input-wrapper">
+            <input type="email"
+                   class="gl__input"
+                   placeholder="info@gmail.com"
+                   name="email-{{type}}"
+                   data-parsley-required=""
+                   data-parsley-type="email"
+                   required>
+          </label>
+        </li>
+        <li class="gl__input-container">
+          <div class="gl__input-title">Телефон</div>
+          <label class="gl__input-wrapper">
+            <input type="tel"
+                   class="gl__input js-phone-input"
+                   placeholder="+7"
+                   data-parsley-required=""
+                   name="phone-{{type}}"
+                   required>
+          </label>
+        </li>
+      </ul>
+
+      <div class="gl__error-block">
+        <img src="img/old/img/error-form.svg" alt="" class="gl__error-icon">
+        <div class="gl__error-content">
+          Заполните все обязательные поля
+        </div>
+      </div>
+
+      <div class="gl__radio-input-container">
+        <label class="gl__radio-input-wrapper">
+          <input type="radio" class="gl__radio-input" required name="agreement-{{type}}">
+          <span class="gl__radio-input-content"></span>
+        </label>
+        <span class="gl__radio-input-caption">
+          Я подтверждаю свое согласие с условиями
+        <a href="#" class="gl__radio-input-caption-link">Пользовательского соглашения</a>
+          и
+        <a href="#" class="gl__radio-input-caption-link">Договором оказания услуг</a>
+          по организации мероприятия и
+        <a href="#" class="gl__radio-input-caption-link">политикой возвратов</a>
+        </span>
+      </div>
+
+      <button type="button" class="gl__btn-submit modal__btn-submit gl__main-btn mod-long mod-no-shadow mod-small">
+        отправить
+      </button>
+    </form>
+
+    <div class="modal__success-text-wrapper">
+      <button type="button" class="modal__close-btn">
+        <svg width="20" height="20" aria-hidden="true" class="modal__close-icon">
+          <use xlink:href="#close"></use>
+        </svg>
+      </button>
+      <div class="modal__success-text">
+        Спасибо! Вышлем подтверждение на электронку
+      </div>
+    </div>
+  </div>
+</div>

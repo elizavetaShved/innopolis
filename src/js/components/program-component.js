@@ -1,4 +1,4 @@
-export class programComponent {
+export class ProgramComponent {
   contentBlockElems;
 
   contentElems;

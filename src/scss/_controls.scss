@@ -54,6 +54,11 @@
     max-width: 300px;
   }
 
+  &.mod-small {
+    font-size: 14px;
+    padding: 16px;
+  }
+
   &.mod-long {
     width: 100%;
     max-width: none;

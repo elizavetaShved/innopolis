@@ -1,4 +1,4 @@
-export class newsComponent {
+export class NewsComponent {
   hostElem;
   btnPrev;
   btnNext;

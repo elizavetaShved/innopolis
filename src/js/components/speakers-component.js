@@ -1,4 +1,4 @@
-export class speakersComponent {
+export class SpeakersComponent {
 
   constructor() {
     const hostElem = document.getElementById('speakers-host');
