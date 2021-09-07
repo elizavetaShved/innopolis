@@ -1,3 +1,5 @@
+@import 'sizes';
+
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -812,6 +814,11 @@ html.is-locked {
   margin-bottom: 30px;
 }
 
+.hero-block__image-img {
+  width: 100%;
+  height: 100%;
+}
+
 .hero-block__description {
   font-size: 14px;
   color: #fff;
@@ -853,10 +860,10 @@ html.is-locked {
   margin-top: 20px;
 }
 
-.hero-block__button .site-btn {
-  min-width: 186px;
-  font-weight: 500;
-}
+//.hero-block__button .site-btn {
+//  min-width: 186px;
+//  font-weight: 500;
+//}
 
 .map-block {
   overflow: hidden;
@@ -1658,6 +1665,15 @@ html.is-locked {
   opacity: 0.5;
 }
 
+.hero-block__btn {
+  margin-right: 100px;
+
+  @include for-md-down {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
 @-webkit-keyframes pulse {
   0% {
     opacity: 0;
@@ -1799,11 +1815,9 @@ html.is-locked {
   }
 
   .hero-block__body {
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-align: center;
     align-items: center;
-    max-width: 840px;
+    justify-content: space-between;
   }
 
   .hero-block__information {
@@ -1812,11 +1826,11 @@ html.is-locked {
     margin: 0;
   }
 
-  .hero-block__button {
-    -ms-flex-order: -1;
-    order: -1;
-    margin-right: 50px;
-  }
+  //.hero-block__button {
+  //  -ms-flex-order: -1;
+  //  order: -1;
+  //  margin-right: 50px;
+  //}
 
   .partners-block__items {
     padding-right: 20px;
@@ -1882,17 +1896,17 @@ html.is-locked {
   }
 }
 
-.hero-block__button .site-btn.mod-small {
-  min-width: auto;
-  font-size: 16px;
-  padding: 10px 28px;
-}
-
-.hero-block__button .site-btn.mod-middle {
-  min-width: auto;
-  font-size: 16px;
-  padding: 18px 50px;
-}
+//.hero-block__button .site-btn.mod-small {
+//  min-width: auto;
+//  font-size: 16px;
+//  padding: 10px 28px;
+//}
+//
+//.hero-block__button .site-btn.mod-middle {
+//  min-width: auto;
+//  font-size: 16px;
+//  padding: 18px 50px;
+//}
 
 @media (min-width: 1025px) {
   body {
@@ -2138,16 +2152,16 @@ html.is-locked {
     font-size: 14px;
   }
 
-  .hero-block__button {
-    margin-right: 110px;
-  }
-
-  .hero-block__button .site-btn {
-    min-width: 240px;
-    font-size: 20px;
-    padding: 25px 20px;
-    border-radius: 0 35px 35px 35px;
-  }
+  //.hero-block__button {
+  //  margin-right: 110px;
+  //}
+  //
+  //.hero-block__button .site-btn {
+  //  min-width: 240px;
+  //  font-size: 20px;
+  //  padding: 25px 20px;
+  //  border-radius: 0 35px 35px 35px;
+  //}
 
   .map-block__map {
     height: 600px;
