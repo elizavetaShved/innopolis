@@ -707,6 +707,7 @@ html.is-locked {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   padding-right: 64px;
+  cursor: pointer;
 
   &.mod-open {
     grid-template-columns: repeat(2, 1fr);

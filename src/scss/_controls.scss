@@ -3,7 +3,7 @@
 .gl__main-btn {
   padding: 10px 18px;
   background: var(--btn-color);
-  font-weight: 500;
+  font-weight: 600;
   font-size: 16px;
   color: #fff !important;
   box-shadow: 0 12px 67px rgba(35, 35, 99, 0.8);
@@ -15,7 +15,7 @@
   max-width: 200px;
 
   &:hover {
-    background: #ed226c;
+    background: #ff2977;
   }
 
   &.mod-big {
@@ -74,6 +74,8 @@
     color: #000 !important;
     border: 2px solid #000;
     font-size: 16px;
+    max-width: 400px;
+    transition: background-color 300ms, border 300ms;
 
     &:hover {
       background-color: #000;

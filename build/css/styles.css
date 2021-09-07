@@ -55,7 +55,7 @@
 .gl__main-btn {
   padding: 10px 18px;
   background: var(--btn-color);
-  font-weight: 500;
+  font-weight: 600;
   font-size: 16px;
   color: #fff !important;
   -webkit-box-shadow: 0 12px 67px rgba(35, 35, 99, 0.8);
@@ -74,7 +74,7 @@
           justify-content: center;
   max-width: 200px; }
   .gl__main-btn:hover {
-    background: #ed226c; }
+    background: #ff2977; }
   .gl__main-btn.mod-big {
     font-size: 24px;
     padding: 34px 60px;
@@ -115,7 +115,10 @@
     background-color: #fff;
     color: #000 !important;
     border: 2px solid #000;
-    font-size: 16px; }
+    font-size: 16px;
+    max-width: 400px;
+    -webkit-transition: background-color 300ms, border 300ms;
+    transition: background-color 300ms, border 300ms; }
     .gl__main-btn.mod-black:hover {
       background-color: #000;
       color: #fff !important; }
@@ -1191,7 +1194,8 @@ html.is-locked {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  padding-right: 64px; }
+  padding-right: 64px;
+  cursor: pointer; }
   .faq-block__item.mod-open {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px; }
@@ -4020,18 +4024,23 @@ html.remodal-is-locked {
 .program__btn-download {
   margin-left: 18px;
   padding-left: 74px;
-  background-image: url("../img/old/img/download.svg") !important;
-  background-repeat: no-repeat !important;
-  background-position: top 50% left 40px !important;
-  background-size: 24px 24px !important; }
+  position: relative; }
+  .program__btn-download:hover .program__btn-download-icon {
+    fill: #fff; }
 
-.program__btn-download:hover {
-  background-image: url("../img/old/img/download-hover.svg") !important; }
+.program__btn-download-icon {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 30px;
+  fill: #000;
+  -webkit-transition: fill 300ms;
+  transition: fill 300ms; }
 
 @media (max-width: 768px) {
   .program__btn-download {
-    padding-left: 50px !important;
-    background-position: top 50% left 20px !important; } }
+    padding-left: 50px !important; } }
 
 @media (max-width: 426px) {
   .program__btn-download {

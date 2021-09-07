@@ -447,20 +447,27 @@
 .program__btn-download {
   margin-left: 18px;
   padding-left: 74px;
-  background-image: url('../img/old/img/download.svg') !important;
-  background-repeat: no-repeat !important;
-  background-position: top 50% left 40px !important;
-  background-size: 24px 24px !important;
+  position: relative;
+
+  &:hover {
+    .program__btn-download-icon {
+      fill: #fff;
+    }
+  }
 }
 
-.program__btn-download:hover {
-  background-image: url('../img/old/img/download-hover.svg') !important;
+.program__btn-download-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 30px;
+  fill: #000;
+  transition: fill 300ms;
 }
 
 @media (max-width: 768px) {
   .program__btn-download {
     padding-left: 50px !important;
-    background-position: top 50% left 20px !important;
   }
 }
 
