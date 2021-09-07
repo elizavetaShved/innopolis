@@ -214,6 +214,9 @@ body.mod-no-scroll {
   width: 100%;
   min-height: 100vh; }
 
+.layout__header {
+  z-index: 50; }
+
 .layout__content {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 100%;

@@ -8,6 +8,7 @@ import { ProgramComponent } from './components/program-component';
 import { SpeakersComponent } from './components/speakers-component';
 import { oldInit } from './components/old';
 import { OldCommon } from './components/old-common';
+import { Header } from './components/header';
 
 document.addEventListener('DOMContentLoaded', function () {
   switch (window.location.href.split('/')[1]) {
@@ -19,6 +20,8 @@ document.addEventListener('DOMContentLoaded', function () {
       new SpeakersComponent();
       break;
   }
+
+  new Header();
 
   polyfills();
   detectTouch();

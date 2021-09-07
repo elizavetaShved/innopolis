@@ -3,7 +3,10 @@
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
-  //background-color: var(--main-background);
+}
+
+.layout__header {
+  z-index: 50;
 }
 
 .layout__content {
