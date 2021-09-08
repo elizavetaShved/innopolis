@@ -9,44 +9,60 @@
   --disabled-color: #414455;
   --btn-color: #DF125C; }
 
+@media screen and (min-width: 1400px) {
+  .gl__fl-show {
+    display: none !important; } }
+
+@media screen and (max-width: 1399px) {
+  .gl__fl-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 1200px) {
+  .gl__vs-show {
+    display: none !important; } }
+
+@media screen and (max-width: 1199px) {
+  .gl__vs-hide {
+    display: none !important; } }
+
 @media screen and (min-width: 1024px) {
-  .gl-fl-show {
+  .gl__bg-show {
     display: none !important; } }
 
 @media screen and (max-width: 1023px) {
-  .gl-fl-hide {
+  .gl__bg-hide {
     display: none !important; } }
 
 @media screen and (min-width: 960px) {
-  .gl-md-show {
+  .gl__md-show {
     display: none !important; } }
 
 @media screen and (max-width: 959px) {
-  .gl-md-hide {
+  .gl__md-hide {
     display: none !important; } }
 
 @media screen and (min-width: 768px) {
-  .gl-md-show {
+  .gl__md-show {
     display: none !important; } }
 
 @media screen and (max-width: 767px) {
-  .gl-md-hide {
+  .gl__md-hide {
     display: none !important; } }
 
 @media screen and (min-width: 560px) {
-  .gl-sm-show {
+  .gl__sm-show {
     display: none !important; } }
 
 @media screen and (max-width: 559px) {
-  .gl-sm-hide {
+  .gl__sm-hide {
     display: none !important; } }
 
 @media screen and (min-width: 426px) {
-  .gl-xxs-show {
+  .gl__xxs-show {
     display: none !important; } }
 
 @media screen and (max-width: 425px) {
-  .gl-xxs-hide {
+  .gl__xxs-hide {
     display: none !important; } }
 
 .gl__main-btn {
@@ -149,44 +165,60 @@
   font-style: normal;
   font-display: swap; }
 
+@media screen and (min-width: 1400px) {
+  .gl__fl-show {
+    display: none !important; } }
+
+@media screen and (max-width: 1399px) {
+  .gl__fl-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 1200px) {
+  .gl__vs-show {
+    display: none !important; } }
+
+@media screen and (max-width: 1199px) {
+  .gl__vs-hide {
+    display: none !important; } }
+
 @media screen and (min-width: 1024px) {
-  .gl-fl-show {
+  .gl__bg-show {
     display: none !important; } }
 
 @media screen and (max-width: 1023px) {
-  .gl-fl-hide {
+  .gl__bg-hide {
     display: none !important; } }
 
 @media screen and (min-width: 960px) {
-  .gl-md-show {
+  .gl__md-show {
     display: none !important; } }
 
 @media screen and (max-width: 959px) {
-  .gl-md-hide {
+  .gl__md-hide {
     display: none !important; } }
 
 @media screen and (min-width: 768px) {
-  .gl-md-show {
+  .gl__md-show {
     display: none !important; } }
 
 @media screen and (max-width: 767px) {
-  .gl-md-hide {
+  .gl__md-hide {
     display: none !important; } }
 
 @media screen and (min-width: 560px) {
-  .gl-sm-show {
+  .gl__sm-show {
     display: none !important; } }
 
 @media screen and (max-width: 559px) {
-  .gl-sm-hide {
+  .gl__sm-hide {
     display: none !important; } }
 
 @media screen and (min-width: 426px) {
-  .gl-xxs-show {
+  .gl__xxs-show {
     display: none !important; } }
 
 @media screen and (max-width: 425px) {
-  .gl-xxs-hide {
+  .gl__xxs-hide {
     display: none !important; } }
 
 body.mod-no-scroll {
@@ -325,84 +357,116 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 nav ul {
   list-style: none; }
 
-@media screen and (min-width: 1024px) {
-  .gl-fl-show {
+@media screen and (min-width: 1400px) {
+  .gl__fl-show {
     display: none !important; } }
 
-@media screen and (max-width: 1023px) {
-  .gl-fl-hide {
+@media screen and (max-width: 1399px) {
+  .gl__fl-hide {
     display: none !important; } }
 
-@media screen and (min-width: 960px) {
-  .gl-md-show {
+@media screen and (min-width: 1200px) {
+  .gl__vs-show {
     display: none !important; } }
 
-@media screen and (max-width: 959px) {
-  .gl-md-hide {
-    display: none !important; } }
-
-@media screen and (min-width: 768px) {
-  .gl-md-show {
-    display: none !important; } }
-
-@media screen and (max-width: 767px) {
-  .gl-md-hide {
-    display: none !important; } }
-
-@media screen and (min-width: 560px) {
-  .gl-sm-show {
-    display: none !important; } }
-
-@media screen and (max-width: 559px) {
-  .gl-sm-hide {
-    display: none !important; } }
-
-@media screen and (min-width: 426px) {
-  .gl-xxs-show {
-    display: none !important; } }
-
-@media screen and (max-width: 425px) {
-  .gl-xxs-hide {
+@media screen and (max-width: 1199px) {
+  .gl__vs-hide {
     display: none !important; } }
 
 @media screen and (min-width: 1024px) {
-  .gl-fl-show {
+  .gl__bg-show {
     display: none !important; } }
 
 @media screen and (max-width: 1023px) {
-  .gl-fl-hide {
+  .gl__bg-hide {
     display: none !important; } }
 
 @media screen and (min-width: 960px) {
-  .gl-md-show {
+  .gl__md-show {
     display: none !important; } }
 
 @media screen and (max-width: 959px) {
-  .gl-md-hide {
+  .gl__md-hide {
     display: none !important; } }
 
 @media screen and (min-width: 768px) {
-  .gl-md-show {
+  .gl__md-show {
     display: none !important; } }
 
 @media screen and (max-width: 767px) {
-  .gl-md-hide {
+  .gl__md-hide {
     display: none !important; } }
 
 @media screen and (min-width: 560px) {
-  .gl-sm-show {
+  .gl__sm-show {
     display: none !important; } }
 
 @media screen and (max-width: 559px) {
-  .gl-sm-hide {
+  .gl__sm-hide {
     display: none !important; } }
 
 @media screen and (min-width: 426px) {
-  .gl-xxs-show {
+  .gl__xxs-show {
     display: none !important; } }
 
 @media screen and (max-width: 425px) {
-  .gl-xxs-hide {
+  .gl__xxs-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 1400px) {
+  .gl__fl-show {
+    display: none !important; } }
+
+@media screen and (max-width: 1399px) {
+  .gl__fl-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 1200px) {
+  .gl__vs-show {
+    display: none !important; } }
+
+@media screen and (max-width: 1199px) {
+  .gl__vs-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 1024px) {
+  .gl__bg-show {
+    display: none !important; } }
+
+@media screen and (max-width: 1023px) {
+  .gl__bg-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 960px) {
+  .gl__md-show {
+    display: none !important; } }
+
+@media screen and (max-width: 959px) {
+  .gl__md-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 768px) {
+  .gl__md-show {
+    display: none !important; } }
+
+@media screen and (max-width: 767px) {
+  .gl__md-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 560px) {
+  .gl__sm-show {
+    display: none !important; } }
+
+@media screen and (max-width: 559px) {
+  .gl__sm-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 426px) {
+  .gl__xxs-show {
+    display: none !important; } }
+
+@media screen and (max-width: 425px) {
+  .gl__xxs-hide {
     display: none !important; } }
 
 .gl__input-container {
@@ -1483,6 +1547,62 @@ button.swiper-pagination-bullet {
       -ms-flex-direction: column;
           flex-direction: column; }
 
+@media screen and (min-width: 1400px) {
+  .gl__fl-show {
+    display: none !important; } }
+
+@media screen and (max-width: 1399px) {
+  .gl__fl-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 1200px) {
+  .gl__vs-show {
+    display: none !important; } }
+
+@media screen and (max-width: 1199px) {
+  .gl__vs-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 1024px) {
+  .gl__bg-show {
+    display: none !important; } }
+
+@media screen and (max-width: 1023px) {
+  .gl__bg-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 960px) {
+  .gl__md-show {
+    display: none !important; } }
+
+@media screen and (max-width: 959px) {
+  .gl__md-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 768px) {
+  .gl__md-show {
+    display: none !important; } }
+
+@media screen and (max-width: 767px) {
+  .gl__md-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 560px) {
+  .gl__sm-show {
+    display: none !important; } }
+
+@media screen and (max-width: 559px) {
+  .gl__sm-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 426px) {
+  .gl__xxs-show {
+    display: none !important; } }
+
+@media screen and (max-width: 425px) {
+  .gl__xxs-hide {
+    display: none !important; } }
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1493,6 +1613,9 @@ button.swiper-pagination-bullet {
   height: 84px;
   background-color: var(--main-color);
   padding: 0 30px; }
+  @media screen and (max-width: 1199px) {
+    .header {
+      border-bottom: 1px solid rgba(250, 250, 250, 0.2); } }
 
 .header__logo {
   height: 30px; }
@@ -1518,6 +1641,11 @@ button.swiper-pagination-bullet {
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding: 0; }
+    @media screen and (max-width: 1199px) {
+      .header__section.mod-center {
+        border-bottom: none; } }
+  .header__section + .header__section {
+    margin-left: 30px; }
 
 .header__contacts-list {
   display: -webkit-box;
@@ -1536,11 +1664,17 @@ button.swiper-pagination-bullet {
   color: #fff;
   -webkit-transition: color 250ms;
   transition: color 250ms; }
+  @media screen and (max-width: 1399px) {
+    .header__contact {
+      font-size: 16px; } }
   .header__contact:hover {
     color: var(--secondary-color);
     text-decoration: underline; }
   .header__contact + .header__contact {
     margin-left: 46px; }
+    @media screen and (max-width: 1399px) {
+      .header__contact + .header__contact {
+        margin-left: 0; } }
 
 .header__main-logo-link:hover .header__main-logo {
   fill: #fff; }
@@ -1550,6 +1684,9 @@ button.swiper-pagination-bullet {
   fill: var(--secondary-color);
   -webkit-transition: fill 350ms;
   transition: fill 350ms; }
+  @media screen and (max-width: 1199px) {
+    .header__main-logo {
+      height: 28px; } }
 
 .header__lang-select-wrapper {
   position: relative; }
@@ -1603,44 +1740,109 @@ button.swiper-pagination-bullet {
 .header__lang-radio-wrapper + .header__lang-radio-wrapper {
   margin-top: 6px; }
 
+.header__control-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.header__eyes-btn {
+  width: 54px;
+  height: 54px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 10px; }
+  .header__eyes-btn:hover .header__eyes-icon {
+    fill: var(--secondary-color); }
+
+.header__eyes-icon {
+  height: 34px;
+  fill: #fff;
+  -webkit-transition: fill 300ms;
+  transition: fill 300ms; }
+
+.header__auth-btn {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important; }
+  @media screen and (max-width: 1399px) {
+    .header__auth-btn {
+      border-radius: 0px 20px 20px 20px;
+      background-color: var(--btn-color);
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .header__auth-btn .header__auth-btn-icon {
+        height: 20px; } }
+
+@media screen and (min-width: 1400px) {
+  .gl__fl-show {
+    display: none !important; } }
+
+@media screen and (max-width: 1399px) {
+  .gl__fl-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 1200px) {
+  .gl__vs-show {
+    display: none !important; } }
+
+@media screen and (max-width: 1199px) {
+  .gl__vs-hide {
+    display: none !important; } }
+
 @media screen and (min-width: 1024px) {
-  .gl-fl-show {
+  .gl__bg-show {
     display: none !important; } }
 
 @media screen and (max-width: 1023px) {
-  .gl-fl-hide {
+  .gl__bg-hide {
     display: none !important; } }
 
 @media screen and (min-width: 960px) {
-  .gl-md-show {
+  .gl__md-show {
     display: none !important; } }
 
 @media screen and (max-width: 959px) {
-  .gl-md-hide {
+  .gl__md-hide {
     display: none !important; } }
 
 @media screen and (min-width: 768px) {
-  .gl-md-show {
+  .gl__md-show {
     display: none !important; } }
 
 @media screen and (max-width: 767px) {
-  .gl-md-hide {
+  .gl__md-hide {
     display: none !important; } }
 
 @media screen and (min-width: 560px) {
-  .gl-sm-show {
+  .gl__sm-show {
     display: none !important; } }
 
 @media screen and (max-width: 559px) {
-  .gl-sm-hide {
+  .gl__sm-hide {
     display: none !important; } }
 
 @media screen and (min-width: 426px) {
-  .gl-xxs-show {
+  .gl__xxs-show {
     display: none !important; } }
 
 @media screen and (max-width: 425px) {
-  .gl-xxs-hide {
+  .gl__xxs-hide {
     display: none !important; } }
 
 input[type="text"],
@@ -4073,44 +4275,60 @@ html.remodal-is-locked {
   .remodal {
     max-width: 700px; } }
 
+@media screen and (min-width: 1400px) {
+  .gl__fl-show {
+    display: none !important; } }
+
+@media screen and (max-width: 1399px) {
+  .gl__fl-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 1200px) {
+  .gl__vs-show {
+    display: none !important; } }
+
+@media screen and (max-width: 1199px) {
+  .gl__vs-hide {
+    display: none !important; } }
+
 @media screen and (min-width: 1024px) {
-  .gl-fl-show {
+  .gl__bg-show {
     display: none !important; } }
 
 @media screen and (max-width: 1023px) {
-  .gl-fl-hide {
+  .gl__bg-hide {
     display: none !important; } }
 
 @media screen and (min-width: 960px) {
-  .gl-md-show {
+  .gl__md-show {
     display: none !important; } }
 
 @media screen and (max-width: 959px) {
-  .gl-md-hide {
+  .gl__md-hide {
     display: none !important; } }
 
 @media screen and (min-width: 768px) {
-  .gl-md-show {
+  .gl__md-show {
     display: none !important; } }
 
 @media screen and (max-width: 767px) {
-  .gl-md-hide {
+  .gl__md-hide {
     display: none !important; } }
 
 @media screen and (min-width: 560px) {
-  .gl-sm-show {
+  .gl__sm-show {
     display: none !important; } }
 
 @media screen and (max-width: 559px) {
-  .gl-sm-hide {
+  .gl__sm-hide {
     display: none !important; } }
 
 @media screen and (min-width: 426px) {
-  .gl-xxs-show {
+  .gl__xxs-show {
     display: none !important; } }
 
 @media screen and (max-width: 425px) {
-  .gl-xxs-hide {
+  .gl__xxs-hide {
     display: none !important; } }
 
 .news {
@@ -4217,44 +4435,60 @@ html.remodal-is-locked {
       width: 44px;
       height: 12px; } }
 
+@media screen and (min-width: 1400px) {
+  .gl__fl-show {
+    display: none !important; } }
+
+@media screen and (max-width: 1399px) {
+  .gl__fl-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 1200px) {
+  .gl__vs-show {
+    display: none !important; } }
+
+@media screen and (max-width: 1199px) {
+  .gl__vs-hide {
+    display: none !important; } }
+
 @media screen and (min-width: 1024px) {
-  .gl-fl-show {
+  .gl__bg-show {
     display: none !important; } }
 
 @media screen and (max-width: 1023px) {
-  .gl-fl-hide {
+  .gl__bg-hide {
     display: none !important; } }
 
 @media screen and (min-width: 960px) {
-  .gl-md-show {
+  .gl__md-show {
     display: none !important; } }
 
 @media screen and (max-width: 959px) {
-  .gl-md-hide {
+  .gl__md-hide {
     display: none !important; } }
 
 @media screen and (min-width: 768px) {
-  .gl-md-show {
+  .gl__md-show {
     display: none !important; } }
 
 @media screen and (max-width: 767px) {
-  .gl-md-hide {
+  .gl__md-hide {
     display: none !important; } }
 
 @media screen and (min-width: 560px) {
-  .gl-sm-show {
+  .gl__sm-show {
     display: none !important; } }
 
 @media screen and (max-width: 559px) {
-  .gl-sm-hide {
+  .gl__sm-hide {
     display: none !important; } }
 
 @media screen and (min-width: 426px) {
-  .gl-xxs-show {
+  .gl__xxs-show {
     display: none !important; } }
 
 @media screen and (max-width: 425px) {
-  .gl-xxs-hide {
+  .gl__xxs-hide {
     display: none !important; } }
 
 .partners {
@@ -4380,44 +4614,60 @@ html.remodal-is-locked {
   -webkit-transition: fill 250ms;
   transition: fill 250ms; }
 
+@media screen and (min-width: 1400px) {
+  .gl__fl-show {
+    display: none !important; } }
+
+@media screen and (max-width: 1399px) {
+  .gl__fl-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 1200px) {
+  .gl__vs-show {
+    display: none !important; } }
+
+@media screen and (max-width: 1199px) {
+  .gl__vs-hide {
+    display: none !important; } }
+
 @media screen and (min-width: 1024px) {
-  .gl-fl-show {
+  .gl__bg-show {
     display: none !important; } }
 
 @media screen and (max-width: 1023px) {
-  .gl-fl-hide {
+  .gl__bg-hide {
     display: none !important; } }
 
 @media screen and (min-width: 960px) {
-  .gl-md-show {
+  .gl__md-show {
     display: none !important; } }
 
 @media screen and (max-width: 959px) {
-  .gl-md-hide {
+  .gl__md-hide {
     display: none !important; } }
 
 @media screen and (min-width: 768px) {
-  .gl-md-show {
+  .gl__md-show {
     display: none !important; } }
 
 @media screen and (max-width: 767px) {
-  .gl-md-hide {
+  .gl__md-hide {
     display: none !important; } }
 
 @media screen and (min-width: 560px) {
-  .gl-sm-show {
+  .gl__sm-show {
     display: none !important; } }
 
 @media screen and (max-width: 559px) {
-  .gl-sm-hide {
+  .gl__sm-hide {
     display: none !important; } }
 
 @media screen and (min-width: 426px) {
-  .gl-xxs-show {
+  .gl__xxs-show {
     display: none !important; } }
 
 @media screen and (max-width: 425px) {
-  .gl-xxs-hide {
+  .gl__xxs-hide {
     display: none !important; } }
 
 .speakers {
@@ -5142,44 +5392,60 @@ html.remodal-is-locked {
     margin-left: 0 !important;
     margin-top: 16px !important; } }
 
+@media screen and (min-width: 1400px) {
+  .gl__fl-show {
+    display: none !important; } }
+
+@media screen and (max-width: 1399px) {
+  .gl__fl-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 1200px) {
+  .gl__vs-show {
+    display: none !important; } }
+
+@media screen and (max-width: 1199px) {
+  .gl__vs-hide {
+    display: none !important; } }
+
 @media screen and (min-width: 1024px) {
-  .gl-fl-show {
+  .gl__bg-show {
     display: none !important; } }
 
 @media screen and (max-width: 1023px) {
-  .gl-fl-hide {
+  .gl__bg-hide {
     display: none !important; } }
 
 @media screen and (min-width: 960px) {
-  .gl-md-show {
+  .gl__md-show {
     display: none !important; } }
 
 @media screen and (max-width: 959px) {
-  .gl-md-hide {
+  .gl__md-hide {
     display: none !important; } }
 
 @media screen and (min-width: 768px) {
-  .gl-md-show {
+  .gl__md-show {
     display: none !important; } }
 
 @media screen and (max-width: 767px) {
-  .gl-md-hide {
+  .gl__md-hide {
     display: none !important; } }
 
 @media screen and (min-width: 560px) {
-  .gl-sm-show {
+  .gl__sm-show {
     display: none !important; } }
 
 @media screen and (max-width: 559px) {
-  .gl-sm-hide {
+  .gl__sm-hide {
     display: none !important; } }
 
 @media screen and (min-width: 426px) {
-  .gl-xxs-show {
+  .gl__xxs-show {
     display: none !important; } }
 
 @media screen and (max-width: 425px) {
-  .gl-xxs-hide {
+  .gl__xxs-hide {
     display: none !important; } }
 
 .modal {

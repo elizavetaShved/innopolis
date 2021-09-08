@@ -19,7 +19,7 @@
       </svg>
     </a>
 
-    <div>
+    <div class="header__control-wrapper">
       <div class="header__lang-select-wrapper ">
        <div class="header__lang-selected-item header__lang-select">
          ENG
@@ -31,14 +31,21 @@
           </label>
         </div>
       </div>
-<!--      <button type="button" class="header__eyes-btn">-->
-<!--        eyes-->
-<!--      </button>-->
+      <button type="button" class="header__eyes-btn">
+        <svg width="34" height="34" aria-hidden="true" class="header__eyes-icon">
+          <use xlink:href="#eyse"></use>
+        </svg>
+      </button>
     </div>
   </div>
 
   <div class="header__section">
-    1111
+    <button class="header__auth-btn gl__main-btn mod-small">
+      <span class="gl__fl-hide">Авторизоваться</span>
+      <span class="gl__fl-show">
+        <img src="img/header/auth-btn.svg" alt="" class="header__auth-btn-icon">
+      </span>
+    </button>
   </div>
 </header>
 

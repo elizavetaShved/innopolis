@@ -1,3 +1,5 @@
+@import 'sizes';
+
 $select-width: 94px;
 $select-padding-left: 34px;
 $select-padding-right: 18px;
@@ -9,6 +11,10 @@ $select-padding-top-bottom: 14px;
   height: 84px;
   background-color: var(--main-color);
   padding: 0 30px;
+
+  @include for-vs-down {
+    border-bottom: 1px solid rgba(250, 250, 250, .2);
+  }
 }
 
 .header__logo {
@@ -27,6 +33,14 @@ $select-padding-top-bottom: 14px;
     display: flex;
     justify-content: space-between;
     padding: 0;
+
+    @include for-vs-down {
+      border-bottom: none;
+    }
+  }
+
+  & + & {
+    margin-left: 30px;
   }
 }
 
@@ -44,6 +58,10 @@ $select-padding-top-bottom: 14px;
   color: #fff;
   transition: color 250ms;
 
+  @include for-fl-down {
+    font-size: 16px;
+  }
+
   &:hover {
     color: var(--secondary-color);
     text-decoration: underline;
@@ -51,6 +69,10 @@ $select-padding-top-bottom: 14px;
 
   & + & {
     margin-left: 46px;
+
+    @include for-fl-down {
+      margin-left: 0;
+    }
   }
 }
 
@@ -66,6 +88,10 @@ $select-padding-top-bottom: 14px;
   height: 32px;
   fill: var(--secondary-color);
   transition: fill 350ms;
+
+  @include for-vs-down {
+    height: 28px;
+  }
 }
 
 .header__lang-select-wrapper {
@@ -131,5 +157,48 @@ $select-padding-top-bottom: 14px;
 .header__lang-radio-wrapper {
   & + & {
     margin-top: 6px;
+  }
+}
+
+.header__control-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.header__eyes-btn {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+
+  &:hover {
+    .header__eyes-icon {
+      fill: var(--secondary-color);
+    }
+  }
+}
+
+.header__eyes-icon {
+  height: 34px;
+  fill: #fff;
+  transition: fill 300ms;
+}
+
+.header__auth-btn {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+
+  @include for-fl-down {
+    border-radius: 0px 20px 20px 20px;
+    background-color: var(--btn-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .header__auth-btn-icon {
+      height: 20px;
+    }
   }
 }
