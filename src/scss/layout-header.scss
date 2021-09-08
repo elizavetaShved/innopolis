@@ -5,15 +5,23 @@
   justify-content: space-between;
   height: 84px;
   background-color: var(--main-color);
-  padding: 0 30px;
+  padding: 0 var(--page-content-padding);
 
   @include for-vs-down {
     border-bottom: 1px solid rgba(250, 250, 250, .2);
+  }
+
+  @include for-bg-down {
+    height: 60px;
   }
 }
 
 .header__logo {
   height: 30px;
+
+  @include for-bg-down {
+    height: 26px;
+  }
 }
 
 .header__section {
@@ -21,7 +29,14 @@
   align-items: center;
   margin: 0;
 
-  &.mod-center {
+  &:nth-child(1) {
+
+    @include for-bg-down {
+      margin-left: -16px;
+    }
+  }
+
+  &:nth-child(2) {
     width: 100%;
     flex-grow: 0;
     border-bottom: 1px solid rgba(250, 250, 250, .2);
@@ -32,10 +47,22 @@
     @include for-vs-down {
       border-bottom: none;
     }
+
+    @include for-bg-down {
+      justify-content: flex-end;
+    }
   }
 
   & + & {
     margin-left: 30px;
+
+    @include for-md-down {
+      margin-left: 22px;
+    }
+
+    @include for-sm-down {
+      margin-left: 6px;
+    }
   }
 }
 
@@ -107,12 +134,20 @@
       fill: var(--secondary-color);
     }
   }
+
+  @include for-sm-down {
+    margin-left: 0;
+  }
 }
 
 .header__eyes-icon {
   height: 34px;
   fill: #fff;
   transition: fill 300ms;
+
+  @include for-bg-down {
+    height: 24px;
+  }
 }
 
 .header__auth-btn {
@@ -120,7 +155,7 @@
   padding-bottom: 10px !important;
 
   @include for-fl-down {
-    border-radius: 0px 20px 20px 20px;
+    border-radius: 0 20px 20px 20px;
     background-color: var(--btn-color);
     display: flex;
     align-items: center;
@@ -129,5 +164,21 @@
     .header__auth-btn-icon {
       height: 20px;
     }
+  }
+
+  @include for-bg-down {
+    padding: 10px;
+
+    .header__auth-btn-icon {
+      height: 16px;
+    }
+  }
+}
+
+.header__burger-btn {
+  margin-right: 16px;
+
+  @include for-md-down {
+    margin-right: 8px;
   }
 }

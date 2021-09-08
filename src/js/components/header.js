@@ -1,28 +1,58 @@
+import { checkExistParent } from '../checkExistParent';
+
+export const LANG_ARR = [
+  {
+    name: 'ru',
+    value: 'РУС'
+  },
+  {
+    name: 'en',
+    value: 'ENG'
+  }
+];
+
 export class Header {
+  selectWrapperElem;
+  isOpenSelect = false;
+  selectedSelectElem;
+  optionSelectElems;
 
   constructor() {
     const hostElem = document.querySelector('#header-host');
-    // const btnBurger = hostElem.querySelector('.app-header__burger');
+    const btnBurger = hostElem.querySelector('.header__burger-btn');
     const mobileBox = document.querySelector('.mobile-box');
     const body = document.querySelector('body');
-    const selectWrapperElem = hostElem.querySelector('.header__lang-select-wrapper');
+    this.selectWrapperElem = hostElem.querySelector('.header__lang-select-wrapper');
     const selectedItemElem = hostElem.querySelector('.header__lang-selected-item');
+
+    this.selectedSelectElem = hostElem.querySelector('.header__lang-select');
+    this.optionSelectElems = hostElem.querySelectorAll('.header__lang-option-item');
 
     let isOpen = false;
 
-    // btnBurger.onclick = () => {
-    //   if (!isOpen) {
-    //     mobileBox.classList.add('opened');
-    //     body.classList.add('mod-no-scroll');
-    //     setTimeout(() => {
-    //       isOpen = !isOpen;
-    //     })
-    //   }
-    // }
+    if (document.location.href.split('?')[1] && document.location.href.split('?')[1].includes('lang=')) {
+      const currentLangName = document.location.href.split('lang=');
+      const indexCurrentLang = LANG_ARR.findIndex(langModel => currentLangName.includes(langModel.name));
+      this.setLang(indexCurrentLang);
+    } else {
+      this.setLang(0);
+    }
+
+    btnBurger.onclick = () => {
+      if (!isOpen) {
+        mobileBox.classList.add('opened');
+        btnBurger.classList.add('mod-open');
+        body.classList.add('mod-no-scroll');
+        setTimeout(() => {
+          isOpen = !isOpen;
+        })
+      }
+    }
 
     hostElem.onclick = () => {
       if (isOpen) {
         mobileBox.classList.remove('opened');
+        btnBurger.classList.remove('mod-open');
         body.classList.remove('mod-no-scroll');
         setTimeout(() => {
           isOpen = !isOpen;
@@ -30,12 +60,48 @@ export class Header {
       }
     }
 
-    selectWrapperElem.onclick = () => {
-      if (selectWrapperElem.className.includes('mod-show')) {
-        selectWrapperElem.classList.remove('mod-show');
-      } else {
-        selectWrapperElem.classList.add('mod-show');
-      }
+    selectedItemElem.onclick = () => {
+      this.toggleSelect();
     }
+
+    document.addEventListener('click', e => {
+      if (this.isOpenSelect && !checkExistParent(e.target, this.selectWrapperElem)) {
+        this.toggleSelect();
+      }
+    })
+
+    this.optionSelectElems.forEach(optionElem => {
+      optionElem.onclick = () => {
+        const indexCurrentLang = LANG_ARR.findIndex(langModel => langModel.value === optionElem.innerText);
+        this.setLang(indexCurrentLang);
+        this.toggleSelect();
+        const langUrlParam = document.location.href.split('lang=')[1];
+        if (langUrlParam) {
+          const nameParam = langUrlParam.split('/')[0] || langUrlParam;
+          document.location.href = document.location.href.replace(`lang=${ nameParam }`, `lang=${ LANG_ARR[indexCurrentLang].name }`)
+        } else {
+          document.location.href += `?lang=${ LANG_ARR[indexCurrentLang].name }`;
+        }
+      }
+    })
+  }
+
+  toggleSelect() {
+    if (this.isOpenSelect) {
+      this.selectWrapperElem.classList.remove('mod-show');
+    } else {
+      this.selectWrapperElem.classList.add('mod-show');
+    }
+
+    this.isOpenSelect = !this.isOpenSelect;
+  }
+
+  setLang(indexLang) {
+    this.selectedSelectElem.innerText = LANG_ARR[indexLang].value;
+
+    const newLangArr = LANG_ARR.filter((e, i) => i !== indexLang)
+    this.optionSelectElems.forEach((elem, i) => {
+      elem.innerText = newLangArr[i].value;
+    })
   }
 }

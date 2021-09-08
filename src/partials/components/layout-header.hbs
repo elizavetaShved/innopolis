@@ -1,10 +1,13 @@
 <header class="header" id="header-host">
-  <a href="/" class="header__section">
-    <img src="img/header/logo.svg" alt="logo" class="header__logo">
-  </a>
+  <div class="header__section">
+    <button type="button" class="header__burger-btn gl__header__burger-btn gl__bg-show"></button>
+    <a href="/">
+      <img src="img/header/logo.svg" alt="logo" class="header__logo">
+    </a>
+  </div>
 
-  <div class="header__section mod-center gl__page-content">
-    <div class="header__contacts-list">
+  <div class="header__section gl__page-content">
+    <div class="header__contacts-list gl__bg-hide">
       <a href="tel:+78004572200" class="header__contact">
         8 800 457 22 00
       </a>
@@ -13,21 +16,19 @@
       </a>
     </div>
 
-    <a href="" class="header__main-logo-link">
+    <a href="" class="header__main-logo-link gl__bg-hide">
       <svg width="210" height="48" aria-hidden="true" class="header__main-logo">
         <use xlink:href="#innopolis"></use>
       </svg>
     </a>
 
     <div class="header__control-wrapper">
-      <div class="header__lang-select-wrapper ">
-       <div class="header__lang-selected-item header__lang-select">
-         ENG
-       </div>
+      <div class="header__lang-select-wrapper">
+       <div class="header__lang-select header__lang-selected-item">(упр js)</div>
         <div class="header__lang-select-options">
           <label class="header__lang-radio-wrapper">
             <input type="text" class="header__lang-radio">
-            <span class="header__lang-select">РУС</span>
+            <span class="header__lang-select header__lang-option-item">(упр js)</span>
           </label>
         </div>
       </div>
