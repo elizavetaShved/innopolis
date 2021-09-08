@@ -603,9 +603,6 @@ html.is-locked {
 }
 
 .contacts-block__title {
-  font-size: 30px;
-  color: #fff;
-  font-weight: bold;
   margin-bottom: 40px;
 }
 
@@ -691,11 +688,6 @@ html.is-locked {
   flex: none;
   padding: 67px 0 88px;
   background: #12152a;
-}
-
-.faq-block__title {
-  color: #fff;
-  margin-bottom: 44px;
 }
 
 .faq-block__item {
@@ -1361,8 +1353,6 @@ html.is-locked {
 
 .sign-up-block__title {
   font-size: 30px;
-  font-weight: bold;
-  line-height: 1.4;
   margin-bottom: 40px;
   width: 240px;
   max-width: 100%;
@@ -2083,8 +2073,7 @@ html.is-locked {
   }
 
   .contacts-block__title {
-    font-size: 80px;
-    margin-bottom: 70px;
+    margin-bottom: 76px;
   }
 
   .contacts-block__content {
@@ -2246,7 +2235,8 @@ html.is-locked {
   }
 
   .sign-up-block__title {
-    margin-bottom: 65px;
+    font-size: 60px;
+    margin-bottom: 88px;
   }
 
   .sign-up-block__btn-sign-up {
@@ -2302,7 +2292,7 @@ html.is-locked {
   }
 
   .tickets-block__title {
-    margin-bottom: 70px;
+    margin-bottom: 110px;
   }
 
   .tickets-block__item {

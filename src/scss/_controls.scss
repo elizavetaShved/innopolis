@@ -24,9 +24,12 @@
     border-radius: 0 50px 50px 50px;
     max-width: 300px;
 
+    @include for-md-down {
+      font-size: 20px;
+    }
+
     @include for-sm-down {
       padding: 20px 34px;
-      font-size: 20px;
     }
   }
 
@@ -36,9 +39,12 @@
     border-radius: 0 35px 35px 35px;
     max-width: 300px;
 
+    @include for-md-down {
+      font-size: 18px;
+    }
+
     @include for-sm-down {
       padding: 18px 30px;
-      font-size: 18px;
     }
   }
 
@@ -81,5 +87,10 @@
       background-color: #000;
       color: #fff !important;
     }
+  }
+
+  @include for-sm-down {
+    font-size: 16px !important;
+    line-height: 20px !important;
   }
 }
