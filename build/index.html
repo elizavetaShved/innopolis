@@ -226,27 +226,73 @@
   </div>
 
   <div class="layout__header">
-    <header class="app-header" id="header-host">
-      <div class="app-header__inner">
-        <div class="app-header__left">
-          <button class="app-header__burger"></button>
-          <div class="app-header__logo">
-            <img src="img/old/img/logo.svg" alt="">
-          </div>
-        </div>
-        <div class="app-header__middle">
-          <div class="app-header__contacts">
+    <header class="header" id="header-host">
+      <a href="/" class="header__section">
+        <img src="img/header/logo.svg" alt="logo" class="header__logo">
+      </a>
     
-            <div class="app-header__mail">
-              <a href="mailto:did@innopolis.ru">did@innopolis.ru</a>
+      <div class="header__section mod-center gl__page-content">
+        <div class="header__contacts-list">
+          <a href="tel:+78004572200" class="header__contact">
+            8 800 457 22 00
+          </a>
+          <a href="mailto:did@innopolis.ru" class="header__contact">
+            did@innopolis.ru
+          </a>
+        </div>
+    
+        <a href="" class="header__main-logo-link">
+          <svg width="210" height="48" aria-hidden="true" class="header__main-logo">
+            <use xlink:href="#innopolis"></use>
+          </svg>
+        </a>
+    
+        <div>
+          <div class="header__lang-select-wrapper ">
+           <div class="header__lang-selected-item header__lang-select">
+             ENG
+           </div>
+            <div class="header__lang-select-options">
+              <label class="header__lang-radio-wrapper">
+                <input type="text" class="header__lang-radio">
+                <span class="header__lang-select">РУС</span>
+              </label>
             </div>
           </div>
-          <div class="app-header__dop-logo">
-            <img src="img/old/img/logo2.svg" alt="">
-          </div>
+    <!--      <button type="button" class="header__eyes-btn">-->
+    <!--        eyes-->
+    <!--      </button>-->
         </div>
       </div>
+    
+      <div class="header__section">
+        1111
+      </div>
     </header>
+    
+    
+    
+    <!--<header class="app-header" id="header-host">-->
+    <!--  <div class="app-header__inner">-->
+    <!--    <div class="app-header__left">-->
+    <!--      <button class="app-header__burger"></button>-->
+    <!--      <div class="app-header__logo">-->
+    <!--        <img src="img/old/img/logo.svg" alt="">-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <!--    <div class="app-header__middle">-->
+    <!--      <div class="app-header__contacts">-->
+    
+    <!--        <div class="app-header__mail">-->
+    <!--          <a href="mailto:did@innopolis.ru">did@innopolis.ru</a>-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--      <div class="app-header__dop-logo">-->
+    <!--        <img src="img/old/img/logo2.svg" alt="">-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <!--  </div>-->
+    <!--</header>-->
     
   </div>
 
@@ -285,7 +331,7 @@
         </div><!-- desctop-navigation -->
 
         <div class="hero-block">
-          <div class="hero-block__inner site-width">
+          <div class="hero-block__inner gl__page-content">
             <div class="hero-block__head">
               <div class="hero-block__image">
                 <img src="img/old/img/hero-image.svg" alt="" class="hero-block__image-img">
@@ -310,7 +356,7 @@
         </div><!-- hero-block -->
 
         <div class="news" id="news-block-host">
-          <div class="site-width">
+          <div class="gl__page-content">
             <div class="swiper news__swiper">
               <div class="news__cards-wrapper swiper-wrapper">
                 <a href="#" class="news__card swiper-slide">
@@ -385,7 +431,7 @@
         </div>
 
         <div id="faq-block-host" class="faq-block">
-          <div class="faq-block__inner site-width">
+          <div class="faq-block__inner gl__page-content">
             <h2 class="gl__title mod-white">Основные треки</h2>
             <div class="faq-block__list">
               <div class="faq-block__item">
@@ -497,7 +543,7 @@
 
         <div class="program" id="program-host">
           <div class="program__top-block-wrapper">
-            <div class="site-width">
+            <div class="gl__page-content">
               <form id="program-form">
                 <div class="program__head">
                   <h2 class="program__title mod-white gl__title">Программа</h2>
@@ -555,7 +601,7 @@
           </div>
 
           <div class="program__bottom-block-container">
-            <div class="site-width program__site-width-none">
+            <div class="gl__page-content program__gl__page-content-none">
               <div class="program__bottom-blocks">
                 <div class="program__bottom-block-wrapper">
                   <ul class="program__content-wrapper">
@@ -1509,7 +1555,7 @@
         </div>
 
         <div id="block4" class="about-block">
-          <div class="about-block__inner site-width">
+          <div class="about-block__inner gl__page-content">
             <h2 class="gl__title">О форуме</h2>
             <div class="about-block__description">Digital Innopolis Days объединяет главных драйверов цифровой
               трансформации страны: отраслевые компании и корпорации, ИТ-компании, профильные и педагогические вузы и
@@ -1531,10 +1577,10 @@
         </div><!-- about-block -->
 
         <div class="speakers" id="speakers-host">
-          <div class="site-width">
+          <div class="gl__page-content">
             <h2 class="gl__title">Спикеры</h2>
 
-            <ul class="speakers__list site-width">
+            <ul class="speakers__list gl__page-content">
               <li class="speakers__item">
                 <div class="speakers__item-image-wrapper type-1">
                   <div class="speakers__message-container">
@@ -1993,7 +2039,7 @@
         </div>
 
         <div id="block6" class="tickets-block">
-          <div class="tickets-block__inner site-width">
+          <div class="tickets-block__inner gl__page-content">
             <h2 class="tickets-block__title gl__title mod-white">Билеты</h2>
             <div class="tickets-block__list">
               <div class="tickets-block__item">
@@ -2028,7 +2074,7 @@
         </div><!-- tickets-block -->
 
         <div id="block7" class="partners">
-          <div class="partners__head site-width">
+          <div class="partners__head gl__page-content">
             <h2 class="gl__title mod-white">Партнёры</h2>
             <button class="partners__btn-sign-up gl__main-btn mod-middle-2 mod-no-shadow open-modal-partner"
                     data-remodal-target="partners" type="button">
@@ -2037,7 +2083,7 @@
           </div>
 
           <ul class="partners__list">
-            <li class="partners__item site-width">
+            <li class="partners__item gl__page-content">
               <div class="partners__item-title">
                 Генеральный партнёр
                 <span class="partners__item-title-before"></span>
@@ -2052,7 +2098,7 @@
                 </li>
               </ul>
             </li>
-            <li class="partners__item site-width">
+            <li class="partners__item gl__page-content">
               <div class="partners__item-title">
                 Индустриальные партнёры
                 <span class="partners__item-title-before"></span>
@@ -2095,7 +2141,7 @@
                 </li>
               </ul>
             </li>
-            <li class="partners__item site-width">
+            <li class="partners__item gl__page-content">
               <div class="partners__item-title">
                 Партнёры экспо
                 <span class="partners__item-title-before"></span>
@@ -2138,7 +2184,7 @@
                 </li>
               </ul>
             </li>
-            <li class="partners__item site-width">
+            <li class="partners__item gl__page-content">
               <div class="partners__item-title">
                 Генеральный информационный партнёр
                 <span class="partners__item-title-before"></span>
@@ -2153,7 +2199,7 @@
                 </li>
               </ul>
             </li>
-            <li class="partners__item site-width">
+            <li class="partners__item gl__page-content">
               <div class="partners__item-title">
                 Информационный партнёр
                 <span class="partners__item-title-before"></span>
@@ -2174,7 +2220,7 @@
         <div class="sign-up-block">
           <div class="sign-up-block__section">
             <div class="sign-up-block__inner">
-              <div class="sign-up-block__content site-width">
+              <div class="sign-up-block__content gl__page-content">
                 <h2 class="sign-up-block__title gl__title">Стать участником</h2>
                 <button class="gl__main-btn mod-big mod-no-shadow open-modal-participation"
                         data-remodal-target="sign_up"
@@ -2186,7 +2232,7 @@
         </div><!-- sign-up-block -->
         <div id="block8" class="contacts-block">
           <div class="contacts-block__section">
-            <div class="contacts-block__inner site-width">
+            <div class="contacts-block__inner gl__page-content">
               <h2 class="contacts-block__title gl__title mod-white">Контакты</h2>
               <div class="contacts-block__content">
                 <div class="contacts-block__address">
@@ -2277,7 +2323,7 @@
           </div>
         </div>
         <div class="mobile-box__dop-logo">
-          <img src="img/logo2.svg" alt="">
+          <img src="img/innopolis.svg" alt="" style="fill: #fff">
         </div>
       </div>
     </div>
