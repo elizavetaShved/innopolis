@@ -4198,7 +4198,7 @@ html.remodal-is-locked {
       margin-top: 0; } }
 
 .partners__item {
-  margin-bottom: 74px; }
+  margin-bottom: 68px; }
   @media screen and (max-width: 767px) {
     .partners__item {
       padding-top: 48px;
@@ -4210,7 +4210,7 @@ html.remodal-is-locked {
   font-weight: 600;
   font-size: 24px;
   line-height: 30px;
-  margin-bottom: 60px;
+  margin-bottom: 68px;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
