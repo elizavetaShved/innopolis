@@ -35,6 +35,7 @@ export class NewsComponent {
           spaceBetween: 20
         },
         1025: {
+          slidesPerView: 2,
           spaceBetween: 30
         }
       }

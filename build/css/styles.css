@@ -4346,9 +4346,32 @@ html.remodal-is-locked {
 
 .speakers__item {
   grid-row: span 2;
-  position: relative; }
-  .speakers__item.mod-hide {
-    display: none; }
+  position: relative;
+  opacity: 0;
+  display: none; }
+  .speakers__item.mod-show {
+    display: block;
+    -webkit-transition: 1s;
+    transition: 1s;
+    /*Скорость перехода состояния элемента*/
+    -webkit-animation: show 500ms 1;
+            animation: show 500ms 1;
+    /* Указываем название анимации, её время и количество повторов*/
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    /* Чтобы элемент оставался в конечном состоянии анимации */ }
+
+@-webkit-keyframes show {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes show {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 .speakers__item.mod-hover {
   z-index: 2; }
@@ -4409,10 +4432,11 @@ html.remodal-is-locked {
 
 .speakers__item-caption {
   font-weight: 600;
-  font-size: 32px;
-  line-height: 36px;
-  margin-bottom: 12px; }
-  @media screen and (max-width: 767px) {
+  font-size: 28px;
+  line-height: 32px;
+  margin-bottom: 12px;
+  word-break: break-word; }
+  @media screen and (max-width: 1023px) {
     .speakers__item-caption {
       font-weight: bold;
       font-size: 30px;

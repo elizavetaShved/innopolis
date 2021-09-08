@@ -32,9 +32,23 @@
 .speakers__item {
   grid-row: span 2;
   position: relative;
+  opacity: 0;
+  display: none;
 
-  &.mod-hide {
-    display: none;
+  &.mod-show {
+    display: block;
+    transition: 1s; /*Скорость перехода состояния элемента*/
+    animation: show 500ms 1; /* Указываем название анимации, её время и количество повторов*/
+    animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -116,11 +130,12 @@
 
 .speakers__item-caption {
   font-weight: 600;
-  font-size: 32px;
-  line-height: 36px;
+  font-size: 28px;
+  line-height: 32px;
   margin-bottom: 12px;
+  word-break: break-word;
 
-  @include for-md-down {
+  @include for-bg-down {
     font-weight: bold;
     font-size: 30px;
     line-height: 40px;
@@ -193,7 +208,7 @@
   }
 }
 
-@media (max-width: 768px)  and (min-width: 427px) {
+@media (max-width: 768px) and (min-width: 427px) {
   .speakers__item:nth-child(3) .speakers__message-container,
   .speakers__item:nth-child(2n+6) .speakers__message-container {
     left: -40px;
