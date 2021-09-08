@@ -32,6 +32,10 @@
 .speakers__item {
   grid-row: span 2;
   position: relative;
+
+  &.mod-hide {
+    display: none;
+  }
 }
 
 .speakers__item.mod-hover {
@@ -112,8 +116,8 @@
 
 .speakers__item-caption {
   font-weight: 600;
-  font-size: 36px;
-  line-height: 42px;
+  font-size: 32px;
+  line-height: 36px;
   margin-bottom: 12px;
 
   @include for-md-down {

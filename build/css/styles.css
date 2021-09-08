@@ -4347,6 +4347,8 @@ html.remodal-is-locked {
 .speakers__item {
   grid-row: span 2;
   position: relative; }
+  .speakers__item.mod-hide {
+    display: none; }
 
 .speakers__item.mod-hover {
   z-index: 2; }
@@ -4407,8 +4409,8 @@ html.remodal-is-locked {
 
 .speakers__item-caption {
   font-weight: 600;
-  font-size: 36px;
-  line-height: 42px;
+  font-size: 32px;
+  line-height: 36px;
   margin-bottom: 12px; }
   @media screen and (max-width: 767px) {
     .speakers__item-caption {
