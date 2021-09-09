@@ -524,6 +524,10 @@ nav ul {
   display: block;
   width: 100%;
   height: 100%; }
+  .gl__input-wrapper.mod-password {
+    position: relative; }
+    .gl__input-wrapper.mod-password .gl__input {
+      padding-right: 46px !important; }
 
 .gl__input {
   width: 100% !important;
@@ -608,7 +612,7 @@ nav ul {
   transition: max-height 300ms; }
   .gl__error-block.mod-show {
     max-height: 30px;
-    margin-bottom: 20px; }
+    margin: 38px 0; }
 
 .gl__error-block {
   font-size: 14px;
@@ -629,6 +633,24 @@ nav ul {
   grid-column: 2 / 3; }
   .gl__input-hint-link:hover {
     text-decoration: underline; }
+
+.gl__input-password-btn {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 22px; }
+  .gl__input-password-btn.mod-show-password .gl__input-password-btn-image.type-show {
+    display: block; }
+  .gl__input-password-btn.mod-show-password .gl__input-password-btn-image.type-hide {
+    display: none; }
+
+.gl__input-password-btn-image {
+  height: 24px; }
+  .gl__input-password-btn-image.type-show {
+    display: none; }
+  .gl__input-password-btn-image.type-hide {
+    display: block; }
 
 /**
  * Swiper 6.8.0
@@ -1799,7 +1821,7 @@ button.swiper-pagination-bullet {
 
 .modal__container {
   padding: 40px 52px;
-  width: 530px;
+  width: 647px;
   background-color: #FFFFFF;
   border-radius: 20px;
   z-index: 100;
@@ -1808,7 +1830,8 @@ button.swiper-pagination-bullet {
   @media screen and (max-width: 767px) {
     .modal__container {
       padding: 30px 20px;
-      margin: 0 10px; } }
+      margin: 0 10px;
+      max-width: 90vw; } }
 
 .modal__content {
   display: block; }
@@ -1909,6 +1932,10 @@ button.swiper-pagination-bullet {
   transition: color 300ms; }
   .modal__proposal-link:hover {
     text-decoration: underline; }
+
+.modal__entered-email {
+  color: var(--btn-color);
+  word-break: break-all; }
 
 @media screen and (min-width: 1400px) {
   .gl__fl-show {
@@ -2091,7 +2118,10 @@ button.swiper-pagination-bullet {
 
 .header__auth-btn {
   padding-top: 10px !important;
-  padding-bottom: 10px !important; }
+  padding-bottom: 10px !important;
+  display: none; }
+  .header__auth-btn.mod-show {
+    display: block; }
   @media screen and (max-width: 1399px) {
     .header__auth-btn {
       border-radius: 0 20px 20px 20px;

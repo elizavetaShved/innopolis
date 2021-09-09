@@ -26,7 +26,6 @@ export class Header {
     this.selectWrapperElem = hostElem.querySelector('.header__lang-select-wrapper');
     const selectedItemElem = hostElem.querySelector('.header__lang-selected-item');
     const btnAuthElems = hostElem.querySelectorAll('.header__auth-btn');
-    const modalAuthElem = document.querySelector('#modal-auth-host');
 
     this.selectedSelectElem = hostElem.querySelector('.header__lang-select');
     this.optionSelectElems = hostElem.querySelectorAll('.header__lang-option-item');
@@ -71,7 +70,7 @@ export class Header {
 
     btnAuthElems.forEach(btn => {
       btn.onclick = () => {
-        const modal = new Modal('auth');
+        const modal = new Modal(btn.value);
         modal.isOpen();
       }
     })

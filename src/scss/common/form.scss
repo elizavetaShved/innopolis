@@ -30,6 +30,14 @@
   display: block;
   width: 100%;
   height: 100%;
+
+  &.mod-password {
+    position: relative;
+
+    .gl__input {
+      padding-right: 46px !important;
+    }
+  }
 }
 
 .gl__input {
@@ -76,7 +84,7 @@
   display: none;
 
   &:checked {
-    +.gl__radio-input-content {
+    + .gl__radio-input-content {
       &:before {
         opacity: 1;
       }
@@ -133,7 +141,7 @@
 
   &.mod-show {
     max-height: 30px;
-    margin-bottom: 20px;
+    margin: 38px 0;
   }
 }
 
@@ -158,5 +166,36 @@
 
   &:hover {
     text-decoration: underline;
+  }
+}
+
+.gl__input-password-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 22px;
+
+  &.mod-show-password {
+    .gl__input-password-btn-image {
+      &.type-show {
+        display: block;
+      }
+
+      &.type-hide {
+        display: none;
+      }
+    }
+  }
+}
+
+.gl__input-password-btn-image {
+  height: 24px;
+
+  &.type-show {
+    display: none;
+  }
+
+  &.type-hide {
+    display: block;
   }
 }

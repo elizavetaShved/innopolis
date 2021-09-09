@@ -28,7 +28,7 @@
 
 .modal__container {
   padding: 40px 52px;
-  width: 530px;
+  width: 647px;
   background-color: #FFFFFF;
   border-radius: 20px;
   z-index: 100;
@@ -38,6 +38,7 @@
   @include for-md-down {
     padding: 30px 20px;
     margin: 0 10px;
+    max-width: 90vw;
   }
 }
 
@@ -146,4 +147,9 @@
   &:hover {
     text-decoration: underline;
   }
+}
+
+.modal__entered-email {
+  color: var(--btn-color);
+  word-break: break-all;
 }

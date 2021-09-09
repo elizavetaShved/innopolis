@@ -41,8 +41,7 @@
                      placeholder="Иванов Анатолий Иванович"
                      data-parsley-required=""
                      data-parsley-minlength="2"
-                     name="name-participation"
-                     required>
+                     name="name-participation">
             </label>
           </li>
           <li class="gl__input-container">
@@ -53,8 +52,7 @@
                      placeholder="Какую организацию Вы представляете?"
                      data-parsley-required=""
                      data-parsley-minlength="2"
-                     name="organization-participation"
-                     required>
+                     name="organization-participation">
             </label>
           </li>
           <li class="gl__input-container">
@@ -65,8 +63,7 @@
                      placeholder="info@gmail.com"
                      name="email-participation"
                      data-parsley-required=""
-                     data-parsley-type="email"
-                     required>
+                     data-parsley-type="email">
             </label>
           </li>
           <li class="gl__input-container">
@@ -76,8 +73,7 @@
                      class="gl__input js-phone-input"
                      placeholder="+7"
                      data-parsley-required=""
-                     name="phone-participation"
-                     required>
+                     name="phone-participation">
             </label>
           </li>
         </ul>
@@ -91,7 +87,7 @@
   
         <div class="gl__radio-input-container">
           <label class="gl__radio-input-wrapper">
-            <input type="radio" class="gl__radio-input" required name="agreement-participation">
+            <input type="radio" class="gl__radio-input" data-parsley-required="" name="agreement-participation">
             <span class="gl__radio-input-content"></span>
           </label>
           <span class="gl__radio-input-caption">
@@ -144,8 +140,7 @@
                      placeholder="Иванов Анатолий Иванович"
                      data-parsley-required=""
                      data-parsley-minlength="2"
-                     name="name-partner"
-                     required>
+                     name="name-partner">
             </label>
           </li>
           <li class="gl__input-container">
@@ -156,8 +151,7 @@
                      placeholder="Какую организацию Вы представляете?"
                      data-parsley-required=""
                      data-parsley-minlength="2"
-                     name="organization-partner"
-                     required>
+                     name="organization-partner">
             </label>
           </li>
           <li class="gl__input-container">
@@ -168,8 +162,7 @@
                      placeholder="info@gmail.com"
                      name="email-partner"
                      data-parsley-required=""
-                     data-parsley-type="email"
-                     required>
+                     data-parsley-type="email">
             </label>
           </li>
           <li class="gl__input-container">
@@ -179,8 +172,7 @@
                      class="gl__input js-phone-input"
                      placeholder="+7"
                      data-parsley-required=""
-                     name="phone-partner"
-                     required>
+                     name="phone-partner">
             </label>
           </li>
         </ul>
@@ -194,7 +186,7 @@
   
         <div class="gl__radio-input-container">
           <label class="gl__radio-input-wrapper">
-            <input type="radio" class="gl__radio-input" required name="agreement-partner">
+            <input type="radio" class="gl__radio-input" data-parsley-required="" name="agreement-partner">
             <span class="gl__radio-input-content"></span>
           </label>
           <span class="gl__radio-input-caption">
@@ -227,191 +219,257 @@
 
   <div class="modal-auth modal" id="modal-auth-host">
     <div class="modal__container">
-      <form class="modal__content" data-need-validation data-parsley-focus="none">
-        <div class="modal__header">
-          <div class="modal__title">
-            Авторизация
+      <div class="modal__content">
+        <form data-need-validation data-parsley-validate data-parsley-focus="none">
+          <div class="modal__header">
+            <div class="modal__title">
+              Авторизация
+            </div>
+            <button type="button" class="modal__close-btn">
+              <svg width="20" height="20" aria-hidden="true" class="modal__close-icon">
+                <use xlink:href="#close"></use>
+              </svg>
+            </button>
           </div>
-          <button type="button" class="modal__close-btn">
-            <svg width="20" height="20" aria-hidden="true" class="modal__close-icon">
-              <use xlink:href="#close"></use>
-            </svg>
+  
+          <ul class="modal__inputs-list">
+            <li class="gl__input-container">
+              <div class="gl__input-title">Телефон или E-mail</div>
+              <label class="gl__input-wrapper mod-contact">
+                <input type="text"
+                       class="gl__input"
+                       placeholder="Введите телефон или E-mail"
+                       data-parsley-required=""
+                       data-parsley-minlength="2"
+                       name="contact-auth">
+              </label>
+            </li>
+            <li class="gl__input-container">
+              <div class="gl__input-title">Пароль</div>
+              <label class="gl__input-wrapper mod-password">
+                <input type="password"
+                       class="gl__input"
+                       placeholder="Введите пароль"
+                       data-parsley-required=""
+                       data-parsley-minlength="2"
+                       name="password-auth"
+                       id="password-auth">
+                <button type="button" class="gl__input-password-btn">
+                  <img src="img/modal/hide-password.svg" alt="" class="gl__input-password-btn-image type-hide">
+                  <img src="img/modal/show-password.svg" alt="" class="gl__input-password-btn-image type-show">
+                </button>
+              </label>
+            </li>
+          </ul>
+  
+  
+          <div class="gl__error-block">
+            <img src="img/old/img/error-form.svg" alt="" class="gl__error-icon">
+            <div class="gl__error-content">
+              Заполните все обязательные поля
+            </div>
+          </div>
+  
+          <button type="submit" class="gl__btn-submit modal__btn-submit gl__main-btn mod-long mod-no-shadow mod-small">
+              Войти
           </button>
+        </form>
+  
+        <div class="modal__proposal">
+            Еще нет аккаунта?
+            <button type="button" class="modal__proposal-link">
+              Зарегистрироваться
+            </button>
         </div>
   
-        <ul class="modal__inputs-list">
-          <li class="gl__input-container">
-            <div class="gl__input-title">Телефон или E-mail</div>
-            <label class="gl__input-wrapper">
-              <input type="text"
-                     class="gl__input"
-                     placeholder="Введите телефон или E-mail"
-                     data-parsley-required=""
-                     data-parsley-minlength="2"
-                     name="contact-auth"
-                     required>
-            </label>
-          </li>
-          <li class="gl__input-container">
-            <div class="gl__input-title">Пароль</div>
-            <label class="gl__input-wrapper">
-              <input type="password"
-                     class="gl__input"
-                     placeholder="Введите пароль"
-                     data-parsley-required=""
-                     data-parsley-minlength="2"
-                     name="organization-auth"
-                     required>
-            </label>
-            <a href="" class="gl__input-hint-link">Забыли пароль?</a>
-          </li>
-        </ul>
-  
-        <div class="gl__error-block">
-          <img src="img/old/img/error-form.svg" alt="" class="gl__error-icon">
-          <div class="gl__error-content">
-            Заполните все обязательные поля
+        <div class="modal-auth__social-wrapper">
+          <div class="modal-auth__social-title-wrapper">
+            <div class="modal-auth__social-title-line"></div>
+            <div class="modal-auth__social-title">или войти через</div>
           </div>
+  
+          <ul class="modal-auth__social-list">
+            <li class="modal-auth__social-item">
+              <a href="" class="modal-auth__social-link">
+                <img src="img/social/google.svg" alt="" class="modal-auth__social-image">
+              </a>
+            </li>
+            <li class="modal-auth__social-item">
+              <a href="" class="modal-auth__social-link">
+                <img src="img/social/fb.svg" alt="" class="modal-auth__social-image">
+              </a>
+            </li>
+            <li class="modal-auth__social-item">
+              <a href="" class="modal-auth__social-link">
+                <img src="img/social/vk.svg" alt="" class="modal-auth__social-image">
+              </a>
+            </li>
+            <li class="modal-auth__social-item">
+              <a href="" class="modal-auth__social-link">
+                <img src="img/social/yandex.svg" alt="" class="modal-auth__social-image">
+              </a>
+            </li>
+            <li class="modal-auth__social-item">
+              <a href="" class="modal-auth__social-link">
+                <img src="img/social/mail.svg" alt="" class="modal-auth__social-image">
+              </a>
+            </li>
+          </ul>
         </div>
-  
-        <button type="submit" class="gl__btn-submit modal__btn-submit gl__main-btn mod-long mod-no-shadow mod-small">
-          Войти
-        </button>
-      </form>
-  
-      <div class="modal__proposal">
-        Еще нет аккаунта?
-        <a href="" class="modal__proposal-link">Зарегистрироваться</a>
       </div>
   
-      <div class="modal-auth__social-wrapper">
-        <div class="modal-auth__social-title-wrapper">
-          <div class="modal-auth__social-title-line"></div>
-          <div class="modal-auth__social-title">или войти через</div>
+      <div class="modal__success-text-wrapper">
+        <button type="button" class="modal__close-btn">
+          <svg width="20" height="20" aria-hidden="true" class="modal__close-icon">
+            <use xlink:href="#close"></use>
+          </svg>
+        </button>
+        <div class="modal__success-text">
+          По адресу <span class="modal__entered-email">info@gmail.com</span> отправлена ссылка для подтверждения электронной почты
         </div>
-  
-        <ul class="modal-auth__social-list">
-          <li class="modal-auth__social-item">
-            <a href="" class="modal-auth__social-link">
-              <img src="img/social/google.svg" alt="" class="modal-auth__social-image">
-            </a>
-          </li>
-          <li class="modal-auth__social-item">
-            <a href="" class="modal-auth__social-link">
-              <img src="img/social/fb.svg" alt="" class="modal-auth__social-image">
-            </a>
-          </li>
-          <li class="modal-auth__social-item">
-            <a href="" class="modal-auth__social-link">
-              <img src="img/social/vk.svg" alt="" class="modal-auth__social-image">
-            </a>
-          </li>
-          <li class="modal-auth__social-item">
-            <a href="" class="modal-auth__social-link">
-              <img src="img/social/yandex.svg" alt="" class="modal-auth__social-image">
-            </a>
-          </li>
-          <li class="modal-auth__social-item">
-            <a href="" class="modal-auth__social-link">
-              <img src="img/social/mail.svg" alt="" class="modal-auth__social-image">
-            </a>
-          </li>
-        </ul>
       </div>
     </div>
   </div>
   <div class="modal-auth modal" id="modal-registr-host">
     <div class="modal__container">
-      <form class="modal__content" data-need-validation data-parsley-focus="none">
-        <div class="modal__header">
-          <div class="modal__title">
-            Регистрация
+      <div class="modal__content">
+        <form data-need-validation data-parsley-validate data-parsley-focus="none">
+          <div class="modal__header">
+            <div class="modal__title">
+              Регистрация
+            </div>
+            <button type="button" class="modal__close-btn">
+              <svg width="20" height="20" aria-hidden="true" class="modal__close-icon">
+                <use xlink:href="#close"></use>
+              </svg>
+            </button>
           </div>
-          <button type="button" class="modal__close-btn">
-            <svg width="20" height="20" aria-hidden="true" class="modal__close-icon">
-              <use xlink:href="#close"></use>
-            </svg>
+  
+          <ul class="modal__inputs-list">
+            <li class="gl__input-container">
+              <div class="gl__input-title">Телефон или E-mail</div>
+              <label class="gl__input-wrapper mod-contact">
+                <input type="text"
+                       class="gl__input"
+                       placeholder="Введите телефон или E-mail"
+                       data-parsley-required=""
+                       data-parsley-minlength="2"
+                       name="contact-registr">
+              </label>
+            </li>
+            <li class="gl__input-container">
+              <div class="gl__input-title">Пароль</div>
+              <label class="gl__input-wrapper mod-password">
+                <input type="password"
+                       class="gl__input"
+                       placeholder="Введите пароль"
+                       data-parsley-required=""
+                       data-parsley-minlength="2"
+                       name="password-registr"
+                       id="password-registr">
+                <button type="button" class="gl__input-password-btn">
+                  <img src="img/modal/hide-password.svg" alt="" class="gl__input-password-btn-image type-hide">
+                  <img src="img/modal/show-password.svg" alt="" class="gl__input-password-btn-image type-show">
+                </button>
+              </label>
+            </li>
+              <li class="gl__input-container">
+                <div class="gl__input-title">Повторите пароль</div>
+                <label class="gl__input-wrapper mod-password">
+                  <input type="password"
+                         class="gl__input"
+                         placeholder="Введите пароль"
+                         data-parsley-required=""
+                         data-parsley-minlength="2"
+                         data-parsley-equalto="#password-registr"
+                         name="password-dupl-registr">
+                  <button type="button" class="gl__input-password-btn">
+                    <img src="img/modal/hide-password.svg" alt="" class="gl__input-password-btn-image type-hide">
+                    <img src="img/modal/show-password.svg" alt="" class="gl__input-password-btn-image type-show">
+                  </button>
+                </label>
+              </li>
+          </ul>
+  
+            <div class="gl__radio-input-container">
+              <label class="gl__radio-input-wrapper">
+                <input type="radio" class="gl__radio-input" data-parsley-required="" name="agreement-registr">
+                <span class="gl__radio-input-content"></span>
+              </label>
+              <span class="gl__radio-input-caption">
+            Я подтверждаю свое согласие с условиями
+          <a href="" class="gl__radio-input-caption-link">Пользовательского соглашения</a>
+            и
+          <a href="" class="gl__radio-input-caption-link">Договором оказания услуг</a>
+            по организации мероприятия и
+          <a href="" class="gl__radio-input-caption-link">политикой возвратов</a>
+          </span>
+            </div>
+  
+          <div class="gl__error-block">
+            <img src="img/old/img/error-form.svg" alt="" class="gl__error-icon">
+            <div class="gl__error-content">
+              Заполните все обязательные поля
+            </div>
+          </div>
+  
+          <button type="submit" class="gl__btn-submit modal__btn-submit gl__main-btn mod-long mod-no-shadow mod-small">
+              Зарегистрироваться
           </button>
+        </form>
+  
+        <div class="modal__proposal">
+            Уже есть аккаунт?
+            <button type="button" class="modal__proposal-link">
+              Войти
+            </button>
         </div>
   
-        <ul class="modal__inputs-list">
-          <li class="gl__input-container">
-            <div class="gl__input-title">Телефон или E-mail</div>
-            <label class="gl__input-wrapper">
-              <input type="text"
-                     class="gl__input"
-                     placeholder="Введите телефон или E-mail"
-                     data-parsley-required=""
-                     data-parsley-minlength="2"
-                     name="contact-registr"
-                     required>
-            </label>
-          </li>
-          <li class="gl__input-container">
-            <div class="gl__input-title">Пароль</div>
-            <label class="gl__input-wrapper">
-              <input type="password"
-                     class="gl__input"
-                     placeholder="Введите пароль"
-                     data-parsley-required=""
-                     data-parsley-minlength="2"
-                     name="organization-registr"
-                     required>
-            </label>
-            <a href="" class="gl__input-hint-link">Забыли пароль?</a>
-          </li>
-        </ul>
-  
-        <div class="gl__error-block">
-          <img src="img/old/img/error-form.svg" alt="" class="gl__error-icon">
-          <div class="gl__error-content">
-            Заполните все обязательные поля
+        <div class="modal-auth__social-wrapper">
+          <div class="modal-auth__social-title-wrapper">
+            <div class="modal-auth__social-title-line"></div>
+            <div class="modal-auth__social-title">или войти через</div>
           </div>
+  
+          <ul class="modal-auth__social-list">
+            <li class="modal-auth__social-item">
+              <a href="" class="modal-auth__social-link">
+                <img src="img/social/google.svg" alt="" class="modal-auth__social-image">
+              </a>
+            </li>
+            <li class="modal-auth__social-item">
+              <a href="" class="modal-auth__social-link">
+                <img src="img/social/fb.svg" alt="" class="modal-auth__social-image">
+              </a>
+            </li>
+            <li class="modal-auth__social-item">
+              <a href="" class="modal-auth__social-link">
+                <img src="img/social/vk.svg" alt="" class="modal-auth__social-image">
+              </a>
+            </li>
+            <li class="modal-auth__social-item">
+              <a href="" class="modal-auth__social-link">
+                <img src="img/social/yandex.svg" alt="" class="modal-auth__social-image">
+              </a>
+            </li>
+            <li class="modal-auth__social-item">
+              <a href="" class="modal-auth__social-link">
+                <img src="img/social/mail.svg" alt="" class="modal-auth__social-image">
+              </a>
+            </li>
+          </ul>
         </div>
-  
-        <button type="submit" class="gl__btn-submit modal__btn-submit gl__main-btn mod-long mod-no-shadow mod-small">
-          Войти
-        </button>
-      </form>
-  
-      <div class="modal__proposal">
-        Еще нет аккаунта?
-        <a href="" class="modal__proposal-link">Зарегистрироваться</a>
       </div>
   
-      <div class="modal-auth__social-wrapper">
-        <div class="modal-auth__social-title-wrapper">
-          <div class="modal-auth__social-title-line"></div>
-          <div class="modal-auth__social-title">или войти через</div>
+      <div class="modal__success-text-wrapper">
+        <button type="button" class="modal__close-btn">
+          <svg width="20" height="20" aria-hidden="true" class="modal__close-icon">
+            <use xlink:href="#close"></use>
+          </svg>
+        </button>
+        <div class="modal__success-text">
+          По адресу <span class="modal__entered-email">info@gmail.com</span> отправлена ссылка для подтверждения электронной почты
         </div>
-  
-        <ul class="modal-auth__social-list">
-          <li class="modal-auth__social-item">
-            <a href="" class="modal-auth__social-link">
-              <img src="img/social/google.svg" alt="" class="modal-auth__social-image">
-            </a>
-          </li>
-          <li class="modal-auth__social-item">
-            <a href="" class="modal-auth__social-link">
-              <img src="img/social/fb.svg" alt="" class="modal-auth__social-image">
-            </a>
-          </li>
-          <li class="modal-auth__social-item">
-            <a href="" class="modal-auth__social-link">
-              <img src="img/social/vk.svg" alt="" class="modal-auth__social-image">
-            </a>
-          </li>
-          <li class="modal-auth__social-item">
-            <a href="" class="modal-auth__social-link">
-              <img src="img/social/yandex.svg" alt="" class="modal-auth__social-image">
-            </a>
-          </li>
-          <li class="modal-auth__social-item">
-            <a href="" class="modal-auth__social-link">
-              <img src="img/social/mail.svg" alt="" class="modal-auth__social-image">
-            </a>
-          </li>
-        </ul>
       </div>
     </div>
   </div>
@@ -462,8 +520,15 @@
       </div>
   
       <div class="gl__sections-top__section">
-        <button class="header__auth-btn gl__main-btn mod-small">
+        <button class="header__auth-btn gl__main-btn mod-small" value="auth">
           <span class="gl__fl-hide">Авторизоваться</span>
+          <span class="gl__fl-show">
+          <img src="img/header/auth-btn.svg" alt="" class="header__auth-btn-icon">
+        </span>
+        </button>
+  
+        <button class="header__auth-btn mod-show gl__main-btn mod-small" value="registr">
+          <span class="gl__fl-hide">Регистрация</span>
           <span class="gl__fl-show">
           <img src="img/header/auth-btn.svg" alt="" class="header__auth-btn-icon">
         </span>

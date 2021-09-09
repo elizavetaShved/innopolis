@@ -21,8 +21,7 @@
                    placeholder="Иванов Анатолий Иванович"
                    data-parsley-required=""
                    data-parsley-minlength="2"
-                   name="name-{{type}}"
-                   required>
+                   name="name-{{type}}">
           </label>
         </li>
         <li class="gl__input-container">
@@ -33,8 +32,7 @@
                    placeholder="Какую организацию Вы представляете?"
                    data-parsley-required=""
                    data-parsley-minlength="2"
-                   name="organization-{{type}}"
-                   required>
+                   name="organization-{{type}}">
           </label>
         </li>
         <li class="gl__input-container">
@@ -45,8 +43,7 @@
                    placeholder="info@gmail.com"
                    name="email-{{type}}"
                    data-parsley-required=""
-                   data-parsley-type="email"
-                   required>
+                   data-parsley-type="email">
           </label>
         </li>
         <li class="gl__input-container">
@@ -56,8 +53,7 @@
                    class="gl__input js-phone-input"
                    placeholder="+7"
                    data-parsley-required=""
-                   name="phone-{{type}}"
-                   required>
+                   name="phone-{{type}}">
           </label>
         </li>
       </ul>
@@ -71,7 +67,7 @@
 
       <div class="gl__radio-input-container">
         <label class="gl__radio-input-wrapper">
-          <input type="radio" class="gl__radio-input" required name="agreement-{{type}}">
+          <input type="radio" class="gl__radio-input" data-parsley-required="" name="agreement-{{type}}">
           <span class="gl__radio-input-content"></span>
         </label>
         <span class="gl__radio-input-caption">
