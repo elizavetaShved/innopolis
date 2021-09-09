@@ -1,5 +1,6 @@
 import { checkExistParent } from '../functions/checkExistParent';
 import { MobileBox } from './mobile-box';
+import { Modal } from './common/modal';
 
 export const LANG_ARR = [
   {
@@ -70,7 +71,8 @@ export class Header {
 
     btnAuthElems.forEach(btn => {
       btn.onclick = () => {
-        modalAuthElem.classList.add('mod-show');
+        const modal = new Modal('auth');
+        modal.isOpen();
       }
     })
 

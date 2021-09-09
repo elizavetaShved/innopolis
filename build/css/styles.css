@@ -504,12 +504,9 @@ nav ul {
   grid-gap: 16px;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 20px; }
+          align-items: center; }
   .gl__input-container + .gl__input-container {
     margin-top: 20px; }
-  .gl__input-container .parsley-errors-list {
-    display: none; }
   @media screen and (max-width: 559px) {
     .gl__input-container {
       grid-template-columns: 1fr;
@@ -526,10 +523,7 @@ nav ul {
 .gl__input-wrapper {
   display: block;
   width: 100%;
-  height: 100%;
-  position: relative; }
-  .gl__input-wrapper.mod-with-hint {
-    padding-bottom: 26px; }
+  height: 100%; }
 
 .gl__input {
   width: 100% !important;
@@ -542,7 +536,7 @@ nav ul {
   border: 2px solid transparent !important;
   height: auto !important; }
   .gl__input.parsley-error {
-    border-color: var(--btn-color); }
+    border-color: var(--btn-color) !important; }
   @media screen and (max-width: 559px) {
     .gl__input {
       padding: 10px 20px !important; } }
@@ -551,10 +545,16 @@ nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  cursor: pointer; }
+  cursor: pointer;
+  margin-top: 40px; }
+  @media screen and (max-width: 559px) {
+    .gl__radio-input-container {
+      margin-top: 20px; } }
 
 .gl__radio-input-wrapper {
   cursor: pointer; }
+  .gl__radio-input-wrapper.parsley-error .gl__radio-input-content {
+    border: 2px solid var(--btn-color); }
 
 .gl__radio-input {
   display: none; }
@@ -602,13 +602,13 @@ nav ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 20px;
   max-height: 0;
   overflow: hidden;
   -webkit-transition: max-height 300ms;
   transition: max-height 300ms; }
   .gl__error-block.mod-show {
-    max-height: 30px; }
+    max-height: 30px;
+    margin-bottom: 20px; }
 
 .gl__error-block {
   font-size: 14px;
@@ -620,15 +620,13 @@ nav ul {
 
 .gl__input-hint-link {
   display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
   color: var(--btn-color) !important;
   font-weight: 600;
   font-size: 14px;
   line-height: 18px;
   -webkit-transition: color 300ms;
-  transition: color 300ms; }
+  transition: color 300ms;
+  grid-column: 2 / 3; }
   .gl__input-hint-link:hover {
     text-decoration: underline; }
 
@@ -1796,6 +1794,8 @@ button.swiper-pagination-bullet {
     z-index: 51;
     top: 0;
     left: 0; }
+  .modal .parsley-errors-list {
+    display: none; }
 
 .modal__container {
   padding: 40px 52px;
@@ -1866,12 +1866,6 @@ button.swiper-pagination-bullet {
   @media screen and (max-width: 559px) {
     .modal__close-icon {
       height: 16px; } }
-
-.modal__inputs-list {
-  margin-bottom: 40px; }
-  @media screen and (max-width: 559px) {
-    .modal__inputs-list {
-      margin-bottom: 20px; } }
 
 .modal__btn-submit {
   margin-top: 40px; }

@@ -20,6 +20,10 @@
     top: 0;
     left: 0;
   }
+
+  .parsley-errors-list {
+    display: none;
+  }
 }
 
 .modal__container {
@@ -95,14 +99,6 @@
 
   @include for-sm-down {
     height: 16px;
-  }
-}
-
-.modal__inputs-list {
-  margin-bottom: 40px;
-
-  @include for-sm-down {
-    margin-bottom: 20px;
   }
 }
 

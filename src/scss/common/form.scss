@@ -5,14 +5,9 @@
   grid-template-columns: 98px 1fr;
   grid-gap: 16px;
   align-items: center;
-  margin-bottom: 20px;
 
   & + & {
     margin-top: 20px;
-  }
-
-  .parsley-errors-list {
-    display: none;
   }
 
   @include for-sm-down {
@@ -35,11 +30,6 @@
   display: block;
   width: 100%;
   height: 100%;
-  position: relative;
-
-  &.mod-with-hint {
-    padding-bottom: 26px;
-  }
 }
 
 .gl__input {
@@ -54,7 +44,7 @@
   height: auto !important;
 
   &.parsley-error {
-    border-color: var(--btn-color);
+    border-color: var(--btn-color) !important;
   }
 
   @include for-sm-down {
@@ -65,10 +55,21 @@
 .gl__radio-input-container {
   display: flex;
   cursor: pointer;
+  margin-top: 40px;
+
+  @include for-sm-down {
+    margin-top: 20px;
+  }
 }
 
 .gl__radio-input-wrapper {
   cursor: pointer;
+
+  &.parsley-error {
+    .gl__radio-input-content {
+      border: 2px solid var(--btn-color);
+    }
+  }
 }
 
 .gl__radio-input {
@@ -126,13 +127,13 @@
 .gl__error-block {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 300ms;
 
   &.mod-show {
     max-height: 30px;
+    margin-bottom: 20px;
   }
 }
 
@@ -148,14 +149,12 @@
 
 .gl__input-hint-link {
   display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
   color: var(--btn-color) !important;
   font-weight: 600;
   font-size: 14px;
   line-height: 18px;
   transition: color 300ms;
+  grid-column: 2 / 3;
 
   &:hover {
     text-decoration: underline;

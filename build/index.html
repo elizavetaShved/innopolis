@@ -104,7 +104,7 @@
           </span>
         </div>
   
-        <button type="button" class="gl__btn-submit modal__btn-submit gl__main-btn mod-long mod-no-shadow mod-small">
+        <button type="submit" class="gl__btn-submit modal__btn-submit gl__main-btn mod-long mod-no-shadow mod-small">
           отправить
         </button>
       </form>
@@ -207,7 +207,7 @@
           </span>
         </div>
   
-        <button type="button" class="gl__btn-submit modal__btn-submit gl__main-btn mod-long mod-no-shadow mod-small">
+        <button type="submit" class="gl__btn-submit modal__btn-submit gl__main-btn mod-long mod-no-shadow mod-small">
           отправить
         </button>
       </form>
@@ -225,9 +225,9 @@
     </div>
   </div>
 
-  <div class="modal-auth modal mod-show" id="modal-auth-host">
+  <div class="modal-auth modal" id="modal-auth-host">
     <div class="modal__container">
-      <form class="modal__content">
+      <form class="modal__content" data-need-validation data-parsley-focus="none">
         <div class="modal__header">
           <div class="modal__title">
             Авторизация
@@ -254,7 +254,7 @@
           </li>
           <li class="gl__input-container">
             <div class="gl__input-title">Пароль</div>
-            <label class="gl__input-wrapper mod-with-hint">
+            <label class="gl__input-wrapper">
               <input type="password"
                      class="gl__input"
                      placeholder="Введите пароль"
@@ -262,12 +262,19 @@
                      data-parsley-minlength="2"
                      name="organization-auth"
                      required>
-              <a href="" class="gl__input-hint-link">Забыли пароль?</a>
             </label>
+            <a href="" class="gl__input-hint-link">Забыли пароль?</a>
           </li>
         </ul>
   
-        <button type="button" class="gl__btn-submit modal__btn-submit gl__main-btn mod-long mod-no-shadow mod-small">
+        <div class="gl__error-block">
+          <img src="img/old/img/error-form.svg" alt="" class="gl__error-icon">
+          <div class="gl__error-content">
+            Заполните все обязательные поля
+          </div>
+        </div>
+  
+        <button type="submit" class="gl__btn-submit modal__btn-submit gl__main-btn mod-long mod-no-shadow mod-small">
           Войти
         </button>
       </form>
@@ -313,9 +320,9 @@
       </div>
     </div>
   </div>
-  <div class="modal-auth modal " id="modal-auth-host">
+  <div class="modal-auth modal" id="modal-registr-host">
     <div class="modal__container">
-      <form class="modal__content">
+      <form class="modal__content" data-need-validation data-parsley-focus="none">
         <div class="modal__header">
           <div class="modal__title">
             Регистрация
@@ -342,7 +349,7 @@
           </li>
           <li class="gl__input-container">
             <div class="gl__input-title">Пароль</div>
-            <label class="gl__input-wrapper mod-with-hint">
+            <label class="gl__input-wrapper">
               <input type="password"
                      class="gl__input"
                      placeholder="Введите пароль"
@@ -350,12 +357,19 @@
                      data-parsley-minlength="2"
                      name="organization-registr"
                      required>
-              <a href="" class="gl__input-hint-link">Забыли пароль?</a>
             </label>
+            <a href="" class="gl__input-hint-link">Забыли пароль?</a>
           </li>
         </ul>
   
-        <button type="button" class="gl__btn-submit modal__btn-submit gl__main-btn mod-long mod-no-shadow mod-small">
+        <div class="gl__error-block">
+          <img src="img/old/img/error-form.svg" alt="" class="gl__error-icon">
+          <div class="gl__error-content">
+            Заполните все обязательные поля
+          </div>
+        </div>
+  
+        <button type="submit" class="gl__btn-submit modal__btn-submit gl__main-btn mod-long mod-no-shadow mod-small">
           Войти
         </button>
       </form>
