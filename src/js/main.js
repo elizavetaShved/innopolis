@@ -10,6 +10,8 @@ import { oldInit } from './components/old';
 import { OldCommon } from './components/old-common';
 import { Header } from './components/header';
 import { Faq } from './components/faq';
+import { StickyMenu } from './components/sticky-menu';
+import scrollByAnchor from './scrollByAnchor';
 
 document.addEventListener('DOMContentLoaded', function () {
   switch (window.location.href.split('/')[1]) {
@@ -24,10 +26,12 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   new Header();
+  new StickyMenu();
 
   polyfills();
   detectTouch();
   customSelects();
+  scrollByAnchor();
 });
 
 window.addEventListener('load', function () {

@@ -1,4 +1,5 @@
 import { checkExistParent } from '../checkExistParent';
+import { MobileBox } from './mobile-box';
 
 export const LANG_ARR = [
   {
@@ -20,7 +21,6 @@ export class Header {
   constructor() {
     const hostElem = document.querySelector('#header-host');
     const btnBurger = hostElem.querySelector('.header__burger-btn');
-    const mobileBox = document.querySelector('.mobile-box');
     const body = document.querySelector('body');
     this.selectWrapperElem = hostElem.querySelector('.header__lang-select-wrapper');
     const selectedItemElem = hostElem.querySelector('.header__lang-selected-item');
@@ -29,6 +29,8 @@ export class Header {
     this.optionSelectElems = hostElem.querySelectorAll('.header__lang-option-item');
 
     let isOpen = false;
+
+    const mobileBox1 = new MobileBox(isOpen, btnBurger);
 
     if (document.location.href.split('?')[1] && document.location.href.split('?')[1].includes('lang=')) {
       const currentLangName = document.location.href.split('lang=');
@@ -40,7 +42,7 @@ export class Header {
 
     btnBurger.onclick = () => {
       if (!isOpen) {
-        mobileBox.classList.add('opened');
+        mobileBox1.isOpenMobileBox();
         btnBurger.classList.add('mod-open');
         body.classList.add('mod-no-scroll');
         setTimeout(() => {
@@ -51,7 +53,7 @@ export class Header {
 
     hostElem.onclick = () => {
       if (isOpen) {
-        mobileBox.classList.remove('opened');
+        mobileBox1.isCloseMobileBox();
         btnBurger.classList.remove('mod-open');
         body.classList.remove('mod-no-scroll');
         setTimeout(() => {

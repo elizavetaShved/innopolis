@@ -589,34 +589,34 @@ html.is-locked {
   margin-right: 8.5px;
 }
 
-.desctop-navigation {
-  display: none;
-}
-
-.desctop-navigation__navigation {
-  max-width: 240px;
-  margin-left: auto;
-}
-
-.desctop-navigation__navigation ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.desctop-navigation__navigation ul li {
-  margin: 0 0 23px;
-}
-
-.desctop-navigation__navigation ul li a {
-  font-size: 14px;
-  color: #fff;
-  text-decoration: none;
-}
-
-.desctop-navigation__navigation ul li a:hover {
-  text-decoration: underline;
-}
+//.desctop-navigation {
+//  display: none;
+//}
+//
+//.desctop-navigation__navigation {
+//  max-width: 240px;
+//  margin-left: auto;
+//}
+//
+//.desctop-navigation__navigation ul {
+//  padding: 0;
+//  margin: 0;
+//  list-style: none;
+//}
+//
+//.desctop-navigation__navigation ul li {
+//  margin: 0 0 23px;
+//}
+//
+//.desctop-navigation__navigation ul li a {
+//  font-size: 14px;
+//  color: #fff;
+//  text-decoration: none;
+//}
+//
+//.desctop-navigation__navigation ul li a:hover {
+//  text-decoration: underline;
+//}
 
 .faq-block, .news {
   -ms-flex: none;
@@ -832,7 +832,7 @@ html.is-locked {
   left: 0;
   right: 0;
   top: 61px;
-  bottom: 0;
+  bottom: -1px;
   visibility: hidden;
   transition: all 0.3s ease;
   -webkit-transform: translateY(-100%);
@@ -881,7 +881,7 @@ html.is-locked {
   color: #fff;
   font-size: 14px;
   line-height: 1.4;
-  padding: 10px 0;
+  padding: 10px;
 }
 
 .mobile-box__navigation > ul > li > a:hover {
@@ -2302,21 +2302,21 @@ html.is-locked {
 }
 
 @media (min-width: 1360px) {
-  .desctop-navigation {
-    display: block;
-    position: fixed;
-    left: 0;
-    right: 50%;
-    top: 0;
-    bottom: 0;
-    margin-right: 530px;
-    z-index: 2;
-    padding: 200px 0 20px 20px;
-    max-height: 100%;
-    overflow: auto;
-    mix-blend-mode: difference;
-    -webkit-overflow-scrolling: touch;
-  }
+  //.desctop-navigation {
+  //  display: block;
+  //  position: fixed;
+  //  left: 0;
+  //  right: 50%;
+  //  top: 0;
+  //  bottom: 0;
+  //  margin-right: 530px;
+  //  z-index: 2;
+  //  padding: 200px 0 20px 20px;
+  //  max-height: 100%;
+  //  overflow: auto;
+  //  mix-blend-mode: difference;
+  //  -webkit-overflow-scrolling: touch;
+  //}
 
   .mobile-box {
     display: none;
@@ -2328,7 +2328,7 @@ html.is-locked {
     opacity: 1;
     visibility: visible;
     z-index: 49;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+    -webkit-transform: translateY(-1px);
+    transform: translateY(-1px);
   }
 }
