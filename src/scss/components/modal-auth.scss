@@ -1,3 +1,5 @@
+@import '../sizes';
+
 .modal-auth__social-wrapper {
   padding: 34px 0 16px 0;
   width: 100%;
@@ -21,6 +23,7 @@
   transform: translate(-50%, -50%);
   display: inline-block;
   padding: 0 10px;
+  white-space: nowrap;
 }
 
 .modal-auth__social-title-line {
@@ -52,6 +55,14 @@
   align-items: center;
   justify-content: center;
 
+  @include for-md-down {
+    padding: 12px;
+  }
+
+  @include for-sm-down {
+    padding: 8px;
+  }
+
   &:hover {
     .modal-auth__social-image {
       filter: none;
@@ -63,4 +74,12 @@
   height: 42px;
   filter: grayscale(100%);
   transition: filter 400ms;
+
+  @include for-md-down {
+    height: 36px;
+  }
+
+  @include for-sm-down {
+    height: 30px;
+  }
 }

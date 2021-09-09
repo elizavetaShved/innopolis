@@ -132,16 +132,19 @@
 .header__auth-btn {
   padding-top: 10px !important;
   padding-bottom: 10px !important;
-  display: none;
+  display: none !important;
 
   &.mod-show {
-    display: block;
+    display: block !important;
+
+    @include for-fl-down {
+      display: flex;
+    }
   }
 
   @include for-fl-down {
     border-radius: 0 20px 20px 20px;
     background-color: var(--btn-color);
-    display: flex;
     align-items: center;
     justify-content: center;
 

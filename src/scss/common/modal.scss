@@ -76,8 +76,8 @@
 .modal__close-btn {
   width: 50px;
   height: 50px;
-  margin-right: -14px;
-  margin-top: -6px;
+  margin-right: -40px;
+  margin-top: -24px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,9 +88,14 @@
     }
   }
 
-  @include for-sm-down {
+  @include for-md-down {
     margin-right: -10px;
-    margin-top: -16px;
+    margin-top: -20px;
+  }
+
+  @include for-sm-down {
+    margin-right: -16px;
+    margin-top: -26px;
   }
 }
 
@@ -115,19 +120,26 @@
   &.mod-show {
     display: flex;
   }
-
-  .modal__close-btn {
-    margin-right: -34px;
-    margin-top: -26px;
-  }
 }
 
 .modal__success-text {
   font-weight: bold;
   font-size: 30px;
-  line-height: 39px;
+  line-height: 1.2;
   color: var(--main-color);
   text-align: center;
+
+  @include for-md-down {
+    font-size: 26px;
+  }
+
+  @include for-sm-down {
+    font-size: 20px;
+  }
+
+  @include for-xxs-down {
+    font-size: 16px;
+  }
 }
 
 .modal__proposal {
