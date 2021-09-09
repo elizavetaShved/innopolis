@@ -1,5 +1,5 @@
-import validation from '../../validation';
-import { checkExistParent } from '../../checkExistParent';
+import validation from '../../functions/validation';
+import { checkExistParent } from '../../functions/checkExistParent';
 
 export class Form {
 

@@ -96,11 +96,11 @@
           </label>
           <span class="gl__radio-input-caption">
             Я подтверждаю свое согласие с условиями
-          <a href="#" class="gl__radio-input-caption-link">Пользовательского соглашения</a>
+          <a href="" class="gl__radio-input-caption-link">Пользовательского соглашения</a>
             и
-          <a href="#" class="gl__radio-input-caption-link">Договором оказания услуг</a>
+          <a href="" class="gl__radio-input-caption-link">Договором оказания услуг</a>
             по организации мероприятия и
-          <a href="#" class="gl__radio-input-caption-link">политикой возвратов</a>
+          <a href="" class="gl__radio-input-caption-link">политикой возвратов</a>
           </span>
         </div>
   
@@ -199,11 +199,11 @@
           </label>
           <span class="gl__radio-input-caption">
             Я подтверждаю свое согласие с условиями
-          <a href="#" class="gl__radio-input-caption-link">Пользовательского соглашения</a>
+          <a href="" class="gl__radio-input-caption-link">Пользовательского соглашения</a>
             и
-          <a href="#" class="gl__radio-input-caption-link">Договором оказания услуг</a>
+          <a href="" class="gl__radio-input-caption-link">Договором оказания услуг</a>
             по организации мероприятия и
-          <a href="#" class="gl__radio-input-caption-link">политикой возвратов</a>
+          <a href="" class="gl__radio-input-caption-link">политикой возвратов</a>
           </span>
         </div>
   
@@ -221,6 +221,183 @@
         <div class="modal__success-text">
           Спасибо! Вышлем подтверждение на электронку
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-auth modal mod-show" id="modal-auth-host">
+    <div class="modal__container">
+      <form class="modal__content">
+        <div class="modal__header">
+          <div class="modal__title">
+            Авторизация
+          </div>
+          <button type="button" class="modal__close-btn">
+            <svg width="20" height="20" aria-hidden="true" class="modal__close-icon">
+              <use xlink:href="#close"></use>
+            </svg>
+          </button>
+        </div>
+  
+        <ul class="modal__inputs-list">
+          <li class="gl__input-container">
+            <div class="gl__input-title">Телефон или E-mail</div>
+            <label class="gl__input-wrapper">
+              <input type="text"
+                     class="gl__input"
+                     placeholder="Введите телефон или E-mail"
+                     data-parsley-required=""
+                     data-parsley-minlength="2"
+                     name="contact-auth"
+                     required>
+            </label>
+          </li>
+          <li class="gl__input-container">
+            <div class="gl__input-title">Пароль</div>
+            <label class="gl__input-wrapper mod-with-hint">
+              <input type="password"
+                     class="gl__input"
+                     placeholder="Введите пароль"
+                     data-parsley-required=""
+                     data-parsley-minlength="2"
+                     name="organization-auth"
+                     required>
+              <a href="" class="gl__input-hint-link">Забыли пароль?</a>
+            </label>
+          </li>
+        </ul>
+  
+        <button type="button" class="gl__btn-submit modal__btn-submit gl__main-btn mod-long mod-no-shadow mod-small">
+          Войти
+        </button>
+      </form>
+  
+      <div class="modal__proposal">
+        Еще нет аккаунта?
+        <a href="" class="modal__proposal-link">Зарегистрироваться</a>
+      </div>
+  
+      <div class="modal-auth__social-wrapper">
+        <div class="modal-auth__social-title-wrapper">
+          <div class="modal-auth__social-title-line"></div>
+          <div class="modal-auth__social-title">или войти через</div>
+        </div>
+  
+        <ul class="modal-auth__social-list">
+          <li class="modal-auth__social-item">
+            <a href="" class="modal-auth__social-link">
+              <img src="img/social/google.svg" alt="" class="modal-auth__social-image">
+            </a>
+          </li>
+          <li class="modal-auth__social-item">
+            <a href="" class="modal-auth__social-link">
+              <img src="img/social/fb.svg" alt="" class="modal-auth__social-image">
+            </a>
+          </li>
+          <li class="modal-auth__social-item">
+            <a href="" class="modal-auth__social-link">
+              <img src="img/social/vk.svg" alt="" class="modal-auth__social-image">
+            </a>
+          </li>
+          <li class="modal-auth__social-item">
+            <a href="" class="modal-auth__social-link">
+              <img src="img/social/yandex.svg" alt="" class="modal-auth__social-image">
+            </a>
+          </li>
+          <li class="modal-auth__social-item">
+            <a href="" class="modal-auth__social-link">
+              <img src="img/social/mail.svg" alt="" class="modal-auth__social-image">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="modal-auth modal " id="modal-auth-host">
+    <div class="modal__container">
+      <form class="modal__content">
+        <div class="modal__header">
+          <div class="modal__title">
+            Регистрация
+          </div>
+          <button type="button" class="modal__close-btn">
+            <svg width="20" height="20" aria-hidden="true" class="modal__close-icon">
+              <use xlink:href="#close"></use>
+            </svg>
+          </button>
+        </div>
+  
+        <ul class="modal__inputs-list">
+          <li class="gl__input-container">
+            <div class="gl__input-title">Телефон или E-mail</div>
+            <label class="gl__input-wrapper">
+              <input type="text"
+                     class="gl__input"
+                     placeholder="Введите телефон или E-mail"
+                     data-parsley-required=""
+                     data-parsley-minlength="2"
+                     name="contact-registr"
+                     required>
+            </label>
+          </li>
+          <li class="gl__input-container">
+            <div class="gl__input-title">Пароль</div>
+            <label class="gl__input-wrapper mod-with-hint">
+              <input type="password"
+                     class="gl__input"
+                     placeholder="Введите пароль"
+                     data-parsley-required=""
+                     data-parsley-minlength="2"
+                     name="organization-registr"
+                     required>
+              <a href="" class="gl__input-hint-link">Забыли пароль?</a>
+            </label>
+          </li>
+        </ul>
+  
+        <button type="button" class="gl__btn-submit modal__btn-submit gl__main-btn mod-long mod-no-shadow mod-small">
+          Войти
+        </button>
+      </form>
+  
+      <div class="modal__proposal">
+        Еще нет аккаунта?
+        <a href="" class="modal__proposal-link">Зарегистрироваться</a>
+      </div>
+  
+      <div class="modal-auth__social-wrapper">
+        <div class="modal-auth__social-title-wrapper">
+          <div class="modal-auth__social-title-line"></div>
+          <div class="modal-auth__social-title">или войти через</div>
+        </div>
+  
+        <ul class="modal-auth__social-list">
+          <li class="modal-auth__social-item">
+            <a href="" class="modal-auth__social-link">
+              <img src="img/social/google.svg" alt="" class="modal-auth__social-image">
+            </a>
+          </li>
+          <li class="modal-auth__social-item">
+            <a href="" class="modal-auth__social-link">
+              <img src="img/social/fb.svg" alt="" class="modal-auth__social-image">
+            </a>
+          </li>
+          <li class="modal-auth__social-item">
+            <a href="" class="modal-auth__social-link">
+              <img src="img/social/vk.svg" alt="" class="modal-auth__social-image">
+            </a>
+          </li>
+          <li class="modal-auth__social-item">
+            <a href="" class="modal-auth__social-link">
+              <img src="img/social/yandex.svg" alt="" class="modal-auth__social-image">
+            </a>
+          </li>
+          <li class="modal-auth__social-item">
+            <a href="" class="modal-auth__social-link">
+              <img src="img/social/mail.svg" alt="" class="modal-auth__social-image">
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -280,31 +457,6 @@
       </div>
     </div>
   </header>
-  
-  
-  
-  <!--<header class="app-header" id="header-host">-->
-  <!--  <div class="app-header__inner">-->
-  <!--    <div class="app-header__left">-->
-  <!--      <button class="app-header__burger"></button>-->
-  <!--      <div class="app-header__logo">-->
-  <!--        <img src="img/old/img/logo.svg" alt="">-->
-  <!--      </div>-->
-  <!--    </div>-->
-  <!--    <div class="app-header__middle">-->
-  <!--      <div class="app-header__contacts">-->
-  
-  <!--        <div class="app-header__mail">-->
-  <!--          <a href="mailto:did@innopolis.ru">did@innopolis.ru</a>-->
-  <!--        </div>-->
-  <!--      </div>-->
-  <!--      <div class="app-header__dop-logo">-->
-  <!--        <img src="img/old/img/logo2.svg" alt="">-->
-  <!--      </div>-->
-  <!--    </div>-->
-  <!--  </div>-->
-  <!--</header>-->
-  
   <div class="sticky-menu gl__sections-top gl__bg-hide" id="sticky-menu-host">
     <div class="gl__sections-top__sections-wrapper">
       <div class="sticky-menu__section gl__sections-top__section">
@@ -369,7 +521,7 @@
               </div>
             </div>
             <div class="hero-block__body">
-              <a href="#" class="hero-block__btn gl__main-btn mod-large open-modal-participation">Участвовать</a>
+              <button type="button" class="hero-block__btn gl__main-btn mod-large open-modal-participation">Участвовать</button>
               <div class="hero-block__information">
                 <div class="hero-block__information-item">
                   <span>когда</span>
@@ -388,7 +540,7 @@
           <div class="gl__page-content">
             <div class="swiper news__swiper">
               <div class="news__cards-wrapper swiper-wrapper">
-                <a href="#" class="news__card swiper-slide">
+                <a href="" class="news__card swiper-slide">
                   <div class="news__card-date">
                     12 июля
                   </div>
@@ -398,7 +550,7 @@
                   </div>
                 </a>
 
-                <a href="#" class="news__card swiper-slide">
+                <a href="" class="news__card swiper-slide">
                   <div class="news__card-date">
                     12 июля
                   </div>
@@ -408,7 +560,7 @@
                   </div>
                 </a>
 
-                <a href="#" class="news__card swiper-slide">
+                <a href="" class="news__card swiper-slide">
                   <div class="news__card-date">
                     14 июля
                   </div>
@@ -417,7 +569,7 @@
                   </div>
                 </a>
 
-                <a href="#" class="news__card swiper-slide">
+                <a href="" class="news__card swiper-slide">
                   <div class="news__card-date">
                     15 июля
                   </div>
@@ -428,7 +580,7 @@
                   </div>
                 </a>
 
-                <a href="#" class="news__card swiper-slide">
+                <a href="" class="news__card swiper-slide">
                   <div class="news__card-date">
                     12 июля
                   </div>
@@ -440,7 +592,7 @@
               </div>
 
               <div class="news__navigate-panel">
-                <a href="#" type="button" class="gl__main-btn">Все новости</a>
+                <a href="" type="button" class="gl__main-btn">Все новости</a>
 
                 <div class="news__navigate-navigate-btns-wrapper">
                   <button class="news__navigate-navigate-btn-wrapper mod-prev" disabled>
@@ -1569,8 +1721,8 @@
                 </div>
 
                 <div class="program__btns-wrapper program__padding-content">
-                  <a href="#" type="button" class="gl__main-btn mod-middle mod-no-shadow">Календарь программы</a>
-                  <a href="#" download="" type="button"
+                  <a href="" type="button" class="gl__main-btn mod-middle mod-no-shadow">Календарь программы</a>
+                  <a href="" download="" type="button"
                      class="program__btn-download gl__main-btn mod-black mod-no-shadow">
                     Скачать программу в PDF
                     <svg width="24" height="24" aria-hidden="true" class="program__btn-download-icon">
@@ -1596,10 +1748,10 @@
             <p>На площадках форума ведущие российские и международные спикеры поделятся опытом и индустриальными
               практиками. Участники DID познакомятся с новыми образовательными форматами и продуктами инновационного
               мышления.</p>
-            <p>Организатор форума <a href="#">Университет Иннополис</a> — российский вуз, специализирующийся на
+            <p>Организатор форума <a href="">Университет Иннополис</a> — российский вуз, специализирующийся на
               образовании, разработках и исследованиях в области информационных технологий и робототехники. В 2020 году
               на
-              базе Университета Иннополис создана единая <a href="#">площадка</a> для повышения квалификации
+              базе Университета Иннополис создана единая <a href="">площадка</a> для повышения квалификации
               преподавателей высшего и среднего профессионального образования России — Опорный образовательный и Единый
               методологический центр по направлениям цифровой экономики. </p>
           </div>
@@ -2119,7 +2271,7 @@
               </div>
               <ul class="partners__links">
                 <li class="partners__link-container mod-center-item">
-                  <a href="#" class="partners__link-wrapper">
+                  <a href="" class="partners__link-wrapper">
                     <svg width="210" height="48" aria-hidden="true" class="partners__link">
                       <use xlink:href="#innopolis"></use>
                     </svg>
@@ -2134,35 +2286,35 @@
               </div>
               <ul class="partners__links">
                 <li class="partners__link-container">
-                  <a href="#" class="partners__link-wrapper">
+                  <a href="" class="partners__link-wrapper">
                     <svg width="124" height="36" aria-hidden="true" class="partners__link">
                       <use xlink:href="#ferrari"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="partners__link-container">
-                  <a href="#" class="partners__link-wrapper">
+                  <a href="" class="partners__link-wrapper">
                     <svg width="78" height="40" aria-hidden="true" class="partners__link">
                       <use xlink:href="#kia"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="partners__link-container">
-                  <a href="#" class="partners__link-wrapper">
+                  <a href="" class="partners__link-wrapper">
                     <svg width="106" height="40" aria-hidden="true" class="partners__link">
                       <use xlink:href="#ford"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="partners__link-container">
-                  <a href="#" class="partners__link-wrapper">
+                  <a href="" class="partners__link-wrapper">
                     <svg width="98" height="40" aria-hidden="true" class="partners__link">
                       <use xlink:href="#jeep"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="partners__link-container">
-                  <a href="#" class="partners__link-wrapper">
+                  <a href="" class="partners__link-wrapper">
                     <svg width="132" height="18" aria-hidden="true" class="partners__link">
                       <use xlink:href="#tesla"></use>
                     </svg>
@@ -2177,35 +2329,35 @@
               </div>
               <ul class="partners__links">
                 <li class="partners__link-container">
-                  <a href="#" class="partners__link-wrapper">
+                  <a href="" class="partners__link-wrapper">
                     <svg width="124" height="36" aria-hidden="true" class="partners__link">
                       <use xlink:href="#ferrari"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="partners__link-container">
-                  <a href="#" class="partners__link-wrapper">
+                  <a href="" class="partners__link-wrapper">
                     <svg width="78" height="40" aria-hidden="true" class="partners__link">
                       <use xlink:href="#kia"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="partners__link-container">
-                  <a href="#" class="partners__link-wrapper">
+                  <a href="" class="partners__link-wrapper">
                     <svg width="106" height="40" aria-hidden="true" class="partners__link">
                       <use xlink:href="#ford"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="partners__link-container">
-                  <a href="#" class="partners__link-wrapper">
+                  <a href="" class="partners__link-wrapper">
                     <svg width="98" height="40" aria-hidden="true" class="partners__link">
                       <use xlink:href="#jeep"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="partners__link-container">
-                  <a href="#" class="partners__link-wrapper">
+                  <a href="" class="partners__link-wrapper">
                     <svg width="132" height="18" aria-hidden="true" class="partners__link">
                       <use xlink:href="#tesla"></use>
                     </svg>
@@ -2220,7 +2372,7 @@
               </div>
               <ul class="partners__links">
                 <li class="partners__link-container mod-center-item">
-                  <a href="#" class="partners__link-wrapper">
+                  <a href="" class="partners__link-wrapper">
                     <svg width="210" height="48" aria-hidden="true" class="partners__link">
                       <use xlink:href="#innopolis"></use>
                     </svg>
@@ -2235,7 +2387,7 @@
               </div>
               <ul class="partners__links">
                 <li class="partners__link-container mod-center-item">
-                  <a href="#" class="partners__link-wrapper">
+                  <a href="" class="partners__link-wrapper">
                     <svg width="210" height="48" aria-hidden="true" class="partners__link">
                       <use xlink:href="#innopolis"></use>
                     </svg>
@@ -2309,9 +2461,9 @@
             &copy; Digital Innopolis Days
           </div>
           <div class="app-footer__policy-links">
-            <a href="#">Пользовательское соглашения и Договор оказания услуг</a>
-            <a href="#">Договор оказания услуг</a>
-            <a href="#">Политика возвратов</a>
+            <a href="">Пользовательское соглашения и Договор оказания услуг</a>
+            <a href="">Договор оказания услуг</a>
+            <a href="">Политика возвратов</a>
           </div>
         </div>
       </div>

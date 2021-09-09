@@ -1,0 +1,75 @@
+@import 'src/scss/sizes';
+
+.gl__sections-top {
+  height: 84px;
+  background-color: var(--main-color);
+  padding: 0 var(--page-content-padding);
+
+  @include for-bg-down {
+    height: 60px;
+  }
+}
+
+.gl__sections-top__sections-wrapper {
+  height: 100%;
+  position: relative;
+
+  @include for-fl-down {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.gl__sections-top__section {
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  @include for-lg-down {
+    margin: 0;
+    padding: 0;
+  }
+
+  &:nth-child(1), &:nth-child(3) {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    @include for-fl-down {
+      position: initial;
+      transform: initial;
+    }
+  }
+
+  &:nth-child(1) {
+    left: 0;
+
+    @include for-bg-down {
+      margin-left: -16px;
+    }
+  }
+
+  &:nth-child(2) {
+    width: 100%;
+  }
+
+  &:nth-child(3) {
+    right: 0;
+  }
+
+  & + & {
+    @include for-lg-down {
+      margin-left: 30px;
+    }
+
+    @include for-md-down {
+      margin-left: 22px;
+    }
+
+    @include for-sm-down {
+      margin-left: 6px;
+    }
+  }
+}

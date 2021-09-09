@@ -1,6 +1,6 @@
 import { Form } from './form';
-import phoneMask from '../../phoneMask';
-import { checkExistParent } from '../../checkExistParent';
+import phoneMask from '../../functions/phoneMask';
+import { checkExistParent } from '../../functions/checkExistParent';
 
 export class Modal {
   hostElem;

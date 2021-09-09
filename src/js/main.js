@@ -1,7 +1,7 @@
-import polyfills from './polyfills';
-import './lazyload';
-import detectTouch from './detectTouch';
-import customSelects from './customSelects';
+import polyfills from './functions/polyfills';
+import './functions/lazyload';
+import detectTouch from './functions/detectTouch';
+import customSelects from './functions/customSelects';
 
 import { NewsComponent } from './components/news-component';
 import { ProgramComponent } from './components/program-component';
@@ -11,7 +11,7 @@ import { OldCommon } from './components/old-common';
 import { Header } from './components/header';
 import { Faq } from './components/faq';
 import { StickyMenu } from './components/sticky-menu';
-import scrollByAnchor from './scrollByAnchor';
+import scrollByAnchor from './functions/scrollByAnchor';
 
 document.addEventListener('DOMContentLoaded', function () {
   switch (window.location.href.split('/')[1]) {

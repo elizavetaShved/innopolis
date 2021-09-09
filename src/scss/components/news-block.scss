@@ -1,0 +1,116 @@
+@import 'src/scss/sizes';
+
+.news {
+  border-top: 1px solid rgba(255, 255, 255, .2);
+  padding: 56px 0 0 0;
+}
+
+.news__swiper {
+  overflow: hidden;
+}
+
+.news__cards-wrapper {
+  margin-bottom: 58px;
+
+  @include for-sm-down {
+    margin-bottom: 46px;
+  }
+}
+
+.news__card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  text-decoration: none;
+
+  &:hover {
+    .news__card-content {
+      text-decoration: underline;
+      text-decoration-color: rgba(255, 255, 255, .2);
+    }
+  }
+}
+
+.news__card-date-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.news__card-date {
+  transform: translate(-20%, 50%) rotate(270deg);
+  font-weight: 600;
+  font-size: 16px;
+  color: #9681F2;
+  margin-bottom: 42px;
+  white-space: nowrap;
+}
+
+.news__card-content {
+  font-size: 16px;
+  color: #FFFFFF;
+  /*обезаем до 3-х строк*/
+  line-height: 26px;
+  height: calc(26px * 3);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  @include for-sm-down {
+    font-size: 14px;
+    line-height: 22px;
+    height: calc(22px * 3);
+  }
+}
+
+.news__card-mark {
+  color: #9681F2;
+}
+
+.news__navigate-panel {
+  display: flex;
+  justify-content: space-between;
+}
+
+.news__navigate-navigate-btns-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.news__navigate-navigate-btn-wrapper {
+  padding: 10px 20px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
+  @include for-sm-down {
+    padding: 10px;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    .news__navigate-navigate-btn {
+      fill: var(--disabled-color);
+    }
+  }
+
+  &:hover {
+    .news__navigate-navigate-btn {
+      fill: var(--secondary-color);
+    }
+  }
+}
+
+.news__navigate-navigate-btn {
+  width: 56px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: fill 200ms;
+  fill: #fff;
+
+  @include for-sm-down {
+    width: 44px;
+    height: 12px;
+  }
+}

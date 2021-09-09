@@ -1,0 +1,88 @@
+<div class="modal-auth modal {{class}}" id="modal-auth-host">
+  <div class="modal__container">
+    <form class="modal__content">
+      <div class="modal__header">
+        <div class="modal__title">
+          {{title}}
+        </div>
+        <button type="button" class="modal__close-btn">
+          <svg width="20" height="20" aria-hidden="true" class="modal__close-icon">
+            <use xlink:href="#close"></use>
+          </svg>
+        </button>
+      </div>
+
+      <ul class="modal__inputs-list">
+        <li class="gl__input-container">
+          <div class="gl__input-title">Телефон или E-mail</div>
+          <label class="gl__input-wrapper">
+            <input type="text"
+                   class="gl__input"
+                   placeholder="Введите телефон или E-mail"
+                   data-parsley-required=""
+                   data-parsley-minlength="2"
+                   name="contact-{{type}}"
+                   required>
+          </label>
+        </li>
+        <li class="gl__input-container">
+          <div class="gl__input-title">Пароль</div>
+          <label class="gl__input-wrapper mod-with-hint">
+            <input type="password"
+                   class="gl__input"
+                   placeholder="Введите пароль"
+                   data-parsley-required=""
+                   data-parsley-minlength="2"
+                   name="organization-{{type}}"
+                   required>
+            <a href="" class="gl__input-hint-link">Забыли пароль?</a>
+          </label>
+        </li>
+      </ul>
+
+      <button type="button" class="gl__btn-submit modal__btn-submit gl__main-btn mod-long mod-no-shadow mod-small">
+        Войти
+      </button>
+    </form>
+
+    <div class="modal__proposal">
+      Еще нет аккаунта?
+      <a href="" class="modal__proposal-link">Зарегистрироваться</a>
+    </div>
+
+    <div class="modal-auth__social-wrapper">
+      <div class="modal-auth__social-title-wrapper">
+        <div class="modal-auth__social-title-line"></div>
+        <div class="modal-auth__social-title">или войти через</div>
+      </div>
+
+      <ul class="modal-auth__social-list">
+        <li class="modal-auth__social-item">
+          <a href="" class="modal-auth__social-link">
+            <img src="img/social/google.svg" alt="" class="modal-auth__social-image">
+          </a>
+        </li>
+        <li class="modal-auth__social-item">
+          <a href="" class="modal-auth__social-link">
+            <img src="img/social/fb.svg" alt="" class="modal-auth__social-image">
+          </a>
+        </li>
+        <li class="modal-auth__social-item">
+          <a href="" class="modal-auth__social-link">
+            <img src="img/social/vk.svg" alt="" class="modal-auth__social-image">
+          </a>
+        </li>
+        <li class="modal-auth__social-item">
+          <a href="" class="modal-auth__social-link">
+            <img src="img/social/yandex.svg" alt="" class="modal-auth__social-image">
+          </a>
+        </li>
+        <li class="modal-auth__social-item">
+          <a href="" class="modal-auth__social-link">
+            <img src="img/social/mail.svg" alt="" class="modal-auth__social-image">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

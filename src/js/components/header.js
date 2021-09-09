@@ -1,4 +1,4 @@
-import { checkExistParent } from '../checkExistParent';
+import { checkExistParent } from '../functions/checkExistParent';
 import { MobileBox } from './mobile-box';
 
 export const LANG_ARR = [
@@ -24,6 +24,8 @@ export class Header {
     const body = document.querySelector('body');
     this.selectWrapperElem = hostElem.querySelector('.header__lang-select-wrapper');
     const selectedItemElem = hostElem.querySelector('.header__lang-selected-item');
+    const btnAuthElems = hostElem.querySelectorAll('.header__auth-btn');
+    const modalAuthElem = document.querySelector('#modal-auth-host');
 
     this.selectedSelectElem = hostElem.querySelector('.header__lang-select');
     this.optionSelectElems = hostElem.querySelectorAll('.header__lang-option-item');
@@ -65,6 +67,12 @@ export class Header {
     selectedItemElem.onclick = () => {
       this.toggleSelect();
     }
+
+    btnAuthElems.forEach(btn => {
+      btn.onclick = () => {
+        modalAuthElem.classList.add('mod-show');
+      }
+    })
 
     document.addEventListener('click', e => {
       if (this.isOpenSelect && !checkExistParent(e.target, this.selectWrapperElem)) {
