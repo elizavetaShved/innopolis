@@ -97,7 +97,7 @@
 
   &.type-2 {
     &:before {
-      background-color: #12152A;
+      background-color: var(--main-color);
     }
   }
 
@@ -181,7 +181,7 @@
 }
 
 .speakers__item-empty-content-item {
-  background: #12152A;
+  background: var(--main-color);
   width: 18px;
   height: 18px;
 }

@@ -16,6 +16,7 @@ export class Modal {
     const closeBtns = this.hostElem.querySelectorAll('.modal__close-btn');
 
     const proposalLinkElems = this.hostElem.querySelectorAll('.modal__proposal-link');
+    const recoverPasswordBtn = this.hostElem.querySelector('.gl__input-hint-link');
 
     phoneMask();
 
@@ -42,6 +43,14 @@ export class Modal {
           modal.isOpen();
         }
       })
+    }
+
+    if (recoverPasswordBtn) {
+      recoverPasswordBtn.onclick = () => {
+        this.isClose();
+        const modal = new Modal('password');
+        modal.isOpen();
+      }
     }
   }
 

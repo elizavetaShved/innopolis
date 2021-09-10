@@ -8,14 +8,12 @@ export class Form {
   inputPasswordWrapperElems;
   form;
   mainContentElem;
-  errorContent
   successTextElem;
 
   constructor(hostElem) {
     this.hostElem = hostElem;
     validation();
     this.errorBlock = this.hostElem.querySelector('.gl__error-block');
-    this.errorContent = this.errorBlock.querySelector('.gl__error-content');
     this.form = this.hostElem.querySelector('form');
     this.mainContentElem = this.hostElem.querySelector('.modal__content');
     this.successTextElem = this.hostElem.querySelector('.modal__success-text-wrapper');
@@ -102,8 +100,10 @@ export class Form {
       this.mainContentElem.classList.add('mod-hide');
       this.successTextElem.classList.add('mod-show');
       const enteredEmailElem = this.hostElem.querySelector('.modal__entered-email');
-      const contactInputElem = this.hostElem.querySelector('.gl__input-wrapper.mod-contact').querySelector('.gl__input');
-      enteredEmailElem.innerText = contactInputElem.value;
+      if (enteredEmailElem) {
+        const contactInputElem = this.hostElem.querySelector('.gl__input-wrapper.mod-contact').querySelector('.gl__input');
+        enteredEmailElem.innerText = contactInputElem.value;
+      }
     } else {
       this.addError();
     }

@@ -16,7 +16,7 @@ textarea {
   padding: 0 20px;
   border-radius: 25px;
   height: 50px;
-  color: #12152a;
+  color: var(--main-color);
   font-weight: 400;
   font-size: 14px;
   outline: none;
@@ -268,7 +268,7 @@ a.site-btn--1.disabled,
 .app-header {
   -ms-flex: none;
   flex: none;
-  background: #12152a;
+  background: var(--main-color);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 50;
 }
@@ -378,7 +378,7 @@ a.site-btn--1.disabled,
   left: 0;
   top: 100%;
   right: 0;
-  background: #12152a;
+  background: var(--main-color);
   padding: 5px 0 1px 10px;
   display: none;
 }
@@ -534,7 +534,7 @@ html.is-locked {
   color: #fff;
   padding-top: 80px;
   padding-bottom: 80px;
-  background-color: #12152a;
+  background-color: var(--main-color);
 }
 
 .contacts-block__title {
@@ -622,7 +622,7 @@ html.is-locked {
   -ms-flex: none;
   flex: none;
   padding: 67px 0 88px;
-  background: #12152a;
+  background: var(--main-color);
 }
 
 .faq-block__item {
@@ -740,7 +740,7 @@ html.is-locked {
 .hero-block {
   -ms-flex: none;
   flex: none;
-  background: #12152a;
+  background: var(--main-color);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
   overflow: hidden;
@@ -843,7 +843,7 @@ html.is-locked {
   height: 100%;
   max-height: 100%;
   overflow: auto;
-  background: #12152a;
+  background: var(--main-color);
   padding: 17px 10px 40px;
   transition: all 0.3s ease;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
@@ -919,7 +919,7 @@ html.is-locked {
   -ms-flex: none;
   flex: none;
   padding: 55px 0 34px;
-  background: #12152a;
+  background: var(--main-color);
 }
 
 .news-block__list {
@@ -1093,7 +1093,7 @@ html.is-locked {
 
 .popup-form__title {
   font-size: 30px;
-  color: #12152a;
+  color: var(--main-color);
   font-weight: bold;
   line-height: 1.1;
   margin-bottom: 30px;
@@ -1125,7 +1125,7 @@ html.is-locked {
 
 .popup-form__user-agreement {
   font-size: 12px;
-  color: #12152a;
+  color: var(--main-color);
   line-height: 1.1;
   margin-bottom: 25px;
 }
@@ -1177,7 +1177,7 @@ html.is-locked {
 
 .popup-form__label a {
   font-size: 12px;
-  color: #12152a;
+  color: var(--main-color);
   line-height: 1.1;
 }
 
@@ -1206,7 +1206,7 @@ html.is-locked {
 
 .popup-form__warning span {
   font-size: 14px;
-  color: #12152a;
+  color: var(--main-color);
   line-height: 1.1;
 }
 
@@ -1238,7 +1238,7 @@ html.is-locked {
 }
 
 .sign-up-block__section {
-  background-color: #12152a;
+  background-color: var(--main-color);
 }
 
 .sign-up-block__inner {
@@ -1294,7 +1294,7 @@ html.is-locked {
 }
 
 .speakers-block {
-  background-color: #12152a;
+  background-color: var(--main-color);
 }
 
 .speakers-block__section {
@@ -1471,7 +1471,7 @@ html.is-locked {
 }
 
 .tickets-block {
-  background: #12152a;
+  background: var(--main-color);
   padding-top: 75px;
   margin-top: -25px;
   padding-bottom: 5px;

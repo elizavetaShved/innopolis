@@ -1,11 +1,11 @@
 .program__top-block-wrapper {
-  background: #12152a;
+  background: var(--main-color);
   padding-top: 24px;
   padding-bottom: 20px;
 }
 
 .program__bottom-block-container {
-  background: #12152a;
+  background: var(--main-color);
   padding-bottom: 106px;
 }
 
@@ -203,7 +203,7 @@
 .program__content-item {
   grid-template-columns: 1fr 8fr 5fr;
   grid-gap: 40px;
-  border-bottom: 1px solid #12152A;
+  border-bottom: 1px solid var(--main-color);
   display: grid;
   padding-top: 40px;
   padding-bottom: 40px;

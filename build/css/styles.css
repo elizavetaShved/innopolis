@@ -630,6 +630,7 @@ nav ul {
   line-height: 18px;
   -webkit-transition: color 300ms;
   transition: color 300ms;
+  text-align: start;
   grid-column: 2 / 3; }
   .gl__input-hint-link:hover {
     text-decoration: underline; }
@@ -1947,6 +1948,12 @@ button.swiper-pagination-bullet {
   color: var(--btn-color);
   word-break: break-all; }
 
+.modal__caption {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--main-color);
+  margin-bottom: 44px; }
+
 @media screen and (min-width: 1400px) {
   .gl__fl-show {
     display: none !important; } }
@@ -2466,7 +2473,7 @@ textarea {
   padding: 0 20px;
   border-radius: 25px;
   height: 50px;
-  color: #12152a;
+  color: var(--main-color);
   font-weight: 400;
   font-size: 14px;
   outline: none;
@@ -2695,7 +2702,7 @@ a.site-btn--1.disabled,
   -ms-flex: none;
   -webkit-box-flex: 0;
           flex: none;
-  background: #12152a;
+  background: var(--main-color);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 50; }
 
@@ -2803,7 +2810,7 @@ a.site-btn--1.disabled,
   left: 0;
   top: 100%;
   right: 0;
-  background: #12152a;
+  background: var(--main-color);
   padding: 5px 0 1px 10px;
   display: none; }
 
@@ -2947,7 +2954,7 @@ html.is-locked {
   color: #fff;
   padding-top: 80px;
   padding-bottom: 80px;
-  background-color: #12152a; }
+  background-color: var(--main-color); }
 
 .contacts-block__title {
   margin-bottom: 40px; }
@@ -2996,7 +3003,7 @@ html.is-locked {
   -webkit-box-flex: 0;
           flex: none;
   padding: 67px 0 88px;
-  background: #12152a; }
+  background: var(--main-color); }
 
 .faq-block__item {
   border-bottom: 1px solid #414455;
@@ -3100,7 +3107,7 @@ html.is-locked {
   -ms-flex: none;
   -webkit-box-flex: 0;
           flex: none;
-  background: #12152a;
+  background: var(--main-color);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
   overflow: hidden;
@@ -3186,7 +3193,7 @@ html.is-locked {
   height: 100%;
   max-height: 100%;
   overflow: auto;
-  background: #12152a;
+  background: var(--main-color);
   padding: 17px 10px 40px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -3263,7 +3270,7 @@ html.is-locked {
   -webkit-box-flex: 0;
           flex: none;
   padding: 55px 0 34px;
-  background: #12152a; }
+  background: var(--main-color); }
 
 .news-block__list {
   margin-bottom: 40px;
@@ -3428,7 +3435,7 @@ html.is-locked {
 
 .popup-form__title {
   font-size: 30px;
-  color: #12152a;
+  color: var(--main-color);
   font-weight: bold;
   line-height: 1.1;
   margin-bottom: 30px;
@@ -3455,7 +3462,7 @@ html.is-locked {
 
 .popup-form__user-agreement {
   font-size: 12px;
-  color: #12152a;
+  color: var(--main-color);
   line-height: 1.1;
   margin-bottom: 25px; }
 
@@ -3503,7 +3510,7 @@ html.is-locked {
 
 .popup-form__label a {
   font-size: 12px;
-  color: #12152a;
+  color: var(--main-color);
   line-height: 1.1; }
 
 .popup-form__warning {
@@ -3530,7 +3537,7 @@ html.is-locked {
 
 .popup-form__warning span {
   font-size: 14px;
-  color: #12152a;
+  color: var(--main-color);
   line-height: 1.1; }
 
 .remodal-overlay {
@@ -3557,7 +3564,7 @@ html.is-locked {
   text-align: center; }
 
 .sign-up-block__section {
-  background-color: #12152a; }
+  background-color: var(--main-color); }
 
 .sign-up-block__inner {
   padding-top: 50px;
@@ -3607,7 +3614,7 @@ html.is-locked {
   max-width: 100%; }
 
 .speakers-block {
-  background-color: #12152a; }
+  background-color: var(--main-color); }
 
 .speakers-block__section {
   background-color: #fff;
@@ -3767,7 +3774,7 @@ html.is-locked {
   display: block; }
 
 .tickets-block {
-  background: #12152a;
+  background: var(--main-color);
   padding-top: 75px;
   margin-top: -25px;
   padding-bottom: 5px; }
@@ -5003,7 +5010,7 @@ html.remodal-is-locked {
 
 .partners {
   color: #fff;
-  background-color: #12152a;
+  background-color: var(--main-color);
   padding-top: 84px;
   padding-bottom: 156px; }
   @media screen and (max-width: 767px) {
@@ -5267,7 +5274,7 @@ html.remodal-is-locked {
   .speakers__item-image-wrapper.type-1:before {
     background-color: #9681F2; }
   .speakers__item-image-wrapper.type-2:before {
-    background-color: #12152A; }
+    background-color: var(--main-color); }
   .speakers__item-image-wrapper.type-3 {
     height: 190px; }
     @media screen and (max-width: 767px) {
@@ -5341,7 +5348,7 @@ html.remodal-is-locked {
   grid-gap: 20px; }
 
 .speakers__item-empty-content-item {
-  background: #12152A;
+  background: var(--main-color);
   width: 18px;
   height: 18px; }
 
@@ -5493,12 +5500,12 @@ html.remodal-is-locked {
   margin-top: 54px; }
 
 .program__top-block-wrapper {
-  background: #12152a;
+  background: var(--main-color);
   padding-top: 24px;
   padding-bottom: 20px; }
 
 .program__bottom-block-container {
-  background: #12152a;
+  background: var(--main-color);
   padding-bottom: 106px; }
 
 @media (max-width: 768px) {
@@ -5661,7 +5668,7 @@ html.remodal-is-locked {
 .program__content-item {
   grid-template-columns: 1fr 8fr 5fr;
   grid-gap: 40px;
-  border-bottom: 1px solid #12152A;
+  border-bottom: 1px solid var(--main-color);
   display: grid;
   padding-top: 40px;
   padding-bottom: 40px; }
