@@ -14,8 +14,9 @@ import { StickyMenu } from './components/sticky-menu';
 import scrollByAnchor from './functions/scrollByAnchor';
 
 document.addEventListener('DOMContentLoaded', function () {
-  switch (window.location.href.split('/')[1]) {
+  switch (window.location.href.split('/')[4]) {
     case '':
+      console.log(111)
       oldInit();
       new OldCommon();
       new Faq();

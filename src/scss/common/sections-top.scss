@@ -5,6 +5,10 @@
   background-color: var(--main-color);
   padding: 0 var(--page-content-padding);
 
+  &.mod-light {
+    background-color: white;
+  }
+
   @include for-bg-down {
     height: 60px;
   }

@@ -1674,6 +1674,8 @@ button.swiper-pagination-bullet {
   height: 84px;
   background-color: var(--main-color);
   padding: 0 var(--page-content-padding); }
+  .gl__sections-top.mod-light {
+    background-color: white; }
   @media screen and (max-width: 1023px) {
     .gl__sections-top {
       height: 60px; } }
@@ -2024,7 +2026,10 @@ button.swiper-pagination-bullet {
   padding: 0; }
 
 .header__logo {
-  height: 30px; }
+  height: 30px;
+  fill: #fff; }
+  .header__logo.mod-light {
+    fill: #000; }
   @media screen and (max-width: 1023px) {
     .header__logo {
       height: 26px; } }
@@ -2077,6 +2082,8 @@ button.swiper-pagination-bullet {
     @media screen and (max-width: 1399px) {
       .header__contact + .header__contact {
         margin-left: 0; } }
+  .header__contact.mod-light {
+    color: #000; }
 
 .header__main-logo-link {
   display: -webkit-box;
@@ -2086,13 +2093,15 @@ button.swiper-pagination-bullet {
       -ms-flex-align: center;
           align-items: center; }
   .header__main-logo-link:hover .header__main-logo {
-    fill: #fff; }
+    fill: var(--secondary-color); }
 
 .header__main-logo {
   height: 32px;
-  fill: var(--secondary-color);
+  fill: #fff;
   -webkit-transition: fill 350ms;
   transition: fill 350ms; }
+  .header__main-logo.mod-light {
+    fill: rgba(0, 0, 0, 0.5); }
   @media screen and (max-width: 1199px) {
     .header__main-logo {
       height: 28px; } }
@@ -2132,6 +2141,8 @@ button.swiper-pagination-bullet {
   @media screen and (max-width: 1023px) {
     .header__eyes-icon {
       height: 24px; } }
+  .header__eyes-icon.mod-light {
+    fill: #000; }
 
 .header__auth-btn {
   padding-top: 10px !important;
@@ -2249,15 +2260,17 @@ button.swiper-pagination-bullet {
           align-items: center;
   height: 100%;
   width: 100%; }
+  .sticky-menu__item-list.mod-light .sticky-menu__item {
+    color: #000; }
 
 .sticky-menu__item {
   font-weight: 600;
   font-size: 16px;
   color: #fff;
-  -webkit-transition: color 300ms;
-  transition: color 300ms; }
+  -webkit-transition: color 200ms;
+  transition: color 200ms; }
   .sticky-menu__item:hover {
-    color: #9681F2;
+    color: #9681F2 !important;
     text-decoration: underline; }
 
 .sticky-menu__item-link {
@@ -2353,6 +2366,8 @@ button.swiper-pagination-bullet {
     height: 5px;
     border: 5px solid transparent;
     border-top: 5px solid #fff; }
+  .header__lang-selected-item.mod-light:before {
+    border-top: 5px solid #000; }
   @media screen and (max-width: 767px) {
     .header__lang-selected-item {
       width: 86px; } }
@@ -2394,6 +2409,8 @@ button.swiper-pagination-bullet {
     .header__lang-select {
       font-size: 16px;
       line-height: 21px; } }
+  .header__lang-select.mod-light {
+    color: #000; }
 
 .header__lang-option-item {
   padding: 6px; }

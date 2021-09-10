@@ -29,16 +29,22 @@
   align-items: center;
   height: 100%;
   width: 100%;
+
+  &.mod-light {
+    .sticky-menu__item {
+      color: #000;
+    }
+  }
 }
 
 .sticky-menu__item {
   font-weight: 600;
   font-size: 16px;
   color: #fff;
-  transition: color 300ms;
+  transition: color 200ms;
 
   &:hover {
-    color: #9681F2;
+    color: #9681F2 !important;
     text-decoration: underline;
   }
 }

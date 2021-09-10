@@ -19,6 +19,11 @@
 
 .header__logo {
   height: 30px;
+  fill: #fff;
+
+  &.mod-light {
+    fill: #000;
+  }
 
   @include for-bg-down {
     height: 26px;
@@ -73,22 +78,31 @@
       margin-left: 0;
     }
   }
+
+  &.mod-light {
+    color: #000;
+  }
 }
 
 .header__main-logo-link {
   display: flex;
   align-items: center;
+
   &:hover {
     .header__main-logo {
-      fill: #fff;
+      fill: var(--secondary-color);
     }
   }
 }
 
 .header__main-logo {
   height: 32px;
-  fill: var(--secondary-color);
+  fill: #fff;
   transition: fill 350ms;
+
+  &.mod-light {
+    fill: rgba(0, 0, 0, .5);
+  }
 
   @include for-vs-down {
     height: 28px;
@@ -126,6 +140,10 @@
 
   @include for-bg-down {
     height: 24px;
+  }
+
+  &.mod-light {
+    fill: #000;
   }
 }
 

@@ -1,4 +1,4 @@
-<div class="sticky-menu gl__sections-top gl__bg-hide" id="sticky-menu-host">
+<div class="sticky-menu gl__sections-top gl__bg-hide {{#if lightPage }}mod-light{{/if}}" id="sticky-menu-host">
   <div class="gl__sections-top__sections-wrapper">
     <div class="sticky-menu__section gl__sections-top__section">
       <a href="/">
@@ -7,7 +7,7 @@
     </div>
 
     <div class="sticky-menu__section gl__sections-top__section gl__page-content">
-      <ul class="sticky-menu__item-list">
+      <ul class="sticky-menu__item-list {{#if lightPage }}mod-light{{/if}}">
         <li class="sticky-menu__item">
           <a href="#news-block-host" class="sticky-menu__item-link">
             Новости
