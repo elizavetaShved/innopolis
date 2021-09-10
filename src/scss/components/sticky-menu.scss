@@ -44,7 +44,7 @@
   transition: color 200ms;
 
   &:hover {
-    color: #9681F2 !important;
+    color: var(--secondary-color) !important;
     text-decoration: underline;
   }
 }

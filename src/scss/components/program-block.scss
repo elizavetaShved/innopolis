@@ -253,7 +253,7 @@
 .program__content-item-time {
   font-weight: bold;
   font-size: 24px;
-  color: #9681F2;
+  color: var(--secondary-color);
   transform: translate(-20%, 50%) rotate(270deg);
   white-space: nowrap;
   text-align: center;
@@ -323,11 +323,11 @@
   border-bottom: 1px dashed transparent;
   transition: border-bottom 250ms;
   margin-bottom: 40px;
-  color: #9681F2;
+  color: var(--secondary-color);
 }
 
 .program__content-info-btn-show:hover {
-  border-bottom-color: #9681F2;
+  border-bottom-color: var(--secondary-color);
 }
 
 .program__content-info-marks-wrapper {
@@ -400,7 +400,7 @@
   transform: translateX(-50%);
   height: 56px;
   width: 56px;
-  background-color: #9681F2;
+  background-color: var(--secondary-color);
   mix-blend-mode: hard-light;
 }
 
