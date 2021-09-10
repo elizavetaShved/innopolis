@@ -75,5 +75,9 @@
     @include for-sm-down {
       margin-left: 6px;
     }
+
+    @include for-xxs-down {
+      margin-left: 0;
+    }
   }
 }

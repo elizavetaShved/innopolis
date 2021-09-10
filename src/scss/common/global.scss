@@ -26,17 +26,21 @@ body {
 
   @include for-bg-down {
     font-size: 70px;
+    margin-bottom: 58px;
   }
 
   @include for-md-down {
     font-size: 58px;
+    margin-bottom: 50px;
   }
 
   @include for-sm-down {
     font-size: 46px;
+    margin-bottom: 42px;
   }
 
   @include for-xxs-down {
     font-size: 30px;
+    margin-bottom: 36px;
   }
 }

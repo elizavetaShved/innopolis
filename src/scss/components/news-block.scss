@@ -31,14 +31,17 @@
 }
 
 .news__card-date-wrapper {
-  width: 100%;
-  height: 100%;
-}
-
-.news__card-date-wrapper {
   width: 60px;
   height: 100%;
   position: relative;
+
+  @include for-md-down {
+    width: 40px;
+  }
+
+  @include for-sm-down {
+    width: 30px;
+  }
 }
 
 .news__card-date {

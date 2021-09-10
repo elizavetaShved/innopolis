@@ -2,21 +2,33 @@
 
 .footer {
   height: 66px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 
   @include for-bg-down {
-    flex-direction: column;
     height: auto;
-  }
-
-  @include for-md-down {
-    flex-direction: column-reverse;
+    padding: 40px 0 20px 0;
   }
 
   @include for-md-down {
     padding: 40px 0;
+  }
+
+  &.mod-light {
+    background-color: rgba(217, 218, 221, .4);
+  }
+}
+
+.footer__page-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+
+  @include for-bg-down {
+    flex-direction: column;
+  }
+
+  @include for-md-down {
+    flex-direction: column-reverse;
   }
 }
 

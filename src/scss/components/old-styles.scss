@@ -814,6 +814,14 @@ html.is-locked {
   -ms-flex-direction: column;
   flex-direction: column;
   -webkit-overflow-scrolling: touch;
+
+  &.mod-light {
+    background-color: #fff;
+
+    .navigation-link {
+      color: #000;
+    }
+  }
 }
 
 .mobile-box__navigation {

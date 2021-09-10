@@ -2,6 +2,7 @@
 
 $select-width: 94px;
 $select-width-mobile: 86px;
+$select-width-small-mobile: 80px;
 $select-padding-right: 34px;
 $select-padding-left: 18px;
 $select-padding-top-bottom: 14px;
@@ -54,6 +55,10 @@ $select-padding-top-bottom: 14px;
   @include for-md-down {
     width: $select-width-mobile;
   }
+
+  @include for-xxs-down {
+    width: $select-width-small-mobile;
+  }
 }
 
 .header__lang-select-options {
@@ -72,6 +77,10 @@ $select-padding-top-bottom: 14px;
 
   @include for-md-down {
     width: $select-width-mobile;
+  }
+
+  @include for-xxs-down {
+    width: $select-width-small-mobile;
   }
 }
 

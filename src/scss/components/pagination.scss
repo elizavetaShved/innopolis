@@ -1,0 +1,72 @@
+@import '../sizes';
+
+.pagination {
+  margin-top: 50px;
+}
+
+.pagination__page-num-list {
+  display: flex;
+}
+
+.pagination__radio-wrapper {
+  &:first-child {
+    .pagination__radio-content {
+      border-radius: 0 0 0 28px;
+      border-left: 2px solid #000;
+      box-shadow: none !important;
+    }
+  }
+
+  &:last-child {
+    .pagination__radio-content {
+      border-radius: 0 28px 28px 0;
+    }
+  }
+
+  &:hover {
+    .pagination__radio-content {
+      background-color: #ff72a5;
+      color: #fff;
+    }
+  }
+}
+
+.pagination__radio {
+  display: none;
+
+  &:checked {
+    +.pagination__radio-content {
+      background-color: var(--btn-color);
+      border-color: transparent;
+      box-shadow: -2px 0px 0px 0px var(--btn-color);
+      color: #fff;
+    }
+  }
+}
+
+.pagination__radio-content {
+  padding: 18px 24px;
+  background-color: #fff;
+  color: #000;
+  font-weight: 600;
+  font-size: 14px;
+  border-top: 2px solid #000;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  cursor: pointer;
+  transition: color 200ms, background-color 200ms, border-color 200ms;
+  user-select: none;
+
+  @include for-md-down {
+    padding: 16px 22px;
+  }
+
+  @include for-sm-down {
+    padding: 14px 18px;
+    font-weight: normal;
+  }
+
+  @include for-xxs-down {
+    padding: 10px 16px;
+  }
+}
