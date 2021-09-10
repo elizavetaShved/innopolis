@@ -1,0 +1,65 @@
+@import '../sizes';
+
+.footer {
+  height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include for-bg-down {
+    flex-direction: column;
+    height: auto;
+  }
+
+  @include for-md-down {
+    flex-direction: column-reverse;
+  }
+
+  @include for-md-down {
+    padding: 40px 0;
+  }
+}
+
+.footer__site-copy {
+  font-size: 14px;
+  margin-right: 30px;
+
+  @include for-bg-down {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  @include for-md-down {
+    margin-bottom: 0;
+    margin-top: 74px;
+  }
+}
+
+.footer__menu-list {
+  margin: -20px;
+  display: flex;
+  justify-content: space-between;
+
+  @include for-bg-down {
+    margin: 0;
+  }
+
+  @include for-md-down {
+    flex-direction: column;
+  }
+}
+
+.footer__menu-item-link {
+  display: block;
+  padding: 20px;
+  font-size: 12px;
+  text-align: center;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  @include for-md-down {
+    padding: 14px;
+  }
+}
