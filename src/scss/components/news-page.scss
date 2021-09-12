@@ -21,7 +21,7 @@
 }
 
 .news-page__bread-crumbs-list {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   display: flex;
 }
 
@@ -110,4 +110,9 @@
 .news-page__content {
   font-size: 14px;
   line-height: 1.2;
+}
+
+.news-page__image {
+  height: 500px;
+  margin-bottom: 66px;
 }
