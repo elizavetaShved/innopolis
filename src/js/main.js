@@ -15,35 +15,37 @@ import scrollByAnchor from './functions/scrollByAnchor';
 import { NewsPage } from './news-page';
 
 document.addEventListener('DOMContentLoaded', function () {
-  switch (window.location.href.split('/')[3].split('.html')[0].split('#')[0]) {
-    case '':
-      oldInit();
-      new OldCommon();
-      new Faq();
-      new NewsComponent();
-      new ProgramComponent();
-      new SpeakersComponent();
-      break;
+  // todo для GH-page (оставить только else)
+  if (window.location.href.split('innopolis/build/')[1]) {
+    switch (window.location.href.split('innopolis/build/')[1].split('.html')[0].split('#')[0]) {
+      case '':
+        oldInit();
+        new OldCommon();
+        new Faq();
+        new NewsComponent();
+        new ProgramComponent();
+        new SpeakersComponent();
+        break;
 
-    case 'news':
-      new NewsPage();
-      break;
-  }
+      case 'news':
+        new NewsPage();
+        break;
+    }
+  } else {
+    switch (window.location.href.split('/')[3].split('.html')[0].split('#')[0]) {
+      case '':
+        oldInit();
+        new OldCommon();
+        new Faq();
+        new NewsComponent();
+        new ProgramComponent();
+        new SpeakersComponent();
+        break;
 
-  // todo для GH-page
-  switch (window.location.href.split('innopolis/build/')[1].split('.html')[0].split('#')[0]) {
-    case '':
-      oldInit();
-      new OldCommon();
-      new Faq();
-      new NewsComponent();
-      new ProgramComponent();
-      new SpeakersComponent();
-      break;
-
-    case 'news':
-      new NewsPage();
-      break;
+      case 'news':
+        new NewsPage();
+        break;
+    }
   }
 
   new Header();
