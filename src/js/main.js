@@ -30,6 +30,21 @@ document.addEventListener('DOMContentLoaded', function () {
       break;
   }
 
+  switch (window.location.href.split('/build')[3].split('.html')[0]) {
+    case '':
+      oldInit();
+      new OldCommon();
+      new Faq();
+      new NewsComponent();
+      new ProgramComponent();
+      new SpeakersComponent();
+      break;
+
+    case 'news':
+      new NewsPage();
+      break;
+  }
+
   new Header();
   new StickyMenu();
 
