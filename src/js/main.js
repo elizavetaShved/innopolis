@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
       break;
   }
 
+  // todo для GH-page
   switch (window.location.href.split('innopolis/build/')[1].split('.html')[0]) {
     case '':
       oldInit();
