@@ -16,7 +16,7 @@ import { NewsPage } from './news-page';
 
 document.addEventListener('DOMContentLoaded', function () {
   // todo для GH-page (оставить только else)
-  if (window.location.href.split('innopolis/build/')[1]) {
+  if (window.location.href.split('innopolis/build/')[1] !== undefined) {
     switch (window.location.href.split('innopolis/build/')[1].split('.html')[0].split('#')[0]) {
       case '':
         oldInit();
