@@ -13,6 +13,7 @@ import { StickyMenu } from './components/sticky-menu';
 import scrollByAnchor from './functions/scrollByAnchor';
 import { NewsPage } from './news-page';
 import { MapComponent } from './components/map-component';
+import { RemainedTime } from './components/common/remainedTime';
 
 document.addEventListener('DOMContentLoaded', function () {
   // todo для GH-page (оставить только else)
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
         new NewsComponent();
         new ProgramComponent();
         new SpeakersComponent();
+        new RemainedTime();
         break;
 
       case 'news':
@@ -40,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
         new NewsComponent();
         new ProgramComponent();
         new SpeakersComponent();
+        new RemainedTime();
         break;
 
       case 'news':
