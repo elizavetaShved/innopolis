@@ -8,10 +8,10 @@ import { ProgramComponent } from './components/program-component';
 import { SpeakersComponent } from './components/speakers-component';
 import { OldCommon } from './components/old-common';
 import { Header } from './components/header';
-import { Faq } from './components/faq';
+import { FaqComponent } from './components/faq-component';
 import { StickyMenu } from './components/sticky-menu';
 import scrollByAnchor from './functions/scrollByAnchor';
-import { NewsPage } from './news-page';
+import { NewsPage } from './components/news-page';
 import { MapComponent } from './components/map-component';
 import { RemainedTime } from './components/common/remainedTime';
 
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
       case '':
         new OldCommon();
         new MapComponent();
-        new Faq();
+        new FaqComponent();
         new NewsComponent();
         new ProgramComponent();
         new SpeakersComponent();
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
       case '':
         new OldCommon();
         new MapComponent();
-        new Faq();
+        new FaqComponent();
         new NewsComponent();
         new ProgramComponent();
         new SpeakersComponent();

@@ -1,9 +1,7 @@
-export class Faq {
+export class FaqComponent {
   constructor() {
     const hostElem = document.querySelector('#faq-block-host');
     const faqItems = Array.from(hostElem.querySelectorAll('.faq-block__item'));
-
-
 
     faqItems.forEach((elem, i) => {
       elem.onclick = () => {
