@@ -41,8 +41,6 @@ export class SpeakersComponent {
       } else {
         this.resetToInitial();
         // document.location.href = '/#speakers-host';
-        // todo для GH-page
-        document.location.href += '/#speakers-host';
       }
     }
   }
