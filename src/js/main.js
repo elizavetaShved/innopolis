@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
       break;
   }
 
-  switch (window.location.href.split('/build')[3].split('.html')[0]) {
+  switch (window.location.href.split('innopolis/build/')[1].split('.html')[0]) {
     case '':
       oldInit();
       new OldCommon();
