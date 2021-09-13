@@ -1,0 +1,31 @@
+{{#extend "layout"}}
+  {{#content "main"}}
+
+    <section class="account gl__page-content" id="account-host">
+      <div class="account__header">
+        <div class="account__menu-container">
+          <label class="account__menu-radio-wrapper">
+            <input type="radio" name="account-menu" class="account__menu-radio">
+            <span class="account__menu-radio-content">Профиль</span>
+          </label>
+          <label class="account__menu-radio-wrapper">
+            <input type="radio" name="account-menu" class="account__menu-radio">
+            <span class="account__menu-radio-content">Календарь бронирования</span>
+          </label>
+          <label class="account__menu-radio-wrapper">
+            <input type="radio" name="account-menu" class="account__menu-radio">
+            <span class="account__menu-radio-content">Медиа</span>
+          </label>
+        </div>
+
+        <button type="button" class="account__exit-btn">
+          <svg width="24" height="24" aria-hidden="true" class="account__exit-btn-icon">
+            <use xlink:href="#exit"></use>
+          </svg>
+          Выйти
+        </button>
+      </div>
+    </section>
+
+  {{/content}}
+{{/extend}}

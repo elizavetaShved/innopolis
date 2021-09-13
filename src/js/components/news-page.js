@@ -1,5 +1,4 @@
 import { Swiper } from 'swiper';
-import { checkExistParent } from '../functions/checkExistParent';
 
 export class NewsPage {
 
