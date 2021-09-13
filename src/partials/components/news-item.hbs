@@ -1,0 +1,21 @@
+<li class="news-page__news-item">
+  <a href="/news.html" class="news-page__news-link news__card">
+    <div class="news__card-date-wrapper">
+      <div class="news__card-date">
+        {{ date }}
+      </div>
+    </div>
+    <div>
+      <div class="news-page__news-title">
+        {{ title }}{{ mark }}
+      </div>
+
+      {{#if text }}
+        <div class="news-page__content">
+          {{ text }}
+          <span class="news__card-mark news-page__content-link">Подробнее</span>
+        </div>
+      {{/if}}
+    </div>
+  </a>
+</li>

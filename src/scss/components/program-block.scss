@@ -375,33 +375,25 @@
 .program__content-author-image-wrapper {
   width: 74px;
   height: 70px;
-  position: relative;
   margin-right: 32px;
   flex: 0 0 74px;
-}
 
-.program__content-author-image-wrapper:before {
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 64px;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 28px 28px 28px 0;
-  background-color: #000;
-}
+  &:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 64px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 28px 28px 28px 0;
+    background-color: #000;
+  }
 
-.program__content-author-image-wrapper:after {
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 56px;
-  width: 56px;
-  background-color: var(--secondary-color);
-  mix-blend-mode: hard-light;
+  &:after {
+    height: 56px;
+    width: 56px;
+  }
 }
 
 .program__content-author-image {

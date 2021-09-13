@@ -12,9 +12,10 @@ import { Header } from './components/header';
 import { Faq } from './components/faq';
 import { StickyMenu } from './components/sticky-menu';
 import scrollByAnchor from './functions/scrollByAnchor';
+import { NewsPage } from './news-page';
 
 document.addEventListener('DOMContentLoaded', function () {
-  switch (window.location.href.split('/')[3]) {
+  switch (window.location.href.split('/')[3].split('.html')[0]) {
     case '':
       oldInit();
       new OldCommon();
@@ -22,6 +23,10 @@ document.addEventListener('DOMContentLoaded', function () {
       new NewsComponent();
       new ProgramComponent();
       new SpeakersComponent();
+      break;
+
+    case 'news':
+      new NewsPage();
       break;
   }
 
