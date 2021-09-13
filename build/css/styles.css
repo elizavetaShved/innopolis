@@ -3105,7 +3105,6 @@ html.is-locked {
   background: #fff;
   border-radius: 0 25px 25px 25px;
   margin-top: -25px;
-  padding-bottom: 75px;
   overflow: hidden;
   position: relative;
   z-index: 1;
@@ -4294,8 +4293,7 @@ html.is-locked {
             flex: 1 0 176px;
     text-align: right; }
   .about-block {
-    margin-top: 0;
-    padding-bottom: 110px; }
+    margin-top: 0; }
   .about-block__inner {
     padding-top: 84px;
     padding-right: 280px;
@@ -5354,9 +5352,11 @@ html.remodal-is-locked {
 .speakers {
   overflow: hidden;
   background-color: #fff;
-  margin-bottom: 200px; }
+  margin-bottom: 200px;
+  padding-top: 110px; }
   @media screen and (max-width: 767px) {
     .speakers {
+      padding-top: 76px;
       margin-bottom: 70px; } }
 
 .speakers__list {
@@ -5652,7 +5652,10 @@ html.remodal-is-locked {
           justify-content: center; }
 
 .speakers__btn-show-more {
-  margin-top: 54px; }
+  margin-top: 54px;
+  display: none; }
+  .speakers__btn-show-more.mod-show {
+    display: block; }
 
 .program__top-block-wrapper {
   background: var(--main-color);

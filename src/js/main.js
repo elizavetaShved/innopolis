@@ -15,7 +15,7 @@ import scrollByAnchor from './functions/scrollByAnchor';
 import { NewsPage } from './news-page';
 
 document.addEventListener('DOMContentLoaded', function () {
-  switch (window.location.href.split('/')[3].split('.html')[0]) {
+  switch (window.location.href.split('/')[3].split('.html')[0].split('#')[0]) {
     case '':
       oldInit();
       new OldCommon();
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // todo для GH-page
-  switch (window.location.href.split('innopolis/build/')[1].split('.html')[0]) {
+  switch (window.location.href.split('innopolis/build/')[1].split('.html')[0].split('#')[0]) {
     case '':
       oldInit();
       new OldCommon();

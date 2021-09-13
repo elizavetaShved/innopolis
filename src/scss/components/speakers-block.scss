@@ -4,8 +4,10 @@
   overflow: hidden;
   background-color: #fff;
   margin-bottom: 200px;
+  padding-top: 110px;
 
   @include for-md-down {
+    padding-top: 76px;
     margin-bottom: 70px;
   }
 }
@@ -343,4 +345,9 @@
 
 .speakers__btn-show-more {
   margin-top: 54px;
+  display: none;
+
+  &.mod-show {
+    display: block;
+  }
 }

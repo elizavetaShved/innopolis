@@ -3,6 +3,7 @@ export const INITIALLY_OPEN_CARD_COUNT = 8;
 
 export class SpeakersComponent {
   btnShowMore;
+  linkRollUp;
   speakerItemElems;
   openingCardCount;
   openingAvailableCount;
@@ -12,7 +13,8 @@ export class SpeakersComponent {
     if (!hostElem) return;
 
     const itemWrapper = hostElem.querySelectorAll('.speakers__message-container');
-    this.btnShowMore = hostElem.querySelector('.speakers__btn-show-more');
+    this.btnShowMore = hostElem.querySelector('.speakers__btn-show-more.speakers__btn-show-more--btn');
+    this.linkRollUp = hostElem.querySelector('.speakers__btn-show-more.speakers__btn-show-more--link');
     this.speakerItemElems = hostElem.querySelectorAll('.speakers__item');
 
     this.resetToInitial();
@@ -38,12 +40,11 @@ export class SpeakersComponent {
           this.openingCardCount += this.openingAvailableCount;
           this.setBtnText();
         }
-      } else {
-        this.resetToInitial();
-        // document.location.href = '/#speakers-host';
-        // todo для GH-page
-        document.location.href = '/innopolis/build/#speakers-host';
       }
+    }
+
+    this.linkRollUp.onclick = () => {
+      this.resetToInitial();
     }
   }
 
@@ -53,12 +54,19 @@ export class SpeakersComponent {
     if (this.openingAvailableCount) {
       this.btnShowMore.innerHTML = `Показать ещё ${ this.openingAvailableCount }`;
     } else {
-      this.btnShowMore.innerHTML = 'Свернуть';
+      this.btnShowMore.classList.remove('mod-show');
+      this.linkRollUp.classList.add('mod-show');
+      // this.btnShowMore.innerHTML = 'Свернуть';
     }
   }
 
   resetToInitial() {
     this.openingCardCount = INITIALLY_OPEN_CARD_COUNT;
+
+    this.btnShowMore.classList.add('mod-show');
+    this.btnShowMore.innerHTML = `Показать ещё ${ this.openingAvailableCount }`;
+    this.linkRollUp.classList.remove('mod-show');
+
     // открыть 8 карточек
     this.speakerItemElems.forEach((elem, i) => {
       if (i <= INITIALLY_OPEN_CARD_COUNT) {
