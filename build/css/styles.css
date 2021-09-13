@@ -6561,3 +6561,92 @@ html.remodal-is-locked {
   @media screen and (max-width: 425px) {
     .pagination__radio-content {
       padding: 10px 16px; } }
+
+@media screen and (min-width: 1400px) {
+  .gl__fl-show {
+    display: none !important; } }
+
+@media screen and (max-width: 1399px) {
+  .gl__fl-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 1200px) {
+  .gl__vs-show {
+    display: none !important; } }
+
+@media screen and (max-width: 1199px) {
+  .gl__vs-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 1024px) {
+  .gl__bg-show {
+    display: none !important; } }
+
+@media screen and (max-width: 1023px) {
+  .gl__bg-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 960px) {
+  .gl__md-show {
+    display: none !important; } }
+
+@media screen and (max-width: 959px) {
+  .gl__md-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 768px) {
+  .gl__md-show {
+    display: none !important; } }
+
+@media screen and (max-width: 767px) {
+  .gl__md-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 560px) {
+  .gl__sm-show {
+    display: none !important; } }
+
+@media screen and (max-width: 559px) {
+  .gl__sm-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 426px) {
+  .gl__xxs-show {
+    display: none !important; } }
+
+@media screen and (max-width: 425px) {
+  .gl__xxs-hide {
+    display: none !important; } }
+
+.map .popover-item {
+  padding: 6px 14px;
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 11px 4px #0000002e;
+          box-shadow: 0 0 11px 4px #0000002e;
+  position: absolute;
+  white-space: nowrap; }
+  @media screen and (max-width: 767px) {
+    .map .popover-item {
+      white-space: initial; } }
+
+.map .popover-title {
+  font-size: 14px;
+  font-weight: 600; }
+
+.map__wrapper {
+  position: relative;
+  width: 100%;
+  height: 600px; }
+  .map__wrapper:after {
+    content: '';
+    display: block;
+    width: 100%; }
+
+.map__element {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: lightgrey; }

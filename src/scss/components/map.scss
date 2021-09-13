@@ -1,0 +1,43 @@
+@import '../sizes';
+
+.map {
+  .popover-item {
+    padding: 6px 14px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 11px 4px #0000002e;
+    position: absolute;
+    white-space: nowrap;
+
+    @include for-md-down {
+      white-space: initial;
+    }
+  }
+
+  .popover-title {
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+
+.map__wrapper {
+  position: relative;
+  width: 100%;
+  height: 600px;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+  }
+}
+
+.map__element {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: lightgrey;
+}
+

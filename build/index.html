@@ -2389,7 +2389,7 @@
                 </div>
                 <div class="tickets-thumbs__timer">
                   <div class="tickets-thumbs__timer-title">до окрытия продаж осталось</div><!-- e:timer-title -->
-                  <div class="tickets-thumbs__timer-body site-countdown" data-end-time="2021/09/01">
+                  <div class="tickets-thumbs__timer-body site-countdown" data-end-time="2021/10/01">
 							<span class="day">
 								<span class="time-body"></span>
 								<span class="time-name">дней</span>
@@ -2597,12 +2597,24 @@
             </form>
           </div>
         </div>
-        <div class="map-block">
-          <div class="map-block__map active" data-center="48.743261, 55.753681" data-zoom="17"
-               data-address="Университетская ул., 1, Иннополис, Россия"
-               data-dopadress="[{&quot;coordinates&quot;: &quot;55.753681,48.743261&quot;}]">
+
+        <div class="map" id="map-host">
+          <div class="map__wrapper">
+            <div class="map__element js-contacts-map"
+                 data-lat="55.75368106897133"
+                 data-lng="48.74576081880187"
+                 data-zoom="17"
+                 data-address="Университетская ул., 1"
+                 data-pin="img/map/pin.svg">
+            </div>
           </div>
-        </div><!-- map-block -->
+        </div>
+<!--        <div class="map-block" id="map-host">-->
+<!--          <div class="map-block__map active" data-center="48.743261, 55.753681" data-zoom="17"-->
+<!--               data-address="Университетская ул., 1, Иннополис, Россия"-->
+<!--               data-dopadress="[{&quot;coordinates&quot;: &quot;55.753681,48.743261&quot;}]">-->
+<!--          </div>-->
+<!--        </div>&lt;!&ndash; map-block &ndash;&gt;-->
       </section><!-- contacts-block -->
     </main><!-- app__main -->
 
@@ -2672,7 +2684,8 @@
   </div><!-- mobile-box -->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script async="" src="https://api-maps.yandex.ru/2.1/?apikey=5fa6f5ee-c55e-4f35-a5b3-c67b3c581d82&lang=ru_RU"></script>
+<!--  <script async="" src="https://api-maps.yandex.ru/2.1/?apikey=5fa6f5ee-c55e-4f35-a5b3-c67b3c581d82&lang=ru_RU"></script>-->
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=978d9dde-738d-4b87-8d8a-1de67b511402&lang=ru_RU" type="text/javascript"></script>
   <script src="js/app.js"></script>
   <script src="assets/js/backend.js"></script>
 </div>
