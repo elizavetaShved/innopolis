@@ -9,6 +9,7 @@ export class Form {
   form;
   mainContentElem;
   successTextElem;
+  errorContent;
 
   constructor(hostElem) {
     this.hostElem = hostElem;
@@ -18,6 +19,7 @@ export class Form {
     this.mainContentElem = this.hostElem.querySelector('.modal__content');
     this.successTextElem = this.hostElem.querySelector('.modal__success-text-wrapper');
     const btnSubmit = this.form.querySelector('.modal__btn-submit');
+    this.errorContent = this.form.querySelector('.gl__error-content');
 
     this.radioContainer = this.hostElem.querySelector('.gl__radio-input-container');
     if (this.radioContainer) {
@@ -92,6 +94,21 @@ export class Form {
   }
 
   addError() {
+    setTimeout(() => {
+      const errorWrapperElems = this.form.querySelectorAll('.parsley-errors-list');
+      const messagesArr = [];
+
+      if (errorWrapperElems.length) {
+        errorWrapperElems.forEach(errorWrapperElem => {
+          if (errorWrapperElem.childNodes.length) {
+            errorWrapperElem.childNodes.forEach(child => {
+              messagesArr.push(child.innerText)
+            })
+          }
+        })
+        this.errorContent.innerText = messagesArr[0];
+      }
+    });
     this.errorBlock.classList.add('mod-show');
   }
 

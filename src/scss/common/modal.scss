@@ -23,6 +23,10 @@
 
   .parsley-errors-list {
     display: none;
+
+    + .gl__radio-input-caption {
+      color: var(--btn-color);
+    }
   }
 }
 
