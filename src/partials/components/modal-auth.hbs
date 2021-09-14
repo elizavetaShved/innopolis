@@ -16,47 +16,37 @@
         <ul class="modal__inputs-list">
           <li class="gl__input-container">
             <div class="gl__input-title">Телефон или E-mail</div>
-            <label class="gl__input-wrapper mod-contact">
-              <input type="text"
-                     class="gl__input"
-                     placeholder="Введите телефон или E-mail"
-                     data-parsley-required=""
-                     data-parsley-minlength="2"
-                     name="contact-{{type}}">
-            </label>
+            {{> controls/input-main
+              inputType="text"
+              name="contact"
+              type=type
+              placeholder="Введите телефон или E-mail"
+              isContacts=true
+            }}
           </li>
           <li class="gl__input-container">
             <div class="gl__input-title">Пароль</div>
-            <label class="gl__input-wrapper mod-password">
-              <input type="password"
-                     class="gl__input"
-                     placeholder="Введите пароль"
-                     data-parsley-required=""
-                     data-parsley-minlength="2"
-                     name="password-{{type}}"
-                     id="password-{{type}}">
-              <button type="button" class="gl__input-password-btn">
-                <img src="img/modal/hide-password.svg" alt="" class="gl__input-password-btn-image type-hide">
-                <img src="img/modal/show-password.svg" alt="" class="gl__input-password-btn-image type-show">
-              </button>
-            </label>
+            {{> controls/input-main
+              inputType="password"
+              name="password"
+              type=type
+              placeholder="Введите пароль"
+              id="password"
+              isPassword=true
+            }}
           </li>
           {{#if isRegistr}}
             <li class="gl__input-container">
               <div class="gl__input-title">Повторите пароль</div>
-              <label class="gl__input-wrapper mod-password">
-                <input type="password"
-                       class="gl__input"
-                       placeholder="Введите пароль"
-                       data-parsley-required=""
-                       data-parsley-minlength="2"
-                       data-parsley-equalto="#password-{{type}}"
-                       name="password-dupl-{{type}}">
-                <button type="button" class="gl__input-password-btn">
-                  <img src="img/modal/hide-password.svg" alt="" class="gl__input-password-btn-image type-hide">
-                  <img src="img/modal/show-password.svg" alt="" class="gl__input-password-btn-image type-show">
-                </button>
-              </label>
+              {{> controls/input-main
+                inputType="password"
+                name="password-dupl"
+                type=type
+                placeholder="Введите пароль"
+                id="password"
+                isPassword=true
+                parsleyEqualto="#password"
+              }}
             </li>
             <li class="gl__input-container">
               <button type="button" class="gl__input-hint-link">Забыли пароль?</button>
@@ -66,10 +56,9 @@
 
         {{#if isRegistr}}
           <div class="gl__radio-input-container">
-            <label class="gl__radio-input-wrapper">
-              <input type="radio" class="gl__radio-input" data-parsley-required="" name="agreement-{{type}}">
-              <span class="gl__radio-input-content"></span>
-            </label>
+
+            {{> controls/input-checkbox name="agreement" type=type}}
+
             <span class="gl__radio-input-caption">
           Я подтверждаю свое согласие с условиями
         <a href="" class="gl__radio-input-caption-link">Пользовательского соглашения</a>
@@ -84,7 +73,7 @@
         <div class="gl__error-block">
           <img src="img/old/img/error-form.svg" alt="" class="gl__error-icon">
           <div class="gl__error-content">
-            Заполните все обязательные поля
+            Ошибка
           </div>
         </div>
 

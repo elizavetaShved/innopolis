@@ -35,45 +35,89 @@
         <ul class="modal__inputs-list">
           <li class="gl__input-container">
             <div class="gl__input-title">ФИО</div>
-            <label class="gl__input-wrapper">
+            <!-- 1) isPassword / isContacts - необходимы для js -->
+            <!-- 2) inputType - html type input -->
+            <!-- 3) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+            <!-- 4) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+            <!-- 5) id - обычный id, например для первого пароля-->
+            <!-- 6) parsleyType - для валидации (н-р email) -->
+            
+            <label class="gl__input-wrapper  ">
               <input type="text"
-                     class="gl__input"
-                     placeholder="Иванов Анатолий Иванович"
+                     class="gl__input "
                      data-parsley-required=""
                      data-parsley-minlength="2"
-                     name="name-participation">
+                     name="contact-participation"
+                     id=""
+                     placeholder="Иванов Анатолий Иванович"
+              >
+            
             </label>
           </li>
           <li class="gl__input-container">
             <div class="gl__input-title">Организация</div>
-            <label class="gl__input-wrapper">
+            <!-- 1) isPassword / isContacts - необходимы для js -->
+            <!-- 2) inputType - html type input -->
+            <!-- 3) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+            <!-- 4) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+            <!-- 5) id - обычный id, например для первого пароля-->
+            <!-- 6) parsleyType - для валидации (н-р email) -->
+            
+            <label class="gl__input-wrapper  ">
               <input type="text"
-                     class="gl__input"
-                     placeholder="Какую организацию Вы представляете?"
+                     class="gl__input "
                      data-parsley-required=""
                      data-parsley-minlength="2"
-                     name="organization-participation">
+                     name="contact-participation"
+                     id=""
+                     placeholder="Какую организацию Вы представляете?"
+              >
+            
             </label>
           </li>
           <li class="gl__input-container">
             <div class="gl__input-title">E-mail</div>
-            <label class="gl__input-wrapper">
+            <!-- 1) isPassword / isContacts - необходимы для js -->
+            <!-- 2) inputType - html type input -->
+            <!-- 3) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+            <!-- 4) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+            <!-- 5) id - обычный id, например для первого пароля-->
+            <!-- 6) parsleyType - для валидации (н-р email) -->
+            
+            <label class="gl__input-wrapper  ">
               <input type="email"
-                     class="gl__input"
-                     placeholder="info@gmail.com"
-                     name="email-participation"
+                     class="gl__input "
                      data-parsley-required=""
-                     data-parsley-type="email">
+                     data-parsley-minlength="2"
+                     name="contact-participation"
+                     id=""
+                     placeholder="info@gmail.com"
+                     data-parsley-type="parsleyType"
+              >
+            
             </label>
           </li>
           <li class="gl__input-container">
             <div class="gl__input-title">Телефон</div>
-            <label class="gl__input-wrapper">
+  
+            <!-- 1) isPassword / isContacts - необходимы для js -->
+            <!-- 2) inputType - html type input -->
+            <!-- 3) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+            <!-- 4) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+            <!-- 5) id - обычный id, например для первого пароля-->
+            <!-- 6) parsleyType - для валидации (н-р email) -->
+            
+            <label class="gl__input-wrapper  ">
               <input type="tel"
                      class="gl__input js-phone-input"
-                     placeholder="+7"
                      data-parsley-required=""
-                     name="phone-participation">
+                     data-parsley-minlength="2"
+                     name="contact-participation"
+                     id=""
+                     placeholder="+7(888)888-88-88"
+                     data-parsley-type="parsleyType"
+              >
+            
             </label>
           </li>
         </ul>
@@ -81,15 +125,16 @@
         <div class="gl__error-block">
           <img src="img/old/img/error-form.svg" alt="" class="gl__error-icon">
           <div class="gl__error-content">
-            Заполните все обязательные поля
+            Ошибка
           </div>
         </div>
   
         <div class="gl__radio-input-container">
           <label class="gl__radio-input-wrapper">
-            <input type="radio" class="gl__radio-input" data-parsley-required="" name="agreement-participation">
+            <input type="checkbox" class="gl__radio-input" data-parsley-required="" name="agreement-participation">
             <span class="gl__radio-input-content"></span>
           </label>
+  
           <span class="gl__radio-input-caption">
             Я подтверждаю свое согласие с условиями
           <a href="" class="gl__radio-input-caption-link">Пользовательского соглашения</a>
@@ -134,45 +179,89 @@
         <ul class="modal__inputs-list">
           <li class="gl__input-container">
             <div class="gl__input-title">ФИО</div>
-            <label class="gl__input-wrapper">
+            <!-- 1) isPassword / isContacts - необходимы для js -->
+            <!-- 2) inputType - html type input -->
+            <!-- 3) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+            <!-- 4) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+            <!-- 5) id - обычный id, например для первого пароля-->
+            <!-- 6) parsleyType - для валидации (н-р email) -->
+            
+            <label class="gl__input-wrapper  ">
               <input type="text"
-                     class="gl__input"
-                     placeholder="Иванов Анатолий Иванович"
+                     class="gl__input "
                      data-parsley-required=""
                      data-parsley-minlength="2"
-                     name="name-partner">
+                     name="contact-partner"
+                     id=""
+                     placeholder="Иванов Анатолий Иванович"
+              >
+            
             </label>
           </li>
           <li class="gl__input-container">
             <div class="gl__input-title">Организация</div>
-            <label class="gl__input-wrapper">
+            <!-- 1) isPassword / isContacts - необходимы для js -->
+            <!-- 2) inputType - html type input -->
+            <!-- 3) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+            <!-- 4) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+            <!-- 5) id - обычный id, например для первого пароля-->
+            <!-- 6) parsleyType - для валидации (н-р email) -->
+            
+            <label class="gl__input-wrapper  ">
               <input type="text"
-                     class="gl__input"
-                     placeholder="Какую организацию Вы представляете?"
+                     class="gl__input "
                      data-parsley-required=""
                      data-parsley-minlength="2"
-                     name="organization-partner">
+                     name="contact-partner"
+                     id=""
+                     placeholder="Какую организацию Вы представляете?"
+              >
+            
             </label>
           </li>
           <li class="gl__input-container">
             <div class="gl__input-title">E-mail</div>
-            <label class="gl__input-wrapper">
+            <!-- 1) isPassword / isContacts - необходимы для js -->
+            <!-- 2) inputType - html type input -->
+            <!-- 3) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+            <!-- 4) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+            <!-- 5) id - обычный id, например для первого пароля-->
+            <!-- 6) parsleyType - для валидации (н-р email) -->
+            
+            <label class="gl__input-wrapper  ">
               <input type="email"
-                     class="gl__input"
-                     placeholder="info@gmail.com"
-                     name="email-partner"
+                     class="gl__input "
                      data-parsley-required=""
-                     data-parsley-type="email">
+                     data-parsley-minlength="2"
+                     name="contact-partner"
+                     id=""
+                     placeholder="info@gmail.com"
+                     data-parsley-type="parsleyType"
+              >
+            
             </label>
           </li>
           <li class="gl__input-container">
             <div class="gl__input-title">Телефон</div>
-            <label class="gl__input-wrapper">
+  
+            <!-- 1) isPassword / isContacts - необходимы для js -->
+            <!-- 2) inputType - html type input -->
+            <!-- 3) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+            <!-- 4) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+            <!-- 5) id - обычный id, например для первого пароля-->
+            <!-- 6) parsleyType - для валидации (н-р email) -->
+            
+            <label class="gl__input-wrapper  ">
               <input type="tel"
                      class="gl__input js-phone-input"
-                     placeholder="+7"
                      data-parsley-required=""
-                     name="phone-partner">
+                     data-parsley-minlength="2"
+                     name="contact-partner"
+                     id=""
+                     placeholder="+7(888)888-88-88"
+                     data-parsley-type="parsleyType"
+              >
+            
             </label>
           </li>
         </ul>
@@ -180,15 +269,16 @@
         <div class="gl__error-block">
           <img src="img/old/img/error-form.svg" alt="" class="gl__error-icon">
           <div class="gl__error-content">
-            Заполните все обязательные поля
+            Ошибка
           </div>
         </div>
   
         <div class="gl__radio-input-container">
           <label class="gl__radio-input-wrapper">
-            <input type="radio" class="gl__radio-input" data-parsley-required="" name="agreement-partner">
+            <input type="checkbox" class="gl__radio-input" data-parsley-required="" name="agreement-partner">
             <span class="gl__radio-input-content"></span>
           </label>
+  
           <span class="gl__radio-input-caption">
             Я подтверждаю свое согласие с условиями
           <a href="" class="gl__radio-input-caption-link">Пользовательского соглашения</a>
@@ -235,29 +325,48 @@
           <ul class="modal__inputs-list">
             <li class="gl__input-container">
               <div class="gl__input-title">Телефон или E-mail</div>
-              <label class="gl__input-wrapper mod-contact">
+              <!-- 1) isPassword / isContacts - необходимы для js -->
+              <!-- 2) inputType - html type input -->
+              <!-- 3) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+              <!-- 4) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+              <!-- 5) id - обычный id, например для первого пароля-->
+              <!-- 6) parsleyType - для валидации (н-р email) -->
+              
+              <label class="gl__input-wrapper  mod-contact">
                 <input type="text"
-                       class="gl__input"
-                       placeholder="Введите телефон или E-mail"
+                       class="gl__input "
                        data-parsley-required=""
                        data-parsley-minlength="2"
-                       name="contact-auth">
+                       name="contact-auth"
+                       id=""
+                       placeholder="Введите телефон или E-mail"
+                >
+              
               </label>
             </li>
             <li class="gl__input-container">
               <div class="gl__input-title">Пароль</div>
-              <label class="gl__input-wrapper mod-password">
+              <!-- 1) isPassword / isContacts - необходимы для js -->
+              <!-- 2) inputType - html type input -->
+              <!-- 3) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+              <!-- 4) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+              <!-- 5) id - обычный id, например для первого пароля-->
+              <!-- 6) parsleyType - для валидации (н-р email) -->
+              
+              <label class="gl__input-wrapper mod-password ">
                 <input type="password"
-                       class="gl__input"
-                       placeholder="Введите пароль"
+                       class="gl__input "
                        data-parsley-required=""
                        data-parsley-minlength="2"
-                       name="password-auth"
-                       id="password-auth">
-                <button type="button" class="gl__input-password-btn">
-                  <img src="img/modal/hide-password.svg" alt="" class="gl__input-password-btn-image type-hide">
-                  <img src="img/modal/show-password.svg" alt="" class="gl__input-password-btn-image type-show">
-                </button>
+                       name="contact-auth"
+                       id="password"
+                       placeholder="Введите пароль"
+                >
+              
+                  <button type="button" class="gl__input-password-btn">
+                    <img src="img/modal/hide-password.svg" alt="" class="gl__input-password-btn-image type-hide">
+                    <img src="img/modal/show-password.svg" alt="" class="gl__input-password-btn-image type-show">
+                  </button>
               </label>
             </li>
           </ul>
@@ -266,7 +375,7 @@
           <div class="gl__error-block">
             <img src="img/old/img/error-form.svg" alt="" class="gl__error-icon">
             <div class="gl__error-content">
-              Заполните все обязательные поля
+              Ошибка
             </div>
           </div>
   
@@ -349,45 +458,74 @@
           <ul class="modal__inputs-list">
             <li class="gl__input-container">
               <div class="gl__input-title">Телефон или E-mail</div>
-              <label class="gl__input-wrapper mod-contact">
+              <!-- 1) isPassword / isContacts - необходимы для js -->
+              <!-- 2) inputType - html type input -->
+              <!-- 3) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+              <!-- 4) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+              <!-- 5) id - обычный id, например для первого пароля-->
+              <!-- 6) parsleyType - для валидации (н-р email) -->
+              
+              <label class="gl__input-wrapper  mod-contact">
                 <input type="text"
-                       class="gl__input"
-                       placeholder="Введите телефон или E-mail"
+                       class="gl__input "
                        data-parsley-required=""
                        data-parsley-minlength="2"
-                       name="contact-registr">
+                       name="contact-registr"
+                       id=""
+                       placeholder="Введите телефон или E-mail"
+                >
+              
               </label>
             </li>
             <li class="gl__input-container">
               <div class="gl__input-title">Пароль</div>
-              <label class="gl__input-wrapper mod-password">
+              <!-- 1) isPassword / isContacts - необходимы для js -->
+              <!-- 2) inputType - html type input -->
+              <!-- 3) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+              <!-- 4) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+              <!-- 5) id - обычный id, например для первого пароля-->
+              <!-- 6) parsleyType - для валидации (н-р email) -->
+              
+              <label class="gl__input-wrapper mod-password ">
                 <input type="password"
-                       class="gl__input"
-                       placeholder="Введите пароль"
+                       class="gl__input "
                        data-parsley-required=""
                        data-parsley-minlength="2"
-                       name="password-registr"
-                       id="password-registr">
-                <button type="button" class="gl__input-password-btn">
-                  <img src="img/modal/hide-password.svg" alt="" class="gl__input-password-btn-image type-hide">
-                  <img src="img/modal/show-password.svg" alt="" class="gl__input-password-btn-image type-show">
-                </button>
-              </label>
-            </li>
-              <li class="gl__input-container">
-                <div class="gl__input-title">Повторите пароль</div>
-                <label class="gl__input-wrapper mod-password">
-                  <input type="password"
-                         class="gl__input"
-                         placeholder="Введите пароль"
-                         data-parsley-required=""
-                         data-parsley-minlength="2"
-                         data-parsley-equalto="#password-registr"
-                         name="password-dupl-registr">
+                       name="contact-registr"
+                       id="password"
+                       placeholder="Введите пароль"
+                >
+              
                   <button type="button" class="gl__input-password-btn">
                     <img src="img/modal/hide-password.svg" alt="" class="gl__input-password-btn-image type-hide">
                     <img src="img/modal/show-password.svg" alt="" class="gl__input-password-btn-image type-show">
                   </button>
+              </label>
+            </li>
+              <li class="gl__input-container">
+                <div class="gl__input-title">Повторите пароль</div>
+                <!-- 1) isPassword / isContacts - необходимы для js -->
+                <!-- 2) inputType - html type input -->
+                <!-- 3) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+                <!-- 4) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+                <!-- 5) id - обычный id, например для первого пароля-->
+                <!-- 6) parsleyType - для валидации (н-р email) -->
+                
+                <label class="gl__input-wrapper mod-password ">
+                  <input type="password"
+                         class="gl__input "
+                         data-parsley-required=""
+                         data-parsley-minlength="2"
+                         name="contact-registr"
+                         id="password"
+                         placeholder="Введите пароль"
+                         data-parsley-equalto="#password-registr"
+                  >
+                
+                    <button type="button" class="gl__input-password-btn">
+                      <img src="img/modal/hide-password.svg" alt="" class="gl__input-password-btn-image type-hide">
+                      <img src="img/modal/show-password.svg" alt="" class="gl__input-password-btn-image type-show">
+                    </button>
                 </label>
               </li>
               <li class="gl__input-container">
@@ -396,10 +534,12 @@
           </ul>
   
             <div class="gl__radio-input-container">
+  
               <label class="gl__radio-input-wrapper">
-                <input type="radio" class="gl__radio-input" data-parsley-required="" name="agreement-registr">
+                <input type="checkbox" class="gl__radio-input" data-parsley-required="" name="agreement-registr">
                 <span class="gl__radio-input-content"></span>
               </label>
+  
               <span class="gl__radio-input-caption">
             Я подтверждаю свое согласие с условиями
           <a href="" class="gl__radio-input-caption-link">Пользовательского соглашения</a>
@@ -413,7 +553,7 @@
           <div class="gl__error-block">
             <img src="img/old/img/error-form.svg" alt="" class="gl__error-icon">
             <div class="gl__error-content">
-              Заполните все обязательные поля
+              Ошибка
             </div>
           </div>
   
@@ -501,13 +641,24 @@
           <ul class="modal__inputs-list">
             <li class="gl__input-container">
               <div class="gl__input-title">E-mail</div>
-              <label class="gl__input-wrapper mod-contact">
+              <!-- 1) isPassword / isContacts - необходимы для js -->
+              <!-- 2) inputType - html type input -->
+              <!-- 3) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+              <!-- 4) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+              <!-- 5) id - обычный id, например для первого пароля-->
+              <!-- 6) parsleyType - для валидации (н-р email) -->
+              
+              <label class="gl__input-wrapper  ">
                 <input type="email"
-                       class="gl__input"
-                       placeholder="info@gmail.com"
+                       class="gl__input "
                        data-parsley-required=""
                        data-parsley-minlength="2"
-                       name="contact-password">
+                       name="contact-password"
+                       id=""
+                       placeholder="info@gmail.com"
+                       data-parsley-type="parsleyType"
+                >
+              
               </label>
             </li>
           </ul>
@@ -515,7 +666,7 @@
           <div class="gl__error-block">
             <img src="img/old/img/error-form.svg" alt="" class="gl__error-icon">
             <div class="gl__error-content">
-              Заполните все обязательные поля
+              Ошибка
             </div>
           </div>
   
@@ -657,7 +808,7 @@
       <div class="account__header">
         <div class="account__menu-container">
           <label class="account__menu-radio-wrapper">
-            <input type="radio" name="account-menu" class="account__menu-radio">
+            <input type="radio" name="account-menu" class="account__menu-radio" checked>
             <span class="account__menu-radio-content">Профиль</span>
           </label>
           <label class="account__menu-radio-wrapper">
@@ -676,6 +827,18 @@
           </svg>
           Выйти
         </button>
+      </div>
+
+      <div class="account__body">
+        <div class="gl__subtitle">
+          Данные профиля
+        </div>
+
+        <form>
+          <div class="account__form-item">
+            
+          </div>
+        </form>
       </div>
     </section>
 

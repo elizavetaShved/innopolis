@@ -66,14 +66,13 @@
 
 .modal__title {
   font-size: 30px;
-  line-height: 39px;
+  line-height: 1.1;
   color: var(--main-color);
   margin-right: 20px;
   font-weight: bold;
 
   @include for-sm-down {
     font-size: 20px;
-    line-height: 1;
   }
 }
 

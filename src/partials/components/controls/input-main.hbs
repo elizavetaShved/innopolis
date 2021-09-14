@@ -1,0 +1,32 @@
+<!-- 1) isPassword / isContacts - необходимы для js -->
+<!-- 2) inputType - html type input -->
+<!-- 3) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+<!-- 4) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+<!-- 5) id - обычный id, например для первого пароля-->
+<!-- 6) parsleyType - для валидации (н-р email) -->
+
+<label class="gl__input-wrapper {{#if isPassword }}mod-password{{/if}} {{#if isContacts }}mod-contact{{/if}}">
+  <input type="{{inputType}}"
+         class="gl__input {{#if isPhone }}js-phone-input{{/if}}"
+         data-parsley-required=""
+         data-parsley-minlength="2"
+         name="contact-{{type}}"
+         id="{{id}}"
+    {{#if placeholder }}
+         placeholder="{{placeholder}}"
+    {{/if}}
+    {{#if parsleyEqualto }}
+         data-parsley-equalto="{{parsleyEqualto}}-{{type}}"
+    {{/if}}
+    {{#if parsleyType }}
+         data-parsley-type="parsleyType"
+    {{/if}}
+  >
+
+  {{#if isPassword }}
+    <button type="button" class="gl__input-password-btn">
+      <img src="img/modal/hide-password.svg" alt="" class="gl__input-password-btn-image type-hide">
+      <img src="img/modal/show-password.svg" alt="" class="gl__input-password-btn-image type-show">
+    </button>
+  {{/if}}
+</label>
