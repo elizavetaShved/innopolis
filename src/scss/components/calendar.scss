@@ -1,6 +1,36 @@
 .calendar {
   padding-top: 6rem;
   padding-bottom: 6rem;
+
+  .ps__rail-x {
+    height: 1rem;
+    background: #F0F0F1;
+    border-radius: 4px;
+    top: 0.3rem;
+    opacity: 1 !important;
+    cursor: pointer;
+    margin: 0 3rem;
+
+    &:hover {
+      top: 0;
+      height: 1.6rem;
+      background: #fafafa;
+
+      .ps__thumb-x {
+        background: #9681F2;
+        height: 1rem;
+      }
+    }
+  }
+
+  .ps__thumb-x {
+    height: .6rem;
+    background: #9681F2 !important;
+    border-radius: 4px;
+    opacity: 1 !important;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 .calendar__page-content {
@@ -20,6 +50,8 @@
 
 
 .calendar__content {
-  overflow: auto;
-  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding-top: 2.8rem;
 }
+

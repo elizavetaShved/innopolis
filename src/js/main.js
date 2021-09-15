@@ -14,6 +14,7 @@ import scrollByAnchor from './functions/scrollByAnchor';
 import { NewsPage } from './components/news-page';
 import { MapComponent } from './components/map-component';
 import { RemainedTime } from './components/common/remainedTime';
+import { CalendarPage } from './components/calendar-page';
 
 document.addEventListener('DOMContentLoaded', function () {
   // todo для GH-page (оставить только else)
@@ -32,6 +33,10 @@ document.addEventListener('DOMContentLoaded', function () {
       case 'news':
         new NewsPage();
         break;
+
+      case 'calendar':
+        new CalendarPage();
+        break;
     }
   } else {
     switch (window.location.href.split('/')[3].split('.html')[0].split('#')[0]) {
@@ -47,6 +52,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
       case 'news':
         new NewsPage();
+        break;
+
+      case 'calendar':
+        new CalendarPage();
         break;
     }
   }
