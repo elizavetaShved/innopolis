@@ -3,19 +3,19 @@
 .speakers {
   overflow: hidden;
   background-color: #fff;
-  margin-bottom: 200px;
-  padding-top: 110px;
+  margin-bottom: 20.0rem;
+  padding-top: 11.0rem;
 
   @include for-md-down {
-    padding-top: 76px;
-    margin-bottom: 70px;
+    padding-top: 7.6rem;
+    margin-bottom: 7.0rem;
   }
 }
 
 .speakers__list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 52px 70px;
+  grid-gap: 5.2rem 7.0rem;
   grid-auto-flow: dense;
 
   @include for-bg-down {
@@ -60,19 +60,19 @@
 
 .speakers__item-image-wrapper {
   width: 100%;
-  height: 220px;
+  height: 22.0rem;
   position: relative;
-  margin-bottom: 34px;
+  margin-bottom: 3.4rem;
 
   @include for-md-down {
-    height: 212px;
+    height: 21.2rem;
   }
 
   &:before {
     position: absolute;
     content: '';
     width: 120%;
-    height: 170px;
+    height: 17.0rem;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -96,10 +96,10 @@
   }
 
   &.type-3 {
-    height: 190px;
+    height: 19.0rem;
 
     @include for-md-down {
-      height: 192px;
+      height: 19.2rem;
     }
 
     &:before {
@@ -124,36 +124,36 @@
 
 .speakers__item-caption {
   font-weight: 600;
-  font-size: 28px;
-  line-height: 32px;
-  margin-bottom: 12px;
+  font-size: 2.8rem;
+  line-height: 3.2rem;
+  margin-bottom: 1.2rem;
   word-break: break-word;
 
   @include for-bg-down {
     font-weight: bold;
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 3.0rem;
+    line-height: 4.0rem;
   }
 }
 
 .speakers__item-value {
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
 
   @include for-md-down {
     font-weight: bold;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
   }
 }
 
 .speakers__item-empty-plug {
   grid-row: span 1;
   width: 100%;
-  height: 220px;
+  height: 22.0rem;
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 2.0rem;
 
   @include for-xxs-down {
     display: none;
@@ -171,33 +171,33 @@
   width: min-content;
   height: min-content;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  grid-gap: 2.0rem;
 }
 
 .speakers__item-empty-content-item {
   background: var(--main-color);
-  width: 18px;
-  height: 18px;
+  width: 1.8rem;
+  height: 1.8rem;
 }
 
 .speakers__message-container {
   position: absolute;
   top: 6%;
-  right: -20px;
+  right: -2.0rem;
   z-index: 1;
 }
 
 @media (min-width: 1025px) {
   .speakers__item:nth-child(5n+3) .speakers__message-container,
   .speakers__item:nth-child(4n+6) .speakers__message-container {
-    right: 190px;
+    right: 19.0rem;
   }
 }
 
 @media (max-width: 1024px) and (min-width: 769px) {
   .speakers__item:nth-child(3) .speakers__message-container,
   .speakers__item:nth-child(3n+7) .speakers__message-container {
-    left: -40px;
+    left: -4.0rem;
     right: auto;
   }
 }
@@ -205,7 +205,7 @@
 @media (max-width: 768px) and (min-width: 427px) {
   .speakers__item:nth-child(3) .speakers__message-container,
   .speakers__item:nth-child(2n+6) .speakers__message-container {
-    left: -40px;
+    left: -4.0rem;
     right: auto;
   }
 }
@@ -214,7 +214,7 @@
   .speakers__message-container {
     left: 0;
     right: auto;
-    top: -20px;
+    top: -2.0rem;
     width: 100%;
     height: 100%;
   }
@@ -227,13 +227,13 @@
 
 .speakers__message-content {
   position: absolute;
-  width: 396px;
+  width: 39.6rem;
   background: #fff;
-  font-size: 16px;
-  line-height: 26px;
-  padding: 26px 50px 40px 90px;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  padding: 2.6rem 5rem 4rem 9.0rem;
   box-shadow: 0 6px 40px rgba(48, 34, 107, 0.29);
-  border-radius: 0 100px 150px 150px;
+  border-radius: 0 100px 150px 15.0rem;
   left: initial;
   opacity: 0;
   transition: opacity 700ms;
@@ -243,59 +243,59 @@
 @media (min-width: 1025px) {
   .speakers__item:nth-child(5n+3) .speakers__message-content,
   .speakers__item:nth-child(4n+6) .speakers__message-content {
-    left: -334px;
-    border-radius: 100px 0 150px 150px;
-    padding: 26px 90px 40px 50px;
+    left: -33.4rem;
+    border-radius: 100px 0 150px 15.0rem;
+    padding: 2.6rem 9rem 4rem 5.0rem;
   }
 }
 
 @media (max-width: 1024px) {
   .speakers__message-content {
-    width: 266px;
-    border-radius: 0 70px 100px 100px;
-    padding: 16px 50px 28px 70px;
-    font-size: 12px;
-    line-height: 22px;
+    width: 26.6rem;
+    border-radius: 0 70px 100px 10.0rem;
+    padding: 1.6rem 5rem 2.8rem 7.0rem;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
   }
 }
 
 @media (max-width: 1024px) and (min-width: 769px) {
   .speakers__item:nth-child(3) .speakers__message-content,
   .speakers__item:nth-child(3n+7) .speakers__message-content {
-    left: -204px;
-    border-radius: 70px 0 100px 100px;
-    padding: 16px 70px 28px 50px;
+    left: -20.4rem;
+    border-radius: 70px 0 100px 10.0rem;
+    padding: 1.6rem 7rem 2.8rem 5.0rem;
   }
 }
 
 @media (max-width: 768px) and (min-width: 427px) {
   .speakers__item:nth-child(3) .speakers__message-content,
   .speakers__item:nth-child(2n+6) .speakers__message-content {
-    left: -204px;
-    border-radius: 70px 0 100px 100px;
-    padding: 16px 70px 28px 50px;
+    left: -20.4rem;
+    border-radius: 70px 0 100px 10.0rem;
+    padding: 1.6rem 7rem 2.8rem 5.0rem;
   }
 }
 
 @media (max-width: 426px) {
   .speakers__message-content {
-    top: -10px;
-    padding: 20px;
-    border-radius: 10px;
+    top: -1.0rem;
+    padding: 2.0rem;
+    border-radius: 1.0rem;
     width: 114%;
-    min-height: 250px;
+    min-height: 25.0rem;
     left: -7%;
-    font-size: 16px;
+    font-size: 1.6rem;
     display: flex;
     align-items: center;
   }
 }
 
 .speakers__message-btn {
-  top: 10px;
-  left: 10px;
-  width: 42px;
-  height: 42px;
+  top: 1.0rem;
+  left: 1.0rem;
+  width: 4.2rem;
+  height: 4.2rem;
   background-image: url('../../img/old/img/message.svg');
   background-repeat: no-repeat;
   background-position: center;
@@ -330,9 +330,9 @@
 
 @media (max-width: 426px) {
   .speakers__message-btn {
-    top: 30px;
+    top: 3.0rem;
     left: auto;
-    right: -8px;
+    right: -.8rem;
     position: absolute;
     z-index: -1;
   }
@@ -344,7 +344,7 @@
 }
 
 .speakers__btn-show-more {
-  margin-top: 54px;
+  margin-top: 5.4rem;
   display: none;
 
   &.mod-show {

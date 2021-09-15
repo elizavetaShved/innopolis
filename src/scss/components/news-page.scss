@@ -1,27 +1,27 @@
 @import '../sizes';
 
 .news-page {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 8.0rem;
+  padding-bottom: 8.0rem;
 
   @include for-md-down {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 6.0rem;
+    padding-bottom: 6.0rem;
   }
 
   @include for-sm-down {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 4.0rem;
+    padding-bottom: 4.0rem;
   }
 
   @include for-xxs-down {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 3.0rem;
+    padding-bottom: 3.0rem;
   }
 }
 
 .news-page__bread-crumbs-list {
-  margin: -10px -10px 20px -10px;
+  margin: -1rem -1rem 2rem -1.0rem;
 }
 
 .news-page__bread-crumbs-item {
@@ -37,9 +37,9 @@
 }
 
 .news-page__bread-crumbs-item-link {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: rgba(18, 21, 42, .5);
-  padding: 4px 20px 4px 10px;
+  padding: .4rem 2rem .4rem 1.0rem;
   position: relative;
   display: inline-block;
   line-height: 1.5;
@@ -50,8 +50,8 @@
     top: 50%;
     transform: translateY(-50%);
     right: 0;
-    width: 12px;
-    height: 8px;
+    width: 1.2rem;
+    height: .8rem;
     background-image: url('../../img/news/array.svg');
   }
 
@@ -78,14 +78,14 @@
 
 .news-page__news-item {
   border-top: 1px solid rgba(65, 68, 85, .2);
-  padding: 42px 0;
+  padding: 4.2rem 0;
 
   &:first-child {
     border-top: none;
   }
 
   @include for-md-down {
-    padding: 30px 0;
+    padding: 3rem 0;
   }
 }
 
@@ -100,34 +100,34 @@
 
 .news-page__news-title {
   font-weight: 600;
-  font-size: 26px;
+  font-size: 2.6rem;
   line-height: 1.4;
-  margin-bottom: 26px;
+  margin-bottom: 2.6rem;
 
   @include for-md-down {
-    font-size: 20px;
-    margin-bottom: 22px;
+    font-size: 2.0rem;
+    margin-bottom: 2.2rem;
   }
 
   @include for-sm-down {
-    font-size: 18px;
+    font-size: 1.8rem;
     line-height: 1.3;
-    margin-bottom: 20px;
+    margin-bottom: 2.0rem;
   }
 }
 
 .news-page__content {
-  font-size: 14px;
+  font-size: 1.4rem;
   line-height: 1.2;
 }
 
 .news-page__image {
-  max-height: 500px;
+  max-height: 50.0rem;
   width: 100%;
 }
 
 .news-page__video-wrapper {
-  width: 760px;
+  width: 76.0rem;
   max-width: 100%;
   height: 100%;
   cursor: pointer;
@@ -139,38 +139,38 @@
 }
 
 .news-page__video-caption {
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.6;
-  margin-top: 20px;
+  margin-top: 2.0rem;
 
   @include for-md-down {
-    font-size: 14px;
-    margin-top: 16px;
+    font-size: 1.4rem;
+    margin-top: 1.6rem;
   }
 
   @include for-sm-down {
-    font-size: 12px;
-    margin-top: 10px;
+    font-size: 1.2rem;
+    margin-top: 1.0rem;
   }
 }
 
 .news-page__slider {
   display: grid;
-  grid-template-columns: 1fr 150px;
-  grid-gap: 68px;
+  grid-template-columns: 1fr 15.0rem;
+  grid-gap: 6.8rem;
 
   @include for-bg-down {
-    grid-gap: 20px;
-    grid-template-columns: 1fr 150px;
+    grid-gap: 2.0rem;
+    grid-template-columns: 1fr 15.0rem;
   }
 
   @include for-md-down {
     grid-template-columns: 1fr;
-    grid-gap: 30px;
+    grid-gap: 3.0rem;
   }
 
   @include for-sm-down {
-    grid-gap: 20px;
+    grid-gap: 2.0rem;
   }
 }
 
@@ -195,31 +195,31 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin: 10px -20px -20px -20px;
+  margin: 1rem -2rem -2rem -2.0rem;
 
   @include for-bg-down {
-    margin: 10px -12px -12px -12px;
+    margin: 1rem -1.2rem -1.2rem -1.2rem;
   }
 
   @include for-md-down {
     justify-content: center;
-    margin: -12px -12px -12px -12px;
+    margin: -1.2rem -1.2rem -1.2rem -1.2rem;
   }
 
   @include for-sm-down {
-    margin: -6px -6px -6px -6px;
+    margin: -.6rem -.6rem -.6rem -.6rem;
   }
 }
 
 .news-page__slider-btn {
-  padding: 20px;
+  padding: 2.0rem;
 
   @include for-bg-down {
-    padding: 12px;
+    padding: 1.2rem;
   }
 
   @include for-sm-down {
-    padding: 6px;
+    padding: .6rem;
   }
 
   &:hover {
@@ -241,18 +241,18 @@
 }
 
 .news-page__image, .news-page__news-list, .news-page__text-wrapper, .news-page__video-container, .news-page__slider {
-  margin-bottom: 66px;
+  margin-bottom: 6.6rem;
 
   @include for-bg-down {
-    margin-bottom: 40px;
+    margin-bottom: 4.0rem;
   }
 
   @include for-md-down {
-    margin-bottom: 30px;
+    margin-bottom: 3.0rem;
   }
 
   @include for-sm-down {
-    margin-bottom: 20px;
+    margin-bottom: 2.0rem;
   }
 
   &:last-child {

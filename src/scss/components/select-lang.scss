@@ -1,11 +1,11 @@
 @import 'src/scss/sizes';
 
-$select-width: 94px;
-$select-width-mobile: 86px;
-$select-width-small-mobile: 80px;
-$select-padding-right: 34px;
-$select-padding-left: 18px;
-$select-padding-top-bottom: 14px;
+$select-width: 9.4rem;
+$select-width-mobile: 8.6rem;
+$select-width-small-mobile: 8.0rem;
+$select-padding-right: 3.4rem;
+$select-padding-left: 1.8rem;
+$select-padding-top-bottom: 1.4rem;
 
 .header__lang-select-wrapper {
   position: relative;
@@ -18,9 +18,9 @@ $select-padding-top-bottom: 14px;
     }
 
     .header__lang-select-options {
-      padding-top: 48px;
+      padding-top: 4.8rem;
       padding-bottom: $select-padding-top-bottom;
-      max-height: 100px;
+      max-height: 10.0rem;
     }
   }
 }
@@ -39,9 +39,9 @@ $select-padding-top-bottom: 14px;
     content: '';
     top: 50%;
     transform: translateY(-50%);
-    right: 10px;
-    width: 5px;
-    height: 5px;
+    right: 1.0rem;
+    width: .5rem;
+    height: .5rem;
     border: 5px solid transparent;
     border-top: 5px solid #fff;
   }
@@ -68,7 +68,7 @@ $select-padding-top-bottom: 14px;
   left: 0;
   width: $select-width;
   background: var(--secondary-color);
-  border-radius: 0 20px 20px 20px;
+  border-radius: 0 20px 20px 2.0rem;
   max-height: 0;
   overflow: hidden;
   padding-left: $select-padding-left;
@@ -87,7 +87,7 @@ $select-padding-top-bottom: 14px;
 .header__lang-radio-wrapper {
   display: block;
   cursor: pointer;
-  margin: 0 -6px;
+  margin: 0 -.6rem;
 }
 
 .header__lang-radio {
@@ -96,15 +96,15 @@ $select-padding-top-bottom: 14px;
 
 .header__lang-select {
   font-weight: 600;
-  font-size: 18px;
-  line-height: 23px;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #fff;
 
   @include for-bg-down {
-    font-size: 16px;
-    line-height: 21px;
+    font-size: 1.6rem;
+    line-height: 2.1rem;
   }
 
   &.mod-light {
@@ -113,7 +113,7 @@ $select-padding-top-bottom: 14px;
 }
 
 .header__lang-option-item {
-  padding: 6px;
+  padding: .6rem;
 
   &:hover {
     text-decoration: underline;

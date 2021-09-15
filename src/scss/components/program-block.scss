@@ -1,23 +1,23 @@
 .program__top-block-wrapper {
   background: var(--main-color);
-  padding-top: 24px;
-  padding-bottom: 20px;
+  padding-top: 2.4rem;
+  padding-bottom: 2.0rem;
 }
 
 .program__bottom-block-container {
   background: var(--main-color);
-  padding-bottom: 106px;
+  padding-bottom: 10.6rem;
 }
 
 @media (max-width: 768px) {
   .program__bottom-block-container {
     padding-bottom: 0;
-    margin-bottom: 10px;
+    margin-bottom: 1.0rem;
   }
 }
 
 .program__bottom-blocks {
-  padding: 18px 0 64px 0;
+  padding: 1.8rem 0 6.4rem 0;
   background-color: #fff;
   border-radius: 0 25px 25px 25px;
 }
@@ -39,13 +39,13 @@
 .program__head {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 66px;
+  margin-bottom: 6.6rem;
 }
 
 @media (max-width: 768px) {
   .program__head {
     display: block;
-    margin-bottom: 26px;
+    margin-bottom: 2.6rem;
   }
 }
 
@@ -54,20 +54,20 @@
 }
 
 .program__navigate-wrapper {
-  margin: 30px -10px -10px 20px;
+  margin: 3rem -1rem -1rem 2.0rem;
 }
 
 @media (max-width: 768px) {
   .program__navigate-wrapper {
     margin-left: 0;
-    margin-top: 54px;
+    margin-top: 5.4rem;
   }
 }
 
 .program__navigate-radio-wrapper {
   display: inline-block;
-  margin-right: 10px;
-  margin-bottom: 10px;
+  margin-right: 1.0rem;
+  margin-bottom: 1.0rem;
 }
 
 .program__navigate-radio {
@@ -88,9 +88,9 @@
 
 .program__navigate-radio-content {
   font-weight: 600;
-  font-size: 22px;
+  font-size: 2.2rem;
   white-space: nowrap;
-  padding: 16px 28px;
+  padding: 1.6rem 2.8rem;
   border-radius: 0 35px 35px 35px;
   border: 2px solid #fff;
   color: #fff;
@@ -103,8 +103,8 @@
 
 @media (max-width: 1023px) {
   .program__navigate-radio-content {
-    font-size: 14px;
-    padding: 10px 16px;
+    font-size: 1.4rem;
+    padding: 1rem 1.6rem;
   }
 }
 
@@ -119,20 +119,20 @@
 @media (max-width: 768px) {
   .program__filters-wrapper-caption {
     display: block;
-    font-size: 14px;
+    font-size: 1.4rem;
     color: rgba(229, 229, 229, 0.2);
-    margin-bottom: 18px;
+    margin-bottom: 1.8rem;
   }
 }
 
 .program__filters-wrapper {
-  margin-bottom: -14px;
-  margin-right: -14px;
+  margin-bottom: -1.4rem;
+  margin-right: -1.4rem;
 }
 
 .program__filter-checkbox-wrapper {
-  margin-bottom: 14px;
-  margin-right: 14px;
+  margin-bottom: 1.4rem;
+  margin-right: 1.4rem;
   display: inline-block;
 }
 
@@ -156,14 +156,14 @@
 
 .program__filter-checkbox-content {
   font-weight: 600;
-  font-size: 14px;
+  font-size: 1.4rem;
   white-space: nowrap;
-  background-size: 18px 18px;
+  background-size: 1.8rem 1.8rem;
   transition: background-color 350ms, color 350ms, background-image 100ms;
   background-image: url('../../img/old/img/filter-plus.svg');
   background-repeat: no-repeat;
-  background-position: top 50% right 20px;
-  padding: 20px 80px 20px 20px;
+  background-position: top 50% right 2.0rem;
+  padding: 2rem 8rem 2rem 2.0rem;
   display: block;
   background-color: #fff;
   border-radius: 28px 28px 28px 0;
@@ -172,8 +172,8 @@
 
 @media (max-width: 768px) {
   .program__filter-checkbox-content {
-    padding: 10px 46px 10px 20px;
-    background-size: 16px 16px;
+    padding: 1rem 4.6rem 1rem 2.0rem;
+    background-size: 1.6rem 1.6rem;
   }
 }
 
@@ -189,24 +189,24 @@
 }
 
 .program__padding-content {
-  padding-left: 62px;
-  padding-right: 62px;
+  padding-left: 6.2rem;
+  padding-right: 6.2rem;
 }
 
 @media (max-width: 1023px) {
   .program__padding-content {
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
   }
 }
 
 .program__content-item {
   grid-template-columns: 1fr 8fr 5fr;
-  grid-gap: 40px;
+  grid-gap: 4.0rem;
   border-bottom: 1px solid var(--main-color);
   display: grid;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 4.0rem;
+  padding-bottom: 4.0rem;
 
 }
 
@@ -216,22 +216,22 @@
 
 @media (max-width: 1023px) {
   .program__content-item {
-    grid-gap: 20px;
+    grid-gap: 2.0rem;
   }
 }
 
 @media (max-width: 768px) {
   .program__content-item {
     grid-template-columns: 50px 1fr;
-    grid-gap: 40px 10px;
-    padding-top: 48px;
-    padding-bottom: 48px;
+    grid-gap: 4rem 1.0rem;
+    padding-top: 4.8rem;
+    padding-bottom: 4.8rem;
   }
 }
 
 @media (max-width: 567px) {
   .program__content-item {
-    grid-template-columns: 26px 1fr;
+    grid-template-columns: 2.6rem 1fr;
   }
 }
 
@@ -252,7 +252,7 @@
 
 .program__content-item-time {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 2.4rem;
   color: var(--secondary-color);
   transform: translate(-20%, 50%) rotate(270deg);
   white-space: nowrap;
@@ -266,19 +266,19 @@
 }
 
 .program__content-info-tile {
-  margin-bottom: 34px;
+  margin-bottom: 3.4rem;
   font-weight: 600;
-  font-size: 26px;
-  line-height: 34px;
-  margin-top: -8px;
+  font-size: 2.6rem;
+  line-height: 3.4rem;
+  margin-top: -.8rem;
 }
 
 @media (max-width: 768px) {
   .program__content-info-tile {
-    font-size: 18px;
-    line-height: 22px;
-    margin-bottom: 12px;
-    margin-top: -6px;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    margin-bottom: 1.2rem;
+    margin-top: -.6rem;
   }
 }
 
@@ -289,15 +289,15 @@
 }
 
 .program__content-info-list.mod-show {
-  max-height: 200px;
-  margin-bottom: 23px;
+  max-height: 20.0rem;
+  margin-bottom: 2.3rem;
 }
 
 .program__content-info-item {
-  margin-bottom: 14px;
-  font-size: 14px;
-  line-height: 22px;
-  padding-left: 28px;
+  margin-bottom: 1.4rem;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  padding-left: 2.8rem;
   position: relative;
 }
 
@@ -305,10 +305,10 @@
 .program__content-info-item:before {
   position: absolute;
   content: '';
-  top: 10px;
+  top: 1.0rem;
   left: 0;
-  width: 10px;
-  height: 2px;
+  width: 1.0rem;
+  height: .2rem;
   background-color: #000;
 }
 
@@ -318,11 +318,11 @@
 
 .program__content-info-btn-show {
   font-weight: 600;
-  font-size: 14px;
-  padding-bottom: 2px;
+  font-size: 1.4rem;
+  padding-bottom: .2rem;
   border-bottom: 1px dashed transparent;
   transition: border-bottom 250ms;
-  margin-bottom: 40px;
+  margin-bottom: 4.0rem;
   color: var(--secondary-color);
 }
 
@@ -342,29 +342,29 @@
 }
 
 .program__content-info-geo {
-  margin-right: 40px;
-  font-size: 14px;
-  padding-left: 28px;
+  margin-right: 4.0rem;
+  font-size: 1.4rem;
+  padding-left: 2.8rem;
   background-image: url('../../img/old/img/geolokation.svg');
   background-repeat: no-repeat;
   background-position: top 50% left;
-  background-size: 18px 20px;
+  background-size: 18px 2.0rem;
 }
 
 @media (max-width: 768px) {
   .program__content-info-geo {
     margin-right: 0;
-    margin-bottom: 18px;
+    margin-bottom: 1.8rem;
   }
 }
 
 .program__content-info-mark {
   font-weight: 600;
-  font-size: 12px;
+  font-size: 1.2rem;
   color: #fff;
-  padding: 4px 16px;
+  padding: .4rem 1.6rem;
   background: #000;
-  border-radius: 0 14px 14px 14px;
+  border-radius: 0 1.4rem 1.4rem 1.4rem;
   display: inline;
 }
 
@@ -373,16 +373,16 @@
 }
 
 .program__content-author-image-wrapper {
-  width: 74px;
-  height: 70px;
-  margin-right: 32px;
-  flex: 0 0 74px;
+  width: 7.4rem;
+  height: 7.0rem;
+  margin-right: 3.2rem;
+  flex: 0 0 7.4rem;
 
   &:before {
     position: absolute;
     content: '';
     width: 100%;
-    height: 64px;
+    height: 6.4rem;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -391,15 +391,15 @@
   }
 
   &:after {
-    height: 56px;
-    width: 56px;
+    height: 5.6rem;
+    width: 5.6rem;
   }
 }
 
 .program__content-author-image {
   position: absolute;
-  height: 56px;
-  width: 56px;
+  height: 5.6rem;
+  width: 5.6rem;
   object-fit: cover;
   top: 0;
   left: 50%;
@@ -408,14 +408,14 @@
 
 .program__content-author-caption {
   font-weight: 600;
-  font-size: 20px;
-  line-height: 26px;
-  margin-bottom: 16px;
+  font-size: 2.0rem;
+  line-height: 2.6rem;
+  margin-bottom: 1.6rem;
 }
 
 .program__content-author-value {
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
 }
 
 @media (max-width: 768px) {
@@ -426,7 +426,7 @@
 
 .program__btns-wrapper {
   display: flex;
-  margin-top: 28px;
+  margin-top: 2.8rem;
 }
 
 @media (max-width: 426px) {
@@ -436,8 +436,8 @@
 }
 
 .program__btn-download {
-  margin-left: 18px;
-  padding-left: 74px;
+  margin-left: 1.8rem;
+  padding-left: 7.4rem;
   position: relative;
 
   &:hover {
@@ -451,20 +451,20 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 30px;
+  left: 3.0rem;
   fill: #000;
   transition: fill 300ms;
 }
 
 @media (max-width: 768px) {
   .program__btn-download {
-    padding-left: 50px !important;
+    padding-left: 5rem !important;
   }
 }
 
 @media (max-width: 426px) {
   .program__btn-download {
     margin-left: 0 !important;
-    margin-top: 16px !important;
+    margin-top: 1.6rem !important;
   }
 }

@@ -1,6 +1,6 @@
 .account {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
 }
 
 .account__header {
@@ -12,10 +12,10 @@
   &:before {
     position: absolute;
     content: '';
-    bottom: -4px;
+    bottom: -.4rem;
     left: 0;
     width: 100%;
-    height: 1px;
+    height: .1rem;
     background-color: rgba(65, 68, 85, .2);
   }
 }
@@ -37,11 +37,11 @@
 
 .account__menu-radio-content {
   font-weight: 600;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1.6rem;
+  line-height: 1.2;
   text-transform: uppercase;
   color: #898A95;
-  padding: 22px;
+  padding: 2.2rem;
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
   transition: color 300ms, border-bottom-color 300ms;
@@ -54,9 +54,9 @@
 }
 
 .account__exit-btn {
-  padding: 20px 20px 20px 40px;
+  padding: 2rem 2rem 2rem 4rem;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1.6rem;
   text-transform: uppercase;
   color: #000;
   position: relative;
@@ -81,5 +81,5 @@
 }
 
 .account__body {
-  padding: 50px 0;
+  padding: 5rem 0;
 }

@@ -126,6 +126,18 @@ $xxs: 426px;
   }
 }
 
+.gl__lg-show {
+  @include for-lg-up {
+    display: none !important;
+  }
+}
+
+.gl__lg-hide {
+  @include for-lg-down {
+    display: none !important;
+  }
+}
+
 .gl__md-show {
   @include for-lg-up {
     display: none !important;

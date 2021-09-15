@@ -13,7 +13,7 @@ export class MapComponent {
     const dataLat = Number(this.mapElem.getAttribute('data-lat'));
     const dataLng = Number(this.mapElem.getAttribute('data-lng'));
     const dataZoom = Number(this.mapElem.getAttribute('data-zoom'));
-    const dataAddress = Number(this.mapElem.getAttribute('data-address'));
+    const dataAddress = this.mapElem.getAttribute('data-address');
     const dataPinURL = this.mapElem.getAttribute('data-pin');
 
     let pinOptions = {
@@ -43,7 +43,7 @@ export class MapComponent {
       },
       size: 'small',
     })
-
+    console.log(dataAddress)
     const balloonMaps = [
       {
         coords: geoPingBalloon,

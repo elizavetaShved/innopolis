@@ -1,7 +1,7 @@
 @import 'src/scss/sizes';
 
 .sticky-menu {
-  height: 70px;
+  height: 7.0rem;
   position: sticky;
   top: 0;
   z-index: 7;
@@ -24,7 +24,7 @@
 }
 
 .sticky-menu__item-list {
-  margin: 0 -20px;
+  margin: 0 -2.0rem;
   display: flex;
   align-items: center;
   height: 100%;
@@ -39,7 +39,7 @@
 
 .sticky-menu__item {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #fff;
   transition: color 200ms;
 
@@ -50,5 +50,5 @@
 }
 
 .sticky-menu__item-link {
-  padding: 20px;
+  padding: 2.0rem;
 }
