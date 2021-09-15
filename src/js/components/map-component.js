@@ -43,7 +43,7 @@ export class MapComponent {
       },
       size: 'small',
     })
-    console.log(dataAddress)
+
     const balloonMaps = [
       {
         coords: geoPingBalloon,

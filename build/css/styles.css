@@ -2236,7 +2236,8 @@ button.swiper-pagination-bullet {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  border-bottom: 1px solid rgba(65, 68, 85, 0.2); }
   @media screen and (max-width: 1199px) {
     .header__center-block-wrapper {
       border-bottom: none; } }
@@ -2578,6 +2579,8 @@ button.swiper-pagination-bullet {
   z-index: 7; }
   .sticky-menu.mod-scroll {
     background-color: #292C3F; }
+    .sticky-menu.mod-scroll.mod-light {
+      background-color: #ececec; }
     .sticky-menu.mod-scroll .sticky-menu__section:nth-child(1), .sticky-menu.mod-scroll .sticky-menu__section:nth-child(3) {
       display: -webkit-box;
       display: -ms-flexbox;

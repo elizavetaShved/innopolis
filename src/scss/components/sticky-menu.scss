@@ -9,6 +9,10 @@
   &.mod-scroll {
     background-color: #292C3F;
 
+    &.mod-light {
+      background-color: #ececec;
+    }
+
     .sticky-menu__section {
       &:nth-child(1), &:nth-child(3) {
         display: flex;
