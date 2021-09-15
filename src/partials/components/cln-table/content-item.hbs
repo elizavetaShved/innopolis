@@ -1,0 +1,23 @@
+<th class="calendar__item-content {{#if fullRow }}mod-full{{/if}}">
+  <div class="calendar__item-content-time">
+    {{ cardTime }}
+  </div>
+
+  {{#if cardMark }}
+    <div class="calendar__item-content-mark type-1">
+      {{ cardMark }}
+    </div>
+  {{/if}}
+
+  <div class="calendar__item-content-title">
+    {{ cardTitle }}
+  </div>
+
+  <div class="calendar__item-content-subtitle">
+    {{ cardSubtitle }}
+  </div>
+
+  <div class="calendar__item-content-text">
+    {{ cardText }}
+  </div>
+</th>

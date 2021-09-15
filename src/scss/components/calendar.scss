@@ -1,0 +1,25 @@
+.calendar {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.calendar__page-content {
+  padding: 0 3rem;
+}
+
+.calendar__selects-wrapper {
+  display: flex;
+}
+
+.calendar__header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4.8rem;
+}
+
+
+.calendar__content {
+  overflow: auto;
+  width: 100%;
+}

@@ -437,29 +437,6 @@
 
 .program__btn-download {
   margin-left: 1.8rem;
-  padding-left: 7.4rem;
-  position: relative;
-
-  &:hover {
-    .program__btn-download-icon {
-      fill: #fff;
-    }
-  }
-}
-
-.program__btn-download-icon {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 3.0rem;
-  fill: #000;
-  transition: fill 300ms;
-}
-
-@media (max-width: 768px) {
-  .program__btn-download {
-    padding-left: 5rem !important;
-  }
 }
 
 @media (max-width: 426px) {

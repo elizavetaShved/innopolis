@@ -1,10 +1,10 @@
 @import 'src/scss/sizes';
 
 .gl__main-btn {
-  padding: 10px 18px;
+  padding: 1rem 1.8rem;
   background: var(--btn-color);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #fff !important;
   box-shadow: 0 12px 67px rgba(35, 35, 99, 0.8);
   border-radius: 0 20px 20px 20px;
@@ -12,57 +12,57 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 200px;
+  max-width: 20.0rem;
 
   &:hover {
     background: #ff2977;
   }
 
   &.mod-big {
-    font-size: 24px;
-    padding: 34px 60px;
-    border-radius: 0 50px 50px 50px;
-    max-width: 300px;
+    font-size: 2.4rem;
+    padding: 3.4rem 6.0rem;
+    border-radius: 0 5rem 5rem 5rem;
+    max-width: 30.0rem;
 
     @include for-md-down {
-      font-size: 20px;
+      font-size: 2.0rem;
     }
 
     @include for-sm-down {
-      padding: 20px 34px;
+      padding: 2rem 3.4rem;
     }
   }
 
   &.mod-large {
-    padding: 22px 60px;
-    font-size: 20px;
+    padding: 2.2rem 6.0rem;
+    font-size: 2.0rem;
     border-radius: 0 35px 35px 35px;
-    max-width: 300px;
+    max-width: 30.0rem;
 
     @include for-md-down {
-      font-size: 18px;
+      font-size: 1.8rem;
     }
 
     @include for-sm-down {
-      padding: 18px 30px;
+      padding: 1.8rem 3rem;
     }
   }
 
   &.mod-middle {
-    padding: 18px 50px;
+    padding: 1.8rem 5.0rem;
     border-radius: 0 28px 28px 28px;
-    max-width: 300px;
+    max-width: 30.0rem;
   }
 
   &.mod-middle-2 {
-    padding: 16px 60px;
+    padding: 16px 6.0rem;
     border-radius: 0 25px 25px 25px;
-    max-width: 300px;
+    max-width: 30.0rem;
   }
 
   &.mod-small {
-    font-size: 14px;
-    padding: 16px;
+    font-size: 1.4rem;
+    padding: 1.6rem;
   }
 
   &.mod-long {
@@ -79,56 +79,75 @@
     background-color: #fff;
     color: #000 !important;
     border: 2px solid #000;
-    font-size: 16px;
-    max-width: 400px;
+    font-size: 1.6rem;
+    max-width: 40.0rem;
     transition: background-color 300ms, border 300ms;
+    position: relative;
+    padding-left: 7.4rem;
+
+    @include for-md-down {
+      padding-left: 5rem !important;
+    }
 
     &:hover {
       background-color: #000;
       color: #fff !important;
+
+      .gl__btn-download-icon {
+        fill: #fff;
+      }
+    }
+
+    .gl__btn-download-icon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 3.0rem;
+      fill: #000;
+      transition: fill 300ms;
     }
   }
 
   @include for-sm-down {
-    font-size: 16px !important;
-    line-height: 20px !important;
+    font-size: 1.6rem !important;
+    line-height: 1.2 !important;
   }
 }
 
 .gl__header__burger-btn {
   position: relative;
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 5.0rem;
+  height: 5.0rem;
 
   &:before, &:after {
     content: '';
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 16px;
+    width: 1.6rem;
     transition: all 0.3s ease;
   }
 
   &:before {
-    height: 12px;
+    height: 1.2rem;
     border-top: 2px solid var(--btn-color);
     border-bottom: 2px solid var(--btn-color);
-    margin-top: -6px;
-    margin-left: -8px;
+    margin-top: -.6rem;
+    margin-left: -.8rem;
   }
 
   &:after {
-    height: 2px;
-    margin-left: -8px;
-    margin-top: -1px;
+    height: .2rem;
+    margin-left: -.8rem;
+    margin-top: -.1rem;
     background: var(--btn-color);
   }
 
   &.mod-open {
     &:before {
       border: none;
-      height: 2px;
+      height: .2rem;
       background: var(--btn-color);
       transform: rotate(45deg);
       margin-top: 0;

@@ -1,0 +1,339 @@
+{{#extend "layout"}}
+  {{#content "main"}}
+
+    <div class="calendar" id="calendar-host">
+      <ul class="gl__bread-crumbs-list calendar__page-content">
+        <li class="gl__bread-crumbs-item">
+          <a href="/" class="gl__bread-crumbs-item-link">
+            Главная
+          </a>
+        </li>
+        <li class="gl__bread-crumbs-item">
+          <span class="gl__bread-crumbs-item-link mod-current-page">
+            Календарь мероприятия
+          </span>
+        </li>
+      </ul>
+
+      <h1 class="gl__subtitle calendar__page-content">
+        Календарь мероприятий
+      </h1>
+
+      <div class="calendar__header-wrapper calendar__page-content">
+        <div class="calendar__selects-wrapper">
+          {{> controls/select}}
+          {{> controls/select}}
+          {{> controls/select}}
+          {{> controls/select}}
+        </div>
+
+        <div class="calendar__btn">
+          <a href="" download="" type="button"
+             class="calendar__btn-download gl__main-btn mod-black mod-no-shadow">
+            Скачать программу в PDF
+            <svg width="24" height="24" aria-hidden="true" class="gl__btn-download-icon">
+              <use xlink:href="#download"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="calendar__content">
+        <table class="calendar__table">
+          <thead class="calendar__table-head">
+          <tr class="calendar__row-wrapper mod-head">
+            <td class="calendar__item-header mod-date">2 дек.</td>
+            {{> cln-table/header-item caption="a" value="большой зал"}}
+            {{> cln-table/header-item caption="a" value="удитория 104"}}
+            {{> cln-table/header-item caption="a" value="удитория 104"}}
+            {{> cln-table/header-item caption="a" value="удитория 104"}}
+            {{> cln-table/header-item caption="a" value="удитория 104"}}
+            {{> cln-table/header-item caption="a" value="удитория 104"}}
+            {{> cln-table/header-item caption="a" value="удитория 104"}}
+            {{> cln-table/header-item caption="a" value="удитория 104"}}
+            {{> cln-table/header-item caption="a" value="удитория 104"}}
+            {{> cln-table/header-item caption="a" value="удитория 104"}}
+            {{> cln-table/header-item caption="a" value="удитория 104"}}
+          </tr>
+          </thead>
+
+          <tbody>
+
+          <tr class="calendar__row-wrapper mod-full">
+            <th class="calendar__item-content">10:00- 11:25</th>
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardTitle="ТОРЖЕСТВЕННОЕ ОТКРЫТИЕ ФОРУМА"
+              cardText="Свияжские холмы, Прибрежная, 2, GrandHall"
+              fullRow=true
+            }}
+          </tr>
+
+          <tr class="calendar__row-wrapper">
+            <th class="calendar__item-content">9:00</th>
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardMark="бизнес"
+              cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardMark="бизнес"
+              cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardMark="бизнес"
+              cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardMark="бизнес"
+              cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardMark="бизнес"
+              cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardMark="бизнес"
+              cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardMark="бизнес"
+              cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+          </tr>
+
+          <tr class="calendar__row-wrapper">
+            <th class="calendar__item-content">9:00</th>
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardMark="бизнес"
+              cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardMark="бизнес"
+              cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardMark="бизнес"
+              cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardMark="бизнес"
+              cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardMark="бизнес"
+              cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardMark="бизнес"
+              cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardMark="бизнес"
+              cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+          </tr>
+          <tr class="calendar__row-wrapper">
+            <th class="calendar__item-content">9:00</th>
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardMark="бизнес"
+              cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardMark="бизнес"
+              cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardMark="бизнес"
+              cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardMark="бизнес"
+              cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardMark="бизнес"
+              cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardMark="бизнес"
+              cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardMark="бизнес"
+              cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+          </tr>
+          <tr class="calendar__row-wrapper">
+            <th class="calendar__item-content">9:00</th>
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardMark="бизнес"
+              cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardMark="бизнес"
+              cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardMark="бизнес"
+              cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardMark="бизнес"
+              cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardMark="бизнес"
+              cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardMark="бизнес"
+              cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardMark="бизнес"
+              cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+          </tr>
+          <tr class="calendar__row-wrapper">
+            <th class="calendar__item-content">9:00</th>
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardMark="бизнес"
+              cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardMark="бизнес"
+              cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardMark="бизнес"
+              cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardMark="бизнес"
+              cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardMark="бизнес"
+              cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardMark="бизнес"
+              cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+            {{> cln-table/content-item
+              cardTime="11:00 - 11:50"
+              cardMark="бизнес"
+              cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  {{/content}}
+{{/extend}}
