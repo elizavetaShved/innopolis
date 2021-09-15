@@ -2130,7 +2130,7 @@ button.swiper-pagination-bullet {
   color: #fff;
   -webkit-transition: color 250ms;
   transition: color 250ms; }
-  @media screen and (max-width: 1399px) {
+  @media screen and (max-width: 1199px) {
     .header__contact {
       font-size: 16px; } }
   .header__contact:hover {
@@ -2138,7 +2138,7 @@ button.swiper-pagination-bullet {
     text-decoration: underline; }
   .header__contact + .header__contact {
     margin-left: 46px; }
-    @media screen and (max-width: 1399px) {
+    @media screen and (max-width: 1199px) {
       .header__contact + .header__contact {
         margin-left: 0; } }
   .header__contact.mod-light {
@@ -2209,12 +2209,12 @@ button.swiper-pagination-bullet {
   display: none !important; }
   .header__auth-btn.mod-show {
     display: block !important; }
-    @media screen and (max-width: 1399px) {
+    @media screen and (max-width: 1199px) {
       .header__auth-btn.mod-show {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex; } }
-  @media screen and (max-width: 1399px) {
+  @media screen and (max-width: 1199px) {
     .header__auth-btn {
       border-radius: 0 20px 20px 20px;
       background-color: var(--btn-color);
@@ -3314,7 +3314,7 @@ html.is-locked {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-bottom: 68px; }
+  margin-top: 68px; }
 
 .hero-block__information-item {
   -ms-flex: 0 0 49%;

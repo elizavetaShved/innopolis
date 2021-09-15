@@ -62,7 +62,7 @@
   color: #fff;
   transition: color 250ms;
 
-  @include for-fl-down {
+  @include for-vs-down {
     font-size: 16px;
   }
 
@@ -74,7 +74,7 @@
   & + & {
     margin-left: 46px;
 
-    @include for-fl-down {
+    @include for-vs-down {
       margin-left: 0;
     }
   }
@@ -155,12 +155,12 @@
   &.mod-show {
     display: block !important;
 
-    @include for-fl-down {
+    @include for-vs-down {
       display: flex;
     }
   }
 
-  @include for-fl-down {
+  @include for-vs-down {
     border-radius: 0 20px 20px 20px;
     background-color: var(--btn-color);
     align-items: center;
