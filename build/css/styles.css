@@ -2417,8 +2417,6 @@ button.swiper-pagination-bullet {
   text-align: start;
   line-height: 1.3;
   border-right: 1px solid #DCDCE0; }
-  .calendar__item-content:last-child {
-    border-right: none; }
   .calendar__item-content:first-child {
     font-weight: 600;
     font-size: 1.4rem;
