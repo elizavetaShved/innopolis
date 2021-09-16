@@ -4,6 +4,16 @@ body {
   &.mod-no-scroll {
     overflow: hidden;
   }
+
+  &.touch {
+    .ps__rail-x {
+      display: none !important;
+    }
+
+    .calendar__content {
+      padding-top: 0 !important;
+    }
+  }
 }
 
 .gl__page-content {

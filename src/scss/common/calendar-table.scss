@@ -26,10 +26,6 @@
   &:not(.mod-head) {
     border-bottom: 1px solid #DCDCE0;
   }
-
-  &:last-child {
-    border-bottom: none;
-  }
 }
 
 .calendar__item-header {
@@ -90,15 +86,23 @@
   margin-bottom: 1.4rem;
 
   &.type-1 {
-    background-color: #FFD3D3;
+    background-color: #F9B787;
   }
 
   &.type-2 {
-    background-color: #C8E8C3;
+    background-color: #FFD3D3;
   }
 
   &.type-3 {
-    background-color: #DBDCFF;
+    background-color: #C8E8C3;
+  }
+
+  &.type-4 {
+    background-color: #DCDBFF;
+  }
+
+  &.type-5 {
+    background-color: #C6DDFF;
   }
 }
 

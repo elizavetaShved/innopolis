@@ -1,3 +1,5 @@
+@import '../sizes';
+
 .calendar {
   padding-top: 6rem;
   padding-bottom: 6rem;
@@ -38,16 +40,20 @@
 }
 
 .calendar__selects-wrapper {
-  display: flex;
+ margin-right: -1rem;
+ margin-bottom: -1rem;
 }
 
 .calendar__header-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin-bottom: 4.8rem;
-}
 
+  @include for-md-down {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
 
 .calendar__content {
   position: relative;
@@ -55,3 +61,19 @@
   padding-top: 2.8rem;
 }
 
+.calendar__btn-download {
+  min-width: 26rem;
+  text-align: center;
+  margin-left: 2rem;
+
+  @include for-md-down {
+    margin-left: 0;
+    margin-top: 3rem;
+    min-width: auto;
+    display: inline-block;
+
+    .gl__btn-download-icon {
+      left: 1.2rem !important;
+    }
+  }
+}

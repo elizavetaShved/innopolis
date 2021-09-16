@@ -11,7 +11,9 @@
          data-parsley-required=""
          data-parsley-minlength="2"
          name="contact-{{type}}"
-         id="{{id}}"
+    {{#if id }}
+         id="{{id}}-{{type}}"
+    {{/if}}
     {{#if placeholder }}
          placeholder="{{placeholder}}"
     {{/if}}
