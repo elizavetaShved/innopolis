@@ -143,14 +143,14 @@
 .program__filter-checkbox:checked + .program__filter-checkbox-content {
   background-color: #302463;
   color: #fff;
-  background-image: url('../../img/old/img/filter-minus.svg');
+  background-image: url('/img/old/img/filter-minus.svg');
 }
 
 @media (min-width: 1024px) {
   .program__filter-checkbox-content:hover {
     background-color: #6b59b6;
     color: #fff;
-    background-image: url('../../img/old/img/filter-minus.svg');
+    background-image: url('/img/old/img/filter-minus.svg');
   }
 }
 
@@ -160,7 +160,7 @@
   white-space: nowrap;
   background-size: 1.8rem 1.8rem;
   transition: background-color 350ms, color 350ms, background-image 100ms;
-  background-image: url('../../img/old/img/filter-plus.svg');
+  background-image: url('/img/old/img/filter-plus.svg');
   background-repeat: no-repeat;
   background-position: top 50% right 2.0rem;
   padding: 2rem 8rem 2rem 2.0rem;
@@ -345,7 +345,7 @@
   margin-right: 4.0rem;
   font-size: 1.4rem;
   padding-left: 2.8rem;
-  background-image: url('../../img/old/img/geolokation.svg');
+  background-image: url('/img/old/img/geolokation.svg');
   background-repeat: no-repeat;
   background-position: top 50% left;
   background-size: 18px 2.0rem;
