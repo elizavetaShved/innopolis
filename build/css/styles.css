@@ -302,69 +302,69 @@ body.touch .calendar__content {
 .gl__page-content {
   padding-left: var(--page-content-padding);
   padding-right: var(--page-content-padding);
-  max-width: 1060px;
+  max-width: 106rem;
   margin-left: auto;
   margin-right: auto; }
 
 .gl__title {
   font-weight: bold;
-  font-size: 80px;
+  font-size: 8rem;
   color: #000;
-  margin-bottom: 66px; }
+  margin-bottom: 6.6rem; }
   .gl__title.mod-white {
     color: #fff; }
   @media screen and (max-width: 1023px) {
     .gl__title {
-      font-size: 70px;
-      margin-bottom: 58px; } }
+      font-size: 7rem;
+      margin-bottom: 5.8rem; } }
   @media screen and (max-width: 767px) {
     .gl__title {
-      font-size: 58px;
-      margin-bottom: 50px; } }
+      font-size: 5.8rem;
+      margin-bottom: 5rem; } }
   @media screen and (max-width: 559px) {
     .gl__title {
-      font-size: 46px;
-      margin-bottom: 42px; } }
+      font-size: 4.6rem;
+      margin-bottom: 4.2rem; } }
   @media screen and (max-width: 425px) {
     .gl__title {
-      font-size: 30px;
-      margin-bottom: 36px; } }
+      font-size: 3rem;
+      margin-bottom: 3.6rem; } }
 
 .gl__subtitle {
   font-weight: bold;
-  font-size: 36px;
+  font-size: 3.6rem;
   line-height: 1.1;
-  margin-bottom: 62px; }
+  margin-bottom: 6.2rem; }
   @media screen and (max-width: 1023px) {
     .gl__subtitle {
-      font-size: 34px;
-      margin-bottom: 60px; } }
+      font-size: 3.4rem;
+      margin-bottom: 6rem; } }
   @media screen and (max-width: 767px) {
     .gl__subtitle {
-      font-size: 30px;
-      margin-bottom: 50px; } }
+      font-size: 3rem;
+      margin-bottom: 5rem; } }
   @media screen and (max-width: 559px) {
     .gl__subtitle {
-      font-size: 28px;
-      margin-bottom: 40px; } }
+      font-size: 2.8rem;
+      margin-bottom: 4rem; } }
   @media screen and (max-width: 425px) {
     .gl__subtitle {
-      font-size: 24px;
-      margin-bottom: 30px; } }
+      font-size: 2.4rem;
+      margin-bottom: 3rem; } }
 
 .gl__main-text {
-  font-size: 14px;
+  font-size: 1.4rem;
   line-height: 1.2; }
   .gl__main-text + .gl__main-text {
-    margin-top: 20px; }
+    margin-top: 2rem; }
   @media screen and (max-width: 767px) {
     .gl__main-text {
-      font-size: 12px; }
+      font-size: 1.2rem; }
       .gl__main-text + .gl__main-text {
-        margin-top: 14px; } }
+        margin-top: 1.4rem; } }
   @media screen and (max-width: 559px) {
     .gl__main-text + .gl__main-text {
-      margin-top: 10px; } }
+      margin-top: 1rem; } }
 
 .gl__mask-color {
   position: relative; }
@@ -381,7 +381,7 @@ body.touch .calendar__content {
     height: 100%; }
 
 .gl__bread-crumbs-list {
-  margin: -1rem -1rem 2rem -1.0rem; }
+  margin: -1rem -1rem 2rem -1rem; }
 
 .gl__bread-crumbs-item {
   display: inline-block; }
@@ -391,7 +391,7 @@ body.touch .calendar__content {
 .gl__bread-crumbs-item-link {
   font-size: 1.4rem;
   color: rgba(18, 21, 42, 0.5);
-  padding: .4rem 2rem .4rem 1.0rem;
+  padding: .4rem 2rem .4rem 1rem;
   position: relative;
   display: inline-block;
   line-height: 1.6; }
