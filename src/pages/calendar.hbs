@@ -23,27 +23,26 @@
         <div class="calendar__selects-wrapper">
           {{> controls/select
             selectTitle="Все даты"
+            selectName="commonDates"
             option1="option 1" option2="option 2" option3="option 3" option4="option 4" option5="option 5"
             option6="option 6" option7="option 7" option8="option 8" option9="option 9" option10="option 10"
             option11="option 12" option13="option 13" option14="option 14" option15="option 15" option16="option 16"
           }}
           {{> controls/select
             selectTitle="Тема"
-            option1="option 1" option2="option 2" option3="option 3" option4="option 4" option5="option 5"
-            option6="option 6" option7="option 7" option8="option 8" option9="option 9" option10="option 10"
-            option11="option 12" option13="option 13" option14="option 14" option15="option 15" option16="option 16"
+            selectName="topics"
+            option1="Вузы" option2="Бизнес" option3="Культурная программа" option4="Стартапы" option5="Органы гос.власти"
           }}
           {{> controls/select
             selectTitle="Аудитория"
-            option1="option 1" option2="option 2" option3="option 3" option4="option 4" option5="option 5"
-            option6="option 6" option7="option 7" option8="option 8" option9="option 9" option10="option 10"
-            option11="option 12" option13="option 13" option14="option 14" option15="option 15" option16="option 16"
+            selectName="auditoriums"
+            option1="большой зал" option2="аудитория 104" option3="аудитория 105" option4="аудитория 106" option5="аудитория 107"
+            option6="аудитория 108" option7="аудитория 109" option8="аудитория 110" option9="аудитория 111" option10="аудитория 112"
           }}
           {{> controls/select
             selectTitle="Спикер"
-            option1="option 1" option2="option 2" option3="option 3" option4="option 4" option5="option 5"
-            option6="option 6" option7="option 7" option8="option 8" option9="option 9" option10="option 10"
-            option11="option 12" option13="option 13" option14="option 14" option15="option 15" option16="option 16"
+            selectName="speakers"
+            option1="Александр Горник" option2="Андрей Бедняков" option3="Марина Кравец"
           }}
         </div>
 
@@ -64,15 +63,15 @@
           <tr class="calendar__row-wrapper mod-head">
             <td class="calendar__item-header mod-date">16 сен.</td>
             {{> cln-table/header-item caption="a" value="большой зал"}}
-            {{> cln-table/header-item caption="a" value="аудитория 104"}}
-            {{> cln-table/header-item caption="a" value="аудитория 104"}}
-            {{> cln-table/header-item caption="a" value="аудитория 104"}}
-            {{> cln-table/header-item caption="a" value="аудитория 104"}}
-            {{> cln-table/header-item caption="a" value="аудитория 104"}}
-            {{> cln-table/header-item caption="a" value="аудитория 104"}}
-            {{> cln-table/header-item caption="a" value="аудитория 104"}}
-            {{> cln-table/header-item caption="a" value="аудитория 104"}}
-            {{> cln-table/header-item caption="a" value="аудитория 104"}}
+            {{> cln-table/header-item caption="b" value="аудитория 104"}}
+            {{> cln-table/header-item caption="c" value="аудитория 105"}}
+            {{> cln-table/header-item caption="d" value="аудитория 106"}}
+            {{> cln-table/header-item caption="e" value="аудитория 107"}}
+            {{> cln-table/header-item caption="f" value="аудитория 108"}}
+            {{> cln-table/header-item caption="g" value="аудитория 109"}}
+            {{> cln-table/header-item caption="h" value="аудитория 110"}}
+            {{> cln-table/header-item caption="i" value="аудитория 111"}}
+            {{> cln-table/header-item caption="j" value="аудитория 112"}}
           </tr>
           </thead>
 
@@ -106,9 +105,9 @@
             <th class="calendar__item-content">11:00</th>
             {{> cln-table/content-item
               cardTime="11:00 - 11:50"
-              cardMark="бизнес"
-              typeMark=2
-              cardTitle="Александр Горник"
+              cardMark="Стартапы"
+              typeMark=4
+              cardTitle="Марина Кравец"
               cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
               cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
             }}
@@ -124,13 +123,13 @@
               cardTime="11:00 - 11:50"
               cardMark="Культурная программа"
               typeMark=2
-              cardTitle="Александр Горник"
+              cardTitle="Андрей Бедняков"
               cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
               cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
             }}
             {{> cln-table/content-item
               cardTime="11:00 - 11:50"
-              cardMark="Стартапы"
+              cardMark="Органы гос.власти"
               typeMark=5
               cardTitle="Александр Горник"
               cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
@@ -138,8 +137,8 @@
             }}
             {{> cln-table/content-item
               cardTime="11:00 - 11:50"
-              cardMark="бизнес"
-              typeMark=2
+              cardMark="Стартапы"
+              typeMark=4
               cardTitle="Александр Горник"
               cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
               cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
@@ -164,15 +163,15 @@
               cardTime="11:00 - 11:50"
               cardMark="бизнес"
               typeMark=2
-              cardTitle="Александр Горник"
+              cardTitle="Андрей Бедняков"
               cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
               cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
             }}
             {{> cln-table/content-item
               cardTime="11:00 - 11:50"
-              cardMark="бизнес"
-              typeMark=2
-              cardTitle="Александр Горник"
+              cardMark="Стартапы"
+              typeMark=4
+              cardTitle="Марина Кравец"
               cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
               cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
             }}
@@ -206,23 +205,23 @@
             <th class="calendar__item-content"></th>
             {{> cln-table/content-item
               cardTime="16:00 - 16:50"
-              cardMark="бизнес"
+              cardMark="вузы"
               typeMark=1
-              cardTitle="Александр Горник"
+              cardTitle="Андрей Бедняков"
               cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
               cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
             }}
             {{> cln-table/content-item
               cardTime="16:00 - 16:50"
-              cardMark="бизнес"
+              cardMark="вузы"
               typeMark=1
-              cardTitle="Александр Горник"
+              cardTitle="Марина Кравец"
               cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
               cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
             }}
             {{> cln-table/content-item
               cardTime="16:00 - 16:50"
-              cardMark="Стартапы"
+              cardMark="Органы гос.власти"
               typeMark=5
               cardTitle="Александр Горник"
               cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
@@ -230,7 +229,7 @@
             }}
             {{> cln-table/content-item
               cardTime="16:00 - 16:50"
-              cardMark="бизнес"
+              cardMark="вузы"
               typeMark=1
               cardTitle="Александр Горник"
               cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
@@ -238,7 +237,7 @@
             }}
             {{> cln-table/content-item
               cardTime="16:00 - 16:50"
-              cardMark="бизнес"
+              cardMark="вузы"
               typeMark=1
               cardTitle="Александр Горник"
               cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
@@ -246,7 +245,7 @@
             }}
             {{> cln-table/content-item
               cardTime="16:00 - 16:50"
-              cardMark="бизнес"
+              cardMark="вузы"
               typeMark=1
               cardTitle="Александр Горник"
               cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
@@ -254,7 +253,7 @@
             }}
             {{> cln-table/content-item
               cardTime="16:00 - 16:50"
-              cardMark="бизнес"
+              cardMark="вузы"
               typeMark=1
               cardTitle="Александр Горник"
               cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
@@ -276,6 +275,14 @@
               cardTime="17:00 - 17:50"
               cardMark="Культурная программа"
               typeMark=3
+              cardTitle="Марина Кравец"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+            {{> cln-table/content-item
+              cardTime="17:00 - 17:50"
+              cardMark="Стартапы"
+              typeMark=4
               cardTitle="Александр Горник"
               cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
               cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
@@ -284,15 +291,7 @@
               cardTime="17:00 - 17:50"
               cardMark="бизнес"
               typeMark=2
-              cardTitle="Александр Горник"
-              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
-              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
-            }}
-            {{> cln-table/content-item
-              cardTime="17:00 - 17:50"
-              cardMark="бизнес"
-              typeMark=2
-              cardTitle="Александр Горник"
+              cardTitle="Андрей Бедняков"
               cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
               cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
             }}
@@ -335,7 +334,23 @@
               cardTime="18:00 - 18:50"
               cardMark="бизнес"
               typeMark=2
+              cardTitle="Марина Кравец"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+            {{> cln-table/content-item
+              cardTime="18:00 - 18:50"
+              cardMark="бизнес"
+              typeMark=2
               cardTitle="Александр Горник"
+              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
+              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
+            }}
+            {{> cln-table/content-item
+              cardTime="18:00 - 18:50"
+              cardMark="бизнес"
+              typeMark=2
+              cardTitle="Андрей Бедняков"
               cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
               cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
             }}
@@ -367,7 +382,7 @@
               cardTime="18:00 - 18:50"
               cardMark="бизнес"
               typeMark=2
-              cardTitle="Александр Горник"
+              cardTitle="Андрей Бедняков"
               cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
               cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
             }}
@@ -375,23 +390,7 @@
               cardTime="18:00 - 18:50"
               cardMark="бизнес"
               typeMark=2
-              cardTitle="Александр Горник"
-              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
-              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
-            }}
-            {{> cln-table/content-item
-              cardTime="18:00 - 18:50"
-              cardMark="бизнес"
-              typeMark=2
-              cardTitle="Александр Горник"
-              cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
-              cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
-            }}
-            {{> cln-table/content-item
-              cardTime="18:00 - 18:50"
-              cardMark="бизнес"
-              typeMark=2
-              cardTitle="Александр Горник"
+              cardTitle="Марина Кравец"
               cardSubtitle="директор по развитию новых каналов дистрибуции Rambler&Co"
               cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
             }}

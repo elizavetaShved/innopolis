@@ -5,14 +5,21 @@ import getDateByDateAttribute from '../functions/getDateByDateAttribute';
 const MS_PER_HOUR = 3600000;
 
 export class CalendarPage {
+  hostElem;
   calendarRowElems;
+  selectElems;
+  calendarItemElems;
+  calendarHeaderElems;
 
   constructor() {
-    const hostElem = document.querySelector('#calendar-host');
-    const calendarContent = hostElem.querySelector('.calendar__content');
-    const selectElems = hostElem.querySelectorAll('.gl__select');
-    const btnShowAll = hostElem.querySelector('.calendar__btn-show-all');
-    this.calendarRowElems = hostElem.querySelectorAll('.calendar__row-wrapper');
+    this.hostElem = document.querySelector('#calendar-host');
+    const calendarContent = this.hostElem.querySelector('.calendar__content');
+    const selectElems = this.hostElem.querySelectorAll('.gl__select');
+    const btnShowAll = this.hostElem.querySelector('.calendar__btn-show-all');
+    this.calendarRowElems = this.hostElem.querySelectorAll('.calendar__row-wrapper');
+    this.selectElems = this.hostElem.querySelectorAll('.gl__select');
+    this.calendarItemElems = Array.from(this.hostElem.querySelectorAll('.calendar__item-content'));
+    this.calendarHeaderElems = Array.from(this.hostElem.querySelectorAll('.calendar__item-header'));
 
     new PerfectScrollbar(calendarContent, {
       wheelSpeed: 1,
@@ -42,6 +49,9 @@ export class CalendarPage {
         })
       }
     }
+
+
+    this.onListenFilter();
   }
 
   hideOldRowByTime() {
@@ -58,5 +68,72 @@ export class CalendarPage {
         calendarRow.classList.add('mod-show');
       }
     })
+  }
+
+  onListenFilter() {
+    this.selectElems.forEach(select => {
+      if (select.name !== 'commonDates') {
+        select.onchange = () => {
+          switch (select.name) {
+            case 'topics':
+              this.onFilter(select.value, 'topics', 'Тема', '.calendar__item-content-mark');
+              break;
+
+            case 'auditoriums':
+              this.onFilter(select.value, 'auditoriums', 'Аудитория');
+              break;
+
+            case 'speakers':
+              this.onFilter(select.value, 'speakers', 'Спикер', '.calendar__item-content-title');
+              break;
+
+          }
+        }
+      }
+    })
+  }
+
+  onFilter(selectValue, selectName, selectTitle, elemForFilterStr) {
+    if (selectValue !== selectTitle) {
+      this.calendarItemElems.map(elem => elem.classList.remove(`mod-hide-by-${ selectName }`));
+      if (elemForFilterStr) {
+        this.calendarItemElems.forEach(calendarElem => {
+          const elemForFilter = calendarElem.querySelectorAll(elemForFilterStr);
+          elemForFilter.forEach(topic => {
+            if (topic.innerText.toLowerCase() !== selectValue.toLowerCase()) {
+              calendarElem.classList.add(`mod-hide-by-${ selectName }`);
+            }
+          })
+        })
+      } else if (selectName === 'auditoriums') {
+        this.calendarHeaderElems.map(elem => elem.classList.remove(`mod-hide-by-${ selectName }`));
+        let activeColumn;
+        this.calendarHeaderElems.forEach((calendarHeaderElem, indexHeaderElem) => {
+          const calendarHeaderValueElem = calendarHeaderElem.querySelector('.calendar__item-header-value');
+          if (calendarHeaderValueElem) {
+            if (calendarHeaderValueElem.innerText.toLowerCase() !== selectValue.toLowerCase()) {
+              calendarHeaderElem.classList.add(`mod-hide-by-${ selectName }`);
+            } else {
+              activeColumn = indexHeaderElem;
+            }
+          }
+        })
+
+        this.calendarRowElems.forEach(rowElem => {
+          const itemContentForRowElems = Array.from(rowElem.querySelectorAll('.calendar__item-content'));
+          if (itemContentForRowElems.length) {
+            itemContentForRowElems.forEach((elem, i) => {
+
+              if (i !== activeColumn && !elem.className.includes('mod-full') && !elem.className.includes('mod-head')) {
+                elem.classList.add(`mod-hide-by-${ selectName }`)
+              }
+            });
+          }
+        })
+      }
+    } else {
+      this.calendarItemElems.map(elem => elem.classList.remove(`mod-hide-by-${ selectName }`));
+      this.calendarHeaderElems.map(elem => elem.classList.remove(`mod-hide-by-${ selectName }`));
+    }
   }
 }

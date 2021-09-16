@@ -2435,6 +2435,8 @@ button.swiper-pagination-bullet {
         -ms-flex-align: center;
             align-items: center;
     font-weight: 600; }
+  .calendar__item-header.mod-hide-by-auditoriums {
+    display: none; }
 
 .calendar__item-header-caption {
   color: #000;
@@ -2453,6 +2455,12 @@ button.swiper-pagination-bullet {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
             flex: 1 1 100%; }
+  .calendar__item-content.mod-hide-by-topics {
+    display: none; }
+  .calendar__item-content.mod-hide-by-auditoriums {
+    display: none; }
+  .calendar__item-content.mod-hide-by-speakers {
+    display: none; }
 
 .calendar__item-content-time {
   font-size: 1.4rem;

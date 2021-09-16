@@ -64,6 +64,10 @@
     align-items: center;
     font-weight: 600;
   }
+
+  &.mod-hide-by-auditoriums {
+    display: none;
+  }
 }
 
 .calendar__item-header-caption {
@@ -85,6 +89,18 @@
   &.mod-full {
     width: 100%;
     flex: 1 1 100%;
+  }
+
+  &.mod-hide-by-topics {
+    display: none;
+  }
+
+  &.mod-hide-by-auditoriums {
+    display: none;
+  }
+
+  &.mod-hide-by-speakers {
+    display: none;
   }
 }
 
