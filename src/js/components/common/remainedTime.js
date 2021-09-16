@@ -1,3 +1,5 @@
+import getDateByDateAttribute from '../../functions/getDateByDateAttribute';
+
 export const MS_PER_DAY = 86400000;
 export const MS_PER_HOUR = 3600000;
 export const MS_PER_MINUTES = 60000;
@@ -27,23 +29,7 @@ export class RemainedTime {
     const currentDateMs = new Date().getTime();
 
     this.dateRemainedElems.forEach(elem => {
-      const endDateAttribute = elem.getAttribute('data-end-time').split('/'); // [2021, 10, 01]
-
-      const endDateYearStr = endDateAttribute[0];
-      const endDateMothStr = endDateAttribute[1] - 1;
-      const endDateDayStr = endDateAttribute[2];
-      const endDateHoursStr = endDateAttribute[3];
-      const endDateMinutesStr = endDateAttribute[4];
-      const endDateSecondsStr = endDateAttribute[5];
-
-      const endDateMs = new Date(
-        +endDateYearStr,
-        +endDateMothStr,
-        +endDateDayStr,
-        +endDateHoursStr | null,
-        +endDateMinutesStr | null,
-        +endDateSecondsStr | null
-      );
+      const endDateMs = getDateByDateAttribute(elem, 'data-end-time');
 
       const remainedMs = endDateMs - currentDateMs;
 

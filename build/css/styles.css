@@ -2372,7 +2372,9 @@ button.swiper-pagination-bullet {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 24.8rem;
             flex: 0 0 24.8rem;
-    font-weight: normal; }
+    font-weight: normal;
+    -webkit-transition: padding 300ms;
+    transition: padding 300ms; }
     .calendar__table td:first-child, .calendar__table th:first-child {
       width: 10rem;
       -webkit-box-flex: 0;
@@ -2384,16 +2386,41 @@ button.swiper-pagination-bullet {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center; }
+    .calendar__table td.mod-hide, .calendar__table th.mod-hide {
+      padding: 0; }
 
 .calendar__table-head {
   background-color: #F0F0F1; }
 
 .calendar__row-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
+  display: none; }
   .calendar__row-wrapper:not(.mod-head) {
     border-bottom: 1px solid #DCDCE0; }
+  .calendar__row-wrapper.mod-show {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition: 1s;
+    transition: 1s;
+    /* Скорость перехода состояния элемента*/
+    -webkit-animation: show 1200ms 1;
+            animation: show 1200ms 1;
+    /* Указываем название анимации, её время и количество повторов*/
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    /* Чтобы элемент оставался в конечном состоянии анимации */ }
+
+@-webkit-keyframes show {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes show {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 .calendar__item-header {
   font-size: 1.2rem;
@@ -2462,6 +2489,51 @@ button.swiper-pagination-bullet {
 
 .calendar__item-content-text {
   font-size: 1.2rem; }
+
+.calendar__btn-show-all-wrapper {
+  width: -webkit-min-content !important;
+  width: -moz-min-content !important;
+  width: min-content !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.calendar__btn-show-all {
+  font-weight: 600;
+  font-size: 2.6rem;
+  line-height: 1.3;
+  color: var(--secondary-color);
+  white-space: nowrap;
+  display: inline-block;
+  max-height: 4rem;
+  overflow: hidden;
+  -webkit-transition: max-height 300ms;
+  transition: max-height 300ms; }
+  .calendar__btn-show-all:hover .calendar__btn-show-all-content {
+    border-bottom: 1px dashed var(--secondary-color); }
+  .calendar__btn-show-all.mod-hide {
+    max-height: 0; }
+
+.calendar__btn-show-all-triangle {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  margin-right: 9rem; }
+  .calendar__btn-show-all-triangle:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 24%;
+    left: 2rem;
+    border: 8px solid transparent;
+    border-top: 14px solid #000; }
 
 @media screen and (min-width: 1400px) {
   .gl__fl-show {
@@ -5907,12 +5979,6 @@ html.remodal-is-locked {
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
     /* Чтобы элемент оставался в конечном состоянии анимации */ }
-
-@-webkit-keyframes show {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
 
 @keyframes show {
   0% {
