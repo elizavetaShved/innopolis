@@ -13,22 +13,29 @@ export class CalendarTableComponent {
     this.hostElem = hostElem;
     this.selectElems = selectElems;
     const btnShowAll = this.hostElem.querySelector('.calendar__btn-show-all');
+    const btnShowAllContentElem = this.hostElem.querySelector('.calendar__btn-show-all-content');
+    const btnShowAllTriangleElem = this.hostElem.querySelector('.calendar__btn-show-all-triangle');
     this.calendarRowElems = Array.from(this.hostElem.querySelectorAll('.calendar__row-wrapper'));
     this.calendarHeaderElems = Array.from(this.hostElem.querySelectorAll('.calendar__item-header:not(.mod-date)'));
     this.calendarItemElems = Array.from(this.hostElem.querySelectorAll('.calendar__item-content.mod-card'));
 
     this.hideOldRowByTime();
 
+    let isShowAllCalendar = false;
+
     if (btnShowAll) {
       btnShowAll.onclick = () => {
-        this.calendarRowElems.forEach(calendarRow => {
-          calendarRow.classList.add('mod-show');
-          btnShowAll.classList.add('mod-hide');
-          btnShowAll.parentElement.classList.add('mod-hide');
-          setTimeout(() => {
-            btnShowAll.parentElement.parentElement.remove();
-          }, 300)
-        })
+        if (isShowAllCalendar) {
+          btnShowAllContentElem.innerText = 'Вся программа';
+          btnShowAllTriangleElem.classList.remove('mod-open');
+          this.hideOldRowByTime();
+        } else {
+          this.calendarRowElems.map(calendarRow => calendarRow.classList.add('mod-show'));
+          btnShowAllContentElem.innerText = 'Показать только предстоящую программу';
+          btnShowAllTriangleElem.classList.add('mod-open');
+        }
+
+        isShowAllCalendar = !isShowAllCalendar;
       }
     }
 
@@ -45,12 +52,12 @@ export class CalendarTableComponent {
       calendarRow.classList.add('mod-show');
     }
 
-    const hideRow = (calendarRow) => {
-      const itemElems = calendarRow.querySelectorAll('.calendar__item-content.mod-card');
-      itemElems.forEach(elem => {
-        elem.classList.add('mod-hide');
-      })
-    }
+    // const hideRow = (calendarRow) => {
+    //   const itemElems = calendarRow.querySelectorAll('.calendar__item-content.mod-card');
+    //   itemElems.forEach(elem => {
+    //     elem.classList.add('mod-hide');
+    //   })
+    // }
 
     this.calendarRowElems.forEach(calendarRow => {
       if (calendarRow.getAttribute('data-time')) {
@@ -59,7 +66,7 @@ export class CalendarTableComponent {
         if (rowTimeMs + MS_PER_HOUR >= currentTimeMs) {
           showRow(calendarRow);
         } else {
-          hideRow(calendarRow);
+          // hideRow(calendarRow);
         }
       } else {
         showRow(calendarRow);
