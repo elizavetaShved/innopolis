@@ -715,7 +715,7 @@ nav ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
-  .gl__input-container + .gl__input-container {
+  .gl__input-container:not(.mod-no-margin) + .gl__input-container:not(.mod-no-margin) {
     margin-top: 20px; }
   @media screen and (max-width: 559px) {
     .gl__input-container {
@@ -770,19 +770,40 @@ nav ul {
   .gl__radio-input-wrapper.parsley-error .gl__radio-input-content {
     border: 2px solid var(--btn-color); }
 
-.gl__radio-input {
+.gl__radio-checkbox-input-wrapper {
+  cursor: pointer; }
+  .gl__radio-checkbox-input-wrapper.parsley-error .gl__radio-checkbox-input-content {
+    border: 2px solid var(--btn-color); }
+  .gl__radio-checkbox-input-wrapper.mod-inline {
+    display: inline-block; }
+  .gl__radio-checkbox-input-wrapper.mod-for-caption {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .gl__radio-checkbox-input-wrapper + .gl__radio-checkbox-input-wrapper {
+    margin-left: 7rem; }
+
+.gl__radio-checkbox-input {
   display: none; }
-  .gl__radio-input:checked + .gl__radio-input-content:before {
+  .gl__radio-checkbox-input:checked + .gl__radio-checkbox-input-content:before {
     opacity: 1; }
 
-.gl__radio-input-content {
-  display: block;
+.gl__radio-checkbox-input-text {
+  font-size: 1.4rem;
+  margin-left: 2rem;
+  display: inline-block; }
+
+.gl__radio-checkbox-input-content {
+  display: inline-block;
   width: 18px;
   height: 18px;
   background-color: #ECE8FD;
   border-radius: 3px;
   position: relative; }
-  .gl__radio-input-content:before {
+  .gl__radio-checkbox-input-content:before {
     position: absolute;
     content: '';
     top: 50%;
@@ -806,7 +827,7 @@ nav ul {
     .gl__radio-input-caption {
       padding-left: 26px; } }
 
-.gl__radio-input-caption-link:hover {
+.gl__radio-checkbox-input-caption-link:hover {
   text-decoration: underline; }
 
 .gl__error-block {
@@ -907,14 +928,15 @@ nav ul {
     background: #ECE8FD;
     -webkit-box-shadow: 0 0 1rem rgba(10, 39, 66, 0.1);
             box-shadow: 0 0 1rem rgba(10, 39, 66, 0.1);
-    margin-top: 1rem;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
     -webkit-transition: opacity 0.3s, visibility 0s linear 0.3s;
     transition: opacity 0.3s, visibility 0s linear 0.3s;
     display: block !important;
     opacity: 0;
     visibility: hidden;
     padding: 0;
-    border-radius: 16px; }
+    border-radius: 16px !important; }
     .gl__select-container .choices__list--dropdown.is-active {
       opacity: 1;
       visibility: visible;
@@ -7421,6 +7443,24 @@ html.remodal-is-locked {
 
 .account__body {
   padding: 5rem 0; }
+
+.account__form-radio-input-title {
+  font-size: 14px;
+  line-height: 1.3;
+  color: var(--main-color);
+  margin-bottom: 2.6rem; }
+
+.account__form-radio-container {
+  margin-bottom: 4rem; }
+
+.account__form-inputs-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem 5.8rem; }
+
+.account__type-organization {
+  grid-row: 3 / 5;
+  grid-column: 2 / 3; }
 
 @media screen and (min-width: 1400px) {
   .gl__fl-show {

@@ -6,8 +6,10 @@
   grid-gap: 16px;
   align-items: center;
 
-  & + & {
-    margin-top: 20px;
+  &:not(.mod-no-margin) {
+    & + & {
+      margin-top: 20px;
+    }
   }
 
   @include for-sm-down {
@@ -80,11 +82,34 @@
   }
 }
 
-.gl__radio-input {
+.gl__radio-checkbox-input-wrapper {
+  cursor: pointer;
+
+  &.parsley-error {
+    .gl__radio-checkbox-input-content {
+      border: 2px solid var(--btn-color);
+    }
+  }
+
+  &.mod-inline {
+    display: inline-block;
+  }
+
+  &.mod-for-caption {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  & + & {
+    margin-left: 7rem;
+  }
+}
+
+.gl__radio-checkbox-input {
   display: none;
 
   &:checked {
-    + .gl__radio-input-content {
+    + .gl__radio-checkbox-input-content {
       &:before {
         opacity: 1;
       }
@@ -92,8 +117,14 @@
   }
 }
 
-.gl__radio-input-content {
-  display: block;
+.gl__radio-checkbox-input-text {
+  font-size: 1.4rem;
+  margin-left: 2rem;
+  display: inline-block;
+}
+
+.gl__radio-checkbox-input-content {
+  display: inline-block;
   width: 18px;
   height: 18px;
   background-color: #ECE8FD;
@@ -126,7 +157,7 @@
   }
 }
 
-.gl__radio-input-caption-link {
+.gl__radio-checkbox-input-caption-link {
   &:hover {
     text-decoration: underline;
   }
@@ -255,13 +286,14 @@
     border: none;
     background: #ECE8FD;
     box-shadow: 0 0 1rem rgba(#0a2742, 0.1);
-    margin-top: 1rem;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
     transition: opacity 0.3s, visibility 0s linear 0.3s;
     display: block !important;
     opacity: 0;
     visibility: hidden;
     padding: 0;
-    border-radius: 16px;
+    border-radius: 16px !important;
 
     &.is-active {
       opacity: 1;

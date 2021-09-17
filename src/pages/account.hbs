@@ -32,9 +32,121 @@
         </div>
 
         <form>
-          <div class="account__form-item">
-            
+          <div class="account__form-radio-container">
+            <div class="account__form-radio-input-title">
+              Формат участия
+            </div>
+            <div class="account__form-radio-wrapper">
+              {{> controls/input-radio-checkbox name="participation" type="account" inputType="radio" additionClass="mod-inline" inputCaption="Офлайн" }}
+              {{> controls/input-radio-checkbox name="participation" type="account" inputType="radio" additionClass="mod-inline" inputCaption="Онлайн" }}
+            </div>
           </div>
+
+          <ul class="account__form-inputs-list">
+            <li class="gl__input-container mod-no-margin">
+              <div class="gl__input-title">ФИО</div>
+              {{> controls/input-main
+                inputType="text"
+                name="name"
+                type="account"
+                placeholder="Иванов Анатолий Иванович"
+              }}
+            </li>
+            <li class="gl__input-container mod-no-margin">
+              <div class="gl__input-title">Вуз</div>
+              {{> controls/input-main
+                inputType="text"
+                name="university"
+                type="account"
+                placeholder="Моя alma mater"
+              }}
+            </li>
+            <li class="gl__input-container mod-no-margin">
+              <div class="gl__input-title">Дата рождения</div>
+              {{> controls/input-main
+                inputType="text"
+                name="birth"
+                type="account"
+                placeholder="дд.мм.гг"
+              }}
+            </li>
+            <li class="gl__input-container mod-no-margin">
+              <div class="gl__input-title">Организация</div>
+              {{> controls/input-main
+                inputType="text"
+                name="organization"
+                type="account"
+                placeholder="Какую организацию Вы представляете?"
+              }}
+            </li>
+            <li class="gl__input-container mod-no-margin">
+              <div class="gl__input-title">Пол</div>
+              {{> controls/input-main
+                inputType="text"
+                name="gender"
+                type="account"
+                placeholder="Укажите пол"
+              }}
+            </li>
+            <li class="account__type-organization">
+              <div class="account__form-radio-input-title">
+                Тип организации
+              </div>
+              <div class="account__form-radio-wrapper">
+                {{> controls/input-radio-checkbox name="type-organization" type="account" inputType="radio" additionClass="mod-inline" inputCaption="Бизнес" }}
+                {{> controls/input-radio-checkbox name="type-organization" type="account" inputType="radio" additionClass="mod-inline" inputCaption="Образование" }}
+                {{> controls/input-radio-checkbox name="type-organization" type="account" inputType="radio" additionClass="mod-inline" inputCaption="Гос. сектор" }}
+              </div>
+            </li>
+            <li class="gl__input-container">
+              <div class="gl__input-title">Должность</div>
+              {{> controls/select
+                selectTitle="Должность"
+                selectName="post"
+                option1="Должность 1" option2="Должность 2" option3="Должность 3" option4="Должность 4" option5="Должность 5"
+              }}
+            </li>
+            <li class="gl__input-container">
+              <div class="gl__input-title">Телефон</div>
+              {{> controls/input-main
+                inputType="tel"
+                name="phone"
+                type="account"
+                placeholder="+7(888)888-88-88"
+                isPhone="true"
+              }}
+            </li>
+            <li class="gl__input-container">
+                <div class="gl__input-title">Направление</div>
+              {{> controls/select
+                selectTitle="Которое интересно посетить на форуме"
+                selectName="direction"
+                option1="Направление 1" option2="Направление 2" option3="Направление 3" option4="Направление 4" option5="Направление 5"
+              }}
+            </li>
+            <li class="gl__input-container">
+              <div class="gl__input-title">E-mail</div>
+              {{> controls/input-main
+                inputType="email"
+                name="contact"
+                type="account"
+                placeholder="info@gmail.com"
+                parsleyType="email"
+              }}
+            </li>
+            ( ПЦР-тест )
+
+            <li class="gl__input-container">
+              <div class="gl__input-title">Город</div>
+              {{> controls/select
+                selectTitle="Выберите"
+                selectName="city"
+                option1="Город 1" option2="Город 2" option3="Город 3" option4="Город 4" option5="Город 5"
+              }}
+            </li>
+            <li></li>
+            
+          </ul>
         </form>
       </div>
     </section>
