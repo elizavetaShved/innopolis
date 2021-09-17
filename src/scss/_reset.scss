@@ -9,7 +9,7 @@ html {
     font-size: 8px;
   }
 
-  @include for-sm-down {
+  @include for-vs-down {
     font-size: 9px;
   }
 }

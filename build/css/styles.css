@@ -496,7 +496,7 @@ html {
   @media screen and (max-width: 1399px) {
     html {
       font-size: 8px; } }
-  @media screen and (max-width: 559px) {
+  @media screen and (max-width: 1199px) {
     html {
       font-size: 9px; } }
 
@@ -2364,6 +2364,70 @@ button.swiper-pagination-bullet {
   color: var(--main-color);
   margin-bottom: 44px; }
 
+@media screen and (min-width: 1400px) {
+  .gl__fl-show {
+    display: none !important; } }
+
+@media screen and (max-width: 1399px) {
+  .gl__fl-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 1200px) {
+  .gl__vs-show {
+    display: none !important; } }
+
+@media screen and (max-width: 1199px) {
+  .gl__vs-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 1024px) {
+  .gl__bg-show {
+    display: none !important; } }
+
+@media screen and (max-width: 1023px) {
+  .gl__bg-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 960px) {
+  .gl__lg-show {
+    display: none !important; } }
+
+@media screen and (max-width: 959px) {
+  .gl__lg-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 960px) {
+  .gl__md-show {
+    display: none !important; } }
+
+@media screen and (max-width: 959px) {
+  .gl__md-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 768px) {
+  .gl__md-show {
+    display: none !important; } }
+
+@media screen and (max-width: 767px) {
+  .gl__md-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 560px) {
+  .gl__sm-show {
+    display: none !important; } }
+
+@media screen and (max-width: 559px) {
+  .gl__sm-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 426px) {
+  .gl__xxs-show {
+    display: none !important; } }
+
+@media screen and (max-width: 425px) {
+  .gl__xxs-hide {
+    display: none !important; } }
+
 .calendar__table {
   border-collapse: collapse; }
   .calendar__table td, .calendar__table th {
@@ -2375,6 +2439,12 @@ button.swiper-pagination-bullet {
     font-weight: normal;
     -webkit-transition: padding 300ms;
     transition: padding 300ms; }
+    @media screen and (max-width: 559px) {
+      .calendar__table td, .calendar__table th {
+        width: 100vw;
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 100vw;
+                flex: 0 0 100vw; } }
     .calendar__table td:first-child, .calendar__table th:first-child {
       width: 10rem;
       -webkit-box-flex: 0;
@@ -2476,6 +2546,12 @@ button.swiper-pagination-bullet {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
             flex: 1 1 100%; }
+    @media screen and (max-width: 559px) {
+      .calendar__item-content.mod-full {
+        width: 100vw;
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 100vw;
+                flex: 0 0 100vw; } }
   .calendar__item-content.mod-hide-by-topics:before, .calendar__item-content.mod-hide-by-auditoriums:before, .calendar__item-content.mod-hide-by-speakers:before {
     opacity: 1; }
   .calendar__item-content.mod-hide {
@@ -2532,14 +2608,28 @@ button.swiper-pagination-bullet {
           justify-content: center; }
 
 .calendar__btn-show-all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media screen and (min-width: 768px) {
+    .calendar__btn-show-all:hover .calendar__btn-show-all-content {
+      border-bottom: 1px dashed var(--secondary-color); } }
+  @media screen and (max-width: 767px) {
+    .calendar__btn-show-all {
+      max-width: 100vw; } }
+
+.calendar__btn-show-all-content {
   font-weight: 600;
   font-size: 2.6rem;
   line-height: 1.3;
   color: var(--secondary-color);
-  white-space: nowrap;
-  display: inline-block; }
-  .calendar__btn-show-all:hover .calendar__btn-show-all-content {
-    border-bottom: 1px dashed var(--secondary-color); }
+  white-space: nowrap; }
+  @media screen and (max-width: 559px) {
+    .calendar__btn-show-all-content {
+      white-space: normal; } }
 
 .calendar__btn-show-all-triangle {
   width: 16px;
