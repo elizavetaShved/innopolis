@@ -16,6 +16,8 @@ export class CalendarTableComponent {
     const btnShowAllContentElem = this.hostElem.querySelector('.calendar__btn-show-all-content');
     const btnShowAllTriangleElem = this.hostElem.querySelector('.calendar__btn-show-all-triangle');
     this.calendarRowElems = Array.from(this.hostElem.querySelectorAll('.calendar__row-wrapper'));
+    this.calendarRowWithoutHeadElems = Array.from(this.hostElem.querySelectorAll('.calendar__row-wrapper:not(.mod-head)'));
+    this.calendarRowOnlyCardElems = Array.from(this.hostElem.querySelectorAll('.calendar__row-wrapper.only-card'));
     this.calendarHeaderElems = Array.from(this.hostElem.querySelectorAll('.calendar__item-header:not(.mod-date)'));
     this.calendarItemElems = Array.from(this.hostElem.querySelectorAll('.calendar__item-content.mod-card'));
 
@@ -44,7 +46,7 @@ export class CalendarTableComponent {
   }
 
   hideOldRowByTime() {
-    this.calendarRowElems.map(elem => elem.classList.remove('mod-show'));
+    this.calendarRowOnlyCardElems.map(elem => elem.classList.remove('mod-show'));
 
     const currentTimeMs = new Date().getTime();
 
@@ -98,7 +100,7 @@ export class CalendarTableComponent {
   }
 
   onFilter(selectValue, selectName, selectTitle, elemForFilterStr) {
-    this.calendarRowElems.map(elem => elem.classList.remove('mod-show'));
+    this.calendarRowOnlyCardElems.map(elem => elem.classList.remove('mod-show'));
     this.hideOldRowByTime();
 
     if (selectValue !== selectTitle) {
@@ -138,26 +140,46 @@ export class CalendarTableComponent {
 
       // todo сделать убирание пустых элементов
       // this.hideOldRowByTime()
-      // this.removeRowsWithoutContent();
+      this.removeRowsWithoutContent();
       // this.removeColumnWithoutContent();
 
     } else {
       this.calendarItemElems.map(elem => elem.classList.remove(`mod-hide-by-${ selectName }`));
       this.calendarHeaderElems.map(elem => elem.classList.remove(`mod-hide-by-${ selectName }`));
 
-      // this.removeRowsWithoutContent();
+      this.removeRowsWithoutContent();
       // this.removeColumnWithoutContent();
     }
   }
 
   removeRowsWithoutContent() {
-    const showCalendarRowElems = this.calendarRowElems.filter(elem => elem.className.includes('mod-show') && !elem.className.includes('mod-head'));
+    this.calendarRowElems.map(elem => elem.classList.add('mod-show'));
+    this.hideOldRowByTime();
+
+    this.calendarRowOnlyCardElems.forEach(row => {
+      const itemRow = row.querySelectorAll('.calendar__item-content.mod-card');
+      let isShowRow = false;
+
+      itemRow.forEach(item => {
+        if (!item.className.includes('mod-hide-') && !item.className.includes('mod-empty')) {
+          isShowRow = true;
+        }
+      })
+
+      if (!isShowRow) {
+        row.classList.remove('mod-show');
+      } else {
+        row.classList.add('mod-show');
+      }
+    })
+
+    const showCalendarRowElems = this.calendarRowElems.filter(elem => elem.className.includes('mod-show'));
 
     showCalendarRowElems.forEach(rowElem => {
       const itemContentForRowElems = rowElem.querySelectorAll('.calendar__item-content.mod-card:not(.mod-empty)');
       let rowIsShow = false;
       itemContentForRowElems.forEach(elem => {
-        if (!elem.className.includes('mod-hide')) {
+        if (!elem.className.includes('mod-clear')) {
           rowIsShow = true;
         }
       });
@@ -166,7 +188,7 @@ export class CalendarTableComponent {
         rowElem.classList.remove('mod-show');
 
         const contentEmptyItems = Array.from(this.hostElem.querySelectorAll('.calendar__item-content.mod-card.mod-empty'));
-        contentEmptyItems.map(elem => elem.classList.add('mod-hide'));
+        contentEmptyItems.map(elem => elem.classList.add('mod-clear'));
       } else {
         rowElem.classList.add('mod-show');
       }
@@ -174,33 +196,65 @@ export class CalendarTableComponent {
   }
 
   removeColumnWithoutContent() {
-    this.calendarHeaderElems.map(elem => elem.classList.remove('mod-show'));
+    // this.calendarItemElems.map(elem => elem.classList.remove('mod-hide'));
+    //
+    // const columnStatusArr = [];
+    //
+    // let isShowCurrentColumn = false;
+    //
+    // this.calendarRowOnlyCardElems.forEach((row, index) => {
+    //   const itemRow = row.querySelectorAll('.calendar__item-content.mod-card');
+    //   itemRow.forEach(item => {
+    //     if (item.className.includes('mod-clear')) {
+    //       isShowCurrentColumn = true;
+    //     }
+    //     columnStatusArr[index] = isShowCurrentColumn;
+    //   })
+    // });
+    //
+    // this.calendarRowOnlyCardElems.forEach((row, rowIndex) => {
+    //   const itemRowElems = row.querySelectorAll('.calendar__item-content.mod-card');
+    //
+    //   itemRowElems.forEach((item, itemIndex) => {
+    //     if (columnStatusArr[itemIndex]) {
+    //       item.classList.remove('mod-clear');
+    //     } else {
+    //       item.classList.add('mod-clear');
+    //     }
+    //   })
+    // })
 
-    const showCalendarRowElems = this.calendarRowElems.filter(elem => elem.className.includes('mod-show'));
+    ///////////////
 
-    this.calendarHeaderElems.forEach((headerElem, index) => {
-      const columnIsContent = showCalendarRowElems.some(rowElem => {
-        const contentItems = Array.from(rowElem.querySelectorAll('.calendar__item-content.mod-card'));
-        if (contentItems.length && contentItems[index]) {
-          return !contentItems[index].className.includes('mod-hide');
-        } else {
-          return false;
-        }
-      });
+    // this.calendarHeaderElems.map(elem => elem.classList.remove('mod-show'));
 
-      if (!columnIsContent) {
-        this.calendarHeaderElems[index].classList.add('mod-hide');
-        showCalendarRowElems.forEach(rowElem => {
-          const contentItems = Array.from(rowElem.querySelectorAll('.calendar__item-content.mod-card'));
-          if (contentItems.length && contentItems[index]) {
-            contentItems[index].classList.add('mod-hide');
-          }
-        })
-
-
-        const contentEmptyItems = Array.from(this.hostElem.querySelectorAll('.calendar__item-content.mod-card.mod-empty'));
-        contentEmptyItems.map(elem => elem.classList.add('mod-hide'));
-      }
-    })
+    // this.calendarHeaderElems.map(elem => elem.classList.remove('mod-show'));
+    //
+    // const showCalendarRowElems = this.calendarRowElems.filter(elem => elem.className.includes('mod-show'));
+    //
+    // this.calendarHeaderElems.forEach((headerElem, index) => {
+    //   const columnIsContent = showCalendarRowElems.some(rowElem => {
+    //     const contentItems = Array.from(rowElem.querySelectorAll('.calendar__item-content.mod-card'));
+    //     if (contentItems.length && contentItems[index]) {
+    //       return !contentItems[index].className.includes('mod-hide');
+    //     } else {
+    //       return false;
+    //     }
+    //   });
+    //
+    //   if (!columnIsContent) {
+    //     this.calendarHeaderElems[index].classList.add('mod-hide');
+    //     showCalendarRowElems.forEach(rowElem => {
+    //       const contentItems = Array.from(rowElem.querySelectorAll('.calendar__item-content.mod-card'));
+    //       if (contentItems.length && contentItems[index]) {
+    //         contentItems[index].classList.add('mod-hide');
+    //       }
+    //     })
+    //
+    //
+    //     const contentEmptyItems = Array.from(this.hostElem.querySelectorAll('.calendar__item-content.mod-card.mod-empty'));
+    //     contentEmptyItems.map(elem => elem.classList.add('mod-hide'));
+    //   }
+    // })
   }
 }

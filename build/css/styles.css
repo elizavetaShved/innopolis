@@ -2514,7 +2514,7 @@ button.swiper-pagination-bullet {
     font-weight: 600; }
   .calendar__item-header.mod-hide-by-auditoriums {
     display: none; }
-  .calendar__item-header.mod-hide {
+  .calendar__item-header.mod-clear {
     display: none; }
 
 .calendar__item-header-caption {
@@ -2554,7 +2554,7 @@ button.swiper-pagination-bullet {
                 flex: 0 0 100vw; } }
   .calendar__item-content.mod-hide-by-topics:before, .calendar__item-content.mod-hide-by-auditoriums:before, .calendar__item-content.mod-hide-by-speakers:before {
     opacity: 1; }
-  .calendar__item-content.mod-hide {
+  .calendar__item-content.mod-clear {
     display: none; }
 
 .calendar__item-content-time {
