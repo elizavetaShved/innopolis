@@ -2392,10 +2392,17 @@ button.swiper-pagination-bullet {
 .calendar__table-head {
   background-color: #F0F0F1; }
 
+.calendar__body-wrapper {
+  border-right: 1px solid #DCDCE0;
+  border-left: 1px solid #DCDCE0;
+  border-bottom: 1px solid #DCDCE0; }
+
 .calendar__row-wrapper {
   display: none; }
   .calendar__row-wrapper:not(.mod-head) {
-    border-bottom: 1px solid #DCDCE0; }
+    border-top: 1px solid #DCDCE0; }
+  .calendar__row-wrapper:first-child {
+    border-top: none; }
   .calendar__row-wrapper.mod-show {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2437,6 +2444,8 @@ button.swiper-pagination-bullet {
     font-weight: 600; }
   .calendar__item-header.mod-hide-by-auditoriums {
     display: none; }
+  .calendar__item-header.mod-hide {
+    display: none; }
 
 .calendar__item-header-caption {
   color: #000;
@@ -2445,21 +2454,31 @@ button.swiper-pagination-bullet {
 .calendar__item-content {
   text-align: start;
   line-height: 1.3;
-  border-right: 1px solid #DCDCE0; }
+  border-left: 1px solid #DCDCE0;
+  position: relative; }
+  .calendar__item-content:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    opacity: 0; }
   .calendar__item-content:first-child {
     font-weight: 600;
     font-size: 1.4rem;
     color: var(--main-color); }
+  .calendar__item-content:first-child {
+    border-left: none; }
   .calendar__item-content.mod-full {
     width: 100%;
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
             flex: 1 1 100%; }
-  .calendar__item-content.mod-hide-by-topics {
-    display: none; }
-  .calendar__item-content.mod-hide-by-auditoriums {
-    display: none; }
-  .calendar__item-content.mod-hide-by-speakers {
+  .calendar__item-content.mod-hide-by-topics:before, .calendar__item-content.mod-hide-by-auditoriums:before, .calendar__item-content.mod-hide-by-speakers:before {
+    opacity: 1; }
+  .calendar__item-content.mod-hide {
     display: none; }
 
 .calendar__item-content-time {
