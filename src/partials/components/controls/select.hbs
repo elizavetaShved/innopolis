@@ -1,5 +1,8 @@
-<div class="gl__select-container">
+<div class="gl__select-container {{#if isFilterSelect }}mod-filter-select{{/if}}">
   <label class="gl__select-wrapper">
+    {{#if required }}
+      <span class="gl__input-mark-required"></span>
+    {{/if}}
     <select class="gl__select" name="{{ selectName }}">
       <option class="gl__select-option">{{ selectTitle }}</option>
       <option class="gl__select-option">{{ option1 }}</option>

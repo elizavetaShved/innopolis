@@ -32,10 +32,9 @@
   display: block;
   width: 100%;
   height: 100%;
+  position: relative;
 
   &.mod-password {
-    position: relative;
-
     .gl__input {
       padding-right: 46px !important;
     }
@@ -44,7 +43,7 @@
 
 .gl__input {
   width: 100% !important;
-  padding: 16px 22px !important;
+  padding: 15px 22px !important;
   line-height: 1 !important;
   font-size: 14px !important;
   color: var(--main-color) !important;
@@ -60,6 +59,18 @@
   @include for-sm-down {
     padding: 10px 20px !important;
   }
+}
+
+.gl__input-mark-required {
+  position: absolute;
+  content: '';
+  width: 5px;
+  height: 5px;
+  background-color: var(--btn-color);
+  border-radius: 100%;
+  top: 1.2rem;
+  left: 1.2rem;
+  z-index: 1;
 }
 
 .gl__radio-input-container {
@@ -237,6 +248,7 @@
   display: inline-block;
   margin-right: 1rem;
   margin-bottom: 1rem;
+  position: relative;
 
   .choices {
     font-size: 1.4rem;
@@ -247,7 +259,7 @@
     background: #ECE8FD !important;
     border: none !important;
     font-size: 1.4rem;
-    line-height: 1.3;
+    line-height: 5rem;
     padding: 0 3rem 0 2.2rem;
     display: flex;
     align-items: center;
@@ -307,6 +319,14 @@
     color: white;
   }
 
+  .choices__list {
+    z-index: 12;
+
+    &.choices__list--dropdown {
+      z-index: 100;
+    }
+  }
+
   .choices__list--dropdown .choices__list {
     max-height: 30rem;
     margin-right: -20px;
@@ -330,4 +350,87 @@
       background-color: transparent;
     }
   }
+
+  .choices__item {
+    color: rgba(18, 21, 42, .5);
+  }
+
+  &.mod-filter-select {
+    .choices__item {
+      color: #000;
+    }
+  }
+}
+
+.gl__datepicker-container {
+  position: relative;
+  cursor: pointer;
+
+  .gl__datepicker-icon {
+    position: absolute;
+    height: 2.4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2.4rem;
+  }
+
+  .datepicker {
+    position: absolute;
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: 0 0 10px 4px #0000001a;
+    border-radius: 14px;
+    right: 2rem;
+    left: initial !important;
+    top: 2rem !important;
+  }
+
+  .datepicker-switch {
+    font-size: 1.8rem;
+    padding: 0 2.5rem;
+    color: var(--btn-color);
+  }
+
+  thead {
+    margin-bottom: 2rem;
+  }
+
+  .table-condensed {
+    margin: -0.5rem;
+  }
+
+  .prev, .next {
+    text-align: center;
+    color: var(--btn-color);
+  }
+
+  .dow {
+    padding: 1.5rem .5rem;
+    color: var(--btn-color);
+    text-align: center;
+  }
+
+  .day {
+    padding: .5rem;
+    text-align: center;
+    font-weight: normal;
+    transition: color 400ms, font-weight 400ms;
+
+    &:not(.disabled) {
+      cursor: pointer;
+
+      &:hover {
+        color: var(--btn-color);
+        font-weight: bold;
+      }
+    }
+
+    &.disabled {
+      color: rgba(18, 21, 42, .5);
+    }
+  }
+}
+
+.gl__datepicker-input {
+  cursor: pointer;
 }

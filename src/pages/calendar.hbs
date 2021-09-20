@@ -22,6 +22,7 @@
       <div class="calendar__header-wrapper calendar__page-content">
         <div class="calendar__selects-wrapper">
           {{> controls/select
+            isFilterSelect=true
             selectTitle="Все даты"
             selectName="commonDates"
             option1="option 1" option2="option 2" option3="option 3" option4="option 4" option5="option 5"
@@ -29,17 +30,20 @@
             option11="option 12" option13="option 13" option14="option 14" option15="option 15" option16="option 16"
           }}
           {{> controls/select
+            isFilterSelect=true
             selectTitle="Тема"
             selectName="topics"
             option1="Вузы" option2="Бизнес" option3="Культурная программа" option4="Стартапы" option5="Органы гос.власти"
           }}
           {{> controls/select
+            isFilterSelect=true
             selectTitle="Аудитория"
             selectName="auditoriums"
             option1="большой зал" option2="аудитория 104" option3="аудитория 105" option4="аудитория 106" option5="аудитория 107"
             option6="аудитория 108" option7="аудитория 109" option8="аудитория 110" option9="аудитория 111" option10="аудитория 112"
           }}
           {{> controls/select
+            isFilterSelect=true
             selectTitle="Спикер"
             selectName="speakers"
             option1="Александр Горник" option2="Андрей Бедняков" option3="Марина Кравец"
@@ -61,7 +65,7 @@
         <table class="calendar__table">
           <thead class="calendar__table-head">
           <tr class="calendar__row-wrapper mod-head">
-            <td class="calendar__item-header mod-date">17 сен.</td>
+            <td class="calendar__item-header mod-date">20 сен.</td>
             {{> cln-table/header-item caption="a" value="большой зал"}}
             {{> cln-table/header-item caption="b" value="аудитория 104"}}
             {{> cln-table/header-item caption="c" value="аудитория 105"}}
@@ -84,7 +88,7 @@
               </button>
             </th>
           </tr>
-          <tr class="calendar__row-wrapper mod-full only-card" data-time="2021/09/17/9/00">
+          <tr class="calendar__row-wrapper mod-full only-card" data-time="2021/09/20/9/00">
             <th class="calendar__item-content">9:00</th>
             {{> cln-table/content-item
               cardTime="9:00"
@@ -92,7 +96,7 @@
               fullRow=true
             }}
           </tr>
-          <tr class="calendar__row-wrapper mod-full only-card" data-time="2021/09/17/10/00">
+          <tr class="calendar__row-wrapper mod-full only-card" data-time="2021/09/20/10/00">
             <th class="calendar__item-content">10:00</th>
             {{> cln-table/content-item
               cardTime="10:00 - 11:00"
@@ -100,7 +104,7 @@
               fullRow=true
             }}
           </tr>
-          <tr class="calendar__row-wrapper only-card" data-time="2021/09/17/11/00">
+          <tr class="calendar__row-wrapper only-card" data-time="2021/09/20/11/00">
             <th class="calendar__item-content">11:00</th>
             {{> cln-table/content-item
               cardTime="11:00 - 11:50"
@@ -183,7 +187,7 @@
               cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
             }}
           </tr>
-          <tr class="calendar__row-wrapper only-card" data-time="2021/09/17/16/00">
+          <tr class="calendar__row-wrapper only-card" data-time="2021/09/20/16/00">
             <th class="calendar__item-content">16:00</th>
             {{> cln-table/content-item
               cardTime="16:00 - 16:50"
@@ -259,7 +263,7 @@
               cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
             }}
           </tr>
-          <tr class="calendar__row-wrapper only-card" data-time="2021/09/17/17/00">
+          <tr class="calendar__row-wrapper only-card" data-time="2021/09/20/17/00">
             <th class="calendar__item-content">17:00</th>
             {{> cln-table/content-item
               cardTime="17:00 - 17:50"
@@ -319,7 +323,7 @@
               cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
             }}
           </tr>
-          <tr class="calendar__row-wrapper only-card" data-time="2021/09/17/18/00">
+          <tr class="calendar__row-wrapper only-card" data-time="2021/09/20/18/00">
             <th class="calendar__item-content">18:00</th>
             {{> cln-table/content-item
               cardTime="18:00 - 18:50"

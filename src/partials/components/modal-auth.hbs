@@ -17,6 +17,7 @@
           <li class="gl__input-container">
             <div class="gl__input-title">Телефон или E-mail</div>
             {{> controls/input-main
+              required=true
               inputType="text"
               name="contact"
               type=type
@@ -27,6 +28,7 @@
           <li class="gl__input-container">
             <div class="gl__input-title">Пароль</div>
             {{> controls/input-main
+              required=true
               inputType="password"
               name="password"
               type=type
@@ -39,6 +41,7 @@
             <li class="gl__input-container">
               <div class="gl__input-title">Повторите пароль</div>
               {{> controls/input-main
+                required=true
                 inputType="password"
                 name="password-dupl"
                 type=type

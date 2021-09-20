@@ -46,6 +46,7 @@
             <li class="gl__input-container mod-no-margin">
               <div class="gl__input-title">ФИО</div>
               {{> controls/input-main
+                required=true
                 inputType="text"
                 name="name"
                 type="account"
@@ -63,8 +64,8 @@
             </li>
             <li class="gl__input-container mod-no-margin">
               <div class="gl__input-title">Дата рождения</div>
-              {{> controls/input-main
-                inputType="text"
+              {{> controls/input-data
+                required=true
                 name="birth"
                 type="account"
                 placeholder="дд.мм.гг"
@@ -73,19 +74,20 @@
             <li class="gl__input-container mod-no-margin">
               <div class="gl__input-title">Организация</div>
               {{> controls/input-main
+                required=true
                 inputType="text"
                 name="organization"
                 type="account"
                 placeholder="Какую организацию Вы представляете?"
               }}
             </li>
-            <li class="gl__input-container mod-no-margin">
+            <li class="gl__input-container">
               <div class="gl__input-title">Пол</div>
-              {{> controls/input-main
-                inputType="text"
-                name="gender"
-                type="account"
-                placeholder="Укажите пол"
+              {{> controls/select
+                required=true
+                selectTitle="Пол"
+                selectName="gender"
+                option1="Женсий" option2="Мужской" option3="Другое"
               }}
             </li>
             <li class="account__type-organization">
@@ -101,6 +103,7 @@
             <li class="gl__input-container">
               <div class="gl__input-title">Должность</div>
               {{> controls/select
+                required=true
                 selectTitle="Должность"
                 selectName="post"
                 option1="Должность 1" option2="Должность 2" option3="Должность 3" option4="Должность 4" option5="Должность 5"
@@ -109,6 +112,7 @@
             <li class="gl__input-container">
               <div class="gl__input-title">Телефон</div>
               {{> controls/input-main
+                required=true
                 inputType="tel"
                 name="phone"
                 type="account"
@@ -119,6 +123,7 @@
             <li class="gl__input-container">
                 <div class="gl__input-title">Направление</div>
               {{> controls/select
+                required=true
                 selectTitle="Которое интересно посетить на форуме"
                 selectName="direction"
                 option1="Направление 1" option2="Направление 2" option3="Направление 3" option4="Направление 4" option5="Направление 5"
@@ -127,6 +132,7 @@
             <li class="gl__input-container">
               <div class="gl__input-title">E-mail</div>
               {{> controls/input-main
+                required=true
                 inputType="email"
                 name="contact"
                 type="account"
@@ -139,13 +145,14 @@
             <li class="gl__input-container">
               <div class="gl__input-title">Город</div>
               {{> controls/select
+                required=true
                 selectTitle="Выберите"
                 selectName="city"
                 option1="Город 1" option2="Город 2" option3="Город 3" option4="Город 4" option5="Город 5"
               }}
             </li>
             <li></li>
-            
+
           </ul>
         </form>
       </div>

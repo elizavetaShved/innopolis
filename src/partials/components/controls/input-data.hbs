@@ -1,0 +1,15 @@
+<label class="gl__datepicker-container">
+  {{#if required }}
+    <span class="gl__input-mark-required"></span>
+  {{/if}}
+  <input type="text"
+         class="gl__datepicker-input gl__input"
+         placeholder="{{ placeholder }}"
+         readonly
+         name="{{ name }}-{{ type }}"
+    {{#if required}}
+         required
+    {{/if}}
+  >
+  <img src="img/form/datepicker.svg" alt="datepicker" class="gl__datepicker-icon">
+</label>

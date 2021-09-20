@@ -16,6 +16,7 @@
         <li class="gl__input-container">
           <div class="gl__input-title">ФИО</div>
           {{> controls/input-main
+            required=true
             inputType="text"
             name="name"
             type=type
@@ -25,6 +26,7 @@
         <li class="gl__input-container">
           <div class="gl__input-title">Организация</div>
           {{> controls/input-main
+            required=true
             inputType="text"
             name="organization"
             type=type
@@ -33,6 +35,7 @@
         <li class="gl__input-container">
           <div class="gl__input-title">E-mail</div>
           {{> controls/input-main
+            required=true
             inputType="email"
             name="email"
             type=type
@@ -44,6 +47,7 @@
           <div class="gl__input-title">Телефон</div>
 
           {{> controls/input-main
+            required=true
             inputType="tel"
             name="phone"
             type=type
