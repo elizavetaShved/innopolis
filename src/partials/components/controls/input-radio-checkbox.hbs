@@ -1,5 +1,12 @@
 <label class="gl__radio-checkbox-input-wrapper {{ additionClass }} {{#if inputCaption}}mod-for-caption{{/if}}">
-  <input type="{{ inputType }}" class="gl__radio-checkbox-input" data-parsley-required="" name="{{name}}-{{type}}">
+  <input type="{{ inputType }}"
+         class="gl__radio-checkbox-input"
+         name="{{name}}-{{type}}"
+    {{#if required }}
+         data-parsley-required=""
+    {{/if}}
+  >
+
   <span class="gl__radio-checkbox-input-content"></span>
   {{#if inputCaption}}
     <span class="gl__radio-checkbox-input-text">{{ inputCaption }}</span>

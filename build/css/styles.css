@@ -709,15 +709,26 @@ nav ul {
   .gl__xxs-hide {
     display: none !important; } }
 
+.gl__form .parsley-errors-list {
+  display: none; }
+  .gl__form .parsley-errors-list + .gl__radio-input-caption {
+    color: var(--btn-color); }
+  .gl__form .parsley-errors-list + .gl__input.mod-file {
+    border-color: var(--btn-color); }
+
+.gl__form .gl__input.parsley-error {
+  border-color: var(--btn-color) !important; }
+
+.gl__form .gl__select.parsley-error ~ .choices__inner {
+  border-color: var(--btn-color) !important; }
+
 .gl__input-container {
   display: grid;
-  grid-template-columns: 98px 1fr;
+  grid-template-columns: 11rem 1fr;
   grid-gap: 16px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
-  .gl__input-container:not(.mod-no-margin) + .gl__input-container:not(.mod-no-margin) {
-    margin-top: 20px; }
   @media screen and (max-width: 559px) {
     .gl__input-container {
       grid-template-columns: 1fr;
@@ -726,6 +737,8 @@ nav ul {
 .gl__input-title {
   font-size: 16px;
   color: var(--main-color); }
+  .gl__input-title.mod-small {
+    font-size: 1.4rem; }
   @media screen and (max-width: 559px) {
     .gl__input-title {
       padding-left: 20px;
@@ -759,8 +772,6 @@ nav ul {
   height: auto !important;
   border: 1px solid transparent;
   border-radius: 30px !important; }
-  .gl__input.parsley-error {
-    border-color: var(--btn-color) !important; }
   @media screen and (max-width: 559px) {
     .gl__input {
       padding: 10px 20px !important; } }
@@ -913,8 +924,7 @@ nav ul {
 
 .gl__select-container {
   display: inline-block;
-  position: relative;
-  margin-bottom: 1rem; }
+  position: relative; }
   .gl__select-container.mod-forked {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -928,6 +938,14 @@ nav ul {
         border-radius: 30px 0 0 30px !important; }
     .gl__select-container.mod-forked .gl__select-wrapper:nth-child(2) .choices__inner {
       border-radius: 0 30px 30px 0 !important; }
+  .gl__select-container.mod-filter-select {
+    margin-left: 1rem;
+    margin-bottom: 1rem; }
+    .gl__select-container.mod-filter-select .choices__item {
+      color: #000; }
+    .gl__select-container.mod-filter-select .choices__inner {
+      min-width: 22rem;
+      min-height: auto; }
 
 .gl__select-wrapper {
   text-align: left;
@@ -948,7 +966,7 @@ nav ul {
         -ms-flex-align: center;
             align-items: center;
     border-radius: 30px !important;
-    min-width: 22rem; }
+    min-height: 5rem; }
   .gl__select-wrapper .choices[data-type*=select-one] .choices__inner {
     padding-bottom: 0; }
   .gl__select-wrapper .choices__list--single {
@@ -1008,10 +1026,6 @@ nav ul {
       background-color: transparent; }
   .gl__select-wrapper .choices__item {
     color: rgba(18, 21, 42, 0.5); }
-  .gl__select-wrapper.mod-filter-select .choices__item {
-    color: #000; }
-  .gl__select-wrapper.mod-filter-select .choices__inner {
-    min-height: 6.3rem; }
 
 .gl__datepicker-container {
   position: relative;
@@ -2357,10 +2371,6 @@ button.swiper-pagination-bullet {
     z-index: 51;
     top: 0;
     left: 0; }
-  .modal .parsley-errors-list {
-    display: none; }
-    .modal .parsley-errors-list + .gl__radio-input-caption {
-      color: var(--btn-color); }
 
 .modal__container {
   padding: 40px 52px;
@@ -7594,12 +7604,19 @@ html.remodal-is-locked {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 6rem; }
+  .account__submit-block-wrapper.mod-item-list {
+    margin-top: 0; }
+  .account__submit-block-wrapper.mod-end {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
 
 .account__submit-block-hint {
   display: -webkit-box;
@@ -7619,6 +7636,9 @@ html.remodal-is-locked {
   line-height: 1.3;
   font-style: italic;
   color: var(--main-color); }
+
+.account__submit-block-hint-caption-mark {
+  color: var(--btn-color); }
 
 .account__btn {
   padding: 1.6rem 4rem !important;
@@ -7752,8 +7772,7 @@ html.remodal-is-locked {
   padding: 0 3rem; }
 
 .calendar__selects-wrapper {
-  margin-right: -1rem;
-  margin-bottom: -1rem; }
+  margin: -1rem; }
 
 .calendar__header-wrapper {
   display: -webkit-box;

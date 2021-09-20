@@ -1,16 +1,40 @@
 @import 'src/scss/sizes';
 
-.gl__input-container {
-  display: grid;
-  grid-template-columns: 98px 1fr;
-  grid-gap: 16px;
-  align-items: center;
+.gl__form {
+  .parsley-errors-list {
+    display: none;
 
-  &:not(.mod-no-margin) {
-    & + & {
-      margin-top: 20px;
+    + .gl__radio-input-caption {
+      color: var(--btn-color);
+    }
+
+    + .gl__input {
+      &.mod-file {
+        border-color: var(--btn-color);
+      }
     }
   }
+
+  .gl__input {
+    &.parsley-error {
+      border-color: var(--btn-color) !important;
+    }
+  }
+
+  .gl__select {
+    &.parsley-error {
+       ~ .choices__inner {
+        border-color: var(--btn-color) !important;
+      }
+    }
+  }
+}
+
+.gl__input-container {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  grid-gap: 16px;
+  align-items: center;
 
   @include for-sm-down {
     grid-template-columns: 1fr;
@@ -21,6 +45,10 @@
 .gl__input-title {
   font-size: 16px;
   color: var(--main-color);
+
+  &.mod-small {
+    font-size: 1.4rem;
+  }
 
   @include for-sm-down {
     padding-left: 20px;
@@ -57,10 +85,6 @@
   height: auto !important;
   border: 1px solid transparent;
   border-radius: 30px !important;
-
-  &.parsley-error {
-    border-color: var(--btn-color) !important;
-  }
 
   @include for-sm-down {
     padding: 10px 20px !important;
@@ -260,7 +284,6 @@
 .gl__select-container {
   display: inline-block;
   position: relative;
-  margin-bottom: 1rem;
 
   &.mod-forked {
     display: flex;
@@ -280,6 +303,20 @@
           border-radius: 0 30px 30px 0 !important;
         }
       }
+    }
+  }
+
+  &.mod-filter-select {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+
+    .choices__item {
+      color: #000;
+    }
+
+    .choices__inner {
+      min-width: 22rem;
+      min-height: auto;
     }
   }
 }
@@ -302,7 +339,7 @@
     display: flex;
     align-items: center;
     border-radius: 30px !important;
-    min-width: 22rem;
+    min-height: 5rem;
   }
 
   .choices[data-type*=select-one] .choices__inner {
@@ -391,16 +428,6 @@
 
   .choices__item {
     color: rgba(18, 21, 42, .5);
-  }
-
-  &.mod-filter-select {
-    .choices__item {
-      color: #000;
-    }
-
-    .choices__inner {
-      min-height: 6.3rem;
-    }
   }
 }
 

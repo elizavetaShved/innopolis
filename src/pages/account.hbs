@@ -27,7 +27,7 @@
       </div>
 
       <div class="account__body">
-        <form class="account__form-container">
+        <form data-need-validation data-parsley-validate data-parsley-focus="none" class="account__form-container gl__form">
           <h2 class="gl__subtitle">
             Данные профиля
           </h2>
@@ -37,14 +37,14 @@
               Формат участия
             </div>
             <div class="account__form-radio-wrapper">
-              {{> controls/input-radio-checkbox name="participation" type="account" inputType="radio" additionClass="mod-inline" inputCaption="Офлайн" }}
-              {{> controls/input-radio-checkbox name="participation" type="account" inputType="radio" additionClass="mod-inline" inputCaption="Онлайн" }}
+              {{> controls/input-radio-checkbox required="true" name="participation" type="account" inputType="radio" additionClass="mod-inline" inputCaption="Офлайн" }}
+              {{> controls/input-radio-checkbox required="true" name="participation" type="account" inputType="radio" additionClass="mod-inline" inputCaption="Онлайн" }}
             </div>
           </div>
 
           <ul class="account__form-inputs-list">
-            <li class="gl__input-container mod-no-margin">
-              <div class="gl__input-title">ФИО</div>
+            <li class="gl__input-container">
+              <div class="gl__input-title mod-small">ФИО</div>
               {{> controls/input-main
                 required=true
                 inputType="text"
@@ -53,8 +53,8 @@
                 placeholder="Иванов Анатолий Иванович"
               }}
             </li>
-            <li class="gl__input-container mod-no-margin">
-              <div class="gl__input-title">Вуз</div>
+            <li class="gl__input-container">
+              <div class="gl__input-title mod-small">Вуз</div>
               {{> controls/input-main
                 inputType="text"
                 name="university"
@@ -62,8 +62,8 @@
                 placeholder="Моя alma mater"
               }}
             </li>
-            <li class="gl__input-container mod-no-margin">
-              <div class="gl__input-title">Дата рождения</div>
+            <li class="gl__input-container">
+              <div class="gl__input-title mod-small">Дата рождения</div>
               {{> controls/input-data
                 required=true
                 name="birth"
@@ -71,8 +71,8 @@
                 placeholder="дд.мм.гг"
               }}
             </li>
-            <li class="gl__input-container mod-no-margin">
-              <div class="gl__input-title">Организация</div>
+            <li class="gl__input-container">
+              <div class="gl__input-title mod-small">Организация</div>
               {{> controls/input-main
                 required=true
                 inputType="text"
@@ -82,13 +82,13 @@
               }}
             </li>
             <li class="gl__input-container">
-              <div class="gl__input-title">Пол</div>
+              <div class="gl__input-title mod-small">Пол</div>
               {{> controls/select
                 required=true
-                selectTitle="Пол"
+                placeholder="Пол"
                 name="gender"
                 type="account"
-                option1="Женсий" option2="Мужской" option3="Другое"
+                option1="Женский" option2="Мужской" option3="Другое"
               }}
             </li>
             <li class="account__type-organization">
@@ -96,23 +96,23 @@
                 Тип организации
               </div>
               <div class="account__form-radio-wrapper">
-                {{> controls/input-radio-checkbox name="type-organization" type="account" inputType="radio" additionClass="mod-inline" inputCaption="Бизнес" }}
-                {{> controls/input-radio-checkbox name="type-organization" type="account" inputType="radio" additionClass="mod-inline" inputCaption="Образование" }}
-                {{> controls/input-radio-checkbox name="type-organization" type="account" inputType="radio" additionClass="mod-inline" inputCaption="Гос. сектор" }}
+                {{> controls/input-radio-checkbox required="true" name="type-organization" type="account" inputType="radio" additionClass="mod-inline" inputCaption="Бизнес" }}
+                {{> controls/input-radio-checkbox required="true" name="type-organization" type="account" inputType="radio" additionClass="mod-inline" inputCaption="Образование" }}
+                {{> controls/input-radio-checkbox required="true" name="type-organization" type="account" inputType="radio" additionClass="mod-inline" inputCaption="Гос. сектор" }}
               </div>
             </li>
             <li class="gl__input-container">
-              <div class="gl__input-title">Должность</div>
+              <div class="gl__input-title mod-small">Должность</div>
               {{> controls/select
                 required=true
-                selectTitle="Должность"
+                placeholder="Должность"
                 name="post"
                 type="account"
                 option1="Должность 1" option2="Должность 2" option3="Должность 3" option4="Должность 4" option5="Должность 5"
               }}
             </li>
             <li class="gl__input-container">
-              <div class="gl__input-title">Телефон</div>
+              <div class="gl__input-title mod-small">Телефон</div>
               {{> controls/input-main
                 required=true
                 inputType="tel"
@@ -123,17 +123,17 @@
               }}
             </li>
             <li class="gl__input-container">
-              <div class="gl__input-title">Направление</div>
+              <div class="gl__input-title mod-small">Направление</div>
               {{> controls/select
                 required=true
-                selectTitle="Которое интересно посетить на форуме"
+                placeholder="Которое интересно посетить на форуме"
                 name="direction"
                 type="account"
                 option1="Направление 1" option2="Направление 2" option3="Направление 3" option4="Направление 4" option5="Направление 5"
               }}
             </li>
             <li class="gl__input-container">
-              <div class="gl__input-title">E-mail</div>
+              <div class="gl__input-title mod-small">E-mail</div>
               {{> controls/input-main
                 required=true
                 inputType="email"
@@ -144,7 +144,7 @@
               }}
             </li>
             <li class="gl__input-container">
-              <div class="gl__input-title">ПЦР-тест</div>
+              <div class="gl__input-title mod-small">ПЦР-тест</div>
               {{> controls/input-file
                 required=true
                 inputType="file"
@@ -156,10 +156,10 @@
             </li>
 
             <li class="gl__input-container">
-              <div class="gl__input-title">Город</div>
+              <div class="gl__input-title mod-small">Город</div>
               {{> controls/select
                 required=true
-                selectTitle="Выберите"
+                placeholder="Выберите"
                 name="city"
                 type="account"
                 option1="Город 1" option2="Город 2" option3="Город 3" option4="Город 4" option5="Город 5"
@@ -169,7 +169,7 @@
 
           <ul class="account__form-inputs-list">
             <li class="gl__input-container">
-              <div class="gl__input-title">Наличие промокода</div>
+              <div class="gl__input-title mod-small">Наличие промокода</div>
               {{> controls/input-main
                 required=true
                 inputType="text"
@@ -178,7 +178,7 @@
                 placeholder="Введите промокод"
               }}
             </li>
-            <li class="account__submit-block-wrapper">
+            <li class="account__submit-block-wrapper mod-item-list mod-end">
               <div class="account__submit-block-hint">
                 <div class="account__submit-block-hint-mark gl__input-mark-required"></div>
                 <div class="account__submit-block-hint-caption">— Обязательные поля</div>
@@ -189,7 +189,7 @@
           </ul>
         </form>
 
-        <form class="account__form-container">
+        <form data-need-validation data-parsley-validate data-parsley-focus="none" class="account__form-container gl__form">
           <div class="account__form-head">
             <h2 class="gl__subtitle">
               Трансфер и проживание
@@ -217,27 +217,27 @@
           </div>
 
           <ul class="account__form-inputs-list">
-            <li class="gl__input-container mod-no-margin">
-              <div class="gl__input-title">Дата приезда</div>
+            <li class="gl__input-container">
+              <div class="gl__input-title mod-small">Дата приезда</div>
               {{> controls/input-data
                 name="arrival-date"
                 type="account"
                 placeholder="дд.мм.гг"
               }}
             </li>
-            <li class="gl__input-container mod-no-margin">
-              <div class="gl__input-title">Дата отъезда</div>
+            <li class="gl__input-container">
+              <div class="gl__input-title mod-small">Дата отъезда</div>
               {{> controls/input-data
                 name="departure-date"
                 type="account"
                 placeholder="дд.мм.гг"
               }}
             </li>
-            <li class="gl__input-container mod-no-margin">
-              <div class="gl__input-title">Время приезда</div>
+            <li class="gl__input-container">
+              <div class="gl__input-title mod-small">Время приезда</div>
               {{> controls/forked-select
-                firstSelectTitle="08"
-                secondSelectTitle="00"
+                firstPlaceholder="08"
+                secondPlaceholder="00"
                 firstName="arrival-time-hour"
                 secondName="arrival-time-minutes"
                 type="account"
@@ -245,19 +245,127 @@
                 secondOption1="00" secondOption2="10" secondOption3="20" secondOption4="30" secondOption5="40" secondOption6="50"
               }}
             </li>
-            <li class="gl__input-container mod-no-margin">
-              <div class="gl__input-title">Время отъезда</div>
+            <li class="gl__input-container">
+              <div class="gl__input-title mod-small">Время отъезда</div>
               {{> controls/forked-select
-                firstSelectTitle="08"
-                secondSelectTitle="00"
+                firstPlaceholder="08"
+                secondPlaceholder="00"
                 firstName="arrival-time-hour"
                 secondName="arrival-time-minutes"
                 type="account"
                 firstOption1="08" firstOption2="09" firstOption3="10" firstOption4="11" firstOption5="12" firstOption6="13" firstOption7="14" firstOption8="15" firstOption9="16" firstOption10="17" firstOption11="18"
                 secondOption1="00" secondOption2="10" secondOption3="20" secondOption4="30" secondOption5="40" secondOption6="50"
+              }}
+            </li>
+            <li class="gl__input-container">
+              <div class="gl__input-title mod-small">Место прибытия</div>
+              {{> controls/select
+                placeholder="Выберите из списка"
+                name="place-arrival"
+                type="account"
+                option1="Место прибытия 1" option2="Место прибытия 2" option3="Место прибытия 3"
+              }}
+            </li>
+            <li class="gl__input-container">
+              <div class="gl__input-title mod-small">Место отбытия</div>
+              {{> controls/select
+                placeholder="Выберите из списка"
+                name="place-departure"
+                type="account"
+                option1="Место отбытия 1" option2="Место отбытия 2" option3="Место отбытия 3"
+              }}
+            </li>
+            <li class="gl__input-container">
+              <div class="gl__input-title mod-small">Номер рейса</div>
+              {{> controls/input-main
+                inputType="number"
+                maxLength="3"
+                name="flight-number"
+                type="account"
+                placeholder="Укажите"
               }}
             </li>
           </ul>
+
+          <ul class="account__form-inputs-list">
+            <li class="account__form-radio-container">
+              <div class="account__form-radio-input-title">
+                Нужен трансфер при прибытии в Казань (только до аккредитованных гостиниц и площадок форума)
+              </div>
+              <div class="account__form-radio-wrapper">
+                {{> controls/input-radio-checkbox name="date-transfer" type="account" inputType="radio" additionClass="mod-inline" inputCaption="2 декабря" }}
+                {{> controls/input-radio-checkbox name="date-transfer" type="account" inputType="radio" additionClass="mod-inline" inputCaption="3 декабря" }}
+                {{> controls/input-radio-checkbox name="date-transfer" type="account" inputType="radio" additionClass="mod-inline" inputCaption="4 декабря" }}
+              </div>
+            </li>
+            <li class="account__form-radio-container">
+              <div class="account__form-radio-input-title">
+                Нужен трансфер при прибытии в Казань (только до аккредитованных гостиниц и площадок форума)
+              </div>
+              <div class="account__form-radio-wrapper">
+                {{> controls/input-radio-checkbox name="date-transfer-2" type="account" inputType="radio" additionClass="mod-inline" inputCaption="2 декабря" }}
+                {{> controls/input-radio-checkbox name="date-transfer-2" type="account" inputType="radio" additionClass="mod-inline" inputCaption="3 декабря" }}
+                {{> controls/input-radio-checkbox name="date-transfer-2" type="account" inputType="radio" additionClass="mod-inline" inputCaption="4 декабря" }}
+              </div>
+            </li>
+            <li class="gl__input-container">
+              <div class="gl__input-title mod-small">После прибытия поеду сразу в</div>
+              {{> controls/select
+                placeholder="Выберите из списка"
+                name="place-immediately-arrival"
+                type="account"
+                option1="Место 1" option2="Место 2" option3="Место 3"
+              }}
+            </li>
+            <li class="gl__input-container">
+              <div class="gl__input-title mod-small">Место проживания</div>
+              {{> controls/select
+                placeholder="Выберите из списка"
+                name="place-residence"
+                type="account"
+                option1="Место проживания 1" option2="Место проживания 2" option3="Место проживания 3"
+              }}
+            </li>
+          </ul>
+
+          <div class="account__submit-block-wrapper">
+            <div class="account__submit-block-hint">
+              <div class="account__submit-block-hint-caption">* Просим Вас заполнить эту информацию до <span class="account__submit-block-hint-caption-mark">25 ноября</span>, чтобы мы могли обеспечить вам трансфер</div>
+            </div>
+
+            <button type="submit" class="gl__main-btn mod-no-shadow mod-small account__btn">Сохранить</button>
+          </div>
+        </form>
+
+        <form data-need-validation data-parsley-validate data-parsley-focus="none" class="account__form-container gl__form">
+          <h2 class="gl__subtitle">
+            Хочу стать спикером
+          </h2>
+
+          <ul class="account__form-inputs-list">
+            <li class="gl__input-container">
+              <div class="gl__input-title mod-small">Название темы</div>
+              {{> controls/input-main
+                inputType="text"
+                name="topics-name"
+                type="account"
+                placeholder="Которую вы хотели бы осветить"
+              }}
+            </li>
+            <li class="gl__input-container">
+              <div class="gl__input-title mod-small">Формат мероприятия</div>
+              {{> controls/select
+                placeholder="Выберите"
+                name="event-format"
+                type="account"
+                option1="Формат 1" option2="Формат 2" option3="Формат 3"
+              }}
+            </li>
+          </ul>
+
+          <div class="account__submit-block-wrapper mod-end">
+            <button type="submit" class="gl__main-btn mod-no-shadow mod-small account__btn">Сохранить</button>
+          </div>
         </form>
       </div>
     </section>

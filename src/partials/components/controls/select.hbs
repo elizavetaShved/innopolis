@@ -3,21 +3,26 @@
     {{#if required }}
       <span class="gl__input-mark-required"></span>
     {{/if}}
-    <select class="gl__select" name="{{ name }}-{{type}}">
-      <option class="gl__select-option">{{ selectTitle }}</option>
-      <option class="gl__select-option">{{ option1 }}</option>
-      <option class="gl__select-option">{{ option2 }}</option>
-      <option class="gl__select-option">{{ option3 }}</option>
-      <option class="gl__select-option">{{ option4 }}</option>
-      <option class="gl__select-option">{{ option5 }}</option>
-      <option class="gl__select-option">{{ option6 }}</option>
-      <option class="gl__select-option">{{ option7 }}</option>
-      <option class="gl__select-option">{{ option8 }}</option>
-      <option class="gl__select-option">{{ option9 }}</option>
-      <option class="gl__select-option">{{ option10 }}</option>
-      <option class="gl__select-option">{{ option11 }}</option>
-      <option class="gl__select-option">{{ option12 }}</option>
-      <option class="gl__select-option">{{ option13 }}</option>
+    <select class="gl__select"
+            name="{{ name }}-{{type}}"
+      {{#if required }}
+            data-parsley-required="" data-parsley-min = "1"
+      {{/if}}
+    >
+      <option class="gl__select-option">{{ placeholder }}</option>
+      <option class="gl__select-option" value="{{ option1 }}">{{ option1 }}</option>
+      <option class="gl__select-option" value="{{ option2 }}">{{ option2 }}</option>
+      <option class="gl__select-option" value="{{ option3 }}">{{ option3 }}</option>
+      <option class="gl__select-option" value="{{ option4 }}">{{ option4 }}</option>
+      <option class="gl__select-option" value="{{ option5 }}">{{ option5 }}</option>
+      <option class="gl__select-option" value="{{ option6 }}">{{ option6 }}</option>
+      <option class="gl__select-option" value="{{ option7 }}">{{ option7 }}</option>
+      <option class="gl__select-option" value="{{ option8 }}">{{ option8 }}</option>
+      <option class="gl__select-option" value="{{ option9 }}">{{ option9 }}</option>
+      <option class="gl__select-option" value="{{ option10 }}">{{ option10 }}</option>
+      <option class="gl__select-option" value="{{ option11 }}">{{ option11 }}</option>
+      <option class="gl__select-option" value="{{ option12 }}">{{ option12 }}</option>
+      <option class="gl__select-option" value="{{ option13 }}">{{ option13 }}</option>
     </select>
   </label>
 </div>

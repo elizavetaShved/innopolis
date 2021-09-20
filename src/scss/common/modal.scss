@@ -20,14 +20,6 @@
     top: 0;
     left: 0;
   }
-
-  .parsley-errors-list {
-    display: none;
-
-    + .gl__radio-input-caption {
-      color: var(--btn-color);
-    }
-  }
 }
 
 .modal__container {

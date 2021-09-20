@@ -6,6 +6,8 @@
 <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
 <!-- 7) id - обычный id, например для первого пароля-->
 <!-- 8) parsleyType - для валидации (н-р email) -->
+<!-- 9) minLength - максимально допустимое к-во символов -->
+<!-- 10) maxLength - максимально допустимое к-во символов -->
 
 <label class="gl__input-wrapper {{#if isPassword }}mod-password{{/if}} {{#if isContacts }}mod-contact{{/if}}">
   {{#if required }}
@@ -15,18 +17,33 @@
          class="gl__input {{#if isPhone }}js-phone-input{{/if}}"
          data-parsley-minlength="2"
          name="{{name}}-{{type}}"
+
+    {{#if minLength }}
+         data-parsley-minlength="{{ minLength }}"
+    {{else}}
+         data-parsley-minlength="2"
+    {{/if}}
+
+    {{#if maxLength }}
+         data-parsley-maxlength="{{ maxLength }}"
+    {{/if}}
+
     {{#if required }}
          data-parsley-required=""
     {{/if}}
+
     {{#if id }}
          id="{{id}}-{{type}}"
     {{/if}}
+
     {{#if placeholder }}
          placeholder="{{placeholder}}"
     {{/if}}
+
     {{#if parsleyEqualto }}
          data-parsley-equalto="{{parsleyEqualto}}-{{type}}"
     {{/if}}
+
     {{#if parsleyType }}
          data-parsley-type="parsleyType"
     {{/if}}
