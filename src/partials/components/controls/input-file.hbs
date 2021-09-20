@@ -1,0 +1,14 @@
+<label class="gl__input-wrapper mod-file">
+  {{#if required }}
+    <span class="gl__input-mark-required"></span>
+  {{/if}}
+  <input type="file"
+         class="gl__input-file"
+         name="{{name}}-{{type}}"
+    {{#if required }}
+         data-parsley-required=""
+    {{/if}}
+  >
+  <span class="gl__input mod-file">PDF файл, не более 2 мб</span>
+  <img src="img/form/download.svg" alt="" class="gl__input-icon">
+</label>

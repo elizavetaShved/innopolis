@@ -1,11 +1,11 @@
 <!-- 1) isPassword / isContacts - необходимы для js -->
 <!-- 2) inputType - html type input -->
-<!-- 2) required (true/false) - обязательно для заполнения -->
-<!-- 2) requiredMark (true/false)- поставить точку, показывающую, что поле обязательно -->
-<!-- 3) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
-<!-- 4) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
-<!-- 5) id - обычный id, например для первого пароля-->
-<!-- 6) parsleyType - для валидации (н-р email) -->
+<!-- 3) required (true/false) - обязательно для заполнения -->
+<!-- 4) name - name input -->
+<!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+<!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+<!-- 7) id - обычный id, например для первого пароля-->
+<!-- 8) parsleyType - для валидации (н-р email) -->
 
 <label class="gl__input-wrapper {{#if isPassword }}mod-password{{/if}} {{#if isContacts }}mod-contact{{/if}}">
   {{#if required }}
@@ -14,7 +14,7 @@
   <input type="{{inputType}}"
          class="gl__input {{#if isPhone }}js-phone-input{{/if}}"
          data-parsley-minlength="2"
-         name="contact-{{type}}"
+         name="{{name}}-{{type}}"
     {{#if required }}
          data-parsley-required=""
     {{/if}}

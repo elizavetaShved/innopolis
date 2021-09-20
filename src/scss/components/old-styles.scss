@@ -9,8 +9,8 @@ input[type="number"],
 textarea {
   -webkit-appearance: none;
   box-shadow: none;
-  border: 2px solid #ece8fd;
-  background: #ece8fd;
+  border: 2px solid var(--pale-secondary-color);
+  background: var(--pale-secondary-color);
   width: 100%;
   max-width: 100%;
   padding: 0 2rem;
@@ -1111,7 +1111,7 @@ html.is-locked {
   left: 0;
   width: 1.8rem;
   height: 1.8rem;
-  background-color: #ece8fd;
+  background-color: var(--pale-secondary-color);
   border-radius: .3rem;
   transition: background-color 0.3s;
 }

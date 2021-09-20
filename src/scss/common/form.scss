@@ -39,6 +39,12 @@
       padding-right: 46px !important;
     }
   }
+
+  &.mod-file {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .gl__input {
@@ -47,10 +53,10 @@
   line-height: 1 !important;
   font-size: 14px !important;
   color: var(--main-color) !important;
-  background-color: #ECE8FD !important;
-  border-radius: 30px !important;
-  border: 2px solid transparent !important;
+  background-color: var(--pale-secondary-color) !important;
   height: auto !important;
+  border: 1px solid transparent;
+  border-radius: 30px !important;
 
   &.parsley-error {
     border-color: var(--btn-color) !important;
@@ -59,13 +65,21 @@
   @include for-sm-down {
     padding: 10px 20px !important;
   }
+
+  &.mod-file {
+    display: block;
+    background-color: transparent !important;
+    cursor: pointer;
+    color: rgba(18, 21, 42, .5) !important;
+    border: 1px dashed #9681F2;
+  }
 }
 
 .gl__input-mark-required {
   position: absolute;
   content: '';
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
   background-color: var(--btn-color);
   border-radius: 100%;
   top: 1.2rem;
@@ -138,7 +152,7 @@
   display: inline-block;
   width: 18px;
   height: 18px;
-  background-color: #ECE8FD;
+  background-color: var(--pale-secondary-color);
   border-radius: 3px;
   position: relative;
 
@@ -244,11 +258,35 @@
 }
 
 .gl__select-container {
-  text-align: left;
   display: inline-block;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
   position: relative;
+  margin-bottom: 1rem;
+
+  &.mod-forked {
+    display: flex;
+    justify-content: space-between;
+
+    .gl__select-wrapper {
+      &:nth-child(1) {
+        margin-right: .2rem;
+
+        .choices__inner {
+          border-radius: 30px 0 0 30px !important;
+        }
+      }
+
+      &:nth-child(2) {
+        .choices__inner {
+          border-radius: 0 30px 30px 0 !important;
+        }
+      }
+    }
+  }
+}
+
+.gl__select-wrapper {
+  text-align: left;
+  width: 100%;
 
   .choices {
     font-size: 1.4rem;
@@ -256,7 +294,7 @@
   }
 
   .choices__inner {
-    background: #ECE8FD !important;
+    background: var(--pale-secondary-color) !important;
     border: none !important;
     font-size: 1.4rem;
     line-height: 5rem;
@@ -296,7 +334,7 @@
   .choices__list--dropdown {
     word-break: initial;
     border: none;
-    background: #ECE8FD;
+    background: var(--pale-secondary-color);
     box-shadow: 0 0 1rem rgba(#0a2742, 0.1);
     margin-top: 1rem !important;
     margin-bottom: 1rem !important;
@@ -359,20 +397,16 @@
     .choices__item {
       color: #000;
     }
+
+    .choices__inner {
+      min-height: 6.3rem;
+    }
   }
 }
 
 .gl__datepicker-container {
   position: relative;
   cursor: pointer;
-
-  .gl__datepicker-icon {
-    position: absolute;
-    height: 2.4rem;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 2.4rem;
-  }
 
   .datepicker {
     position: absolute;
@@ -433,4 +467,16 @@
 
 .gl__datepicker-input {
   cursor: pointer;
+}
+
+.gl__input-file {
+  display: none;
+}
+
+.gl__input-icon {
+  position: absolute;
+  height: 2.4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2.4rem;
 }
