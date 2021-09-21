@@ -1,0 +1,31 @@
+.gl__form {
+  .parsley-errors-list {
+    + .gl__input {
+      &.mod-file {
+        border-color: var(--btn-color);
+      }
+    }
+  }
+}
+
+.gl__input-wrapper {
+  &.mod-file {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.gl__input {
+  &.mod-file {
+    display: block;
+    background-color: transparent !important;
+    cursor: pointer;
+    color: rgba(18, 21, 42, .5) !important;
+    border: 1px dashed #9681F2;
+  }
+}
+
+.gl__input-file {
+  display: none;
+}

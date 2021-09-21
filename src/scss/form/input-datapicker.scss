@@ -1,0 +1,108 @@
+.gl__datepicker-container {
+  position: relative;
+  cursor: pointer;
+
+  .datepicker {
+    position: absolute;
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: 0 0 10px 4px #0000001a;
+    border-radius: 14px;
+    right: 2rem;
+    left: initial !important;
+    top: 2rem !important;
+    z-index: 50 !important;
+    width: 29rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem  ;
+    font-weight: normal;
+  }
+
+  .datepicker-days, .datepicker-months, .datepicker-years {
+    width: 100%;
+  }
+
+  .datepicker-switch {
+    text-align: center;
+  }
+
+  .datepicker-months, .datepicker-years {
+    .table-condensed {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    td {
+      text-align: center;
+      border-radius: .4rem;
+      border: 0;
+      font-size: 1.6rem;
+      padding: .9rem 1.1rem;
+    }
+
+    .month, .year {
+      display: block;
+      width: 23%;
+      height: 5.4rem;
+      line-height: 5.4rem;
+      float: left;
+      padding: .2rem;
+    }
+  }
+
+  .table-condensed {
+    width: 100%;
+  }
+
+  .datepicker-switch {
+    font-size: 1.8rem;
+    padding: 0 2.5rem;
+    color: var(--btn-color);
+  }
+
+  thead {
+    margin-bottom: 2rem;
+  }
+
+  .table-condensed {
+    margin: -0.5rem;
+  }
+
+  .prev, .next {
+    text-align: center;
+    color: var(--btn-color);
+    font-size: 2.6rem !important;
+  }
+
+  .dow {
+    padding: 1.5rem .5rem;
+    color: var(--btn-color);
+    text-align: center;
+  }
+
+  .day, .month, .year {
+    padding: .5rem;
+    text-align: center;
+    font-weight: normal;
+    transition: color 400ms, font-weight 400ms;
+
+    &:not(.disabled) {
+      cursor: pointer;
+
+      &:hover {
+        color: var(--btn-color);
+        font-weight: bold;
+      }
+    }
+
+    &.disabled {
+      color: rgba(18, 21, 42, .5);
+    }
+  }
+}
+
+.gl__datepicker-input {
+  cursor: pointer;
+}

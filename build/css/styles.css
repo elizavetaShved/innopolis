@@ -645,491 +645,6 @@ nav ul {
   .gl__xxs-hide {
     display: none !important; } }
 
-@media screen and (min-width: 1400px) {
-  .gl__fl-show {
-    display: none !important; } }
-
-@media screen and (max-width: 1399px) {
-  .gl__fl-hide {
-    display: none !important; } }
-
-@media screen and (min-width: 1200px) {
-  .gl__vs-show {
-    display: none !important; } }
-
-@media screen and (max-width: 1199px) {
-  .gl__vs-hide {
-    display: none !important; } }
-
-@media screen and (min-width: 1024px) {
-  .gl__bg-show {
-    display: none !important; } }
-
-@media screen and (max-width: 1023px) {
-  .gl__bg-hide {
-    display: none !important; } }
-
-@media screen and (min-width: 960px) {
-  .gl__lg-show {
-    display: none !important; } }
-
-@media screen and (max-width: 959px) {
-  .gl__lg-hide {
-    display: none !important; } }
-
-@media screen and (min-width: 960px) {
-  .gl__md-show {
-    display: none !important; } }
-
-@media screen and (max-width: 959px) {
-  .gl__md-hide {
-    display: none !important; } }
-
-@media screen and (min-width: 768px) {
-  .gl__md-show {
-    display: none !important; } }
-
-@media screen and (max-width: 767px) {
-  .gl__md-hide {
-    display: none !important; } }
-
-@media screen and (min-width: 560px) {
-  .gl__sm-show {
-    display: none !important; } }
-
-@media screen and (max-width: 559px) {
-  .gl__sm-hide {
-    display: none !important; } }
-
-@media screen and (min-width: 426px) {
-  .gl__xxs-show {
-    display: none !important; } }
-
-@media screen and (max-width: 425px) {
-  .gl__xxs-hide {
-    display: none !important; } }
-
-.gl__form .parsley-errors-list {
-  display: none; }
-  .gl__form .parsley-errors-list + .gl__radio-input-caption {
-    color: var(--btn-color); }
-  .gl__form .parsley-errors-list + .gl__input.mod-file {
-    border-color: var(--btn-color); }
-
-.gl__form .gl__input.parsley-error {
-  border-color: var(--btn-color) !important; }
-
-.gl__input-container {
-  display: grid;
-  grid-template-columns: 11rem 1fr;
-  grid-gap: 16px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
-  @media screen and (max-width: 559px) {
-    .gl__input-container {
-      grid-template-columns: 1fr;
-      grid-gap: .8rem; } }
-
-.gl__input-title {
-  font-size: 16px;
-  color: var(--main-color); }
-  .gl__input-title.mod-small {
-    font-size: 1.4rem; }
-  @media screen and (max-width: 559px) {
-    .gl__input-title {
-      padding-left: 20px;
-      font-size: 14px; } }
-
-.gl__input-wrapper {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative; }
-  .gl__input-wrapper.mod-password .gl__input {
-    padding-right: 46px !important; }
-  .gl__input-wrapper.mod-file {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
-
-.gl__input {
-  width: 100% !important;
-  padding: 15px 22px !important;
-  line-height: 1 !important;
-  font-size: 14px !important;
-  color: var(--main-color) !important;
-  background-color: var(--pale-secondary-color) !important;
-  height: auto !important;
-  border: 1px solid transparent;
-  border-radius: 30px !important; }
-  @media screen and (max-width: 559px) {
-    .gl__input {
-      padding: 10px 20px !important; } }
-  .gl__input.mod-file {
-    display: block;
-    background-color: transparent !important;
-    cursor: pointer;
-    color: rgba(18, 21, 42, 0.5) !important;
-    border: 1px dashed #9681F2; }
-
-.gl__input-mark-required {
-  position: absolute;
-  content: '';
-  width: 6px;
-  height: 6px;
-  background-color: var(--btn-color);
-  border-radius: 100%;
-  top: 1.2rem;
-  left: 1.2rem;
-  z-index: 1; }
-
-.gl__radio-input-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-  margin-top: 40px; }
-  @media screen and (max-width: 559px) {
-    .gl__radio-input-container {
-      margin-top: 20px; } }
-
-.gl__radio-input-wrapper {
-  cursor: pointer; }
-  .gl__radio-input-wrapper.parsley-error .gl__radio-input-content {
-    border: 2px solid var(--btn-color); }
-
-.gl__form-radio-wrapper {
-  margin-left: -7rem;
-  margin-bottom: -2.5rem; }
-
-.gl__radio-checkbox-input-wrapper {
-  cursor: pointer;
-  margin-left: 7rem;
-  margin-bottom: 2.5rem; }
-  .gl__radio-checkbox-input-wrapper.parsley-error .gl__radio-checkbox-input-content {
-    border: 2px solid var(--btn-color); }
-  .gl__radio-checkbox-input-wrapper.mod-inline {
-    display: inline-block; }
-  .gl__radio-checkbox-input-wrapper.mod-for-caption {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
-
-.gl__radio-checkbox-input {
-  display: none; }
-  .gl__radio-checkbox-input:checked + .gl__radio-checkbox-input-content:before {
-    opacity: 1; }
-
-.gl__radio-checkbox-input-text {
-  font-size: 1.4rem;
-  margin-left: 2rem;
-  display: inline-block; }
-
-.gl__radio-checkbox-input-content {
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  background-color: var(--pale-secondary-color);
-  border-radius: 3px;
-  position: relative; }
-  .gl__radio-checkbox-input-content:before {
-    position: absolute;
-    content: '';
-    top: 50%;
-    left: 50%;
-    width: 8px;
-    height: 8px;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    background-color: var(--secondary-color);
-    border-radius: 3px;
-    -webkit-transition: opacity 300ms;
-    transition: opacity 300ms;
-    opacity: 0; }
-
-.gl__radio-input-caption {
-  padding-left: 42px;
-  font-size: 12px;
-  line-height: 130%;
-  color: var(--main-color); }
-  @media screen and (max-width: 559px) {
-    .gl__radio-input-caption {
-      padding-left: 26px; } }
-
-.gl__radio-checkbox-input-caption-link:hover {
-  text-decoration: underline; }
-
-.gl__error-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  max-height: 0;
-  overflow: hidden;
-  -webkit-transition: max-height 300ms;
-  transition: max-height 300ms; }
-  .gl__error-block.mod-show {
-    max-height: 30px;
-    margin: 38px 0; }
-
-.gl__error-block {
-  font-size: 14px;
-  color: var(--main-color); }
-
-.gl__error-icon {
-  height: 20px;
-  margin-right: 22px; }
-
-.gl__input-hint-link {
-  display: block;
-  color: var(--btn-color) !important;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 18px;
-  -webkit-transition: color 300ms;
-  transition: color 300ms;
-  text-align: start;
-  grid-column: 2 / 3; }
-  .gl__input-hint-link:hover {
-    text-decoration: underline; }
-
-.gl__input-password-btn {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  right: 22px; }
-  .gl__input-password-btn.mod-show-password .gl__input-password-btn-image.type-show {
-    display: block; }
-  .gl__input-password-btn.mod-show-password .gl__input-password-btn-image.type-hide {
-    display: none; }
-
-.gl__input-password-btn-image {
-  height: 24px; }
-  .gl__input-password-btn-image.type-show {
-    display: none; }
-  .gl__input-password-btn-image.type-hide {
-    display: block; }
-
-.gl__select-container {
-  display: inline-block;
-  position: relative; }
-  .gl__select-container.mod-forked {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
-    .gl__select-container.mod-forked .gl__select-wrapper:nth-child(1) {
-      margin-right: .2rem; }
-      .gl__select-container.mod-forked .gl__select-wrapper:nth-child(1) .choices__inner {
-        border-radius: 30px 0 0 30px !important; }
-    .gl__select-container.mod-forked .gl__select-wrapper:nth-child(2) .choices__inner {
-      border-radius: 0 30px 30px 0 !important; }
-  .gl__select-container.mod-filter-select {
-    margin-left: 1rem;
-    margin-bottom: 1rem; }
-    .gl__select-container.mod-filter-select .choices__item {
-      color: #000; }
-    .gl__select-container.mod-filter-select .choices__inner {
-      min-width: 22rem;
-      min-height: auto; }
-
-.gl__select-wrapper {
-  text-align: left;
-  width: 100%; }
-  .gl__select-wrapper .choices {
-    font-size: 1.4rem;
-    line-height: 1.3; }
-  .gl__select-wrapper .choices__inner {
-    background: var(--pale-secondary-color) !important;
-    border: none !important;
-    font-size: 1.4rem;
-    line-height: 50px;
-    padding: 0 3rem 0 2.2rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    border-radius: 30px !important;
-    min-height: 50px; }
-    @media screen and (max-width: 559px) {
-      .gl__select-wrapper .choices__inner {
-        line-height: 40px;
-        min-height: 40px; } }
-  .gl__select-wrapper .choices[data-type*=select-one] .choices__inner {
-    padding-bottom: 0; }
-  .gl__select-wrapper .choices__list--single {
-    padding: 0 1rem 0 0; }
-  .gl__select-wrapper .choices[data-type*='select-one'].is-open::after {
-    border-top: none;
-    border-bottom: 4px solid #000;
-    top: 63%; }
-  .gl__select-wrapper .choices[data-type*='select-one']:after {
-    margin: 0;
-    right: 2.2rem;
-    top: 45%;
-    border: 4px solid transparent;
-    border-top: 4px solid #000; }
-  .gl__select-wrapper .choices__placeholder {
-    display: none !important; }
-  .gl__select-wrapper .choices__list--dropdown {
-    word-break: initial;
-    border: none;
-    background: var(--pale-secondary-color);
-    -webkit-box-shadow: 0 0 1rem rgba(10, 39, 66, 0.1);
-            box-shadow: 0 0 1rem rgba(10, 39, 66, 0.1);
-    margin-top: 1rem !important;
-    margin-bottom: 1rem !important;
-    -webkit-transition: opacity 0.3s, visibility 0s linear 0.3s;
-    transition: opacity 0.3s, visibility 0s linear 0.3s;
-    display: block !important;
-    opacity: 0;
-    visibility: hidden;
-    padding: 0;
-    border-radius: 16px !important; }
-    .gl__select-wrapper .choices__list--dropdown.is-active {
-      opacity: 1;
-      visibility: visible;
-      -webkit-transition: opacity 0.3s, visibility 0.3s;
-      transition: opacity 0.3s, visibility 0.3s; }
-  .gl__select-wrapper .choices__list--dropdown .choices__item--selectable.is-highlighted {
-    background: var(--muted-color);
-    color: white; }
-  .gl__select-wrapper .choices__list {
-    z-index: 12; }
-    .gl__select-wrapper .choices__list.choices__list--dropdown {
-      z-index: 100; }
-  .gl__select-wrapper .choices__list--dropdown .choices__list {
-    max-height: 30rem;
-    margin-right: -20px;
-    -webkit-overflow-scrolling: touch; }
-    .gl__select-wrapper .choices__list--dropdown .choices__list::-webkit-scrollbar {
-      background-color: white;
-      width: 0.6rem; }
-    .gl__select-wrapper .choices__list--dropdown .choices__list::-webkit-scrollbar-thumb {
-      background-color: var(--primary-color);
-      border-radius: 0.3rem; }
-    .gl__select-wrapper .choices__list--dropdown .choices__list::-webkit-scrollbar-button {
-      display: none; }
-    .gl__select-wrapper .choices__list--dropdown .choices__list::-webkit-scrollbar-track {
-      background-color: transparent; }
-  .gl__select-wrapper .choices__item.choices__item--selectable {
-    color: var(--main-color);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 200px; }
-  .gl__select-wrapper .choices__item.choices__item--choice {
-    color: var(--main-color); }
-
-.gl__datepicker-container {
-  position: relative;
-  cursor: pointer; }
-  .gl__datepicker-container .datepicker {
-    position: absolute;
-    background-color: #fff;
-    padding: 2rem;
-    -webkit-box-shadow: 0 0 10px 4px #0000001a;
-            box-shadow: 0 0 10px 4px #0000001a;
-    border-radius: 14px;
-    right: 2rem;
-    left: initial !important;
-    top: 2rem !important;
-    z-index: 50 !important;
-    width: 29rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    font-size: 1.4rem;
-    font-weight: normal; }
-  .gl__datepicker-container .datepicker-days, .gl__datepicker-container .datepicker-months, .gl__datepicker-container .datepicker-years {
-    width: 100%; }
-  .gl__datepicker-container .datepicker-switch {
-    text-align: center; }
-  .gl__datepicker-container .datepicker-months .table-condensed, .gl__datepicker-container .datepicker-years .table-condensed {
-    width: 100%;
-    border-collapse: collapse; }
-  .gl__datepicker-container .datepicker-months td, .gl__datepicker-container .datepicker-years td {
-    text-align: center;
-    border-radius: .4rem;
-    border: 0;
-    font-size: 1.6rem;
-    padding: .9rem 1.1rem; }
-  .gl__datepicker-container .datepicker-months .month, .gl__datepicker-container .datepicker-months .year, .gl__datepicker-container .datepicker-years .month, .gl__datepicker-container .datepicker-years .year {
-    display: block;
-    width: 23%;
-    height: 5.4rem;
-    line-height: 5.4rem;
-    float: left;
-    padding: .2rem; }
-  .gl__datepicker-container .table-condensed {
-    width: 100%; }
-  .gl__datepicker-container .datepicker-switch {
-    font-size: 1.8rem;
-    padding: 0 2.5rem;
-    color: var(--btn-color); }
-  .gl__datepicker-container thead {
-    margin-bottom: 2rem; }
-  .gl__datepicker-container .table-condensed {
-    margin: -0.5rem; }
-  .gl__datepicker-container .prev, .gl__datepicker-container .next {
-    text-align: center;
-    color: var(--btn-color);
-    font-size: 2.6rem !important; }
-  .gl__datepicker-container .dow {
-    padding: 1.5rem .5rem;
-    color: var(--btn-color);
-    text-align: center; }
-  .gl__datepicker-container .day, .gl__datepicker-container .month, .gl__datepicker-container .year {
-    padding: .5rem;
-    text-align: center;
-    font-weight: normal;
-    -webkit-transition: color 400ms, font-weight 400ms;
-    transition: color 400ms, font-weight 400ms; }
-    .gl__datepicker-container .day:not(.disabled), .gl__datepicker-container .month:not(.disabled), .gl__datepicker-container .year:not(.disabled) {
-      cursor: pointer; }
-      .gl__datepicker-container .day:not(.disabled):hover, .gl__datepicker-container .month:not(.disabled):hover, .gl__datepicker-container .year:not(.disabled):hover {
-        color: var(--btn-color);
-        font-weight: bold; }
-    .gl__datepicker-container .day.disabled, .gl__datepicker-container .month.disabled, .gl__datepicker-container .year.disabled {
-      color: rgba(18, 21, 42, 0.5); }
-
-.gl__datepicker-input {
-  cursor: pointer; }
-
-.gl__input-file {
-  display: none; }
-
-.gl__input-icon {
-  position: absolute;
-  height: 2.4rem;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  right: 2.4rem; }
-
 /**
  * Swiper 6.8.0
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -2193,6 +1708,496 @@ button.swiper-pagination-bullet {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+
+@media screen and (min-width: 1400px) {
+  .gl__fl-show {
+    display: none !important; } }
+
+@media screen and (max-width: 1399px) {
+  .gl__fl-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 1200px) {
+  .gl__vs-show {
+    display: none !important; } }
+
+@media screen and (max-width: 1199px) {
+  .gl__vs-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 1024px) {
+  .gl__bg-show {
+    display: none !important; } }
+
+@media screen and (max-width: 1023px) {
+  .gl__bg-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 960px) {
+  .gl__lg-show {
+    display: none !important; } }
+
+@media screen and (max-width: 959px) {
+  .gl__lg-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 960px) {
+  .gl__md-show {
+    display: none !important; } }
+
+@media screen and (max-width: 959px) {
+  .gl__md-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 768px) {
+  .gl__md-show {
+    display: none !important; } }
+
+@media screen and (max-width: 767px) {
+  .gl__md-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 560px) {
+  .gl__sm-show {
+    display: none !important; } }
+
+@media screen and (max-width: 559px) {
+  .gl__sm-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 426px) {
+  .gl__xxs-show {
+    display: none !important; } }
+
+@media screen and (max-width: 425px) {
+  .gl__xxs-hide {
+    display: none !important; } }
+
+.gl__form .parsley-errors-list {
+  display: none; }
+  .gl__form .parsley-errors-list + .gl__radio-input-caption {
+    color: var(--btn-color); }
+
+.gl__form .gl__input.parsley-error {
+  border-color: var(--btn-color) !important; }
+
+.gl__input-container {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  grid-gap: 16px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media screen and (max-width: 559px) {
+    .gl__input-container {
+      grid-template-columns: 1fr;
+      grid-gap: .8rem; } }
+
+.gl__input-title {
+  font-size: 16px;
+  color: var(--main-color); }
+  .gl__input-title.mod-small {
+    font-size: 1.4rem; }
+  @media screen and (max-width: 559px) {
+    .gl__input-title {
+      padding-left: 20px;
+      font-size: 14px; } }
+
+.gl__input-wrapper {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative; }
+  .gl__input-wrapper.mod-password .gl__input {
+    padding-right: 46px !important; }
+
+.gl__input {
+  width: 100% !important;
+  padding: 15px 22px !important;
+  line-height: 1 !important;
+  font-size: 14px !important;
+  color: var(--main-color) !important;
+  background-color: var(--pale-secondary-color) !important;
+  height: auto !important;
+  border: 1px solid transparent;
+  border-radius: 30px !important; }
+  @media screen and (max-width: 559px) {
+    .gl__input {
+      padding: 10px 20px !important; } }
+
+.gl__input-mark-required {
+  position: absolute;
+  content: '';
+  width: 6px;
+  height: 6px;
+  background-color: var(--btn-color);
+  border-radius: 100%;
+  top: 1.2rem;
+  left: 1.2rem;
+  z-index: 1; }
+
+.gl__radio-input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  margin-top: 40px; }
+  @media screen and (max-width: 559px) {
+    .gl__radio-input-container {
+      margin-top: 20px; } }
+
+.gl__radio-input-wrapper {
+  cursor: pointer; }
+  .gl__radio-input-wrapper.parsley-error .gl__radio-input-content {
+    border: 2px solid var(--btn-color); }
+
+.gl__error-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 300ms;
+  transition: max-height 300ms; }
+  .gl__error-block.mod-show {
+    max-height: 30px;
+    margin: 38px 0; }
+
+.gl__error-block {
+  font-size: 14px;
+  color: var(--main-color); }
+
+.gl__error-icon {
+  height: 20px;
+  margin-right: 22px; }
+
+.gl__input-hint-link {
+  display: block;
+  color: var(--btn-color) !important;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+  text-align: start;
+  grid-column: 2 / 3; }
+  .gl__input-hint-link:hover {
+    text-decoration: underline; }
+
+.gl__input-password-btn {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 22px; }
+  .gl__input-password-btn.mod-show-password .gl__input-password-btn-image.type-show {
+    display: block; }
+  .gl__input-password-btn.mod-show-password .gl__input-password-btn-image.type-hide {
+    display: none; }
+
+.gl__input-password-btn-image {
+  height: 24px; }
+  .gl__input-password-btn-image.type-show {
+    display: none; }
+  .gl__input-password-btn-image.type-hide {
+    display: block; }
+
+.gl__input-icon {
+  position: absolute;
+  height: 2.4rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 2.4rem; }
+
+.gl__datepicker-container {
+  position: relative;
+  cursor: pointer; }
+  .gl__datepicker-container .datepicker {
+    position: absolute;
+    background-color: #fff;
+    padding: 2rem;
+    -webkit-box-shadow: 0 0 10px 4px #0000001a;
+            box-shadow: 0 0 10px 4px #0000001a;
+    border-radius: 14px;
+    right: 2rem;
+    left: initial !important;
+    top: 2rem !important;
+    z-index: 50 !important;
+    width: 29rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 1.4rem;
+    font-weight: normal; }
+  .gl__datepicker-container .datepicker-days, .gl__datepicker-container .datepicker-months, .gl__datepicker-container .datepicker-years {
+    width: 100%; }
+  .gl__datepicker-container .datepicker-switch {
+    text-align: center; }
+  .gl__datepicker-container .datepicker-months .table-condensed, .gl__datepicker-container .datepicker-years .table-condensed {
+    width: 100%;
+    border-collapse: collapse; }
+  .gl__datepicker-container .datepicker-months td, .gl__datepicker-container .datepicker-years td {
+    text-align: center;
+    border-radius: .4rem;
+    border: 0;
+    font-size: 1.6rem;
+    padding: .9rem 1.1rem; }
+  .gl__datepicker-container .datepicker-months .month, .gl__datepicker-container .datepicker-months .year, .gl__datepicker-container .datepicker-years .month, .gl__datepicker-container .datepicker-years .year {
+    display: block;
+    width: 23%;
+    height: 5.4rem;
+    line-height: 5.4rem;
+    float: left;
+    padding: .2rem; }
+  .gl__datepicker-container .table-condensed {
+    width: 100%; }
+  .gl__datepicker-container .datepicker-switch {
+    font-size: 1.8rem;
+    padding: 0 2.5rem;
+    color: var(--btn-color); }
+  .gl__datepicker-container thead {
+    margin-bottom: 2rem; }
+  .gl__datepicker-container .table-condensed {
+    margin: -0.5rem; }
+  .gl__datepicker-container .prev, .gl__datepicker-container .next {
+    text-align: center;
+    color: var(--btn-color);
+    font-size: 2.6rem !important; }
+  .gl__datepicker-container .dow {
+    padding: 1.5rem .5rem;
+    color: var(--btn-color);
+    text-align: center; }
+  .gl__datepicker-container .day, .gl__datepicker-container .month, .gl__datepicker-container .year {
+    padding: .5rem;
+    text-align: center;
+    font-weight: normal;
+    -webkit-transition: color 400ms, font-weight 400ms;
+    transition: color 400ms, font-weight 400ms; }
+    .gl__datepicker-container .day:not(.disabled), .gl__datepicker-container .month:not(.disabled), .gl__datepicker-container .year:not(.disabled) {
+      cursor: pointer; }
+      .gl__datepicker-container .day:not(.disabled):hover, .gl__datepicker-container .month:not(.disabled):hover, .gl__datepicker-container .year:not(.disabled):hover {
+        color: var(--btn-color);
+        font-weight: bold; }
+    .gl__datepicker-container .day.disabled, .gl__datepicker-container .month.disabled, .gl__datepicker-container .year.disabled {
+      color: rgba(18, 21, 42, 0.5); }
+
+.gl__datepicker-input {
+  cursor: pointer; }
+
+.gl__form .parsley-errors-list + .gl__input.mod-file {
+  border-color: var(--btn-color); }
+
+.gl__input-wrapper.mod-file {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.gl__input.mod-file {
+  display: block;
+  background-color: transparent !important;
+  cursor: pointer;
+  color: rgba(18, 21, 42, 0.5) !important;
+  border: 1px dashed #9681F2; }
+
+.gl__input-file {
+  display: none; }
+
+.gl__form-radio-wrapper {
+  margin-left: -7rem;
+  margin-bottom: -2.5rem; }
+
+.gl__radio-checkbox-input-wrapper {
+  cursor: pointer;
+  margin-left: 7rem;
+  margin-bottom: 2.5rem; }
+  .gl__radio-checkbox-input-wrapper.parsley-error .gl__radio-checkbox-input-content {
+    border: 2px solid var(--btn-color); }
+  .gl__radio-checkbox-input-wrapper.mod-inline {
+    display: inline-block; }
+  .gl__radio-checkbox-input-wrapper.mod-for-caption {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+
+.gl__radio-checkbox-input {
+  display: none; }
+  .gl__radio-checkbox-input:checked + .gl__radio-checkbox-input-content:before {
+    opacity: 1; }
+
+.gl__radio-checkbox-input-text {
+  font-size: 1.4rem;
+  margin-left: 2rem;
+  display: inline-block; }
+
+.gl__radio-checkbox-input-content {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: var(--pale-secondary-color);
+  border-radius: 3px;
+  position: relative; }
+  .gl__radio-checkbox-input-content:before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    background-color: var(--secondary-color);
+    border-radius: 3px;
+    -webkit-transition: opacity 300ms;
+    transition: opacity 300ms;
+    opacity: 0; }
+
+.gl__radio-input-caption {
+  padding-left: 42px;
+  font-size: 12px;
+  line-height: 130%;
+  color: var(--main-color); }
+  @media screen and (max-width: 559px) {
+    .gl__radio-input-caption {
+      padding-left: 26px; } }
+
+.gl__radio-checkbox-input-caption-link:hover {
+  text-decoration: underline; }
+
+.gl__select-container {
+  display: inline-block;
+  position: relative; }
+  .gl__select-container.mod-forked {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .gl__select-container.mod-forked .gl__select-wrapper:nth-child(1) {
+      margin-right: .2rem; }
+      .gl__select-container.mod-forked .gl__select-wrapper:nth-child(1) .choices__inner {
+        border-radius: 30px 0 0 30px !important; }
+    .gl__select-container.mod-forked .gl__select-wrapper:nth-child(2) .choices__inner {
+      border-radius: 0 30px 30px 0 !important; }
+  .gl__select-container.mod-filter-select {
+    margin-left: 1rem;
+    margin-bottom: 1rem; }
+    .gl__select-container.mod-filter-select .choices__item {
+      color: #000; }
+    .gl__select-container.mod-filter-select .choices__inner {
+      min-width: 22rem;
+      min-height: auto; }
+  .gl__select-container:not(.mod-filter-select).choices__item--selectable {
+    color: var(--main-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px; }
+
+.gl__select-wrapper {
+  text-align: left;
+  width: 100%; }
+  .gl__select-wrapper .choices {
+    font-size: 1.4rem;
+    line-height: 1.3; }
+  .gl__select-wrapper .choices__inner {
+    background: var(--pale-secondary-color) !important;
+    border: none !important;
+    font-size: 1.4rem;
+    line-height: 50px;
+    padding: 0 3rem 0 2.2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 30px !important;
+    min-height: 50px; }
+    @media screen and (max-width: 559px) {
+      .gl__select-wrapper .choices__inner {
+        line-height: 40px;
+        min-height: 40px; } }
+  .gl__select-wrapper .choices[data-type*=select-one] .choices__inner {
+    padding-bottom: 0; }
+  .gl__select-wrapper .choices__list--single {
+    padding: 0 1rem 0 0; }
+  .gl__select-wrapper .choices[data-type*='select-one'].is-open::after {
+    border-top: none;
+    border-bottom: 4px solid #000;
+    top: 43%; }
+  .gl__select-wrapper .choices[data-type*='select-one']:after {
+    margin: 0;
+    right: 2.2rem;
+    top: 45%;
+    border: 4px solid transparent;
+    border-top: 4px solid #000; }
+  .gl__select-wrapper .choices__placeholder {
+    display: none !important; }
+  .gl__select-wrapper .choices__list--dropdown {
+    word-break: initial;
+    border: none;
+    background: var(--pale-secondary-color);
+    -webkit-box-shadow: 0 0 1rem rgba(10, 39, 66, 0.1);
+            box-shadow: 0 0 1rem rgba(10, 39, 66, 0.1);
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+    -webkit-transition: opacity 0.3s, visibility 0s linear 0.3s;
+    transition: opacity 0.3s, visibility 0s linear 0.3s;
+    display: block !important;
+    opacity: 0;
+    visibility: hidden;
+    padding: 0;
+    border-radius: 16px !important; }
+    .gl__select-wrapper .choices__list--dropdown.is-active {
+      opacity: 1;
+      visibility: visible;
+      -webkit-transition: opacity 0.3s, visibility 0.3s;
+      transition: opacity 0.3s, visibility 0.3s; }
+  .gl__select-wrapper .choices__list--dropdown .choices__item--selectable.is-highlighted {
+    background: var(--muted-color);
+    color: white; }
+  .gl__select-wrapper .choices__list {
+    z-index: 12; }
+    .gl__select-wrapper .choices__list.choices__list--dropdown {
+      z-index: 100; }
+  .gl__select-wrapper .choices__list--dropdown .choices__list {
+    max-height: 30rem;
+    margin-right: -20px;
+    -webkit-overflow-scrolling: touch; }
+    .gl__select-wrapper .choices__list--dropdown .choices__list::-webkit-scrollbar {
+      background-color: white;
+      width: 0.6rem; }
+    .gl__select-wrapper .choices__list--dropdown .choices__list::-webkit-scrollbar-thumb {
+      background-color: var(--primary-color);
+      border-radius: 0.3rem; }
+    .gl__select-wrapper .choices__list--dropdown .choices__list::-webkit-scrollbar-button {
+      display: none; }
+    .gl__select-wrapper .choices__list--dropdown .choices__list::-webkit-scrollbar-track {
+      background-color: transparent; }
+  .gl__select-wrapper .choices__item.choices__item--selectable {
+    color: var(--main-color); }
+  .gl__select-wrapper .choices__item.choices__item--choice {
+    color: var(--main-color); }
 
 @media screen and (min-width: 1400px) {
   .gl__fl-show {

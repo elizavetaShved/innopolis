@@ -42,7 +42,7 @@ export class CalendarTableComponent {
     }
 
 
-    this.onListenFilter();
+    // this.onListenFilter();
   }
 
   hideOldRowByTime() {

@@ -5,8 +5,13 @@
 @import 'layout';
 @import 'reset';
 @import 'sizes';
-@import 'common/form';
 @import 'vendor';
+
+@import 'form/form';
+@import 'form/input-datapicker';
+@import 'form/input-file';
+@import 'form/input-radio-checkbox';
+@import 'form/input-select';
 
 @import 'common/sections-top';
 @import 'common/modal';

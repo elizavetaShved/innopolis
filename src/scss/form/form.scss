@@ -1,0 +1,181 @@
+@import '../sizes';
+
+.gl__form {
+  .parsley-errors-list {
+    display: none;
+
+    + .gl__radio-input-caption {
+      color: var(--btn-color);
+    }
+  }
+
+  .gl__input {
+    &.parsley-error {
+      border-color: var(--btn-color) !important;
+    }
+  }
+}
+
+.gl__input-container {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  grid-gap: 16px;
+  align-items: center;
+
+  @include for-sm-down {
+    grid-template-columns: 1fr;
+    grid-gap: .8rem;
+  }
+}
+
+.gl__input-title {
+  font-size: 16px;
+  color: var(--main-color);
+
+  &.mod-small {
+    font-size: 1.4rem;
+  }
+
+  @include for-sm-down {
+    padding-left: 20px;
+    font-size: 14px;
+  }
+}
+
+.gl__input-wrapper {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  &.mod-password {
+    .gl__input {
+      padding-right: 46px !important;
+    }
+  }
+}
+
+.gl__input {
+  width: 100% !important;
+  padding: 15px 22px !important;
+  line-height: 1 !important;
+  font-size: 14px !important;
+  color: var(--main-color) !important;
+  background-color: var(--pale-secondary-color) !important;
+  height: auto !important;
+  border: 1px solid transparent;
+  border-radius: 30px !important;
+
+  @include for-sm-down {
+    padding: 10px 20px !important;
+  }
+}
+
+.gl__input-mark-required {
+  position: absolute;
+  content: '';
+  width: 6px;
+  height: 6px;
+  background-color: var(--btn-color);
+  border-radius: 100%;
+  top: 1.2rem;
+  left: 1.2rem;
+  z-index: 1;
+}
+
+.gl__radio-input-container {
+  display: flex;
+  cursor: pointer;
+  margin-top: 40px;
+
+  @include for-sm-down {
+    margin-top: 20px;
+  }
+}
+
+.gl__radio-input-wrapper {
+  cursor: pointer;
+
+  &.parsley-error {
+    .gl__radio-input-content {
+      border: 2px solid var(--btn-color);
+    }
+  }
+}
+
+.gl__error-block {
+  display: flex;
+  align-items: center;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 300ms;
+
+  &.mod-show {
+    max-height: 30px;
+    margin: 38px 0;
+  }
+}
+
+.gl__error-block {
+  font-size: 14px;
+  color: var(--main-color);
+}
+
+.gl__error-icon {
+  height: 20px;
+  margin-right: 22px;
+}
+
+.gl__input-hint-link {
+  display: block;
+  color: var(--btn-color) !important;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  transition: color 300ms;
+  text-align: start;
+  grid-column: 2 / 3;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.gl__input-password-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 22px;
+
+  &.mod-show-password {
+    .gl__input-password-btn-image {
+      &.type-show {
+        display: block;
+      }
+
+      &.type-hide {
+        display: none;
+      }
+    }
+  }
+}
+
+.gl__input-password-btn-image {
+  height: 24px;
+
+  &.type-show {
+    display: none;
+  }
+
+  &.type-hide {
+    display: block;
+  }
+}
+
+.gl__input-icon {
+  position: absolute;
+  height: 2.4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2.4rem;
+}

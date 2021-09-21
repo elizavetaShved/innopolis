@@ -1,0 +1,83 @@
+.gl__form-radio-wrapper {
+  margin-left: -7rem;
+  margin-bottom: -2.5rem;
+}
+
+.gl__radio-checkbox-input-wrapper {
+  cursor: pointer;
+  margin-left: 7rem;
+  margin-bottom: 2.5rem;
+
+  &.parsley-error {
+    .gl__radio-checkbox-input-content {
+      border: 2px solid var(--btn-color);
+    }
+  }
+
+  &.mod-inline {
+    display: inline-block;
+  }
+
+  &.mod-for-caption {
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+.gl__radio-checkbox-input {
+  display: none;
+
+  &:checked {
+    + .gl__radio-checkbox-input-content {
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.gl__radio-checkbox-input-text {
+  font-size: 1.4rem;
+  margin-left: 2rem;
+  display: inline-block;
+}
+
+.gl__radio-checkbox-input-content {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: var(--pale-secondary-color);
+  border-radius: 3px;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    transform: translate(-50%, -50%);
+    background-color: var(--secondary-color);
+    border-radius: 3px;
+    transition: opacity 300ms;
+    opacity: 0;
+  }
+}
+
+.gl__radio-input-caption {
+  padding-left: 42px;
+  font-size: 12px;
+  line-height: 130%;
+  color: var(--main-color);
+
+  @include for-sm-down {
+    padding-left: 26px;
+  }
+}
+
+.gl__radio-checkbox-input-caption-link {
+  &:hover {
+    text-decoration: underline;
+  }
+}
