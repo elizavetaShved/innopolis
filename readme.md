@@ -1,8 +1,4 @@
-# Handlebars Boilerplate
-
-Бойлерплейт на основе связки Gulp + Webpack с поддержкой SVG спрайтов и SCSS
-
-## Страницы
+## Ссылки на страницы
 
 <body>
 <div class="hint__wrapper">
@@ -13,6 +9,10 @@
   <a class="hint__link" style="display: block; padding: 6px; font-size: 16px" href="/innopolis/build/calendar.html">Календарь</a>
 </div>
 </body>
+
+# Handlebars Boilerplate
+
+Бойлерплейт на основе связки Gulp + Webpack с поддержкой SVG спрайтов и SCSS
 
 ## Установка
 
