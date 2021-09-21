@@ -40,7 +40,7 @@
                 placeholder="Иванов Анатолий Иванович"
               }}
             </li>
-            <li class="gl__input-container">
+            <li class="gl__input-container account__university">
               <div class="gl__input-title mod-small">Вуз</div>
               {{> controls/input-main
                 inputType="text"
@@ -76,7 +76,7 @@
                 placeholder="Пол"
                 name="gender"
                 type="account"
-                option1="Женский" option2="Мужской" option3="Другое"
+                option1="Женский" option2="Мужской"
               }}
             </li>
             <li class="account__type-organization">
@@ -91,12 +91,12 @@
             </li>
             <li class="gl__input-container">
               <div class="gl__input-title mod-small">Должность</div>
-              {{> controls/select
+              {{> controls/input-main
                 required=true
-                placeholder="Должность"
+                inputType="text"
                 name="post"
                 type="account"
-                option1="Должность 1" option2="Должность 2" option3="Должность 3" option4="Должность 4" option5="Должность 5"
+                placeholder="Должность"
               }}
             </li>
             <li class="gl__input-container">
@@ -117,7 +117,7 @@
                 placeholder="Которое интересно посетить на форуме"
                 name="direction"
                 type="account"
-                option1="Направление 1" option2="Направление 2" option3="Направление 3" option4="Направление 4" option5="Направление 5"
+                option1="Кибербезопасность" option2="Цифра в культуре" option3="Цифровая трансформация регионо" option4="Российская цифровая индустрия" option5="Цифровые кадры для индустрии" option6="Медиа-акселератор" option7="Вузы" option8="Стартапы"
               }}
             </li>
             <li class="gl__input-container">
@@ -151,6 +151,17 @@
                 name="city"
                 type="account"
                 option1="Город 1" option2="Город 2" option3="Город 3" option4="Город 4" option5="Город 5"
+              }}
+            </li>
+
+            <li class="gl__input-container account__university-type">
+              <div class="gl__input-title mod-small"></div>
+              {{> controls/select
+                required=true
+                placeholder="Вуз"
+                name="university-type"
+                type="account"
+                option1="Отрасль. Образование" option2="Отрасль. Здравоохранение" option3="Отрасль. Сельское хозяйство" option4="Отрасль. Городское хозяйство" option5="Отрасль.Финансовые услуги" option6="Отрасль.Добывающая промышленность" option7="Отрасль..Энергетическая инфраструктура" option8="Транспортная инфраструктура" option9="Информационно-коммуникационные технологии" option10="Отрасль.Строительство" option11="Обрабатывающая промышленность"
               }}
             </li>
           </ul>
@@ -267,18 +278,25 @@
               }}
             </li>
             <li class="gl__input-container">
-              <div class="gl__input-title mod-small">Номер рейса</div>
+              <div class="gl__input-title mod-small">Номер рейса прибытия</div>
               {{> controls/input-main
                 inputType="number"
                 maxLength="3"
-                name="flight-number"
+                name="flight-number-arrival"
                 type="account"
                 placeholder="Укажите"
               }}
             </li>
-          </ul>
-
-          <ul class="account__form-inputs-list">
+            <li class="gl__input-container">
+              <div class="gl__input-title mod-small">Номер рейса отъезда</div>
+              {{> controls/input-main
+                inputType="number"
+                maxLength="3"
+                name="flight-number-departure"
+                type="account"
+                placeholder="Укажите"
+              }}
+            </li>
             <li class="account__form-radio-container">
               <div class="account__form-radio-input-title">
                 Нужен трансфер при прибытии в Казань (только до аккредитованных гостиниц и площадок форума)
@@ -291,7 +309,7 @@
             </li>
             <li class="account__form-radio-container">
               <div class="account__form-radio-input-title">
-                Нужен трансфер при прибытии в Казань (только до аккредитованных гостиниц и площадок форума)
+                Нужен трансфер для отъезда из Казани (только от аккредитованных гостиниц и площадок форума)
               </div>
               <div class="gl__form-radio-wrapper">
                 {{> controls/input-radio-checkbox name="date-transfer-2" type="account" inputType="radio" additionClass="mod-inline" inputCaption="2 декабря" }}

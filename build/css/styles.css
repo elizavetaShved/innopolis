@@ -2008,7 +2008,7 @@ button.swiper-pagination-bullet {
       color: rgba(18, 21, 42, 0.5); }
 
 .gl__datepicker-input {
-  cursor: pointer; }
+  cursor: auto; }
 
 .gl__form .parsley-errors-list + .gl__input.mod-file {
   border-color: var(--btn-color); }
@@ -7949,6 +7949,13 @@ html.remodal-is-locked {
           transform: translateY(-50%);
   left: 2rem;
   height: 2.4rem; }
+
+.account__university-type {
+  opacity: 0;
+  -webkit-transition: opacity 300ms;
+  transition: opacity 300ms; }
+  .account__university-type.mod-show {
+    opacity: 1; }
 
 @media screen and (min-width: 1400px) {
   .gl__fl-show {

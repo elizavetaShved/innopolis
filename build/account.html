@@ -1104,7 +1104,7 @@
               
               </label>
             </li>
-            <li class="gl__input-container">
+            <li class="gl__input-container account__university">
               <div class="gl__input-title mod-small">Вуз</div>
               <!-- 1) isPassword / isContacts - необходимы для js -->
               <!-- 2) inputType - html type input -->
@@ -1147,7 +1147,6 @@
                 <input type="text"
                        class="gl__datepicker-input gl__input"
                        placeholder="дд.мм.гг"
-                       readonly
                        name="birth-account"
                        data-birth-18
                        required
@@ -1201,7 +1200,7 @@
                     <option class="gl__select-option">Пол</option>
                     <option class="gl__select-option" value="Женский">Женский</option>
                     <option class="gl__select-option" value="Мужской">Мужской</option>
-                    <option class="gl__select-option" value="Другое">Другое</option>
+                    <option class="gl__select-option" value=""></option>
                     <option class="gl__select-option" value=""></option>
                     <option class="gl__select-option" value=""></option>
                     <option class="gl__select-option" value=""></option>
@@ -1255,31 +1254,36 @@
             </li>
             <li class="gl__input-container">
               <div class="gl__input-title mod-small">Должность</div>
-              <div class="gl__select-container ">
-                <label class="gl__select-wrapper">
-                    <span class="gl__input-mark-required"></span>
-                  <select class="gl__select"
-                          name="post-account"
-                          data-parsley-required="" data-parsley-min = "1"
-                  >
-                    <div class="qwe"></div>
-                    <option class="gl__select-option">Должность</option>
-                    <option class="gl__select-option" value="Должность 1">Должность 1</option>
-                    <option class="gl__select-option" value="Должность 2">Должность 2</option>
-                    <option class="gl__select-option" value="Должность 3">Должность 3</option>
-                    <option class="gl__select-option" value="Должность 4">Должность 4</option>
-                    <option class="gl__select-option" value="Должность 5">Должность 5</option>
-                    <option class="gl__select-option" value=""></option>
-                    <option class="gl__select-option" value=""></option>
-                    <option class="gl__select-option" value=""></option>
-                    <option class="gl__select-option" value=""></option>
-                    <option class="gl__select-option" value=""></option>
-                    <option class="gl__select-option" value=""></option>
-                    <option class="gl__select-option" value=""></option>
-                    <option class="gl__select-option" value=""></option>
-                  </select>
-                </label>
-              </div>
+              <!-- 1) isPassword / isContacts - необходимы для js -->
+              <!-- 2) inputType - html type input -->
+              <!-- 3) required (true/false) - обязательно для заполнения -->
+              <!-- 4) name - name input -->
+              <!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+              <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+              <!-- 7) id - обычный id, например для первого пароля-->
+              <!-- 8) parsleyType - для валидации (н-р email) -->
+              <!-- 9) minLength - максимально допустимое к-во символов -->
+              <!-- 10) maxLength - максимально допустимое к-во символов -->
+              
+              <label class="gl__input-wrapper  ">
+                  <span class="gl__input-mark-required"></span>
+                <input type="text"
+                       class="gl__input "
+                       data-parsley-minlength="2"
+                       name="post-account"
+              
+                       data-parsley-minlength="2"
+              
+              
+                       data-parsley-required=""
+              
+              
+                       placeholder="Должность"
+              
+              
+                >
+              
+              </label>
             </li>
             <li class="gl__input-container">
               <div class="gl__input-title mod-small">Телефон</div>
@@ -1325,14 +1329,14 @@
                   >
                     <div class="qwe"></div>
                     <option class="gl__select-option">Которое интересно посетить на форуме</option>
-                    <option class="gl__select-option" value="Направление 1">Направление 1</option>
-                    <option class="gl__select-option" value="Направление 2">Направление 2</option>
-                    <option class="gl__select-option" value="Направление 3">Направление 3</option>
-                    <option class="gl__select-option" value="Направление 4">Направление 4</option>
-                    <option class="gl__select-option" value="Направление 5">Направление 5</option>
-                    <option class="gl__select-option" value=""></option>
-                    <option class="gl__select-option" value=""></option>
-                    <option class="gl__select-option" value=""></option>
+                    <option class="gl__select-option" value="Кибербезопасность">Кибербезопасность</option>
+                    <option class="gl__select-option" value="Цифра в культуре">Цифра в культуре</option>
+                    <option class="gl__select-option" value="Цифровая трансформация регионо">Цифровая трансформация регионо</option>
+                    <option class="gl__select-option" value="Российская цифровая индустрия">Российская цифровая индустрия</option>
+                    <option class="gl__select-option" value="Цифровые кадры для индустрии">Цифровые кадры для индустрии</option>
+                    <option class="gl__select-option" value="Медиа-акселератор">Медиа-акселератор</option>
+                    <option class="gl__select-option" value="Вузы">Вузы</option>
+                    <option class="gl__select-option" value="Стартапы">Стартапы</option>
                     <option class="gl__select-option" value=""></option>
                     <option class="gl__select-option" value=""></option>
                     <option class="gl__select-option" value=""></option>
@@ -1412,6 +1416,35 @@
                     <option class="gl__select-option" value=""></option>
                     <option class="gl__select-option" value=""></option>
                     <option class="gl__select-option" value=""></option>
+                    <option class="gl__select-option" value=""></option>
+                    <option class="gl__select-option" value=""></option>
+                  </select>
+                </label>
+              </div>
+            </li>
+
+            <li class="gl__input-container account__university-type">
+              <div class="gl__input-title mod-small"></div>
+              <div class="gl__select-container ">
+                <label class="gl__select-wrapper">
+                    <span class="gl__input-mark-required"></span>
+                  <select class="gl__select"
+                          name="university-type-account"
+                          data-parsley-required="" data-parsley-min = "1"
+                  >
+                    <div class="qwe"></div>
+                    <option class="gl__select-option">Вуз</option>
+                    <option class="gl__select-option" value="Отрасль. Образование">Отрасль. Образование</option>
+                    <option class="gl__select-option" value="Отрасль. Здравоохранение">Отрасль. Здравоохранение</option>
+                    <option class="gl__select-option" value="Отрасль. Сельское хозяйство">Отрасль. Сельское хозяйство</option>
+                    <option class="gl__select-option" value="Отрасль. Городское хозяйство">Отрасль. Городское хозяйство</option>
+                    <option class="gl__select-option" value="Отрасль.Финансовые услуги">Отрасль.Финансовые услуги</option>
+                    <option class="gl__select-option" value="Отрасль.Добывающая промышленность">Отрасль.Добывающая промышленность</option>
+                    <option class="gl__select-option" value="Отрасль..Энергетическая инфраструктура">Отрасль..Энергетическая инфраструктура</option>
+                    <option class="gl__select-option" value="Транспортная инфраструктура">Транспортная инфраструктура</option>
+                    <option class="gl__select-option" value="Информационно-коммуникационные технологии">Информационно-коммуникационные технологии</option>
+                    <option class="gl__select-option" value="Отрасль.Строительство">Отрасль.Строительство</option>
+                    <option class="gl__select-option" value="Обрабатывающая промышленность">Обрабатывающая промышленность</option>
                     <option class="gl__select-option" value=""></option>
                     <option class="gl__select-option" value=""></option>
                   </select>
@@ -1529,7 +1562,6 @@
                 <input type="text"
                        class="gl__datepicker-input gl__input"
                        placeholder="дд.мм.гг"
-                       readonly
                        name="arrival-date-account"
                        data-future-with-today
                 >
@@ -1547,7 +1579,6 @@
                 <input type="text"
                        class="gl__datepicker-input gl__input"
                        placeholder="дд.мм.гг"
-                       readonly
                        name="departure-date-account"
                        data-future-with-today
                 >
@@ -1671,7 +1702,7 @@
               </div>
             </li>
             <li class="gl__input-container">
-              <div class="gl__input-title mod-small">Номер рейса</div>
+              <div class="gl__input-title mod-small">Номер рейса прибытия</div>
               <!-- 1) isPassword / isContacts - необходимы для js -->
               <!-- 2) inputType - html type input -->
               <!-- 3) required (true/false) - обязательно для заполнения -->
@@ -1687,7 +1718,7 @@
                 <input type="number"
                        class="gl__input "
                        data-parsley-minlength="2"
-                       name="flight-number-account"
+                       name="flight-number-arrival-account"
               
                        data-parsley-minlength="2"
               
@@ -1702,9 +1733,38 @@
               
               </label>
             </li>
-          </ul>
-
-          <ul class="account__form-inputs-list">
+            <li class="gl__input-container">
+              <div class="gl__input-title mod-small">Номер рейса отъезда</div>
+              <!-- 1) isPassword / isContacts - необходимы для js -->
+              <!-- 2) inputType - html type input -->
+              <!-- 3) required (true/false) - обязательно для заполнения -->
+              <!-- 4) name - name input -->
+              <!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+              <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+              <!-- 7) id - обычный id, например для первого пароля-->
+              <!-- 8) parsleyType - для валидации (н-р email) -->
+              <!-- 9) minLength - максимально допустимое к-во символов -->
+              <!-- 10) maxLength - максимально допустимое к-во символов -->
+              
+              <label class="gl__input-wrapper  ">
+                <input type="number"
+                       class="gl__input "
+                       data-parsley-minlength="2"
+                       name="flight-number-departure-account"
+              
+                       data-parsley-minlength="2"
+              
+                       data-parsley-maxlength="3"
+              
+              
+              
+                       placeholder="Укажите"
+              
+              
+                >
+              
+              </label>
+            </li>
             <li class="account__form-radio-container">
               <div class="account__form-radio-input-title">
                 Нужен трансфер при прибытии в Казань (только до аккредитованных гостиниц и площадок форума)
@@ -1741,7 +1801,7 @@
             </li>
             <li class="account__form-radio-container">
               <div class="account__form-radio-input-title">
-                Нужен трансфер при прибытии в Казань (только до аккредитованных гостиниц и площадок форума)
+                Нужен трансфер для отъезда из Казани (только от аккредитованных гостиниц и площадок форума)
               </div>
               <div class="gl__form-radio-wrapper">
                 <label class="gl__radio-checkbox-input-wrapper mod-inline mod-for-caption">

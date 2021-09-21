@@ -349,3 +349,12 @@
   left: 2rem;
   height: 2.4rem;
 }
+
+.account__university-type {
+  opacity: 0;
+  transition: opacity 300ms;
+
+  &.mod-show {
+    opacity: 1;
+  }
+}
