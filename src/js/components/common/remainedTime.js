@@ -1,8 +1,5 @@
 import getDateByDateAttribute from '../../functions/getDateByDateAttribute';
-
-export const MS_PER_DAY = 86400000;
-export const MS_PER_HOUR = 3600000;
-export const MS_PER_MINUTES = 60000;
+import { MS_PER_DAY, MS_PER_HOUR, MS_PER_MINUTES } from '../../utils/consts';
 
 export class RemainedTime {
   dateRemainedElems;

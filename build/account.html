@@ -1124,6 +1124,11 @@
             </li>
             <li class="gl__input-container">
               <div class="gl__input-title mod-small">Дата рождения</div>
+              <!--
+              dateTypeBirth - для ДР совершеннолетние
+              dateTypeFuture - для будущей даты
+              -->
+              
               <label class="gl__datepicker-container">
                   <span class="gl__input-mark-required"></span>
                 <input type="text"
@@ -1131,6 +1136,7 @@
                        placeholder="дд.мм.гг"
                        readonly
                        name="birth-account"
+                       data-birth-18
                        required
                 >
                 <img src="img/form/datepicker.svg" alt="datepicker" class="gl__input-icon">
@@ -1500,24 +1506,36 @@
           <ul class="account__form-inputs-list">
             <li class="gl__input-container">
               <div class="gl__input-title mod-small">Дата приезда</div>
+              <!--
+              dateTypeBirth - для ДР совершеннолетние
+              dateTypeFuture - для будущей даты
+              -->
+              
               <label class="gl__datepicker-container">
                 <input type="text"
                        class="gl__datepicker-input gl__input"
                        placeholder="дд.мм.гг"
                        readonly
                        name="arrival-date-account"
+                       data-future-with-today
                 >
                 <img src="img/form/datepicker.svg" alt="datepicker" class="gl__input-icon">
               </label>
             </li>
             <li class="gl__input-container">
               <div class="gl__input-title mod-small">Дата отъезда</div>
+              <!--
+              dateTypeBirth - для ДР совершеннолетние
+              dateTypeFuture - для будущей даты
+              -->
+              
               <label class="gl__datepicker-container">
                 <input type="text"
                        class="gl__datepicker-input gl__input"
                        placeholder="дд.мм.гг"
                        readonly
                        name="departure-date-account"
+                       data-future-with-today
                 >
                 <img src="img/form/datepicker.svg" alt="datepicker" class="gl__input-icon">
               </label>

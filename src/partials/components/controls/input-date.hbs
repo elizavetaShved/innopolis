@@ -1,3 +1,8 @@
+<!--
+dateTypeBirth - для ДР совершеннолетние
+dateTypeFuture - для будущей даты
+-->
+
 <label class="gl__datepicker-container">
   {{#if required }}
     <span class="gl__input-mark-required"></span>
@@ -7,6 +12,12 @@
          placeholder="{{ placeholder }}"
          readonly
          name="{{ name }}-{{ type }}"
+    {{#if dateTypeBirth18}}
+         data-birth-18
+    {{/if}}
+    {{#if dateTypeFuture}}
+         data-future-with-today
+    {{/if}}
     {{#if required}}
          required
     {{/if}}

@@ -428,7 +428,13 @@
   }
 
   .choices__item {
-    color: rgba(18, 21, 42, .5);
+    &.choices__item--selectable {
+      color: var(--main-color);
+    }
+
+    &.choices__item--choice {
+      color: var(--main-color);
+    }
   }
 }
 
@@ -446,6 +452,46 @@
     left: initial !important;
     top: 2rem !important;
     z-index: 50 !important;
+    width: 29rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .datepicker-days, .datepicker-months, .datepicker-years {
+    width: 100%;
+  }
+
+  .datepicker-switch {
+    text-align: center;
+  }
+
+  .datepicker-months, .datepicker-years {
+    .table-condensed {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    td {
+      text-align: center;
+      border-radius: .4rem;
+      border: 0;
+      font-size: 1.6rem;
+      padding: .9rem 1.1rem;
+    }
+
+    .month, .year {
+      display: block;
+      width: 23%;
+      height: 5.4rem;
+      line-height: 5.4rem;
+      float: left;
+      padding: .2rem;
+    }
+  }
+
+  .table-condensed {
+    width: 100%;
   }
 
   .datepicker-switch {
@@ -465,6 +511,7 @@
   .prev, .next {
     text-align: center;
     color: var(--btn-color);
+    font-size: 2.6rem !important;
   }
 
   .dow {
@@ -473,7 +520,7 @@
     text-align: center;
   }
 
-  .day {
+  .day, .month, .year {
     padding: .5rem;
     text-align: center;
     font-weight: normal;

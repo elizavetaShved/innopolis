@@ -1021,8 +1021,10 @@ nav ul {
       display: none; }
     .gl__select-wrapper .choices__list--dropdown .choices__list::-webkit-scrollbar-track {
       background-color: transparent; }
-  .gl__select-wrapper .choices__item {
-    color: rgba(18, 21, 42, 0.5); }
+  .gl__select-wrapper .choices__item.choices__item--selectable {
+    color: var(--main-color); }
+  .gl__select-wrapper .choices__item.choices__item--choice {
+    color: var(--main-color); }
 
 .gl__datepicker-container {
   position: relative;
@@ -1037,7 +1039,39 @@ nav ul {
     right: 2rem;
     left: initial !important;
     top: 2rem !important;
-    z-index: 50 !important; }
+    z-index: 50 !important;
+    width: 29rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .gl__datepicker-container .datepicker-days, .gl__datepicker-container .datepicker-months, .gl__datepicker-container .datepicker-years {
+    width: 100%; }
+  .gl__datepicker-container .datepicker-switch {
+    text-align: center; }
+  .gl__datepicker-container .datepicker-months .table-condensed, .gl__datepicker-container .datepicker-years .table-condensed {
+    width: 100%;
+    border-collapse: collapse; }
+  .gl__datepicker-container .datepicker-months td, .gl__datepicker-container .datepicker-years td {
+    text-align: center;
+    border-radius: .4rem;
+    border: 0;
+    font-size: 1.6rem;
+    padding: .9rem 1.1rem; }
+  .gl__datepicker-container .datepicker-months .month, .gl__datepicker-container .datepicker-months .year, .gl__datepicker-container .datepicker-years .month, .gl__datepicker-container .datepicker-years .year {
+    display: block;
+    width: 23%;
+    height: 5.4rem;
+    line-height: 5.4rem;
+    float: left;
+    padding: .2rem; }
+  .gl__datepicker-container .table-condensed {
+    width: 100%; }
   .gl__datepicker-container .datepicker-switch {
     font-size: 1.8rem;
     padding: 0 2.5rem;
@@ -1048,23 +1082,24 @@ nav ul {
     margin: -0.5rem; }
   .gl__datepicker-container .prev, .gl__datepicker-container .next {
     text-align: center;
-    color: var(--btn-color); }
+    color: var(--btn-color);
+    font-size: 2.6rem !important; }
   .gl__datepicker-container .dow {
     padding: 1.5rem .5rem;
     color: var(--btn-color);
     text-align: center; }
-  .gl__datepicker-container .day {
+  .gl__datepicker-container .day, .gl__datepicker-container .month, .gl__datepicker-container .year {
     padding: .5rem;
     text-align: center;
     font-weight: normal;
     -webkit-transition: color 400ms, font-weight 400ms;
     transition: color 400ms, font-weight 400ms; }
-    .gl__datepicker-container .day:not(.disabled) {
+    .gl__datepicker-container .day:not(.disabled), .gl__datepicker-container .month:not(.disabled), .gl__datepicker-container .year:not(.disabled) {
       cursor: pointer; }
-      .gl__datepicker-container .day:not(.disabled):hover {
+      .gl__datepicker-container .day:not(.disabled):hover, .gl__datepicker-container .month:not(.disabled):hover, .gl__datepicker-container .year:not(.disabled):hover {
         color: var(--btn-color);
         font-weight: bold; }
-    .gl__datepicker-container .day.disabled {
+    .gl__datepicker-container .day.disabled, .gl__datepicker-container .month.disabled, .gl__datepicker-container .year.disabled {
       color: rgba(18, 21, 42, 0.5); }
 
 .gl__datepicker-input {
