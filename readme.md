@@ -2,6 +2,18 @@
 
 Бойлерплейт на основе связки Gulp + Webpack с поддержкой SVG спрайтов и SCSS
 
+## Страницы
+
+<body>
+<div class="hint__wrapper">
+  <a class="hint__link" href="/innopolis/build">Главная</a>
+  <a class="hint__link" href="/innopolis/build/account.html">Личный кабинет</a>
+  <a class="hint__link" href="/innopolis/build/news-list.html">Список новостей</a>
+  <a class="hint__link" href="/innopolis/build/news.html">Новость</a>
+  <a class="hint__link" href="/innopolis/build/calendar.html">Календарь</a>
+</div>
+</body>
+
 ## Установка
 
 Установить Node JS, затем выполнить команду:
@@ -22,12 +34,3 @@ npm run dev
 ```bash
 npm run build
 ```
-<body>
-<div class="hint__wrapper">
-  <a class="hint__link" href="/build">Главная</a>
-  <a class="hint__link" href="/build/account.html">Личный кабинет</a>
-  <a class="hint__link" href="/build/news-list.html">Список новостей</a>
-  <a class="hint__link" href="/build/news.html">Новость</a>
-  <a class="hint__link" href="/build/calendar.html">Календарь</a>
-</div>
-</body>
