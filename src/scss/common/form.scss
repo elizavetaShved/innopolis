@@ -39,7 +39,7 @@
 
   @include for-sm-down {
     grid-template-columns: 1fr;
-    grid-gap: 6px;
+    grid-gap: .8rem;
   }
 }
 
@@ -132,8 +132,15 @@
   }
 }
 
+.gl__form-radio-wrapper {
+  margin-left: -7rem;
+  margin-bottom: -2.5rem;
+}
+
 .gl__radio-checkbox-input-wrapper {
   cursor: pointer;
+  margin-left: 7rem;
+  margin-bottom: 2.5rem;
 
   &.parsley-error {
     .gl__radio-checkbox-input-content {
@@ -148,10 +155,6 @@
   &.mod-for-caption {
     display: inline-flex;
     align-items: center;
-  }
-
-  & + & {
-    margin-left: 7rem;
   }
 }
 
@@ -335,12 +338,17 @@
     background: var(--pale-secondary-color) !important;
     border: none !important;
     font-size: 1.4rem;
-    line-height: 5rem;
+    line-height: 50px;
     padding: 0 3rem 0 2.2rem;
     display: flex;
     align-items: center;
     border-radius: 30px !important;
-    min-height: 5rem;
+    min-height: 50px;
+
+    @include for-sm-down {
+      line-height: 40px;
+      min-height: 40px;
+    }
   }
 
   .choices[data-type*=select-one] .choices__inner {
@@ -430,6 +438,10 @@
   .choices__item {
     &.choices__item--selectable {
       color: var(--main-color);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 200px;
     }
 
     &.choices__item--choice {
@@ -456,6 +468,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1.4rem;
+    font-weight: normal;
   }
 
   .datepicker-days, .datepicker-months, .datepicker-years {

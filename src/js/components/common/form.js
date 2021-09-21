@@ -14,11 +14,11 @@ export class Form {
   constructor(hostElem) {
     this.hostElem = hostElem;
     validation();
-    this.errorBlock = this.hostElem.querySelector('.gl__error-block');
+    this.errorBlock = this.hostElem.querySelector('.js-error-block');
     this.form = this.hostElem.querySelector('form');
     this.mainContentElem = this.hostElem.querySelector('.modal__content');
     this.successTextElem = this.hostElem.querySelector('.modal__success-text-wrapper');
-    const btnSubmit = this.form.querySelector('.modal__btn-submit');
+    const btnSubmit = this.form.querySelector('.js-btn-submit');
     this.errorContent = this.form.querySelector('.gl__error-content');
 
     this.radioContainer = this.hostElem.querySelector('.gl__radio-input-container');
@@ -106,13 +106,16 @@ export class Form {
             })
           }
         })
-        this.errorContent.innerText = messagesArr[0];
+        if (this.errorContent) {
+          this.errorContent.innerText = messagesArr[0];
+        }
       }
     });
     this.errorBlock.classList.add('mod-show');
   }
 
   onSubmit() {
+    console.log($(this.form).parsley().isValid())
     if ($(this.form).parsley().isValid()) {
       this.mainContentElem.classList.add('mod-hide');
       this.successTextElem.classList.add('mod-show');

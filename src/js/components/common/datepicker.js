@@ -24,7 +24,6 @@ export class Datepicker {
           break;
       }
 
-      console.log(endDate)
       $(datepickerInput)
         .datepicker({
           format: 'dd.mm.yyyy',
@@ -34,12 +33,6 @@ export class Datepicker {
           endDate: endDate || null,
           startDate: startDate || null
         })
-      // .on('show', () => {
-      //   datepicker.classList.add('commonDatepicker-shown')
-      // })
-      // .on('hide', () => {
-      // datepicker.classList.remove('commonDatepicker-shown')
-      // });
     })
   }
 }

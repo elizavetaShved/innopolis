@@ -2,41 +2,28 @@
   {{#content "main"}}
 
     <section class="account gl__page-content" id="account-host">
-      <div class="account__header">
-        <div class="account__menu-container">
-          <label class="account__menu-radio-wrapper">
-            <input type="radio" name="account-menu" class="account__menu-radio" checked>
-            <span class="account__menu-radio-content">Профиль</span>
-          </label>
-          <label class="account__menu-radio-wrapper">
-            <input type="radio" name="account-menu" class="account__menu-radio">
-            <span class="account__menu-radio-content">Календарь бронирования</span>
-          </label>
-          <label class="account__menu-radio-wrapper">
-            <input type="radio" name="account-menu" class="account__menu-radio">
-            <span class="account__menu-radio-content">Медиа</span>
-          </label>
-        </div>
-
-        <button type="button" class="account__exit-btn">
-          <svg width="24" height="24" aria-hidden="true" class="account__exit-btn-icon">
-            <use xlink:href="#exit"></use>
-          </svg>
-          Выйти
-        </button>
-      </div>
+      {{> account-menu }}
 
       <div class="account__body">
-        <form data-need-validation data-parsley-validate data-parsley-focus="none" class="account__form-container gl__form">
-          <h2 class="gl__subtitle">
-            Данные профиля
-          </h2>
+        <form data-need-validation data-parsley-validate data-parsley-focus="none"
+              class="account__form-container gl__form">
+          <div class="account__form-head">
+            <h2 class="gl__subtitle">
+              Данные профиля
+            </h2>
+            <div class="account__error-wrapper js-error-block">
+              <div class="account__error">
+                Проверьте правильность заполнения полей, выделенных <span class="mark">красным цветом!</span>
+                <img src="img/form/error.svg" alt="" class="account__error-icon">
+              </div>
+            </div>
+          </div>
 
           <div class="account__form-radio-container">
             <div class="account__form-radio-input-title">
               Формат участия
             </div>
-            <div class="account__form-radio-wrapper">
+            <div class="gl__form-radio-wrapper">
               {{> controls/input-radio-checkbox required="true" name="participation" type="account" inputType="radio" additionClass="mod-inline" inputCaption="Офлайн" }}
               {{> controls/input-radio-checkbox required="true" name="participation" type="account" inputType="radio" additionClass="mod-inline" inputCaption="Онлайн" }}
             </div>
@@ -96,7 +83,7 @@
               <div class="account__form-radio-input-title">
                 Тип организации
               </div>
-              <div class="account__form-radio-wrapper">
+              <div class="gl__form-radio-wrapper">
                 {{> controls/input-radio-checkbox required="true" name="type-organization" type="account" inputType="radio" additionClass="mod-inline" inputCaption="Бизнес" }}
                 {{> controls/input-radio-checkbox required="true" name="type-organization" type="account" inputType="radio" additionClass="mod-inline" inputCaption="Образование" }}
                 {{> controls/input-radio-checkbox required="true" name="type-organization" type="account" inputType="radio" additionClass="mod-inline" inputCaption="Гос. сектор" }}
@@ -185,12 +172,13 @@
                 <div class="account__submit-block-hint-caption">— Обязательные поля</div>
               </div>
 
-              <button type="submit" class="gl__main-btn mod-no-shadow mod-small account__btn">Сохранить</button>
+              <button type="submit" class="js-btn-submit gl__main-btn mod-no-shadow mod-small account__btn">Сохранить</button>
             </li>
           </ul>
         </form>
 
-        <form data-need-validation data-parsley-validate data-parsley-focus="none" class="account__form-container gl__form">
+        <form data-need-validation data-parsley-validate data-parsley-focus="none"
+              class="account__form-container gl__form">
           <div class="account__form-head">
             <h2 class="gl__subtitle">
               Трансфер и проживание
@@ -210,7 +198,7 @@
             <div class="account__form-radio-input-title">
               Дни участия в форуме
             </div>
-            <div class="account__form-radio-wrapper">
+            <div class="gl__form-radio-wrapper">
               {{> controls/input-radio-checkbox name="days-participation" type="account" inputType="radio" additionClass="mod-inline" inputCaption="2 декабря" }}
               {{> controls/input-radio-checkbox name="days-participation" type="account" inputType="radio" additionClass="mod-inline" inputCaption="3 декабря" }}
               {{> controls/input-radio-checkbox name="days-participation" type="account" inputType="radio" additionClass="mod-inline" inputCaption="4 декабря" }}
@@ -295,7 +283,7 @@
               <div class="account__form-radio-input-title">
                 Нужен трансфер при прибытии в Казань (только до аккредитованных гостиниц и площадок форума)
               </div>
-              <div class="account__form-radio-wrapper">
+              <div class="gl__form-radio-wrapper">
                 {{> controls/input-radio-checkbox name="date-transfer" type="account" inputType="radio" additionClass="mod-inline" inputCaption="2 декабря" }}
                 {{> controls/input-radio-checkbox name="date-transfer" type="account" inputType="radio" additionClass="mod-inline" inputCaption="3 декабря" }}
                 {{> controls/input-radio-checkbox name="date-transfer" type="account" inputType="radio" additionClass="mod-inline" inputCaption="4 декабря" }}
@@ -305,7 +293,7 @@
               <div class="account__form-radio-input-title">
                 Нужен трансфер при прибытии в Казань (только до аккредитованных гостиниц и площадок форума)
               </div>
-              <div class="account__form-radio-wrapper">
+              <div class="gl__form-radio-wrapper">
                 {{> controls/input-radio-checkbox name="date-transfer-2" type="account" inputType="radio" additionClass="mod-inline" inputCaption="2 декабря" }}
                 {{> controls/input-radio-checkbox name="date-transfer-2" type="account" inputType="radio" additionClass="mod-inline" inputCaption="3 декабря" }}
                 {{> controls/input-radio-checkbox name="date-transfer-2" type="account" inputType="radio" additionClass="mod-inline" inputCaption="4 декабря" }}
@@ -333,14 +321,17 @@
 
           <div class="account__submit-block-wrapper">
             <div class="account__submit-block-hint">
-              <div class="account__submit-block-hint-caption">* Просим Вас заполнить эту информацию до <span class="account__submit-block-hint-caption-mark">25 ноября</span>, чтобы мы могли обеспечить вам трансфер</div>
+              <div class="account__submit-block-hint-caption">* Просим Вас заполнить эту информацию до <span
+                class="account__submit-block-hint-caption-mark">25 ноября</span>, чтобы мы могли обеспечить вам трансфер
+              </div>
             </div>
 
-            <button type="submit" class="gl__main-btn mod-no-shadow mod-small account__btn">Сохранить</button>
+            <button type="submit" class="js-btn-submit gl__main-btn mod-no-shadow mod-small account__btn">Сохранить</button>
           </div>
         </form>
 
-        <form data-need-validation data-parsley-validate data-parsley-focus="none" class="account__form-container gl__form">
+        <form data-need-validation data-parsley-validate data-parsley-focus="none"
+              class="account__form-container gl__form">
           <h2 class="gl__subtitle">
             Хочу стать спикером
           </h2>
@@ -367,7 +358,7 @@
           </ul>
 
           <div class="account__submit-block-wrapper mod-end">
-            <button type="submit" class="gl__main-btn mod-no-shadow mod-small account__btn">Сохранить</button>
+            <button type="submit" class="js-btn-submit gl__main-btn mod-no-shadow mod-small account__btn">Сохранить</button>
           </div>
         </form>
       </div>
