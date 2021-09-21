@@ -1,6 +1,11 @@
 @import '../sizes';
+@import '../extends';
 
 .calendar {
+  position: relative;
+}
+
+.calendar__main-content {
   padding-top: 6rem;
   padding-bottom: 6rem;
 
@@ -41,6 +46,17 @@
 
 .calendar__selects-wrapper {
   margin: -1rem;
+
+  @include for-sm-down {
+    display: flex;
+    flex-direction: column;
+
+    .gl__select-container {
+      &.mod-filter-select {
+
+      }
+    }
+  }
 }
 
 .calendar__header-wrapper {
@@ -60,10 +76,18 @@
   padding-top: 2.8rem;
 }
 
+.calendar__filter-btn {
+  max-width: 40rem;
+  padding: 1.6rem;
+}
+
 .calendar__btn-download {
   min-width: 26rem;
   text-align: center;
   margin-left: 2rem;
+  width: 100%;
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
 
   @include for-md-down {
     margin-left: 0;
@@ -74,5 +98,64 @@
     .gl__btn-download-icon {
       left: 1.2rem !important;
     }
+  }
+
+  @include for-sm-down {
+    margin-top: 1.4rem;
+  }
+}
+
+.calendar__modal-filter-content {
+  padding-top: 2.6rem;
+  padding-bottom: 2.6rem;
+}
+
+.calendar__modal-filter {
+  @extend %modal;
+  position: absolute;
+  height: 100%;
+  background-color: #fff;
+}
+
+.calendar__modal-filter-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.calendar__modal-filter-header-subtitle {
+  margin-bottom: 0;
+  margin-top: 1rem;
+}
+
+.calendar__modal-filter-close {
+  width: 4rem;
+  height: 4rem;
+  position: relative;
+  display: block;
+
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 2.2rem;
+    transition: all 0.3s ease;
+  }
+
+  &:before {
+    margin-left: -8px;
+    height: 2px;
+    background: var(--main-color);
+    transform: rotate(45deg);
+    margin-top: 0;
+  }
+
+  &:after {
+    height: 2px;
+    margin-left: -8px;
+    background: var(--main-color);
+    transform: rotate(-45deg);
+    margin-top: 0;
   }
 }

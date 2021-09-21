@@ -1,24 +1,19 @@
 @import '../sizes';
+@import '../extends';
 
 .modal {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
+  @extend %modal;
   background-color: rgba(31, 16, 95, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: -1;
-  top: -9999px;
-  left: -9999px;
-  opacity: 0;
-  transition: 400ms opacity;
 
-  &.mod-show {
-    opacity: 1;
-    z-index: 51;
-    top: 0;
-    left: 0;
+  .gl__input-container {
+    margin-bottom: 2rem;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
   }
 } 
 

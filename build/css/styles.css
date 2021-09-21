@@ -1709,6 +1709,22 @@ button.swiper-pagination-bullet {
       -ms-flex-direction: column;
           flex-direction: column; }
 
+.modal, .calendar__modal-filter {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  top: -9999px;
+  left: -9999px;
+  opacity: 0;
+  -webkit-transition: 400ms opacity;
+  transition: 400ms opacity; }
+  .mod-show.modal, .mod-show.calendar__modal-filter {
+    opacity: 1;
+    z-index: 51;
+    top: 0;
+    left: 0; }
+
 @media screen and (min-width: 1400px) {
   .gl__fl-show {
     display: none !important; } }
@@ -2398,10 +2414,23 @@ button.swiper-pagination-bullet {
   .gl__xxs-hide {
     display: none !important; } }
 
-.modal {
+.modal, .calendar__modal-filter {
   position: fixed;
   width: 100vw;
   height: 100vh;
+  z-index: -1;
+  top: -9999px;
+  left: -9999px;
+  opacity: 0;
+  -webkit-transition: 400ms opacity;
+  transition: 400ms opacity; }
+  .mod-show.modal, .mod-show.calendar__modal-filter {
+    opacity: 1;
+    z-index: 51;
+    top: 0;
+    left: 0; }
+
+.modal {
   background-color: rgba(31, 16, 95, 0.7);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2411,18 +2440,11 @@ button.swiper-pagination-bullet {
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center;
-  z-index: -1;
-  top: -9999px;
-  left: -9999px;
-  opacity: 0;
-  -webkit-transition: 400ms opacity;
-  transition: 400ms opacity; }
-  .modal.mod-show {
-    opacity: 1;
-    z-index: 51;
-    top: 0;
-    left: 0; }
+          justify-content: center; }
+  .modal .gl__input-container {
+    margin-bottom: 2rem; }
+    .modal .gl__input-container:last-child {
+      margin-bottom: 0; }
 
 .modal__container {
   padding: 40px 52px;
@@ -3935,8 +3957,7 @@ a.site-btn--1.disabled,
 .app-header__dop-logo {
   display: none; }
 
-html,
-body {
+html, body {
   margin: 0;
   padding: 0; }
 
@@ -7993,10 +8014,29 @@ html.remodal-is-locked {
   .gl__xxs-hide {
     display: none !important; } }
 
+.modal, .calendar__modal-filter {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  top: -9999px;
+  left: -9999px;
+  opacity: 0;
+  -webkit-transition: 400ms opacity;
+  transition: 400ms opacity; }
+  .mod-show.modal, .mod-show.calendar__modal-filter {
+    opacity: 1;
+    z-index: 51;
+    top: 0;
+    left: 0; }
+
 .calendar {
+  position: relative; }
+
+.calendar__main-content {
   padding-top: 6rem;
   padding-bottom: 6rem; }
-  .calendar .ps__rail-x {
+  .calendar__main-content .ps__rail-x {
     height: 1rem;
     background: #F0F0F1;
     border-radius: 4px;
@@ -8004,14 +8044,14 @@ html.remodal-is-locked {
     opacity: 1 !important;
     cursor: pointer;
     margin: 0 3rem; }
-    .calendar .ps__rail-x:hover {
+    .calendar__main-content .ps__rail-x:hover {
       top: 0;
       height: 1.6rem;
       background: #fafafa; }
-      .calendar .ps__rail-x:hover .ps__thumb-x {
+      .calendar__main-content .ps__rail-x:hover .ps__thumb-x {
         background: #9681F2;
         height: 1rem; }
-  .calendar .ps__thumb-x {
+  .calendar__main-content .ps__thumb-x {
     height: .6rem;
     background: #9681F2 !important;
     border-radius: 4px;
@@ -8025,6 +8065,15 @@ html.remodal-is-locked {
 
 .calendar__selects-wrapper {
   margin: -1rem; }
+  @media screen and (max-width: 559px) {
+    .calendar__selects-wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
 
 .calendar__header-wrapper {
   display: -webkit-box;
@@ -8049,10 +8098,17 @@ html.remodal-is-locked {
   overflow: hidden;
   padding-top: 2.8rem; }
 
+.calendar__filter-btn {
+  max-width: 40rem;
+  padding: 1.6rem; }
+
 .calendar__btn-download {
   min-width: 26rem;
   text-align: center;
-  margin-left: 2rem; }
+  margin-left: 2rem;
+  width: 100%;
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem; }
   @media screen and (max-width: 767px) {
     .calendar__btn-download {
       margin-left: 0;
@@ -8061,3 +8117,56 @@ html.remodal-is-locked {
       display: inline-block; }
       .calendar__btn-download .gl__btn-download-icon {
         left: 1.2rem !important; } }
+  @media screen and (max-width: 559px) {
+    .calendar__btn-download {
+      margin-top: 1.4rem; } }
+
+.calendar__modal-filter-content {
+  padding-top: 2.6rem;
+  padding-bottom: 2.6rem; }
+
+.calendar__modal-filter {
+  position: absolute;
+  height: 100%;
+  background-color: #fff; }
+
+.calendar__modal-filter-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 3rem; }
+
+.calendar__modal-filter-header-subtitle {
+  margin-bottom: 0;
+  margin-top: 1rem; }
+
+.calendar__modal-filter-close {
+  width: 4rem;
+  height: 4rem;
+  position: relative;
+  display: block; }
+  .calendar__modal-filter-close:before, .calendar__modal-filter-close:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 2.2rem;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+  .calendar__modal-filter-close:before {
+    margin-left: -8px;
+    height: 2px;
+    background: var(--main-color);
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    margin-top: 0; }
+  .calendar__modal-filter-close:after {
+    height: 2px;
+    margin-left: -8px;
+    background: var(--main-color);
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    margin-top: 0; }
