@@ -23,9 +23,10 @@
 
   .gl__select {
     &.parsley-error {
-       ~ .choices__inner {
-        border-color: var(--btn-color) !important;
-      }
+      // todo невозм стилизовать предыдущий элемент
+      // ~ .choices__inner {
+      //  border-color: var(--btn-color) !important;
+      //}
     }
   }
 }
@@ -444,6 +445,7 @@
     right: 2rem;
     left: initial !important;
     top: 2rem !important;
+    z-index: 50 !important;
   }
 
   .datepicker-switch {

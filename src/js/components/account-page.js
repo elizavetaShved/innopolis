@@ -1,6 +1,7 @@
 import { SelectInit } from './common/selectInit';
 import phoneMask from '../functions/phoneMask';
 import { Datepicker } from './common/datepicker';
+import { InputFileInit } from './common/inputFileInit';
 
 export class AccountPage {
   constructor() {
@@ -8,5 +9,6 @@ export class AccountPage {
     phoneMask();
     new SelectInit(this.hostElem);
     new Datepicker(this.hostElem);
+    new InputFileInit(this.hostElem);
   }
 }

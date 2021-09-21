@@ -6,11 +6,11 @@ export class Datepicker {
     const datepickerContainerElems = hostElem.querySelectorAll('.gl__datepicker-container');
     const datepickerInputElems = hostElem.querySelectorAll('.gl__datepicker-input');
 
-    datepickerInputElems.forEach(datepickerInput => {
+    datepickerInputElems.forEach((datepickerInput, index) => {
       $(datepickerInput)
         .datepicker({
           format: 'dd.mm.yyyy',
-          container: datepickerContainerElems,
+          container: datepickerContainerElems[index],
           language: 'ru',
           autoclose: true,
           endDate: new Date()

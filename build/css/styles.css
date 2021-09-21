@@ -719,9 +719,6 @@ nav ul {
 .gl__form .gl__input.parsley-error {
   border-color: var(--btn-color) !important; }
 
-.gl__form .gl__select.parsley-error ~ .choices__inner {
-  border-color: var(--btn-color) !important; }
-
 .gl__input-container {
   display: grid;
   grid-template-columns: 11rem 1fr;
@@ -1039,7 +1036,8 @@ nav ul {
     border-radius: 14px;
     right: 2rem;
     left: initial !important;
-    top: 2rem !important; }
+    top: 2rem !important;
+    z-index: 50 !important; }
   .gl__datepicker-container .datepicker-switch {
     font-size: 1.8rem;
     padding: 0 2.5rem;
