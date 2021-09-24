@@ -1,7 +1,7 @@
 @import 'src/scss/sizes';
 
 .sticky-menu {
-  height: 7.0rem;
+  height: var(--stycky-menu-height);
   position: sticky;
   top: 0;
   z-index: 7;

@@ -110,3 +110,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 nav ul {
   list-style: none;
 }
+
+::selection {
+  background-color: var(--secondary-color);
+  color: #fff;
+}

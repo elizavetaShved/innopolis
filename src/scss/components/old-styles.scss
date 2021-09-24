@@ -699,6 +699,11 @@ html.is-locked {
   position: relative;
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
+  height: calc(100vh - (var(--header-height) + var(--stycky-menu-height)));
+
+  @include for-bg-down {
+    height: auto;
+  }
 }
 
 .hero-block__inner {

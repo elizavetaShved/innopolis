@@ -1,7 +1,7 @@
 @import 'src/scss/sizes';
 
 .gl__sections-top {
-  height: 84px;
+  height: var(--header-height);
   background-color: var(--main-color);
   padding: 0 var(--page-content-padding);
 
@@ -10,7 +10,7 @@
   }
 
   @include for-bg-down {
-    height: 60px;
+    height: var(--header-height-mobile);
   }
 }
 

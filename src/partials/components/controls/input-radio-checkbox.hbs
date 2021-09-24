@@ -2,6 +2,9 @@
   <input type="{{ inputType }}"
          class="gl__radio-checkbox-input"
          name="{{name}}-{{type}}"
+    {{#if isChecked }}
+         checked
+    {{/if}}
     {{#if required }}
          data-parsley-required=""
     {{/if}}

@@ -8,7 +8,7 @@
   <meta name="format-detection" content="telephone=no">
   <script src="assets/js/ie11CustomProperties.js"></script>
   <link rel="stylesheet" href="css/styles.min.css"/>
-  <link rel="icon" type="image/x-icon" href="img/header/auth-btn.svg">
+  <link type="image/png" href="img/favicon.ico" rel="icon">
   <title>
     Аккаунт
   </title>
@@ -182,6 +182,7 @@
             <input type="checkbox"
                    class="gl__radio-checkbox-input"
                    name="agreement-participation"
+                   checked
                    data-parsley-required=""
             >
           
@@ -378,6 +379,7 @@
             <input type="checkbox"
                    class="gl__radio-checkbox-input"
                    name="agreement-partner"
+                   checked
                    data-parsley-required=""
             >
           
@@ -707,6 +709,7 @@
                 <input type="checkbox"
                        class="gl__radio-checkbox-input"
                        name="agreement-registr"
+                       checked
                        data-parsley-required=""
                 >
               
@@ -904,11 +907,11 @@
   
           <div class="header__control-wrapper">
             <div class="header__lang-select-wrapper">
-              <div class="header__lang-select header__lang-selected-item mod-light">(упр js)</div>
+              <div class="header__lang-select header__lang-selected-item mod-light">рус</div>
               <div class="header__lang-select-options">
                 <label class="header__lang-radio-wrapper">
                   <input type="text" class="header__lang-radio">
-                  <span class="header__lang-select header__lang-option-item mod-light">(упр js)</span>
+                  <span class="header__lang-select header__lang-option-item mod-light">eng</span>
                 </label>
               </div>
             </div>
@@ -1051,6 +1054,7 @@
                 <input type="radio"
                        class="gl__radio-checkbox-input"
                        name="participation-account"
+                       checked
                        data-parsley-required=""
                 >
               
@@ -1156,36 +1160,31 @@
             </li>
             <li class="gl__input-container">
               <div class="gl__input-title mod-small">Организация</div>
-              <!-- 1) isPassword / isContacts - необходимы для js -->
-              <!-- 2) inputType - html type input -->
-              <!-- 3) required (true/false) - обязательно для заполнения -->
-              <!-- 4) name - name input -->
-              <!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
-              <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
-              <!-- 7) id - обычный id, например для первого пароля-->
-              <!-- 8) parsleyType - для валидации (н-р email) -->
-              <!-- 9) minLength - максимально допустимое к-во символов -->
-              <!-- 10) maxLength - максимально допустимое к-во символов -->
-              
-              <label class="gl__input-wrapper  ">
-                  <span class="gl__input-mark-required"></span>
-                <input type="text"
-                       class="gl__input "
-                       data-parsley-minlength="2"
-                       name="organization-account"
-              
-                       data-parsley-minlength="2"
-              
-              
-                       data-parsley-required=""
-              
-              
-                       placeholder="Какую организацию Вы представляете?"
-              
-              
-                >
-              
-              </label>
+              <div class="gl__select-container ">
+                <label class="gl__select-wrapper">
+                    <span class="gl__input-mark-required"></span>
+                  <select class="gl__select"
+                          name="organization-account"
+                          data-parsley-required="" data-parsley-min = "1"
+                  >
+                    <div class="qwe"></div>
+                    <option class="gl__select-option">Какую организацию Вы представляете?</option>
+                    <option class="gl__select-option" value="Организация 1">Организация 1</option>
+                    <option class="gl__select-option" value="Организация 2">Организация 2</option>
+                    <option class="gl__select-option" value="Организация 3">Организация 3</option>
+                    <option class="gl__select-option" value=""></option>
+                    <option class="gl__select-option" value=""></option>
+                    <option class="gl__select-option" value=""></option>
+                    <option class="gl__select-option" value=""></option>
+                    <option class="gl__select-option" value=""></option>
+                    <option class="gl__select-option" value=""></option>
+                    <option class="gl__select-option" value=""></option>
+                    <option class="gl__select-option" value=""></option>
+                    <option class="gl__select-option" value=""></option>
+                    <option class="gl__select-option" value=""></option>
+                  </select>
+                </label>
+              </div>
             </li>
             <li class="gl__input-container">
               <div class="gl__input-title mod-small">Пол</div>
@@ -1224,6 +1223,7 @@
                   <input type="radio"
                          class="gl__radio-checkbox-input"
                          name="type-organization-account"
+                         checked
                          data-parsley-required=""
                   >
                 
@@ -1319,32 +1319,17 @@
               </label>
             </li>
             <li class="gl__input-container">
-              <div class="gl__input-title mod-small">Направление</div>
-              <div class="gl__select-container ">
-                <label class="gl__select-wrapper">
-                    <span class="gl__input-mark-required"></span>
-                  <select class="gl__select"
-                          name="direction-account"
-                          data-parsley-required="" data-parsley-min = "1"
-                  >
-                    <div class="qwe"></div>
-                    <option class="gl__select-option">Которое интересно посетить на форуме</option>
-                    <option class="gl__select-option" value="Кибербезопасность">Кибербезопасность</option>
-                    <option class="gl__select-option" value="Цифра в культуре">Цифра в культуре</option>
-                    <option class="gl__select-option" value="Цифровая трансформация регионо">Цифровая трансформация регионо</option>
-                    <option class="gl__select-option" value="Российская цифровая индустрия">Российская цифровая индустрия</option>
-                    <option class="gl__select-option" value="Цифровые кадры для индустрии">Цифровые кадры для индустрии</option>
-                    <option class="gl__select-option" value="Медиа-акселератор">Медиа-акселератор</option>
-                    <option class="gl__select-option" value="Вузы">Вузы</option>
-                    <option class="gl__select-option" value="Стартапы">Стартапы</option>
-                    <option class="gl__select-option" value=""></option>
-                    <option class="gl__select-option" value=""></option>
-                    <option class="gl__select-option" value=""></option>
-                    <option class="gl__select-option" value=""></option>
-                    <option class="gl__select-option" value=""></option>
-                  </select>
-                </label>
-              </div>
+              <div class="gl__input-title mod-small">ПЦР-тест</div>
+              <label class="gl__input-wrapper mod-file">
+                  <span class="gl__input-mark-required"></span>
+                <input type="file"
+                       class="gl__input-file"
+                       name="pcr-test-account"
+                       data-parsley-required=""
+                >
+                <span class="gl__input mod-file">PDF файл, не более 2 мб</span>
+                <img src="img/form/download.svg" alt="" class="gl__input-icon">
+              </label>
             </li>
             <li class="gl__input-container">
               <div class="gl__input-title mod-small">E-mail</div>
@@ -1380,18 +1365,33 @@
               
               </label>
             </li>
-            <li class="gl__input-container">
-              <div class="gl__input-title mod-small">ПЦР-тест</div>
-              <label class="gl__input-wrapper mod-file">
-                  <span class="gl__input-mark-required"></span>
-                <input type="file"
-                       class="gl__input-file"
-                       name="pcr-test-account"
-                       data-parsley-required=""
-                >
-                <span class="gl__input mod-file">PDF файл, не более 2 мб</span>
-                <img src="img/form/download.svg" alt="" class="gl__input-icon">
-              </label>
+            <li class="gl__input-container account__direction">
+              <div class="gl__input-title mod-small">Направление</div>
+              <div class="gl__select-container ">
+                <label class="gl__select-wrapper">
+                    <span class="gl__input-mark-required"></span>
+                  <select class="gl__select"
+                          name="direction-account"
+                          data-parsley-required="" data-parsley-min = "1"
+                  >
+                    <div class="qwe"></div>
+                    <option class="gl__select-option">Которое интересно посетить на форуме</option>
+                    <option class="gl__select-option" value="Кибербезопасность">Кибербезопасность</option>
+                    <option class="gl__select-option" value="Цифра в культуре">Цифра в культуре</option>
+                    <option class="gl__select-option" value="Цифровая трансформация регионо">Цифровая трансформация регионо</option>
+                    <option class="gl__select-option" value="Российская цифровая индустрия">Российская цифровая индустрия</option>
+                    <option class="gl__select-option" value="Цифровые кадры для индустрии">Цифровые кадры для индустрии</option>
+                    <option class="gl__select-option" value="Медиа-акселератор">Медиа-акселератор</option>
+                    <option class="gl__select-option" value="Вузы">Вузы</option>
+                    <option class="gl__select-option" value="Стартапы">Стартапы</option>
+                    <option class="gl__select-option" value=""></option>
+                    <option class="gl__select-option" value=""></option>
+                    <option class="gl__select-option" value=""></option>
+                    <option class="gl__select-option" value=""></option>
+                    <option class="gl__select-option" value=""></option>
+                  </select>
+                </label>
+              </div>
             </li>
 
             <li class="gl__input-container">
@@ -1521,7 +1521,7 @@
             </div>
             <div class="gl__form-radio-wrapper">
               <label class="gl__radio-checkbox-input-wrapper mod-inline mod-for-caption">
-                <input type="radio"
+                <input type="checkbox"
                        class="gl__radio-checkbox-input"
                        name="days-participation-account"
                 >
@@ -1530,7 +1530,7 @@
                   <span class="gl__radio-checkbox-input-text">2 декабря</span>
               </label>
               <label class="gl__radio-checkbox-input-wrapper mod-inline mod-for-caption">
-                <input type="radio"
+                <input type="checkbox"
                        class="gl__radio-checkbox-input"
                        name="days-participation-account"
                 >
@@ -1539,7 +1539,7 @@
                   <span class="gl__radio-checkbox-input-text">3 декабря</span>
               </label>
               <label class="gl__radio-checkbox-input-wrapper mod-inline mod-for-caption">
-                <input type="radio"
+                <input type="checkbox"
                        class="gl__radio-checkbox-input"
                        name="days-participation-account"
                 >
@@ -1734,7 +1734,7 @@
               </label>
             </li>
             <li class="gl__input-container">
-              <div class="gl__input-title mod-small">Номер рейса отъезда</div>
+              <div class="gl__input-title mod-small">Номер рейса отбытия</div>
               <!-- 1) isPassword / isContacts - необходимы для js -->
               <!-- 2) inputType - html type input -->
               <!-- 3) required (true/false) - обязательно для заполнения -->

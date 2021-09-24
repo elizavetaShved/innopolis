@@ -8,8 +8,8 @@ export class AccountPage {
   constructor() {
     this.hostElem = document.querySelector('#account-host');
 
-    const universityInputTextWrapper = this.hostElem.querySelector('.account__university');
-    const universityInputText = universityInputTextWrapper.querySelector('.gl__input');
+    const directionSelectWrapper = this.hostElem.querySelector('.account__direction');
+    const directionSelect = directionSelectWrapper.querySelector('.gl__select');
 
     const universitySelectWrapper = this.hostElem.querySelector('.account__university-type');
     const universitySelect = universitySelectWrapper.querySelector('.gl__select');
@@ -20,8 +20,10 @@ export class AccountPage {
     new Datepicker(this.hostElem);
     new InputFileInit(this.hostElem);
 
-    universityInputText.onchange = () => {
-      if (universityInputText.value) {
+
+
+    directionSelect.onchange = () => {
+      if (directionSelect.value === 'Вузы') {
         universitySelectWrapper.classList.add('mod-show');
       } else {
         universitySelectWrapper.classList.remove('mod-show');
