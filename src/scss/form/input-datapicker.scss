@@ -8,9 +8,10 @@
     padding: 2rem;
     box-shadow: 0 0 10px 4px #0000001a;
     border-radius: 14px;
-    right: 2rem;
+    right: 0;
     left: initial !important;
-    top: 2rem !important;
+    top: 100% !important;
+    margin-top: 1rem;
     z-index: 50 !important;
     width: 29rem;
     display: flex;

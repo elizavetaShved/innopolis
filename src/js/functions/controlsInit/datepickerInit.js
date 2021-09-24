@@ -4,9 +4,8 @@ import 'bootstrap-datepicker/js/locales/bootstrap-datepicker.ru';
 export default function datepickerInit() {
   const datepickerContainerElems = document.querySelectorAll('.js-datepicker-container');
   const datepickerInputElems = document.querySelectorAll('.js-input');
-  const datepickerBtnOpenElems = document.querySelectorAll('.js-input-icon');
 
-  datepickerBtnOpenElems.forEach((datepickerBtn, index) => {
+  datepickerContainerElems.forEach((datepickerContainerElem, index) => {
     let endDate;
     let startDate;
     const currentDate = new Date();
@@ -24,14 +23,18 @@ export default function datepickerInit() {
         break;
     }
 
-    $(datepickerBtn)
+    $(datepickerInputElems[index])
       .datepicker({
         format: 'dd.mm.yyyy',
-        container: datepickerContainerElems[index],
+        container: datepickerContainerElem,
         language: 'ru',
         autoclose: true,
         endDate: endDate || null,
         startDate: startDate || null
       })
+
+    datepickerInputElems[index].oninput = () => {
+      $(datepickerInputElems[index]).datepicker('hide');
+    }
   })
 }

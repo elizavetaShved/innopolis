@@ -1,5 +1,4 @@
 import { Form } from './form';
-import phoneMask from '../../functions/phoneMask';
 import { checkExistParent } from '../../functions/checkExistParent';
 
 export class Modal {
@@ -17,8 +16,6 @@ export class Modal {
 
     const proposalLinkElems = this.hostElem.querySelectorAll('.modal__proposal-link');
     const recoverPasswordBtn = this.hostElem.querySelector('.gl__input-hint-link');
-
-    phoneMask();
 
     new Form(this.hostElem);
 

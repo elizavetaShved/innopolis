@@ -1,4 +1,3 @@
-import phoneMask from '../functions/phoneMask';
 import { Form } from './common/form';
 
 export class AccountPage {
@@ -17,7 +16,6 @@ export class AccountPage {
     const menuRadioValue = this.hostElem.querySelectorAll('.account__menu-radio');
     this.accountComponent = Array.from(this.hostElem.querySelectorAll('.account__component'));
 
-    phoneMask();
     new Form(this.hostElem);
 
     directionSelect.onchange = () => {

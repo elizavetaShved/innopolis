@@ -19,6 +19,8 @@ import { AccountPage } from './components/account-page';
 import selectInit from './functions/controlsInit/selectInit';
 import datepickerInit from './functions/controlsInit/datepickerInit';
 import inputFileInit from './functions/controlsInit/inputFileInit';
+import phoneMask from './functions/phoneMask';
+import dateMask from './functions/dateMask';
 
 document.addEventListener('DOMContentLoaded', function () {
   // layout
@@ -49,6 +51,11 @@ document.addEventListener('DOMContentLoaded', function () {
   customSelects();
   scrollByAnchor();
 
+  // маски
+  phoneMask();
+  dateMask();
+
+  // контролы
   datepickerInit();
   selectInit();
   inputFileInit();
