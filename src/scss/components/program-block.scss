@@ -76,6 +76,7 @@
 
 .program__navigate-radio:checked + .program__navigate-radio-content {
   background-color: #302463;
+  color: #fff;
   border-color: transparent;
 }
 
@@ -83,6 +84,7 @@
   .program__navigate-radio-content:hover {
     border-color: transparent;
     background-color: #6b59b6;
+    color: #fff !important;
   }
 }
 
@@ -96,9 +98,14 @@
   color: #fff;
   background-color: transparent;
   height: min-content;
-  transition: background-color 350ms, border-color 350ms;
+  transition: background-color 250ms, border-color 250ms;
   display: block;
   cursor: pointer;
+
+  &.mod-white-background {
+    border-color: #000;
+    color: #000;
+  }
 }
 
 @media (max-width: 1023px) {

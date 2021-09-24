@@ -1,0 +1,33 @@
+.media__item-main-content {
+  display: flex;
+}
+
+.media__video-bnt {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: var(--secondary-color);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.media__video-btn-img {
+  height: 1.8rem;
+  margin-right: 1.8rem;
+}
+
+.media__geolocation {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  margin-top: 4.2rem;
+}
+
+.media__geolocation-img {
+  height: 2rem;
+  margin-right: 1.6rem;
+}
