@@ -72,16 +72,18 @@
     background: var(--pale-secondary-color) !important;
     border: none !important;
     font-size: 1.4rem;
-    line-height: 50px;
     padding: 0 3rem 0 2.2rem;
     display: flex;
     align-items: center;
     border-radius: 30px !important;
-    min-height: 50px;
+    min-height: 5.2rem;
+
+    @include for-lg-down {
+      min-height: 4.1rem;
+    }
 
     @include for-sm-down {
-      line-height: 40px;
-      min-height: 40px;
+      min-height: 4rem;
     }
   }
 

@@ -39,19 +39,19 @@
     </div>
 
     <div class="sticky-menu__section gl__sections-top__section">
-      <button class="header__auth-btn mod-show gl__main-btn mod-small {{#if lightPage }}mod-no-shadow{{/if}}" value="auth">
+      <button type="button" class="header__auth-btn mod-show gl__main-btn mod-small {{#if lightPage }}mod-no-shadow{{/if}} js-open-auth-modal" value="auth">
         <span class="gl__bg-hide">Авторизоваться</span>
         <span class="gl__bg-show">
         <img src="img/header/auth-btn.svg" alt="" class="header__auth-btn-icon">
       </span>
       </button>
 
-      <button class="header__auth-btn gl__main-btn mod-small {{#if lightPage }}mod-no-shadow{{/if}}" value="registr">
+      <a href="/account-menu.html" class="header__auth-btn gl__main-btn mod-small {{#if lightPage }}mod-no-shadow{{/if}}">
         <span class="gl__bg-hide">Кабинет</span>
         <span class="gl__bg-show">
         <img src="img/header/auth-btn.svg" alt="" class="header__auth-btn-icon">
       </span>
-      </button>
+      </a>
     </div>
   </div>
 </div>

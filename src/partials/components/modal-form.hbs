@@ -65,7 +65,9 @@
       </div>
 
       <div class="gl__radio-input-container">
-        {{> controls/input-radio-checkbox isChecked=true required="true" name="agreement" type=type inputType="checkbox" }}
+        <div class="gl__form-radio-wrapper">
+          {{> controls/input-radio-checkbox isChecked=true required="true" name="agreement" type=type inputType="checkbox" }}
+        </div>
 
         <span class="gl__radio-input-caption">
           Я подтверждаю свое согласие с условиями

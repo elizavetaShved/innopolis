@@ -64,6 +64,18 @@
       border-bottom-color: var(--btn-color);
     }
   }
+
+  &:disabled {
+    + .account__menu-radio-content {
+      cursor: initial;
+      user-select: none;
+      
+      &:hover {
+        color: var(--muted-color);
+        border-bottom-color: transparent;
+      }
+    }
+  }
 }
 
 .account__menu-radio-content {

@@ -59,8 +59,9 @@
 
         {{#if isRegistr}}
           <div class="gl__radio-input-container">
-
-            {{> controls/input-radio-checkbox isChecked=true required="true" name="agreement" type=type inputType="checkbox" }}
+            <div class="gl__form-radio-wrapper">
+              {{> controls/input-radio-checkbox isChecked=true required="true" name="agreement" type=type inputType="checkbox" }}
+            </div>
 
             <span class="gl__radio-input-caption">
           Я подтверждаю свое согласие с условиями
@@ -80,7 +81,8 @@
           </div>
         </div>
 
-        <button type="submit" class="gl__btn-submit js-btn-submit modal__btn-submit gl__main-btn mod-long mod-no-shadow mod-small">
+        <button type="submit"
+                class="gl__btn-submit js-btn-submit modal__btn-submit gl__main-btn mod-long mod-no-shadow mod-small">
           {{#if isRegistr}}
             Зарегистрироваться
           {{else}}

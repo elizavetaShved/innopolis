@@ -178,16 +178,18 @@
         </div>
   
         <div class="gl__radio-input-container">
-          <label class="gl__radio-checkbox-input-wrapper  ">
-            <input type="checkbox"
-                   class="gl__radio-checkbox-input"
-                   name="agreement-participation"
-                   checked
-                   data-parsley-required=""
-            >
-          
-            <span class="gl__radio-checkbox-input-content"></span>
-          </label>
+          <div class="gl__form-radio-wrapper">
+            <label class="gl__radio-checkbox-input-wrapper  ">
+              <input type="checkbox"
+                     class="gl__radio-checkbox-input"
+                     name="agreement-participation"
+                     checked
+                     data-parsley-required=""
+              >
+            
+              <span class="gl__radio-checkbox-input-content"></span>
+            </label>
+          </div>
   
           <span class="gl__radio-input-caption">
             Я подтверждаю свое согласие с условиями
@@ -375,16 +377,18 @@
         </div>
   
         <div class="gl__radio-input-container">
-          <label class="gl__radio-checkbox-input-wrapper  ">
-            <input type="checkbox"
-                   class="gl__radio-checkbox-input"
-                   name="agreement-partner"
-                   checked
-                   data-parsley-required=""
-            >
-          
-            <span class="gl__radio-checkbox-input-content"></span>
-          </label>
+          <div class="gl__form-radio-wrapper">
+            <label class="gl__radio-checkbox-input-wrapper  ">
+              <input type="checkbox"
+                     class="gl__radio-checkbox-input"
+                     name="agreement-partner"
+                     checked
+                     data-parsley-required=""
+              >
+            
+              <span class="gl__radio-checkbox-input-content"></span>
+            </label>
+          </div>
   
           <span class="gl__radio-input-caption">
             Я подтверждаю свое согласие с условиями
@@ -511,7 +515,8 @@
             </div>
           </div>
   
-          <button type="submit" class="gl__btn-submit js-btn-submit modal__btn-submit gl__main-btn mod-long mod-no-shadow mod-small">
+          <button type="submit"
+                  class="gl__btn-submit js-btn-submit modal__btn-submit gl__main-btn mod-long mod-no-shadow mod-small">
               Войти
           </button>
         </form>
@@ -578,7 +583,7 @@
         <form data-need-validation data-parsley-validate data-parsley-focus="none" class="gl__form">
           <div class="modal__header">
             <div class="modal__title">
-              Регистрация
+              Регистрация на форум
             </div>
             <button type="button" class="modal__close-btn">
               <svg width="20" height="20" aria-hidden="true" class="modal__close-icon">
@@ -704,17 +709,18 @@
           </ul>
   
             <div class="gl__radio-input-container">
-  
-              <label class="gl__radio-checkbox-input-wrapper  ">
-                <input type="checkbox"
-                       class="gl__radio-checkbox-input"
-                       name="agreement-registr"
-                       checked
-                       data-parsley-required=""
-                >
-              
-                <span class="gl__radio-checkbox-input-content"></span>
-              </label>
+              <div class="gl__form-radio-wrapper">
+                <label class="gl__radio-checkbox-input-wrapper  ">
+                  <input type="checkbox"
+                         class="gl__radio-checkbox-input"
+                         name="agreement-registr"
+                         checked
+                         data-parsley-required=""
+                  >
+                
+                  <span class="gl__radio-checkbox-input-content"></span>
+                </label>
+              </div>
   
               <span class="gl__radio-input-caption">
             Я подтверждаю свое согласие с условиями
@@ -733,7 +739,8 @@
             </div>
           </div>
   
-          <button type="submit" class="gl__btn-submit js-btn-submit modal__btn-submit gl__main-btn mod-long mod-no-shadow mod-small">
+          <button type="submit"
+                  class="gl__btn-submit js-btn-submit modal__btn-submit gl__main-btn mod-long mod-no-shadow mod-small">
               Зарегистрироваться
           </button>
         </form>
@@ -925,19 +932,19 @@
       </div>
   
       <div class="gl__sections-top__section">
-        <button class="header__auth-btn mod-show gl__main-btn mod-small " value="auth">
+        <button class="header__auth-btn mod-show gl__main-btn mod-small  js-open-auth-modal" value="auth">
           <span class="gl__bg-hide">Авторизоваться</span>
           <span class="gl__bg-show">
           <img src="img/header/auth-btn.svg" alt="" class="header__auth-btn-icon">
         </span>
         </button>
   
-        <button class="header__auth-btn gl__main-btn mod-small " value="registr">
+        <a href="/account-menu.html" class="header__auth-btn gl__main-btn mod-small ">
           <span class="gl__bg-hide">Кабинет</span>
           <span class="gl__bg-show">
           <img src="img/header/auth-btn.svg" alt="" class="header__auth-btn-icon">
         </span>
-        </button>
+        </a>
       </div>
     </div>
   </header>
@@ -982,19 +989,19 @@
       </div>
   
       <div class="sticky-menu__section gl__sections-top__section">
-        <button class="header__auth-btn mod-show gl__main-btn mod-small " value="auth">
+        <button type="button" class="header__auth-btn mod-show gl__main-btn mod-small  js-open-auth-modal" value="auth">
           <span class="gl__bg-hide">Авторизоваться</span>
           <span class="gl__bg-show">
           <img src="img/header/auth-btn.svg" alt="" class="header__auth-btn-icon">
         </span>
         </button>
   
-        <button class="header__auth-btn gl__main-btn mod-small " value="registr">
+        <a href="/account-menu.html" class="header__auth-btn gl__main-btn mod-small ">
           <span class="gl__bg-hide">Кабинет</span>
           <span class="gl__bg-show">
           <img src="img/header/auth-btn.svg" alt="" class="header__auth-btn-icon">
         </span>
-        </button>
+        </a>
       </div>
     </div>
   </div>
@@ -2244,13 +2251,11 @@
             трансформации страны: отраслевые компании и корпорации, ИТ-компании, профильные и педагогические вузы и
             органы государственной власти всех уровней.
           </div>
-          <div class="about-block__image">
-            <img src="img/old/img/image1.jpg" alt="">
-          </div>
-          <p>На площадках форума ведущие российские и международные спикеры поделятся опытом и индустриальными
+          <img src="img/old/img/image1.jpg" alt="" class="about-block__image">
+          <p class="block__text">На площадках форума ведущие российские и международные спикеры поделятся опытом и индустриальными
             практиками. Участники DID познакомятся с новыми образовательными форматами и продуктами инновационного
             мышления.</p>
-          <p>Организатор форума <a href="">Университет Иннополис</a> — российский вуз, специализирующийся на
+          <p class="block__text">Организатор форума <a href="">Университет Иннополис</a> — российский вуз, специализирующийся на
             образовании, разработках и исследованиях в области информационных технологий и робототехники. В 2020 году
             на
             базе Университета Иннополис создана единая <a href="">площадка</a> для повышения квалификации
@@ -2911,7 +2916,7 @@
           <div class="sign-up-block__inner">
             <div class="sign-up-block__content gl__page-content">
               <h2 class="sign-up-block__title gl__title">Стать участником</h2>
-              <button class="gl__main-btn mod-big mod-no-shadow open-modal-participation"
+              <button class="gl__main-btn mod-big mod-no-shadow open-modal-registration"
                       data-remodal-target="sign_up"
                       type="button">Зарегистрироваться
               </button>

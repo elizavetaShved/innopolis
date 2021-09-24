@@ -19,26 +19,26 @@
 .gl__input-container {
   display: grid;
   grid-template-columns: 11rem 1fr;
-  grid-gap: 16px;
+  grid-gap: 1.6rem;
   align-items: center;
 
-  @include for-sm-down {
+  @include for-md-down {
     grid-template-columns: 1fr;
     grid-gap: .8rem;
   }
 }
 
 .gl__input-title {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: var(--main-color);
 
   &.mod-small {
     font-size: 1.4rem;
   }
 
-  @include for-sm-down {
-    padding-left: 20px;
-    font-size: 14px;
+  @include for-bg-down {
+    padding-left: 2rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -50,32 +50,32 @@
 
   &.mod-password {
     .gl__input {
-      padding-right: 46px !important;
+      padding-right: 4.6rem !important;
     }
   }
 }
 
 .gl__input {
   width: 100% !important;
-  padding: 15px 22px !important;
+  padding: 1.6rem 2.2rem !important;
   line-height: 1 !important;
-  font-size: 14px !important;
+  font-size: 1.4rem !important;
   color: var(--main-color) !important;
   background-color: var(--pale-secondary-color) !important;
   height: auto !important;
   border: 1px solid transparent;
-  border-radius: 30px !important;
+  border-radius: 3rem !important;
 
-  @include for-sm-down {
-    padding: 10px 20px !important;
+  @include for-bg-down {
+    padding: 1rem 2rem !important;
   }
 }
 
 .gl__input-mark-required {
   position: absolute;
   content: '';
-  width: 6px;
-  height: 6px;
+  width: .6rem;
+  height: .6rem;
   background-color: var(--btn-color);
   border-radius: 100%;
   top: 1.2rem;
@@ -86,10 +86,14 @@
 .gl__radio-input-container {
   display: flex;
   cursor: pointer;
-  margin-top: 40px;
+  margin-top: 4rem;
 
-  @include for-sm-down {
-    margin-top: 20px;
+  @include for-fl-down {
+    margin-top: 3rem;
+  }
+
+  @include for-bg-down {
+    margin-top: 2rem;
   }
 }
 
@@ -111,27 +115,27 @@
   transition: max-height 300ms;
 
   &.mod-show {
-    max-height: 30px;
-    margin: 38px 0;
+    max-height: 3rem;
+    margin: 3.8rem 0;
   }
 }
 
 .gl__error-block {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: var(--main-color);
 }
 
 .gl__error-icon {
-  height: 20px;
-  margin-right: 22px;
+  height: 2rem;
+  margin-right: 2.2rem;
 }
 
 .gl__input-hint-link {
   display: block;
   color: var(--btn-color) !important;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
   transition: color 300ms;
   text-align: start;
   grid-column: 2 / 3;
@@ -145,7 +149,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 22px;
+  right: 2.2rem;
 
   &.mod-show-password {
     .gl__input-password-btn-image {
@@ -161,7 +165,7 @@
 }
 
 .gl__input-password-btn-image {
-  height: 24px;
+  height: 2.4rem;
 
   &.type-show {
     display: none;

@@ -25,7 +25,6 @@ export class Header {
     const body = document.querySelector('body');
     this.selectWrapperElem = hostElem.querySelector('.header__lang-select-wrapper');
     const selectedItemElem = hostElem.querySelector('.header__lang-selected-item');
-    const btnAuthElems = hostElem.querySelectorAll('.header__auth-btn');
 
     this.selectedSelectElem = hostElem.querySelector('.header__lang-select');
     this.optionSelectElems = hostElem.querySelectorAll('.header__lang-option-item');
@@ -67,13 +66,6 @@ export class Header {
     selectedItemElem.onclick = () => {
       this.toggleSelect();
     }
-
-    btnAuthElems.forEach(btn => {
-      btn.onclick = () => {
-        const modal = new Modal(btn.value);
-        modal.isOpen();
-      }
-    })
 
     document.addEventListener('click', e => {
       if (this.isOpenSelect && !checkExistParent(e.target, this.selectWrapperElem)) {

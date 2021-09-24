@@ -18,17 +18,17 @@
 } 
 
 .modal__container {
-  padding: 40px 52px;
-  width: 647px;
+  padding: 4rem 5.2rem;
+  width: 64.7rem;
   background-color: #FFFFFF;
-  border-radius: 20px;
+  border-radius: 2rem;
   z-index: 100;
   overflow: auto;
   max-height: 100vh;
 
   @include for-md-down {
-    padding: 30px 20px;
-    margin: 0 10px;
+    padding: 3rem 2rem;
+    margin: 0 1rem;
     max-width: 90vw;
   }
 }
@@ -44,30 +44,34 @@
 .modal__header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: 4rem;
+
+  @include for-fl-down {
+    margin-bottom: 3rem;
+  }
 
   @include for-sm-down {
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
   }
 }
 
 .modal__title {
-  font-size: 30px;
+  font-size: 3rem;
   line-height: 1.1;
   color: var(--main-color);
-  margin-right: 20px;
+  margin-right: 2rem;
   font-weight: bold;
 
   @include for-sm-down {
-    font-size: 20px;
+    font-size: 2rem;
   }
 }
 
 .modal__close-btn {
-  width: 50px;
-  height: 50px;
-  margin-right: -40px;
-  margin-top: -24px;
+  width: 5rem;
+  height: 5rem;
+  margin-right: -4rem;
+  margin-top: -2.4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,13 +83,13 @@
   }
 
   @include for-md-down {
-    margin-right: -10px;
-    margin-top: -20px;
+    margin-right: -1rem;
+    margin-top: -2rem;
   }
 
   @include for-sm-down {
-    margin-right: -16px;
-    margin-top: -26px;
+    margin-right: -1.6rem;
+    margin-top: -2.6rem;
   }
 }
 
@@ -94,12 +98,12 @@
   transition: fill 300ms;
 
   @include for-sm-down {
-    height: 16px;
+    height: 1.6rem;
   }
 }
 
 .modal__btn-submit {
-  margin-top: 40px;
+  margin-top: 4rem;
 }
 
 .modal__success-text-wrapper {
@@ -114,36 +118,36 @@
 
 .modal__success-text {
   font-weight: bold;
-  font-size: 30px;
+  font-size: 3rem;
   line-height: 1.2;
   color: var(--main-color);
   text-align: center;
 
   @include for-md-down {
-    font-size: 26px;
+    font-size: 2.6rem;
   }
 
   @include for-sm-down {
-    font-size: 20px;
+    font-size: 2rem;
   }
 
   @include for-xxs-down {
-    font-size: 16px;
+    font-size: 1.6rem;
   }
 }
 
 .modal__proposal {
   text-align: center;
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #7F7E94;
-  margin-top: 20px;
+  margin-top: 2rem;
 }
 
 .modal__proposal-link {
   color: var(--btn-color) !important;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
   transition: color 300ms;
 
   &:hover {
@@ -157,8 +161,8 @@
 }
 
 .modal__caption {
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
   color: var(--main-color);
-  margin-bottom: 44px;
+  margin-bottom: 4.4rem;
 }

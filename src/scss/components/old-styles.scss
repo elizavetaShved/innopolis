@@ -114,7 +114,8 @@ input[type="number"] {
   text-decoration: none;
   top: .5rem;
   width: auto;
-  z-index: 100000 /* Above WP toolbar. */;
+  z-index: 100000 /* Above WP toolbar. */
+;
 }
 
 h1,
@@ -481,7 +482,31 @@ html.is-locked {
 }
 
 .about-block__image {
-  margin: 0 -2rem 3.6rem;
+  max-width: 100%;
+  max-height: 44.2rem;
+  object-fit: contain;
+  margin-bottom: 4rem;
+
+  @include for-sm-down {
+    margin-bottom: 2.4rem;
+  }
+}
+
+.block__text {
+  font-size: 1.6rem;
+  line-height: 1.4;
+
+  & + & {
+    margin-top: 3rem;
+  }
+
+  @include for-sm-down {
+    font-size: 1.4rem;
+
+    & + & {
+      margin-top: 2rem;
+    }
+  }
 }
 
 .contacts-block__section {
@@ -1656,10 +1681,6 @@ html.is-locked {
     display: none;
   }
 
-  .about-block__image {
-    margin: 0 0 3.6rem;
-  }
-
   .contacts-block__section {
     padding-top: 9.5rem;
     padding-bottom: 7.5rem;
@@ -1931,10 +1952,6 @@ html.is-locked {
     margin-bottom: 4rem;
     font-size: 2.4rem;
     font-weight: 700;
-  }
-
-  .about-block__image {
-    margin-bottom: 4rem;
   }
 
   .contacts-block__title {

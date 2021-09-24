@@ -178,16 +178,18 @@
         </div>
   
         <div class="gl__radio-input-container">
-          <label class="gl__radio-checkbox-input-wrapper  ">
-            <input type="checkbox"
-                   class="gl__radio-checkbox-input"
-                   name="agreement-participation"
-                   checked
-                   data-parsley-required=""
-            >
-          
-            <span class="gl__radio-checkbox-input-content"></span>
-          </label>
+          <div class="gl__form-radio-wrapper">
+            <label class="gl__radio-checkbox-input-wrapper  ">
+              <input type="checkbox"
+                     class="gl__radio-checkbox-input"
+                     name="agreement-participation"
+                     checked
+                     data-parsley-required=""
+              >
+            
+              <span class="gl__radio-checkbox-input-content"></span>
+            </label>
+          </div>
   
           <span class="gl__radio-input-caption">
             Я подтверждаю свое согласие с условиями
@@ -375,16 +377,18 @@
         </div>
   
         <div class="gl__radio-input-container">
-          <label class="gl__radio-checkbox-input-wrapper  ">
-            <input type="checkbox"
-                   class="gl__radio-checkbox-input"
-                   name="agreement-partner"
-                   checked
-                   data-parsley-required=""
-            >
-          
-            <span class="gl__radio-checkbox-input-content"></span>
-          </label>
+          <div class="gl__form-radio-wrapper">
+            <label class="gl__radio-checkbox-input-wrapper  ">
+              <input type="checkbox"
+                     class="gl__radio-checkbox-input"
+                     name="agreement-partner"
+                     checked
+                     data-parsley-required=""
+              >
+            
+              <span class="gl__radio-checkbox-input-content"></span>
+            </label>
+          </div>
   
           <span class="gl__radio-input-caption">
             Я подтверждаю свое согласие с условиями
@@ -511,7 +515,8 @@
             </div>
           </div>
   
-          <button type="submit" class="gl__btn-submit js-btn-submit modal__btn-submit gl__main-btn mod-long mod-no-shadow mod-small">
+          <button type="submit"
+                  class="gl__btn-submit js-btn-submit modal__btn-submit gl__main-btn mod-long mod-no-shadow mod-small">
               Войти
           </button>
         </form>
@@ -578,7 +583,7 @@
         <form data-need-validation data-parsley-validate data-parsley-focus="none" class="gl__form">
           <div class="modal__header">
             <div class="modal__title">
-              Регистрация
+              Регистрация на форум
             </div>
             <button type="button" class="modal__close-btn">
               <svg width="20" height="20" aria-hidden="true" class="modal__close-icon">
@@ -704,17 +709,18 @@
           </ul>
   
             <div class="gl__radio-input-container">
-  
-              <label class="gl__radio-checkbox-input-wrapper  ">
-                <input type="checkbox"
-                       class="gl__radio-checkbox-input"
-                       name="agreement-registr"
-                       checked
-                       data-parsley-required=""
-                >
-              
-                <span class="gl__radio-checkbox-input-content"></span>
-              </label>
+              <div class="gl__form-radio-wrapper">
+                <label class="gl__radio-checkbox-input-wrapper  ">
+                  <input type="checkbox"
+                         class="gl__radio-checkbox-input"
+                         name="agreement-registr"
+                         checked
+                         data-parsley-required=""
+                  >
+                
+                  <span class="gl__radio-checkbox-input-content"></span>
+                </label>
+              </div>
   
               <span class="gl__radio-input-caption">
             Я подтверждаю свое согласие с условиями
@@ -733,7 +739,8 @@
             </div>
           </div>
   
-          <button type="submit" class="gl__btn-submit js-btn-submit modal__btn-submit gl__main-btn mod-long mod-no-shadow mod-small">
+          <button type="submit"
+                  class="gl__btn-submit js-btn-submit modal__btn-submit gl__main-btn mod-long mod-no-shadow mod-small">
               Зарегистрироваться
           </button>
         </form>
@@ -925,19 +932,19 @@
       </div>
   
       <div class="gl__sections-top__section">
-        <button class="header__auth-btn mod-show gl__main-btn mod-small mod-no-shadow" value="auth">
+        <button class="header__auth-btn mod-show gl__main-btn mod-small mod-no-shadow js-open-auth-modal" value="auth">
           <span class="gl__bg-hide">Авторизоваться</span>
           <span class="gl__bg-show">
           <img src="img/header/auth-btn.svg" alt="" class="header__auth-btn-icon">
         </span>
         </button>
   
-        <button class="header__auth-btn gl__main-btn mod-small mod-no-shadow" value="registr">
+        <a href="/account-menu.html" class="header__auth-btn gl__main-btn mod-small mod-no-shadow">
           <span class="gl__bg-hide">Кабинет</span>
           <span class="gl__bg-show">
           <img src="img/header/auth-btn.svg" alt="" class="header__auth-btn-icon">
         </span>
-        </button>
+        </a>
       </div>
     </div>
   </header>
@@ -982,19 +989,19 @@
       </div>
   
       <div class="sticky-menu__section gl__sections-top__section">
-        <button class="header__auth-btn mod-show gl__main-btn mod-small mod-no-shadow" value="auth">
+        <button type="button" class="header__auth-btn mod-show gl__main-btn mod-small mod-no-shadow js-open-auth-modal" value="auth">
           <span class="gl__bg-hide">Авторизоваться</span>
           <span class="gl__bg-show">
           <img src="img/header/auth-btn.svg" alt="" class="header__auth-btn-icon">
         </span>
         </button>
   
-        <button class="header__auth-btn gl__main-btn mod-small mod-no-shadow" value="registr">
+        <a href="/account-menu.html" class="header__auth-btn gl__main-btn mod-small mod-no-shadow">
           <span class="gl__bg-hide">Кабинет</span>
           <span class="gl__bg-show">
           <img src="img/header/auth-btn.svg" alt="" class="header__auth-btn-icon">
         </span>
-        </button>
+        </a>
       </div>
     </div>
   </div>
@@ -1010,11 +1017,11 @@
               <span class="account__menu-radio-content">Профиль</span>
             </label>
             <label class="account__menu-radio-wrapper">
-              <input type="radio" name="account-menu" class="account__menu-radio">
+              <input type="radio" name="account-menu" class="account__menu-radio" disabled>
               <span class="account__menu-radio-content">Календарь бронирования</span>
             </label>
             <label class="account__menu-radio-wrapper">
-              <input type="radio" name="account-menu" class="account__menu-radio">
+              <input type="radio" name="account-menu" class="account__menu-radio" disabled>
               <span class="account__menu-radio-content">Медиа</span>
             </label>
           </div>
@@ -1771,7 +1778,7 @@
               </div>
               <div class="gl__form-radio-wrapper">
                 <label class="gl__radio-checkbox-input-wrapper mod-inline mod-for-caption">
-                  <input type="radio"
+                  <input type="checkbox"
                          class="gl__radio-checkbox-input"
                          name="date-transfer-account"
                   >
@@ -1780,7 +1787,7 @@
                     <span class="gl__radio-checkbox-input-text">2 декабря</span>
                 </label>
                 <label class="gl__radio-checkbox-input-wrapper mod-inline mod-for-caption">
-                  <input type="radio"
+                  <input type="checkbox"
                          class="gl__radio-checkbox-input"
                          name="date-transfer-account"
                   >
@@ -1789,7 +1796,7 @@
                     <span class="gl__radio-checkbox-input-text">3 декабря</span>
                 </label>
                 <label class="gl__radio-checkbox-input-wrapper mod-inline mod-for-caption">
-                  <input type="radio"
+                  <input type="checkbox"
                          class="gl__radio-checkbox-input"
                          name="date-transfer-account"
                   >
@@ -1805,7 +1812,7 @@
               </div>
               <div class="gl__form-radio-wrapper">
                 <label class="gl__radio-checkbox-input-wrapper mod-inline mod-for-caption">
-                  <input type="radio"
+                  <input type="checkbox"
                          class="gl__radio-checkbox-input"
                          name="date-transfer-2-account"
                   >
@@ -1814,7 +1821,7 @@
                     <span class="gl__radio-checkbox-input-text">2 декабря</span>
                 </label>
                 <label class="gl__radio-checkbox-input-wrapper mod-inline mod-for-caption">
-                  <input type="radio"
+                  <input type="checkbox"
                          class="gl__radio-checkbox-input"
                          name="date-transfer-2-account"
                   >
@@ -1823,7 +1830,7 @@
                     <span class="gl__radio-checkbox-input-text">3 декабря</span>
                 </label>
                 <label class="gl__radio-checkbox-input-wrapper mod-inline mod-for-caption">
-                  <input type="radio"
+                  <input type="checkbox"
                          class="gl__radio-checkbox-input"
                          name="date-transfer-2-account"
                   >
