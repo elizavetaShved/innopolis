@@ -1,7 +1,4 @@
-import { SelectInit } from './common/selectInit';
 import phoneMask from '../functions/phoneMask';
-import { Datepicker } from './common/datepicker';
-import { InputFileInit } from './common/inputFileInit';
 import { Form } from './common/form';
 
 export class AccountPage {
@@ -9,6 +6,7 @@ export class AccountPage {
 
   constructor() {
     this.hostElem = document.querySelector('#account-host');
+    if (!this.hostElem) return;
 
     const directionSelectWrapper = this.hostElem.querySelector('.profile__direction');
     const directionSelect = directionSelectWrapper.querySelector('.gl__select');
@@ -21,9 +19,6 @@ export class AccountPage {
 
     phoneMask();
     new Form(this.hostElem);
-    new SelectInit(this.hostElem);
-    new Datepicker(this.hostElem);
-    new InputFileInit(this.hostElem);
 
     directionSelect.onchange = () => {
       if (directionSelect.value === 'Вузы') {

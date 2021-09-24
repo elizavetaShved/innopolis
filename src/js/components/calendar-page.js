@@ -1,7 +1,5 @@
 import PerfectScrollbar from 'perfect-scrollbar';
 import { CalendarTableComponent } from './calendar-table-component';
-import { SelectInit } from './common/selectInit';
-
 
 export class CalendarPage {
   hostElem;
@@ -9,6 +7,8 @@ export class CalendarPage {
 
   constructor() {
     this.hostElem = document.querySelector('#calendar-host');
+    if (!this.hostElem) return;
+
     const calendarContent = this.hostElem.querySelector('.calendar__content');
     const calendarTableElems = this.hostElem.querySelectorAll('.calendar__table');
 
@@ -21,8 +21,6 @@ export class CalendarPage {
       wheelPropagation: true,
       minScrollbarLength: 10
     });
-
-    new SelectInit(this.hostElem);
 
     calendarTableElems.forEach(calendarElem => {
       new CalendarTableComponent(calendarElem, this.selectElems);

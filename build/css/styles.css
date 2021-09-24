@@ -1736,6 +1736,9 @@ button.swiper-pagination-bullet {
     top: 0;
     left: 0; }
 
+.gl__form .gl__input.parsley-error, .gl__select-container.parsley-error .choices__inner {
+  border-color: var(--btn-color) !important; }
+
 @media screen and (min-width: 1400px) {
   .gl__fl-show {
     display: none !important; } }
@@ -1805,9 +1808,6 @@ button.swiper-pagination-bullet {
   .gl__form .parsley-errors-list + .gl__radio-input-caption {
     color: var(--btn-color); }
 
-.gl__form .gl__input.parsley-error {
-  border-color: var(--btn-color) !important; }
-
 .gl__input-container {
   display: grid;
   grid-template-columns: 11rem 1fr;
@@ -1855,13 +1855,17 @@ button.swiper-pagination-bullet {
 .gl__input-mark-required {
   position: absolute;
   content: '';
-  width: .6rem;
-  height: .6rem;
+  width: 6px;
+  height: 6px;
   background-color: var(--btn-color);
   border-radius: 100%;
   top: 1.2rem;
   left: 1.2rem;
   z-index: 1; }
+  @media screen and (max-width: 559px) {
+    .gl__input-mark-required {
+      width: 4px;
+      height: 4px; } }
 
 .gl__radio-input-container {
   display: -webkit-box;
@@ -2025,7 +2029,8 @@ button.swiper-pagination-bullet {
   cursor: auto; }
 
 .gl__form .parsley-errors-list + .gl__input.mod-file {
-  border-color: var(--btn-color); }
+  border-color: var(--btn-color);
+  border-width: 2px; }
 
 .gl__input-wrapper.mod-file {
   display: -webkit-box;
@@ -2155,7 +2160,6 @@ button.swiper-pagination-bullet {
     line-height: 1.3; }
   .gl__select-wrapper .choices__inner {
     background: var(--pale-secondary-color) !important;
-    border: none !important;
     font-size: 1.4rem;
     padding: 0 3rem 0 2.2rem;
     display: -webkit-box;
@@ -2165,6 +2169,7 @@ button.swiper-pagination-bullet {
         -ms-flex-align: center;
             align-items: center;
     border-radius: 30px !important;
+    border: 2px solid transparent !important;
     min-height: 5.2rem; }
     @media screen and (max-width: 959px) {
       .gl__select-wrapper .choices__inner {
@@ -2186,7 +2191,7 @@ button.swiper-pagination-bullet {
     top: 45%;
     border: 4px solid transparent;
     border-top: 4px solid #000; }
-  .gl__select-wrapper .choices__placeholder {
+  .gl__select-wrapper .is-selected {
     display: none !important; }
   .gl__select-wrapper .choices__list--dropdown {
     word-break: initial;
@@ -2448,6 +2453,9 @@ button.swiper-pagination-bullet {
     z-index: 51;
     top: 0;
     left: 0; }
+
+.gl__form .gl__input.parsley-error, .gl__select-container.parsley-error .choices__inner {
+  border-color: var(--btn-color) !important; }
 
 .modal {
   background-color: rgba(31, 16, 95, 0.7);
@@ -8138,6 +8146,9 @@ html.remodal-is-locked {
     z-index: 51;
     top: 0;
     left: 0; }
+
+.gl__form .gl__input.parsley-error, .gl__select-container.parsley-error .choices__inner {
+  border-color: var(--btn-color) !important; }
 
 .calendar {
   position: relative; }

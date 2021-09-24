@@ -50,12 +50,6 @@
   @include for-sm-down {
     display: flex;
     flex-direction: column;
-
-    .gl__select-container {
-      &.mod-filter-select {
-
-      }
-    }
   }
 }
 

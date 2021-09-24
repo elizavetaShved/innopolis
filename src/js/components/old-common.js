@@ -7,32 +7,40 @@ export class OldCommon {
     const btnsRegistration = document.querySelectorAll('.open-modal-registration');
     const btnAuthElems = document.querySelectorAll('.js-open-auth-modal');
 
-    btnsPartner.forEach(btn => {
-      btn.onclick = () => {
-        const modal = new Modal('partner');
-        modal.isOpen();
-      }
-    })
+    if (btnsPartner) {
+      btnsPartner.forEach(btn => {
+        btn.onclick = () => {
+          const modal = new Modal('partner');
+          modal.isOpen();
+        }
+      })
+    }
 
-    btnsParticipation.forEach(btn => {
-      btn.onclick = () => {
-        const modal = new Modal('participation');
-        modal.isOpen();
-      }
-    })
+    if (btnsParticipation) {
+      btnsParticipation.forEach(btn => {
+        btn.onclick = () => {
+          const modal = new Modal('participation');
+          modal.isOpen();
+        }
+      })
+    }
 
-    btnsRegistration.forEach(btn => {
-      btn.onclick = () => {
-        const modal = new Modal('registr');
-        modal.isOpen();
-      }
-    })
+    if (btnsRegistration) {
+      btnsRegistration.forEach(btn => {
+        btn.onclick = () => {
+          const modal = new Modal('registr');
+          modal.isOpen();
+        }
+      })
+    }
 
-    btnAuthElems.forEach(btn => {
-      btn.onclick = () => {
-        const modal = new Modal(btn.value);
-        modal.isOpen();
-      }
-    })
+    if (btnAuthElems) {
+      btnAuthElems.forEach(btn => {
+        btn.onclick = () => {
+          const modal = new Modal(btn.value);
+          modal.isOpen();
+        }
+      })
+    }
   }
 }

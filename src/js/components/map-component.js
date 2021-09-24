@@ -2,8 +2,9 @@ export class MapComponent {
   mapElem;
 
   constructor() {
-    this.initMap = this.initMap.bind(this);
     const hostElem = document.querySelector('#map-host');
+    if (!hostElem) return;
+    this.initMap = this.initMap.bind(this);
     this.mapElem = hostElem.querySelector('.js-contacts-map');
 
     ymaps.ready(this.initMap);

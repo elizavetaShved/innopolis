@@ -15,3 +15,7 @@
     left: 0;
   }
 }
+
+%input-error {
+  border-color: var(--btn-color) !important;
+}

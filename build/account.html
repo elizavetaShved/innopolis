@@ -1013,7 +1013,7 @@
         <div class="account__menu-container">
           <div class="account__menu-wrapper">
             <label class="account__menu-radio-wrapper">
-              <input type="radio" name="account-menu" class="account__menu-radio" value="profile">
+              <input type="radio" name="account-menu" class="account__menu-radio" checked value="profile">
               <span class="account__menu-radio-content">Профиль</span>
             </label>
             <label class="account__menu-radio-wrapper">
@@ -1021,7 +1021,7 @@
               <span class="account__menu-radio-content">Календарь бронирования</span>
             </label>
             <label class="account__menu-radio-wrapper">
-              <input type="radio" name="account-menu" class="account__menu-radio" checked value="media">
+              <input type="radio" name="account-menu" class="account__menu-radio" value="media">
               <span class="account__menu-radio-content">Медиа</span>
             </label>
           </div>
@@ -1154,73 +1154,69 @@
                 dateTypeFuture - для будущей даты
                 -->
                 
-                <label class="gl__datepicker-container">
+                <label class="gl__datepicker-container js-datepicker-container">
                     <span class="gl__input-mark-required"></span>
                   <input type="text"
-                         class="gl__datepicker-input gl__input"
+                         class="gl__datepicker-input gl__input js-input"
                          placeholder="дд.мм.гг"
                          name="birth-account"
                          data-birth-18
                          required
                   >
-                  <img src="img/form/datepicker.svg" alt="datepicker" class="gl__input-icon">
+                  <img src="img/form/datepicker.svg" alt="datepicker" class="gl__input-icon js-input-icon">
                 </label>
               </li>
               <li class="gl__input-container">
                 <div class="gl__input-title mod-small">Организация</div>
-                <div class="gl__select-container ">
+                <di class="gl__select-container " id="organization-account">
                   <label class="gl__select-wrapper">
                       <span class="gl__input-mark-required"></span>
-                    <select class="gl__select"
+                    <select class="gl__select js-select"
+                            data-parsley-class-handler="#organization-account"
                             name="organization-account"
-                            data-parsley-required="" data-parsley-min = "1"
+                            data-parsley-required="" data-parsley-trigger="change"
                     >
-                      <div class="qwe"></div>
-                      <option class="gl__select-option">Какую организацию Вы представляете?</option>
+                      <option class="gl__select-option" placeholder value="">Какую организацию Вы представляете?</option>
                       <option class="gl__select-option" value="Организация 1">Организация 1</option>
                       <option class="gl__select-option" value="Организация 2">Организация 2</option>
                       <option class="gl__select-option" value="Организация 3">Организация 3</option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
                     </select>
                   </label>
-                </div>
+                </di>
               </li>
               <li class="gl__input-container">
                 <div class="gl__input-title mod-small">Пол</div>
-                <div class="gl__select-container ">
+                <di class="gl__select-container " id="gender-account">
                   <label class="gl__select-wrapper">
                       <span class="gl__input-mark-required"></span>
-                    <select class="gl__select"
+                    <select class="gl__select js-select"
+                            data-parsley-class-handler="#gender-account"
                             name="gender-account"
-                            data-parsley-required="" data-parsley-min = "1"
+                            data-parsley-required="" data-parsley-trigger="change"
                     >
-                      <div class="qwe"></div>
-                      <option class="gl__select-option">Пол</option>
+                      <option class="gl__select-option" placeholder value="">Пол</option>
                       <option class="gl__select-option" value="Женский">Женский</option>
                       <option class="gl__select-option" value="Мужской">Мужской</option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
                     </select>
                   </label>
-                </div>
+                </di>
               </li>
               <li class="profile__type-organization">
                 <div class="profile__form-radio-input-title">
@@ -1331,11 +1327,11 @@
                 <label class="gl__input-wrapper mod-file">
                     <span class="gl__input-mark-required"></span>
                   <input type="file"
-                         class="gl__input-file"
+                         class="gl__input-file js-input-file"
                          name="pcr-test-account"
                          data-parsley-required=""
                   >
-                  <span class="gl__input mod-file">PDF файл, не более 2 мб</span>
+                  <span class="gl__input mod-file js-input-file-content">PDF файл, не более 2 мб</span>
                   <img src="img/form/download.svg" alt="" class="gl__input-icon">
                 </label>
               </li>
@@ -1375,15 +1371,15 @@
               </li>
               <li class="gl__input-container profile__direction">
                 <div class="gl__input-title mod-small">Направление</div>
-                <div class="gl__select-container ">
+                <di class="gl__select-container " id="direction-account">
                   <label class="gl__select-wrapper">
                       <span class="gl__input-mark-required"></span>
-                    <select class="gl__select"
+                    <select class="gl__select js-select"
+                            data-parsley-class-handler="#direction-account"
                             name="direction-account"
-                            data-parsley-required="" data-parsley-min = "1"
+                            data-parsley-required="" data-parsley-trigger="change"
                     >
-                      <div class="qwe"></div>
-                      <option class="gl__select-option">Которое интересно посетить на форуме</option>
+                      <option class="gl__select-option" placeholder value="">Которое интересно посетить на форуме</option>
                       <option class="gl__select-option" value="Кибербезопасность">Кибербезопасность</option>
                       <option class="gl__select-option" value="Цифра в культуре">Цифра в культуре</option>
                       <option class="gl__select-option" value="Цифровая трансформация регионо">Цифровая трансформация регионо</option>
@@ -1392,56 +1388,52 @@
                       <option class="gl__select-option" value="Медиа-акселератор">Медиа-акселератор</option>
                       <option class="gl__select-option" value="Вузы">Вузы</option>
                       <option class="gl__select-option" value="Стартапы">Стартапы</option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
+                      
+                      
+                      
                     </select>
                   </label>
-                </div>
+                </di>
               </li>
         
               <li class="gl__input-container">
                 <div class="gl__input-title mod-small">Город</div>
-                <div class="gl__select-container ">
+                <di class="gl__select-container " id="city-account">
                   <label class="gl__select-wrapper">
                       <span class="gl__input-mark-required"></span>
-                    <select class="gl__select"
+                    <select class="gl__select js-select"
+                            data-parsley-class-handler="#city-account"
                             name="city-account"
-                            data-parsley-required="" data-parsley-min = "1"
+                            data-parsley-required="" data-parsley-trigger="change"
                     >
-                      <div class="qwe"></div>
-                      <option class="gl__select-option">Выберите</option>
+                      <option class="gl__select-option" placeholder value="">Выберите</option>
                       <option class="gl__select-option" value="Город 1">Город 1</option>
                       <option class="gl__select-option" value="Город 2">Город 2</option>
                       <option class="gl__select-option" value="Город 3">Город 3</option>
                       <option class="gl__select-option" value="Город 4">Город 4</option>
                       <option class="gl__select-option" value="Город 5">Город 5</option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
+                      
+                      
+                      
+                      
+                      
+                      
                     </select>
                   </label>
-                </div>
+                </di>
               </li>
         
               <li class="gl__input-container profile__university-type">
                 <div class="gl__input-title mod-small"></div>
-                <div class="gl__select-container ">
+                <di class="gl__select-container " id="university-type-account">
                   <label class="gl__select-wrapper">
                       <span class="gl__input-mark-required"></span>
-                    <select class="gl__select"
+                    <select class="gl__select js-select"
+                            data-parsley-class-handler="#university-type-account"
                             name="university-type-account"
-                            data-parsley-required="" data-parsley-min = "1"
+                            data-parsley-required="" data-parsley-trigger="change"
                     >
-                      <div class="qwe"></div>
-                      <option class="gl__select-option">Вуз</option>
+                      <option class="gl__select-option" placeholder value="">Вуз</option>
                       <option class="gl__select-option" value="Отрасль. Образование">Отрасль. Образование</option>
                       <option class="gl__select-option" value="Отрасль. Здравоохранение">Отрасль. Здравоохранение</option>
                       <option class="gl__select-option" value="Отрасль. Сельское хозяйство">Отрасль. Сельское хозяйство</option>
@@ -1453,11 +1445,9 @@
                       <option class="gl__select-option" value="Информационно-коммуникационные технологии">Информационно-коммуникационные технологии</option>
                       <option class="gl__select-option" value="Отрасль.Строительство">Отрасль.Строительство</option>
                       <option class="gl__select-option" value="Обрабатывающая промышленность">Обрабатывающая промышленность</option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
                     </select>
                   </label>
-                </div>
+                </di>
               </li>
             </ul>
         
@@ -1566,14 +1556,14 @@
                 dateTypeFuture - для будущей даты
                 -->
                 
-                <label class="gl__datepicker-container">
+                <label class="gl__datepicker-container js-datepicker-container">
                   <input type="text"
-                         class="gl__datepicker-input gl__input"
+                         class="gl__datepicker-input gl__input js-input"
                          placeholder="дд.мм.гг"
                          name="arrival-date-account"
                          data-future-with-today
                   >
-                  <img src="img/form/datepicker.svg" alt="datepicker" class="gl__input-icon">
+                  <img src="img/form/datepicker.svg" alt="datepicker" class="gl__input-icon js-input-icon">
                 </label>
               </li>
               <li class="gl__input-container">
@@ -1583,14 +1573,14 @@
                 dateTypeFuture - для будущей даты
                 -->
                 
-                <label class="gl__datepicker-container">
+                <label class="gl__datepicker-container js-datepicker-container">
                   <input type="text"
-                         class="gl__datepicker-input gl__input"
+                         class="gl__datepicker-input gl__input js-input"
                          placeholder="дд.мм.гг"
                          name="departure-date-account"
                          data-future-with-today
                   >
-                  <img src="img/form/datepicker.svg" alt="datepicker" class="gl__input-icon">
+                  <img src="img/form/datepicker.svg" alt="datepicker" class="gl__input-icon js-input-icon">
                 </label>
               </li>
               <li class="gl__input-container">
@@ -1598,7 +1588,7 @@
                 <div class="gl__select-container mod-forked">
                 
                   <label class="gl__select-wrapper">
-                    <select class="gl__select" name="08-account">
+                    <select class="gl__select js-select" name="08-account">
                       <option class="gl__select-option">08</option>
                       <option class="gl__select-option">09</option>
                       <option class="gl__select-option">10</option>
@@ -1614,7 +1604,7 @@
                   </label>
                 
                   <label class="gl__select-wrapper">
-                    <select class="gl__select" name="00-account">
+                    <select class="gl__select js-select" name="00-account">
                       <option class="gl__select-option">00</option>
                       <option class="gl__select-option">10</option>
                       <option class="gl__select-option">20</option>
@@ -1630,7 +1620,7 @@
                 <div class="gl__select-container mod-forked">
                 
                   <label class="gl__select-wrapper">
-                    <select class="gl__select" name="08-account">
+                    <select class="gl__select js-select" name="08-account">
                       <option class="gl__select-option">08</option>
                       <option class="gl__select-option">09</option>
                       <option class="gl__select-option">10</option>
@@ -1646,7 +1636,7 @@
                   </label>
                 
                   <label class="gl__select-wrapper">
-                    <select class="gl__select" name="00-account">
+                    <select class="gl__select js-select" name="00-account">
                       <option class="gl__select-option">00</option>
                       <option class="gl__select-option">10</option>
                       <option class="gl__select-option">20</option>
@@ -1659,55 +1649,51 @@
               </li>
               <li class="gl__input-container">
                 <div class="gl__input-title mod-small">Место прибытия</div>
-                <div class="gl__select-container ">
+                <di class="gl__select-container " id="place-arrival-account">
                   <label class="gl__select-wrapper">
-                    <select class="gl__select"
+                    <select class="gl__select js-select"
+                            data-parsley-class-handler="#place-arrival-account"
                             name="place-arrival-account"
                     >
-                      <div class="qwe"></div>
-                      <option class="gl__select-option">Выберите из списка</option>
+                      <option class="gl__select-option" placeholder value="">Выберите из списка</option>
                       <option class="gl__select-option" value="Место прибытия 1">Место прибытия 1</option>
                       <option class="gl__select-option" value="Место прибытия 2">Место прибытия 2</option>
                       <option class="gl__select-option" value="Место прибытия 3">Место прибытия 3</option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
                     </select>
                   </label>
-                </div>
+                </di>
               </li>
               <li class="gl__input-container">
                 <div class="gl__input-title mod-small">Место отбытия</div>
-                <div class="gl__select-container ">
+                <di class="gl__select-container " id="place-departure-account">
                   <label class="gl__select-wrapper">
-                    <select class="gl__select"
+                    <select class="gl__select js-select"
+                            data-parsley-class-handler="#place-departure-account"
                             name="place-departure-account"
                     >
-                      <div class="qwe"></div>
-                      <option class="gl__select-option">Выберите из списка</option>
+                      <option class="gl__select-option" placeholder value="">Выберите из списка</option>
                       <option class="gl__select-option" value="Место отбытия 1">Место отбытия 1</option>
                       <option class="gl__select-option" value="Место отбытия 2">Место отбытия 2</option>
                       <option class="gl__select-option" value="Место отбытия 3">Место отбытия 3</option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
                     </select>
                   </label>
-                </div>
+                </di>
               </li>
               <li class="gl__input-container">
                 <div class="gl__input-title mod-small">Номер рейса прибытия</div>
@@ -1843,55 +1829,51 @@
               </li>
               <li class="gl__input-container">
                 <div class="gl__input-title mod-small">После прибытия поеду сразу в</div>
-                <div class="gl__select-container ">
+                <di class="gl__select-container " id="place-immediately-arrival-account">
                   <label class="gl__select-wrapper">
-                    <select class="gl__select"
+                    <select class="gl__select js-select"
+                            data-parsley-class-handler="#place-immediately-arrival-account"
                             name="place-immediately-arrival-account"
                     >
-                      <div class="qwe"></div>
-                      <option class="gl__select-option">Выберите из списка</option>
+                      <option class="gl__select-option" placeholder value="">Выберите из списка</option>
                       <option class="gl__select-option" value="Место 1">Место 1</option>
                       <option class="gl__select-option" value="Место 2">Место 2</option>
                       <option class="gl__select-option" value="Место 3">Место 3</option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
                     </select>
                   </label>
-                </div>
+                </di>
               </li>
               <li class="gl__input-container">
                 <div class="gl__input-title mod-small">Место проживания</div>
-                <div class="gl__select-container ">
+                <di class="gl__select-container " id="place-residence-account">
                   <label class="gl__select-wrapper">
-                    <select class="gl__select"
+                    <select class="gl__select js-select"
+                            data-parsley-class-handler="#place-residence-account"
                             name="place-residence-account"
                     >
-                      <div class="qwe"></div>
-                      <option class="gl__select-option">Выберите из списка</option>
+                      <option class="gl__select-option" placeholder value="">Выберите из списка</option>
                       <option class="gl__select-option" value="Место проживания 1">Место проживания 1</option>
                       <option class="gl__select-option" value="Место проживания 2">Место проживания 2</option>
                       <option class="gl__select-option" value="Место проживания 3">Место проживания 3</option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
                     </select>
                   </label>
-                </div>
+                </di>
               </li>
             </ul>
         
@@ -1946,29 +1928,27 @@
               </li>
               <li class="gl__input-container">
                 <div class="gl__input-title mod-small">Формат мероприятия</div>
-                <div class="gl__select-container ">
+                <di class="gl__select-container " id="event-format-account">
                   <label class="gl__select-wrapper">
-                    <select class="gl__select"
+                    <select class="gl__select js-select"
+                            data-parsley-class-handler="#event-format-account"
                             name="event-format-account"
                     >
-                      <div class="qwe"></div>
-                      <option class="gl__select-option">Выберите</option>
+                      <option class="gl__select-option" placeholder value="">Выберите</option>
                       <option class="gl__select-option" value="Формат 1">Формат 1</option>
                       <option class="gl__select-option" value="Формат 2">Формат 2</option>
                       <option class="gl__select-option" value="Формат 3">Формат 3</option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
-                      <option class="gl__select-option" value=""></option>
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
                     </select>
                   </label>
-                </div>
+                </di>
               </li>
             </ul>
         

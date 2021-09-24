@@ -1,29 +1,27 @@
-<div class="gl__select-container {{#if isFilterSelect }}mod-filter-select{{/if}}">
+<di class="gl__select-container {{#if isFilterSelect }}mod-filter-select{{/if}}" id="{{ name }}-{{type}}">
   <label class="gl__select-wrapper">
     {{#if required }}
       <span class="gl__input-mark-required"></span>
     {{/if}}
-    <select class="gl__select"
+    <select class="gl__select js-select"
+            data-parsley-class-handler="#{{ name }}-{{type}}"
             name="{{ name }}-{{type}}"
       {{#if required }}
-            data-parsley-required="" data-parsley-min = "1"
+            data-parsley-required="" data-parsley-trigger="change"
       {{/if}}
     >
-      <div class="qwe"></div>
-      <option class="gl__select-option">{{ placeholder }}</option>
-      <option class="gl__select-option" value="{{ option1 }}">{{ option1 }}</option>
-      <option class="gl__select-option" value="{{ option2 }}">{{ option2 }}</option>
-      <option class="gl__select-option" value="{{ option3 }}">{{ option3 }}</option>
-      <option class="gl__select-option" value="{{ option4 }}">{{ option4 }}</option>
-      <option class="gl__select-option" value="{{ option5 }}">{{ option5 }}</option>
-      <option class="gl__select-option" value="{{ option6 }}">{{ option6 }}</option>
-      <option class="gl__select-option" value="{{ option7 }}">{{ option7 }}</option>
-      <option class="gl__select-option" value="{{ option8 }}">{{ option8 }}</option>
-      <option class="gl__select-option" value="{{ option9 }}">{{ option9 }}</option>
-      <option class="gl__select-option" value="{{ option10 }}">{{ option10 }}</option>
-      <option class="gl__select-option" value="{{ option11 }}">{{ option11 }}</option>
-      <option class="gl__select-option" value="{{ option12 }}">{{ option12 }}</option>
-      <option class="gl__select-option" value="{{ option13 }}">{{ option13 }}</option>
+      <option class="gl__select-option" placeholder value="">{{ placeholder }}</option>
+      {{#if option1}}<option class="gl__select-option" value="{{ option1 }}">{{ option1 }}</option>{{/if}}
+      {{#if option2}}<option class="gl__select-option" value="{{ option2 }}">{{ option2 }}</option>{{/if}}
+      {{#if option3}}<option class="gl__select-option" value="{{ option3 }}">{{ option3 }}</option>{{/if}}
+      {{#if option4}}<option class="gl__select-option" value="{{ option4 }}">{{ option4 }}</option>{{/if}}
+      {{#if option5}}<option class="gl__select-option" value="{{ option5 }}">{{ option5 }}</option>{{/if}}
+      {{#if option6}}<option class="gl__select-option" value="{{ option6 }}">{{ option6 }}</option>{{/if}}
+      {{#if option7}}<option class="gl__select-option" value="{{ option7 }}">{{ option7 }}</option>{{/if}}
+      {{#if option8}}<option class="gl__select-option" value="{{ option8 }}">{{ option8 }}</option>{{/if}}
+      {{#if option9}}<option class="gl__select-option" value="{{ option9 }}">{{ option9 }}</option>{{/if}}
+      {{#if option10}}<option class="gl__select-option" value="{{ option10 }}">{{ option10 }}</option>{{/if}}
+      {{#if option11}}<option class="gl__select-option" value="{{ option11 }}">{{ option11 }}</option>{{/if}}
     </select>
   </label>
-</div>
+</di>

@@ -16,66 +16,42 @@ import { MapComponent } from './components/map-component';
 import { RemainedTime } from './components/common/remainedTime';
 import { CalendarPage } from './components/calendar-page';
 import { AccountPage } from './components/account-page';
+import selectInit from './functions/controlsInit/selectInit';
+import datepickerInit from './functions/controlsInit/datepickerInit';
+import inputFileInit from './functions/controlsInit/inputFileInit';
 
 document.addEventListener('DOMContentLoaded', function () {
-  // todo для GH-page (оставить только else)
-  if (window.location.href.split('innopolis/build/')[1] !== undefined) {
-    switch (window.location.href.split('innopolis/build/')[1].split('.html')[0].split('#')[0]) {
-      case '':
-        new OldCommon();
-        new MapComponent();
-        new FaqComponent();
-        new NewsComponent();
-        new ProgramComponent();
-        new SpeakersComponent();
-        new RemainedTime();
-        break;
-
-      case 'news':
-        new NewsPage();
-        break;
-
-      case 'calendar':
-        new CalendarPage();
-        break;
-
-      case 'account':
-        new AccountPage();
-        break;
-    }
-  } else {
-    switch (window.location.href.split('/')[3].split('.html')[0].split('#')[0]) {
-      case '':
-        new OldCommon();
-        new MapComponent();
-        new FaqComponent();
-        new NewsComponent();
-        new ProgramComponent();
-        new SpeakersComponent();
-        new RemainedTime();
-        break;
-
-      case 'news':
-        new NewsPage();
-        break;
-
-      case 'calendar':
-        new CalendarPage();
-        break;
-
-      case 'account':
-        new AccountPage();
-        break;
-    }
-  }
-
+  // layout
   new Header();
   new StickyMenu();
 
+  // index page
+  new OldCommon();
+  new MapComponent();
+  new FaqComponent();
+  new NewsComponent();
+  new ProgramComponent();
+  new SpeakersComponent();
+  new RemainedTime();
+
+  // news page
+  new NewsPage();
+
+  // calendar page
+  new CalendarPage();
+
+  // account page
+  new AccountPage();
+
+  // common
   polyfills();
   detectTouch();
   customSelects();
   scrollByAnchor();
+
+  datepickerInit();
+  selectInit();
+  inputFileInit();
 });
 
 window.addEventListener('load', function () {

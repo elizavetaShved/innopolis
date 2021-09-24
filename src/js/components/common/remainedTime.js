@@ -9,6 +9,8 @@ export class RemainedTime {
 
   constructor() {
     this.dateRemainedElems = document.querySelectorAll('.js-date-remained');
+    if (!this.dateRemainedElems) return;
+
     this.dateRemainedElems.forEach(dateRemainedElem => {
       this.remainedDaysElem = dateRemainedElem.querySelector('.tickets-block__day');
       this.remainedHoursElem = dateRemainedElem.querySelector('.tickets-block__hours');

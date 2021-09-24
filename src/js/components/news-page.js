@@ -4,6 +4,8 @@ export class NewsPage {
 
   constructor() {
     const hostElem = document.querySelector('#news-page-host');
+    if (!hostElem) return;
+
     const videoWrapperElem = hostElem.querySelector('.news-page__video-wrapper');
     const videoElem = hostElem.querySelector('.news-page__video');
 

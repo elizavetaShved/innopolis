@@ -11,7 +11,7 @@
 
   .gl__input {
     &.parsley-error {
-      border-color: var(--btn-color) !important;
+     @extend %input-error;
     }
   }
 }
@@ -74,13 +74,18 @@
 .gl__input-mark-required {
   position: absolute;
   content: '';
-  width: .6rem;
-  height: .6rem;
+  width: 6px;
+  height: 6px;
   background-color: var(--btn-color);
   border-radius: 100%;
   top: 1.2rem;
   left: 1.2rem;
   z-index: 1;
+
+  @include for-sm-down {
+    width: 4px;
+    height: 4px;
+  }
 }
 
 .gl__radio-input-container {

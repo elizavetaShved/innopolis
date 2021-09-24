@@ -13,6 +13,12 @@
   display: inline-block;
   position: relative;
 
+  &.parsley-error {
+    .choices__inner {
+      @extend %input-error;
+    }
+  }
+
   &.mod-forked {
     display: flex;
     justify-content: space-between;
@@ -70,12 +76,12 @@
 
   .choices__inner {
     background: var(--pale-secondary-color) !important;
-    border: none !important;
     font-size: 1.4rem;
     padding: 0 3rem 0 2.2rem;
     display: flex;
     align-items: center;
     border-radius: 30px !important;
+    border: 2px solid transparent !important;
     min-height: 5.2rem;
 
     @include for-lg-down {
@@ -109,7 +115,7 @@
     border-top: 4px solid #000;
   }
 
-  .choices__placeholder {
+  .is-selected {
     display: none !important;
   }
 
