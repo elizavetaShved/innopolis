@@ -56,6 +56,10 @@
   align-items: flex-end;
   white-space: nowrap;
 
+  &.mod-black {
+    color: rgba(18, 21, 42, .5);
+  }
+
   @include for-md-down {
     justify-content: center;
     margin-bottom: 2.6rem;
@@ -83,24 +87,191 @@
 
 .partners__links {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 2.0rem;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  grid-gap: 3rem;
+  align-items: center;
 
   @include for-md-down {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  &.mod-items-length-1 {
+    .partners__link-container {
+      &:nth-child(1) {
+        grid-column: 5 / 7;
+      }
+
+      @include for-md-down {
+        &:nth-child(1) {
+          grid-column: 1 / 3;
+        }
+      }
+    }
+  }
+
+  &.mod-items-length-2 {
+    .partners__link-container {
+      @include for-md-up {
+        &:nth-child(1) {
+          grid-column: 4 / 6;
+        }
+
+        &:nth-child(2) {
+          grid-column: 6 / 8;
+        }
+      }
+    }
+  }
+
+  &.mod-items-length-3 {
+    .partners__link-container {
+      @include for-md-up {
+        &:nth-child(1) {
+          grid-column: 3 / 5;
+        }
+
+        &:nth-child(2) {
+          grid-column: 5 / 7;
+        }
+
+        &:nth-child(3) {
+          grid-column: 7 / 9;
+        }
+      }
+    }
+  }
+
+  &.mod-items-length-4 {
+    .partners__link-container {
+      @include for-md-up {
+        &:nth-child(1) {
+          grid-column: 2 / 4;
+        }
+
+        &:nth-child(2) {
+          grid-column: 4 / 6;
+        }
+
+        &:nth-child(3) {
+          grid-column: 6 / 8;
+        }
+
+        &:nth-child(4) {
+          grid-column: 8 / 10;
+        }
+      }
+    }
+  }
+
+  &.mod-items-length-6 {
+    .partners__link-container {
+      @include for-md-up {
+        &:nth-child(6) {
+          grid-column: 5 / 7;
+        }
+      }
+    }
+  }
+
+  &.mod-items-length-7 {
+    .partners__link-container {
+      @include for-md-up {
+        &:nth-child(6) {
+          grid-column: 4 / 6;
+        }
+
+        &:nth-child(7) {
+          grid-column: 6 / 8;
+        }
+      }
+    }
+  }
+
+  &.mod-items-length-8 {
+    .partners__link-container {
+      @include for-md-up {
+        &:nth-child(6) {
+          grid-column: 3 / 5;
+        }
+
+        &:nth-child(7) {
+          grid-column: 5 / 7;
+        }
+
+        &:nth-child(8) {
+          grid-column: 7 / 9;
+        }
+      }
+    }
+  }
+
+  &.mod-items-length-9 {
+    .partners__link-container {
+      @include for-md-up {
+        &:nth-child(6) {
+          grid-column: 2 / 4;
+        }
+
+        &:nth-child(7) {
+          grid-column: 4 / 6;
+        }
+
+        &:nth-child(8) {
+          grid-column: 6 / 8;
+        }
+
+        &:nth-child(9) {
+          grid-column: 8 / 10;
+        }
+      }
+    }
   }
 }
 
 .partners__link-container {
+  &:nth-child(1), &:nth-child(6) {
+    @include for-md-up {
+      grid-column: 1 / 3;
+    }
+  }
+
+  &:nth-child(2), &:nth-child(7) {
+    @include for-md-up {
+      grid-column: 3 / 5;
+    }
+  }
+
+  &:nth-child(3), &:nth-child(8) {
+    @include for-md-up {
+      grid-column: 5 / 7;
+    }
+  }
+
+  &:nth-child(4), &:nth-child(9) {
+    @include for-md-up {
+      grid-column: 7 / 9;
+    }
+  }
+
+  &:nth-child(5), &:nth-child(10) {
+    @include for-md-up {
+      grid-column: 9 / 11;
+    }
+  }
+
   &.mod-center-item {
-    grid-column: 3 / 4;
+    grid-column: 5 / 7;
     width: calc(100% + 1rem);
     height: calc(100% + 1rem);
+  }
 
-    @include for-md-down {
-      grid-column: 1 / 3;
-      width: 100%;
-      height: 100%;
+  @include for-md-down {
+    &:nth-child(1), &:nth-child(3),  &:nth-child(5) {
+      grid-column: 1;
+    }
+
+    &:nth-child(2), &:nth-child(4) {
+      grid-column: 2;
     }
   }
 }
@@ -117,6 +288,37 @@
     .partners__link {
       fill: #fff;
     }
+  }
+}
+
+.partners__link-image-wrapper {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0;
+    user-select: none;
+    transition: opacity 250ms;
+  }
+
+  &:hover {
+    &:before {
+      opacity: .6;
+    }
+  }
+}
+
+.partners__link, .partners__link-image {
+  max-height: 3.4rem;
+
+  @include for-md-down {
+    max-height: 2.6rem;
   }
 }
 

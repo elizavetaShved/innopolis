@@ -1,0 +1,46 @@
+{{#extend "layout"}}
+  {{#content "main"}}
+
+    <div class="partners-page" id="partners-host">
+      <div class="gl__page-content">
+        <ul class="gl__bread-crumbs-list">
+          <li class="gl__bread-crumbs-item">
+            <a href="/" class="gl__bread-crumbs-item-link">
+              Главная
+            </a>
+          </li>
+          <li class="gl__bread-crumbs-item">
+          <span class="gl__bread-crumbs-item-link mod-current-page">
+           Партнёры
+          </span>
+          </li>
+        </ul>
+
+        <h1 class="gl__big-title">
+          Партнеры
+        </h1>
+
+        <ul class="partners__list">
+          {{#each list }}
+            <li class="partners__item">
+              <div class="partners__item-title mod-black">
+                {{ this.name }}
+                <span class="partners__item-title-before"></span>
+              </div>
+              <ul class="partners__links mod-items-length-{{this.lengthPartners}}">
+                {{#each this.partnerImages }}
+                  <li class="partners__link-container">
+                    <a href="" class="partners__link-wrapper partners__link-image-wrapper">
+                      <img src="img/partners/{{this}}" alt="" class="partners__link-image">
+                    </a>
+                  </li>
+                {{/each}}
+              </ul>
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+
+  {{/content}}
+{{/extend}}
