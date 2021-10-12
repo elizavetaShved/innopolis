@@ -884,6 +884,17 @@
     </div>
   </div>
 
+  <div class="modal-cookies__wrapper mod-show" id="modal-cookies-host">
+    <div class="modal-cookies mod-light-page">
+      <div class="modal-cookies__text">
+        Этот веб-сайт использует файлы cookie
+      </div>
+      <button type="button" class="modal-cookies__btn" id="modal-cookies-btn">
+        ok
+      </button>
+    </div>
+  </div>
+
   <header class="header mod-light gl__sections-top" id="header-host">
     <div class="header__sections-wrapper gl__sections-top__sections-wrapper">
       <div class="gl__sections-top__section">
@@ -1978,32 +1989,34 @@
               Медиа
             </h2>
         
-            <div>
-              <label class="program__navigate-radio-wrapper">
-                <input type="radio" class="program__navigate-radio" name="program-date" checked>
-                <span class="program__navigate-radio-content mod-white-background">
+            <div class="account__btn-date-container">
+              <div class="account__btn-date-wrapper">
+                <label class="program__navigate-radio-wrapper">
+                  <input type="radio" class="program__navigate-radio" name="program-date" checked>
+                  <span class="program__navigate-radio-content mod-white-background">
                   2 декабря
                 </span>
-              </label>
-              <label class="program__navigate-radio-wrapper">
-                <input type="radio" class="program__navigate-radio" name="program-date">
-                <span class="program__navigate-radio-content mod-white-background">
+                </label>
+                <label class="program__navigate-radio-wrapper">
+                  <input type="radio" class="program__navigate-radio" name="program-date">
+                  <span class="program__navigate-radio-content mod-white-background">
                   3 декабря
                 </span>
-              </label>
-              <label class="program__navigate-radio-wrapper">
-                <input type="radio" class="program__navigate-radio" name="program-date">
-                <span class="program__navigate-radio-content mod-white-background">
+                </label>
+                <label class="program__navigate-radio-wrapper">
+                  <input type="radio" class="program__navigate-radio" name="program-date">
+                  <span class="program__navigate-radio-content mod-white-background">
                   4 декабря
                 </span>
-              </label>
+                </label>
+              </div>
             </div>
           </div>
         
           <ul class="media__content">
             <li class="news-page__news-item media__item-main-content">
-                <div>
-                  <a href="/news.html" class="news-page__news-link news__card">
+              <div>
+                  <div class="news-page__news-link news__card">
                     <div class="news__card-date-wrapper">
                       <div class="news__card-date">
                         8:30
@@ -2013,51 +2026,17 @@
                       <div class="news-page__news-title">
                         Деловой завтрак с Марией Захаровой «ИноСМИ-иноагенты в России»
                       </div>
-                
+              
                         <div class="news-page__content">
                           12 августа в формате ВКС прошло первое заседание Организационного комитета Международной премии #МЫВМЕСТЕ. Участники встречи обсудили текущую деятельность волонтеров и итоги заявочной кампании.
-                          <span class="news__card-mark news-page__content-link">Подробнее</span>
-                        </div>
-                
-                        <div class="media__geolocation">
-                          <img src="img/media/geolocation.svg" alt="" class="media__geolocation-img">
-                          Конгресс-центр, зал для деловых завтраков E12
                         </div>
                     </div>
-                  </a>
-                </div>
-        
-                <button type="button" class="media__video-bnt">
-                  <img src="img/media/video-btn.svg" alt="" class="media__video-btn-img">
-                  Трансляция
-                </button>
-            </li>
-            <li class="news-page__news-item media__item-main-content">
-              <div>
-                <a href="/news.html" class="news-page__news-link news__card">
-                  <div class="news__card-date-wrapper">
-                    <div class="news__card-date">
-                      8:30
-                    </div>
                   </div>
-                  <div>
-                    <div class="news-page__news-title">
-                      Деловой завтрак с Марией Захаровой «ИноСМИ-иноагенты в России»
-                    </div>
-              
-                      <div class="news-page__content">
-                        12 августа в формате ВКС прошло первое заседание Организационного комитета Международной премии #МЫВМЕСТЕ. Участники встречи обсудили текущую деятельность волонтеров и итоги заявочной кампании.
-                        <span class="news__card-mark news-page__content-link">Подробнее</span>
-                      </div>
-              
-                      <div class="media__geolocation">
-                        <img src="img/media/geolocation.svg" alt="" class="media__geolocation-img">
-                        Конгресс-центр, зал для деловых завтраков E12
-                      </div>
-                  </div>
-                </a>
               </div>
-        
+              <div class="media__geolocation">
+                <img src="img/media/geolocation.svg" alt="" class="media__geolocation-img">
+                Конгресс-центр, зал для деловых завтраков E12
+              </div>
               <button type="button" class="media__video-bnt">
                 <img src="img/media/video-btn.svg" alt="" class="media__video-btn-img">
                 Трансляция
@@ -2065,30 +2044,55 @@
             </li>
             <li class="news-page__news-item media__item-main-content">
               <div>
-                <a href="/news.html" class="news-page__news-link news__card">
-                  <div class="news__card-date-wrapper">
-                    <div class="news__card-date">
-                      8:30
+                  <div class="news-page__news-link news__card">
+                    <div class="news__card-date-wrapper">
+                      <div class="news__card-date">
+                        8:30
+                      </div>
                     </div>
-                  </div>
-                  <div>
-                    <div class="news-page__news-title">
-                      Деловой завтрак с Марией Захаровой «ИноСМИ-иноагенты в России»
-                    </div>
-              
-                      <div class="news-page__content">
-                        12 августа в формате ВКС прошло первое заседание Организационного комитета Международной премии #МЫВМЕСТЕ. Участники встречи обсудили текущую деятельность волонтеров и итоги заявочной кампании.
-                        <span class="news__card-mark news-page__content-link">Подробнее</span>
+                    <div>
+                      <div class="news-page__news-title">
+                        Деловой завтрак с Марией Захаровой «ИноСМИ-иноагенты в России»
                       </div>
               
-                      <div class="media__geolocation">
-                        <img src="img/media/geolocation.svg" alt="" class="media__geolocation-img">
-                        Конгресс-центр, зал для деловых завтраков E12
-                      </div>
+                        <div class="news-page__content">
+                          12 августа в формате ВКС прошло первое заседание Организационного комитета Международной премии #МЫВМЕСТЕ. Участники встречи обсудили текущую деятельность волонтеров и итоги заявочной кампании.
+                        </div>
+                    </div>
                   </div>
-                </a>
               </div>
-        
+              <div class="media__geolocation">
+                <img src="img/media/geolocation.svg" alt="" class="media__geolocation-img">
+                Конгресс-центр, зал для деловых завтраков E12
+              </div>
+              <button type="button" class="media__video-bnt">
+                <img src="img/media/video-btn.svg" alt="" class="media__video-btn-img">
+                Трансляция
+              </button>
+            </li>
+            <li class="news-page__news-item media__item-main-content">
+              <div>
+                  <div class="news-page__news-link news__card">
+                    <div class="news__card-date-wrapper">
+                      <div class="news__card-date">
+                        8:30
+                      </div>
+                    </div>
+                    <div>
+                      <div class="news-page__news-title">
+                        Деловой завтрак с Марией Захаровой «ИноСМИ-иноагенты в России»
+                      </div>
+              
+                        <div class="news-page__content">
+                          12 августа в формате ВКС прошло первое заседание Организационного комитета Международной премии #МЫВМЕСТЕ. Участники встречи обсудили текущую деятельность волонтеров и итоги заявочной кампании.
+                        </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="media__geolocation">
+                <img src="img/media/geolocation.svg" alt="" class="media__geolocation-img">
+                Конгресс-центр, зал для деловых завтраков E12
+              </div>
               <button type="button" class="media__video-bnt">
                 <img src="img/media/video-btn.svg" alt="" class="media__video-btn-img">
                 Трансляция
@@ -2191,7 +2195,6 @@
   </div><!-- mobile-box -->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<!--  <script async="" src="https://api-maps.yandex.ru/2.1/?apikey=5fa6f5ee-c55e-4f35-a5b3-c67b3c581d82&lang=ru_RU"></script>-->
   <script src="https://api-maps.yandex.ru/2.1/?apikey=978d9dde-738d-4b87-8d8a-1de67b511402&lang=ru_RU" type="text/javascript"></script>
   <script src="js/app.js"></script>
   <script src="assets/js/backend.js"></script>

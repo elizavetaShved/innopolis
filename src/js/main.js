@@ -21,6 +21,7 @@ import datepickerInit from './functions/controlsInit/datepickerInit';
 import inputFileInit from './functions/controlsInit/inputFileInit';
 import phoneMask from './functions/phoneMask';
 import dateMask from './functions/dateMask';
+import { ModalCookies } from './components/modal-cookies';
 
 document.addEventListener('DOMContentLoaded', function () {
   // layout
@@ -59,6 +60,8 @@ document.addEventListener('DOMContentLoaded', function () {
   datepickerInit();
   selectInit();
   inputFileInit();
+
+  new ModalCookies();
 });
 
 window.addEventListener('load', function () {
