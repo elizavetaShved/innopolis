@@ -2,6 +2,7 @@ import { Form } from './common/form';
 
 export class AccountPage {
   accountComponent;
+  hostElem;
 
   constructor() {
     this.hostElem = document.querySelector('#account-host');

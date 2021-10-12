@@ -22,6 +22,7 @@ import inputFileInit from './functions/controlsInit/inputFileInit';
 import phoneMask from './functions/phoneMask';
 import dateMask from './functions/dateMask';
 import { ModalCookies } from './components/modal-cookies';
+import { ContactPage } from './components/contact-page';
 
 document.addEventListener('DOMContentLoaded', function () {
   // layout
@@ -45,6 +46,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // account page
   new AccountPage();
+
+  // contact page
+  new ContactPage();
 
   // common
   polyfills();

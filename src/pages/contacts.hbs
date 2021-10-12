@@ -1,0 +1,87 @@
+{{#extend "layout"}}
+  {{#content "main"}}
+
+    <div class="contacts" id="contacts-host">
+      <div class="gl__page-content">
+        <ul class="gl__bread-crumbs-list">
+          <li class="gl__bread-crumbs-item">
+            <a href="/" class="gl__bread-crumbs-item-link">
+              Главная
+            </a>
+          </li>
+          <li class="gl__bread-crumbs-item">
+          <span class="gl__bread-crumbs-item-link mod-current-page">
+            Календарь мероприятия
+          </span>
+          </li>
+        </ul>
+
+        <h1 class="gl__big-title">
+          Контакты
+        </h1>
+
+        <div class="contacts__grid-wrapper">
+          <div class="contacts__grid-item">
+            <div class="contacts__grid-item-caption">
+              место проведения
+            </div>
+
+            <div class="contacts__grid-item-value">
+              <span class="no-wrap">Университетская улица 1</span>, Иннополис, Республика Татарстан, Россия, 420500
+            </div>
+          </div>
+
+          <div class="contacts__grid-item">
+            <div class="contacts__grid-item-caption">
+              почта для свзи
+            </div>
+
+            <a href="mailto:did@innopolis.ru" class="contacts__grid-item-value mod-link">
+              did@innopolis.ru
+            </a>
+          </div>
+
+          <div class="contacts__grid-item">
+            <div class="contacts__grid-item-caption">
+              трансфер и проживание на форуме DID
+            </div>
+
+            <a href="mailto:travel_did@innopolis.ru" class="contacts__grid-item-value mod-link">
+              travel_did@innopolis.ru
+            </a>
+          </div>
+
+          <div class="contacts__grid-item">
+            <div class="contacts__grid-item-caption">
+              контактный номер
+            </div>
+
+            <a href="tel:+78005501766" class="contacts__grid-item-value mod-link">
+              8 (800) 550-17-66
+            </a>
+          </div>
+        </div>
+
+        <form class="contacts__form-wrapper">
+          <div class="contacts__input-wrapper">
+            <div class="contacts__input-title">подписаться на рассылку новостей</div>
+            {{> controls/input-main
+              inputType="email"
+              required=true
+              name="subscribe"
+              placeholder="Электронная почта"
+              parsleyType="email"
+            }}
+          </div>
+
+          <div class="contacts__form-btn-wrapper">
+            <button type="button" class="contacts__form-btn gl__main-btn mod-no-shadow js-btn-submit">Подписаться</button>
+          </div>
+        </form>
+      </div>
+
+      {{> map }}
+    </div>
+
+  {{/content}}
+{{/extend}}

@@ -24,6 +24,18 @@ body {
   margin-right: auto;
 }
 
+.gl__big-title {
+  font-weight: bold;
+  font-size: 8rem;
+  line-height: 10.4rem;
+  margin-bottom: 4.8rem;
+
+  @include for-md-down {
+    font-size: 4rem;
+    line-height: 6rem;
+  }
+}
+
 .gl__title {
   font-weight: bold;
   font-size: 8rem;
@@ -122,7 +134,7 @@ body {
 }
 
 .gl__bread-crumbs-list {
-  margin: -1rem -1rem 2rem -1rem;
+  margin: -.4rem -1rem 1.4rem -1rem;
 }
 
 .gl__bread-crumbs-item {
