@@ -135,9 +135,20 @@
 .profile__error-wrapper {
   opacity: 0;
   transition: opacity 300ms;
+  margin-left: 4rem;
 
   &.mod-show {
     opacity: 1;
+  }
+
+  @include for-md-down {
+    margin-left: 0;
+    opacity: 1;
+    display: none;
+
+    &.mod-show {
+      display: block;
+    }
   }
 }
 
@@ -148,7 +159,6 @@
   padding: 1.6rem 6.6rem;
   background-color: rgba(223, 18, 92, .2);
   border-radius: 25px;
-  margin-left: 4rem;
   position: relative;
 
   .mark {
@@ -165,11 +175,14 @@
 }
 
 .profile__university-type {
-  opacity: 0;
   transition: opacity 300ms;
 
-  &.mod-show {
-    opacity: 1;
+  &:not(.mod-show) {
+    opacity: 0;
+
+    @include for-lg-down {
+      display: none;
+    }
   }
 }
 

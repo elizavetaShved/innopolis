@@ -2144,8 +2144,8 @@ button.swiper-pagination-bullet {
     .gl__select-container.mod-filter-select .choices__item {
       color: #000; }
     .gl__select-container.mod-filter-select .choices__inner {
-      min-width: 22rem;
-      min-height: auto; }
+      padding: 1.3rem 3rem 1.5rem 2.2rem !important;
+      min-width: 22rem; }
   .gl__select-container:not(.mod-filter-select).choices__item--selectable {
     color: var(--main-color);
     white-space: nowrap;
@@ -2162,7 +2162,6 @@ button.swiper-pagination-bullet {
   .gl__select-wrapper .choices__inner {
     background: var(--pale-secondary-color) !important;
     font-size: 1.4rem;
-    padding: 0 3rem 0 2.2rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2171,13 +2170,11 @@ button.swiper-pagination-bullet {
             align-items: center;
     border-radius: 30px !important;
     border: 2px solid transparent !important;
-    min-height: 5.2rem; }
-    @media screen and (max-width: 959px) {
+    padding: 1.5rem 3rem 1.5rem 2.2rem !important;
+    min-height: auto; }
+    @media screen and (max-width: 1023px) {
       .gl__select-wrapper .choices__inner {
-        min-height: 4.1rem; } }
-    @media screen and (max-width: 559px) {
-      .gl__select-wrapper .choices__inner {
-        min-height: 4rem; } }
+        padding: .9rem 2rem !important; } }
   .gl__select-wrapper .choices[data-type*=select-one] .choices__inner {
     padding-bottom: 0; }
   .gl__select-wrapper .choices__list--single {
@@ -7827,7 +7824,8 @@ html.remodal-is-locked {
   .account__form-head .gl__subtitle {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
-            flex: 0 0 auto; }
+            flex: 0 0 auto;
+    margin-bottom: 0; }
   @media screen and (min-width: 768px) {
     .account__form-head .gl__subtitle {
       margin-bottom: 0; } }
@@ -7985,9 +7983,17 @@ html.remodal-is-locked {
 .profile__error-wrapper {
   opacity: 0;
   -webkit-transition: opacity 300ms;
-  transition: opacity 300ms; }
+  transition: opacity 300ms;
+  margin-left: 4rem; }
   .profile__error-wrapper.mod-show {
     opacity: 1; }
+  @media screen and (max-width: 767px) {
+    .profile__error-wrapper {
+      margin-left: 0;
+      opacity: 1;
+      display: none; }
+      .profile__error-wrapper.mod-show {
+        display: block; } }
 
 .profile__error {
   font-style: italic;
@@ -7996,7 +8002,6 @@ html.remodal-is-locked {
   padding: 1.6rem 6.6rem;
   background-color: rgba(223, 18, 92, 0.2);
   border-radius: 25px;
-  margin-left: 4rem;
   position: relative; }
   .profile__error .mark {
     color: var(--btn-color); }
@@ -8010,11 +8015,13 @@ html.remodal-is-locked {
   height: 2.4rem; }
 
 .profile__university-type {
-  opacity: 0;
   -webkit-transition: opacity 300ms;
   transition: opacity 300ms; }
-  .profile__university-type.mod-show {
-    opacity: 1; }
+  .profile__university-type:not(.mod-show) {
+    opacity: 0; }
+    @media screen and (max-width: 959px) {
+      .profile__university-type:not(.mod-show) {
+        display: none; } }
 
 .profile__form-container {
   padding: 6rem 0; }
