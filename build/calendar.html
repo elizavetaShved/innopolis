@@ -1038,11 +1038,11 @@
           Календарь мероприятий
         </h1>
 
-        <div class="calendar__header-wrapper calendar__page-content">
-          <button type="button" class="calendar__filter-btn gl__main-btn mod-no-shadow gl__sm-show">Фильтры</button>
+        <div class="filters__header-wrapper calendar__page-content">
+          <button type="button" class="filters__filter-btn gl__main-btn mod-no-shadow gl__sm-show js-filter-btn">Фильтры</button>
 
           <div class="gl__sm-hide">
-            <div class="calendar__selects-wrapper">
+            <div class="filters__selects-wrapper">
               <div class="gl__select-container mod-filter-select" id="commonDates-calendar">
                 <label class="gl__select-wrapper">
                   <select class="gl__select js-select"
@@ -1130,9 +1130,9 @@
             </div>
           </div>
 
-          <div class="calendar__btn">
+          <div class="filter__btn">
             <a href="" download=""
-               class="calendar__btn-download gl__main-btn mod-black mod-no-shadow">
+               class="filters__btn-download gl__main-btn mod-black mod-no-shadow">
               Скачать программу в PDF
               <svg width="24" height="24" aria-hidden="true" class="gl__btn-download-icon">
                 <use xlink:href="#download"></use>
@@ -1141,8 +1141,8 @@
           </div>
         </div>
 
-        <div class="calendar__content">
-          <table class="calendar__table">
+        <div class="calendar__content js-content">
+          <table class="calendar__table js-table">
             <thead class="calendar__table-head">
             <tr class="calendar__row-wrapper mod-head">
               <td class="calendar__item-header mod-date">2 дек.</td>
@@ -2034,14 +2034,14 @@
         </div>
       </div>
 
-      <div class="calendar__modal-filter gl__sm-show">
+      <div class="calendar__modal-filter gl__sm-show js-modal-filter">
         <div class="calendar__modal-filter-content gl__page-content">
           <div class="calendar__modal-filter-header">
             <div class="gl__subtitle calendar__modal-filter-header-subtitle">Фильтры</div>
-            <button type="button" class="calendar__modal-filter-close"></button>
+            <button type="button" class="calendar__modal-filter-close js-modal-filter-close"></button>
           </div>
 
-          <div class="calendar__selects-wrapper">
+          <div class="filters__selects-wrapper">
             <div class="gl__select-container mod-filter-select" id="commonDates-calendar">
               <label class="gl__select-wrapper">
                 <select class="gl__select js-select"

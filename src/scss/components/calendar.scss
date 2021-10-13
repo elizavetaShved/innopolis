@@ -9,6 +9,11 @@
   padding-top: 6rem;
   padding-bottom: 6rem;
 
+  @include for-bg-down {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
   .ps__rail-x {
     height: 1rem;
     background: #F0F0F1;
@@ -44,59 +49,10 @@
   padding: 0 3rem;
 }
 
-.calendar__selects-wrapper {
-  margin: -1rem;
-
-  @include for-sm-down {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-.calendar__header-wrapper {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 4.8rem;
-
-  @include for-md-down {
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-}
-
 .calendar__content {
   position: relative;
   overflow: hidden;
   padding-top: 2.8rem;
-}
-
-.calendar__filter-btn {
-  max-width: 40rem;
-  padding: 1.6rem;
-}
-
-.calendar__btn-download {
-  min-width: 26rem;
-  text-align: center;
-  margin-left: 2rem;
-  width: 100%;
-  padding-top: 1.6rem;
-  padding-bottom: 1.6rem;
-
-  @include for-md-down {
-    margin-left: 0;
-    margin-top: 3rem;
-    min-width: auto;
-    display: inline-block;
-
-    .gl__btn-download-icon {
-      left: 1.2rem !important;
-    }
-  }
-
-  @include for-sm-down {
-    margin-top: 1.4rem;
-  }
 }
 
 .calendar__modal-filter-content {

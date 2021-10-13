@@ -175,3 +175,45 @@ body {
     }
   }
 }
+
+.gl__drop-menu-btn {
+  &.mod-open {
+    .gl__drop-menu-icon {
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+.gl__drop-menu-icon {
+  transform: rotate(0);
+  transition: transform 250ms;
+}
+
+.gl__drop-menu-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 400ms;
+
+  &.mod-open {
+    //max-height: ??; // высчитывается через js
+    pointer-events: auto;
+  }
+
+  &:not(.mod-open) {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.gl__drop-menu {
+  padding-bottom: 2rem;
+}
+
+.gl__drop-menu-btn-content {
+  &:not(.mod-show) {
+    display: none;
+  }
+}
+

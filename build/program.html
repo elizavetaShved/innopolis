@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/styles.min.css"/>
   <link type="image/png" href="img/favicon.ico" rel="icon">
   <title>
-    Аккаунт
+    Программа
   </title>
 </head>
 
@@ -1019,1115 +1019,664 @@
 
   <main class="layout__content">
     
-    <section class="account gl__page-content" id="account-host">
-      <div class="account__header">
-        <div class="account__menu-container">
-          <div class="account__menu-wrapper">
-            <label class="account__menu-radio-wrapper">
-              <input type="radio" name="account-menu" class="account__menu-radio" checked value="profile">
-              <span class="account__menu-radio-content">Профиль</span>
-            </label>
-            <label class="account__menu-radio-wrapper">
-              <input type="radio" name="account-menu" class="account__menu-radio" disabled value="calendar">
-              <span class="account__menu-radio-content">Календарь бронирования</span>
-            </label>
-            <label class="account__menu-radio-wrapper">
-              <input type="radio" name="account-menu" class="account__menu-radio" value="media">
-              <span class="account__menu-radio-content">Медиа</span>
-            </label>
+    <div class="program-page" id="program-host">
+      <div class="program-page__page-content">
+        <ul class="gl__bread-crumbs-list">
+          <li class="gl__bread-crumbs-item">
+            <a href="/" class="gl__bread-crumbs-item-link">
+              Главная
+            </a>
+          </li>
+          <li class="gl__bread-crumbs-item">
+          <span class="gl__bread-crumbs-item-link mod-current-page">
+           Программа
+          </span>
+          </li>
+        </ul>
+
+        <h1 class="gl__subtitle">
+          Программа
+        </h1>
+
+        <div class="program-page__info-block">
+          <div class="program-page__info-block-caption">
+            Индустриальный межвузовский акселератор «StartupHouse»
           </div>
+          <p class="program-page__info-block-text">
+            В рамках Всероссийского форума по цифровой трансформации «DID» в Иннополисе со 2 — 4 декабря 2021 года
+            пройдет DemoDay для команд прошедших акселерационную программу. Стартапы могут получить инвестиции до 10
+            000 000 рублей от инвесторов, бизнес-ангелов и венчурных фондов, а также получить гранты от Фонда
+            содействия инноваций в размере 3 000 000 рублей.
+          </p>
+
+          <a href="" class="gl__main-btn mod-no-shadow">
+            Сайт Startup House
+          </a>
+
+          <img src="img/program/img.jpg" alt="" class="program-page__info-block-image">
         </div>
-      
-        <div class="account__exit-btn-wrapper">
-          <button type="button" class="account__exit-btn">
-            <svg width="24" height="24" aria-hidden="true" class="account__exit-btn-icon">
-              <use xlink:href="#exit"></use>
-            </svg>
-            Выйти
+
+        <div class="filters__header-wrapper">
+          <button type="button" class="filters__filter-btn gl__main-btn mod-no-shadow gl__sm-show js-filter-btn">
+            Фильтры
           </button>
-        </div>
-      </div>
 
-      <div class="account__component mod-profile">
-        <div class="profile account__body">
-          <form data-need-validation data-parsley-validate data-parsley-focus="none"
-                class="profile__form-container gl__form">
-            <div class="account__form-head">
-              <h2 class="gl__subtitle">
-                Данные профиля
-              </h2>
-              <div class="profile__error-wrapper js-error-block">
-                <div class="profile__error">
-                  Проверьте правильность заполнения полей, выделенных <span class="mark">красным цветом!</span>
-                  <img src="img/form/error.svg" alt="" class="profile__error-icon">
-                </div>
-              </div>
-            </div>
-        
-            <div class="profile__form-radio-container">
-              <div class="profile__form-radio-input-title">
-                Формат участия
-              </div>
-              <div class="gl__form-radio-wrapper">
-                <label class="gl__radio-checkbox-input-wrapper mod-inline mod-for-caption">
-                  <input type="radio"
-                         class="gl__radio-checkbox-input"
-                         name="participation-account"
-                         checked
-                         data-parsley-required=""
+          <div class="gl__sm-hide">
+            <div class="filters__selects-wrapper">
+              <div class="gl__select-container mod-filter-select" id="commonDates-calendar">
+                <label class="gl__select-wrapper">
+                  <select class="gl__select js-select"
+                          data-parsley-class-handler="#commonDates-calendar"
+                          name="commonDates-calendar"
                   >
-                
-                  <span class="gl__radio-checkbox-input-content"></span>
-                    <span class="gl__radio-checkbox-input-text">Офлайн</span>
-                </label>
-                <label class="gl__radio-checkbox-input-wrapper mod-inline mod-for-caption">
-                  <input type="radio"
-                         class="gl__radio-checkbox-input"
-                         name="participation-account"
-                         data-parsley-required=""
-                  >
-                
-                  <span class="gl__radio-checkbox-input-content"></span>
-                    <span class="gl__radio-checkbox-input-text">Онлайн</span>
+                    <option class="gl__select-option" placeholder value="">Все даты</option>
+                    <option class="gl__select-option" value="option 1">option 1</option>
+                    <option class="gl__select-option" value="option 2">option 2</option>
+                    <option class="gl__select-option" value="option 3">option 3</option>
+                    <option class="gl__select-option" value="option 4">option 4</option>
+                    <option class="gl__select-option" value="option 5">option 5</option>
+                    <option class="gl__select-option" value="option 6">option 6</option>
+                    <option class="gl__select-option" value="option 7">option 7</option>
+                    <option class="gl__select-option" value="option 8">option 8</option>
+                    <option class="gl__select-option" value="option 9">option 9</option>
+                    <option class="gl__select-option" value="option 10">option 10</option>
+                    <option class="gl__select-option" value="option 12">option 12</option>
+                  </select>
                 </label>
               </div>
-            </div>
-        
-            <ul class="profile__form-inputs-list">
-              <li class="gl__input-container">
-                <div class="gl__input-title mod-small">ФИО</div>
-                <!-- 1) isPassword / isContacts - необходимы для js -->
-                <!-- 2) inputType - html type input -->
-                <!-- 3) required (true/false) - обязательно для заполнения -->
-                <!-- 4) name - name input -->
-                <!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
-                <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
-                <!-- 7) id - обычный id, например для первого пароля-->
-                <!-- 8) parsleyType - для валидации (н-р email) -->
-                <!-- 9) minLength - максимально допустимое к-во символов -->
-                <!-- 10) maxLength - максимально допустимое к-во символов -->
-                
-                <label class="gl__input-wrapper  ">
-                    <span class="gl__input-mark-required"></span>
-                  <input type="text"
-                         class="gl__input "
-                         data-parsley-minlength="2"
-                         name="name-account"
-                
-                         data-parsley-minlength="2"
-                
-                
-                         data-parsley-required=""
-                
-                
-                         placeholder="Иванов Анатолий Иванович"
-                
-                
+              <div class="gl__select-container mod-filter-select" id="topics-calendar">
+                <label class="gl__select-wrapper">
+                  <select class="gl__select js-select"
+                          data-parsley-class-handler="#topics-calendar"
+                          name="topics-calendar"
                   >
-                
-                </label>
-              </li>
-              <li class="gl__input-container profile__university">
-                <div class="gl__input-title mod-small">Вуз</div>
-                <!-- 1) isPassword / isContacts - необходимы для js -->
-                <!-- 2) inputType - html type input -->
-                <!-- 3) required (true/false) - обязательно для заполнения -->
-                <!-- 4) name - name input -->
-                <!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
-                <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
-                <!-- 7) id - обычный id, например для первого пароля-->
-                <!-- 8) parsleyType - для валидации (н-р email) -->
-                <!-- 9) minLength - максимально допустимое к-во символов -->
-                <!-- 10) maxLength - максимально допустимое к-во символов -->
-                
-                <label class="gl__input-wrapper  ">
-                  <input type="text"
-                         class="gl__input "
-                         data-parsley-minlength="2"
-                         name="university-account"
-                
-                         data-parsley-minlength="2"
-                
-                
-                
-                
-                         placeholder="Моя alma mater"
-                
-                
-                  >
-                
-                </label>
-              </li>
-              <li class="gl__input-container">
-                <div class="gl__input-title mod-small">Дата рождения</div>
-                <!--
-                dateTypeBirth - для ДР совершеннолетние
-                dateTypeFuture - для будущей даты
-                -->
-                
-                <label class="gl__datepicker-container js-datepicker-container">
-                    <span class="gl__input-mark-required"></span>
-                  <input type="text"
-                         class="gl__datepicker-input gl__input js-input js-date-input"
-                         placeholder="дд.мм.гг"
-                         name="birth-account"
-                         data-birth-18
-                         required
-                  >
-                  <img src="img/form/datepicker.svg" alt="datepicker" class="gl__input-icon">
-                </label>
-              </li>
-              <li class="gl__input-container">
-                <div class="gl__input-title mod-small">Организация</div>
-                <div class="gl__select-container " id="organization-account">
-                  <label class="gl__select-wrapper">
-                      <span class="gl__input-mark-required"></span>
-                    <select class="gl__select js-select"
-                            data-parsley-class-handler="#organization-account"
-                            name="organization-account"
-                            data-parsley-required="" data-parsley-trigger="change"
-                    >
-                      <option class="gl__select-option" placeholder value="">Какую организацию Вы представляете?</option>
-                      <option class="gl__select-option" value="Организация 1">Организация 1</option>
-                      <option class="gl__select-option" value="Организация 2">Организация 2</option>
-                      <option class="gl__select-option" value="Организация 3">Организация 3</option>
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                    </select>
-                  </label>
-                </div>
-              </li>
-              <li class="gl__input-container">
-                <div class="gl__input-title mod-small">Пол</div>
-                <div class="gl__select-container " id="gender-account">
-                  <label class="gl__select-wrapper">
-                      <span class="gl__input-mark-required"></span>
-                    <select class="gl__select js-select"
-                            data-parsley-class-handler="#gender-account"
-                            name="gender-account"
-                            data-parsley-required="" data-parsley-trigger="change"
-                    >
-                      <option class="gl__select-option" placeholder value="">Пол</option>
-                      <option class="gl__select-option" value="Женский">Женский</option>
-                      <option class="gl__select-option" value="Мужской">Мужской</option>
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                    </select>
-                  </label>
-                </div>
-              </li>
-              <li class="profile__type-organization">
-                <div class="profile__form-radio-input-title">
-                  Тип организации
-                </div>
-                <div class="gl__form-radio-wrapper">
-                  <label class="gl__radio-checkbox-input-wrapper mod-inline mod-for-caption">
-                    <input type="radio"
-                           class="gl__radio-checkbox-input"
-                           name="type-organization-account"
-                           checked
-                           data-parsley-required=""
-                    >
-                  
-                    <span class="gl__radio-checkbox-input-content"></span>
-                      <span class="gl__radio-checkbox-input-text">Бизнес</span>
-                  </label>
-                  <label class="gl__radio-checkbox-input-wrapper mod-inline mod-for-caption">
-                    <input type="radio"
-                           class="gl__radio-checkbox-input"
-                           name="type-organization-account"
-                           data-parsley-required=""
-                    >
-                  
-                    <span class="gl__radio-checkbox-input-content"></span>
-                      <span class="gl__radio-checkbox-input-text">Образование</span>
-                  </label>
-                  <label class="gl__radio-checkbox-input-wrapper mod-inline mod-for-caption">
-                    <input type="radio"
-                           class="gl__radio-checkbox-input"
-                           name="type-organization-account"
-                           data-parsley-required=""
-                    >
-                  
-                    <span class="gl__radio-checkbox-input-content"></span>
-                      <span class="gl__radio-checkbox-input-text">Гос. сектор</span>
-                  </label>
-                </div>
-              </li>
-              <li class="gl__input-container">
-                <div class="gl__input-title mod-small">Должность</div>
-                <!-- 1) isPassword / isContacts - необходимы для js -->
-                <!-- 2) inputType - html type input -->
-                <!-- 3) required (true/false) - обязательно для заполнения -->
-                <!-- 4) name - name input -->
-                <!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
-                <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
-                <!-- 7) id - обычный id, например для первого пароля-->
-                <!-- 8) parsleyType - для валидации (н-р email) -->
-                <!-- 9) minLength - максимально допустимое к-во символов -->
-                <!-- 10) maxLength - максимально допустимое к-во символов -->
-                
-                <label class="gl__input-wrapper  ">
-                    <span class="gl__input-mark-required"></span>
-                  <input type="text"
-                         class="gl__input "
-                         data-parsley-minlength="2"
-                         name="post-account"
-                
-                         data-parsley-minlength="2"
-                
-                
-                         data-parsley-required=""
-                
-                
-                         placeholder="Должность"
-                
-                
-                  >
-                
-                </label>
-              </li>
-              <li class="gl__input-container">
-                <div class="gl__input-title mod-small">Телефон</div>
-                <!-- 1) isPassword / isContacts - необходимы для js -->
-                <!-- 2) inputType - html type input -->
-                <!-- 3) required (true/false) - обязательно для заполнения -->
-                <!-- 4) name - name input -->
-                <!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
-                <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
-                <!-- 7) id - обычный id, например для первого пароля-->
-                <!-- 8) parsleyType - для валидации (н-р email) -->
-                <!-- 9) minLength - максимально допустимое к-во символов -->
-                <!-- 10) maxLength - максимально допустимое к-во символов -->
-                
-                <label class="gl__input-wrapper  ">
-                    <span class="gl__input-mark-required"></span>
-                  <input type="tel"
-                         class="gl__input js-phone-input"
-                         data-parsley-minlength="2"
-                         name="phone-account"
-                
-                         data-parsley-minlength="2"
-                
-                
-                         data-parsley-required=""
-                
-                
-                         placeholder="+7(888)888-88-88"
-                
-                
-                  >
-                
-                </label>
-              </li>
-              <li class="gl__input-container">
-                <div class="gl__input-title mod-small">ПЦР-тест</div>
-                <label class="gl__input-wrapper mod-file">
-                    <span class="gl__input-mark-required"></span>
-                  <input type="file"
-                         class="gl__input-file js-input-file"
-                         name="pcr-test-account"
-                         data-parsley-required=""
-                  >
-                  <span class="gl__input mod-file js-input-file-content">PDF файл, не более 2 мб</span>
-                  <img src="img/form/download.svg" alt="" class="gl__input-icon">
-                </label>
-              </li>
-              <li class="gl__input-container">
-                <div class="gl__input-title mod-small">E-mail</div>
-                <!-- 1) isPassword / isContacts - необходимы для js -->
-                <!-- 2) inputType - html type input -->
-                <!-- 3) required (true/false) - обязательно для заполнения -->
-                <!-- 4) name - name input -->
-                <!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
-                <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
-                <!-- 7) id - обычный id, например для первого пароля-->
-                <!-- 8) parsleyType - для валидации (н-р email) -->
-                <!-- 9) minLength - максимально допустимое к-во символов -->
-                <!-- 10) maxLength - максимально допустимое к-во символов -->
-                
-                <label class="gl__input-wrapper  ">
-                    <span class="gl__input-mark-required"></span>
-                  <input type="email"
-                         class="gl__input "
-                         data-parsley-minlength="2"
-                         name="email-account"
-                
-                         data-parsley-minlength="2"
-                
-                
-                         data-parsley-required=""
-                
-                
-                         placeholder="info@gmail.com"
-                
-                
-                         data-parsley-type="email"
-                  >
-                
-                </label>
-              </li>
-              <li class="gl__input-container profile__direction">
-                <div class="gl__input-title mod-small">Направление</div>
-                <div class="gl__select-container " id="direction-account">
-                  <label class="gl__select-wrapper">
-                      <span class="gl__input-mark-required"></span>
-                    <select class="gl__select js-select"
-                            data-parsley-class-handler="#direction-account"
-                            name="direction-account"
-                            data-parsley-required="" data-parsley-trigger="change"
-                    >
-                      <option class="gl__select-option" placeholder value="">Которое интересно посетить на форуме</option>
-                      <option class="gl__select-option" value="Кибербезопасность">Кибербезопасность</option>
-                      <option class="gl__select-option" value="Цифра в культуре">Цифра в культуре</option>
-                      <option class="gl__select-option" value="Цифровая трансформация регионо">Цифровая трансформация регионо</option>
-                      <option class="gl__select-option" value="Российская цифровая индустрия">Российская цифровая индустрия</option>
-                      <option class="gl__select-option" value="Цифровые кадры для индустрии">Цифровые кадры для индустрии</option>
-                      <option class="gl__select-option" value="Медиа-акселератор">Медиа-акселератор</option>
-                      <option class="gl__select-option" value="Вузы">Вузы</option>
-                      <option class="gl__select-option" value="Стартапы">Стартапы</option>
-                      
-                      
-                      
-                    </select>
-                  </label>
-                </div>
-              </li>
-        
-              <li class="gl__input-container">
-                <div class="gl__input-title mod-small">Город</div>
-                <div class="gl__select-container " id="city-account">
-                  <label class="gl__select-wrapper">
-                      <span class="gl__input-mark-required"></span>
-                    <select class="gl__select js-select"
-                            data-parsley-class-handler="#city-account"
-                            name="city-account"
-                            data-parsley-required="" data-parsley-trigger="change"
-                    >
-                      <option class="gl__select-option" placeholder value="">Выберите</option>
-                      <option class="gl__select-option" value="Город 1">Город 1</option>
-                      <option class="gl__select-option" value="Город 2">Город 2</option>
-                      <option class="gl__select-option" value="Город 3">Город 3</option>
-                      <option class="gl__select-option" value="Город 4">Город 4</option>
-                      <option class="gl__select-option" value="Город 5">Город 5</option>
-                      
-                      
-                      
-                      
-                      
-                      
-                    </select>
-                  </label>
-                </div>
-              </li>
-        
-              <li class="gl__input-container profile__university-type">
-                <div class="gl__input-title mod-small"></div>
-                <div class="gl__select-container " id="university-type-account">
-                  <label class="gl__select-wrapper">
-                      <span class="gl__input-mark-required"></span>
-                    <select class="gl__select js-select"
-                            data-parsley-class-handler="#university-type-account"
-                            name="university-type-account"
-                            data-parsley-required="" data-parsley-trigger="change"
-                    >
-                      <option class="gl__select-option" placeholder value="">Вуз</option>
-                      <option class="gl__select-option" value="Отрасль. Образование">Отрасль. Образование</option>
-                      <option class="gl__select-option" value="Отрасль. Здравоохранение">Отрасль. Здравоохранение</option>
-                      <option class="gl__select-option" value="Отрасль. Сельское хозяйство">Отрасль. Сельское хозяйство</option>
-                      <option class="gl__select-option" value="Отрасль. Городское хозяйство">Отрасль. Городское хозяйство</option>
-                      <option class="gl__select-option" value="Отрасль.Финансовые услуги">Отрасль.Финансовые услуги</option>
-                      <option class="gl__select-option" value="Отрасль.Добывающая промышленность">Отрасль.Добывающая промышленность</option>
-                      <option class="gl__select-option" value="Отрасль..Энергетическая инфраструктура">Отрасль..Энергетическая инфраструктура</option>
-                      <option class="gl__select-option" value="Транспортная инфраструктура">Транспортная инфраструктура</option>
-                      <option class="gl__select-option" value="Информационно-коммуникационные технологии">Информационно-коммуникационные технологии</option>
-                      <option class="gl__select-option" value="Отрасль.Строительство">Отрасль.Строительство</option>
-                      <option class="gl__select-option" value="Обрабатывающая промышленность">Обрабатывающая промышленность</option>
-                    </select>
-                  </label>
-                </div>
-              </li>
-            </ul>
-        
-            <ul class="profile__form-inputs-list">
-              <li class="gl__input-container">
-                <div class="gl__input-title mod-small">Наличие промокода</div>
-                <!-- 1) isPassword / isContacts - необходимы для js -->
-                <!-- 2) inputType - html type input -->
-                <!-- 3) required (true/false) - обязательно для заполнения -->
-                <!-- 4) name - name input -->
-                <!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
-                <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
-                <!-- 7) id - обычный id, например для первого пароля-->
-                <!-- 8) parsleyType - для валидации (н-р email) -->
-                <!-- 9) minLength - максимально допустимое к-во символов -->
-                <!-- 10) maxLength - максимально допустимое к-во символов -->
-                
-                <label class="gl__input-wrapper  ">
-                    <span class="gl__input-mark-required"></span>
-                  <input type="text"
-                         class="gl__input "
-                         data-parsley-minlength="2"
-                         name="promo-account"
-                
-                         data-parsley-minlength="2"
-                
-                
-                         data-parsley-required=""
-                
-                
-                         placeholder="Введите промокод"
-                
-                
-                  >
-                
-                </label>
-              </li>
-              <li class="profile__submit-block-wrapper mod-item-list mod-end">
-                <div class="profile__submit-block-hint">
-                  <div class="profile__submit-block-hint-mark gl__input-mark-required"></div>
-                  <div class="profile__submit-block-hint-caption">— Обязательные поля</div>
-                </div>
-        
-                <button type="submit" class="js-btn-submit gl__main-btn mod-no-shadow mod-small profile__btn">Сохранить</button>
-              </li>
-            </ul>
-          </form>
-        
-          <form data-need-validation data-parsley-validate data-parsley-focus="none"
-                class="profile__form-container gl__form">
-            <div class="account__form-head">
-              <h2 class="gl__subtitle">
-                Трансфер и проживание
-              </h2>
-              <div class="profile__form-btn-download-wrapper">
-                <a href="" download="" class="profile__form-btn gl__main-btn mod-no-shadow mod-small mod-long">
-                  <span>Скачать PDF</span>
-                  <img src="img/form/download-bottom.svg" alt="" class="profile__form-btn-icon">
-                </a>
-                <div class="profile__form-btn-download-hint">
-                  Рекомендации по гостиницам и трансферу
-                </div>
-              </div>
-            </div>
-        
-            <div class="profile__form-radio-container">
-              <div class="profile__form-radio-input-title">
-                Дни участия в форуме
-              </div>
-              <div class="gl__form-radio-wrapper">
-                <label class="gl__radio-checkbox-input-wrapper mod-inline mod-for-caption">
-                  <input type="checkbox"
-                         class="gl__radio-checkbox-input"
-                         name="days-participation-account"
-                  >
-                
-                  <span class="gl__radio-checkbox-input-content"></span>
-                    <span class="gl__radio-checkbox-input-text">2 декабря</span>
-                </label>
-                <label class="gl__radio-checkbox-input-wrapper mod-inline mod-for-caption">
-                  <input type="checkbox"
-                         class="gl__radio-checkbox-input"
-                         name="days-participation-account"
-                  >
-                
-                  <span class="gl__radio-checkbox-input-content"></span>
-                    <span class="gl__radio-checkbox-input-text">3 декабря</span>
-                </label>
-                <label class="gl__radio-checkbox-input-wrapper mod-inline mod-for-caption">
-                  <input type="checkbox"
-                         class="gl__radio-checkbox-input"
-                         name="days-participation-account"
-                  >
-                
-                  <span class="gl__radio-checkbox-input-content"></span>
-                    <span class="gl__radio-checkbox-input-text">4 декабря</span>
+                    <option class="gl__select-option" placeholder value="">Тема</option>
+                    <option class="gl__select-option" value="Вузы">Вузы</option>
+                    <option class="gl__select-option" value="Бизнес">Бизнес</option>
+                    <option class="gl__select-option" value="Культурная программа">Культурная программа</option>
+                    <option class="gl__select-option" value="Стартапы">Стартапы</option>
+                    <option class="gl__select-option" value="Органы гос.власти">Органы гос.власти</option>
+                    
+                    
+                    
+                    
+                    
+                    
+                  </select>
                 </label>
               </div>
-            </div>
-        
-            <ul class="profile__form-inputs-list">
-              <li class="gl__input-container">
-                <div class="gl__input-title mod-small">Дата приезда</div>
-                <!--
-                dateTypeBirth - для ДР совершеннолетние
-                dateTypeFuture - для будущей даты
-                -->
-                
-                <label class="gl__datepicker-container js-datepicker-container">
-                  <input type="text"
-                         class="gl__datepicker-input gl__input js-input js-date-input"
-                         placeholder="дд.мм.гг"
-                         name="arrival-date-account"
-                         data-future-with-today
+              <div class="gl__select-container mod-filter-select" id="auditoriums-calendar">
+                <label class="gl__select-wrapper">
+                  <select class="gl__select js-select"
+                          data-parsley-class-handler="#auditoriums-calendar"
+                          name="auditoriums-calendar"
                   >
-                  <img src="img/form/datepicker.svg" alt="datepicker" class="gl__input-icon">
+                    <option class="gl__select-option" placeholder value="">Аудитория</option>
+                    <option class="gl__select-option" value="большой зал">большой зал</option>
+                    <option class="gl__select-option" value="аудитория 104">аудитория 104</option>
+                    <option class="gl__select-option" value="аудитория 105">аудитория 105</option>
+                    <option class="gl__select-option" value="аудитория 106">аудитория 106</option>
+                    <option class="gl__select-option" value="аудитория 107">аудитория 107</option>
+                    <option class="gl__select-option" value="аудитория 108">аудитория 108</option>
+                    <option class="gl__select-option" value="аудитория 109">аудитория 109</option>
+                    <option class="gl__select-option" value="аудитория 110">аудитория 110</option>
+                    <option class="gl__select-option" value="аудитория 111">аудитория 111</option>
+                    <option class="gl__select-option" value="аудитория 112">аудитория 112</option>
+                    
+                  </select>
                 </label>
-              </li>
-              <li class="gl__input-container">
-                <div class="gl__input-title mod-small">Дата отъезда</div>
-                <!--
-                dateTypeBirth - для ДР совершеннолетние
-                dateTypeFuture - для будущей даты
-                -->
-                
-                <label class="gl__datepicker-container js-datepicker-container">
-                  <input type="text"
-                         class="gl__datepicker-input gl__input js-input js-date-input"
-                         placeholder="дд.мм.гг"
-                         name="departure-date-account"
-                         data-future-with-today
-                  >
-                  <img src="img/form/datepicker.svg" alt="datepicker" class="gl__input-icon">
-                </label>
-              </li>
-              <li class="gl__input-container">
-                <div class="gl__input-title mod-small">Время приезда</div>
-                <div class="gl__select-container mod-forked">
-                
-                  <label class="gl__select-wrapper">
-                    <select class="gl__select js-select" name="08-account">
-                      <option class="gl__select-option">08</option>
-                      <option class="gl__select-option">09</option>
-                      <option class="gl__select-option">10</option>
-                      <option class="gl__select-option">11</option>
-                      <option class="gl__select-option">12</option>
-                      <option class="gl__select-option">13</option>
-                      <option class="gl__select-option">14</option>
-                      <option class="gl__select-option">15</option>
-                      <option class="gl__select-option">16</option>
-                      <option class="gl__select-option">17</option>
-                      <option class="gl__select-option">18</option>
-                    </select>
-                  </label>
-                
-                  <label class="gl__select-wrapper">
-                    <select class="gl__select js-select" name="00-account">
-                      <option class="gl__select-option">00</option>
-                      <option class="gl__select-option">10</option>
-                      <option class="gl__select-option">20</option>
-                      <option class="gl__select-option">30</option>
-                      <option class="gl__select-option">40</option>
-                      <option class="gl__select-option">50</option>
-                    </select>
-                  </label>
-                </div>
-              </li>
-              <li class="gl__input-container">
-                <div class="gl__input-title mod-small">Время отъезда</div>
-                <div class="gl__select-container mod-forked">
-                
-                  <label class="gl__select-wrapper">
-                    <select class="gl__select js-select" name="08-account">
-                      <option class="gl__select-option">08</option>
-                      <option class="gl__select-option">09</option>
-                      <option class="gl__select-option">10</option>
-                      <option class="gl__select-option">11</option>
-                      <option class="gl__select-option">12</option>
-                      <option class="gl__select-option">13</option>
-                      <option class="gl__select-option">14</option>
-                      <option class="gl__select-option">15</option>
-                      <option class="gl__select-option">16</option>
-                      <option class="gl__select-option">17</option>
-                      <option class="gl__select-option">18</option>
-                    </select>
-                  </label>
-                
-                  <label class="gl__select-wrapper">
-                    <select class="gl__select js-select" name="00-account">
-                      <option class="gl__select-option">00</option>
-                      <option class="gl__select-option">10</option>
-                      <option class="gl__select-option">20</option>
-                      <option class="gl__select-option">30</option>
-                      <option class="gl__select-option">40</option>
-                      <option class="gl__select-option">50</option>
-                    </select>
-                  </label>
-                </div>
-              </li>
-              <li class="gl__input-container">
-                <div class="gl__input-title mod-small">Место прибытия</div>
-                <div class="gl__select-container " id="place-arrival-account">
-                  <label class="gl__select-wrapper">
-                    <select class="gl__select js-select"
-                            data-parsley-class-handler="#place-arrival-account"
-                            name="place-arrival-account"
-                    >
-                      <option class="gl__select-option" placeholder value="">Выберите из списка</option>
-                      <option class="gl__select-option" value="Место прибытия 1">Место прибытия 1</option>
-                      <option class="gl__select-option" value="Место прибытия 2">Место прибытия 2</option>
-                      <option class="gl__select-option" value="Место прибытия 3">Место прибытия 3</option>
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                    </select>
-                  </label>
-                </div>
-              </li>
-              <li class="gl__input-container">
-                <div class="gl__input-title mod-small">Место отбытия</div>
-                <div class="gl__select-container " id="place-departure-account">
-                  <label class="gl__select-wrapper">
-                    <select class="gl__select js-select"
-                            data-parsley-class-handler="#place-departure-account"
-                            name="place-departure-account"
-                    >
-                      <option class="gl__select-option" placeholder value="">Выберите из списка</option>
-                      <option class="gl__select-option" value="Место отбытия 1">Место отбытия 1</option>
-                      <option class="gl__select-option" value="Место отбытия 2">Место отбытия 2</option>
-                      <option class="gl__select-option" value="Место отбытия 3">Место отбытия 3</option>
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                    </select>
-                  </label>
-                </div>
-              </li>
-              <li class="gl__input-container">
-                <div class="gl__input-title mod-small">Номер рейса прибытия</div>
-                <!-- 1) isPassword / isContacts - необходимы для js -->
-                <!-- 2) inputType - html type input -->
-                <!-- 3) required (true/false) - обязательно для заполнения -->
-                <!-- 4) name - name input -->
-                <!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
-                <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
-                <!-- 7) id - обычный id, например для первого пароля-->
-                <!-- 8) parsleyType - для валидации (н-р email) -->
-                <!-- 9) minLength - максимально допустимое к-во символов -->
-                <!-- 10) maxLength - максимально допустимое к-во символов -->
-                
-                <label class="gl__input-wrapper  ">
-                  <input type="number"
-                         class="gl__input "
-                         data-parsley-minlength="2"
-                         name="flight-number-arrival-account"
-                
-                         data-parsley-minlength="2"
-                
-                         data-parsley-maxlength="3"
-                
-                
-                
-                         placeholder="Укажите"
-                
-                
-                  >
-                
-                </label>
-              </li>
-              <li class="gl__input-container">
-                <div class="gl__input-title mod-small">Номер рейса отбытия</div>
-                <!-- 1) isPassword / isContacts - необходимы для js -->
-                <!-- 2) inputType - html type input -->
-                <!-- 3) required (true/false) - обязательно для заполнения -->
-                <!-- 4) name - name input -->
-                <!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
-                <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
-                <!-- 7) id - обычный id, например для первого пароля-->
-                <!-- 8) parsleyType - для валидации (н-р email) -->
-                <!-- 9) minLength - максимально допустимое к-во символов -->
-                <!-- 10) maxLength - максимально допустимое к-во символов -->
-                
-                <label class="gl__input-wrapper  ">
-                  <input type="number"
-                         class="gl__input "
-                         data-parsley-minlength="2"
-                         name="flight-number-departure-account"
-                
-                         data-parsley-minlength="2"
-                
-                         data-parsley-maxlength="3"
-                
-                
-                
-                         placeholder="Укажите"
-                
-                
-                  >
-                
-                </label>
-              </li>
-              <li class="profile__form-radio-container">
-                <div class="profile__form-radio-input-title">
-                  Нужен трансфер при прибытии в Казань (только до аккредитованных гостиниц и площадок форума)
-                </div>
-                <div class="gl__form-radio-wrapper">
-                  <label class="gl__radio-checkbox-input-wrapper mod-inline mod-for-caption">
-                    <input type="checkbox"
-                           class="gl__radio-checkbox-input"
-                           name="date-transfer-account"
-                    >
-                  
-                    <span class="gl__radio-checkbox-input-content"></span>
-                      <span class="gl__radio-checkbox-input-text">2 декабря</span>
-                  </label>
-                  <label class="gl__radio-checkbox-input-wrapper mod-inline mod-for-caption">
-                    <input type="checkbox"
-                           class="gl__radio-checkbox-input"
-                           name="date-transfer-account"
-                    >
-                  
-                    <span class="gl__radio-checkbox-input-content"></span>
-                      <span class="gl__radio-checkbox-input-text">3 декабря</span>
-                  </label>
-                  <label class="gl__radio-checkbox-input-wrapper mod-inline mod-for-caption">
-                    <input type="checkbox"
-                           class="gl__radio-checkbox-input"
-                           name="date-transfer-account"
-                    >
-                  
-                    <span class="gl__radio-checkbox-input-content"></span>
-                      <span class="gl__radio-checkbox-input-text">4 декабря</span>
-                  </label>
-                </div>
-              </li>
-              <li class="profile__form-radio-container">
-                <div class="profile__form-radio-input-title">
-                  Нужен трансфер для отъезда из Казани (только от аккредитованных гостиниц и площадок форума)
-                </div>
-                <div class="gl__form-radio-wrapper">
-                  <label class="gl__radio-checkbox-input-wrapper mod-inline mod-for-caption">
-                    <input type="checkbox"
-                           class="gl__radio-checkbox-input"
-                           name="date-transfer-2-account"
-                    >
-                  
-                    <span class="gl__radio-checkbox-input-content"></span>
-                      <span class="gl__radio-checkbox-input-text">2 декабря</span>
-                  </label>
-                  <label class="gl__radio-checkbox-input-wrapper mod-inline mod-for-caption">
-                    <input type="checkbox"
-                           class="gl__radio-checkbox-input"
-                           name="date-transfer-2-account"
-                    >
-                  
-                    <span class="gl__radio-checkbox-input-content"></span>
-                      <span class="gl__radio-checkbox-input-text">3 декабря</span>
-                  </label>
-                  <label class="gl__radio-checkbox-input-wrapper mod-inline mod-for-caption">
-                    <input type="checkbox"
-                           class="gl__radio-checkbox-input"
-                           name="date-transfer-2-account"
-                    >
-                  
-                    <span class="gl__radio-checkbox-input-content"></span>
-                      <span class="gl__radio-checkbox-input-text">4 декабря</span>
-                  </label>
-                </div>
-              </li>
-              <li class="gl__input-container">
-                <div class="gl__input-title mod-small">После прибытия поеду сразу в</div>
-                <div class="gl__select-container " id="place-immediately-arrival-account">
-                  <label class="gl__select-wrapper">
-                    <select class="gl__select js-select"
-                            data-parsley-class-handler="#place-immediately-arrival-account"
-                            name="place-immediately-arrival-account"
-                    >
-                      <option class="gl__select-option" placeholder value="">Выберите из списка</option>
-                      <option class="gl__select-option" value="Место 1">Место 1</option>
-                      <option class="gl__select-option" value="Место 2">Место 2</option>
-                      <option class="gl__select-option" value="Место 3">Место 3</option>
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                    </select>
-                  </label>
-                </div>
-              </li>
-              <li class="gl__input-container">
-                <div class="gl__input-title mod-small">Место проживания</div>
-                <div class="gl__select-container " id="place-residence-account">
-                  <label class="gl__select-wrapper">
-                    <select class="gl__select js-select"
-                            data-parsley-class-handler="#place-residence-account"
-                            name="place-residence-account"
-                    >
-                      <option class="gl__select-option" placeholder value="">Выберите из списка</option>
-                      <option class="gl__select-option" value="Место проживания 1">Место проживания 1</option>
-                      <option class="gl__select-option" value="Место проживания 2">Место проживания 2</option>
-                      <option class="gl__select-option" value="Место проживания 3">Место проживания 3</option>
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                    </select>
-                  </label>
-                </div>
-              </li>
-            </ul>
-        
-            <div class="profile__submit-block-wrapper">
-              <div class="profile__submit-block-hint">
-                <div class="profile__submit-block-hint-caption">* Просим Вас заполнить эту информацию до <span
-                  class="profile__submit-block-hint-caption-mark">25 ноября</span>, чтобы мы могли обеспечить вам трансфер
-                </div>
               </div>
-        
-              <button type="submit" class="js-btn-submit gl__main-btn mod-no-shadow mod-small profile__btn">Сохранить</button>
-            </div>
-          </form>
-        
-          <form data-need-validation data-parsley-validate data-parsley-focus="none"
-                class="profile__form-container gl__form">
-            <h2 class="gl__subtitle">
-              Хочу стать спикером
-            </h2>
-        
-            <ul class="profile__form-inputs-list">
-              <li class="gl__input-container">
-                <div class="gl__input-title mod-small">Название темы</div>
-                <!-- 1) isPassword / isContacts - необходимы для js -->
-                <!-- 2) inputType - html type input -->
-                <!-- 3) required (true/false) - обязательно для заполнения -->
-                <!-- 4) name - name input -->
-                <!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
-                <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
-                <!-- 7) id - обычный id, например для первого пароля-->
-                <!-- 8) parsleyType - для валидации (н-р email) -->
-                <!-- 9) minLength - максимально допустимое к-во символов -->
-                <!-- 10) maxLength - максимально допустимое к-во символов -->
-                
-                <label class="gl__input-wrapper  ">
-                  <input type="text"
-                         class="gl__input "
-                         data-parsley-minlength="2"
-                         name="topics-name-account"
-                
-                         data-parsley-minlength="2"
-                
-                
-                
-                
-                         placeholder="Которую вы хотели бы осветить"
-                
-                
+              <div class="gl__select-container mod-filter-select" id="speakers-calendar">
+                <label class="gl__select-wrapper">
+                  <select class="gl__select js-select"
+                          data-parsley-class-handler="#speakers-calendar"
+                          name="speakers-calendar"
                   >
-                
-                </label>
-              </li>
-              <li class="gl__input-container">
-                <div class="gl__input-title mod-small">Формат мероприятия</div>
-                <div class="gl__select-container " id="event-format-account">
-                  <label class="gl__select-wrapper">
-                    <select class="gl__select js-select"
-                            data-parsley-class-handler="#event-format-account"
-                            name="event-format-account"
-                    >
-                      <option class="gl__select-option" placeholder value="">Выберите</option>
-                      <option class="gl__select-option" value="Формат 1">Формат 1</option>
-                      <option class="gl__select-option" value="Формат 2">Формат 2</option>
-                      <option class="gl__select-option" value="Формат 3">Формат 3</option>
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                    </select>
-                  </label>
-                </div>
-              </li>
-            </ul>
-        
-            <div class="profile__submit-block-wrapper mod-end">
-              <button type="submit" class="js-btn-submit gl__main-btn mod-no-shadow mod-small profile__btn">Сохранить</button>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <div class="account__component mod-calendar">
-        <div class="account__body">
-          <div class="account__form-head">
-            <h2 class="gl__subtitle">
-              Календарь
-            </h2>
-        
-            111
-          </div>
-        </div>
-      </div>
-
-      <div class="account__component mod-media">
-        <div class="account__body">
-          <div class="account__form-head">
-            <h2 class="gl__subtitle">
-              Медиа
-            </h2>
-        
-            <div class="account__btn-date-container">
-              <div class="account__btn-date-wrapper">
-                <label class="program__navigate-radio-wrapper">
-                  <input type="radio" class="program__navigate-radio" name="program-date" checked>
-                  <span class="program__navigate-radio-content mod-white-background">
-                  2 декабря
-                </span>
-                </label>
-                <label class="program__navigate-radio-wrapper">
-                  <input type="radio" class="program__navigate-radio" name="program-date">
-                  <span class="program__navigate-radio-content mod-white-background">
-                  3 декабря
-                </span>
-                </label>
-                <label class="program__navigate-radio-wrapper">
-                  <input type="radio" class="program__navigate-radio" name="program-date">
-                  <span class="program__navigate-radio-content mod-white-background">
-                  4 декабря
-                </span>
+                    <option class="gl__select-option" placeholder value="">Спикер</option>
+                    <option class="gl__select-option" value="Александр Горник">Александр Горник</option>
+                    <option class="gl__select-option" value="Андрей Бедняков">Андрей Бедняков</option>
+                    <option class="gl__select-option" value="Марина Кравец">Марина Кравец</option>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                  </select>
                 </label>
               </div>
             </div>
           </div>
-        
-          <ul class="media__content">
-            <li class="news-page__news-item media__item-main-content">
-              <div>
-                  <div class="news-page__news-link news__card">
-                    <div class="news__card-date-wrapper">
-                      <div class="news__card-date">
-                        8:30
-                      </div>
-                    </div>
-                    <div>
-                      <div class="news-page__news-title">
-                        Деловой завтрак с Марией Захаровой «ИноСМИ-иноагенты в России»
-                      </div>
-              
-                        <div class="news-page__content">
-                          12 августа в формате ВКС прошло первое заседание Организационного комитета Международной премии #МЫВМЕСТЕ. Участники встречи обсудили текущую деятельность волонтеров и итоги заявочной кампании.
-                        </div>
+
+          <div class="filter__btn">
+            <a href="" download=""
+               class="filters__btn-download gl__main-btn mod-black mod-no-shadow">
+              Скачать программу в PDF
+              <svg width="24" height="24" aria-hidden="true" class="gl__btn-download-icon">
+                <use xlink:href="#download"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="program-page__table-wrapper">
+        <div class="program-page__table-row mod-fill">
+          <div class="program-page__table-row-item program-page__table-grey-row">
+            <div class="program-page__table-main-title-date">
+              2дек.
+            </div>
+            <div class="program-page__table-main-title-caption">
+              Свияжские холмы, Прибрежная, 2, GrandHall
+            </div>
+          </div>
+        </div>
+
+        <ul class="program-page__table-list">
+            <li class="program-page__table-item">
+              <div class="program-page__table-row program-page__table-purple-row">
+                <div class="program-page__table-row-item program-page__table-title-time">
+                  10:00 - 11:20
+                </div>
+                <div class="program-page__table-row-item program-page__table-title-wrapper">
+                  <div class="program-page__table-title">
+                    Заседание отраслевой рабочей группы
+                  </div>
+                  <div class="program-page__table-title-mark mod-color-1">
+                    Образование
+                  </div>
+                </div>
+              </div>
+
+              <div class="program-page__table-row">
+                <div class="program-page__table-row-item">
+                  <div class="program-page__table-geolocation-wrapper">
+                    <img src="img/common/geolocation.svg" alt="" class="program-page__table-geolocation-img">
+                    <div class="program-page__table-geolocation-caption">
+                      Свияжские холмы, Прибрежная, 2, GrandHall
                     </div>
                   </div>
-              </div>
-              <div class="media__geolocation">
-                <img src="img/common/geolocation.svg" alt="" class="media__geolocation-img">
-                Конгресс-центр, зал для деловых завтраков E12
-              </div>
-              <button type="button" class="media__video-bnt">
-                <img src="img/media/video-btn.svg" alt="" class="media__video-btn-img">
-                Трансляция
-              </button>
-            </li>
-            <li class="news-page__news-item media__item-main-content">
-              <div>
-                  <div class="news-page__news-link news__card">
-                    <div class="news__card-date-wrapper">
-                      <div class="news__card-date">
-                        8:30
-                      </div>
+                </div>
+                <div class="program-page__table-row-item program-page__table-info-wrapper">
+                  <div>
+                    <div class="program-page__table-title">
+                      Цифровые технологии в профессиональном образовании: перспективы и риски
                     </div>
-                    <div>
-                      <div class="news-page__news-title">
-                        Деловой завтрак с Марией Захаровой «ИноСМИ-иноагенты в России»
-                      </div>
-              
-                        <div class="news-page__content">
-                          12 августа в формате ВКС прошло первое заседание Организационного комитета Международной премии #МЫВМЕСТЕ. Участники встречи обсудили текущую деятельность волонтеров и итоги заявочной кампании.
-                        </div>
+
+                    <div class="js-drop-menu-container gl__drop-menu-container">
+                      <ul class="program-page__table-text-list js-drop-menu">
+                          <li class="program-page__table-text-item">
+                            Скорость изменения рынка и влияние на ключевых игроков.
+                          </li>
+                          <li class="program-page__table-text-item">
+                            Выстраивание эффективного сотрудничества между бизнесом, наукой и образовательными организациями.
+                          </li>
+                          <li class="program-page__table-text-item">
+                            Особенности подготовки квалифицированных кадров для индустрии.
+                          </li>
+                      </ul>
                     </div>
                   </div>
-              </div>
-              <div class="media__geolocation">
-                <img src="img/common/geolocation.svg" alt="" class="media__geolocation-img">
-                Конгресс-центр, зал для деловых завтраков E12
-              </div>
-              <button type="button" class="media__video-bnt">
-                <img src="img/media/video-btn.svg" alt="" class="media__video-btn-img">
-                Трансляция
-              </button>
-            </li>
-            <li class="news-page__news-item media__item-main-content">
-              <div>
-                  <div class="news-page__news-link news__card">
-                    <div class="news__card-date-wrapper">
-                      <div class="news__card-date">
-                        8:30
-                      </div>
-                    </div>
-                    <div>
-                      <div class="news-page__news-title">
-                        Деловой завтрак с Марией Захаровой «ИноСМИ-иноагенты в России»
-                      </div>
-              
-                        <div class="news-page__content">
-                          12 августа в формате ВКС прошло первое заседание Организационного комитета Международной премии #МЫВМЕСТЕ. Участники встречи обсудили текущую деятельность волонтеров и итоги заявочной кампании.
+
+                  <div class="program-page__content-info-btn-show-wrapper">
+                    <button type="button"
+                            class="program__content-info-btn-show gl__drop-menu js-drop-menu-btn gl__drop-menu-btn">
+                      <span class="gl__drop-menu-btn-content mod-show js-drop-menu-btn-content">Подробнее</span>
+                      <span class="gl__drop-menu-btn-content js-drop-menu-btn-content">Скрыть описание</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="program-page__table-row-item">
+                  <ul class="program-page__table-speakers-list">
+                      <li class="program-page__table-speaker-wrapper">
+                          <div class="program__content-author-image-wrapper gl__mask-color">
+                            <img src="img/old/img/program-content-author-image.jpg" alt="Поморова Екатерина"
+                                 class="program__content-author-image">
+                          </div>
+
+                        <div class="program-page__table-speaker-info">
+                          <div class="program-page__table-speaker-caption">
+                            Поморова Екатерина
+                          </div>
+                          <div class="program-page__table-speaker-value">
+                            Директор по развитию новых каналов дистрибуции Rambler&amp;Co
+                          </div>
                         </div>
+                      </li>
+                      <li class="program-page__table-speaker-wrapper">
+                          <div class="program__content-author-image-wrapper gl__mask-color">
+                            <img src="img/old/img/speakers-image-3.jpg" alt="Cпиридонов Анатолий"
+                                 class="program__content-author-image">
+                          </div>
+
+                        <div class="program-page__table-speaker-info">
+                          <div class="program-page__table-speaker-caption">
+                            Cпиридонов Анатолий
+                          </div>
+                          <div class="program-page__table-speaker-value">
+                            Ведущий тренер в России по интернет-рекламеи продающим сайтам
+                          </div>
+                        </div>
+                      </li>
+                      <li class="program-page__table-speaker-wrapper">
+                          <div class="program__content-author-image-wrapper gl__mask-color">
+                            <img src="img/old/img/speakers-image-1.jpg" alt="Кирилл Шишаев"
+                                 class="program__content-author-image">
+                          </div>
+
+                        <div class="program-page__table-speaker-info">
+                          <div class="program-page__table-speaker-caption">
+                            Кирилл Шишаев
+                          </div>
+                          <div class="program-page__table-speaker-value">
+                            Исполнительный директор АО «Винвестор»
+                          </div>
+                        </div>
+                      </li>
+                      <li class="program-page__table-speaker-wrapper">
+                          <div class="program__content-author-image-wrapper gl__mask-color">
+                            <img src="img/old/img/speakers-image-4.jpg" alt="Оксана Селендеева"
+                                 class="program__content-author-image">
+                          </div>
+
+                        <div class="program-page__table-speaker-info">
+                          <div class="program-page__table-speaker-caption">
+                            Оксана Селендеева
+                          </div>
+                          <div class="program-page__table-speaker-value">
+                            IT-предприниматель, основатель и генеральный директор школы программирования для детей Coddy
+                          </div>
+                        </div>
+                      </li>
+                      <li class="program-page__table-speaker-wrapper">
+                          <div class="program__content-author-image-wrapper gl__mask-color">
+                            <img src="img/old/img/speakers-image-none.jpg" alt="Александр Другов"
+                                 class="program__content-author-image">
+                          </div>
+
+                        <div class="program-page__table-speaker-info">
+                          <div class="program-page__table-speaker-caption">
+                            Александр Другов
+                          </div>
+                          <div class="program-page__table-speaker-value">
+                            Основатель и директор крупной IT-компании ДАМАСК
+                          </div>
+                        </div>
+                      </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="program-page__table-item">
+              <div class="program-page__table-row program-page__table-purple-row">
+                <div class="program-page__table-row-item program-page__table-title-time">
+                  12:00 - 13:20
+                </div>
+                <div class="program-page__table-row-item program-page__table-title-wrapper">
+                  <div class="program-page__table-title">
+                    Заседание отраслевой рабочей группы
+                  </div>
+                  <div class="program-page__table-title-mark mod-color-2">
+                    Стартапы
+                  </div>
+                </div>
+              </div>
+
+              <div class="program-page__table-row">
+                <div class="program-page__table-row-item">
+                  <div class="program-page__table-geolocation-wrapper">
+                    <img src="img/common/geolocation.svg" alt="" class="program-page__table-geolocation-img">
+                    <div class="program-page__table-geolocation-caption">
+                      Свияжские холмы, Прибрежная, 2, GrandHall
                     </div>
                   </div>
+                </div>
+                <div class="program-page__table-row-item program-page__table-info-wrapper">
+                  <div>
+                    <div class="program-page__table-title">
+                      Цифровые технологии в профессиональном образовании: перспективы и риски
+                    </div>
+
+                    <div class="js-drop-menu-container gl__drop-menu-container">
+                      <ul class="program-page__table-text-list js-drop-menu">
+                          <li class="program-page__table-text-item">
+                            Скорость изменения рынка и влияние на ключевых игроков.
+                          </li>
+                          <li class="program-page__table-text-item">
+                            Выстраивание эффективного сотрудничества между бизнесом, наукой и образовательными организациями.
+                          </li>
+                          <li class="program-page__table-text-item">
+                            Особенности подготовки квалифицированных кадров для индустрии.
+                          </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="program-page__content-info-btn-show-wrapper">
+                    <button type="button"
+                            class="program__content-info-btn-show gl__drop-menu js-drop-menu-btn gl__drop-menu-btn">
+                      <span class="gl__drop-menu-btn-content mod-show js-drop-menu-btn-content">Подробнее</span>
+                      <span class="gl__drop-menu-btn-content js-drop-menu-btn-content">Скрыть описание</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="program-page__table-row-item">
+                  <ul class="program-page__table-speakers-list">
+                      <li class="program-page__table-speaker-wrapper">
+
+                        <div class="program-page__table-speaker-info">
+                          <div class="program-page__table-speaker-caption">
+                            Поморова Екатерина
+                          </div>
+                          <div class="program-page__table-speaker-value">
+                            Директор по развитию новых каналов дистрибуции Rambler&amp;Co
+                          </div>
+                        </div>
+                      </li>
+                      <li class="program-page__table-speaker-wrapper">
+
+                        <div class="program-page__table-speaker-info">
+                          <div class="program-page__table-speaker-caption">
+                            Cпиридонов Анатолий
+                          </div>
+                          <div class="program-page__table-speaker-value">
+                            Ведущий тренер в России по интернет-рекламеи продающим сайтам
+                          </div>
+                        </div>
+                      </li>
+                      <li class="program-page__table-speaker-wrapper">
+
+                        <div class="program-page__table-speaker-info">
+                          <div class="program-page__table-speaker-caption">
+                            Кирилл Шишаев
+                          </div>
+                          <div class="program-page__table-speaker-value">
+                            Исполнительный директор АО «Винвестор»
+                          </div>
+                        </div>
+                      </li>
+                      <li class="program-page__table-speaker-wrapper">
+
+                        <div class="program-page__table-speaker-info">
+                          <div class="program-page__table-speaker-caption">
+                            Оксана Селендеева
+                          </div>
+                          <div class="program-page__table-speaker-value">
+                            IT-предприниматель, основатель и генеральный директор школы программирования для детей Coddy
+                          </div>
+                        </div>
+                      </li>
+                      <li class="program-page__table-speaker-wrapper">
+
+                        <div class="program-page__table-speaker-info">
+                          <div class="program-page__table-speaker-caption">
+                            Александр Другов
+                          </div>
+                          <div class="program-page__table-speaker-value">
+                            Основатель и директор крупной IT-компании ДАМАСК
+                          </div>
+                        </div>
+                      </li>
+                  </ul>
+                </div>
               </div>
-              <div class="media__geolocation">
-                <img src="img/common/geolocation.svg" alt="" class="media__geolocation-img">
-                Конгресс-центр, зал для деловых завтраков E12
-              </div>
-              <button type="button" class="media__video-bnt">
-                <img src="img/media/video-btn.svg" alt="" class="media__video-btn-img">
-                Трансляция
-              </button>
             </li>
-          </ul>
-        
-          <div class="pagination" id="pagination-host">
-            <div class="pagination__page-num-list">
-              <label class="pagination__radio-wrapper">
-                <input type="radio" name="pagination-page" class="pagination__radio" checked>
-                <span class="pagination__radio-content">1</span>
+            <li class="program-page__table-item">
+              <div class="program-page__table-row program-page__table-purple-row">
+                <div class="program-page__table-row-item program-page__table-title-time">
+                  12:00 - 13:20
+                </div>
+                <div class="program-page__table-row-item program-page__table-title-wrapper">
+                  <div class="program-page__table-title">
+                    Заседание отраслевой рабочей группы
+                  </div>
+                  <div class="program-page__table-title-mark mod-color-3">
+                    Культурная программа
+                  </div>
+                </div>
+              </div>
+
+              <div class="program-page__table-row">
+                <div class="program-page__table-row-item">
+                  <div class="program-page__table-geolocation-wrapper">
+                    <img src="img/common/geolocation.svg" alt="" class="program-page__table-geolocation-img">
+                    <div class="program-page__table-geolocation-caption">
+                      Свияжские холмы, Прибрежная, 2, GrandHall
+                    </div>
+                  </div>
+                </div>
+                <div class="program-page__table-row-item program-page__table-info-wrapper">
+                  <div>
+                    <div class="program-page__table-title">
+                      Цифровые технологии в профессиональном образовании: перспективы и риски
+                    </div>
+
+                    <div class="js-drop-menu-container gl__drop-menu-container">
+                      <ul class="program-page__table-text-list js-drop-menu">
+                          <li class="program-page__table-text-item">
+                            Скорость изменения рынка и влияние на ключевых игроков.
+                          </li>
+                          <li class="program-page__table-text-item">
+                            Выстраивание эффективного сотрудничества между бизнесом, наукой и образовательными организациями.
+                          </li>
+                          <li class="program-page__table-text-item">
+                            Особенности подготовки квалифицированных кадров для индустрии.
+                          </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="program-page__content-info-btn-show-wrapper">
+                    <button type="button"
+                            class="program__content-info-btn-show gl__drop-menu js-drop-menu-btn gl__drop-menu-btn">
+                      <span class="gl__drop-menu-btn-content mod-show js-drop-menu-btn-content">Подробнее</span>
+                      <span class="gl__drop-menu-btn-content js-drop-menu-btn-content">Скрыть описание</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="program-page__table-row-item">
+                  <ul class="program-page__table-speakers-list">
+                      <li class="program-page__table-speaker-wrapper">
+
+                        <div class="program-page__table-speaker-info">
+                          <div class="program-page__table-speaker-caption">
+                            Поморова Екатерина
+                          </div>
+                          <div class="program-page__table-speaker-value">
+                            Директор по развитию новых каналов дистрибуции Rambler&amp;Co
+                          </div>
+                        </div>
+                      </li>
+                      <li class="program-page__table-speaker-wrapper">
+
+                        <div class="program-page__table-speaker-info">
+                          <div class="program-page__table-speaker-caption">
+                            Cпиридонов Анатолий
+                          </div>
+                          <div class="program-page__table-speaker-value">
+                            Ведущий тренер в России по интернет-рекламеи продающим сайтам
+                          </div>
+                        </div>
+                      </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="program-page__table-item">
+              <div class="program-page__table-row program-page__table-purple-row">
+                <div class="program-page__table-row-item program-page__table-title-time">
+                  12:00 - 13:20
+                </div>
+                <div class="program-page__table-row-item program-page__table-title-wrapper">
+                  <div class="program-page__table-title">
+                    Заседание отраслевой рабочей группы
+                  </div>
+                  <div class="program-page__table-title-mark mod-color-4">
+                    Здравоохранение
+                  </div>
+                </div>
+              </div>
+
+              <div class="program-page__table-row">
+                <div class="program-page__table-row-item">
+                  <div class="program-page__table-geolocation-wrapper">
+                    <img src="img/common/geolocation.svg" alt="" class="program-page__table-geolocation-img">
+                    <div class="program-page__table-geolocation-caption">
+                      Свияжские холмы, Прибрежная, 2, GrandHall
+                    </div>
+                  </div>
+                </div>
+                <div class="program-page__table-row-item program-page__table-info-wrapper">
+                  <div>
+                    <div class="program-page__table-title">
+                      Цифровые технологии в профессиональном образовании: перспективы и риски
+                    </div>
+
+                    <div class="js-drop-menu-container gl__drop-menu-container">
+                      <ul class="program-page__table-text-list js-drop-menu">
+                          <li class="program-page__table-text-item">
+                            Скорость изменения рынка и влияние на ключевых игроков.
+                          </li>
+                          <li class="program-page__table-text-item">
+                            Выстраивание эффективного сотрудничества между бизнесом, наукой и образовательными организациями.
+                          </li>
+                          <li class="program-page__table-text-item">
+                            Особенности подготовки квалифицированных кадров для индустрии.
+                          </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="program-page__content-info-btn-show-wrapper">
+                    <button type="button"
+                            class="program__content-info-btn-show gl__drop-menu js-drop-menu-btn gl__drop-menu-btn">
+                      <span class="gl__drop-menu-btn-content mod-show js-drop-menu-btn-content">Подробнее</span>
+                      <span class="gl__drop-menu-btn-content js-drop-menu-btn-content">Скрыть описание</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="program-page__table-row-item">
+                  <ul class="program-page__table-speakers-list">
+                      <li class="program-page__table-speaker-wrapper">
+
+                        <div class="program-page__table-speaker-info">
+                          <div class="program-page__table-speaker-caption">
+                            Поморова Екатерина
+                          </div>
+                          <div class="program-page__table-speaker-value">
+                            Директор по развитию новых каналов дистрибуции Rambler&amp;Co
+                          </div>
+                        </div>
+                      </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+        </ul>
+      </div>
+
+      <div class="calendar__modal-filter gl__sm-show js-modal-filter">
+        <div class="calendar__modal-filter-content gl__page-content">
+          <div class="calendar__modal-filter-header">
+            <div class="gl__subtitle calendar__modal-filter-header-subtitle">Фильтры</div>
+            <button type="button" class="calendar__modal-filter-close js-modal-filter-close"></button>
+          </div>
+
+          <div class="filters__selects-wrapper">
+            <div class="gl__select-container mod-filter-select" id="commonDates-calendar">
+              <label class="gl__select-wrapper">
+                <select class="gl__select js-select"
+                        data-parsley-class-handler="#commonDates-calendar"
+                        name="commonDates-calendar"
+                >
+                  <option class="gl__select-option" placeholder value="">Все даты</option>
+                  <option class="gl__select-option" value="option 1">option 1</option>
+                  <option class="gl__select-option" value="option 2">option 2</option>
+                  <option class="gl__select-option" value="option 3">option 3</option>
+                  <option class="gl__select-option" value="option 4">option 4</option>
+                  <option class="gl__select-option" value="option 5">option 5</option>
+                  <option class="gl__select-option" value="option 6">option 6</option>
+                  <option class="gl__select-option" value="option 7">option 7</option>
+                  <option class="gl__select-option" value="option 8">option 8</option>
+                  <option class="gl__select-option" value="option 9">option 9</option>
+                  <option class="gl__select-option" value="option 10">option 10</option>
+                  <option class="gl__select-option" value="option 12">option 12</option>
+                </select>
               </label>
-              <label class="pagination__radio-wrapper">
-                <input type="radio" name="pagination-page" class="pagination__radio">
-                <span class="pagination__radio-content">2</span>
+            </div>
+            <div class="gl__select-container mod-filter-select" id="topics-calendar">
+              <label class="gl__select-wrapper">
+                <select class="gl__select js-select"
+                        data-parsley-class-handler="#topics-calendar"
+                        name="topics-calendar"
+                >
+                  <option class="gl__select-option" placeholder value="">Тема</option>
+                  <option class="gl__select-option" value="Вузы">Вузы</option>
+                  <option class="gl__select-option" value="Бизнес">Бизнес</option>
+                  <option class="gl__select-option" value="Культурная программа">Культурная программа</option>
+                  <option class="gl__select-option" value="Стартапы">Стартапы</option>
+                  <option class="gl__select-option" value="Органы гос.власти">Органы гос.власти</option>
+                  
+                  
+                  
+                  
+                  
+                  
+                </select>
               </label>
-              <label class="pagination__radio-wrapper">
-                <input type="radio" name="pagination-page" class="pagination__radio">
-                <span class="pagination__radio-content">3</span>
+            </div>
+            <div class="gl__select-container mod-filter-select" id="auditoriums-calendar">
+              <label class="gl__select-wrapper">
+                <select class="gl__select js-select"
+                        data-parsley-class-handler="#auditoriums-calendar"
+                        name="auditoriums-calendar"
+                >
+                  <option class="gl__select-option" placeholder value="">Аудитория</option>
+                  <option class="gl__select-option" value="большой зал">большой зал</option>
+                  <option class="gl__select-option" value="аудитория 104">аудитория 104</option>
+                  <option class="gl__select-option" value="аудитория 105">аудитория 105</option>
+                  <option class="gl__select-option" value="аудитория 106">аудитория 106</option>
+                  <option class="gl__select-option" value="аудитория 107">аудитория 107</option>
+                  <option class="gl__select-option" value="аудитория 108">аудитория 108</option>
+                  <option class="gl__select-option" value="аудитория 109">аудитория 109</option>
+                  <option class="gl__select-option" value="аудитория 110">аудитория 110</option>
+                  <option class="gl__select-option" value="аудитория 111">аудитория 111</option>
+                  <option class="gl__select-option" value="аудитория 112">аудитория 112</option>
+                  
+                </select>
               </label>
-              <label class="pagination__radio-wrapper">
-                <input type="radio" name="pagination-page" class="pagination__radio">
-                <span class="pagination__radio-content">4</span>
-              </label>
-              <label class="pagination__radio-wrapper">
-                <input type="radio" name="pagination-page" class="pagination__radio">
-                <span class="pagination__radio-content">5</span>
+            </div>
+            <div class="gl__select-container mod-filter-select" id="speakers-calendar">
+              <label class="gl__select-wrapper">
+                <select class="gl__select js-select"
+                        data-parsley-class-handler="#speakers-calendar"
+                        name="speakers-calendar"
+                >
+                  <option class="gl__select-option" placeholder value="">Спикер</option>
+                  <option class="gl__select-option" value="Александр Горник">Александр Горник</option>
+                  <option class="gl__select-option" value="Андрей Бедняков">Андрей Бедняков</option>
+                  <option class="gl__select-option" value="Марина Кравец">Марина Кравец</option>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                </select>
               </label>
             </div>
           </div>
         </div>
       </div>
-
-    </section>
+    </div>
 
 
   </main>

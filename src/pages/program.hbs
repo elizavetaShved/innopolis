@@ -1,0 +1,168 @@
+{{#extend "layout"}}
+  {{#content "main"}}
+
+    <div class="program-page" id="program-host">
+      <div class="program-page__page-content">
+        <ul class="gl__bread-crumbs-list">
+          <li class="gl__bread-crumbs-item">
+            <a href="/" class="gl__bread-crumbs-item-link">
+              Главная
+            </a>
+          </li>
+          <li class="gl__bread-crumbs-item">
+          <span class="gl__bread-crumbs-item-link mod-current-page">
+           Программа
+          </span>
+          </li>
+        </ul>
+
+        <h1 class="gl__subtitle">
+          Программа
+        </h1>
+
+        <div class="program-page__info-block">
+          <div class="program-page__info-block-caption">
+            Индустриальный межвузовский акселератор «StartupHouse»
+          </div>
+          <p class="program-page__info-block-text">
+            В рамках Всероссийского форума по цифровой трансформации «DID» в Иннополисе со 2 — 4 декабря 2021 года
+            пройдет DemoDay для команд прошедших акселерационную программу. Стартапы могут получить инвестиции до 10
+            000 000 рублей от инвесторов, бизнес-ангелов и венчурных фондов, а также получить гранты от Фонда
+            содействия инноваций в размере 3 000 000 рублей.
+          </p>
+
+          <a href="" class="gl__main-btn mod-no-shadow">
+            Сайт Startup House
+          </a>
+
+          <img src="img/program/img.jpg" alt="" class="program-page__info-block-image">
+        </div>
+
+        <div class="filters__header-wrapper">
+          <button type="button" class="filters__filter-btn gl__main-btn mod-no-shadow gl__sm-show js-filter-btn">
+            Фильтры
+          </button>
+
+          <div class="gl__sm-hide">
+            {{> filters }}
+          </div>
+
+          <div class="filter__btn">
+            <a href="" download=""
+               class="filters__btn-download gl__main-btn mod-black mod-no-shadow">
+              Скачать программу в PDF
+              <svg width="24" height="24" aria-hidden="true" class="gl__btn-download-icon">
+                <use xlink:href="#download"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="program-page__table-wrapper">
+        <div class="program-page__table-row mod-fill">
+          <div class="program-page__table-row-item program-page__table-grey-row">
+            <div class="program-page__table-main-title-date">
+              2дек.
+            </div>
+            <div class="program-page__table-main-title-caption">
+              Свияжские холмы, Прибрежная, 2, GrandHall
+            </div>
+          </div>
+        </div>
+
+        <ul class="program-page__table-list">
+          {{#each programList }}
+            <li class="program-page__table-item">
+              <div class="program-page__table-row program-page__table-purple-row">
+                <div class="program-page__table-row-item program-page__table-title-time">
+                  {{ this.time }}
+                </div>
+                <div class="program-page__table-row-item program-page__table-title-wrapper">
+                  <div class="program-page__table-title">
+                    {{ this.mainTitle }}
+                  </div>
+                  <div class="program-page__table-title-mark mod-color-{{ this.mark.colorType }}">
+                    {{ this.mark.markText }}
+                  </div>
+                </div>
+              </div>
+
+              <div class="program-page__table-row">
+                <div class="program-page__table-row-item">
+                  <div class="program-page__table-geolocation-wrapper">
+                    <img src="img/common/geolocation.svg" alt="" class="program-page__table-geolocation-img">
+                    <div class="program-page__table-geolocation-caption">
+                      {{ this.geolocation }}
+                    </div>
+                  </div>
+                </div>
+                <div class="program-page__table-row-item program-page__table-info-wrapper">
+                  <div>
+                    <div class="program-page__table-title">
+                      {{ this.info.title }}
+                    </div>
+
+                    <div class="js-drop-menu-container gl__drop-menu-container">
+                      <ul class="program-page__table-text-list js-drop-menu">
+                        {{#each this.info.text }}
+                          <li class="program-page__table-text-item">
+                            {{ this }}
+                          </li>
+                        {{/each}}
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="program-page__content-info-btn-show-wrapper">
+                    <button type="button"
+                            class="program__content-info-btn-show gl__drop-menu js-drop-menu-btn gl__drop-menu-btn">
+                      <span class="gl__drop-menu-btn-content mod-show js-drop-menu-btn-content">Подробнее</span>
+                      <span class="gl__drop-menu-btn-content js-drop-menu-btn-content">Скрыть описание</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="program-page__table-row-item">
+                  <ul class="program-page__table-speakers-list">
+                    {{#each speakersList }}
+                      <li class="program-page__table-speaker-wrapper">
+                        {{#if this.img }}
+                          <div class="program__content-author-image-wrapper gl__mask-color">
+                            <img src="{{ this.img }}" alt="{{ this.caption }}"
+                                 class="program__content-author-image">
+                          </div>
+                        {{/if}}
+
+                        <div class="program-page__table-speaker-info">
+                          <div class="program-page__table-speaker-caption">
+                            {{ this.caption }}
+                          </div>
+                          <div class="program-page__table-speaker-value">
+                            {{ this.value }}
+                          </div>
+                        </div>
+                      </li>
+                    {{/each}}
+                  </ul>
+                </div>
+              </div>
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+
+      <div class="calendar__modal-filter gl__sm-show js-modal-filter">
+        <div class="calendar__modal-filter-content gl__page-content">
+          <div class="calendar__modal-filter-header">
+            <div class="gl__subtitle calendar__modal-filter-header-subtitle">Фильтры</div>
+            <button type="button" class="calendar__modal-filter-close js-modal-filter-close"></button>
+          </div>
+
+          {{> filters }}
+        </div>
+      </div>
+    </div>
+
+  {{/content}}
+{{/extend}}
