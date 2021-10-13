@@ -1,6 +1,5 @@
 import { checkExistParent } from '../functions/checkExistParent';
 import { MobileBox } from './mobile-box';
-import { Modal } from './common/modal';
 
 export const LANG_ARR = [
   {

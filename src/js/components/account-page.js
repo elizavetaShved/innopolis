@@ -1,4 +1,5 @@
 import { Form } from './common/form';
+import { Modal } from './common/modal';
 
 export class AccountPage {
   accountComponent;
@@ -16,6 +17,8 @@ export class AccountPage {
 
     const menuRadioValue = this.hostElem.querySelectorAll('.account__menu-radio');
     this.accountComponent = Array.from(this.hostElem.querySelectorAll('.account__component'));
+
+    const btnPaymentParticipation = this.hostElem.querySelector('#btn-payment-participation');
 
     new Form(this.hostElem);
 
@@ -35,6 +38,11 @@ export class AccountPage {
        this. changeComponent(radioElem, index);
       }
     })
+
+    btnPaymentParticipation.onclick = () => {
+      const modal = new Modal('payment-participation', true);
+      modal.isOpen();
+    }
   }
 
   changeComponent(radioElem, index) {

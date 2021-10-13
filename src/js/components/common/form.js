@@ -33,8 +33,10 @@ export class Form {
       })
     }
 
-    btnSubmit.onclick = () => {
-      this.onSubmit();
+    if (btnSubmit) {
+      btnSubmit.onclick = () => {
+        this.onSubmit();
+      }
     }
 
     document.addEventListener('keydown', event => {

@@ -1,4 +1,22 @@
 <div class="profile account__body">
+  <div class="profile__participation-wrapper">
+    <h2 class="gl__subtitle">
+      Участие в форуме
+    </h2>
+
+    <button type="button" class="profile__participation-mark mod-no-start mod-show" id="btn-payment-participation">
+      Оплатить участие
+    </button>
+
+    <div class="profile__participation-mark mod-in-progress">
+      Оплата в обработке
+    </div>
+
+    <div class="profile__participation-mark mod-end">
+      Оплачено
+    </div>
+  </div>
+
   <form data-need-validation data-parsley-validate data-parsley-focus="none"
         class="profile__form-container gl__form">
     <div class="account__form-head">
@@ -107,7 +125,6 @@
       <li class="gl__input-container">
         <div class="gl__input-title mod-small">ПЦР-тест</div>
         {{> controls/input-file
-          required=true
           inputType="file"
           name="pcr-test"
           type="account"

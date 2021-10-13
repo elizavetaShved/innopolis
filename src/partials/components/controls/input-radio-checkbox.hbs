@@ -12,6 +12,13 @@
 
   <span class="gl__radio-checkbox-input-content"></span>
   {{#if inputCaption}}
-    <span class="gl__radio-checkbox-input-text">{{ inputCaption }}</span>
+    <span class="gl__radio-checkbox-input-text">
+      {{ inputCaption }}
+      {{#if inputCaptionLink }}
+        <a href="" class="gl__radio-checkbox-text-link" target="_blank">
+          {{ inputCaptionLink }}
+        </a>
+      {{/if}}
+    </span>
   {{/if}}
 </label>

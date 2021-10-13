@@ -3,7 +3,7 @@ export class ProgramPage {
   selectElems;
 
   constructor() {
-    this.hostElem = document.querySelector('#program-host');
+    this.hostElem = document.querySelector('#program-page-host');
     if (!this.hostElem) return;
 
     const btnOpenFilter = this.hostElem.querySelector('.filters__filter-btn');

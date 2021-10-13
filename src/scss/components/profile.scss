@@ -2,6 +2,41 @@
   margin-bottom: 4rem;
 }
 
+.profile__participation-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile__participation-mark {
+  border-radius: 0 25px 25px 25px;
+  padding: 1.4rem;
+  min-width: 22rem;
+  max-width: 100%;
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #fff;
+  text-align: center;
+  height: min-content;
+
+  &.mod-no-start {
+    background-color: var(--btn-color);
+  }
+
+  &.mod-in-progress {
+    background-color: #F2B311;
+  }
+
+  &.mod-end {
+    background-color: #61BD51;
+  }
+
+  &:not(.mod-show) {
+    display: none;
+  }
+}
+
 .profile__form-inputs-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

@@ -89,8 +89,6 @@
 }
 
 .gl__radio-input-container {
-  display: flex;
-  cursor: pointer;
   margin-top: 4rem;
 
   @include for-fl-down {
@@ -99,6 +97,15 @@
 
   @include for-bg-down {
     margin-top: 2rem;
+  }
+}
+
+.gl__checkbox-item {
+  display: flex;
+  cursor: pointer;
+
+  & + & {
+    margin-top: 1.6rem;
   }
 }
 

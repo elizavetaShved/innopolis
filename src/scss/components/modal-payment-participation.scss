@@ -1,0 +1,10 @@
+.modal-payment-participation-btn {
+ padding: 1.6rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+
+  & + & {
+    margin-top: 2rem;
+  }
+}

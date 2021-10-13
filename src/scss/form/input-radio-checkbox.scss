@@ -43,6 +43,15 @@
   user-select: none;
 }
 
+.gl__radio-checkbox-text-link {
+  text-decoration: underline;
+  transition: color 150ms;
+
+  &:hover {
+    color: var(--btn-color);
+  }
+}
+
 .gl__radio-checkbox-input-content {
   display: inline-block;
   width: 18px;

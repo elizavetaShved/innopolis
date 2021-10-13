@@ -59,18 +59,45 @@
 
         {{#if isRegistr}}
           <div class="gl__radio-input-container">
-            <div class="gl__form-radio-wrapper">
-              {{> controls/input-radio-checkbox isChecked=true required="true" name="agreement" type=type inputType="checkbox" }}
+            <div class="gl__checkbox-item">
+              <div class="gl__form-radio-wrapper">
+                {{> controls/input-radio-checkbox
+                  isChecked=true
+                  required="true"
+                  name="agreement-processing"
+                  type=type
+                  inputType="checkbox"
+                  inputCaption="Я подтверждаю свое согласие на"
+                  inputCaptionLink="обработку персональных данных"
+                }}
+              </div>
             </div>
-
-            <span class="gl__radio-input-caption">
-          Я подтверждаю свое согласие с условиями
-        <a href="" class="gl__radio-input-caption-link">Пользовательского соглашения</a>
-          и
-        <a href="" class="gl__radio-input-caption-link">Договором оказания услуг</a>
-          по организации мероприятия и
-        <a href="" class="gl__radio-input-caption-link">политикой возвратов</a>
-        </span>
+            <div class="gl__checkbox-item">
+              <div class="gl__form-radio-wrapper">
+                {{> controls/input-radio-checkbox
+                  isChecked=true
+                  required="true"
+                  name="agreement-processing-policy"
+                  type=type
+                  inputType="checkbox"
+                  inputCaption="Я подтверждаю свое согласие с"
+                  inputCaptionLink="политикой обработки персональных данных"
+                }}
+              </div>
+            </div>
+            <div class="gl__checkbox-item">
+              <div class="gl__form-radio-wrapper">
+                {{> controls/input-radio-checkbox
+                  isChecked=true
+                  required="true"
+                  name="agreement-processing-terms-contract"
+                  type=type
+                  inputType="checkbox"
+                  inputCaption="Я подтверждаю свое согласие с"
+                  inputCaptionLink="условиями договора оказания услуг"
+                }}
+              </div>
+            </div>
           </div>
         {{/if}}
 
