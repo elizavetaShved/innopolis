@@ -36,9 +36,23 @@ export class RemainedTime {
       const remainedHours = parseInt((remainedMs - remainedDays * MS_PER_DAY) / MS_PER_HOUR);
       const remainedMinutes = parseInt((remainedMs - remainedDays * MS_PER_DAY - remainedHours * MS_PER_HOUR) / MS_PER_MINUTES);
 
-      this.remainedDaysElem.innerText = remainedDays < 10 ? `0${ remainedDays }` : remainedDays;
-      this.remainedHoursElem.innerText = remainedHours < 10 ? `0${ remainedHours }` : remainedHours;
-      this.remainedMinutesElem.innerText = remainedMinutes < 10 ? `0${ remainedMinutes }` : remainedMinutes;
+      if (remainedDays <= 0) {
+        this.remainedDaysElem.innerText = '0';
+      } else {
+        this.remainedDaysElem.innerText = remainedDays < 10 ? `0${ remainedDays }` : remainedDays;
+      }
+
+      if (remainedHours <= 0) {
+        this.remainedHoursElem.innerText = '0';
+      } else {
+        this.remainedHoursElem.innerText = remainedHours < 10 ? `0${ remainedHours }` : remainedHours;
+      }
+
+      if (remainedMinutes <= 0) {
+        this.remainedMinutesElem.innerText = '0';
+      } else {
+        this.remainedMinutesElem.innerText = remainedMinutes < 10 ? `0${ remainedMinutes }` : remainedMinutes;
+      }
     });
   }
 }
