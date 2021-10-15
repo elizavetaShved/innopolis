@@ -1,5 +1,33 @@
 @import 'src/scss/sizes';
 
+%type-1 {
+  &:before {
+    background-color: var(--secondary-color);
+  }
+}
+
+%type-2 {
+  &:before {
+    background-color: var(--main-color);
+  }
+}
+
+%type-3 {
+  height: 19.0rem;
+
+  @include for-md-down {
+    height: 19.2rem;
+  }
+
+  &:before {
+    content: none;
+  }
+
+  &:after, .speakers__item-image {
+    height: 100%;
+  }
+}
+
 .speakers {
   overflow: hidden;
   background-color: #fff;
@@ -43,6 +71,43 @@
     animation: show 500ms 1; /* Указываем название анимации, её время и количество повторов*/
     animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
   }
+
+  // type 1 (сиреневый)
+  &:nth-child(1), &:nth-child(4n+7) {
+    .speakers__item-image-wrapper {
+      &:before {
+        background-color: var(--secondary-color);
+      }
+    }
+  }
+
+  // type - 2 (черный)
+  &:nth-child(4n+6) {
+    .speakers__item-image-wrapper {
+      &:before {
+        background-color: var(--main-color);
+      }
+    }
+  }
+
+  // type 3 (пустой)
+  &:nth-child(3), &:nth-child(5), &:nth-child(4n+8), &:nth-child(4n+9) {
+    .speakers__item-image-wrapper {
+      height: 19.0rem;
+
+      @include for-md-down {
+        height: 19.2rem;
+      }
+
+      &:before {
+        content: none;
+      }
+
+      &:after, .speakers__item-image {
+        height: 100%;
+      }
+    }
+  }
 }
 
 @keyframes show {
@@ -81,33 +146,19 @@
 
   &:after {
     height: 86%;
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    mix-blend-mode: hard-light;
+    width: 100%;
+    transition: background-color 350ms;
   }
 
-  &.type-1 {
-    &:before {
+  &.mod-hover {
+    &:after {
       background-color: var(--secondary-color);
-    }
-  }
-
-  &.type-2 {
-    &:before {
-      background-color: var(--main-color);
-    }
-  }
-
-  &.type-3 {
-    height: 19.0rem;
-
-    @include for-md-down {
-      height: 19.2rem;
-    }
-
-    &:before {
-      content: none;
-    }
-
-    &:after, .speakers__item-image {
-      height: 100%;
     }
   }
 }

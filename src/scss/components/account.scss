@@ -156,7 +156,10 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 2rem;
-  align-items: center;
+
+  &.mod-center {
+    align-items: center;
+  }
 
   .gl__subtitle {
     flex: 0 0 auto;
