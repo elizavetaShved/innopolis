@@ -1,11 +1,10 @@
+import { ShowMoreItem } from './common/showMoreItem';
+
 export class ProgramComponent {
   contentBlockElems;
-
   contentElems;
-
   form;
   indexCurrentContent = 0;
-
 
   constructor() {
     const hostElem = document.getElementById('program-host');
@@ -19,6 +18,14 @@ export class ProgramComponent {
     const checkboxFilterElems = hostElem.querySelectorAll('.program__filter-checkbox');
 
     this.form = hostElem.querySelector('#program-form');
+
+    this.contentBlockElems.forEach(blockElem => {
+      const btnShowMore = blockElem.querySelector('.js-btn-more');
+      const linkRollUp = blockElem.querySelector('.js-btn-hide');
+      const itemList = Array.from(blockElem.querySelectorAll('.program__content-item'));
+
+      new ShowMoreItem(btnShowMore, linkRollUp, itemList, 10, 5);
+    })
 
     btsOpenDescription.forEach((btn, index) => {
       btn.onclick = () => {

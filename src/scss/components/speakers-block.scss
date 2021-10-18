@@ -59,11 +59,23 @@
   }
 }
 
+//.speakers__item-image-wrapper {
+//  cursor: pointer;
+//}
+
 .speakers__item {
   grid-row: span 2;
   position: relative;
   opacity: 0;
   display: none;
+
+  //&:hover {
+  //  .speakers__item-image-wrapper {
+  //    &:after {
+  //      background-color: var(--secondary-color);
+  //    }
+  //  }
+  //}
 
   &.mod-show {
     display: block;

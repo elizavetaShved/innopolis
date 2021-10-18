@@ -1,8 +1,27 @@
 @import 'src/scss/sizes';
 
+%btn-transparent {
+  background-color: #fff;
+  color: #000 !important;
+  border: 2px solid #000;
+  font-size: 1.6rem;
+  max-width: 40.0rem;
+  transition: background-color 300ms, border 300ms;
+  position: relative;
+
+  &:hover {
+    background-color: #000;
+    color: #fff !important;
+
+    .gl__btn-download-icon {
+      fill: #fff;
+    }
+  }
+}
+
 .gl__main-btn {
   padding: 1rem 1.8rem;
-  background: var(--btn-color);
+  background-color: var(--btn-color);
   font-weight: 600;
   font-size: 1.6rem;
   color: #fff !important;
@@ -14,8 +33,13 @@
   justify-content: center;
   max-width: 20.0rem;
 
+  &:disabled {
+    background-color: var(--disabled-color);
+    pointer-events: none;
+  }
+
   &:hover {
-    background: #ff2977;
+    background-color: #ff2977;
   }
 
   &.mod-big {
@@ -75,36 +99,30 @@
     box-shadow: none;
   }
 
+  &.mod-transparent {
+    @extend %btn-transparent;
+  }
+
   &.mod-black {
-    background-color: #fff;
-    color: #000 !important;
-    border: 2px solid #000;
-    font-size: 1.6rem;
-    max-width: 40.0rem;
-    transition: background-color 300ms, border 300ms;
-    position: relative;
+    @extend %btn-transparent;
     padding-left: 7.4rem;
+    white-space: nowrap;
 
     @include for-md-down {
       padding-left: 5rem !important;
-    }
-
-    &:hover {
-      background-color: #000;
-      color: #fff !important;
-
-      .gl__btn-download-icon {
-        fill: #fff;
-      }
     }
 
     .gl__btn-download-icon {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      left: 3.0rem;
+      left: 3rem;
       fill: #000;
       transition: fill 300ms;
+
+      @include for-md-down {
+        left: 1.6rem;
+      }
     }
   }
 
@@ -141,14 +159,14 @@
     height: 2px;
     margin-left: -8px;
     margin-top: -1px;
-    background: var(--btn-color);
+    background-color: var(--btn-color);
   }
 
   &.mod-open {
     &:before {
       border: none;
       height: 2px;
-      background: var(--btn-color);
+      background-color: var(--btn-color);
       transform: rotate(45deg);
       margin-top: 0;
     }
