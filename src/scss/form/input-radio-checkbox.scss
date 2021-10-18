@@ -22,6 +22,12 @@
     display: inline-flex;
     align-items: center;
   }
+
+  &.mod-column {
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .gl__radio-checkbox-input {
@@ -55,6 +61,7 @@
 .gl__radio-checkbox-input-content {
   display: inline-block;
   width: 18px;
+  flex: 0 0 18px;
   height: 18px;
   background-color: var(--pale-secondary-color);
   border-radius: 3px;

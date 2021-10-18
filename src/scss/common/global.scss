@@ -192,7 +192,7 @@ body {
 .gl__drop-menu-container {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 400ms;
+  transition: max-height 400ms, padding 400ms;
 
   &.mod-open {
     //max-height: ??; // высчитывается через js

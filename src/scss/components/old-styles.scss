@@ -901,10 +901,17 @@ html.is-locked {
 }
 
 .mobile-box__dop-logo {
-  display: block;
-  text-align: right;
-  width: 14.2rem;
-  margin: 5rem auto 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem
+}
+
+.mobile-box__dop-logo-icon {
+  fill: #fff;
+
+  &.mod-white {
+    fill: var(--main-text-color);
+  }
 }
 
 .news-block {

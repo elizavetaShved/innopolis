@@ -1,5 +1,6 @@
 import { Form } from './common/form';
 import { Modal } from './common/modal';
+import { checkExistParent } from '../functions/checkExistParent';
 
 export class AccountPage {
   accountComponent;
@@ -22,6 +23,19 @@ export class AccountPage {
 
     new Form(this.hostElem);
 
+    const calendarOpenSlotsBtns = this.hostElem.querySelectorAll('.js-calendar-open-slots');
+    const calendarSlotsElems = Array.from(this.hostElem.querySelectorAll('.js-calendar-slots-container'));
+
+    const calendarTimeInputs = this.hostElem.querySelectorAll('.js-calendar-time-btn');
+    const calendarDateInputs = this.hostElem.querySelectorAll('.js-calendar-input-date');
+
+    const calendarSlotTextDateElem = this.hostElem.querySelectorAll('.js-calendar-slots-text-date');
+    const calendarSlotTextAuditoriumElem = this.hostElem.querySelectorAll('.js-calendar-slots-text-auditorium');
+    const calendarSlotTextTimeElem = this.hostElem.querySelectorAll('.js-calendar-slots-text-time');
+
+    let isOpenCalendarSlotsContainer = false;
+    let indexCurrentSlotContainer;
+
     directionSelect.onchange = () => {
       if (directionSelect.value === 'Вузы') {
         universitySelectWrapper.classList.add('mod-show');
@@ -43,16 +57,61 @@ export class AccountPage {
       const modal = new Modal('payment-participation', true);
       modal.isOpen();
     }
+
+    calendarOpenSlotsBtns.forEach((btn, indexBtn) => {
+      btn.onclick = () => {
+        calendarSlotsElems.forEach((elem, indexElem) => {
+          if (indexBtn === indexElem) {
+            elem.classList.add('mod-show');
+            indexCurrentSlotContainer = indexElem;
+            calendarSlotTextDateElem[indexCurrentSlotContainer].innerText = `${ calendarDateInputs[0].value }, `;
+            calendarSlotTextAuditoriumElem[indexCurrentSlotContainer].innerText = `Аудитория ${ elem.getAttribute('data-auditorium') }`;
+          } else {
+            elem.classList.remove('mod-show');
+          }
+        })
+      }
+    })
+
+    calendarDateInputs.forEach(input => {
+      input.onchange = () => {
+        calendarSlotTextDateElem[indexCurrentSlotContainer].innerText = `${ input.value}, `;
+      }
+    })
+
+    calendarTimeInputs.forEach(input => {
+      input.onchange = () => {
+        calendarSlotTextTimeElem[indexCurrentSlotContainer].innerText = `— ${ input.value }`;
+      }
+    })
+
+    window.addEventListener('click', (e) => {
+      let isClickForSlotContainer = false;
+      let isClickForBtnOpen = false;
+      calendarSlotsElems.forEach((elem, i) => {
+        if (checkExistParent(e.target, elem)) {
+          isClickForSlotContainer = true;
+        }
+
+        if (checkExistParent(e.target, calendarOpenSlotsBtns[i])) {
+          elem.classList.add('mod-show');
+          isClickForBtnOpen = true;
+        }
+      })
+
+      if (isOpenCalendarSlotsContainer && !isClickForSlotContainer && !isClickForBtnOpen) {
+        calendarSlotsElems.map(elem => elem.classList.remove('mod-show'));
+        isOpenCalendarSlotsContainer = false;
+      } else {
+        isOpenCalendarSlotsContainer = true;
+      }
+    })
   }
 
   changeComponent(radioElem, index) {
     if (radioElem.checked) {
       this.accountComponent.map(elem => elem.classList.remove('mod-show'))
       this.accountComponent[index].classList.add('mod-show');
-
-      // if (radioElem.value === 'media') {
-      //
-      // }
     }
   }
 }

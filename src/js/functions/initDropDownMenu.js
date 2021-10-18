@@ -4,6 +4,7 @@
 // js-drop-menu-leave-open - на кнопку открытия, если НЕ нужно автозарываение неактивных
 // gl__drop-menu-container и js-drop-menu-container - обернуть меню в этот класс (для max-height = 0)
 // gl__drop-menu и js-drop-menu - на само меню
+// data-drop-menu-min="34" - если min-height не 0, а больше (34)
 // gl__drop-menu-icon- на иконку стрелки
 
 export default function initDropDownMenu() {
@@ -14,8 +15,10 @@ export default function initDropDownMenu() {
   const onClose = (btnElem, menuContainerElem) => {
     btnElem.classList.remove('mod-open');
     const btnContent = btnElem.querySelectorAll('.js-drop-menu-btn-content');
-    btnContent[0].classList.add('mod-show');
-    btnContent[1].classList.remove('mod-show');
+    if (btnContent.length) {
+      btnContent[0].classList.add('mod-show');
+      btnContent[1].classList.remove('mod-show');
+    }
     menuContainerElem.classList.remove('mod-open');
     menuContainerElem.style.maxHeight = 0;
   }
@@ -24,25 +27,32 @@ export default function initDropDownMenu() {
     btnElem.classList.add('mod-open');
 
     const btnContent = btnElem.querySelectorAll('.js-drop-menu-btn-content');
-    btnContent[0].classList.remove('mod-show');
-    btnContent[1].classList.add('mod-show');
+    if (btnContent.length) {
+      btnContent[0].classList.remove('mod-show');
+      btnContent[1].classList.add('mod-show');
+    }
     menuContainerElem.classList.add('mod-open');
     const heightContent = menuElem.clientHeight;
     menuContainerElem.style.maxHeight = `${ heightContent }px`;
   }
 
   linksTitleElements.forEach((btn, i) => {
-    btn.onclick = () => {
-      if (btn.className.includes('mod-open')) {
-        onClose(btn, menuContainerElements[i]);
-      } else {
-        if (!btn.className.includes('js-drop-menu-leave-open')) {
-          linksTitleElements.map((elem, idx) => {
-            onClose(elem, menuContainerElements[idx]);
-          });
+    const customMinHeightMenu = menuElements[i].getAttribute('data-drop-menu-min');
+    if (!customMinHeightMenu || (customMinHeightMenu && menuElements[i].clientHeight > customMinHeightMenu)) {
+      btn.onclick = () => {
+        if (btn.className.includes('mod-open')) {
+          onClose(btn, menuContainerElements[i]);
+        } else {
+          if (!btn.className.includes('js-drop-menu-leave-open')) {
+            linksTitleElements.map((elem, idx) => {
+              onClose(elem, menuContainerElements[idx]);
+            });
+          }
+          onOpen(btn, menuContainerElements[i], menuElements[i]);
         }
-        onOpen(btn, menuContainerElements[i], menuElements[i]);
       }
+    } else {
+      btn.classList.add('mod-hide');
     }
-  })
+  });
 }

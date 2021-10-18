@@ -27,6 +27,10 @@
         }
       }
     }
+
+    .choices__inner, .choices__item {
+      white-space: nowrap;
+    }
   }
 
   &.mod-filter-select {

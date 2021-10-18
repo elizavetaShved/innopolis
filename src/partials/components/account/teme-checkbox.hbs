@@ -1,0 +1,18 @@
+<li class="booking-calendar__tbody-slots-time-container">
+  <label class="booking-calendar__tbody-slots-time-wrapper">
+    <input type="radio" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+           {{#if isOccupied }}disabled{{/if}}
+           name="calendar-slots-time"
+           value="{{ time }}"
+      {{#if isChecked }}
+           checked
+      {{/if}}
+    >
+    <span class="booking-calendar__tbody-slots-time-content
+      {{#if isAvailable }}mod-available{{/if}}
+      {{#if isOccupied }}mod-occupied{{/if}}"
+    >
+      {{ time }}
+    </span>
+  </label>
+</li>
