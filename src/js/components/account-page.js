@@ -57,8 +57,25 @@ export class AccountPage {
     })
 
     btnPaymentParticipation.onclick = () => {
-      const modal = new Modal('payment-participation', true);
+      const modal = new Modal('payment-participation', false);
       modal.isOpen();
+
+      // распределение по кнопкам модалки
+      const modalMoinContentElem = modal.hostElem.querySelector('.js-main-content');
+      const modalNaturalContentElem = modal.hostElem.querySelector('.js-natural-person-content');
+      const modalLegalContentElem = modal.hostElem.querySelector('.js-legal-person-content');
+      const btnNaturalPerson = modal.hostElem.querySelector('.js-natural-person');
+      const btnLegalPerson = modal.hostElem.querySelector('.js-legal-person');
+
+      btnNaturalPerson.onclick = () => {
+        modalMoinContentElem.classList.add('mod-hide');
+        modalNaturalContentElem.classList.remove('mod-hide');
+      }
+
+      btnLegalPerson.onclick = () => {
+        modalMoinContentElem.classList.add('mod-hide');
+        modalLegalContentElem.classList.remove('mod-hide');
+      }
     }
 
     calendarOpenSlotsBtns.forEach((btn, indexBtn) => {

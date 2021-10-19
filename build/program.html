@@ -1784,6 +1784,421 @@
     </div>
   </div>
 
+  <div class="modal-payment-participation modal" id="modal-payment-participation-host">
+    <div class="modal__container">
+      <div class="modal__content js-main-content">
+        <div class="modal__header">
+          <div class="modal__title">
+            Оплата участия
+          </div>
+          <button type="button" class="modal__close-btn">
+            <svg width="20" height="20" aria-hidden="true" class="modal__close-icon">
+              <use xlink:href="#close"></use>
+            </svg>
+          </button>
+        </div>
+  
+        <button type="button" class="modal-payment-participation__btn gl__main-btn mod-no-shadow mod-long js-natural-person">
+          Оплатить как физ. лицо
+        </button>
+  
+        <button type="button" class="modal-payment-participation__btn gl__main-btn mod-no-shadow mod-long js-legal-person">
+          Оплатить как юр. лицо
+        </button>
+      </div>
+  
+      <div class="modal__content modal-payment-participation__natural-person-content mod-hide js-natural-person-content">
+        <div class="modal__header modal-payment-participation__header">
+          <button type="button" class="modal__close-btn">
+            <svg width="20" height="20" aria-hidden="true" class="modal__close-icon">
+              <use xlink:href="#close"></use>
+            </svg>
+          </button>
+        </div>
+  
+        <div class="modal__success-text">
+          Ваша заявка принята. Ссылка для оплаты направлена вам на почту
+        </div>
+      </div>
+  
+      <form data-need-validation data-parsley-validate data-parsley-focus="none"
+            class="gl__form modal__content mod-hide js-legal-person-content">
+        <div class="modal__header modal-payment-participation__legal-header">
+          <div class="modal__title">
+            Форма для формирования счета
+          </div>
+          <button type="button" class="modal__close-btn">
+            <svg width="20" height="20" aria-hidden="true" class="modal__close-icon">
+              <use xlink:href="#close"></use>
+            </svg>
+          </button>
+        </div>
+  
+        <div class="modal-payment-participation__subtitle">
+          заполняется ответственным лицом от имени организации
+        </div>
+  
+        <ul class="modal__inputs-list">
+          <li class="gl__input-container">
+            <div class="gl__input-title">Фамилия</div>
+            <!-- 1) isPassword / isContacts - необходимы для js -->
+            <!-- 2) inputType - html type input -->
+            <!-- 3) required (true/false) - обязательно для заполнения -->
+            <!-- 4) name - name input -->
+            <!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+            <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+            <!-- 7) id - обычный id, например для первого пароля-->
+            <!-- 8) parsleyType - для валидации (н-р email) -->
+            <!-- 9) minLength - максимально допустимое к-во символов -->
+            <!-- 10) maxLength - максимально допустимое к-во символов -->
+            
+            <label class="gl__input-wrapper  mod-contact">
+                <span class="gl__input-mark-required"></span>
+              <input type="text"
+                     class="gl__input "
+                     data-parsley-minlength="2"
+                     name="surname-payment-participation"
+            
+                     data-parsley-minlength="2"
+            
+            
+                     data-parsley-required=""
+            
+            
+                     placeholder="Иванов"
+            
+            
+              >
+            
+            </label>
+          </li>
+          <li class="gl__input-container">
+            <div class="gl__input-title">Имя</div>
+            <!-- 1) isPassword / isContacts - необходимы для js -->
+            <!-- 2) inputType - html type input -->
+            <!-- 3) required (true/false) - обязательно для заполнения -->
+            <!-- 4) name - name input -->
+            <!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+            <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+            <!-- 7) id - обычный id, например для первого пароля-->
+            <!-- 8) parsleyType - для валидации (н-р email) -->
+            <!-- 9) minLength - максимально допустимое к-во символов -->
+            <!-- 10) maxLength - максимально допустимое к-во символов -->
+            
+            <label class="gl__input-wrapper  mod-contact">
+                <span class="gl__input-mark-required"></span>
+              <input type="text"
+                     class="gl__input "
+                     data-parsley-minlength="2"
+                     name="name-payment-participation"
+            
+                     data-parsley-minlength="2"
+            
+            
+                     data-parsley-required=""
+            
+            
+                     placeholder="Анатолий"
+            
+            
+              >
+            
+            </label>
+          </li>
+          <li class="gl__input-container">
+            <div class="gl__input-title">Отчество</div>
+            <!-- 1) isPassword / isContacts - необходимы для js -->
+            <!-- 2) inputType - html type input -->
+            <!-- 3) required (true/false) - обязательно для заполнения -->
+            <!-- 4) name - name input -->
+            <!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+            <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+            <!-- 7) id - обычный id, например для первого пароля-->
+            <!-- 8) parsleyType - для валидации (н-р email) -->
+            <!-- 9) minLength - максимально допустимое к-во символов -->
+            <!-- 10) maxLength - максимально допустимое к-во символов -->
+            
+            <label class="gl__input-wrapper  mod-contact">
+                <span class="gl__input-mark-required"></span>
+              <input type="text"
+                     class="gl__input "
+                     data-parsley-minlength="2"
+                     name="middle-name-payment-participation"
+            
+                     data-parsley-minlength="2"
+            
+            
+                     data-parsley-required=""
+            
+            
+                     placeholder="Иванович"
+            
+            
+              >
+            
+            </label>
+          </li>
+          <li class="gl__input-container">
+            <div class="gl__input-title">Мессенджер (Telegram)</div>
+            <!-- 1) isPassword / isContacts - необходимы для js -->
+            <!-- 2) inputType - html type input -->
+            <!-- 3) required (true/false) - обязательно для заполнения -->
+            <!-- 4) name - name input -->
+            <!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+            <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+            <!-- 7) id - обычный id, например для первого пароля-->
+            <!-- 8) parsleyType - для валидации (н-р email) -->
+            <!-- 9) minLength - максимально допустимое к-во символов -->
+            <!-- 10) maxLength - максимально допустимое к-во символов -->
+            
+            <label class="gl__input-wrapper  mod-contact">
+                <span class="gl__input-mark-required"></span>
+              <input type="text"
+                     class="gl__input "
+                     data-parsley-minlength="2"
+                     name="messenger-payment-participation"
+            
+                     data-parsley-minlength="2"
+            
+            
+                     data-parsley-required=""
+            
+            
+                     placeholder="info@gmail.com"
+            
+            
+              >
+            
+            </label>
+          </li>
+          <li class="gl__input-container">
+            <div class="gl__input-title">Должность</div>
+            <!-- 1) isPassword / isContacts - необходимы для js -->
+            <!-- 2) inputType - html type input -->
+            <!-- 3) required (true/false) - обязательно для заполнения -->
+            <!-- 4) name - name input -->
+            <!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+            <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+            <!-- 7) id - обычный id, например для первого пароля-->
+            <!-- 8) parsleyType - для валидации (н-р email) -->
+            <!-- 9) minLength - максимально допустимое к-во символов -->
+            <!-- 10) maxLength - максимально допустимое к-во символов -->
+            
+            <label class="gl__input-wrapper  mod-contact">
+                <span class="gl__input-mark-required"></span>
+              <input type="text"
+                     class="gl__input "
+                     data-parsley-minlength="2"
+                     name="post-payment-participation"
+            
+                     data-parsley-minlength="2"
+            
+            
+                     data-parsley-required=""
+            
+            
+                     placeholder="Укажите должность"
+            
+            
+              >
+            
+            </label>
+          </li>
+          <li class="gl__input-container">
+            <div class="gl__input-title">Название компании</div>
+            <!-- 1) isPassword / isContacts - необходимы для js -->
+            <!-- 2) inputType - html type input -->
+            <!-- 3) required (true/false) - обязательно для заполнения -->
+            <!-- 4) name - name input -->
+            <!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+            <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+            <!-- 7) id - обычный id, например для первого пароля-->
+            <!-- 8) parsleyType - для валидации (н-р email) -->
+            <!-- 9) minLength - максимально допустимое к-во символов -->
+            <!-- 10) maxLength - максимально допустимое к-во символов -->
+            
+            <label class="gl__input-wrapper  mod-contact">
+                <span class="gl__input-mark-required"></span>
+              <input type="text"
+                     class="gl__input "
+                     data-parsley-minlength="2"
+                     name="company-name-payment-participation"
+            
+                     data-parsley-minlength="2"
+            
+            
+                     data-parsley-required=""
+            
+            
+                     placeholder="Название"
+            
+            
+              >
+            
+            </label>
+          </li>
+          <li class="gl__input-container">
+            <div class="gl__input-title">Реквизиты компании</div>
+            <!-- 1) isPassword / isContacts - необходимы для js -->
+            <!-- 2) inputType - html type input -->
+            <!-- 3) required (true/false) - обязательно для заполнения -->
+            <!-- 4) name - name input -->
+            <!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+            <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+            <!-- 7) id - обычный id, например для первого пароля-->
+            <!-- 8) parsleyType - для валидации (н-р email) -->
+            <!-- 9) minLength - максимально допустимое к-во символов -->
+            <!-- 10) maxLength - максимально допустимое к-во символов -->
+            
+            <label class="gl__input-wrapper  mod-contact">
+                <span class="gl__input-mark-required"></span>
+              <input type="text"
+                     class="gl__input "
+                     data-parsley-minlength="2"
+                     name="company-details-payment-participation"
+            
+                     data-parsley-minlength="2"
+            
+            
+                     data-parsley-required=""
+            
+            
+                     placeholder="Укажите должность"
+            
+            
+              >
+            
+            </label>
+          </li>
+          <li class="gl__input-container">
+            <div class="gl__input-title">ФИО участников форума</div>
+            <!--
+              ___Обязательные поля___
+              name - обязательно префикс - род.компонент (н-р services-tel)
+              placeholder
+            
+              ___Необязательные поля___
+              required (true/false) - обязательно для заполнения
+              minLength - деф-2
+              maxLength - деф-none
+            -->
+            
+            <label class="gl__input-wrapper">
+                <span class="gl__input-mark-required"></span>
+              <textarea class="gl__input mod-textarea"
+                        placeholder="Иванов Иван Иванович"
+                        name="FCs-payment-participation"
+                        data-parsley-required=""
+            
+                        data-parsley-minlength="2"
+            
+            ></textarea>
+            </label>
+          </li>
+          <li class="gl__input-container">
+            <div class="gl__input-title">Комментарий</div>
+            <!--
+              ___Обязательные поля___
+              name - обязательно префикс - род.компонент (н-р services-tel)
+              placeholder
+            
+              ___Необязательные поля___
+              required (true/false) - обязательно для заполнения
+              minLength - деф-2
+              maxLength - деф-none
+            -->
+            
+            <label class="gl__input-wrapper">
+                <span class="gl__input-mark-required"></span>
+              <textarea class="gl__input mod-textarea"
+                        placeholder="Ваш комментарий"
+                        name="comment-payment-participation"
+                        data-parsley-required=""
+            
+                        data-parsley-minlength="2"
+            
+            ></textarea>
+            </label>
+          </li>
+        </ul>
+  
+        <div class="gl__radio-input-container">
+          <div class="gl__checkbox-item">
+            <div class="gl__form-radio-wrapper">
+              <label class="gl__radio-checkbox-input-wrapper  mod-for-caption">
+                <input type="checkbox"
+                       class="gl__radio-checkbox-input"
+                       name="agreement-processing-payment-participation"
+                       checked
+                       data-parsley-required=""
+                >
+              
+                <span class="gl__radio-checkbox-input-content"></span>
+                  <span class="gl__radio-checkbox-input-text">
+                    Я подтверждаю свое согласие на
+                      <a href="" class="gl__radio-checkbox-text-link" target="_blank">
+                        обработку персональных данных
+                      </a>
+                  </span>
+              </label>
+            </div>
+          </div>
+          <div class="gl__checkbox-item">
+            <div class="gl__form-radio-wrapper">
+              <label class="gl__radio-checkbox-input-wrapper  mod-for-caption">
+                <input type="checkbox"
+                       class="gl__radio-checkbox-input"
+                       name="agreement-processing-policy-payment-participation"
+                       checked
+                       data-parsley-required=""
+                >
+              
+                <span class="gl__radio-checkbox-input-content"></span>
+                  <span class="gl__radio-checkbox-input-text">
+                    Я подтверждаю свое согласие с
+                      <a href="" class="gl__radio-checkbox-text-link" target="_blank">
+                        политикой обработки персональных данных
+                      </a>
+                  </span>
+              </label>
+            </div>
+          </div>
+          <div class="gl__checkbox-item">
+            <div class="gl__form-radio-wrapper">
+              <label class="gl__radio-checkbox-input-wrapper  mod-for-caption">
+                <input type="checkbox"
+                       class="gl__radio-checkbox-input"
+                       name="agreement-processing-terms-contract-payment-participation"
+                       checked
+                       data-parsley-required=""
+                >
+              
+                <span class="gl__radio-checkbox-input-content"></span>
+                  <span class="gl__radio-checkbox-input-text">
+                    Я подтверждаю свое согласие с
+                      <a href="" class="gl__radio-checkbox-text-link" target="_blank">
+                        условиями договора оказания услуг
+                      </a>
+                  </span>
+              </label>
+            </div>
+          </div>
+        </div>
+  
+        <div class="gl__error-block js-error-block">
+          <img src="img/old/img/error-form.svg" alt="" class="gl__error-icon">
+          <div class="gl__error-content">
+            Заполните все обязательные поля
+          </div>
+        </div>
+  
+        <button type="submit"
+                class="gl__btn-submit js-btn-submit modal__btn-submit gl__main-btn mod-long mod-no-shadow mod-small">
+          Отправить заявку на формирование счета
+        </button>
+      </form>
+    </div>
+  </div>
   <div class="modal-auth modal" id="modal-to-book-host">
     <div class="modal__container">
       <div class="modal__content">

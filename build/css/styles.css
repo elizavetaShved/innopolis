@@ -1789,18 +1789,18 @@ button.swiper-pagination-bullet {
 .gl__form .gl__input.parsley-error, .gl__select-container.parsley-error .choices__inner {
   border-color: var(--btn-color) !important; }
 
-.gl__select-width-checkbox-content::-webkit-scrollbar {
+.gl__input.mod-textarea::-webkit-scrollbar, .gl__select-width-checkbox-content::-webkit-scrollbar {
   background-color: white;
   width: 0.6rem; }
 
-.gl__select-width-checkbox-content::-webkit-scrollbar-thumb {
+.gl__input.mod-textarea::-webkit-scrollbar-thumb, .gl__select-width-checkbox-content::-webkit-scrollbar-thumb {
   background-color: var(--secondary-color);
   border-radius: 4px; }
 
-.gl__select-width-checkbox-content::-webkit-scrollbar-button {
+.gl__input.mod-textarea::-webkit-scrollbar-button, .gl__select-width-checkbox-content::-webkit-scrollbar-button {
   display: none; }
 
-.gl__select-width-checkbox-content::-webkit-scrollbar-track {
+.gl__input.mod-textarea::-webkit-scrollbar-track, .gl__select-width-checkbox-content::-webkit-scrollbar-track {
   background-color: var(--border-color); }
 
 @media screen and (min-width: 1401px) {
@@ -1915,6 +1915,10 @@ button.swiper-pagination-bullet {
   @media screen and (max-width: 1024px) {
     .gl__input {
       padding: 1rem 2rem !important; } }
+  .gl__input.mod-textarea {
+    height: 15rem !important;
+    resize: none;
+    border: 2px solid transparent; }
 
 .gl__input-mark-required {
   position: absolute;
@@ -2583,18 +2587,18 @@ button.swiper-pagination-bullet {
 .gl__form .gl__input.parsley-error, .gl__select-container.parsley-error .choices__inner {
   border-color: var(--btn-color) !important; }
 
-.gl__select-width-checkbox-content::-webkit-scrollbar {
+.gl__input.mod-textarea::-webkit-scrollbar, .gl__select-width-checkbox-content::-webkit-scrollbar {
   background-color: white;
   width: 0.6rem; }
 
-.gl__select-width-checkbox-content::-webkit-scrollbar-thumb {
+.gl__input.mod-textarea::-webkit-scrollbar-thumb, .gl__select-width-checkbox-content::-webkit-scrollbar-thumb {
   background-color: var(--secondary-color);
   border-radius: 4px; }
 
-.gl__select-width-checkbox-content::-webkit-scrollbar-button {
+.gl__input.mod-textarea::-webkit-scrollbar-button, .gl__select-width-checkbox-content::-webkit-scrollbar-button {
   display: none; }
 
-.gl__select-width-checkbox-content::-webkit-scrollbar-track {
+.gl__input.mod-textarea::-webkit-scrollbar-track, .gl__select-width-checkbox-content::-webkit-scrollbar-track {
   background-color: var(--border-color); }
 
 .modal {
@@ -2620,7 +2624,8 @@ button.swiper-pagination-bullet {
   border-radius: 2rem;
   z-index: 100;
   overflow: auto;
-  max-height: 100vh; }
+  max-height: 100vh;
+  margin-top: 3rem; }
   @media screen and (max-width: 768px) {
     .modal__container {
       padding: 3rem 2rem;
@@ -7484,13 +7489,44 @@ html.remodal-is-locked {
     .modal-auth__social-image {
       height: 3rem; } }
 
-.modal-payment-participation-btn {
+.modal-payment-participation__btn {
   padding: 1.6rem;
   font-weight: 600;
   font-size: 1.4rem;
   line-height: 1.8rem; }
-  .modal-payment-participation-btn + .modal-payment-participation-btn {
+  .modal-payment-participation__btn + .modal-payment-participation__btn {
     margin-top: 2rem; }
+
+.modal-payment-participation__natural-person-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 30rem;
+  position: relative; }
+
+.modal-payment-participation__header {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%; }
+
+.modal-payment-participation__legal-header {
+  margin-bottom: 1.6rem; }
+
+.modal-payment-participation__subtitle {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: #7F7E94;
+  margin-bottom: 4.6rem; }
 
 @media screen and (min-width: 1401px) {
   .gl__fl-show {
@@ -8555,18 +8591,18 @@ html.remodal-is-locked {
 .gl__form .gl__input.parsley-error, .gl__select-container.parsley-error .choices__inner {
   border-color: var(--btn-color) !important; }
 
-.gl__select-width-checkbox-content::-webkit-scrollbar {
+.gl__input.mod-textarea::-webkit-scrollbar, .gl__select-width-checkbox-content::-webkit-scrollbar {
   background-color: white;
   width: 0.6rem; }
 
-.gl__select-width-checkbox-content::-webkit-scrollbar-thumb {
+.gl__input.mod-textarea::-webkit-scrollbar-thumb, .gl__select-width-checkbox-content::-webkit-scrollbar-thumb {
   background-color: var(--secondary-color);
   border-radius: 4px; }
 
-.gl__select-width-checkbox-content::-webkit-scrollbar-button {
+.gl__input.mod-textarea::-webkit-scrollbar-button, .gl__select-width-checkbox-content::-webkit-scrollbar-button {
   display: none; }
 
-.gl__select-width-checkbox-content::-webkit-scrollbar-track {
+.gl__input.mod-textarea::-webkit-scrollbar-track, .gl__select-width-checkbox-content::-webkit-scrollbar-track {
   background-color: var(--border-color); }
 
 .calendar {
