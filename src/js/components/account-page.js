@@ -36,6 +36,9 @@ export class AccountPage {
     let isOpenCalendarSlotsContainer = false;
     let indexCurrentSlotContainer;
 
+    const openModalBtns = this.hostElem.querySelectorAll('.js-open-modal-to-book');
+    const errorTimeElem = this.hostElem.querySelectorAll('.js-error-time');
+
     directionSelect.onchange = () => {
       if (directionSelect.value === 'Вузы') {
         universitySelectWrapper.classList.add('mod-show');
@@ -81,7 +84,26 @@ export class AccountPage {
 
     calendarTimeInputs.forEach(input => {
       input.onchange = () => {
+        errorTimeElem[indexCurrentSlotContainer].classList.remove('mod-show');
         calendarSlotTextTimeElem[indexCurrentSlotContainer].innerText = `— ${ input.value }`;
+      }
+    })
+
+    openModalBtns.forEach(btn => {
+      btn.onclick = () => {
+        if (calendarSlotTextTimeElem[indexCurrentSlotContainer].innerText) {
+          const modal = new Modal('to-book', false);
+          modal.isOpen();
+          const modalSlotTextDateElem = modal.hostElem.querySelector('.js-calendar-slots-text-date');
+          const modalSlotTextAuditoriumElem = modal.hostElem.querySelector('.js-calendar-slots-text-auditorium');
+          const modalSlotTextTimeElem = modal.hostElem.querySelector('.js-calendar-slots-text-time');
+
+          modalSlotTextDateElem.innerText = calendarSlotTextDateElem[indexCurrentSlotContainer].innerText;
+          modalSlotTextAuditoriumElem.innerText = calendarSlotTextAuditoriumElem[indexCurrentSlotContainer].innerText;
+          modalSlotTextTimeElem.innerText = calendarSlotTextTimeElem[indexCurrentSlotContainer].innerText;
+        } else {
+          errorTimeElem[indexCurrentSlotContainer].classList.add('mod-show');
+        }
       }
     })
 

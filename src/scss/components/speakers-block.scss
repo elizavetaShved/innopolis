@@ -117,6 +117,11 @@
 
       &:after, .speakers__item-image {
         height: 100%;
+
+        @include for-md-down {
+          height: 110%;
+          width: 80%;
+        }
       }
     }
   }
@@ -154,6 +159,11 @@
     left: 50%;
     transform: translateX(-50%);
     border-radius: 70px 70px 70px 0;
+
+    @include for-md-down {
+      bottom: -2.2rem;
+      height: 20rem;
+    }
   }
 
   &:after {
@@ -166,6 +176,11 @@
     mix-blend-mode: hard-light;
     width: 100%;
     transition: background-color 350ms;
+
+    @include for-md-down {
+      height: 100%;
+      width: 80%;
+    }
   }
 
   &.mod-hover {
@@ -183,6 +198,11 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+
+  @include for-md-down {
+    width: 80%;
+    height: 100%;
+  }
 }
 
 .speakers__item-caption {
@@ -248,6 +268,10 @@
   top: 6%;
   right: -2.0rem;
   z-index: 1;
+
+  @include for-md-down {
+    right: 1rem;
+  }
 }
 
 @media (min-width: 1025px) {
@@ -270,6 +294,10 @@
   .speakers__item:nth-child(2n+6) .speakers__message-container {
     left: -4.0rem;
     right: auto;
+
+    @include for-md-down {
+      left: -1rem;
+    }
   }
 }
 
@@ -395,7 +423,7 @@
   .speakers__message-btn {
     top: 3.0rem;
     left: auto;
-    right: -.8rem;
+    right: .8rem;
     position: absolute;
     z-index: -1;
   }

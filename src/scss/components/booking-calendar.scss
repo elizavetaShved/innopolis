@@ -1,10 +1,29 @@
+.booking-calendar__body-item {
+  padding-bottom: 6rem;
+  border-bottom: 1px solid rgba(65, 68, 85, .2);
+
+  &:last-child {
+    padding-bottom: 0;
+    padding-top: 6rem;
+    border-bottom: none;
+  }
+}
+
 .booking-calendar__form {
   display: flex;
+
+  @include for-md-down {
+    display: block;
+  }
 }
 
 .booking-calendar__form-item {
   width: 22rem;
   max-width: 100%;
+
+  @include for-md-down {
+    width: 100%;
+  }
 
   .gl__select-container {
     width: 100%;
@@ -13,20 +32,43 @@
   &.mod-forked-select {
     width: min-content;
 
-    .choices__inner {
-      padding: 1.4rem !important;
-      padding-right: 3rem !important;
+    @include for-bg-up {
+      .choices__inner {
+        padding: 1.4rem !important;
+        padding-right: 3rem !important;
+      }
+    }
+
+    @include for-md-down {
+      width: 100%;
     }
   }
 
   & + & {
     margin-left: 1rem;
+
+    @include for-md-down {
+      margin-left: 0;
+      margin-top: 1rem;
+    }
+  }
+}
+
+.booking-calendar__table-container {
+  @include for-lg-down {
+    width: 100vw;
+    overflow: auto;
+    margin: 0 calc(var(--page-content-padding) * -1);
   }
 }
 
 .booking-calendar__table {
   width: 100%;
   color: var(--main-color);
+
+  @include for-lg-down {
+    width: auto;
+  }
 }
 
 .booking-calendar__thead-cell {
@@ -35,6 +77,7 @@
   color: var(--main-color);
   opacity: 0.5;
   padding: 2.2rem 1rem;
+  white-space: nowrap;
 
   &:first-child {
     padding-left: 2.2rem;
@@ -57,6 +100,24 @@
       background-color: #fff;
     }
   }
+
+  &:last-child, &:nth-last-child(-n+2) {
+    .booking-calendar__tbody-slots-wrapper {
+      bottom: auto;
+      top:0;
+      transform: translateY(-100%);
+    }
+  }
+
+  @include for-md-down {
+    &:nth-last-child(-n+3) {
+      .booking-calendar__tbody-slots-wrapper {
+        bottom: auto;
+        top:0;
+        transform: translateY(-100%);
+      }
+    }
+  }
 }
 
 .booking-calendar__tbody-cell {
@@ -77,6 +138,7 @@
   font-size: 1.6rem;
   line-height: 2rem;
   margin-bottom: 1rem;
+  white-space: nowrap;
 }
 
 .booking-calendar__body-cell-control-small {
@@ -86,6 +148,8 @@
   color: var(--btn-color) !important;
   transition: color 250ms;
   font-weight: normal;
+  padding-bottom: 0;
+  margin-top: .6rem;
 
   &:hover {
     color: var(--btn-color-muted);
@@ -99,6 +163,7 @@
 .booking-calendar__body-cell-text {
   font-size: 1.4rem;
   line-height: 1.8rem;
+  font-weight: normal;
 }
 
 .booking-calendar__drop-menu-container {
@@ -115,9 +180,11 @@
 }
 
 .booking-calendar__tbody-cell-mark-list {
-  max-width: 32rem;
-  margin: -3px;
+  margin: -2px 0;
   padding-bottom: 3px;
+  margin-right: 2rem;
+  max-width: 50rem;
+  min-width: 20rem;
 }
 
 .booking-calendar__tbody-cell-mark-item {
@@ -127,13 +194,14 @@
   border-radius: 30px;
   font-size: 1.2rem;
   line-height: 1.6rem;
-  margin: 3px;
+  margin: 2px 0;
   font-weight: normal;
   transition: background-color 300ms, color 300ms;
 }
 
 .booking-calendar__tbody-cell-control-large-wrapper {
   vertical-align: middle;
+  white-space: nowrap;
 }
 
 .booking-calendar__tbody-cell-control-large {
@@ -299,7 +367,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-top: 2.2rem;
+  margin-top: 1rem;
 }
 
 .booking-calendar__tbody-slots-control-text {
@@ -312,4 +380,50 @@
 .booking-calendar__tbody-slots-control-btn {
   padding: 1.4rem 4rem;
   font-weight: 500;
+}
+
+.booking-calendar__error {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  font-weight: 400;
+  color: var(--btn-color);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms;
+  text-align: center;
+
+  &.mod-show {
+    opacity: 1;
+  }
+}
+
+.booking-calendar__status {
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  max-width: 18.4rem;
+
+  &.mod-waiting {
+    background-color: var(--btn-color) !important;
+  }
+
+  &.mod-not-confirmed {
+    background-color: #F2B311 !important;
+  }
+
+  &.mod-confirmed {
+    background-color: #61BD51 !important;
+  }
+
+  &:not(.mod-show) {
+    display: none;
+  }
+}
+
+.booking-calendar__btn-show-more {
+  margin-top: 4rem;
 }

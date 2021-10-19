@@ -1247,29 +1247,281 @@
     </div>
   </div>
 
+  <div class="modal-cookies__wrapper mod-show" id="modal-cookies-host">
+    <div class="modal-cookies">
+      <div class="modal-cookies__text">
+        Этот веб-сайт использует файлы cookie
+      </div>
+      <button type="button" class="modal-cookies__btn" id="modal-cookies-btn">
+        ok
+      </button>
+    </div>
+  </div>
 
-
-  <div class="modal-payment-participation modal" id="modal-payment-participation-host">
+  <div class="modal-auth modal" id="modal-to-book-host">
     <div class="modal__container">
       <div class="modal__content">
-        <div class="modal__header">
-          <div class="modal__title">
-            Оплата участия
+        <form data-need-validation data-parsley-validate data-parsley-focus="none" class="gl__form">
+          <div class="modal__header">
+            <div class="modal__title">
+              Забронировать
+            </div>
+            <button type="button" class="modal__close-btn">
+              <svg width="20" height="20" aria-hidden="true" class="modal__close-icon">
+                <use xlink:href="#close"></use>
+              </svg>
+            </button>
           </div>
-          <button type="button" class="modal__close-btn">
-            <svg width="20" height="20" aria-hidden="true" class="modal__close-icon">
-              <use xlink:href="#close"></use>
-            </svg>
+  
+          <div class="modal__text">
+            <span class="js-calendar-slots-text-date"></span>
+            <span class="js-calendar-slots-text-auditorium"></span>
+            <span class="js-calendar-slots-text-time"></span>
+          </div>
+  
+          <ul class="modal__inputs-list">
+            <li class="gl__input-container">
+              <div class="gl__input-title">Имя</div>
+              <!-- 1) isPassword / isContacts - необходимы для js -->
+              <!-- 2) inputType - html type input -->
+              <!-- 3) required (true/false) - обязательно для заполнения -->
+              <!-- 4) name - name input -->
+              <!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+              <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+              <!-- 7) id - обычный id, например для первого пароля-->
+              <!-- 8) parsleyType - для валидации (н-р email) -->
+              <!-- 9) minLength - максимально допустимое к-во символов -->
+              <!-- 10) maxLength - максимально допустимое к-во символов -->
+              
+              <label class="gl__input-wrapper  mod-contact">
+                  <span class="gl__input-mark-required"></span>
+                <input type="text"
+                       class="gl__input "
+                       data-parsley-minlength="2"
+                       name="name-to-book"
+              
+                       data-parsley-minlength="2"
+              
+              
+                       data-parsley-required=""
+              
+              
+                       placeholder="Анатолий"
+              
+              
+                >
+              
+              </label>
+            </li>
+            <li class="gl__input-container">
+              <div class="gl__input-title">Фамилия</div>
+              <!-- 1) isPassword / isContacts - необходимы для js -->
+              <!-- 2) inputType - html type input -->
+              <!-- 3) required (true/false) - обязательно для заполнения -->
+              <!-- 4) name - name input -->
+              <!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+              <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+              <!-- 7) id - обычный id, например для первого пароля-->
+              <!-- 8) parsleyType - для валидации (н-р email) -->
+              <!-- 9) minLength - максимально допустимое к-во символов -->
+              <!-- 10) maxLength - максимально допустимое к-во символов -->
+              
+              <label class="gl__input-wrapper  mod-contact">
+                  <span class="gl__input-mark-required"></span>
+                <input type="text"
+                       class="gl__input "
+                       data-parsley-minlength="2"
+                       name="surname-to-book"
+              
+                       data-parsley-minlength="2"
+              
+              
+                       data-parsley-required=""
+              
+              
+                       placeholder="Иванов"
+              
+              
+                >
+              
+              </label>
+            </li>
+            <li class="gl__input-container">
+              <div class="gl__input-title">Компания</div>
+              <!-- 1) isPassword / isContacts - необходимы для js -->
+              <!-- 2) inputType - html type input -->
+              <!-- 3) required (true/false) - обязательно для заполнения -->
+              <!-- 4) name - name input -->
+              <!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+              <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+              <!-- 7) id - обычный id, например для первого пароля-->
+              <!-- 8) parsleyType - для валидации (н-р email) -->
+              <!-- 9) minLength - максимально допустимое к-во символов -->
+              <!-- 10) maxLength - максимально допустимое к-во символов -->
+              
+              <label class="gl__input-wrapper  mod-contact">
+                  <span class="gl__input-mark-required"></span>
+                <input type="text"
+                       class="gl__input "
+                       data-parsley-minlength="2"
+                       name="place-work-to-book"
+              
+                       data-parsley-minlength="2"
+              
+              
+                       data-parsley-required=""
+              
+              
+                       placeholder="Место работы"
+              
+              
+                >
+              
+              </label>
+            </li>
+            <li class="gl__input-container">
+              <div class="gl__input-title">E-mail</div>
+              <!-- 1) isPassword / isContacts - необходимы для js -->
+              <!-- 2) inputType - html type input -->
+              <!-- 3) required (true/false) - обязательно для заполнения -->
+              <!-- 4) name - name input -->
+              <!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+              <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+              <!-- 7) id - обычный id, например для первого пароля-->
+              <!-- 8) parsleyType - для валидации (н-р email) -->
+              <!-- 9) minLength - максимально допустимое к-во символов -->
+              <!-- 10) maxLength - максимально допустимое к-во символов -->
+              
+              <label class="gl__input-wrapper  ">
+                  <span class="gl__input-mark-required"></span>
+                <input type="email"
+                       class="gl__input "
+                       data-parsley-minlength="2"
+                       name="email-to-book"
+              
+                       data-parsley-minlength="2"
+              
+              
+                       data-parsley-required=""
+              
+              
+                       placeholder="info@gmail.com"
+              
+              
+                       data-parsley-type="email"
+                >
+              
+              </label>
+            </li>
+            <li class="gl__input-container">
+              <div class="gl__input-title">Телефон</div>
+              <!-- 1) isPassword / isContacts - необходимы для js -->
+              <!-- 2) inputType - html type input -->
+              <!-- 3) required (true/false) - обязательно для заполнения -->
+              <!-- 4) name - name input -->
+              <!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+              <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+              <!-- 7) id - обычный id, например для первого пароля-->
+              <!-- 8) parsleyType - для валидации (н-р email) -->
+              <!-- 9) minLength - максимально допустимое к-во символов -->
+              <!-- 10) maxLength - максимально допустимое к-во символов -->
+              
+              <label class="gl__input-wrapper  ">
+                  <span class="gl__input-mark-required"></span>
+                <input type="tel"
+                       class="gl__input js-phone-input"
+                       data-parsley-minlength="2"
+                       name="phone-to-book"
+              
+                       data-parsley-minlength="2"
+              
+              
+                       data-parsley-required=""
+              
+              
+                       placeholder="+7(888)888-88-88"
+              
+              
+                >
+              
+              </label>
+            </li>
+          </ul>
+  
+          <div class="gl__radio-input-container">
+            <div class="gl__checkbox-item">
+              <div class="gl__form-radio-wrapper">
+                <label class="gl__radio-checkbox-input-wrapper  mod-for-caption">
+                  <input type="checkbox"
+                         class="gl__radio-checkbox-input"
+                         name="agreement-processing-to-book"
+                         checked
+                         data-parsley-required=""
+                  >
+                
+                  <span class="gl__radio-checkbox-input-content"></span>
+                    <span class="gl__radio-checkbox-input-text">
+                      Я подтверждаю свое согласие на
+                        <a href="" class="gl__radio-checkbox-text-link" target="_blank">
+                          обработку персональных данных
+                        </a>
+                    </span>
+                </label>
+              </div>
+            </div>
+            <div class="gl__checkbox-item">
+              <div class="gl__form-radio-wrapper">
+                <label class="gl__radio-checkbox-input-wrapper  mod-for-caption">
+                  <input type="checkbox"
+                         class="gl__radio-checkbox-input"
+                         name="agreement-processing-policy-to-book"
+                         checked
+                         data-parsley-required=""
+                  >
+                
+                  <span class="gl__radio-checkbox-input-content"></span>
+                    <span class="gl__radio-checkbox-input-text">
+                      Я подтверждаю свое согласие с
+                        <a href="" class="gl__radio-checkbox-text-link" target="_blank">
+                          политикой обработки персональных данных
+                        </a>
+                    </span>
+                </label>
+              </div>
+            </div>
+            <div class="gl__checkbox-item">
+              <div class="gl__form-radio-wrapper">
+                <label class="gl__radio-checkbox-input-wrapper  mod-for-caption">
+                  <input type="checkbox"
+                         class="gl__radio-checkbox-input"
+                         name="agreement-processing-terms-contract-to-book"
+                         checked
+                         data-parsley-required=""
+                  >
+                
+                  <span class="gl__radio-checkbox-input-content"></span>
+                    <span class="gl__radio-checkbox-input-text">
+                      Я подтверждаю свое согласие с
+                        <a href="" class="gl__radio-checkbox-text-link" target="_blank">
+                          условиями договора оказания услуг
+                        </a>
+                    </span>
+                </label>
+              </div>
+            </div>
+          </div>
+  
+          <div class="gl__error-block js-error-block">
+            <img src="img/old/img/error-form.svg" alt="" class="gl__error-icon">
+            <div class="gl__error-content">
+              Ошибка
+            </div>
+          </div>
+  
+          <button type="submit" class="gl__btn-submit js-btn-submit modal-to-book__btn gl__main-btn mod-no-shadow mod-middle-2 mod-long">
+            Зарегистрироваться
           </button>
-        </div>
-  
-        <button type="button" class="modal-payment-participation-btn gl__main-btn mod-no-shadow mod-long">
-          Оплатить как физ. лицо
-        </button>
-  
-        <button type="button" class="modal-payment-participation-btn gl__main-btn mod-no-shadow mod-long">
-          Оплатить как юр. лицо
-        </button>
+        </form>
       </div>
     </div>
   </div>

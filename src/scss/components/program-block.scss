@@ -362,7 +362,7 @@
   background-image: url('/img/old/img/geolokation.svg');
   background-repeat: no-repeat;
   background-position: top 50% left;
-  background-size: 18px 2.0rem;
+  background-size: contain;
 }
 
 @media (max-width: 768px) {

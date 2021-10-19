@@ -1,189 +1,299 @@
 <div class="account__body">
-  <div class="account__form-head">
+  <div class="booking-calendar__body-item">
     <h2 class="gl__subtitle">
-      Календарь
+      Мои бронирования
     </h2>
-  </div>
 
-  <form class="booking-calendar__form">
-    <div class="booking-calendar__form-item">
-      {{> controls/select
-        placeholder="Все даты"
-        name="date"
-        type="account-calendar"
-        option1="02.12" option2="03.12" option3="04.12" option4="05.12" option5="06.12" option6="07.12" option7="08.12" option8="09.12"
-      }}
-    </div>
-    <div class="booking-calendar__form-item mod-forked-select">
-      {{> controls/forked-select
-        firstPlaceholder="с 10:00"
-        secondPlaceholder="по 18:00"
-        firstName="arrival-from"
-        secondName="arrival-to"
-        type="account-calendar"
-        firstOption1="с 10:00" firstOption2="с 11:00" firstOption3="с 12:00" firstOption4="с 13:00" firstOption5="с 14:00" firstOption6="с 15:00" firstOption7="с 16:00" firstOption8="с 17:00"
-        secondOption1="по 10:00" secondOption2="по 11:00" secondOption3="по 12:00" secondOption4="по 13:00" secondOption5="по 14:00" secondOption6="по 15:00" secondOption7="по 16:00" secondOption8="по 17:00"
-      }}
-    </div>
-    <div class="booking-calendar__form-item">
-      {{> controls/select-with-checkbox
-        placeholder="Оборудование"
-        type="account-calendar"
-        checkbox1="Проектор" checkbox2="Ноутбук" checkbox3="Экран" checkbox4="Микрофон" checkbox5="Магнитно-маркерная доска" checkbox6="Проектор" checkbox7="Ноутбук" checkbox8="Экран" checkbox9="Микрофон"
-      }}
-    </div>
-  </form>
+    <div class="booking-calendar__table-container">
+      <table class="booking-calendar__table">
+        <thead class="booking-calendar__thead">
+        <tr class="booking-calendar__thead-row">
+          <td class="booking-calendar__thead-cell">
+            Локация
+          </td>
+          <td class="booking-calendar__thead-cell">
+            Кол-во мест
+          </td>
+          <td class="booking-calendar__thead-cell">
+            Тех.оборудовнаие
+          </td>
+          <td class="booking-calendar__thead-cell">
+            Статус бронирования
+          </td>
+        </tr>
+        </thead>
 
-  <table class="booking-calendar__table">
-    <thead class="booking-calendar__thead">
-    <tr class="booking-calendar__thead-row">
-      <td class="booking-calendar__thead-cell">
-        Локация
-      </td>
-      <td class="booking-calendar__thead-cell">
-        Кол-во мест
-      </td>
-      <td class="booking-calendar__thead-cell">
-        Свободные слоты
-      </td>
-      <td class="booking-calendar__thead-cell">
-        Тех.оборудовнаие
-      </td>
-    </tr>
-    </thead>
-
-    <tbody class="booking-calendar__tbody">
-    {{#each calendar}}
-      <tr class="booking-calendar__tbody-row">
-        <th class="booking-calendar__tbody-cell">
-          <div class="booking-calendar__body-cell-title">
-            Аудитория {{ this.auditorium }}
-          </div>
-          <a href="" class="booking-calendar__body-cell-control-small">
-            Локация на карте
-          </a>
-        </th>
-        <th class="booking-calendar__tbody-cell">
-          <div class="booking-calendar__body-cell-text">
-            50
-          </div>
-        </th>
-        <th class="booking-calendar__tbody-cell">
-          <div class="booking-calendar__body-cell-text">
-            15 из 48
-          </div>
-        </th>
-        <th class="booking-calendar__tbody-cell">
-          <div class="booking-calendar__drop-menu-container gl__drop-menu-container js-drop-menu-container">
-            <ul class="gl__drop-menu js-drop-menu booking-calendar__tbody-cell-mark-list" data-drop-menu-min="34">
-              <li class="booking-calendar__tbody-cell-mark-item">
-                Проектор
-              </li>
-              <li class="booking-calendar__tbody-cell-mark-item">
-                Ноутбук
-              </li>
-              <li class="booking-calendar__tbody-cell-mark-item">
-                Экран
-              </li>
-              <li class="booking-calendar__tbody-cell-mark-item">
-                Микрофон
-              </li>
-              {{#if this.qwe }}
+        <tbody class="booking-calendar__tbody">
+        <tr class="booking-calendar__tbody-row">
+          <th class="booking-calendar__tbody-cell">
+            <div class="booking-calendar__body-cell-title">
+              Аудитория 404
+            </div>
+            <a href="" class="booking-calendar__body-cell-control-small">
+              Локация на карте
+            </a>
+          </th>
+          <th class="booking-calendar__tbody-cell">
+            <div class="booking-calendar__body-cell-text">
+              50
+            </div>
+          </th>
+          <th class="booking-calendar__tbody-cell">
+            <div class="booking-calendar__drop-menu-container gl__drop-menu-container js-drop-menu-container">
+              <ul class="gl__drop-menu js-drop-menu booking-calendar__tbody-cell-mark-list" data-drop-menu-min="34">
+                <li class="booking-calendar__tbody-cell-mark-item">
+                  Проектор
+                </li>
+                <li class="booking-calendar__tbody-cell-mark-item">
+                  Ноутбук
+                </li>
+                <li class="booking-calendar__tbody-cell-mark-item">
+                  Экран
+                </li>
+                <li class="booking-calendar__tbody-cell-mark-item">
+                  Микрофон
+                </li>
                 <li class="booking-calendar__tbody-cell-mark-item">
                   Магнитно-маркерная доска
                 </li>
-              {{/if}}
-            </ul>
-          </div>
-
-          <button type="button"
-                  class="booking-calendar__body-cell-control-small gl__drop-menu js-drop-menu-btn gl__drop-menu-btn">
-            <span class="gl__drop-menu-btn-content mod-show js-drop-menu-btn-content">Все оборудование</span>
-            <span class="gl__drop-menu-btn-content js-drop-menu-btn-content">Скрыть</span>
-          </button>
-        </th>
-        <th class="booking-calendar__tbody-cell booking-calendar__tbody-cell-control-large-wrapper">
-          <button type="button" class="booking-calendar__tbody-cell-control-large js-calendar-open-slots">
-            Доступные слоты
-          </button>
-        </th>
-        <th>
-          <form class="booking-calendar__tbody-slots-wrapper js-calendar-slots-container" data-auditorium="{{ this.auditorium }}">
-            <div class="booking-calendar__tbody-slots-header">
-              <div class="booking-calendar__tbody-slots-btns-list">
-                <label class="booking-calendar__tbody-slots-btn-wrapper">
-                  <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date" name="slots-btn-{{ this.index }}" checked value="2 декабря">
-                  <span class="booking-calendar__tbody-slots-btn-content">
-                      2 декабря
-                    </span>
-                </label>
-                <label class="booking-calendar__tbody-slots-btn-wrapper">
-                  <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date" name="slots-btn-{{ this.index }}" value="3 декабря">
-                  <span class="booking-calendar__tbody-slots-btn-content">
-                      3 декабря
-                    </span>
-                </label>
-                <label class="booking-calendar__tbody-slots-btn-wrapper">
-                  <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date" name="slots-btn-{{ this.index }}" value="4 декабря">
-                  <span class="booking-calendar__tbody-slots-btn-content">
-                      4 декабря
-                    </span>
-                </label>
-              </div>
-
-              <ul class="booking-calendar__tbody-slots-designations-list">
-                <li class="booking-calendar__tbody-slots-designation-item">
-                  <div class="booking-calendar__tbody-slots-designation-color mod-selected"></div>
-                  <div class="booking-calendar__tbody-slots-designation-text">
-                    — Выбрано
-                  </div>
+                <li class="booking-calendar__tbody-cell-mark-item">
+                  Экран
                 </li>
-                <li class="booking-calendar__tbody-slots-designation-item">
-                  <div class="booking-calendar__tbody-slots-designation-color mod-available"></div>
-                  <div class="booking-calendar__tbody-slots-designation-text">
-                    — Доступно
-                  </div>
+                <li class="booking-calendar__tbody-cell-mark-item">
+                  Микрофон
                 </li>
-                <li class="booking-calendar__tbody-slots-designation-item">
-                  <div class="booking-calendar__tbody-slots-designation-color mod-occupied"></div>
-                  <div class="booking-calendar__tbody-slots-designation-text">
-                    — Занято
-                  </div>
+                <li class="booking-calendar__tbody-cell-mark-item">
+                  Магнитно-маркерная доска
+                </li>
+                <li class="booking-calendar__tbody-cell-mark-item">
+                  Экран
                 </li>
               </ul>
             </div>
 
-            <div class="booking-calendar__tbody-slots-times-list">
-              {{> account/teme-checkbox isChecked=true time="10:00 - 10:30" isAvailable=true }}
-              {{> account/teme-checkbox time="10:30 - 11:00" isAvailable=true }}
-              {{> account/teme-checkbox time="11:00 - 11:30" isOccupied=true }}
-              {{> account/teme-checkbox time="11:30 - 12:00" isAvailable=true }}
-              {{> account/teme-checkbox time="12:00 - 12:30" isAvailable=true }}
-              {{> account/teme-checkbox time="13:30 - 13:00" isAvailable=true }}
-              {{> account/teme-checkbox time="13:00 - 13:30" isOccupied=true }}
-              {{> account/teme-checkbox time="14:00 - 14:30" isAvailable=true }}
-              {{> account/teme-checkbox time="14:30 - 14:00" isOccupied=true }}
-              {{> account/teme-checkbox time="15:00 - 15:30" isAvailable=true }}
-              {{> account/teme-checkbox time="15:30 - 15:00" isOccupied=true }}
-              {{> account/teme-checkbox time="16:00 - 16:30" isOccupied=true }}
-              {{> account/teme-checkbox time="16:30 - 17:00" isAvailable=true }}
-              {{> account/teme-checkbox time="17:00 - 17:30" isOccupied=true }}
-            </div>
+            <button type="button"
+                    class="booking-calendar__body-cell-control-small gl__drop-menu js-drop-menu-btn gl__drop-menu-btn">
+              <span class="gl__drop-menu-btn-content mod-show js-drop-menu-btn-content">Все оборудование</span>
+              <span class="gl__drop-menu-btn-content js-drop-menu-btn-content">Скрыть</span>
+            </button>
+          </th>
+          <th class="booking-calendar__tbody-cell booking-calendar__status mod-confirmed mod-show">
+            <span class="booking-calendar__status-content mod-show">Подтверждено</span>
+          </th>
+          <th class="booking-calendar__tbody-cell booking-calendar__status mod-not-confirmed">
+            <span class="booking-calendar__status-content">Ожидает подтверждения</span>
+          </th>
+          <th class="booking-calendar__tbody-cell booking-calendar__status mod-waiting">
+            <span class="booking-calendar__status-content">Не подтверждено</span>
+          </th>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 
-            <div class="booking-calendar__tbody-slots-control-wrapper">
-              <div class="booking-calendar__tbody-slots-control-text js-calendar-slots-text">
-                <span class="js-calendar-slots-text-date"></span>
-                <span class="js-calendar-slots-text-auditorium"></span>
-                <span class="js-calendar-slots-text-time"></span>
+  <div class="booking-calendar__body-item">
+    <div class="account__form-head">
+      <h2 class="gl__subtitle">
+        Календарь бронирования
+      </h2>
+    </div>
+
+    <form class="booking-calendar__form">
+      <div class="booking-calendar__form-item">
+        {{> controls/select
+          placeholder="Все даты"
+          name="date"
+          type="account-calendar"
+          option1="02.12" option2="03.12" option3="04.12" option4="05.12" option5="06.12" option6="07.12" option7="08.12" option8="09.12"
+        }}
+      </div>
+      <div class="booking-calendar__form-item mod-forked-select">
+        {{> controls/forked-select
+          firstPlaceholder="с 10:00"
+          secondPlaceholder="по 18:00"
+          firstName="arrival-from"
+          secondName="arrival-to"
+          type="account-calendar"
+          firstOption1="с 10:00" firstOption2="с 11:00" firstOption3="с 12:00" firstOption4="с 13:00" firstOption5="с 14:00" firstOption6="с 15:00" firstOption7="с 16:00" firstOption8="с 17:00"
+          secondOption1="по 10:00" secondOption2="по 11:00" secondOption3="по 12:00" secondOption4="по 13:00" secondOption5="по 14:00" secondOption6="по 15:00" secondOption7="по 16:00" secondOption8="по 17:00"
+        }}
+      </div>
+      <div class="booking-calendar__form-item">
+        {{> controls/select-with-checkbox
+          placeholder="Оборудование"
+          type="account-calendar"
+          checkbox1="Проектор" checkbox2="Ноутбук" checkbox3="Экран" checkbox4="Микрофон" checkbox5="Магнитно-маркерная доска" checkbox6="Проектор" checkbox7="Ноутбук" checkbox8="Экран" checkbox9="Микрофон"
+        }}
+      </div>
+    </form>
+
+    <div class="booking-calendar__table-container">
+      <table class="booking-calendar__table">
+        <thead class="booking-calendar__thead">
+        <tr class="booking-calendar__thead-row">
+          <td class="booking-calendar__thead-cell">
+            Локация
+          </td>
+          <td class="booking-calendar__thead-cell">
+            Кол-во мест
+          </td>
+          <td class="booking-calendar__thead-cell">
+            Свободные слоты
+          </td>
+          <td class="booking-calendar__thead-cell">
+            Тех.оборудовнаие
+          </td>
+        </tr>
+        </thead>
+
+        <tbody class="booking-calendar__tbody">
+        {{#each calendar}}
+          <tr class="booking-calendar__tbody-row">
+            <th class="booking-calendar__tbody-cell">
+              <div class="booking-calendar__body-cell-title">
+                Аудитория {{ this.auditorium }}
               </div>
-              <button type="button" class="booking-calendar__tbody-slots-control-btn gl__main-btn mod-no-shadow">
-                Бронировать
+              <a href="" class="booking-calendar__body-cell-control-small">
+                Локация на карте
+              </a>
+            </th>
+            <th class="booking-calendar__tbody-cell">
+              <div class="booking-calendar__body-cell-text">
+                50
+              </div>
+            </th>
+            <th class="booking-calendar__tbody-cell">
+              <div class="booking-calendar__body-cell-text">
+                15 из 48
+              </div>
+            </th>
+            <th class="booking-calendar__tbody-cell">
+              <div class="booking-calendar__drop-menu-container gl__drop-menu-container js-drop-menu-container">
+                <ul class="gl__drop-menu js-drop-menu booking-calendar__tbody-cell-mark-list" data-drop-menu-min="34">
+                  <li class="booking-calendar__tbody-cell-mark-item">
+                    Проектор
+                  </li>
+                  <li class="booking-calendar__tbody-cell-mark-item">
+                    Ноутбук
+                  </li>
+                  <li class="booking-calendar__tbody-cell-mark-item">
+                    Экран
+                  </li>
+                  <li class="booking-calendar__tbody-cell-mark-item">
+                    Микрофон
+                  </li>
+                  {{#if this.qwe }}
+                    <li class="booking-calendar__tbody-cell-mark-item">
+                      Магнитно-маркерная доска
+                    </li>
+                  {{/if}}
+                </ul>
+              </div>
+
+              <button type="button"
+                      class="booking-calendar__body-cell-control-small gl__drop-menu js-drop-menu-btn gl__drop-menu-btn">
+                <span class="gl__drop-menu-btn-content mod-show js-drop-menu-btn-content">Все оборудование</span>
+                <span class="gl__drop-menu-btn-content js-drop-menu-btn-content">Скрыть</span>
               </button>
-            </div>
-          </form>
-        </th>
-      </tr>
-    {{/each}}
-    </tbody>
-  </table>
+            </th>
+            <th class="booking-calendar__tbody-cell booking-calendar__tbody-cell-control-large-wrapper">
+              <button type="button" class="booking-calendar__tbody-cell-control-large js-calendar-open-slots">
+                Доступные слоты
+              </button>
+            </th>
+            <th>
+              <form class="booking-calendar__tbody-slots-wrapper js-calendar-slots-container"
+                    data-auditorium="{{ this.auditorium }}">
+                <div class="booking-calendar__tbody-slots-header">
+                  <div class="booking-calendar__tbody-slots-btns-list">
+                    <label class="booking-calendar__tbody-slots-btn-wrapper">
+                      <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date"
+                             name="slots-btn-{{ this.index }}" checked value="2 декабря">
+                      <span class="booking-calendar__tbody-slots-btn-content">
+                      2 декабря
+                    </span>
+                    </label>
+                    <label class="booking-calendar__tbody-slots-btn-wrapper">
+                      <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date"
+                             name="slots-btn-{{ this.index }}" value="3 декабря">
+                      <span class="booking-calendar__tbody-slots-btn-content">
+                      3 декабря
+                    </span>
+                    </label>
+                    <label class="booking-calendar__tbody-slots-btn-wrapper">
+                      <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date"
+                             name="slots-btn-{{ this.index }}" value="4 декабря">
+                      <span class="booking-calendar__tbody-slots-btn-content">
+                      4 декабря
+                    </span>
+                    </label>
+                  </div>
+
+                  <ul class="booking-calendar__tbody-slots-designations-list">
+                    <li class="booking-calendar__tbody-slots-designation-item">
+                      <div class="booking-calendar__tbody-slots-designation-color mod-selected"></div>
+                      <div class="booking-calendar__tbody-slots-designation-text">
+                        — Выбрано
+                      </div>
+                    </li>
+                    <li class="booking-calendar__tbody-slots-designation-item">
+                      <div class="booking-calendar__tbody-slots-designation-color mod-available"></div>
+                      <div class="booking-calendar__tbody-slots-designation-text">
+                        — Доступно
+                      </div>
+                    </li>
+                    <li class="booking-calendar__tbody-slots-designation-item">
+                      <div class="booking-calendar__tbody-slots-designation-color mod-occupied"></div>
+                      <div class="booking-calendar__tbody-slots-designation-text">
+                        — Занято
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="booking-calendar__tbody-slots-times-list">
+                  {{> account/teme-checkbox time="10:00 - 10:30" isAvailable=true }}
+                  {{> account/teme-checkbox time="10:30 - 11:00" isAvailable=true }}
+                  {{> account/teme-checkbox time="11:00 - 11:30" isOccupied=true }}
+                  {{> account/teme-checkbox time="11:30 - 12:00" isAvailable=true }}
+                  {{> account/teme-checkbox time="12:00 - 12:30" isAvailable=true }}
+                  {{> account/teme-checkbox time="13:30 - 13:00" isAvailable=true }}
+                  {{> account/teme-checkbox time="13:00 - 13:30" isOccupied=true }}
+                  {{> account/teme-checkbox time="14:00 - 14:30" isAvailable=true }}
+                  {{> account/teme-checkbox time="14:30 - 14:00" isOccupied=true }}
+                  {{> account/teme-checkbox time="15:00 - 15:30" isAvailable=true }}
+                  {{> account/teme-checkbox time="15:30 - 15:00" isOccupied=true }}
+                  {{> account/teme-checkbox time="16:00 - 16:30" isOccupied=true }}
+                  {{> account/teme-checkbox time="16:30 - 17:00" isAvailable=true }}
+                  {{> account/teme-checkbox time="17:00 - 17:30" isOccupied=true }}
+                </div>
+
+                <div class="booking-calendar__error js-error-time">
+                  Выберите время!
+                </div>
+
+                <div class="booking-calendar__tbody-slots-control-wrapper">
+                  <div class="booking-calendar__tbody-slots-control-text js-calendar-slots-text">
+                    <span class="js-calendar-slots-text-date"></span>
+                    <span class="js-calendar-slots-text-auditorium"></span>
+                    <span class="js-calendar-slots-text-time"></span>
+                  </div>
+                  <button type="button"
+                          class="booking-calendar__tbody-slots-control-btn gl__main-btn mod-no-shadow js-open-modal-to-book">
+                    Бронировать
+                  </button>
+                </div>
+              </form>
+            </th>
+          </tr>
+        {{/each}}
+        </tbody>
+      </table>
+    </div>
+
+    <button type="button" class="gl__main-btn mod-no-shadow mod-middle-2 booking-calendar__btn-show-more">
+      Еще 20 локаций
+    </button>
+  </div>
 </div>

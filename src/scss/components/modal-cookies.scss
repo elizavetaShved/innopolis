@@ -9,7 +9,7 @@
 
   &:not(.mod-show) {
     opacity: 0;
-    user-select: none;
+    pointer-events: none;
   }
 }
 

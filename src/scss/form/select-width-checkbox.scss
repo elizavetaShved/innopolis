@@ -8,6 +8,10 @@
   align-items: center;
   padding: 1.8rem 2.2rem !important;
   cursor: pointer;
+
+  @include for-bg-down {
+    padding: 1.2rem 2.2rem !important;
+  }
 }
 
 .gl__select-width-checkbox-content-container {
