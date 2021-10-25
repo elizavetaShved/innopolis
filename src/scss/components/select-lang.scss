@@ -46,12 +46,6 @@ $select-padding-top-bottom: 1.4rem;
     border-top: 5px solid #fff;
   }
 
-  &.mod-light {
-    &:before {
-      border-top: 5px solid #000;
-    }
-  }
-
   @include for-md-down {
     width: $select-width-mobile;
   }
@@ -105,10 +99,6 @@ $select-padding-top-bottom: 1.4rem;
   @include for-bg-down {
     font-size: 1.6rem;
     line-height: 2.1rem;
-  }
-
-  &.mod-light {
-    color: #000;
   }
 }
 

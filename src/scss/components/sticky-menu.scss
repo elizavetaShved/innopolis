@@ -19,6 +19,16 @@
       }
     }
   }
+
+  &.mod-light {
+    .sticky-menu__item {
+      color: #000;
+    }
+
+    .header__logo {
+      fill: #000;
+    }
+  }
 }
 
 .sticky-menu__section {
@@ -33,12 +43,6 @@
   align-items: center;
   height: 100%;
   width: 100%;
-
-  &.mod-light {
-    .sticky-menu__item {
-      color: #000;
-    }
-  }
 }
 
 .sticky-menu__item {

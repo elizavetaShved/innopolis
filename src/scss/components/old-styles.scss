@@ -843,6 +843,10 @@ html.is-locked {
     .navigation-link {
       color: #000;
     }
+
+    .mobile-box__dop-logo-icon {
+      fill: var(--main-text-color);
+    }
   }
 }
 
@@ -908,10 +912,6 @@ html.is-locked {
 
 .mobile-box__dop-logo-icon {
   fill: #fff;
-
-  &.mod-white {
-    fill: var(--main-text-color);
-  }
 }
 
 .news-block {
@@ -1992,7 +1992,7 @@ html.is-locked {
     border: none;
   }
 
-  .hero-block:before {
+  .hero-block__background {
     content: "";
     position: absolute;
     left: 50%;
@@ -2000,7 +2000,6 @@ html.is-locked {
     bottom: 0;
     margin-left: 37.7rem;
     height: 48.4rem;
-    background: url("../../img/old/img/hero-bg.svg") 0 100% no-repeat;
   }
 
   .hero-block__inner {

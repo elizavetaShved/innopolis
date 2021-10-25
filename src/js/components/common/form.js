@@ -18,7 +18,7 @@ export class Form {
     this.form = this.hostElem.querySelector('form');
     this.mainContentElem = this.hostElem.querySelector('.modal__content');
     this.successTextElem = this.hostElem.querySelector('.modal__success-text-wrapper');
-    const btnSubmit = this.form.querySelector('.js-btn-submit');
+    // const btnSubmit = this.form.querySelector('.js-btn-submit');
     this.errorContent = this.form.querySelector('.gl__error-content');
 
     this.radioContainer = this.hostElem.querySelector('.gl__radio-input-container');
@@ -33,22 +33,22 @@ export class Form {
       })
     }
 
-    if (btnSubmit) {
-      btnSubmit.onclick = () => {
-        this.onSubmit();
-      }
-    }
+    // if (btnSubmit) {
+    //   btnSubmit.onclick = () => {
+    //     this.onSubmit();
+    //   }
+    // }
 
-    document.addEventListener('keydown', event => {
-      if (event.code === 'NumpadEnter' || event.code === 'Enter') {
-        this.onSubmit();
-      }
-    })
+    // document.addEventListener('keydown', event => {
+    //   if (event.code === 'NumpadEnter' || event.code === 'Enter') {
+    //     this.onSubmit();
+    //   }
+    // })
 
-    this.form.onsubmit = (e) => {
-      e.preventDefault();
-      this.onSubmit();
-    }
+    // this.form.onsubmit = (e) => {
+    //   e.preventDefault();
+    //   this.onSubmit();
+    // }
   }
 
   listeningRadio() {
