@@ -23,17 +23,25 @@ export class NewsPage {
     })
 
 
-    videoWrapperElem.onclick = () => {
-      if (!isVideoPlayback) {
-        videoWrapperElem.classList.remove('gl__mask-color');
-        videoElem.play();
+    if (videoWrapperElem) {
+      videoWrapperElem.onclick = () => {
+        if (!isVideoPlayback) {
+          videoWrapperElem.classList.remove('gl__mask-color');
+          if (videoElem) {
+            videoElem.play();
+          }
+        }
       }
     }
 
     document.addEventListener('click', e => {
       if (isVideoPlayback) {
-        videoWrapperElem.classList.add('gl__mask-color');
-        videoElem.pause();
+        if (videoWrapperElem) {
+          videoWrapperElem.classList.add('gl__mask-color');
+        }
+        if (videoElem) {
+          videoElem.pause();
+        }
       }
       isVideoPlayback = !isVideoPlayback;
     })
