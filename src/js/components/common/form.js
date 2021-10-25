@@ -33,8 +33,10 @@ export class Form {
       })
     }
 
-    btnSubmit.onclick = () => {
-      this.onSubmit();
+    if (btnSubmit) {
+      btnSubmit.onclick = () => {
+        this.onSubmit();
+      }
     }
 
     document.addEventListener('keydown', event => {
@@ -111,11 +113,12 @@ export class Form {
         }
       }
     });
-    this.errorBlock.classList.add('mod-show');
+    if (this.errorBlock) {
+      this.errorBlock.classList.add('mod-show');
+    }
   }
 
   onSubmit() {
-    console.log($(this.form).parsley().isValid())
     if ($(this.form).parsley().isValid()) {
       this.mainContentElem.classList.add('mod-hide');
       this.successTextElem.classList.add('mod-show');

@@ -9,12 +9,12 @@ export class CalendarPage {
     this.hostElem = document.querySelector('#calendar-host');
     if (!this.hostElem) return;
 
-    const calendarContent = this.hostElem.querySelector('.calendar__content');
-    const calendarTableElems = this.hostElem.querySelectorAll('.calendar__table');
+    const calendarContent = this.hostElem.querySelector('.js-content');
+    const calendarTableElems = this.hostElem.querySelectorAll('.js-table');
 
-    const btnOpenFilter = this.hostElem.querySelector('.calendar__filter-btn');
-    const btnCloseFilter = this.hostElem.querySelector('.calendar__modal-filter-close');
-    const modalFilter = document.querySelector('.calendar__modal-filter');
+    const btnOpenFilter = this.hostElem.querySelector('.js-filter-btn');
+    const btnCloseFilter = this.hostElem.querySelector('.js-modal-filter-close');
+    const modalFilter = document.querySelector('.js-modal-filter');
 
     new PerfectScrollbar(calendarContent, {
       wheelSpeed: 1,

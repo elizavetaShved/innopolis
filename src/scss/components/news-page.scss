@@ -47,10 +47,12 @@
 }
 
 .news-page__news-link {
-  &:hover {
-    .news-page__news-title, .news-page__content-link {
-      text-decoration: underline;
-      text-decoration-color: #cccccc;
+  &.mod-link {
+    &:hover {
+      .news-page__news-title, .news-page__content-link {
+        text-decoration: underline;
+        text-decoration-color: #cccccc;
+      }
     }
   }
 }

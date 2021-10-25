@@ -21,13 +21,17 @@ import datepickerInit from './functions/controlsInit/datepickerInit';
 import inputFileInit from './functions/controlsInit/inputFileInit';
 import phoneMask from './functions/phoneMask';
 import dateMask from './functions/dateMask';
+import { ModalCookies } from './components/modal-cookies';
+import { ContactPage } from './components/contact-page';
+import { ProgramPage } from './program-page';
+import initDropDownMenu from './functions/initDropDownMenu';
 
 document.addEventListener('DOMContentLoaded', function () {
   // layout
   new Header();
   new StickyMenu();
 
-  // index page
+  // Главная page
   new OldCommon();
   new MapComponent();
   new FaqComponent();
@@ -36,20 +40,27 @@ document.addEventListener('DOMContentLoaded', function () {
   new SpeakersComponent();
   new RemainedTime();
 
-  // news page
+  // Новости page
   new NewsPage();
 
-  // calendar page
+  // Календарь page
   new CalendarPage();
 
-  // account page
+  // Личный кабинет page
   new AccountPage();
+
+  // Контакты page
+  new ContactPage();
+
+  // Программы page
+  new ProgramPage();
 
   // common
   polyfills();
   detectTouch();
   customSelects();
   scrollByAnchor();
+  initDropDownMenu();
 
   // маски
   phoneMask();
@@ -59,6 +70,8 @@ document.addEventListener('DOMContentLoaded', function () {
   datepickerInit();
   selectInit();
   inputFileInit();
+
+  new ModalCookies();
 });
 
 window.addEventListener('load', function () {

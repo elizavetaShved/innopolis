@@ -1,0 +1,52 @@
+{
+  "title": "Партнёры",
+  "lightPage": true,
+  "list": [
+    {
+      "name": "Генеральный партнёр",
+      "partnerImages": [
+        "inno.png"
+      ],
+      "lengthPartners": 1
+    },
+    {
+      "name": "Партнёр",
+      "partnerImages": [
+        "visa.png",
+        "slack.png",
+        "amazon.png",
+        "google.png",
+        "office.png"
+      ],
+      "lengthPartners": 5
+    },
+    {
+      "name": "Партнёр трека",
+      "partnerImages": [
+        "amazon.png",
+        "office.png",
+        "google.png",
+        "slack.png",
+        "visa.png",
+        "amazon.png",
+        "youtube.png"
+      ],
+      "lengthPartners": 7
+    },
+    {
+      "name": "Партнёр-экспонент",
+      "partnerImages": [
+        "youtube.png"
+      ],
+      "lengthPartners": 1
+    },
+    {
+      "name": "Партнёр-лектор",
+      "partnerImages": [
+        "amazon.png",
+        "google.png"
+      ],
+      "lengthPartners": 2
+    }
+  ]
+}

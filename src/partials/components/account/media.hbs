@@ -4,52 +4,42 @@
       Медиа
     </h2>
 
-    <div>
-      <label class="program__navigate-radio-wrapper">
-        <input type="radio" class="program__navigate-radio" name="program-date" checked>
-        <span class="program__navigate-radio-content mod-white-background">
+    <div class="account__btn-date-container">
+      <div class="account__btn-date-wrapper">
+        <label class="program__navigate-radio-wrapper">
+          <input type="radio" class="program__navigate-radio" name="program-date" checked>
+          <span class="program__navigate-radio-content mod-white-background">
           2 декабря
         </span>
-      </label>
-      <label class="program__navigate-radio-wrapper">
-        <input type="radio" class="program__navigate-radio" name="program-date">
-        <span class="program__navigate-radio-content mod-white-background">
+        </label>
+        <label class="program__navigate-radio-wrapper">
+          <input type="radio" class="program__navigate-radio" name="program-date">
+          <span class="program__navigate-radio-content mod-white-background">
           3 декабря
         </span>
-      </label>
-      <label class="program__navigate-radio-wrapper">
-        <input type="radio" class="program__navigate-radio" name="program-date">
-        <span class="program__navigate-radio-content mod-white-background">
+        </label>
+        <label class="program__navigate-radio-wrapper">
+          <input type="radio" class="program__navigate-radio" name="program-date">
+          <span class="program__navigate-radio-content mod-white-background">
           4 декабря
         </span>
-      </label>
+        </label>
+      </div>
     </div>
   </div>
 
   <ul class="media__content">
-    <li class="news-page__news-item media__item-main-content">
-        {{> news-item
-          isNotItem=true
-          date="8:30"
-          title="Деловой завтрак с Марией Захаровой «ИноСМИ-иноагенты в России»"
-          text="12 августа в формате ВКС прошло первое заседание Организационного комитета Международной премии #МЫВМЕСТЕ. Участники встречи обсудили текущую деятельность волонтеров и итоги заявочной кампании."
-          geolocation="Конгресс-центр, зал для деловых завтраков E12"
-        }}
-
-        <button type="button" class="media__video-bnt">
-          <img src="img/media/video-btn.svg" alt="" class="media__video-btn-img">
-          Трансляция
-        </button>
-    </li>
     <li class="news-page__news-item media__item-main-content">
       {{> news-item
         isNotItem=true
         date="8:30"
         title="Деловой завтрак с Марией Захаровой «ИноСМИ-иноагенты в России»"
         text="12 августа в формате ВКС прошло первое заседание Организационного комитета Международной премии #МЫВМЕСТЕ. Участники встречи обсудили текущую деятельность волонтеров и итоги заявочной кампании."
-        geolocation="Конгресс-центр, зал для деловых завтраков E12"
       }}
-
+      <div class="media__geolocation">
+        <img src="img/common/geolocation.svg" alt="" class="media__geolocation-img">
+        Конгресс-центр, зал для деловых завтраков E12
+      </div>
       <button type="button" class="media__video-bnt">
         <img src="img/media/video-btn.svg" alt="" class="media__video-btn-img">
         Трансляция
@@ -61,9 +51,27 @@
         date="8:30"
         title="Деловой завтрак с Марией Захаровой «ИноСМИ-иноагенты в России»"
         text="12 августа в формате ВКС прошло первое заседание Организационного комитета Международной премии #МЫВМЕСТЕ. Участники встречи обсудили текущую деятельность волонтеров и итоги заявочной кампании."
-        geolocation="Конгресс-центр, зал для деловых завтраков E12"
       }}
-
+      <div class="media__geolocation">
+        <img src="img/common/geolocation.svg" alt="" class="media__geolocation-img">
+        Конгресс-центр, зал для деловых завтраков E12
+      </div>
+      <button type="button" class="media__video-bnt">
+        <img src="img/media/video-btn.svg" alt="" class="media__video-btn-img">
+        Трансляция
+      </button>
+    </li>
+    <li class="news-page__news-item media__item-main-content">
+      {{> news-item
+        isNotItem=true
+        date="8:30"
+        title="Деловой завтрак с Марией Захаровой «ИноСМИ-иноагенты в России»"
+        text="12 августа в формате ВКС прошло первое заседание Организационного комитета Международной премии #МЫВМЕСТЕ. Участники встречи обсудили текущую деятельность волонтеров и итоги заявочной кампании."
+      }}
+      <div class="media__geolocation">
+        <img src="img/common/geolocation.svg" alt="" class="media__geolocation-img">
+        Конгресс-центр, зал для деловых завтраков E12
+      </div>
       <button type="button" class="media__video-bnt">
         <img src="img/media/video-btn.svg" alt="" class="media__video-btn-img">
         Трансляция

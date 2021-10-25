@@ -15,7 +15,7 @@
       margin-bottom: 0;
     }
   }
-} 
+}
 
 .modal__container {
   padding: 4rem 5.2rem;
@@ -25,6 +25,7 @@
   z-index: 100;
   overflow: auto;
   max-height: 100vh;
+  margin-top: 3rem;
 
   @include for-md-down {
     padding: 3rem 2rem;
@@ -165,4 +166,14 @@
   line-height: 1.8rem;
   color: var(--main-color);
   margin-bottom: 4.4rem;
+}
+
+.modal__text {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  margin-bottom: 4.2rem;
+}
+
+.modal-to-book__btn {
+  margin-top: 3.4rem;
 }

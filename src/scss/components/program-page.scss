@@ -1,0 +1,246 @@
+.program-page {
+  padding: 3rem 0;
+}
+
+.program-page__page-content {
+  padding: 0 var(--page-content-padding);
+}
+
+.program-page__info-block {
+  background-color: #F0F0F1;
+  padding: 3.8rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  margin-bottom: 4.2rem;
+
+  @include for-md-down {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+}
+
+.program-page__info-block-caption {
+  font-weight: 600;
+  font-size: 2.6rem;
+  line-height: 3.4rem;
+  margin-bottom: 3rem;
+}
+
+.program-page__info-block-text {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  margin-bottom: 4rem;
+
+  @include for-md-down {
+    margin-bottom: 2rem;
+  }
+}
+
+.program-page__info-block-image {
+  height: 22rem;
+  max-width: 100%;
+  grid-column: 2;
+  grid-row: 1 / 4;
+  margin-left: 8rem;
+
+  @include for-bg-down {
+    margin-left: 3rem;
+  }
+
+  @include for-md-down {
+    grid-column: auto;
+    grid-row: 2;
+    margin-left: 0;
+    margin-bottom: 2rem;
+  }
+}
+
+.program-page__table-row {
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr;
+
+  @include for-bg-down {
+    grid-template-columns: 1fr;
+  }
+
+  &.mod-fill {
+    grid-template-columns: 1fr;
+  }
+}
+
+.program-page__table-row-item {
+  padding: 2rem 3rem;
+
+  &:first-child {
+    border-right: 1px solid #DCDCE0;
+  }
+
+  @include for-bg-down {
+    padding: 2rem var(--page-content-padding);
+    border-bottom: 1px solid #DCDCE0;
+
+    &:first-child {
+      border-right: none;
+    }
+  }
+}
+
+.program-page__table-grey-row {
+  background-color: #F0F0F1;
+  display: flex;
+}
+
+.program-page__table-purple-row {
+  background-color: #ECE8FD;
+
+  @include for-bg-down {
+    padding: 1rem var(--page-content-padding);
+    .program-page__table-row-item {
+      padding: .6rem 0;
+    }
+  }
+}
+
+.program-page__table-main-title-date {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: #898A95;
+  margin-right: 2.6rem;
+}
+
+.program-page__table-main-title-caption {
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  text-transform: uppercase;
+}
+
+.program-page__table-title-time {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+
+.program-page__table-title-wrapper {
+  display: flex;
+
+  @include for-sm-down {
+    display: block;
+  }
+}
+
+.program-page__table-title {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.6rem;
+}
+
+.program-page__table-title-mark {
+  padding: .4rem 1.6rem;
+  border-radius: 0 13px 13px 13px;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: #fff;
+  margin-left: 3.2rem;
+  height: min-content;
+  width: min-content;
+  white-space: nowrap;
+
+  @include for-sm-down {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  &.mod-color-1 {
+    background-color: #6372FF;
+  }
+
+  &.mod-color-2 {
+    background-color: #9681F2;
+  }
+
+  &.mod-color-3 {
+    background-color: #F88C8C;
+  }
+
+  &.mod-color-4 {
+    background-color: #61BD51;
+  }
+}
+
+.program-page__table-geolocation-wrapper {
+  display: flex;
+}
+
+.program-page__table-geolocation-img {
+  height: 2rem;
+  margin-right: 1.4rem;
+}
+
+.program-page__table-geolocation-caption {
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+
+.program-page__table-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.program-page__table-text-list {
+  padding-top: 2.6rem;
+}
+
+.program-page__table-text-item {
+  padding-left: 3rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  position: relative;
+
+  & + & {
+    margin-top: .6rem;
+  }
+
+  &:before {
+    position: absolute;
+    content: '';
+    top: 1rem;
+    left: 0;
+    background-color: var(--main-text-color);
+    width: 10px;
+    height: 1px;
+  }
+}
+
+.program-page__table-speaker-wrapper {
+  display: flex;
+
+  & + & {
+    margin-top: 2rem;
+  }
+}
+
+.program-page__table-speaker-caption {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.6rem;
+  margin-bottom: 1.2rem;
+}
+
+.program-page__table-speaker-value {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: rgba(18, 21, 42, .5);
+}
+
+.program-page__content-info-btn-show-wrapper {
+  margin-top: 2rem;
+
+  .program__content-info-btn-show {
+    margin-bottom: 0;
+  }
+}

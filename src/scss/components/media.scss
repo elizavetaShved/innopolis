@@ -1,13 +1,27 @@
 .media__item-main-content {
-  display: flex;
+  display: grid;
+  grid-template-columns: 6fr 1fr;
+  grid-gap: 4.2rem 2rem;
+
+  @include for-sm-down {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
 }
 
 .media__video-bnt {
   display: flex;
-  align-items: center;
   font-size: 1.4rem;
   line-height: 1.8rem;
   color: var(--secondary-color);
+  grid-column: 2;
+  grid-row: 1 / 3;
+
+  @include for-sm-down {
+    grid-column: auto;
+    grid-row: 2;
+    margin-left: 3rem;
+  }
 
   &:hover {
     text-decoration: underline;
@@ -24,7 +38,11 @@
   align-items: center;
   font-size: 1.4rem;
   line-height: 1.8rem;
-  margin-top: 4.2rem;
+
+  @include for-sm-down {
+    grid-row: 3;
+    margin-left: 3rem;
+  }
 }
 
 .media__geolocation-img {

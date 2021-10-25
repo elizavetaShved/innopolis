@@ -1,0 +1,40 @@
+.modal-cookies__wrapper {
+  position: fixed;
+  bottom: 2rem;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 2;
+
+  &:not(.mod-show) {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.modal-cookies {
+  background-color: rgba(112, 112, 112, .9);
+  padding: 1rem 3rem;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  margin: 0 1rem;
+}
+
+.modal-cookies__text {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #fff;
+  text-align: center;
+}
+
+.modal-cookies__btn {
+  background-color: var(--btn-color);
+  font-size: 1.8rem;
+  line-height: 2rem;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  margin-left: 2rem;
+}

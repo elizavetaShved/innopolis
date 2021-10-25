@@ -1,0 +1,208 @@
+<div class="modal-payment-participation modal" id="modal-{{type}}-host">
+  <div class="modal__container">
+    <div class="modal__content js-main-content">
+      <div class="modal__header">
+        <div class="modal__title">
+          Оплата участия
+        </div>
+        <button type="button" class="modal__close-btn">
+          <svg width="20" height="20" aria-hidden="true" class="modal__close-icon">
+            <use xlink:href="#close"></use>
+          </svg>
+        </button>
+      </div>
+
+      <button type="button" class="modal-payment-participation__btn gl__main-btn mod-no-shadow mod-long js-natural-person">
+        Оплатить как физ. лицо
+      </button>
+
+      <button type="button" class="modal-payment-participation__btn gl__main-btn mod-no-shadow mod-long js-legal-person">
+        Оплатить как юр. лицо
+      </button>
+    </div>
+
+    <div class="modal__content modal-payment-participation__natural-person-content mod-hide js-natural-person-content">
+      <div class="modal__header modal-payment-participation__header">
+        <button type="button" class="modal__close-btn">
+          <svg width="20" height="20" aria-hidden="true" class="modal__close-icon">
+            <use xlink:href="#close"></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal__success-text">
+        Ваша заявка принята. Ссылка для оплаты направлена вам на почту
+      </div>
+    </div>
+
+    <form data-need-validation data-parsley-validate data-parsley-focus="none"
+          class="gl__form modal__content mod-hide js-legal-person-content">
+      <div class="modal__header modal-payment-participation__legal-header">
+        <div class="modal__title">
+          Форма для формирования счета
+        </div>
+        <button type="button" class="modal__close-btn">
+          <svg width="20" height="20" aria-hidden="true" class="modal__close-icon">
+            <use xlink:href="#close"></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-payment-participation__subtitle">
+        заполняется ответственным лицом от имени организации
+      </div>
+
+      <ul class="modal__inputs-list">
+        <li class="gl__input-container">
+          <div class="gl__input-title">Фамилия</div>
+          {{> controls/input-main
+            required=true
+            inputType="text"
+            name="surname"
+            type=type
+            placeholder="Иванов"
+            isContacts=true
+          }}
+        </li>
+        <li class="gl__input-container">
+          <div class="gl__input-title">Имя</div>
+          {{> controls/input-main
+            required=true
+            inputType="text"
+            name="name"
+            type=type
+            placeholder="Анатолий"
+            isContacts=true
+          }}
+        </li>
+        <li class="gl__input-container">
+          <div class="gl__input-title">Отчество</div>
+          {{> controls/input-main
+            required=true
+            inputType="text"
+            name="middle-name"
+            type=type
+            placeholder="Иванович"
+            isContacts=true
+          }}
+        </li>
+        <li class="gl__input-container">
+          <div class="gl__input-title">Мессенджер (Telegram)</div>
+          {{> controls/input-main
+            required=true
+            inputType="text"
+            name="messenger"
+            type=type
+            placeholder="info@gmail.com"
+            isContacts=true
+          }}
+        </li>
+        <li class="gl__input-container">
+          <div class="gl__input-title">Должность</div>
+          {{> controls/input-main
+            required=true
+            inputType="text"
+            name="post"
+            type=type
+            placeholder="Укажите должность"
+            isContacts=true
+          }}
+        </li>
+        <li class="gl__input-container">
+          <div class="gl__input-title">Название компании</div>
+          {{> controls/input-main
+            required=true
+            inputType="text"
+            name="company-name"
+            type=type
+            placeholder="Название"
+            isContacts=true
+          }}
+        </li>
+        <li class="gl__input-container">
+          <div class="gl__input-title">Реквизиты компании</div>
+          {{> controls/input-main
+            required=true
+            inputType="text"
+            name="company-details"
+            type=type
+            placeholder="Укажите должность"
+            isContacts=true
+          }}
+        </li>
+        <li class="gl__input-container">
+          <div class="gl__input-title">ФИО участников форума</div>
+          {{> controls/textarea
+            required=true
+            placeholder="Иванов Иван Иванович"
+            type=type
+            name="FCs"
+          }}
+        </li>
+        <li class="gl__input-container">
+          <div class="gl__input-title">Комментарий</div>
+          {{> controls/textarea
+            required=true
+            placeholder="Ваш комментарий"
+            type=type
+            name="comment"
+          }}
+        </li>
+      </ul>
+
+      <div class="gl__radio-input-container">
+        <div class="gl__checkbox-item">
+          <div class="gl__form-radio-wrapper">
+            {{> controls/input-radio-checkbox
+              isChecked=true
+              required="true"
+              name="agreement-processing"
+              type=type
+              inputType="checkbox"
+              inputCaption="Я подтверждаю свое согласие на"
+              inputCaptionLink="обработку персональных данных"
+            }}
+          </div>
+        </div>
+        <div class="gl__checkbox-item">
+          <div class="gl__form-radio-wrapper">
+            {{> controls/input-radio-checkbox
+              isChecked=true
+              required="true"
+              name="agreement-processing-policy"
+              type=type
+              inputType="checkbox"
+              inputCaption="Я подтверждаю свое согласие с"
+              inputCaptionLink="политикой обработки персональных данных"
+            }}
+          </div>
+        </div>
+        <div class="gl__checkbox-item">
+          <div class="gl__form-radio-wrapper">
+            {{> controls/input-radio-checkbox
+              isChecked=true
+              required="true"
+              name="agreement-processing-terms-contract"
+              type=type
+              inputType="checkbox"
+              inputCaption="Я подтверждаю свое согласие с"
+              inputCaptionLink="условиями договора оказания услуг"
+            }}
+          </div>
+        </div>
+      </div>
+
+      <div class="gl__error-block js-error-block">
+        <img src="img/old/img/error-form.svg" alt="" class="gl__error-icon">
+        <div class="gl__error-content">
+          Заполните все обязательные поля
+        </div>
+      </div>
+
+      <button type="submit"
+              class="gl__btn-submit js-btn-submit modal__btn-submit gl__main-btn mod-long mod-no-shadow mod-small">
+        Отправить заявку на формирование счета
+      </button>
+    </form>
+  </div>
+</div>

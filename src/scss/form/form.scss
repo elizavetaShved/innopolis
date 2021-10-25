@@ -69,6 +69,13 @@
   @include for-bg-down {
     padding: 1rem 2rem !important;
   }
+
+  &.mod-textarea {
+    height: 15rem !important;
+    resize: none;
+    border: 2px solid transparent;
+    @extend %scroll;
+  }
 }
 
 .gl__input-mark-required {
@@ -89,8 +96,6 @@
 }
 
 .gl__radio-input-container {
-  display: flex;
-  cursor: pointer;
   margin-top: 4rem;
 
   @include for-fl-down {
@@ -99,6 +104,15 @@
 
   @include for-bg-down {
     margin-top: 2rem;
+  }
+}
+
+.gl__checkbox-item {
+  display: flex;
+  cursor: pointer;
+
+  & + & {
+    margin-top: 1.6rem;
   }
 }
 

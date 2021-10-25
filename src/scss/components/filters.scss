@@ -1,0 +1,54 @@
+.filters__header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4.8rem;
+
+  @include for-md-down {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+.filters__filter-btn {
+  max-width: 40rem;
+  padding: 1.6rem;
+}
+
+.filter__btn {
+  @include for-md-up {
+    margin-left: 2rem;
+  }
+}
+
+.filters__btn-download {
+  min-width: 26rem;
+  text-align: center;
+  width: 100%;
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+  white-space: nowrap;
+
+  @include for-md-down {
+    margin-left: 0;
+    margin-top: 3rem;
+    min-width: auto;
+    display: inline-block;
+
+    .gl__btn-download-icon {
+      left: 1.2rem !important;
+    }
+  }
+
+  @include for-sm-down {
+    margin-top: 1.4rem;
+  }
+}
+
+.filters__selects-wrapper {
+  margin: -1rem;
+
+  @include for-sm-down {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -2,6 +2,9 @@
   {{#if required }}
     <span class="gl__input-mark-required"></span>
   {{/if}}
+  {{#if dummyRequered }}
+    <span class="gl__input-mark-required"></span>
+  {{/if}}
   <input type="file"
          class="gl__input-file js-input-file"
          name="{{name}}-{{type}}"

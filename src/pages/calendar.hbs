@@ -20,16 +20,16 @@
           Календарь мероприятий
         </h1>
 
-        <div class="calendar__header-wrapper calendar__page-content">
-          <button type="button" class="calendar__filter-btn gl__main-btn mod-no-shadow gl__sm-show">Фильтры</button>
+        <div class="filters__header-wrapper calendar__page-content">
+          <button type="button" class="filters__filter-btn gl__main-btn mod-no-shadow gl__sm-show js-filter-btn">Фильтры</button>
 
           <div class="gl__sm-hide">
-            {{> calendar-filters }}
+            {{> filters }}
           </div>
 
-          <div class="calendar__btn">
+          <div class="filter__btn">
             <a href="" download=""
-               class="calendar__btn-download gl__main-btn mod-black mod-no-shadow">
+               class="filters__btn-download gl__main-btn mod-black mod-no-shadow">
               Скачать программу в PDF
               <svg width="24" height="24" aria-hidden="true" class="gl__btn-download-icon">
                 <use xlink:href="#download"></use>
@@ -38,11 +38,11 @@
           </div>
         </div>
 
-        <div class="calendar__content">
-          <table class="calendar__table">
+        <div class="calendar__content js-content">
+          <table class="calendar__table js-table">
             <thead class="calendar__table-head">
             <tr class="calendar__row-wrapper mod-head">
-              <td class="calendar__item-header mod-date">21 сен.</td>
+              <td class="calendar__item-header mod-date">2 дек.</td>
               {{> cln-table/header-item caption="a" value="большой зал" }}
               {{> cln-table/header-item caption="b" value="аудитория 104" }}
               {{> cln-table/header-item caption="c" value="аудитория 105" }}
@@ -65,7 +65,7 @@
                 </button>
               </th>
             </tr>
-            <tr class="calendar__row-wrapper mod-full only-card" data-time="2021/09/21/9/00">
+            <tr class="calendar__row-wrapper mod-full only-card" data-time="2021/12/02/9/00">
               <th class="calendar__item-content">9:00</th>
               {{> cln-table/content-item
                 cardTime="9:00"
@@ -73,7 +73,7 @@
                 fullRow=true
               }}
             </tr>
-            <tr class="calendar__row-wrapper mod-full only-card" data-time="2021/09/21/10/00">
+            <tr class="calendar__row-wrapper mod-full only-card" data-time="2021/12/02/10/00">
               <th class="calendar__item-content">10:00</th>
               {{> cln-table/content-item
                 cardTime="10:00 - 11:00"
@@ -81,7 +81,7 @@
                 fullRow=true
               }}
             </tr>
-            <tr class="calendar__row-wrapper only-card" data-time="2021/09/21/11/00">
+            <tr class="calendar__row-wrapper only-card" data-time="2021/12/02/11/00">
               <th class="calendar__item-content">11:00</th>
               {{> cln-table/content-item
                 cardTime="11:00 - 11:50"
@@ -164,7 +164,7 @@
                 cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
               }}
             </tr>
-            <tr class="calendar__row-wrapper only-card" data-time="2021/09/21/16/00">
+            <tr class="calendar__row-wrapper only-card" data-time="2021/12/02/16/00">
               <th class="calendar__item-content">16:00</th>
               {{> cln-table/content-item
                 cardTime="16:00 - 16:50"
@@ -240,7 +240,7 @@
                 cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
               }}
             </tr>
-            <tr class="calendar__row-wrapper only-card" data-time="2021/09/21/17/00">
+            <tr class="calendar__row-wrapper only-card" data-time="2021/12/02/17/00">
               <th class="calendar__item-content">17:00</th>
               {{> cln-table/content-item
                 cardTime="17:00 - 17:50"
@@ -300,7 +300,7 @@
                 cardText="Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности"
               }}
             </tr>
-            <tr class="calendar__row-wrapper only-card" data-time="2021/09/21/18/00">
+            <tr class="calendar__row-wrapper only-card" data-time="2021/12/02/18/00">
               <th class="calendar__item-content">18:00</th>
               {{> cln-table/content-item
                 cardTime="18:00 - 18:50"
@@ -380,14 +380,14 @@
         </div>
       </div>
 
-      <div class="calendar__modal-filter gl__sm-show">
+      <div class="calendar__modal-filter gl__sm-show js-modal-filter">
         <div class="calendar__modal-filter-content gl__page-content">
           <div class="calendar__modal-filter-header">
             <div class="gl__subtitle calendar__modal-filter-header-subtitle">Фильтры</div>
-            <button type="button" class="calendar__modal-filter-close"></button>
+            <button type="button" class="calendar__modal-filter-close js-modal-filter-close"></button>
           </div>
 
-          {{> calendar-filters }}
+          {{> filters }}
         </div>
       </div>
     </div>

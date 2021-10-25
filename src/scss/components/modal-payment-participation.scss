@@ -1,0 +1,37 @@
+.modal-payment-participation__btn {
+  padding: 1.6rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+
+  & + & {
+    margin-top: 2rem;
+  }
+}
+
+.modal-payment-participation__natural-person-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30rem;
+  position: relative;
+}
+
+.modal-payment-participation__header {
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+
+.modal-payment-participation__legal-header {
+  margin-bottom: 1.6rem;
+}
+
+.modal-payment-participation__subtitle {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: #7F7E94;
+  margin-bottom: 4.6rem;
+}

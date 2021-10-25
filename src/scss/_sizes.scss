@@ -1,10 +1,10 @@
-$full: 1400px;
-$vast: 1200px;
-$big: 1024px;
-$large: 960px;
-$middle: 768px;
-$small: 560px;
-$xxs: 426px;
+$full: 1401px;
+$vast: 1201px;
+$big: 1025px;
+$large: 961px;
+$middle: 769px;
+$small: 561px;
+$xxs: 427px;
 
 @mixin for-fl-up {
   @media screen and (min-width: $full) {

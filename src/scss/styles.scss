@@ -13,6 +13,7 @@
 @import 'form/input-file';
 @import 'form/input-radio-checkbox';
 @import 'form/input-select';
+@import 'form/select-width-checkbox';
 
 @import 'common/sections-top';
 @import 'common/modal';
@@ -28,6 +29,7 @@
 @import 'components/speakers-block';
 @import 'components/program-block';
 @import 'components/modal-auth';
+@import 'components/modal-payment-participation';
 @import 'components/news-page';
 @import 'components/pagination';
 @import 'components/map';
@@ -35,3 +37,9 @@
 @import 'components/profile';
 @import 'components/media';
 @import 'components/calendar';
+@import 'components/contacts';
+@import 'components/partners-page';
+@import 'components/program-page';
+@import 'components/filters';
+@import 'components/modal-cookies';
+@import 'components/booking-calendar';

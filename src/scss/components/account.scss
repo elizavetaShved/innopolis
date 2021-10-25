@@ -156,10 +156,14 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 2rem;
-  align-items: center;
+
+  &.mod-center {
+    align-items: center;
+  }
 
   .gl__subtitle {
     flex: 0 0 auto;
+    margin-bottom: 0;
   }
 
   @include for-md-up {
@@ -170,16 +174,28 @@
 
   @include for-md-down {
     flex-direction: column;
-    margin-bottom: 4rem;
+    align-items: flex-start;
+  }
+}
+
+.account__btn-date-container {
+  @include for-md-down {
+    width: 100vw;
+    margin: 0 calc(var(--page-content-padding) * -1);
+    padding: 0 var(--page-content-padding);
+    overflow: auto;
+  }
+}
+
+.account__btn-date-wrapper {
+  display: flex;
+  @include for-md-down {
+    margin-top: 3rem;
   }
 }
 
 .account__component {
-  height: 0;
-  overflow: hidden;
-
-  &.mod-show {
-    height: min-content;
+  &:not(.mod-show) {
+    display: none;
   }
-
 }

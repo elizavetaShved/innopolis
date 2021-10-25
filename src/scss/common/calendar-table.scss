@@ -205,12 +205,11 @@
 .calendar__btn-show-all {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid transparent;
 
   @include for-md-up {
     &:hover {
       .calendar__btn-show-all-content {
-        border-bottom: 1px dashed var(--secondary-color);
+        border-bottom-color: var(--secondary-color);
       }
     }
   }
@@ -226,6 +225,8 @@
   line-height: 1.3;
   color: var(--secondary-color);
   white-space: nowrap;
+  border-top: 1px dashed transparent;
+  border-bottom: 1px dashed transparent;
 
   @include for-sm-down {
     white-space: normal;

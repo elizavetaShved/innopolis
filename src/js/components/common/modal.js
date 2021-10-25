@@ -7,7 +7,7 @@ export class Modal {
   isOpenModal = false;
   bodyElem;
 
-  constructor(type) {
+  constructor(type, isNoForm) {
     this.checkDocumentClick = this.checkDocumentClick.bind(this);
     this.hostElem = document.querySelector(`#modal-${ type }-host`);
     this.bodyElem = document.querySelector('body');
@@ -17,7 +17,9 @@ export class Modal {
     const proposalLinkElems = this.hostElem.querySelectorAll('.modal__proposal-link');
     const recoverPasswordBtn = this.hostElem.querySelector('.gl__input-hint-link');
 
-    new Form(this.hostElem);
+    if (!isNoForm) {
+      new Form(this.hostElem);
+    }
 
     closeBtns.forEach(btn => {
       btn.onclick = () => {

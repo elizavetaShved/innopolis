@@ -1,0 +1,42 @@
+.gl__select-width-checkbox-wrapper {
+  z-index: 1;
+}
+
+.gl__select-width-checkbox {
+  color: rgba(0, 0, 0, .5) !important;
+  display: flex;
+  align-items: center;
+  padding: 1.8rem 2.2rem !important;
+  cursor: pointer;
+
+  @include for-bg-down {
+    padding: 1.2rem 2.2rem !important;
+  }
+}
+
+.gl__select-width-checkbox-content-container {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  left: 0;
+  padding: 7.2rem 1rem 2.2rem 2rem;
+  width: 100%;
+  box-shadow: 0 20px 40px rgba(48, 34, 107, 0.29);
+  border-radius: 25px;
+  background-color: #fff;
+}
+
+.gl__select-width-checkbox-content {
+  padding-bottom: 8.2rem;
+  padding-right: 1rem;
+  height: min-content;
+  max-height: 24.8rem;
+  overflow: auto;
+  @extend %scroll;
+
+  .gl__radio-checkbox-input-wrapper {
+    &:last-child {
+      padding-bottom: 2.2rem;
+    }
+  }
+}

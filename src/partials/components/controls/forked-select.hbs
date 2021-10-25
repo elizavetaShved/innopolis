@@ -4,29 +4,36 @@
   {{/if}}
 
   <label class="gl__select-wrapper">
-    <select class="gl__select js-select" name="{{ firstPlaceholder }}-{{type}}">
-      <option class="gl__select-option">{{ firstOption1 }}</option>
-      <option class="gl__select-option">{{ firstOption2 }}</option>
-      <option class="gl__select-option">{{ firstOption3 }}</option>
-      <option class="gl__select-option">{{ firstOption4 }}</option>
-      <option class="gl__select-option">{{ firstOption5 }}</option>
-      <option class="gl__select-option">{{ firstOption6 }}</option>
-      <option class="gl__select-option">{{ firstOption7 }}</option>
-      <option class="gl__select-option">{{ firstOption8 }}</option>
-      <option class="gl__select-option">{{ firstOption9 }}</option>
-      <option class="gl__select-option">{{ firstOption10 }}</option>
-      <option class="gl__select-option">{{ firstOption11 }}</option>
+    <select class="gl__select js-select" placeholder value="" name="{{ firstPlaceholder }}-{{type}}">
+      {{#if firstPlaceholder}}<option class="gl__select-option" value="">{{ firstPlaceholder }}</option>{{/if}}
+      {{#if firstOption1}}<option class="gl__select-option" value="{{ firstOption1 }}">{{ firstOption1 }}</option>{{/if}}
+      {{#if firstOption2}}<option class="gl__select-option" value="{{ firstOption2 }}">{{ firstOption2 }}</option>{{/if}}
+      {{#if firstOption3}}<option class="gl__select-option" value="{{ firstOption3 }}">{{ firstOption3 }}</option>{{/if}}
+      {{#if firstOption4}}<option class="gl__select-option" value="{{ firstOption4 }}">{{ firstOption4 }}</option>{{/if}}
+      {{#if firstOption5}}<option class="gl__select-option" value="{{ firstOption5 }}">{{ firstOption5 }}</option>{{/if}}
+      {{#if firstOption6}}<option class="gl__select-option" value="{{ firstOption6 }}">{{ firstOption6 }}</option>{{/if}}
+      {{#if firstOption7}}<option class="gl__select-option" value="{{ firstOption7 }}">{{ firstOption7 }}</option>{{/if}}
+      {{#if firstOption8}}<option class="gl__select-option" value="{{ firstOption8 }}">{{ firstOption8 }}</option>{{/if}}
+      {{#if firstOption9}}<option class="gl__select-option" value="{{ firstOption9 }}">{{ firstOption9 }}</option>{{/if}}
+      {{#if firstOption10}}<option class="gl__select-option" value="{{ firstOption10 }}">{{ firstOption10 }}</option>{{/if}}
+      {{#if firstOption11}}<option class="gl__select-option" value="{{ firstOption11 }}">{{ firstOption11 }}</option>{{/if}}
     </select>
   </label>
 
   <label class="gl__select-wrapper">
-    <select class="gl__select js-select" name="{{ secondPlaceholder }}-{{type}}">
-      <option class="gl__select-option">{{ secondOption1 }}</option>
-      <option class="gl__select-option">{{ secondOption2 }}</option>
-      <option class="gl__select-option">{{ secondOption3 }}</option>
-      <option class="gl__select-option">{{ secondOption4 }}</option>
-      <option class="gl__select-option">{{ secondOption5 }}</option>
-      <option class="gl__select-option">{{ secondOption6 }}</option>
+    <select class="gl__select js-select" placeholder value="" name="{{ secondPlaceholder }}-{{type}}">
+      {{#if secondPlaceholder}}<option class="gl__select-option" value="">{{ secondPlaceholder }}</option>{{/if}}
+      {{#if secondOption1}}<option class="gl__select-option" value="{{ secondOption1 }}">{{ secondOption1 }}</option>{{/if}}
+      {{#if secondOption2}}<option class="gl__select-option" value="{{ secondOption2 }}">{{ secondOption2 }}</option>{{/if}}
+      {{#if secondOption3}}<option class="gl__select-option" value="{{ secondOption3 }}">{{ secondOption3 }}</option>{{/if}}
+      {{#if secondOption4}}<option class="gl__select-option" value="{{ secondOption4 }}">{{ secondOption4 }}</option>{{/if}}
+      {{#if secondOption5}}<option class="gl__select-option" value="{{ secondOption5 }}">{{ secondOption5 }}</option>{{/if}}
+      {{#if secondOption6}}<option class="gl__select-option" value="{{ secondOption6 }}">{{ secondOption6 }}</option>{{/if}}
+      {{#if secondOption7}}<option class="gl__select-option" value="{{ secondOption7 }}">{{ secondOption7 }}</option>{{/if}}
+      {{#if secondOption8}}<option class="gl__select-option" value="{{ secondOption8 }}">{{ secondOption8 }}</option>{{/if}}
+      {{#if secondOption9}}<option class="gl__select-option" value="{{ secondOption9 }}">{{ secondOption9 }}</option>{{/if}}
+      {{#if secondOption10}}<option class="gl__select-option" value="{{ secondOption10 }}">{{ secondOption10 }}</option>{{/if}}
+      {{#if secondOption11}}<option class="gl__select-option" value="{{ secondOption11 }}">{{ secondOption11 }}</option>{{/if}}
     </select>
   </label>
 </div>

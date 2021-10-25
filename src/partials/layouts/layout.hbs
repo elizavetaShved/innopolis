@@ -20,14 +20,6 @@
 </div>
 
 <div class="layout__wrapper">
-  {{> modal-form type="participation" title="Отправить заявку на участие" }}
-  {{> modal-form type="partner" title="Стать партнером" }}
-
-  {{> modal-auth type="auth" title="Авторизация" class="mod-show"}}
-  {{> modal-auth type="registr" isRegistr=true title="Регистрация на форум" }}
-
-  {{> modal-recovery-password type="password" title="Восстановление пароля" }}
-
   {{> layout-header }}
   {{> sticky-menu }}
 
@@ -41,8 +33,20 @@
 
   {{> layout-mobile-box }}
 
+  {{> modal-form type="participation" title="Отправить заявку на участие" }}
+  {{> modal-form type="partner" title="Стать партнером" }}
+
+  {{> modal-auth type="auth" title="Авторизация" class="mod-show"}}
+  {{> modal-auth type="registr" isRegistr=true title="Регистрация на форум" }}
+
+  {{> modal-recovery-password type="password" title="Восстановление пароля" }}
+
+  {{> modal-cookies }}
+
+  {{> modal-payment-participation type="payment-participation" }}
+  {{> modal-to-book type="to-book" }}
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<!--  <script async="" src="https://api-maps.yandex.ru/2.1/?apikey=5fa6f5ee-c55e-4f35-a5b3-c67b3c581d82&lang=ru_RU"></script>-->
   <script src="https://api-maps.yandex.ru/2.1/?apikey=978d9dde-738d-4b87-8d8a-1de67b511402&lang=ru_RU" type="text/javascript"></script>
   <script src="js/app.js"></script>
   <script src="assets/js/backend.js"></script>
