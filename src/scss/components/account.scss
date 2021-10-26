@@ -117,7 +117,7 @@
   }
 }
 
-.account__exit-btn {
+.account__exit-link {
   padding: 2rem 2rem 2rem 4rem;
   font-weight: 600;
   font-size: 1.6rem;
@@ -125,6 +125,7 @@
   color: #000;
   position: relative;
   transition: color 250ms;
+  display: block;
 
   &:hover {
     color: var(--muted-color);

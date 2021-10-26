@@ -8151,7 +8151,7 @@ html.remodal-is-locked {
         -ms-flex-pack: end;
             justify-content: flex-end; } }
 
-.account__exit-btn {
+.account__exit-link {
   padding: 2rem 2rem 2rem 4rem;
   font-weight: 600;
   font-size: 1.6rem;
@@ -8159,10 +8159,11 @@ html.remodal-is-locked {
   color: #000;
   position: relative;
   -webkit-transition: color 250ms;
-  transition: color 250ms; }
-  .account__exit-btn:hover {
+  transition: color 250ms;
+  display: block; }
+  .account__exit-link:hover {
     color: var(--muted-color); }
-    .account__exit-btn:hover .account__exit-btn-icon {
+    .account__exit-link:hover .account__exit-btn-icon {
       fill: var(--muted-color); }
 
 .account__exit-btn-icon {
