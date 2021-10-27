@@ -19,7 +19,7 @@ export default function inputSearchInit() {
           // Add class to the created element
           message.setAttribute("class", "no_result");
           // Add message text content
-          message.innerHTML = `<span>Found No Results for "${data.query}"</span>`;
+          message.innerHTML = `<span>Не найдено "${data.query}"</span>`;
           // Append message element to the results list
           list.prepend(message);
         }
@@ -32,7 +32,10 @@ export default function inputSearchInit() {
     events: {
       input: {
         selection: (event) => {
-          const selection = event.detail.selection.value;
+          let selection = event.detail.selection.value;
+          while (selection.includes('&#34')) {
+            selection = selection.replace('&#34', '"');
+          }
           autoCompleteJS.input.value = selection;
         }
       }
