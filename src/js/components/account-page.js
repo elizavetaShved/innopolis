@@ -3,18 +3,27 @@ import { Modal } from './common/modal';
 import { checkExistParent } from '../functions/checkExistParent';
 
 export class AccountPage {
-  accountComponent;
   hostElem;
+  accountComponent;
+
+  directionSelectWrapper;
+  directionSelect;
+  universitySelectWrapper;
+  universitySelect;
+  markRequiredElem;
+  universityMarkRequiredElem;
 
   constructor() {
     this.hostElem = document.querySelector('#account-host');
     if (!this.hostElem) return;
 
-    const directionSelectWrapper = this.hostElem.querySelector('.profile__direction');
-    const directionSelect = directionSelectWrapper.querySelector('.gl__select');
+    this.directionSelectWrapper = this.hostElem.querySelector('.profile__direction');
+    this.directionSelect = this.directionSelectWrapper.querySelector('.gl__select');
 
-    const universitySelectWrapper = this.hostElem.querySelector('.profile__university-type');
-    const universitySelect = universitySelectWrapper.querySelector('.gl__select');
+    this.universitySelectWrapper = this.hostElem.querySelector('.profile__university-type');
+    this.universitySelect = this.universitySelectWrapper.querySelector('.gl__select');
+    this.universitySelectWrapperElem = this.universitySelectWrapper.querySelector('.gl__select-wrapper');
+    this.universitySelectElem = this.universitySelectWrapper.querySelector('.gl__select');
 
     const menuRadioValue = this.hostElem.querySelectorAll('.account__menu-radio');
     this.accountComponent = Array.from(this.hostElem.querySelectorAll('.account__component'));
@@ -39,20 +48,17 @@ export class AccountPage {
     const openModalBtns = this.hostElem.querySelectorAll('.js-open-modal-to-book');
     const errorTimeElem = this.hostElem.querySelectorAll('.js-error-time');
 
-    directionSelect.onchange = () => {
-      if (directionSelect.innerText === 'Вузы') {
-        universitySelectWrapper.classList.add('mod-show');
-      } else {
-        universitySelectWrapper.classList.remove('mod-show');
-        universitySelect.value = null;
-      }
+    this.checkDirections(false);
+
+    this.directionSelect.onchange = () => {
+      this.checkDirections(true);
     }
 
     menuRadioValue.forEach((radioElem, index) => {
       this. changeComponent(radioElem, index);
 
       radioElem.onchange = () => {
-       this. changeComponent(radioElem, index);
+        this. changeComponent(radioElem, index);
       }
     })
 
@@ -151,6 +157,30 @@ export class AccountPage {
     if (radioElem.checked) {
       this.accountComponent.map(elem => elem.classList.remove('mod-show'))
       this.accountComponent[index].classList.add('mod-show');
+    }
+  }
+
+  checkDirections(isChange) {
+
+    if (this.directionSelect.innerText === 'Вузы') {
+      this.universitySelectWrapper.classList.add('mod-show');
+      console.log(this.universitySelectWrapper)
+      // добавить валидацию для нового селекта
+      this.universityMarkRequiredElem = document.createElement('div');
+      this.universityMarkRequiredElem.classList.add('gl__input-mark-required');
+      this.universitySelectWrapperElem.prepend(this.universityMarkRequiredElem);
+      this.universitySelectElem.setAttribute('data-parsley-required', '');
+      this.universitySelectElem.setAttribute('data-parsley-trigger', 'change');
+    } else {
+      this.universitySelectWrapper.classList.remove('mod-show');
+      // this.universitySelect.value = null;
+      if (isChange) {
+        // убрать валидацию с селекта
+        // this.universityMarkRequiredElem.remove();
+        this.universitySelectElem.removeAttribute('data-parsley-required');
+        this.universitySelectElem.removeAttribute('data-parsley-trigger');
+        console.log(this.universitySelectElem)
+      }
     }
   }
 }

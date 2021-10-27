@@ -3142,7 +3142,7 @@ button.swiper-pagination-bullet {
     display: none !important; } }
 
 .header {
-  z-index: 50; }
+  z-index: 1000; }
   @media screen and (max-width: 1200px) {
     .header {
       border-bottom: 1px solid rgba(250, 250, 250, 0.2); }
