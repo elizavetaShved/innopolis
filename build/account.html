@@ -9,6 +9,7 @@
   <script src="assets/js/ie11CustomProperties.js"></script>
   <link rel="stylesheet" href="css/styles.min.css"/>
   <link type="image/png" href="img/favicon.ico" rel="icon">
+<!--  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.6/dist/css/autoComplete.min.css">-->
   <title>
     Аккаунт
   </title>
@@ -259,7 +260,6 @@
                          class="gl__input "
                          data-parsley-minlength="2"
                          name="name-account"
-                
                          data-parsley-minlength="2"
                 
                 
@@ -291,7 +291,6 @@
                          class="gl__input "
                          data-parsley-minlength="2"
                          name="university-account"
-                
                          data-parsley-minlength="2"
                 
                 
@@ -326,29 +325,38 @@
               </li>
               <li class="gl__input-container">
                 <div class="gl__input-title mod-small">Организация</div>
-                <div class="gl__select-container " id="organization-account">
-                  <label class="gl__select-wrapper">
-                      <span class="gl__input-mark-required"></span>
-                    <select class="gl__select js-select"
-                            data-parsley-class-handler="#organization-account"
-                            name="organization-account"
-                            data-parsley-required="" data-parsley-trigger="change"
-                    >
-                      <option class="gl__select-option" placeholder value="">Какую организацию Вы представляете?</option>
-                      <option class="gl__select-option" value="Организация 1">Организация 1</option>
-                      <option class="gl__select-option" value="Организация 2">Организация 2</option>
-                      <option class="gl__select-option" value="Организация 3">Организация 3</option>
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                    </select>
-                  </label>
-                </div>
+                <!-- 1) isPassword / isContacts - необходимы для js -->
+                <!-- 2) inputType - html type input -->
+                <!-- 3) required (true/false) - обязательно для заполнения -->
+                <!-- 4) name - name input -->
+                <!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+                <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+                <!-- 7) id - обычный id, например для первого пароля-->
+                <!-- 8) parsleyType - для валидации (н-р email) -->
+                <!-- 9) minLength - максимально допустимое к-во символов -->
+                <!-- 10) maxLength - максимально допустимое к-во символов -->
+                
+                <label class="gl__input-wrapper  ">
+                    <span class="gl__input-mark-required"></span>
+                  <input type="search"
+                         class="gl__input mod-search js-input-search"
+                         data-parsley-minlength="2"
+                         name="organization-account"
+                         dir="ltr" spellcheck=false autocorrect="off" autocomplete="off" autocapitalize="off"
+                         data-placeholder="Какую организацию Вы представляете?"
+                         data-options="[&quot;Организация 1&quot;, &quot;Организация 2&quot;, &quot;Еще одна организация&quot;]"
+                         data-parsley-minlength="2"
+                
+                
+                         data-parsley-required=""
+                
+                
+                         placeholder="Какую организацию Вы представляете?"
+                
+                
+                  >
+                
+                </label>
               </li>
               <li class="gl__input-container">
                 <div class="gl__input-title mod-small">Пол</div>
@@ -439,7 +447,6 @@
                          class="gl__input "
                          data-parsley-minlength="2"
                          name="post-account"
-                
                          data-parsley-minlength="2"
                 
                 
@@ -472,7 +479,6 @@
                          class="gl__input js-phone-input"
                          data-parsley-minlength="2"
                          name="phone-account"
-                
                          data-parsley-minlength="2"
                 
                 
@@ -517,7 +523,6 @@
                          class="gl__input "
                          data-parsley-minlength="2"
                          name="email-account"
-                
                          data-parsley-minlength="2"
                 
                 
@@ -634,7 +639,6 @@
                          class="gl__input "
                          data-parsley-minlength="2"
                          name="promo-account"
-                
                          data-parsley-minlength="2"
                 
                 
@@ -898,7 +902,6 @@
                          class="gl__input "
                          data-parsley-minlength="2"
                          name="flight-number-arrival-account"
-                
                          data-parsley-minlength="2"
                 
                          data-parsley-maxlength="3"
@@ -930,7 +933,6 @@
                          class="gl__input "
                          data-parsley-minlength="2"
                          name="flight-number-departure-account"
-                
                          data-parsley-minlength="2"
                 
                          data-parsley-maxlength="3"
@@ -1114,7 +1116,6 @@
                          class="gl__input "
                          data-parsley-minlength="2"
                          name="topics-name-account"
-                
                          data-parsley-minlength="2"
                 
                 
@@ -4689,7 +4690,6 @@
                      class="gl__input "
                      data-parsley-minlength="2"
                      name="name-participation"
-            
                      data-parsley-minlength="2"
             
             
@@ -4722,7 +4722,6 @@
                      class="gl__input "
                      data-parsley-minlength="2"
                      name="organization-participation"
-            
                      data-parsley-minlength="2"
             
             
@@ -4755,7 +4754,6 @@
                      class="gl__input "
                      data-parsley-minlength="2"
                      name="email-participation"
-            
                      data-parsley-minlength="2"
             
             
@@ -4790,7 +4788,6 @@
                      class="gl__input js-phone-input"
                      data-parsley-minlength="2"
                      name="phone-participation"
-            
                      data-parsley-minlength="2"
             
             
@@ -4888,7 +4885,6 @@
                      class="gl__input "
                      data-parsley-minlength="2"
                      name="name-partner"
-            
                      data-parsley-minlength="2"
             
             
@@ -4921,7 +4917,6 @@
                      class="gl__input "
                      data-parsley-minlength="2"
                      name="organization-partner"
-            
                      data-parsley-minlength="2"
             
             
@@ -4954,7 +4949,6 @@
                      class="gl__input "
                      data-parsley-minlength="2"
                      name="email-partner"
-            
                      data-parsley-minlength="2"
             
             
@@ -4989,7 +4983,6 @@
                      class="gl__input js-phone-input"
                      data-parsley-minlength="2"
                      name="phone-partner"
-            
                      data-parsley-minlength="2"
             
             
@@ -5089,7 +5082,6 @@
                        class="gl__input "
                        data-parsley-minlength="2"
                        name="contact-auth"
-              
                        data-parsley-minlength="2"
               
               
@@ -5122,7 +5114,6 @@
                        class="gl__input "
                        data-parsley-minlength="2"
                        name="password-auth"
-              
                        data-parsley-minlength="2"
               
               
@@ -5248,7 +5239,6 @@
                        class="gl__input "
                        data-parsley-minlength="2"
                        name="contact-registr"
-              
                        data-parsley-minlength="2"
               
               
@@ -5281,7 +5271,6 @@
                        class="gl__input "
                        data-parsley-minlength="2"
                        name="password-registr"
-              
                        data-parsley-minlength="2"
               
               
@@ -5319,7 +5308,6 @@
                          class="gl__input "
                          data-parsley-minlength="2"
                          name="password-dupl-registr"
-                
                          data-parsley-minlength="2"
                 
                 
@@ -5516,7 +5504,6 @@
                        class="gl__input "
                        data-parsley-minlength="2"
                        name="contact-password"
-              
                        data-parsley-minlength="2"
               
               
@@ -5644,7 +5631,6 @@
                      class="gl__input "
                      data-parsley-minlength="2"
                      name="surname-payment-participation"
-            
                      data-parsley-minlength="2"
             
             
@@ -5677,7 +5663,6 @@
                      class="gl__input "
                      data-parsley-minlength="2"
                      name="name-payment-participation"
-            
                      data-parsley-minlength="2"
             
             
@@ -5710,7 +5695,6 @@
                      class="gl__input "
                      data-parsley-minlength="2"
                      name="middle-name-payment-participation"
-            
                      data-parsley-minlength="2"
             
             
@@ -5743,7 +5727,6 @@
                      class="gl__input "
                      data-parsley-minlength="2"
                      name="messenger-payment-participation"
-            
                      data-parsley-minlength="2"
             
             
@@ -5776,7 +5759,6 @@
                      class="gl__input "
                      data-parsley-minlength="2"
                      name="post-payment-participation"
-            
                      data-parsley-minlength="2"
             
             
@@ -5809,7 +5791,6 @@
                      class="gl__input "
                      data-parsley-minlength="2"
                      name="company-name-payment-participation"
-            
                      data-parsley-minlength="2"
             
             
@@ -5842,7 +5823,6 @@
                      class="gl__input "
                      data-parsley-minlength="2"
                      name="company-details-payment-participation"
-            
                      data-parsley-minlength="2"
             
             
@@ -6026,7 +6006,6 @@
                        class="gl__input "
                        data-parsley-minlength="2"
                        name="name-to-book"
-              
                        data-parsley-minlength="2"
               
               
@@ -6059,7 +6038,6 @@
                        class="gl__input "
                        data-parsley-minlength="2"
                        name="surname-to-book"
-              
                        data-parsley-minlength="2"
               
               
@@ -6092,7 +6070,6 @@
                        class="gl__input "
                        data-parsley-minlength="2"
                        name="place-work-to-book"
-              
                        data-parsley-minlength="2"
               
               
@@ -6125,7 +6102,6 @@
                        class="gl__input "
                        data-parsley-minlength="2"
                        name="email-to-book"
-              
                        data-parsley-minlength="2"
               
               
@@ -6159,7 +6135,6 @@
                        class="gl__input js-phone-input"
                        data-parsley-minlength="2"
                        name="phone-to-book"
-              
                        data-parsley-minlength="2"
               
               

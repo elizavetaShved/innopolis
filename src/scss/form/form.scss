@@ -11,7 +11,7 @@
 
   .gl__input {
     &.parsley-error {
-     @extend %input-error;
+      @extend %input-error;
     }
   }
 }
@@ -75,6 +75,29 @@
     resize: none;
     border: 2px solid transparent;
     @extend %scroll;
+  }
+
+  &.mod-search {
+    + ul {
+      background: var(--pale-secondary-color);
+      box-shadow: 0 0 1rem rgba(#0a2742, 0.1);
+      border-radius: 16px;
+      margin-top: 1rem;
+      overflow: hidden;
+      padding: .6rem 0;
+
+      li, .no_result {
+        font-size: 14px;
+        color: var(--main-color);
+        padding: 1rem;
+        cursor: pointer;
+
+        &:hover {
+          background: var(--muted-color);
+          color: white;
+        }
+      }
+    }
   }
 }
 

@@ -73,12 +73,14 @@
       </li>
       <li class="gl__input-container">
         <div class="gl__input-title mod-small">Организация</div>
-        {{> controls/select
+        {{> controls/input-main
           required=true
-          placeholder="Какую организацию Вы представляете?"
+          inputType="search"
           name="organization"
           type="account"
-          option1="Организация 1" option2="Организация 2" option3="Организация 3"
+          placeholder="Какую организацию Вы представляете?"
+          isSearch=true
+          optionsArr='["Организация 1", "Организация 2", "Еще одна организация"]'
         }}
       </li>
       <li class="gl__input-container">

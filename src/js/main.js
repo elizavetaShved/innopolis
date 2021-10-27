@@ -25,6 +25,7 @@ import { ModalCookies } from './components/modal-cookies';
 import { ContactPage } from './components/contact-page';
 import { ProgramPage } from './program-page';
 import initDropDownMenu from './functions/initDropDownMenu';
+import inputSearchInit from './functions/controlsInit/inputSearchInit';
 
 document.addEventListener('DOMContentLoaded', function () {
   // layout
@@ -70,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
   datepickerInit();
   selectInit();
   inputFileInit();
+  inputSearchInit();
 
   new ModalCookies();
 });

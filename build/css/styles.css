@@ -1918,6 +1918,22 @@ button.swiper-pagination-bullet {
     height: 15rem !important;
     resize: none;
     border: 2px solid transparent; }
+  .gl__input.mod-search + ul {
+    background: var(--pale-secondary-color);
+    -webkit-box-shadow: 0 0 1rem rgba(10, 39, 66, 0.1);
+            box-shadow: 0 0 1rem rgba(10, 39, 66, 0.1);
+    border-radius: 16px;
+    margin-top: 1rem;
+    overflow: hidden;
+    padding: .6rem 0; }
+    .gl__input.mod-search + ul li, .gl__input.mod-search + ul .no_result {
+      font-size: 14px;
+      color: var(--main-color);
+      padding: 1rem;
+      cursor: pointer; }
+      .gl__input.mod-search + ul li:hover, .gl__input.mod-search + ul .no_result:hover {
+        background: var(--muted-color);
+        color: white; }
 
 .gl__input-mark-required {
   position: absolute;
