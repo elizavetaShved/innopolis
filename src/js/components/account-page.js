@@ -40,7 +40,7 @@ export class AccountPage {
     const errorTimeElem = this.hostElem.querySelectorAll('.js-error-time');
 
     directionSelect.onchange = () => {
-      if (directionSelect.value === 'Вузы') {
+      if (directionSelect.innerText === 'Вузы') {
         universitySelectWrapper.classList.add('mod-show');
       } else {
         universitySelectWrapper.classList.remove('mod-show');
