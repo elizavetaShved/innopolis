@@ -85,6 +85,8 @@
       margin-top: 1rem;
       overflow: hidden;
       padding: .6rem 0;
+      position: absolute;
+      z-index: 3;
 
       li, .no_result {
         font-size: 14px;
@@ -92,7 +94,7 @@
         padding: 1rem;
         cursor: pointer;
 
-        &:hover {
+        &:hover, &[aria-selected=true] {
           background: var(--muted-color);
           color: white;
         }

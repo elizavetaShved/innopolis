@@ -1925,13 +1925,15 @@ button.swiper-pagination-bullet {
     border-radius: 16px;
     margin-top: 1rem;
     overflow: hidden;
-    padding: .6rem 0; }
+    padding: .6rem 0;
+    position: absolute;
+    z-index: 3; }
     .gl__input.mod-search + ul li, .gl__input.mod-search + ul .no_result {
       font-size: 14px;
       color: var(--main-color);
       padding: 1rem;
       cursor: pointer; }
-      .gl__input.mod-search + ul li:hover, .gl__input.mod-search + ul .no_result:hover {
+      .gl__input.mod-search + ul li:hover, .gl__input.mod-search + ul li[aria-selected=true], .gl__input.mod-search + ul .no_result:hover, .gl__input.mod-search + ul .no_result[aria-selected=true] {
         background: var(--muted-color);
         color: white; }
 
