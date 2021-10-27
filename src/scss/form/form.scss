@@ -22,6 +22,10 @@
   grid-gap: 1.6rem;
   align-items: center;
 
+  &.mot-top {
+    z-index: 100;
+  }
+
   @include for-md-down {
     grid-template-columns: 1fr;
     grid-gap: .8rem;

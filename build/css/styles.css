@@ -1878,6 +1878,8 @@ button.swiper-pagination-bullet {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  .gl__input-container.mot-top {
+    z-index: 100; }
   @media screen and (max-width: 768px) {
     .gl__input-container {
       grid-template-columns: 1fr;
