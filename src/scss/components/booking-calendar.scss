@@ -123,6 +123,12 @@
 .booking-calendar__tbody-cell {
   padding: 1.2rem 1rem;
   text-align: start;
+  min-width: 21rem;
+
+  @include for-md-down {
+    min-width: auto;
+    padding-right: 4rem;
+  }
 
   &:first-child {
     padding-left: 2.2rem;

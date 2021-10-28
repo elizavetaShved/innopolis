@@ -4434,7 +4434,11 @@ html.is-locked {
 
 .hero-block__description {
   font-size: 1.4rem;
-  color: #fff; }
+  color: #fff;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  background: #12152a; }
 
 .hero-block__information {
   display: -ms-flexbox;
@@ -5444,7 +5448,7 @@ html.is-locked {
     top: 0;
     bottom: 0;
     margin-left: -18rem;
-    background: url("../../img/old/img/about-bg.svg") 0 0 no-repeat; }
+    background: url("../img/old/img/about-bg.svg") 0 0 no-repeat; }
   .about-block__description {
     margin-bottom: 4rem;
     font-size: 2.4rem;
@@ -5474,7 +5478,8 @@ html.is-locked {
     right: -999.9rem;
     bottom: 0;
     margin-left: 37.7rem;
-    height: 48.4rem; }
+    height: 47rem;
+    background-size: contain; }
   .hero-block__inner {
     padding-top: 4rem;
     padding-bottom: 14rem; }
@@ -9072,7 +9077,7 @@ html.remodal-is-locked {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  z-index: 2; }
+  z-index: 150; }
   .modal-cookies__wrapper:not(.mod-show) {
     opacity: 0;
     pointer-events: none; }
@@ -9191,7 +9196,12 @@ html.remodal-is-locked {
 
 .booking-calendar__tbody-cell {
   padding: 1.2rem 1rem;
-  text-align: start; }
+  text-align: start;
+  min-width: 21rem; }
+  @media screen and (max-width: 768px) {
+    .booking-calendar__tbody-cell {
+      min-width: auto;
+      padding-right: 4rem; } }
   .booking-calendar__tbody-cell:first-child {
     padding-left: 2.2rem; }
   .booking-calendar__tbody-cell:last-child {

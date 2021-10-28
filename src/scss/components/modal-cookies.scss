@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  z-index: 2;
+  z-index: 150;
 
   &:not(.mod-show) {
     opacity: 0;

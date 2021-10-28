@@ -754,6 +754,8 @@ html.is-locked {
 .hero-block__description {
   font-size: 1.4rem;
   color: #fff;
+  height: min-content;
+  background: #12152a;
 }
 
 .hero-block__information {
@@ -1952,7 +1954,7 @@ html.is-locked {
     top: 0;
     bottom: 0;
     margin-left: -18rem;
-    background: url("../../img/old/img/about-bg.svg") 0 0 no-repeat;
+    background: url("../img/old/img/about-bg.svg") 0 0 no-repeat;
   }
 
   .about-block__description {
@@ -1999,7 +2001,8 @@ html.is-locked {
     right: -999.9rem;
     bottom: 0;
     margin-left: 37.7rem;
-    height: 48.4rem;
+    height: 47rem;
+    background-size: contain;
   }
 
   .hero-block__inner {
