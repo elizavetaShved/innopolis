@@ -26,6 +26,7 @@ import { ContactPage } from './components/contact-page';
 import { ProgramPage } from './program-page';
 import initDropDownMenu from './functions/initDropDownMenu';
 import inputSearchInit from './functions/controlsInit/inputSearchInit';
+import timeMask from './functions/timeMask';
 
 document.addEventListener('DOMContentLoaded', function () {
   // layout
@@ -66,6 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // маски
   phoneMask();
   dateMask();
+  timeMask();
 
   // контролы
   datepickerInit();

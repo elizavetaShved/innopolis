@@ -761,81 +761,64 @@
               </li>
               <li class="gl__input-container">
                 <div class="gl__input-title mod-small">Время приезда</div>
-                <div class="gl__select-container mod-forked">
+                <!-- 1) isPassword / isContacts - необходимы для js -->
+                <!-- 2) inputType - html type input -->
+                <!-- 3) required (true/false) - обязательно для заполнения -->
+                <!-- 4) name - name input -->
+                <!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+                <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+                <!-- 7) id - обычный id, например для первого пароля-->
+                <!-- 8) parsleyType - для валидации (н-р email) -->
+                <!-- 9) minLength - максимально допустимое к-во символов -->
+                <!-- 10) maxLength - максимально допустимое к-во символов -->
                 
-                  <label class="gl__select-wrapper">
-                    <select class="gl__select js-select" placeholder value="" name="08-account">
-                      <option class="gl__select-option" value="">08</option>
-                      <option class="gl__select-option" value="08">08</option>
-                      <option class="gl__select-option" value="09">09</option>
-                      <option class="gl__select-option" value="10">10</option>
-                      <option class="gl__select-option" value="11">11</option>
-                      <option class="gl__select-option" value="12">12</option>
-                      <option class="gl__select-option" value="13">13</option>
-                      <option class="gl__select-option" value="14">14</option>
-                      <option class="gl__select-option" value="15">15</option>
-                      <option class="gl__select-option" value="16">16</option>
-                      <option class="gl__select-option" value="17">17</option>
-                      <option class="gl__select-option" value="18">18</option>
-                    </select>
-                  </label>
+                <label class="gl__input-wrapper  ">
+                  <input type="account-calendar"
+                         class="gl__input js-time-input"
+                         data-parsley-minlength="2"
+                         name="arrival-time-account"
+                         data-parsley-minlength="2"
                 
-                  <label class="gl__select-wrapper">
-                    <select class="gl__select js-select" placeholder value="" name="00-account">
-                      <option class="gl__select-option" value="">00</option>
-                      <option class="gl__select-option" value="00">00</option>
-                      <option class="gl__select-option" value="10">10</option>
-                      <option class="gl__select-option" value="20">20</option>
-                      <option class="gl__select-option" value="30">30</option>
-                      <option class="gl__select-option" value="40">40</option>
-                      <option class="gl__select-option" value="50">50</option>
-                      
-                      
-                      
-                      
-                      
-                    </select>
-                  </label>
-                </div>
+                
+                
+                
+                         placeholder="с 08:00 по 18:00"
+                
+                
+                  >
+                
+                </label>
               </li>
               <li class="gl__input-container">
                 <div class="gl__input-title mod-small">Время отъезда</div>
-                <div class="gl__select-container mod-forked">
+                <!-- 1) isPassword / isContacts - необходимы для js -->
+                <!-- 2) inputType - html type input -->
+                <!-- 3) required (true/false) - обязательно для заполнения -->
+                <!-- 4) name - name input -->
+                <!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+                <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+                <!-- 7) id - обычный id, например для первого пароля-->
+                <!-- 8) parsleyType - для валидации (н-р email) -->
+                <!-- 9) minLength - максимально допустимое к-во символов -->
+                <!-- 10) maxLength - максимально допустимое к-во символов -->
                 
-                  <label class="gl__select-wrapper">
-                    <select class="gl__select js-select" placeholder value="" name="08-account">
-                      <option class="gl__select-option" value="">08</option>
-                      <option class="gl__select-option" value="08">08</option>
-                      <option class="gl__select-option" value="09">09</option>
-                      <option class="gl__select-option" value="10">10</option>
-                      <option class="gl__select-option" value="11">11</option>
-                      <option class="gl__select-option" value="12">12</option>
-                      <option class="gl__select-option" value="13">13</option>
-                      <option class="gl__select-option" value="14">14</option>
-                      <option class="gl__select-option" value="15">15</option>
-                      <option class="gl__select-option" value="16">16</option>
-                      <option class="gl__select-option" value="17">17</option>
-                      <option class="gl__select-option" value="18">18</option>
-                    </select>
-                  </label>
+                <label class="gl__input-wrapper  ">
+                  <input type="account-calendar"
+                         class="gl__input js-time-input"
+                         data-parsley-minlength="2"
+                         name="arrival-time-"
+                         data-parsley-minlength="2"
                 
-                  <label class="gl__select-wrapper">
-                    <select class="gl__select js-select" placeholder value="" name="00-account">
-                      <option class="gl__select-option" value="">00</option>
-                      <option class="gl__select-option" value="00">00</option>
-                      <option class="gl__select-option" value="10">10</option>
-                      <option class="gl__select-option" value="20">20</option>
-                      <option class="gl__select-option" value="30">30</option>
-                      <option class="gl__select-option" value="40">40</option>
-                      <option class="gl__select-option" value="50">50</option>
-                      
-                      
-                      
-                      
-                      
-                    </select>
-                  </label>
-                </div>
+                
+                
+                
+                         placeholder="с 08:00 по 18:00"
+                
+                
+                         data-parsley-type="text"
+                  >
+                
+                </label>
               </li>
               <li class="gl__input-container">
                 <div class="gl__input-title mod-small">Место прибытия</div>
@@ -1311,42 +1294,34 @@
                 </div>
               </div>
               <div class="booking-calendar__form-item mod-forked-select">
-                <div class="gl__select-container mod-forked">
+                <!-- 1) isPassword / isContacts - необходимы для js -->
+                <!-- 2) inputType - html type input -->
+                <!-- 3) required (true/false) - обязательно для заполнения -->
+                <!-- 4) name - name input -->
+                <!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+                <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+                <!-- 7) id - обычный id, например для первого пароля-->
+                <!-- 8) parsleyType - для валидации (н-р email) -->
+                <!-- 9) minLength - максимально допустимое к-во символов -->
+                <!-- 10) maxLength - максимально допустимое к-во символов -->
                 
-                  <label class="gl__select-wrapper">
-                    <select class="gl__select js-select" placeholder value="" name="с 10:00-account-calendar">
-                      <option class="gl__select-option" value="">с 10:00</option>
-                      <option class="gl__select-option" value="с 10:00">с 10:00</option>
-                      <option class="gl__select-option" value="с 11:00">с 11:00</option>
-                      <option class="gl__select-option" value="с 12:00">с 12:00</option>
-                      <option class="gl__select-option" value="с 13:00">с 13:00</option>
-                      <option class="gl__select-option" value="с 14:00">с 14:00</option>
-                      <option class="gl__select-option" value="с 15:00">с 15:00</option>
-                      <option class="gl__select-option" value="с 16:00">с 16:00</option>
-                      <option class="gl__select-option" value="с 17:00">с 17:00</option>
-                      
-                      
-                      
-                    </select>
-                  </label>
+                <label class="gl__input-wrapper  ">
+                  <input type="account-calendar"
+                         class="gl__input js-time-input"
+                         data-parsley-minlength="2"
+                         name="arrival-time-"
+                         data-parsley-minlength="2"
                 
-                  <label class="gl__select-wrapper">
-                    <select class="gl__select js-select" placeholder value="" name="по 18:00-account-calendar">
-                      <option class="gl__select-option" value="">по 18:00</option>
-                      <option class="gl__select-option" value="по 10:00">по 10:00</option>
-                      <option class="gl__select-option" value="по 11:00">по 11:00</option>
-                      <option class="gl__select-option" value="по 12:00">по 12:00</option>
-                      <option class="gl__select-option" value="по 13:00">по 13:00</option>
-                      <option class="gl__select-option" value="по 14:00">по 14:00</option>
-                      <option class="gl__select-option" value="по 15:00">по 15:00</option>
-                      <option class="gl__select-option" value="по 16:00">по 16:00</option>
-                      <option class="gl__select-option" value="по 17:00">по 17:00</option>
-                      
-                      
-                      
-                    </select>
-                  </label>
-                </div>
+                
+                
+                
+                         placeholder="с 08:00 по 18:00"
+                
+                
+                         data-parsley-type="text"
+                  >
+                
+                </label>
               </div>
               <div class="booking-calendar__form-item">
                 <div class="gl__select-width-checkbox-wrapper gl__input-wrapper">

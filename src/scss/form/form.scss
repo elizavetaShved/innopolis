@@ -73,7 +73,7 @@
   color: var(--main-color) !important;
   background-color: var(--pale-secondary-color) !important;
   height: auto !important;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   border-radius: 3rem !important;
 
   @include for-bg-down {

@@ -3,37 +3,19 @@
     <span class="gl__input-mark-required"></span>
   {{/if}}
 
-  <label class="gl__select-wrapper">
-    <select class="gl__select js-select" placeholder value="" name="{{ firstPlaceholder }}-{{type}}">
-      {{#if firstPlaceholder}}<option class="gl__select-option" value="">{{ firstPlaceholder }}</option>{{/if}}
-      {{#if firstOption1}}<option class="gl__select-option" value="{{ firstOption1 }}">{{ firstOption1 }}</option>{{/if}}
-      {{#if firstOption2}}<option class="gl__select-option" value="{{ firstOption2 }}">{{ firstOption2 }}</option>{{/if}}
-      {{#if firstOption3}}<option class="gl__select-option" value="{{ firstOption3 }}">{{ firstOption3 }}</option>{{/if}}
-      {{#if firstOption4}}<option class="gl__select-option" value="{{ firstOption4 }}">{{ firstOption4 }}</option>{{/if}}
-      {{#if firstOption5}}<option class="gl__select-option" value="{{ firstOption5 }}">{{ firstOption5 }}</option>{{/if}}
-      {{#if firstOption6}}<option class="gl__select-option" value="{{ firstOption6 }}">{{ firstOption6 }}</option>{{/if}}
-      {{#if firstOption7}}<option class="gl__select-option" value="{{ firstOption7 }}">{{ firstOption7 }}</option>{{/if}}
-      {{#if firstOption8}}<option class="gl__select-option" value="{{ firstOption8 }}">{{ firstOption8 }}</option>{{/if}}
-      {{#if firstOption9}}<option class="gl__select-option" value="{{ firstOption9 }}">{{ firstOption9 }}</option>{{/if}}
-      {{#if firstOption10}}<option class="gl__select-option" value="{{ firstOption10 }}">{{ firstOption10 }}</option>{{/if}}
-      {{#if firstOption11}}<option class="gl__select-option" value="{{ firstOption11 }}">{{ firstOption11 }}</option>{{/if}}
-    </select>
-  </label>
+  {{> controls/input-main
+    inputType=type
+    required=required
+    name=firstName
+    placeholder=firstPlaceholder
+    parsleyType="text"
+  }}
 
-  <label class="gl__select-wrapper">
-    <select class="gl__select js-select" placeholder value="" name="{{ secondPlaceholder }}-{{type}}">
-      {{#if secondPlaceholder}}<option class="gl__select-option" value="">{{ secondPlaceholder }}</option>{{/if}}
-      {{#if secondOption1}}<option class="gl__select-option" value="{{ secondOption1 }}">{{ secondOption1 }}</option>{{/if}}
-      {{#if secondOption2}}<option class="gl__select-option" value="{{ secondOption2 }}">{{ secondOption2 }}</option>{{/if}}
-      {{#if secondOption3}}<option class="gl__select-option" value="{{ secondOption3 }}">{{ secondOption3 }}</option>{{/if}}
-      {{#if secondOption4}}<option class="gl__select-option" value="{{ secondOption4 }}">{{ secondOption4 }}</option>{{/if}}
-      {{#if secondOption5}}<option class="gl__select-option" value="{{ secondOption5 }}">{{ secondOption5 }}</option>{{/if}}
-      {{#if secondOption6}}<option class="gl__select-option" value="{{ secondOption6 }}">{{ secondOption6 }}</option>{{/if}}
-      {{#if secondOption7}}<option class="gl__select-option" value="{{ secondOption7 }}">{{ secondOption7 }}</option>{{/if}}
-      {{#if secondOption8}}<option class="gl__select-option" value="{{ secondOption8 }}">{{ secondOption8 }}</option>{{/if}}
-      {{#if secondOption9}}<option class="gl__select-option" value="{{ secondOption9 }}">{{ secondOption9 }}</option>{{/if}}
-      {{#if secondOption10}}<option class="gl__select-option" value="{{ secondOption10 }}">{{ secondOption10 }}</option>{{/if}}
-      {{#if secondOption11}}<option class="gl__select-option" value="{{ secondOption11 }}">{{ secondOption11 }}</option>{{/if}}
-    </select>
-  </label>
+  {{> controls/input-main
+    inputType=type
+    required=required
+    name=secondName
+    placeholder=secondPlaceholder
+    parsleyType="text"
+  }}
 </div>

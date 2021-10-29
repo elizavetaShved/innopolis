@@ -30,18 +30,7 @@
   }
 
   &.mod-forked-select {
-    width: min-content;
-
-    @include for-bg-up {
-      .choices__inner {
-        padding: 1.4rem !important;
-        padding-right: 3rem !important;
-      }
-    }
-
-    @include for-md-down {
-      width: 100%;
-    }
+    width: 16rem;
   }
 
   & + & {

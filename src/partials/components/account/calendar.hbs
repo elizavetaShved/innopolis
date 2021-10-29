@@ -109,14 +109,12 @@
         }}
       </div>
       <div class="booking-calendar__form-item mod-forked-select">
-        {{> controls/forked-select
-          firstPlaceholder="с 10:00"
-          secondPlaceholder="по 18:00"
-          firstName="arrival-from"
-          secondName="arrival-to"
-          type="account-calendar"
-          firstOption1="с 10:00" firstOption2="с 11:00" firstOption3="с 12:00" firstOption4="с 13:00" firstOption5="с 14:00" firstOption6="с 15:00" firstOption7="с 16:00" firstOption8="с 17:00"
-          secondOption1="по 10:00" secondOption2="по 11:00" secondOption3="по 12:00" secondOption4="по 13:00" secondOption5="по 14:00" secondOption6="по 15:00" secondOption7="по 16:00" secondOption8="по 17:00"
+        {{> controls/input-main
+          inputType="account-calendar"
+          name="arrival-time"
+          placeholder="с 08:00 по 18:00"
+          parsleyType="text"
+          isTime=true
         }}
       </div>
       <div class="booking-calendar__form-item">

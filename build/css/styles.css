@@ -1918,7 +1918,7 @@ button.swiper-pagination-bullet {
   color: var(--main-color) !important;
   background-color: var(--pale-secondary-color) !important;
   height: auto !important;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   border-radius: 3rem !important; }
   @media screen and (max-width: 1024px) {
     .gl__input {
@@ -2267,21 +2267,6 @@ button.swiper-pagination-bullet {
 .gl__select-container {
   display: inline-block;
   position: relative; }
-  .gl__select-container.mod-forked {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
-    .gl__select-container.mod-forked .gl__select-wrapper:nth-child(1) {
-      margin-right: .2rem; }
-      .gl__select-container.mod-forked .gl__select-wrapper:nth-child(1) .choices__inner {
-        border-radius: 30px 0 0 30px !important; }
-    .gl__select-container.mod-forked .gl__select-wrapper:nth-child(2) .choices__inner {
-      border-radius: 0 30px 30px 0 !important; }
-    .gl__select-container.mod-forked .choices__inner, .gl__select-container.mod-forked .choices__item {
-      white-space: nowrap; }
   .gl__select-container.mod-filter-select {
     margin-left: 1rem;
     margin-bottom: 1rem; }
@@ -9217,16 +9202,7 @@ html.remodal-is-locked {
   .booking-calendar__form-item .gl__select-container {
     width: 100%; }
   .booking-calendar__form-item.mod-forked-select {
-    width: -webkit-min-content;
-    width: -moz-min-content;
-    width: min-content; }
-    @media screen and (min-width: 1025px) {
-      .booking-calendar__form-item.mod-forked-select .choices__inner {
-        padding: 1.4rem !important;
-        padding-right: 3rem !important; } }
-    @media screen and (max-width: 768px) {
-      .booking-calendar__form-item.mod-forked-select {
-        width: 100%; } }
+    width: 16rem; }
   .booking-calendar__form-item + .booking-calendar__form-item {
     margin-left: 1rem; }
     @media screen and (max-width: 768px) {
