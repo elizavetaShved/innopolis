@@ -2340,6 +2340,12 @@ button.swiper-pagination-bullet {
       visibility: visible;
       -webkit-transition: opacity 0.3s, visibility 0.3s;
       transition: opacity 0.3s, visibility 0.3s; }
+    .gl__select-wrapper .choices__list--dropdown .choices__item {
+      padding: 1rem 2.2rem;
+      font-size: 1.4rem; }
+      @media screen and (max-width: 1024px) {
+        .gl__select-wrapper .choices__list--dropdown .choices__item {
+          padding: 1rem 2rem; } }
   .gl__select-wrapper .choices__list--dropdown .choices__item--selectable.is-highlighted {
     background: var(--muted-color);
     color: white; }

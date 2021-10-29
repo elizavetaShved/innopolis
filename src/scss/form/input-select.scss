@@ -102,6 +102,15 @@
       visibility: visible;
       transition: opacity 0.3s, visibility 0.3s;
     }
+
+    .choices__item {
+      padding: 1rem 2.2rem;
+      font-size: 1.4rem;
+
+      @include for-bg-down {
+        padding: 1rem 2rem;
+      }
+    }
   }
 
   .choices__list--dropdown .choices__item--selectable.is-highlighted {
