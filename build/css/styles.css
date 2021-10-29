@@ -1784,7 +1784,7 @@ button.swiper-pagination-bullet {
   transition: 400ms opacity; }
   .mod-show.modal, .mod-show.calendar__modal-filter {
     opacity: 1;
-    z-index: 51;
+    z-index: 1000;
     top: 0;
     left: 0; }
 
@@ -2617,7 +2617,7 @@ button.swiper-pagination-bullet {
   transition: 400ms opacity; }
   .mod-show.modal, .mod-show.calendar__modal-filter {
     opacity: 1;
-    z-index: 51;
+    z-index: 1000;
     top: 0;
     left: 0; }
 
@@ -8686,7 +8686,7 @@ html.remodal-is-locked {
   transition: 400ms opacity; }
   .mod-show.modal, .mod-show.calendar__modal-filter {
     opacity: 1;
-    z-index: 51;
+    z-index: 1000;
     top: 0;
     left: 0; }
 
