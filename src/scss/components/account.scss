@@ -197,6 +197,11 @@
 
 .account__component {
   &:not(.mod-show) {
-    display: none;
+    position: absolute;
+    z-index: -999;
+    top: -9999px;
+    left: -9999px;
+    pointer-events: none;
+    opacity: 0;
   }
 }

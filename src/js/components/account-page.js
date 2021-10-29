@@ -48,6 +48,8 @@ export class AccountPage {
     const openModalBtns = this.hostElem.querySelectorAll('.js-open-modal-to-book');
     const errorTimeElem = this.hostElem.querySelectorAll('.js-error-time');
 
+    const btnsLocation = this.hostElem.querySelectorAll('.js-open-modal-location');
+
     this.checkDirections(false);
 
     this.directionSelect.onchange = () => {
@@ -55,10 +57,10 @@ export class AccountPage {
     }
 
     menuRadioValue.forEach((radioElem, index) => {
-      this. changeComponent(radioElem, index);
+      this.changeComponent(radioElem, index);
 
       radioElem.onchange = () => {
-        this. changeComponent(radioElem, index);
+        this.changeComponent(radioElem, index);
       }
     })
 
@@ -130,6 +132,15 @@ export class AccountPage {
       }
     })
 
+    btnsLocation.forEach(btn => {
+      btn.onclick = () => {
+        const modal = new Modal('location', true);
+        modal.isOpen();
+        const modalLocationTitle = modal.hostElem.querySelector('.js-modal-location-title');
+        modalLocationTitle.innerText = `${ btn.getAttribute('data-auditorium') }`;
+      }
+    })
+
     window.addEventListener('click', (e) => {
       let isClickForSlotContainer = false;
       let isClickForBtnOpen = false;
@@ -161,10 +172,8 @@ export class AccountPage {
   }
 
   checkDirections(isChange) {
-
     if (this.directionSelect.innerText === 'Вузы') {
       this.universitySelectWrapper.classList.add('mod-show');
-      console.log(this.universitySelectWrapper)
       // добавить валидацию для нового селекта
       this.universityMarkRequiredElem = document.createElement('div');
       this.universityMarkRequiredElem.classList.add('gl__input-mark-required');

@@ -177,6 +177,10 @@ body {
       transform: rotate(-180deg);
     }
   }
+
+  &.mod-hide {
+    display: none;
+  }
 }
 
 .gl__drop-menu-icon {

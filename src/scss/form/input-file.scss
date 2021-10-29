@@ -14,6 +14,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &.mod-filled {
+      .gl__input {
+        background-color: #f0f9ee !important;
+        border-color: #b3dfac;
+      }
+
+      .gl__input-icon {
+        display: none;
+      }
+
+      .gl__file-btn-clear {
+        display: flex;
+      }
+    }
   }
 }
 
@@ -25,6 +40,22 @@
     color: rgba(18, 21, 42, .5) !important;
     border: 1px dashed #9681F2;
   }
+}
+
+.gl__file-btn-clear {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2.4rem;
+  align-items: center;
+  z-index: 1;
+}
+
+.gl__file-input-icon-clear {
+  fill: var(--btn-color);
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 .gl__input-file {

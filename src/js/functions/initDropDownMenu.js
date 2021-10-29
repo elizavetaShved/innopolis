@@ -11,6 +11,7 @@ export default function initDropDownMenu() {
   const linksTitleElements = Array.from(document.querySelectorAll('.js-drop-menu-btn'));
   const menuContainerElements = Array.from(document.querySelectorAll('.js-drop-menu-container'));
   const menuElements = Array.from(document.querySelectorAll('.js-drop-menu'));
+  const accountMenuRadio = document.querySelectorAll('.account__menu-radio');
 
   const onClose = (btnElem, menuContainerElem) => {
     btnElem.classList.remove('mod-open');
@@ -36,23 +37,32 @@ export default function initDropDownMenu() {
     menuContainerElem.style.maxHeight = `${ heightContent }px`;
   }
 
-  linksTitleElements.forEach((btn, i) => {
-    const customMinHeightMenu = menuElements[i].getAttribute('data-drop-menu-min');
-    if (!customMinHeightMenu || (customMinHeightMenu && menuElements[i].clientHeight > customMinHeightMenu)) {
-      btn.onclick = () => {
-        if (btn.className.includes('mod-open')) {
-          onClose(btn, menuContainerElements[i]);
-        } else {
-          if (!btn.className.includes('js-drop-menu-leave-open')) {
-            linksTitleElements.map((elem, idx) => {
-              onClose(elem, menuContainerElements[idx]);
-            });
+  const checkDropMenu = () => {
+    linksTitleElements.forEach((btn, i) => {
+      const customMinHeightMenu = menuElements[i].getAttribute('data-drop-menu-min');
+      if (!customMinHeightMenu || (customMinHeightMenu && menuElements[i].clientHeight > +customMinHeightMenu)) {
+        btn.classList.remove('mod-hide');
+        btn.onclick = () => {
+          if (btn.className.includes('mod-open')) {
+            onClose(btn, menuContainerElements[i]);
+          } else {
+            if (!btn.className.includes('js-drop-menu-leave-open')) {
+              linksTitleElements.map((elem, idx) => {
+                onClose(elem, menuContainerElements[idx]);
+              });
+            }
+            onOpen(btn, menuContainerElements[i], menuElements[i]);
           }
-          onOpen(btn, menuContainerElements[i], menuElements[i]);
         }
+      } else {
+        btn.classList.add('mod-hide');
       }
-    } else {
-      btn.classList.add('mod-hide');
-    }
-  });
+    });
+  }
+
+  checkDropMenu();
+
+  accountMenuRadio.forEach(input => {
+    input.addEventListener('change', checkDropMenu);
+  })
 }

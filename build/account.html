@@ -492,7 +492,7 @@
                 </label>
               </li>
               <li class="gl__input-container">
-                <div class="gl__input-title mod-small">ПЦР-тест</div>
+                <div class="gl__input-title mod-small">ПЦР-тест <span class="mark">*</span></div>
                 <label class="gl__input-wrapper mod-file">
                     <span class="gl__input-mark-required"></span>
                   <input type="file"
@@ -501,6 +501,12 @@
                   >
                   <span class="gl__input mod-file js-input-file-content">PDF файл, не более 2 мб</span>
                   <img src="img/form/download.svg" alt="" class="gl__input-icon">
+                
+                  <button type="button" class="gl__file-btn-clear js-btn-clear-file">
+                    <svg width="12" height="12" aria-hidden="true" class="gl__file-input-icon-clear">
+                      <use xlink:href="#close"></use>
+                    </svg>
+                  </button>
                 </label>
               </li>
               <li class="gl__input-container">
@@ -979,6 +985,17 @@
                         4 декабря
                       </span>
                   </label>
+                  <label class="gl__radio-checkbox-input-wrapper mod-inline mod-for-caption">
+                    <input type="checkbox"
+                           class="gl__radio-checkbox-input"
+                           name="date-transfer-account"
+                    >
+                  
+                    <span class="gl__radio-checkbox-input-content"></span>
+                      <span class="gl__radio-checkbox-input-text">
+                        Трансфер не нужен
+                      </span>
+                  </label>
                 </div>
               </li>
               <li class="profile__form-radio-container">
@@ -1017,6 +1034,17 @@
                     <span class="gl__radio-checkbox-input-content"></span>
                       <span class="gl__radio-checkbox-input-text">
                         4 декабря
+                      </span>
+                  </label>
+                  <label class="gl__radio-checkbox-input-wrapper mod-inline mod-for-caption">
+                    <input type="checkbox"
+                           class="gl__radio-checkbox-input"
+                           name="date-transfer-2-account"
+                    >
+                  
+                    <span class="gl__radio-checkbox-input-content"></span>
+                      <span class="gl__radio-checkbox-input-text">
+                        Трансфер не нужен
                       </span>
                   </label>
                 </div>
@@ -1188,9 +1216,9 @@
                     <div class="booking-calendar__body-cell-title">
                       Аудитория 404
                     </div>
-                    <a href="" class="booking-calendar__body-cell-control-small">
+                    <button class="booking-calendar__body-cell-control-small js-open-modal-location" data-auditorium="Аудитория 404">
                       Локация на карте
-                    </a>
+                    </button>
                   </th>
                   <th class="booking-calendar__tbody-cell">
                     <div class="booking-calendar__body-cell-text">
@@ -1231,7 +1259,7 @@
                     </div>
         
                     <button type="button"
-                            class="booking-calendar__body-cell-control-small gl__drop-menu js-drop-menu-btn gl__drop-menu-btn">
+                            class="booking-calendar__body-cell-control-small js-open-modal-location gl__drop-menu js-drop-menu-btn gl__drop-menu-btn">
                       <span class="gl__drop-menu-btn-content mod-show js-drop-menu-btn-content">Все оборудование</span>
                       <span class="gl__drop-menu-btn-content js-drop-menu-btn-content">Скрыть</span>
                     </button>
@@ -1467,9 +1495,9 @@
                       <div class="booking-calendar__body-cell-title">
                         Аудитория 201
                       </div>
-                      <a href="" class="booking-calendar__body-cell-control-small">
+                      <button class="booking-calendar__body-cell-control-small js-open-modal-location" data-auditorium="Аудитория 201">
                         Локация на карте
-                      </a>
+                      </button>
                     </th>
                     <th class="booking-calendar__tbody-cell">
                       <div class="booking-calendar__body-cell-text">
@@ -1496,6 +1524,9 @@
                           <li class="booking-calendar__tbody-cell-mark-item">
                             Микрофон
                           </li>
+                          <li class="booking-calendar__tbody-cell-mark-item">
+                            Микрофон
+                          </li>
                             <li class="booking-calendar__tbody-cell-mark-item">
                               Магнитно-маркерная доска
                             </li>
@@ -1503,7 +1534,7 @@
                       </div>
         
                       <button type="button"
-                              class="booking-calendar__body-cell-control-small gl__drop-menu js-drop-menu-btn gl__drop-menu-btn">
+                              class="booking-calendar__body-cell-control-small js-open-modal-location gl__drop-menu js-drop-menu-btn gl__drop-menu-btn">
                         <span class="gl__drop-menu-btn-content mod-show js-drop-menu-btn-content">Все оборудование</span>
                         <span class="gl__drop-menu-btn-content js-drop-menu-btn-content">Скрыть</span>
                       </button>
@@ -1799,9 +1830,9 @@
                       <div class="booking-calendar__body-cell-title">
                         Аудитория 304
                       </div>
-                      <a href="" class="booking-calendar__body-cell-control-small">
+                      <button class="booking-calendar__body-cell-control-small js-open-modal-location" data-auditorium="Аудитория 304">
                         Локация на карте
-                      </a>
+                      </button>
                     </th>
                     <th class="booking-calendar__tbody-cell">
                       <div class="booking-calendar__body-cell-text">
@@ -1828,11 +1859,14 @@
                           <li class="booking-calendar__tbody-cell-mark-item">
                             Микрофон
                           </li>
+                          <li class="booking-calendar__tbody-cell-mark-item">
+                            Микрофон
+                          </li>
                         </ul>
                       </div>
         
                       <button type="button"
-                              class="booking-calendar__body-cell-control-small gl__drop-menu js-drop-menu-btn gl__drop-menu-btn">
+                              class="booking-calendar__body-cell-control-small js-open-modal-location gl__drop-menu js-drop-menu-btn gl__drop-menu-btn">
                         <span class="gl__drop-menu-btn-content mod-show js-drop-menu-btn-content">Все оборудование</span>
                         <span class="gl__drop-menu-btn-content js-drop-menu-btn-content">Скрыть</span>
                       </button>
@@ -2128,9 +2162,9 @@
                       <div class="booking-calendar__body-cell-title">
                         Аудитория 5
                       </div>
-                      <a href="" class="booking-calendar__body-cell-control-small">
+                      <button class="booking-calendar__body-cell-control-small js-open-modal-location" data-auditorium="Аудитория 5">
                         Локация на карте
-                      </a>
+                      </button>
                     </th>
                     <th class="booking-calendar__tbody-cell">
                       <div class="booking-calendar__body-cell-text">
@@ -2157,11 +2191,14 @@
                           <li class="booking-calendar__tbody-cell-mark-item">
                             Микрофон
                           </li>
+                          <li class="booking-calendar__tbody-cell-mark-item">
+                            Микрофон
+                          </li>
                         </ul>
                       </div>
         
                       <button type="button"
-                              class="booking-calendar__body-cell-control-small gl__drop-menu js-drop-menu-btn gl__drop-menu-btn">
+                              class="booking-calendar__body-cell-control-small js-open-modal-location gl__drop-menu js-drop-menu-btn gl__drop-menu-btn">
                         <span class="gl__drop-menu-btn-content mod-show js-drop-menu-btn-content">Все оборудование</span>
                         <span class="gl__drop-menu-btn-content js-drop-menu-btn-content">Скрыть</span>
                       </button>
@@ -2457,9 +2494,9 @@
                       <div class="booking-calendar__body-cell-title">
                         Аудитория 222
                       </div>
-                      <a href="" class="booking-calendar__body-cell-control-small">
+                      <button class="booking-calendar__body-cell-control-small js-open-modal-location" data-auditorium="Аудитория 222">
                         Локация на карте
-                      </a>
+                      </button>
                     </th>
                     <th class="booking-calendar__tbody-cell">
                       <div class="booking-calendar__body-cell-text">
@@ -2486,11 +2523,14 @@
                           <li class="booking-calendar__tbody-cell-mark-item">
                             Микрофон
                           </li>
+                          <li class="booking-calendar__tbody-cell-mark-item">
+                            Микрофон
+                          </li>
                         </ul>
                       </div>
         
                       <button type="button"
-                              class="booking-calendar__body-cell-control-small gl__drop-menu js-drop-menu-btn gl__drop-menu-btn">
+                              class="booking-calendar__body-cell-control-small js-open-modal-location gl__drop-menu js-drop-menu-btn gl__drop-menu-btn">
                         <span class="gl__drop-menu-btn-content mod-show js-drop-menu-btn-content">Все оборудование</span>
                         <span class="gl__drop-menu-btn-content js-drop-menu-btn-content">Скрыть</span>
                       </button>
@@ -2786,9 +2826,9 @@
                       <div class="booking-calendar__body-cell-title">
                         Аудитория 121
                       </div>
-                      <a href="" class="booking-calendar__body-cell-control-small">
+                      <button class="booking-calendar__body-cell-control-small js-open-modal-location" data-auditorium="Аудитория 121">
                         Локация на карте
-                      </a>
+                      </button>
                     </th>
                     <th class="booking-calendar__tbody-cell">
                       <div class="booking-calendar__body-cell-text">
@@ -2815,11 +2855,14 @@
                           <li class="booking-calendar__tbody-cell-mark-item">
                             Микрофон
                           </li>
+                          <li class="booking-calendar__tbody-cell-mark-item">
+                            Микрофон
+                          </li>
                         </ul>
                       </div>
         
                       <button type="button"
-                              class="booking-calendar__body-cell-control-small gl__drop-menu js-drop-menu-btn gl__drop-menu-btn">
+                              class="booking-calendar__body-cell-control-small js-open-modal-location gl__drop-menu js-drop-menu-btn gl__drop-menu-btn">
                         <span class="gl__drop-menu-btn-content mod-show js-drop-menu-btn-content">Все оборудование</span>
                         <span class="gl__drop-menu-btn-content js-drop-menu-btn-content">Скрыть</span>
                       </button>
@@ -3115,9 +3158,9 @@
                       <div class="booking-calendar__body-cell-title">
                         Аудитория 201
                       </div>
-                      <a href="" class="booking-calendar__body-cell-control-small">
+                      <button class="booking-calendar__body-cell-control-small js-open-modal-location" data-auditorium="Аудитория 201">
                         Локация на карте
-                      </a>
+                      </button>
                     </th>
                     <th class="booking-calendar__tbody-cell">
                       <div class="booking-calendar__body-cell-text">
@@ -3144,11 +3187,14 @@
                           <li class="booking-calendar__tbody-cell-mark-item">
                             Микрофон
                           </li>
+                          <li class="booking-calendar__tbody-cell-mark-item">
+                            Микрофон
+                          </li>
                         </ul>
                       </div>
         
                       <button type="button"
-                              class="booking-calendar__body-cell-control-small gl__drop-menu js-drop-menu-btn gl__drop-menu-btn">
+                              class="booking-calendar__body-cell-control-small js-open-modal-location gl__drop-menu js-drop-menu-btn gl__drop-menu-btn">
                         <span class="gl__drop-menu-btn-content mod-show js-drop-menu-btn-content">Все оборудование</span>
                         <span class="gl__drop-menu-btn-content js-drop-menu-btn-content">Скрыть</span>
                       </button>
@@ -3444,9 +3490,9 @@
                       <div class="booking-calendar__body-cell-title">
                         Аудитория 104
                       </div>
-                      <a href="" class="booking-calendar__body-cell-control-small">
+                      <button class="booking-calendar__body-cell-control-small js-open-modal-location" data-auditorium="Аудитория 104">
                         Локация на карте
-                      </a>
+                      </button>
                     </th>
                     <th class="booking-calendar__tbody-cell">
                       <div class="booking-calendar__body-cell-text">
@@ -3473,11 +3519,14 @@
                           <li class="booking-calendar__tbody-cell-mark-item">
                             Микрофон
                           </li>
+                          <li class="booking-calendar__tbody-cell-mark-item">
+                            Микрофон
+                          </li>
                         </ul>
                       </div>
         
                       <button type="button"
-                              class="booking-calendar__body-cell-control-small gl__drop-menu js-drop-menu-btn gl__drop-menu-btn">
+                              class="booking-calendar__body-cell-control-small js-open-modal-location gl__drop-menu js-drop-menu-btn gl__drop-menu-btn">
                         <span class="gl__drop-menu-btn-content mod-show js-drop-menu-btn-content">Все оборудование</span>
                         <span class="gl__drop-menu-btn-content js-drop-menu-btn-content">Скрыть</span>
                       </button>
@@ -3773,9 +3822,9 @@
                       <div class="booking-calendar__body-cell-title">
                         Аудитория 21
                       </div>
-                      <a href="" class="booking-calendar__body-cell-control-small">
+                      <button class="booking-calendar__body-cell-control-small js-open-modal-location" data-auditorium="Аудитория 21">
                         Локация на карте
-                      </a>
+                      </button>
                     </th>
                     <th class="booking-calendar__tbody-cell">
                       <div class="booking-calendar__body-cell-text">
@@ -3802,11 +3851,14 @@
                           <li class="booking-calendar__tbody-cell-mark-item">
                             Микрофон
                           </li>
+                          <li class="booking-calendar__tbody-cell-mark-item">
+                            Микрофон
+                          </li>
                         </ul>
                       </div>
         
                       <button type="button"
-                              class="booking-calendar__body-cell-control-small gl__drop-menu js-drop-menu-btn gl__drop-menu-btn">
+                              class="booking-calendar__body-cell-control-small js-open-modal-location gl__drop-menu js-drop-menu-btn gl__drop-menu-btn">
                         <span class="gl__drop-menu-btn-content mod-show js-drop-menu-btn-content">Все оборудование</span>
                         <span class="gl__drop-menu-btn-content js-drop-menu-btn-content">Скрыть</span>
                       </button>
@@ -4102,9 +4154,9 @@
                       <div class="booking-calendar__body-cell-title">
                         Аудитория 400
                       </div>
-                      <a href="" class="booking-calendar__body-cell-control-small">
+                      <button class="booking-calendar__body-cell-control-small js-open-modal-location" data-auditorium="Аудитория 400">
                         Локация на карте
-                      </a>
+                      </button>
                     </th>
                     <th class="booking-calendar__tbody-cell">
                       <div class="booking-calendar__body-cell-text">
@@ -4131,11 +4183,14 @@
                           <li class="booking-calendar__tbody-cell-mark-item">
                             Микрофон
                           </li>
+                          <li class="booking-calendar__tbody-cell-mark-item">
+                            Микрофон
+                          </li>
                         </ul>
                       </div>
         
                       <button type="button"
-                              class="booking-calendar__body-cell-control-small gl__drop-menu js-drop-menu-btn gl__drop-menu-btn">
+                              class="booking-calendar__body-cell-control-small js-open-modal-location gl__drop-menu js-drop-menu-btn gl__drop-menu-btn">
                         <span class="gl__drop-menu-btn-content mod-show js-drop-menu-btn-content">Все оборудование</span>
                         <span class="gl__drop-menu-btn-content js-drop-menu-btn-content">Скрыть</span>
                       </button>
@@ -4482,9 +4537,16 @@
                         Деловой завтрак с Марией Захаровой «ИноСМИ-иноагенты в России»
                       </div>
               
-                        <div class="news-page__content">
-                          12 августа в формате ВКС прошло первое заседание Организационного комитета Международной премии #МЫВМЕСТЕ. Участники встречи обсудили текущую деятельность волонтеров и итоги заявочной кампании.
+                        <div class="news-page__content-container js-drop-menu-container gl__drop-menu-container">
+                          <div class="news-page__content js-drop-menu gl__drop-menu" data-drop-menu-min="36">
+                            12 августа в формате ВКС прошло первое заседание Организационного комитета Международной премии #МЫВМЕСТЕ. Участники встречи обсудили текущую деятельность волонтеров и итоги заявочной кампании. 12 августа в формате ВКС прошло первое заседание Организационного комитета Международной премии #МЫВМЕСТЕ. Участники встречи обсудили текущую деятельность волонтеров и итоги заявочной кампании.
+                          </div>
                         </div>
+                        <button type="button"
+                                class="program__content-info-btn-show js-drop-menu-btn gl__drop-menu-btn js-drop-menu-leave-open">
+                          <span class="gl__drop-menu-btn-content mod-show js-drop-menu-btn-content">Подробнее</span>
+                          <span class="gl__drop-menu-btn-content js-drop-menu-btn-content">Скрыть описание</span>
+                        </button>
                     </div>
                   </div>
               </div>
@@ -4510,9 +4572,16 @@
                         Деловой завтрак с Марией Захаровой «ИноСМИ-иноагенты в России»
                       </div>
               
-                        <div class="news-page__content">
-                          12 августа в формате ВКС прошло первое заседание Организационного комитета Международной премии #МЫВМЕСТЕ. Участники встречи обсудили текущую деятельность волонтеров и итоги заявочной кампании.
+                        <div class="news-page__content-container js-drop-menu-container gl__drop-menu-container">
+                          <div class="news-page__content js-drop-menu gl__drop-menu" data-drop-menu-min="36">
+                            12 августа в формате ВКС прошло первое заседание Организационного комитета Международной премии #МЫВМЕСТЕ. Участники встречи обсудили текущую деятельность волонтеров и итоги заявочной кампании.
+                          </div>
                         </div>
+                        <button type="button"
+                                class="program__content-info-btn-show js-drop-menu-btn gl__drop-menu-btn js-drop-menu-leave-open">
+                          <span class="gl__drop-menu-btn-content mod-show js-drop-menu-btn-content">Подробнее</span>
+                          <span class="gl__drop-menu-btn-content js-drop-menu-btn-content">Скрыть описание</span>
+                        </button>
                     </div>
                   </div>
               </div>
@@ -4538,9 +4607,16 @@
                         Деловой завтрак с Марией Захаровой «ИноСМИ-иноагенты в России»
                       </div>
               
-                        <div class="news-page__content">
-                          12 августа в формате ВКС прошло первое заседание Организационного комитета Международной премии #МЫВМЕСТЕ. Участники встречи обсудили текущую деятельность волонтеров и итоги заявочной кампании.
+                        <div class="news-page__content-container js-drop-menu-container gl__drop-menu-container">
+                          <div class="news-page__content js-drop-menu gl__drop-menu" data-drop-menu-min="36">
+                            12 августа в формате ВКС прошло первое заседание Организационного комитета Международной премии #МЫВМЕСТЕ. Участники встречи обсудили текущую деятельность волонтеров и итоги заявочной кампании. 12 августа в формате ВКС прошло первое заседание Организационного комитета Международной премии #МЫВМЕСТЕ. Участники встречи обсудили текущую деятельность волонтеров и итоги заявочной кампании. 12 августа в формате ВКС прошло первое заседание Организационного комитета Международной премии #МЫВМЕСТЕ. Участники встречи обсудили текущую деятельность волонтеров и итоги заявочной кампании.
+                          </div>
                         </div>
+                        <button type="button"
+                                class="program__content-info-btn-show js-drop-menu-btn gl__drop-menu-btn js-drop-menu-leave-open">
+                          <span class="gl__drop-menu-btn-content mod-show js-drop-menu-btn-content">Подробнее</span>
+                          <span class="gl__drop-menu-btn-content js-drop-menu-btn-content">Скрыть описание</span>
+                        </button>
                     </div>
                   </div>
               </div>
@@ -6210,6 +6286,24 @@
             Зарегистрироваться
           </button>
         </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal-location modal" id="modal-location-host">
+    <div class="modal-location__container modal__container">
+      <div class="modal-location__content">
+        <div class="modal-location__btn-wrapper">
+          <button type="button" class="modal__close-btn">
+            <svg width="20" height="20" aria-hidden="true" class="modal__close-icon">
+              <use xlink:href="#close"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-location__title js-modal-location-title"></div>
+      </div>
+  
+      <div class="modal-location__map-wrapper">
+        <img src="img/account/map.jpg" alt="" class="modal-location__map">
       </div>
     </div>
   </div>

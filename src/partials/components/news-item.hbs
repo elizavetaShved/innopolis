@@ -32,9 +32,16 @@
         </div>
 
         {{#if text }}
-          <div class="news-page__content">
-            {{ text }}
+          <div class="news-page__content-container js-drop-menu-container gl__drop-menu-container">
+            <div class="news-page__content js-drop-menu gl__drop-menu" data-drop-menu-min="36">
+              {{ text }}
+            </div>
           </div>
+          <button type="button"
+                  class="program__content-info-btn-show js-drop-menu-btn gl__drop-menu-btn js-drop-menu-leave-open">
+            <span class="gl__drop-menu-btn-content mod-show js-drop-menu-btn-content">Подробнее</span>
+            <span class="gl__drop-menu-btn-content js-drop-menu-btn-content">Скрыть описание</span>
+          </button>
         {{/if}}
       </div>
     </div>

@@ -4,7 +4,7 @@ import autoComplete from '@tarekraafat/autocomplete.js/dist/autoComplete';
 export default function inputSearchInit() {
   const inputsSearch = document.querySelector('.js-input-search');
   if (!inputsSearch) return;
-  
+
   const autoCompleteJS = new autoComplete({
     selector: '.js-input-search',
     placeHolder: inputsSearch.getAttribute('data-placeholder'),

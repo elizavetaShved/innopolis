@@ -29,9 +29,9 @@
             <div class="booking-calendar__body-cell-title">
               Аудитория 404
             </div>
-            <a href="" class="booking-calendar__body-cell-control-small">
+            <button class="booking-calendar__body-cell-control-small js-open-modal-location" data-auditorium="Аудитория 404">
               Локация на карте
-            </a>
+            </button>
           </th>
           <th class="booking-calendar__tbody-cell">
             <div class="booking-calendar__body-cell-text">
@@ -72,7 +72,7 @@
             </div>
 
             <button type="button"
-                    class="booking-calendar__body-cell-control-small gl__drop-menu js-drop-menu-btn gl__drop-menu-btn">
+                    class="booking-calendar__body-cell-control-small js-open-modal-location gl__drop-menu js-drop-menu-btn gl__drop-menu-btn">
               <span class="gl__drop-menu-btn-content mod-show js-drop-menu-btn-content">Все оборудование</span>
               <span class="gl__drop-menu-btn-content js-drop-menu-btn-content">Скрыть</span>
             </button>
@@ -154,9 +154,9 @@
               <div class="booking-calendar__body-cell-title">
                 Аудитория {{ this.auditorium }}
               </div>
-              <a href="" class="booking-calendar__body-cell-control-small">
+              <button class="booking-calendar__body-cell-control-small js-open-modal-location" data-auditorium="Аудитория {{ this.auditorium }}">
                 Локация на карте
-              </a>
+              </button>
             </th>
             <th class="booking-calendar__tbody-cell">
               <div class="booking-calendar__body-cell-text">
@@ -183,6 +183,9 @@
                   <li class="booking-calendar__tbody-cell-mark-item">
                     Микрофон
                   </li>
+                  <li class="booking-calendar__tbody-cell-mark-item">
+                    Микрофон
+                  </li>
                   {{#if this.qwe }}
                     <li class="booking-calendar__tbody-cell-mark-item">
                       Магнитно-маркерная доска
@@ -192,7 +195,7 @@
               </div>
 
               <button type="button"
-                      class="booking-calendar__body-cell-control-small gl__drop-menu js-drop-menu-btn gl__drop-menu-btn">
+                      class="booking-calendar__body-cell-control-small js-open-modal-location gl__drop-menu js-drop-menu-btn gl__drop-menu-btn">
                 <span class="gl__drop-menu-btn-content mod-show js-drop-menu-btn-content">Все оборудование</span>
                 <span class="gl__drop-menu-btn-content js-drop-menu-btn-content">Скрыть</span>
               </button>
