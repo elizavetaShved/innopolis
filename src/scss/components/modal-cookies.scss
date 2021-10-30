@@ -1,19 +1,19 @@
 .modal-cookies__wrapper {
-  position: fixed;
-  bottom: 2rem;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  z-index: 150;
-
   &:not(.mod-show) {
-    opacity: 0;
-    pointer-events: none;
+    .modal-cookies {
+      opacity: 0;
+      pointer-events: none;
+    }
   }
 }
 
 .modal-cookies {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: center;
+  z-index: 150;
   background-color: rgba(112, 112, 112, .9);
   padding: 1rem 3rem;
   display: flex;

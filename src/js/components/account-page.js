@@ -50,7 +50,9 @@ export class AccountPage {
 
     const btnsLocation = this.hostElem.querySelectorAll('.js-open-modal-location');
 
-    this.checkDirections(false);
+    setTimeout(() => {
+      this.checkDirections(false);
+    }, 3000)
 
     this.directionSelect.onchange = () => {
       this.checkDirections(true);
@@ -103,7 +105,7 @@ export class AccountPage {
 
     calendarDateInputs.forEach(input => {
       input.onchange = () => {
-        calendarSlotTextDateElem[indexCurrentSlotContainer].innerText = `${ input.value}, `;
+        calendarSlotTextDateElem[indexCurrentSlotContainer].innerText = `${ input.value }, `;
       }
     })
 
@@ -172,7 +174,9 @@ export class AccountPage {
   }
 
   checkDirections(isChange) {
-    if (this.directionSelect.innerText === 'Вузы') {
+    // todo косытль, потому что value - id, которое мб разным
+    const optionValue = this.directionSelect.querySelectorAll('option')[0];
+    if (this.directionSelect.innerText === 'Вузы' || optionValue.innerText === 'Вузы') {
       this.universitySelectWrapper.classList.add('mod-show');
       // добавить валидацию для нового селекта
       this.universityMarkRequiredElem = document.createElement('div');
@@ -188,7 +192,6 @@ export class AccountPage {
         // this.universityMarkRequiredElem.remove();
         this.universitySelectElem.removeAttribute('data-parsley-required');
         this.universitySelectElem.removeAttribute('data-parsley-trigger');
-        console.log(this.universitySelectElem)
       }
     }
   }

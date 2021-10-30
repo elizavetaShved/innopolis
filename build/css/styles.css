@@ -464,6 +464,14 @@ body.touch .calendar__content {
 .gl__drop-menu-btn-content:not(.mod-show) {
   display: none; }
 
+font.notetext {
+  color: var(--btn-color) !important;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  display: block; }
+
 .layout__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4923,7 +4931,7 @@ html.is-locked {
   position: absolute;
   bottom: -19rem;
   left: 70%;
-  background-image: url("../../img/old/img/about-bg.svg");
+  background-image: url("../img/old/img/about-bg.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   width: 90.5rem;
@@ -5384,9 +5392,9 @@ html.is-locked {
     -webkit-transform: none;
     transform: none; }
   .sign-up-block__inner:after {
-    background-image: url("../../img/old/img/about-bg.svg");
+    background-image: url("../img/old/img/about-bg.svg");
     left: 70%;
-    bottom: -21rem;
+    bottom: -16rem;
     width: 90.5rem;
     height: 46rem; }
   .sign-up-block__title {
@@ -5573,7 +5581,7 @@ html.is-locked {
   .sign-up-block__inner:after {
     width: 157.3rem;
     height: 79.9rem;
-    bottom: -32.5rem;
+    bottom: -31rem;
     left: 63%; }
   .sign-up-block__title {
     font-size: 6rem;
@@ -9148,23 +9156,20 @@ html.remodal-is-locked {
           -ms-flex-direction: column;
               flex-direction: column; } }
 
-.modal-cookies__wrapper {
+.modal-cookies__wrapper:not(.mod-show) .modal-cookies {
+  opacity: 0;
+  pointer-events: none; }
+
+.modal-cookies {
   position: fixed;
   bottom: 2rem;
-  left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
-  z-index: 150; }
-  .modal-cookies__wrapper:not(.mod-show) {
-    opacity: 0;
-    pointer-events: none; }
-
-.modal-cookies {
+  z-index: 150;
   background-color: rgba(112, 112, 112, 0.9);
   padding: 1rem 3rem;
   display: -webkit-box;
