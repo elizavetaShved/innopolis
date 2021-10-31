@@ -19,7 +19,16 @@
   display: flex;
   align-items: center;
   border-radius: 10px;
-  margin: 0 1rem;
+  margin: 0 2rem;
+  white-space: nowrap;
+
+  @include for-sm-down {
+    white-space: initial;
+    width: calc(100% - 4rem);
+    left: 0;
+    transform: initial;
+    padding: 1rem 1.6rem;
+  }
 }
 
 .modal-cookies__text {
