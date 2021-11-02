@@ -29,6 +29,10 @@
           <img src="img/form/error.svg" alt="" class="profile__error-icon">
         </div>
       </div>
+      <div class="account__form-save-wrapper">
+        <img src="img/common/save.svg" alt="" class="account__form-save-image">
+        Изменения сохранены
+      </div>
     </div>
 
     <div class="profile__form-radio-container">
@@ -127,7 +131,6 @@
       <li class="gl__input-container">
         <div class="gl__input-title mod-small">ПЦР-тест <span class="mark">*</span></div>
         {{> controls/input-file
-          dummyRequered=true
           inputType="file"
           name="pcr-test"
           type="account"

@@ -11,7 +11,7 @@
   <link type="image/png" href="img/favicon.ico" rel="icon">
 <!--  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.6/dist/css/autoComplete.min.css">-->
   <title>
-    Календарь мероприятий
+    Авторизация
   </title>
 </head>
 
@@ -144,1119 +144,503 @@
 
   <main class="layout__content">
     
-    <div class="calendar" id="calendar-host">
-      <div class="calendar__main-content">
-        <ul class="gl__bread-crumbs-list calendar__page-content">
-          <li class="gl__bread-crumbs-item">
-            <a href="/" class="gl__bread-crumbs-item-link">
-              Главная
-              <img src="img/news/array.svg" alt="" class="gl__bread-crumbs-item-link-icon">
-            </a>
-          </li>
-          <li class="gl__bread-crumbs-item">
-          <span class="gl__bread-crumbs-item-link mod-current-page">
-            Календарь мероприятия
-          </span>
-          </li>
-        </ul>
+    <section class="auth-page" id="auth-host">
+      <div class="gl__page-content">
+        <div class="auth-page__content-wrapper">
+          <div class="auth-page__content mod-show js-auth-content">
+            <form data-need-validation data-parsley-validate data-parsley-focus="none" class="gl__form">
+              <div class="auth-page__title">
+                Авторизация
+              </div>
 
-        <h1 class="gl__subtitle calendar__page-content">
-          Календарь мероприятий
-        </h1>
+              <ul class="modal__inputs-list">
+                <li class="gl__input-container">
+                  <div class="gl__input-title">Телефон или E-mail</div>
+                  <!-- 1) isPassword / isContacts - необходимы для js -->
+                  <!-- 2) inputType - html type input -->
+                  <!-- 3) required (true/false) - обязательно для заполнения -->
+                  <!-- 4) name - name input -->
+                  <!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+                  <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+                  <!-- 7) id - обычный id, например для первого пароля-->
+                  <!-- 8) parsleyType - для валидации (н-р email) -->
+                  <!-- 9) minLength - максимально допустимое к-во символов -->
+                  <!-- 10) maxLength - максимально допустимое к-во символов -->
+                  
+                  <label class="gl__input-wrapper  mod-contact">
+                      <span class="gl__input-mark-required"></span>
+                    <input type="text"
+                           class="gl__input "
+                           name="contact-"
+                  
+                  
+                           data-parsley-required=""
+                  
+                  
+                           placeholder="Введите телефон или E-mail"
+                  
+                  
+                  
+                    >
+                  
+                  </label>
+                </li>
+                <li class="gl__input-container">
+                  <div class="gl__input-title">Пароль</div>
+                  <!-- 1) isPassword / isContacts - необходимы для js -->
+                  <!-- 2) inputType - html type input -->
+                  <!-- 3) required (true/false) - обязательно для заполнения -->
+                  <!-- 4) name - name input -->
+                  <!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+                  <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+                  <!-- 7) id - обычный id, например для первого пароля-->
+                  <!-- 8) parsleyType - для валидации (н-р email) -->
+                  <!-- 9) minLength - максимально допустимое к-во символов -->
+                  <!-- 10) maxLength - максимально допустимое к-во символов -->
+                  
+                  <label class="gl__input-wrapper mod-password ">
+                      <span class="gl__input-mark-required"></span>
+                    <input type="password"
+                           class="gl__input "
+                           name="password-"
+                  
+                  
+                           data-parsley-required=""
+                  
+                           id="password-auth-"
+                  
+                           placeholder="Введите пароль"
+                  
+                  
+                  
+                           data-parsley-minlength="8"
+                    >
+                  
+                      <button type="button" class="gl__input-password-btn">
+                        <img src="img/modal/hide-password.svg" alt="" class="gl__input-password-btn-image type-hide">
+                        <img src="img/modal/show-password.svg" alt="" class="gl__input-password-btn-image type-show">
+                      </button>
+                  </label>
+                </li>
+              </ul>
 
-        <div class="filters__header-wrapper calendar__page-content">
-          <button type="button" class="filters__filter-btn gl__main-btn mod-no-shadow gl__sm-show js-filter-btn">Фильтры</button>
+              <div class="gl__radio-input-container mod-hide">
+                <div class="gl__checkbox-item">
+                  <div class="gl__form-radio-wrapper">
+                    <label class="gl__radio-checkbox-input-wrapper  mod-for-caption">
+                      <input type="checkbox"
+                             class="gl__radio-checkbox-input"
+                             name="agreement-processing-"
+                             data-parsley-required=""
+                      >
+                    
+                      <span class="gl__radio-checkbox-input-content"></span>
+                        <span class="gl__radio-checkbox-input-text">
+                          Я подтверждаю свое согласие на
+                            <a href="" class="gl__radio-checkbox-text-link" target="_blank">
+                              обработку персональных данных
+                            </a>
+                        </span>
+                    </label>
+                  </div>
+                </div>
+                <div class="gl__checkbox-item">
+                  <div class="gl__form-radio-wrapper">
+                    <label class="gl__radio-checkbox-input-wrapper  mod-for-caption">
+                      <input type="checkbox"
+                             class="gl__radio-checkbox-input"
+                             name="agreement-processing-policy-"
+                             data-parsley-required=""
+                      >
+                    
+                      <span class="gl__radio-checkbox-input-content"></span>
+                        <span class="gl__radio-checkbox-input-text">
+                          Я подтверждаю свое согласие с
+                            <a href="" class="gl__radio-checkbox-text-link" target="_blank">
+                              политикой обработки персональных данных
+                            </a>
+                        </span>
+                    </label>
+                  </div>
+                </div>
+                <div class="gl__checkbox-item">
+                  <div class="gl__form-radio-wrapper">
+                    <label class="gl__radio-checkbox-input-wrapper  mod-for-caption">
+                      <input type="checkbox"
+                             class="gl__radio-checkbox-input"
+                             name="agreement-processing-terms-contract-"
+                             data-parsley-required=""
+                      >
+                    
+                      <span class="gl__radio-checkbox-input-content"></span>
+                        <span class="gl__radio-checkbox-input-text">
+                          Я подтверждаю свое согласие с
+                            <a href="" class="gl__radio-checkbox-text-link" target="_blank">
+                              условиями договора оказания услуг
+                            </a>
+                        </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
 
-          <div class="gl__sm-hide">
-            <div class="filters__selects-wrapper">
-              <div class="gl__select-container mod-filter-select" id="commonDates-calendar">
-                <label class="gl__select-wrapper">
-                  <select class="gl__select js-select"
-                          data-parsley-class-handler="#commonDates-calendar"
-                          name="commonDates-calendar"
-                  >
-                    <option class="gl__select-option" placeholder value="">Все даты</option>
-                    <option class="gl__select-option" value="option 1">option 1</option>
-                    <option class="gl__select-option" value="option 2">option 2</option>
-                    <option class="gl__select-option" value="option 3">option 3</option>
-                    <option class="gl__select-option" value="option 4">option 4</option>
-                    <option class="gl__select-option" value="option 5">option 5</option>
-                    <option class="gl__select-option" value="option 6">option 6</option>
-                    <option class="gl__select-option" value="option 7">option 7</option>
-                    <option class="gl__select-option" value="option 8">option 8</option>
-                    <option class="gl__select-option" value="option 9">option 9</option>
-                    <option class="gl__select-option" value="option 10">option 10</option>
-                    <option class="gl__select-option" value="option 12">option 12</option>
-                  </select>
-                </label>
+              <div class="gl__error-block js-error-block">
+                <img src="img/old/img/error-form.svg" alt="" class="gl__error-icon">
+                <div class="gl__error-content">
+                  Ошибка
+                </div>
               </div>
-              <div class="gl__select-container mod-filter-select" id="topics-calendar">
-                <label class="gl__select-wrapper">
-                  <select class="gl__select js-select"
-                          data-parsley-class-handler="#topics-calendar"
-                          name="topics-calendar"
-                  >
-                    <option class="gl__select-option" placeholder value="">Тема</option>
-                    <option class="gl__select-option" value="Вузы">Вузы</option>
-                    <option class="gl__select-option" value="Бизнес">Бизнес</option>
-                    <option class="gl__select-option" value="Культурная программа">Культурная программа</option>
-                    <option class="gl__select-option" value="Стартапы">Стартапы</option>
-                    <option class="gl__select-option" value="Органы гос.власти">Органы гос.власти</option>
-                    
-                    
-                    
-                    
-                    
-                    
-                  </select>
-                </label>
+
+              <button type="submit"
+                      class="gl__btn-submit js-btn-submit modal__btn-submit gl__main-btn mod-long mod-no-shadow mod-small">
+                Войти
+              </button>
+            </form>
+
+            <div class="modal__proposal">
+              Еще нет аккаунта?
+              <button type="submit" class="modal__proposal-link js-toggle-registr">
+                Зарегистрироваться
+              </button>
+            </div>
+
+            <div class="modal-auth__social-wrapper">
+              <div class="modal-auth__social-title-wrapper">
+                <div class="modal-auth__social-title-line"></div>
+                <div class="modal-auth__social-title">или войти через</div>
               </div>
-              <div class="gl__select-container mod-filter-select" id="auditoriums-calendar">
-                <label class="gl__select-wrapper">
-                  <select class="gl__select js-select"
-                          data-parsley-class-handler="#auditoriums-calendar"
-                          name="auditoriums-calendar"
-                  >
-                    <option class="gl__select-option" placeholder value="">Аудитория</option>
-                    <option class="gl__select-option" value="большой зал">большой зал</option>
-                    <option class="gl__select-option" value="аудитория 104">аудитория 104</option>
-                    <option class="gl__select-option" value="аудитория 105">аудитория 105</option>
-                    <option class="gl__select-option" value="аудитория 106">аудитория 106</option>
-                    <option class="gl__select-option" value="аудитория 107">аудитория 107</option>
-                    <option class="gl__select-option" value="аудитория 108">аудитория 108</option>
-                    <option class="gl__select-option" value="аудитория 109">аудитория 109</option>
-                    <option class="gl__select-option" value="аудитория 110">аудитория 110</option>
-                    <option class="gl__select-option" value="аудитория 111">аудитория 111</option>
-                    <option class="gl__select-option" value="аудитория 112">аудитория 112</option>
-                    
-                  </select>
-                </label>
-              </div>
-              <div class="gl__select-container mod-filter-select" id="speakers-calendar">
-                <label class="gl__select-wrapper">
-                  <select class="gl__select js-select"
-                          data-parsley-class-handler="#speakers-calendar"
-                          name="speakers-calendar"
-                  >
-                    <option class="gl__select-option" placeholder value="">Спикер</option>
-                    <option class="gl__select-option" value="Александр Горник">Александр Горник</option>
-                    <option class="gl__select-option" value="Андрей Бедняков">Андрей Бедняков</option>
-                    <option class="gl__select-option" value="Марина Кравец">Марина Кравец</option>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                  </select>
-                </label>
-              </div>
+
+              <ul class="modal-auth__social-list">
+                <li class="modal-auth__social-item">
+                  <a href="" class="modal-auth__social-link">
+                    <img src="img/social/google.svg" alt="" class="modal-auth__social-image">
+                  </a>
+                </li>
+                <li class="modal-auth__social-item">
+                  <a href="" class="modal-auth__social-link">
+                    <img src="img/social/fb.svg" alt="" class="modal-auth__social-image">
+                  </a>
+                </li>
+                <li class="modal-auth__social-item">
+                  <a href="" class="modal-auth__social-link">
+                    <img src="img/social/vk.svg" alt="" class="modal-auth__social-image">
+                  </a>
+                </li>
+                <li class="modal-auth__social-item">
+                  <a href="" class="modal-auth__social-link">
+                    <img src="img/social/yandex.svg" alt="" class="modal-auth__social-image">
+                  </a>
+                </li>
+                <li class="modal-auth__social-item">
+                  <a href="" class="modal-auth__social-link">
+                    <img src="img/social/mail.svg" alt="" class="modal-auth__social-image">
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
 
-          <div class="filter__btn">
-            <a href="" download=""
-               class="filters__btn-download gl__main-btn mod-black mod-no-shadow">
-              Скачать программу в PDF
-              <svg width="24" height="24" aria-hidden="true" class="gl__btn-download-icon">
-                <use xlink:href="#download"></use>
-              </svg>
-            </a>
-          </div>
-        </div>
+          <div class="auth-page__content js-auth-content">
+            <form data-need-validation data-parsley-validate data-parsley-focus="none" class="gl__form">
+              <div class="auth-page__title">
+                Регистрация
+              </div>
 
-        <div class="calendar__content js-content">
-          <table class="calendar__table js-table">
-            <thead class="calendar__table-head">
-            <tr class="calendar__row-wrapper mod-head">
-              <td class="calendar__item-header mod-date">2 дек.</td>
-              <td class="calendar__item calendar__item-header">
-                <div class="calendar__item-header-caption">
-                  a
-                </div>
-                <div class="calendar__item-header-value">
-                  большой зал
-                </div>
-              </td>
-              <td class="calendar__item calendar__item-header">
-                <div class="calendar__item-header-caption">
-                  b
-                </div>
-                <div class="calendar__item-header-value">
-                  аудитория 104
-                </div>
-              </td>
-              <td class="calendar__item calendar__item-header">
-                <div class="calendar__item-header-caption">
-                  c
-                </div>
-                <div class="calendar__item-header-value">
-                  аудитория 105
-                </div>
-              </td>
-              <td class="calendar__item calendar__item-header">
-                <div class="calendar__item-header-caption">
-                  d
-                </div>
-                <div class="calendar__item-header-value">
-                  аудитория 106
-                </div>
-              </td>
-              <td class="calendar__item calendar__item-header">
-                <div class="calendar__item-header-caption">
-                  e
-                </div>
-                <div class="calendar__item-header-value">
-                  аудитория 107
-                </div>
-              </td>
-              <td class="calendar__item calendar__item-header">
-                <div class="calendar__item-header-caption">
-                  f
-                </div>
-                <div class="calendar__item-header-value">
-                  аудитория 108
-                </div>
-              </td>
-              <td class="calendar__item calendar__item-header">
-                <div class="calendar__item-header-caption">
-                  g
-                </div>
-                <div class="calendar__item-header-value">
-                  аудитория 109
-                </div>
-              </td>
-              <td class="calendar__item calendar__item-header">
-                <div class="calendar__item-header-caption">
-                  h
-                </div>
-                <div class="calendar__item-header-value">
-                  аудитория 110
-                </div>
-              </td>
-              <td class="calendar__item calendar__item-header">
-                <div class="calendar__item-header-caption">
-                  i
-                </div>
-                <div class="calendar__item-header-value">
-                  аудитория 111
-                </div>
-              </td>
-              <td class="calendar__item calendar__item-header">
-                <div class="calendar__item-header-caption">
-                  j
-                </div>
-                <div class="calendar__item-header-value">
-                  аудитория 112
-                </div>
-              </td>
-            </tr>
-            </thead>
+              <ul class="modal__inputs-list">
+                <li class="gl__input-container">
+                  <div class="gl__input-title">Телефон или E-mail</div>
+                  <!-- 1) isPassword / isContacts - необходимы для js -->
+                  <!-- 2) inputType - html type input -->
+                  <!-- 3) required (true/false) - обязательно для заполнения -->
+                  <!-- 4) name - name input -->
+                  <!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+                  <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+                  <!-- 7) id - обычный id, например для первого пароля-->
+                  <!-- 8) parsleyType - для валидации (н-р email) -->
+                  <!-- 9) minLength - максимально допустимое к-во символов -->
+                  <!-- 10) maxLength - максимально допустимое к-во символов -->
+                  
+                  <label class="gl__input-wrapper  mod-contact">
+                      <span class="gl__input-mark-required"></span>
+                    <input type="text"
+                           class="gl__input "
+                           name="contact-"
+                  
+                  
+                           data-parsley-required=""
+                  
+                  
+                           placeholder="Введите телефон или E-mail"
+                  
+                  
+                  
+                    >
+                  
+                  </label>
+                </li>
+                <li class="gl__input-container">
+                  <div class="gl__input-title">Пароль</div>
+                  <!-- 1) isPassword / isContacts - необходимы для js -->
+                  <!-- 2) inputType - html type input -->
+                  <!-- 3) required (true/false) - обязательно для заполнения -->
+                  <!-- 4) name - name input -->
+                  <!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+                  <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+                  <!-- 7) id - обычный id, например для первого пароля-->
+                  <!-- 8) parsleyType - для валидации (н-р email) -->
+                  <!-- 9) minLength - максимально допустимое к-во символов -->
+                  <!-- 10) maxLength - максимально допустимое к-во символов -->
+                  
+                  <label class="gl__input-wrapper mod-password ">
+                      <span class="gl__input-mark-required"></span>
+                    <input type="password"
+                           class="gl__input "
+                           name="password-"
+                  
+                  
+                           data-parsley-required=""
+                  
+                           id="password-registr-"
+                  
+                           placeholder="Введите пароль"
+                  
+                  
+                  
+                           data-parsley-minlength="8"
+                    >
+                  
+                      <button type="button" class="gl__input-password-btn">
+                        <img src="img/modal/hide-password.svg" alt="" class="gl__input-password-btn-image type-hide">
+                        <img src="img/modal/show-password.svg" alt="" class="gl__input-password-btn-image type-show">
+                      </button>
+                  </label>
+                </li>
+                <li class="gl__input-container">
+                  <div class="gl__input-title">Повторите пароль</div>
+                  <!-- 1) isPassword / isContacts - необходимы для js -->
+                  <!-- 2) inputType - html type input -->
+                  <!-- 3) required (true/false) - обязательно для заполнения -->
+                  <!-- 4) name - name input -->
+                  <!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+                  <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+                  <!-- 7) id - обычный id, например для первого пароля-->
+                  <!-- 8) parsleyType - для валидации (н-р email) -->
+                  <!-- 9) minLength - максимально допустимое к-во символов -->
+                  <!-- 10) maxLength - максимально допустимое к-во символов -->
+                  
+                  <label class="gl__input-wrapper mod-password ">
+                      <span class="gl__input-mark-required"></span>
+                    <input type="password"
+                           class="gl__input "
+                           name="password-dupl-"
+                  
+                  
+                           data-parsley-required=""
+                  
+                           id="password-"
+                  
+                           placeholder="Введите пароль"
+                  
+                           data-parsley-equalto="#password-registr-"
+                  
+                  
+                           data-parsley-minlength="8"
+                    >
+                  
+                      <button type="button" class="gl__input-password-btn">
+                        <img src="img/modal/hide-password.svg" alt="" class="gl__input-password-btn-image type-hide">
+                        <img src="img/modal/show-password.svg" alt="" class="gl__input-password-btn-image type-show">
+                      </button>
+                  </label>
+                </li>
+                <li class="gl__input-container">
+                  <button type="submit" class="gl__input-hint-link js-forgo-password">Забыли пароль?</button>
+                </li>
+              </ul>
 
-            <tbody class="calendar__body-wrapper">
-            <tr class="calendar__row-wrapper mod-full mod-show">
-              <th class="calendar__btn-show-all-wrapper">
-                <button type="button" class="calendar__btn-show-all">
-                  <span class="calendar__btn-show-all-triangle"></span>
-                  <span class="calendar__btn-show-all-content">Вся программа</span>
-                </button>
-              </th>
-            </tr>
-            <tr class="calendar__row-wrapper mod-full only-card" data-time="2021/12/02/9/00">
-              <th class="calendar__item-content">9:00</th>
-              <th class="calendar__item-content mod-card  mod-full">
-                <div class="calendar__item-content-time">
-                  9:00
-                </div>
-              
-              
-                <div class="calendar__item-content-title">
-                  
-                </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  C 9:00 регистрация
-                </div>
-              </th>
-            </tr>
-            <tr class="calendar__row-wrapper mod-full only-card" data-time="2021/12/02/10/00">
-              <th class="calendar__item-content">10:00</th>
-              <th class="calendar__item-content mod-card  mod-full">
-                <div class="calendar__item-content-time">
-                  10:00 - 11:00
-                </div>
-              
-              
-                <div class="calendar__item-content-title">
-                  
-                </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Церемония открытия конференции в фойе Университета
-                </div>
-              </th>
-            </tr>
-            <tr class="calendar__row-wrapper only-card" data-time="2021/12/02/11/00">
-              <th class="calendar__item-content">11:00</th>
-              <th class="calendar__item-content mod-card ">
-                <div class="calendar__item-content-time">
-                  11:00 - 11:50
-                </div>
-              
-                  <div class="calendar__item-content-mark type-4">
-                    Стартапы
+              <div class="gl__radio-input-container">
+                <div class="gl__checkbox-item">
+                  <div class="gl__form-radio-wrapper">
+                    <label class="gl__radio-checkbox-input-wrapper  mod-for-caption">
+                      <input type="checkbox"
+                             class="gl__radio-checkbox-input"
+                             name="agreement-processing-"
+                             data-parsley-required=""
+                      >
+                    
+                      <span class="gl__radio-checkbox-input-content"></span>
+                        <span class="gl__radio-checkbox-input-text">
+                          Я подтверждаю свое согласие на
+                            <a href="" class="gl__radio-checkbox-text-link" target="_blank">
+                              обработку персональных данных
+                            </a>
+                        </span>
+                    </label>
                   </div>
-              
-                <div class="calendar__item-content-title">
-                  Марина Кравец
                 </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  директор по развитию новых каналов дистрибуции Rambler&amp;Co
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности
-                </div>
-              </th>
-              <th class="calendar__item-content mod-card ">
-                <div class="calendar__item-content-time">
-                  11:00 - 11:50
-                </div>
-              
-                  <div class="calendar__item-content-mark type-2">
-                    бизнес
+                <div class="gl__checkbox-item">
+                  <div class="gl__form-radio-wrapper">
+                    <label class="gl__radio-checkbox-input-wrapper  mod-for-caption">
+                      <input type="checkbox"
+                             class="gl__radio-checkbox-input"
+                             name="agreement-processing-policy-"
+                             data-parsley-required=""
+                      >
+                    
+                      <span class="gl__radio-checkbox-input-content"></span>
+                        <span class="gl__radio-checkbox-input-text">
+                          Я подтверждаю свое согласие с
+                            <a href="" class="gl__radio-checkbox-text-link" target="_blank">
+                              политикой обработки персональных данных
+                            </a>
+                        </span>
+                    </label>
                   </div>
-              
-                <div class="calendar__item-content-title">
-                  Александр Горник
                 </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  директор по развитию новых каналов дистрибуции Rambler&amp;Co
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности
-                </div>
-              </th>
-              <th class="calendar__item-content mod-card ">
-                <div class="calendar__item-content-time">
-                  11:00 - 11:50
-                </div>
-              
-                  <div class="calendar__item-content-mark type-2">
-                    Культурная программа
+                <div class="gl__checkbox-item">
+                  <div class="gl__form-radio-wrapper">
+                    <label class="gl__radio-checkbox-input-wrapper  mod-for-caption">
+                      <input type="checkbox"
+                             class="gl__radio-checkbox-input"
+                             name="agreement-processing-terms-contract-"
+                             data-parsley-required=""
+                      >
+                    
+                      <span class="gl__radio-checkbox-input-content"></span>
+                        <span class="gl__radio-checkbox-input-text">
+                          Я подтверждаю свое согласие с
+                            <a href="" class="gl__radio-checkbox-text-link" target="_blank">
+                              условиями договора оказания услуг
+                            </a>
+                        </span>
+                    </label>
                   </div>
-              
-                <div class="calendar__item-content-title">
-                  Андрей Бедняков
                 </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  директор по развитию новых каналов дистрибуции Rambler&amp;Co
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности
-                </div>
-              </th>
-              <th class="calendar__item-content mod-card ">
-                <div class="calendar__item-content-time">
-                  11:00 - 11:50
-                </div>
-              
-                  <div class="calendar__item-content-mark type-5">
-                    Органы гос.власти
-                  </div>
-              
-                <div class="calendar__item-content-title">
-                  Александр Горник
-                </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  директор по развитию новых каналов дистрибуции Rambler&amp;Co
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности
-                </div>
-              </th>
-              <th class="calendar__item-content mod-card ">
-                <div class="calendar__item-content-time">
-                  11:00 - 11:50
-                </div>
-              
-                  <div class="calendar__item-content-mark type-4">
-                    Стартапы
-                  </div>
-              
-                <div class="calendar__item-content-title">
-                  Александр Горник
-                </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  директор по развитию новых каналов дистрибуции Rambler&amp;Co
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности
-                </div>
-              </th>
-              <th class="calendar__item-content mod-card ">
-                <div class="calendar__item-content-time">
-                  11:00 - 11:50
-                </div>
-              
-                  <div class="calendar__item-content-mark type-2">
-                    бизнес
-                  </div>
-              
-                <div class="calendar__item-content-title">
-                  Александр Горник
-                </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  директор по развитию новых каналов дистрибуции Rambler&amp;Co
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности
-                </div>
-              </th>
-              <th class="calendar__item-content mod-card ">
-                <div class="calendar__item-content-time">
-                  11:00 - 11:50
-                </div>
-              
-                  <div class="calendar__item-content-mark type-2">
-                    бизнес
-                  </div>
-              
-                <div class="calendar__item-content-title">
-                  Александр Горник
-                </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  директор по развитию новых каналов дистрибуции Rambler&amp;Co
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности
-                </div>
-              </th>
-              <th class="calendar__item-content mod-card ">
-                <div class="calendar__item-content-time">
-                  11:00 - 11:50
-                </div>
-              
-                  <div class="calendar__item-content-mark type-2">
-                    бизнес
-                  </div>
-              
-                <div class="calendar__item-content-title">
-                  Андрей Бедняков
-                </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  директор по развитию новых каналов дистрибуции Rambler&amp;Co
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности
-                </div>
-              </th>
-              <th class="calendar__item-content mod-card ">
-                <div class="calendar__item-content-time">
-                  11:00 - 11:50
-                </div>
-              
-                  <div class="calendar__item-content-mark type-4">
-                    Стартапы
-                  </div>
-              
-                <div class="calendar__item-content-title">
-                  Марина Кравец
-                </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  директор по развитию новых каналов дистрибуции Rambler&amp;Co
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности
-                </div>
-              </th>
-              <th class="calendar__item-content mod-card ">
-                <div class="calendar__item-content-time">
-                  11:00 - 11:50
-                </div>
-              
-                  <div class="calendar__item-content-mark type-2">
-                    бизнес
-                  </div>
-              
-                <div class="calendar__item-content-title">
-                  Александр Горник
-                </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  директор по развитию новых каналов дистрибуции Rambler&amp;Co
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности
-                </div>
-              </th>
-            </tr>
-            <tr class="calendar__row-wrapper only-card" data-time="2021/12/02/16/00">
-              <th class="calendar__item-content">16:00</th>
-              <th class="calendar__item-content mod-card ">
-                <div class="calendar__item-content-time">
-                  16:00 - 16:50
-                </div>
-              
-                  <div class="calendar__item-content-mark type-3">
-                    Культурная программа
-                  </div>
-              
-                <div class="calendar__item-content-title">
-                  Александр Горник
-                </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  директор по развитию новых каналов дистрибуции Rambler&amp;Co
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности
-                </div>
-              </th>
-              <th class="calendar__item-content mod-card ">
-                <div class="calendar__item-content-time">
-                  16:00 - 16:50
-                </div>
-              
-                  <div class="calendar__item-content-mark type-3">
-                    Культурная программа
-                  </div>
-              
-                <div class="calendar__item-content-title">
-                  Александр Горник
-                </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  директор по развитию новых каналов дистрибуции Rambler&amp;Co
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности
-                </div>
-              </th>
-              <th class="calendar__item-content mod-card mod-empty"></th>
-              <th class="calendar__item-content mod-card ">
-                <div class="calendar__item-content-time">
-                  16:00 - 16:50
-                </div>
-              
-                  <div class="calendar__item-content-mark type-1">
-                    вузы
-                  </div>
-              
-                <div class="calendar__item-content-title">
-                  Андрей Бедняков
-                </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  директор по развитию новых каналов дистрибуции Rambler&amp;Co
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности
-                </div>
-              </th>
-              <th class="calendar__item-content mod-card ">
-                <div class="calendar__item-content-time">
-                  16:00 - 16:50
-                </div>
-              
-                  <div class="calendar__item-content-mark type-1">
-                    вузы
-                  </div>
-              
-                <div class="calendar__item-content-title">
-                  Марина Кравец
-                </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  директор по развитию новых каналов дистрибуции Rambler&amp;Co
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности
-                </div>
-              </th>
-              <th class="calendar__item-content mod-card ">
-                <div class="calendar__item-content-time">
-                  16:00 - 16:50
-                </div>
-              
-                  <div class="calendar__item-content-mark type-5">
-                    Органы гос.власти
-                  </div>
-              
-                <div class="calendar__item-content-title">
-                  Александр Горник
-                </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  директор по развитию новых каналов дистрибуции Rambler&amp;Co
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности
-                </div>
-              </th>
-              <th class="calendar__item-content mod-card ">
-                <div class="calendar__item-content-time">
-                  16:00 - 16:50
-                </div>
-              
-                  <div class="calendar__item-content-mark type-1">
-                    вузы
-                  </div>
-              
-                <div class="calendar__item-content-title">
-                  Александр Горник
-                </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  директор по развитию новых каналов дистрибуции Rambler&amp;Co
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности
-                </div>
-              </th>
-              <th class="calendar__item-content mod-card ">
-                <div class="calendar__item-content-time">
-                  16:00 - 16:50
-                </div>
-              
-                  <div class="calendar__item-content-mark type-1">
-                    вузы
-                  </div>
-              
-                <div class="calendar__item-content-title">
-                  Александр Горник
-                </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  директор по развитию новых каналов дистрибуции Rambler&amp;Co
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности
-                </div>
-              </th>
-              <th class="calendar__item-content mod-card ">
-                <div class="calendar__item-content-time">
-                  16:00 - 16:50
-                </div>
-              
-                  <div class="calendar__item-content-mark type-1">
-                    вузы
-                  </div>
-              
-                <div class="calendar__item-content-title">
-                  Александр Горник
-                </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  директор по развитию новых каналов дистрибуции Rambler&amp;Co
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности
-                </div>
-              </th>
-              <th class="calendar__item-content mod-card ">
-                <div class="calendar__item-content-time">
-                  16:00 - 16:50
-                </div>
-              
-                  <div class="calendar__item-content-mark type-1">
-                    вузы
-                  </div>
-              
-                <div class="calendar__item-content-title">
-                  Александр Горник
-                </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  директор по развитию новых каналов дистрибуции Rambler&amp;Co
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности
-                </div>
-              </th>
-            </tr>
-            <tr class="calendar__row-wrapper only-card" data-time="2021/12/02/17/00">
-              <th class="calendar__item-content">17:00</th>
-              <th class="calendar__item-content mod-card ">
-                <div class="calendar__item-content-time">
-                  17:00 - 17:50
-                </div>
-              
-                  <div class="calendar__item-content-mark type-2">
-                    бизнес
-                  </div>
-              
-                <div class="calendar__item-content-title">
-                  Александр Горник
-                </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  директор по развитию новых каналов дистрибуции Rambler&amp;Co
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности
-                </div>
-              </th>
-              <th class="calendar__item-content mod-card mod-empty"></th>
-              <th class="calendar__item-content mod-card ">
-                <div class="calendar__item-content-time">
-                  17:00 - 17:50
-                </div>
-              
-                  <div class="calendar__item-content-mark type-3">
-                    Культурная программа
-                  </div>
-              
-                <div class="calendar__item-content-title">
-                  Марина Кравец
-                </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  директор по развитию новых каналов дистрибуции Rambler&amp;Co
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности
-                </div>
-              </th>
-              <th class="calendar__item-content mod-card ">
-                <div class="calendar__item-content-time">
-                  17:00 - 17:50
-                </div>
-              
-                  <div class="calendar__item-content-mark type-4">
-                    Стартапы
-                  </div>
-              
-                <div class="calendar__item-content-title">
-                  Александр Горник
-                </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  директор по развитию новых каналов дистрибуции Rambler&amp;Co
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности
-                </div>
-              </th>
-              <th class="calendar__item-content mod-card ">
-                <div class="calendar__item-content-time">
-                  17:00 - 17:50
-                </div>
-              
-                  <div class="calendar__item-content-mark type-2">
-                    бизнес
-                  </div>
-              
-                <div class="calendar__item-content-title">
-                  Андрей Бедняков
-                </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  директор по развитию новых каналов дистрибуции Rambler&amp;Co
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности
-                </div>
-              </th>
-              <th class="calendar__item-content mod-card ">
-                <div class="calendar__item-content-time">
-                  17:00 - 17:50
-                </div>
-              
-                  <div class="calendar__item-content-mark type-2">
-                    бизнес
-                  </div>
-              
-                <div class="calendar__item-content-title">
-                  Александр Горник
-                </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  директор по развитию новых каналов дистрибуции Rambler&amp;Co
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности
-                </div>
-              </th>
-              <th class="calendar__item-content mod-card ">
-                <div class="calendar__item-content-time">
-                  17:00 - 17:50
-                </div>
-              
-                  <div class="calendar__item-content-mark type-2">
-                    бизнес
-                  </div>
-              
-                <div class="calendar__item-content-title">
-                  Александр Горник
-                </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  директор по развитию новых каналов дистрибуции Rambler&amp;Co
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности
-                </div>
-              </th>
-              <th class="calendar__item-content mod-card ">
-                <div class="calendar__item-content-time">
-                  17:00 - 17:50
-                </div>
-              
-                  <div class="calendar__item-content-mark type-2">
-                    бизнес
-                  </div>
-              
-                <div class="calendar__item-content-title">
-                  Александр Горник
-                </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  директор по развитию новых каналов дистрибуции Rambler&amp;Co
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности
-                </div>
-              </th>
-            </tr>
-            <tr class="calendar__row-wrapper only-card" data-time="2021/12/02/18/00">
-              <th class="calendar__item-content">18:00</th>
-              <th class="calendar__item-content mod-card ">
-                <div class="calendar__item-content-time">
-                  18:00 - 18:50
-                </div>
-              
-                  <div class="calendar__item-content-mark type-2">
-                    бизнес
-                  </div>
-              
-                <div class="calendar__item-content-title">
-                  Александр Горник
-                </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  директор по развитию новых каналов дистрибуции Rambler&amp;Co
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности
-                </div>
-              </th>
-              <th class="calendar__item-content mod-card ">
-                <div class="calendar__item-content-time">
-                  18:00 - 18:50
-                </div>
-              
-                  <div class="calendar__item-content-mark type-2">
-                    бизнес
-                  </div>
-              
-                <div class="calendar__item-content-title">
-                  Марина Кравец
-                </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  директор по развитию новых каналов дистрибуции Rambler&amp;Co
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности
-                </div>
-              </th>
-              <th class="calendar__item-content mod-card ">
-                <div class="calendar__item-content-time">
-                  18:00 - 18:50
-                </div>
-              
-                  <div class="calendar__item-content-mark type-2">
-                    бизнес
-                  </div>
-              
-                <div class="calendar__item-content-title">
-                  Александр Горник
-                </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  директор по развитию новых каналов дистрибуции Rambler&amp;Co
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности
-                </div>
-              </th>
-              <th class="calendar__item-content mod-card ">
-                <div class="calendar__item-content-time">
-                  18:00 - 18:50
-                </div>
-              
-                  <div class="calendar__item-content-mark type-2">
-                    бизнес
-                  </div>
-              
-                <div class="calendar__item-content-title">
-                  Андрей Бедняков
-                </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  директор по развитию новых каналов дистрибуции Rambler&amp;Co
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности
-                </div>
-              </th>
-              <th class="calendar__item-content mod-card ">
-                <div class="calendar__item-content-time">
-                  18:00 - 18:50
-                </div>
-              
-                  <div class="calendar__item-content-mark type-2">
-                    бизнес
-                  </div>
-              
-                <div class="calendar__item-content-title">
-                  Александр Горник
-                </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  директор по развитию новых каналов дистрибуции Rambler&amp;Co
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности
-                </div>
-              </th>
-              <th class="calendar__item-content mod-card ">
-                <div class="calendar__item-content-time">
-                  18:00 - 18:50
-                </div>
-              
-                  <div class="calendar__item-content-mark type-2">
-                    бизнес
-                  </div>
-              
-                <div class="calendar__item-content-title">
-                  Александр Горник
-                </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  директор по развитию новых каналов дистрибуции Rambler&amp;Co
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности
-                </div>
-              </th>
-              <th class="calendar__item-content mod-card ">
-                <div class="calendar__item-content-time">
-                  18:00 - 18:50
-                </div>
-              
-                  <div class="calendar__item-content-mark type-2">
-                    бизнес
-                  </div>
-              
-                <div class="calendar__item-content-title">
-                  Александр Горник
-                </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  директор по развитию новых каналов дистрибуции Rambler&amp;Co
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности
-                </div>
-              </th>
-              <th class="calendar__item-content mod-card ">
-                <div class="calendar__item-content-time">
-                  18:00 - 18:50
-                </div>
-              
-                  <div class="calendar__item-content-mark type-2">
-                    бизнес
-                  </div>
-              
-                <div class="calendar__item-content-title">
-                  Андрей Бедняков
-                </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  директор по развитию новых каналов дистрибуции Rambler&amp;Co
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности
-                </div>
-              </th>
-              <th class="calendar__item-content mod-card ">
-                <div class="calendar__item-content-time">
-                  18:00 - 18:50
-                </div>
-              
-                  <div class="calendar__item-content-mark type-2">
-                    бизнес
-                  </div>
-              
-                <div class="calendar__item-content-title">
-                  Марина Кравец
-                </div>
-              
-                <div class="calendar__item-content-subtitle">
-                  директор по развитию новых каналов дистрибуции Rambler&amp;Co
-                </div>
-              
-                <div class="calendar__item-content-text">
-                  Agile разработка в agile бизнесе: от LESS и канбан до открытых зарплат и ответственности
-                </div>
-              </th>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+              </div>
 
-      <div class="calendar__modal-filter gl__sm-show js-modal-filter">
-        <div class="calendar__modal-filter-content gl__page-content">
-          <div class="calendar__modal-filter-header">
-            <div class="gl__subtitle calendar__modal-filter-header-subtitle">Фильтры</div>
-            <button type="button" class="calendar__modal-filter-close js-modal-filter-close"></button>
+              <div class="gl__error-block js-error-block">
+                <img src="img/old/img/error-form.svg" alt="" class="gl__error-icon">
+                <div class="gl__error-content">
+                  Ошибка
+                </div>
+              </div>
+
+              <button type="submit"
+                      class="gl__btn-submit js-btn-submit modal__btn-submit gl__main-btn mod-long mod-no-shadow mod-small">
+                Зарегистрироваться
+              </button>
+            </form>
+
+            <div class="modal__proposal">
+              Уже есть аккаунт?
+              <button type="submit" class="modal__proposal-link js-toggle-auth">
+                Войти
+              </button>
+            </div>
+
+            <div class="modal-auth__social-wrapper">
+              <div class="modal-auth__social-title-wrapper">
+                <div class="modal-auth__social-title-line"></div>
+                <div class="modal-auth__social-title">или войти через</div>
+              </div>
+
+              <ul class="modal-auth__social-list">
+                <li class="modal-auth__social-item">
+                  <a href="" class="modal-auth__social-link">
+                    <img src="img/social/google.svg" alt="" class="modal-auth__social-image">
+                  </a>
+                </li>
+                <li class="modal-auth__social-item">
+                  <a href="" class="modal-auth__social-link">
+                    <img src="img/social/fb.svg" alt="" class="modal-auth__social-image">
+                  </a>
+                </li>
+                <li class="modal-auth__social-item">
+                  <a href="" class="modal-auth__social-link">
+                    <img src="img/social/vk.svg" alt="" class="modal-auth__social-image">
+                  </a>
+                </li>
+                <li class="modal-auth__social-item">
+                  <a href="" class="modal-auth__social-link">
+                    <img src="img/social/yandex.svg" alt="" class="modal-auth__social-image">
+                  </a>
+                </li>
+                <li class="modal-auth__social-item">
+                  <a href="" class="modal-auth__social-link">
+                    <img src="img/social/mail.svg" alt="" class="modal-auth__social-image">
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
 
-          <div class="filters__selects-wrapper">
-            <div class="gl__select-container mod-filter-select" id="commonDates-calendar">
-              <label class="gl__select-wrapper">
-                <select class="gl__select js-select"
-                        data-parsley-class-handler="#commonDates-calendar"
-                        name="commonDates-calendar"
-                >
-                  <option class="gl__select-option" placeholder value="">Все даты</option>
-                  <option class="gl__select-option" value="option 1">option 1</option>
-                  <option class="gl__select-option" value="option 2">option 2</option>
-                  <option class="gl__select-option" value="option 3">option 3</option>
-                  <option class="gl__select-option" value="option 4">option 4</option>
-                  <option class="gl__select-option" value="option 5">option 5</option>
-                  <option class="gl__select-option" value="option 6">option 6</option>
-                  <option class="gl__select-option" value="option 7">option 7</option>
-                  <option class="gl__select-option" value="option 8">option 8</option>
-                  <option class="gl__select-option" value="option 9">option 9</option>
-                  <option class="gl__select-option" value="option 10">option 10</option>
-                  <option class="gl__select-option" value="option 12">option 12</option>
-                </select>
-              </label>
-            </div>
-            <div class="gl__select-container mod-filter-select" id="topics-calendar">
-              <label class="gl__select-wrapper">
-                <select class="gl__select js-select"
-                        data-parsley-class-handler="#topics-calendar"
-                        name="topics-calendar"
-                >
-                  <option class="gl__select-option" placeholder value="">Тема</option>
-                  <option class="gl__select-option" value="Вузы">Вузы</option>
-                  <option class="gl__select-option" value="Бизнес">Бизнес</option>
-                  <option class="gl__select-option" value="Культурная программа">Культурная программа</option>
-                  <option class="gl__select-option" value="Стартапы">Стартапы</option>
-                  <option class="gl__select-option" value="Органы гос.власти">Органы гос.власти</option>
+          <div class="auth-page__content js-auth-content">
+            <form data-need-validation data-parsley-validate data-parsley-focus="none" class="gl__form">
+              <div class="auth-page__title">
+                Восстановление пароля
+              </div>
+
+              <div class="modal__caption">
+                Для восстановления пароля введите ваш e-mail. На почту придет сообщение с ссылкой для восстановления.
+              </div>
+
+              <ul class="modal__inputs-list">
+                <li class="gl__input-container">
+                  <div class="gl__input-title">E-mail</div>
+                  <!-- 1) isPassword / isContacts - необходимы для js -->
+                  <!-- 2) inputType - html type input -->
+                  <!-- 3) required (true/false) - обязательно для заполнения -->
+                  <!-- 4) name - name input -->
+                  <!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
+                  <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
+                  <!-- 7) id - обычный id, например для первого пароля-->
+                  <!-- 8) parsleyType - для валидации (н-р email) -->
+                  <!-- 9) minLength - максимально допустимое к-во символов -->
+                  <!-- 10) maxLength - максимально допустимое к-во символов -->
+                  
+                  <label class="gl__input-wrapper  ">
+                      <span class="gl__input-mark-required"></span>
+                    <input type="email"
+                           class="gl__input "
+                           name="contact-"
                   
                   
+                           data-parsley-required=""
                   
                   
+                           placeholder="info@gmail.com"
                   
                   
-                </select>
-              </label>
-            </div>
-            <div class="gl__select-container mod-filter-select" id="auditoriums-calendar">
-              <label class="gl__select-wrapper">
-                <select class="gl__select js-select"
-                        data-parsley-class-handler="#auditoriums-calendar"
-                        name="auditoriums-calendar"
-                >
-                  <option class="gl__select-option" placeholder value="">Аудитория</option>
-                  <option class="gl__select-option" value="большой зал">большой зал</option>
-                  <option class="gl__select-option" value="аудитория 104">аудитория 104</option>
-                  <option class="gl__select-option" value="аудитория 105">аудитория 105</option>
-                  <option class="gl__select-option" value="аудитория 106">аудитория 106</option>
-                  <option class="gl__select-option" value="аудитория 107">аудитория 107</option>
-                  <option class="gl__select-option" value="аудитория 108">аудитория 108</option>
-                  <option class="gl__select-option" value="аудитория 109">аудитория 109</option>
-                  <option class="gl__select-option" value="аудитория 110">аудитория 110</option>
-                  <option class="gl__select-option" value="аудитория 111">аудитория 111</option>
-                  <option class="gl__select-option" value="аудитория 112">аудитория 112</option>
+                           data-parsley-type="email"
                   
-                </select>
-              </label>
-            </div>
-            <div class="gl__select-container mod-filter-select" id="speakers-calendar">
-              <label class="gl__select-wrapper">
-                <select class="gl__select js-select"
-                        data-parsley-class-handler="#speakers-calendar"
-                        name="speakers-calendar"
-                >
-                  <option class="gl__select-option" placeholder value="">Спикер</option>
-                  <option class="gl__select-option" value="Александр Горник">Александр Горник</option>
-                  <option class="gl__select-option" value="Андрей Бедняков">Андрей Бедняков</option>
-                  <option class="gl__select-option" value="Марина Кравец">Марина Кравец</option>
+                    >
                   
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                </select>
-              </label>
+                  </label>
+                </li>
+              </ul>
+
+              <div class="gl__error-block js-error-block">
+                <img src="img/old/img/error-form.svg" alt="" class="gl__error-icon">
+                <div class="gl__error-content">
+                  Ошибка
+                </div>
+              </div>
+
+              <button type="submit" class="gl__btn-submit js-btn-submit modal__btn-submit gl__main-btn mod-long mod-no-shadow mod-small">
+                Сбросить пароль
+              </button>
+            </form>
+          </div>
+
+          <div class="auth-page__content js-auth-content">
+            <div class="modal__success-text">
+              По адресу <span class="modal__entered-email">info@gmail.com</span> отправлена ссылка для подтверждения
+              электронной почты
             </div>
           </div>
         </div>
       </div>
-    </div>
-
+    </section>
 
   </main>
 

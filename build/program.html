@@ -903,15 +903,14 @@
                 <span class="gl__input-mark-required"></span>
               <input type="text"
                      class="gl__input "
-                     data-parsley-minlength="2"
                      name="name-participation"
-                     data-parsley-minlength="2"
             
             
                      data-parsley-required=""
             
             
                      placeholder="Иванов Анатолий Иванович"
+            
             
             
               >
@@ -935,15 +934,14 @@
                 <span class="gl__input-mark-required"></span>
               <input type="text"
                      class="gl__input "
-                     data-parsley-minlength="2"
                      name="organization-participation"
-                     data-parsley-minlength="2"
             
             
                      data-parsley-required=""
             
             
                      placeholder="Какую организацию Вы представляете?"
+            
             
             
               >
@@ -967,9 +965,7 @@
                 <span class="gl__input-mark-required"></span>
               <input type="email"
                      class="gl__input "
-                     data-parsley-minlength="2"
                      name="email-participation"
-                     data-parsley-minlength="2"
             
             
                      data-parsley-required=""
@@ -979,6 +975,7 @@
             
             
                      data-parsley-type="email"
+            
               >
             
             </label>
@@ -1001,15 +998,14 @@
                 <span class="gl__input-mark-required"></span>
               <input type="tel"
                      class="gl__input js-phone-input"
-                     data-parsley-minlength="2"
                      name="phone-participation"
-                     data-parsley-minlength="2"
             
             
                      data-parsley-required=""
             
             
                      placeholder="+7(888)888-88-88"
+            
             
             
               >
@@ -1098,15 +1094,14 @@
                 <span class="gl__input-mark-required"></span>
               <input type="text"
                      class="gl__input "
-                     data-parsley-minlength="2"
                      name="name-partner"
-                     data-parsley-minlength="2"
             
             
                      data-parsley-required=""
             
             
                      placeholder="Иванов Анатолий Иванович"
+            
             
             
               >
@@ -1130,15 +1125,14 @@
                 <span class="gl__input-mark-required"></span>
               <input type="text"
                      class="gl__input "
-                     data-parsley-minlength="2"
                      name="organization-partner"
-                     data-parsley-minlength="2"
             
             
                      data-parsley-required=""
             
             
                      placeholder="Какую организацию Вы представляете?"
+            
             
             
               >
@@ -1162,9 +1156,7 @@
                 <span class="gl__input-mark-required"></span>
               <input type="email"
                      class="gl__input "
-                     data-parsley-minlength="2"
                      name="email-partner"
-                     data-parsley-minlength="2"
             
             
                      data-parsley-required=""
@@ -1174,6 +1166,7 @@
             
             
                      data-parsley-type="email"
+            
               >
             
             </label>
@@ -1196,15 +1189,14 @@
                 <span class="gl__input-mark-required"></span>
               <input type="tel"
                      class="gl__input js-phone-input"
-                     data-parsley-minlength="2"
                      name="phone-partner"
-                     data-parsley-minlength="2"
             
             
                      data-parsley-required=""
             
             
                      placeholder="+7(888)888-88-88"
+            
             
             
               >
@@ -1295,15 +1287,14 @@
                   <span class="gl__input-mark-required"></span>
                 <input type="text"
                        class="gl__input "
-                       data-parsley-minlength="2"
                        name="contact-auth"
-                       data-parsley-minlength="2"
               
               
                        data-parsley-required=""
               
               
                        placeholder="Введите телефон или E-mail"
+              
               
               
                 >
@@ -1327,9 +1318,7 @@
                   <span class="gl__input-mark-required"></span>
                 <input type="password"
                        class="gl__input "
-                       data-parsley-minlength="2"
                        name="password-auth"
-                       data-parsley-minlength="2"
               
               
                        data-parsley-required=""
@@ -1339,6 +1328,8 @@
                        placeholder="Введите пароль"
               
               
+              
+                       data-parsley-minlength="8"
                 >
               
                   <button type="button" class="gl__input-password-btn">
@@ -1346,6 +1337,9 @@
                     <img src="img/modal/show-password.svg" alt="" class="gl__input-password-btn-image type-show">
                   </button>
               </label>
+            </li>
+            <li class="gl__input-container">
+              <button type="button" class="gl__input-hint-link">Забыли пароль?</button>
             </li>
           </ul>
   
@@ -1452,15 +1446,14 @@
                   <span class="gl__input-mark-required"></span>
                 <input type="text"
                        class="gl__input "
-                       data-parsley-minlength="2"
                        name="contact-registr"
-                       data-parsley-minlength="2"
               
               
                        data-parsley-required=""
               
               
                        placeholder="Введите телефон или E-mail"
+              
               
               
                 >
@@ -1484,9 +1477,7 @@
                   <span class="gl__input-mark-required"></span>
                 <input type="password"
                        class="gl__input "
-                       data-parsley-minlength="2"
                        name="password-registr"
-                       data-parsley-minlength="2"
               
               
                        data-parsley-required=""
@@ -1496,6 +1487,8 @@
                        placeholder="Введите пароль"
               
               
+              
+                       data-parsley-minlength="8"
                 >
               
                   <button type="button" class="gl__input-password-btn">
@@ -1521,9 +1514,7 @@
                     <span class="gl__input-mark-required"></span>
                   <input type="password"
                          class="gl__input "
-                         data-parsley-minlength="2"
                          name="password-dupl-registr"
-                         data-parsley-minlength="2"
                 
                 
                          data-parsley-required=""
@@ -1534,6 +1525,8 @@
                 
                          data-parsley-equalto="#password-registr"
                 
+                
+                         data-parsley-minlength="8"
                   >
                 
                     <button type="button" class="gl__input-password-btn">
@@ -1542,9 +1535,9 @@
                     </button>
                 </label>
               </li>
-              <li class="gl__input-container">
-                <button type="button" class="gl__input-hint-link">Забыли пароль?</button>
-              </li>
+            <li class="gl__input-container">
+              <button type="button" class="gl__input-hint-link">Забыли пароль?</button>
+            </li>
           </ul>
   
             <div class="gl__radio-input-container">
@@ -1714,9 +1707,7 @@
                   <span class="gl__input-mark-required"></span>
                 <input type="email"
                        class="gl__input "
-                       data-parsley-minlength="2"
                        name="contact-password"
-                       data-parsley-minlength="2"
               
               
                        data-parsley-required=""
@@ -1726,6 +1717,7 @@
               
               
                        data-parsley-type="email"
+              
                 >
               
               </label>
@@ -1841,15 +1833,14 @@
                 <span class="gl__input-mark-required"></span>
               <input type="text"
                      class="gl__input "
-                     data-parsley-minlength="2"
                      name="surname-payment-participation"
-                     data-parsley-minlength="2"
             
             
                      data-parsley-required=""
             
             
                      placeholder="Иванов"
+            
             
             
               >
@@ -1873,15 +1864,14 @@
                 <span class="gl__input-mark-required"></span>
               <input type="text"
                      class="gl__input "
-                     data-parsley-minlength="2"
                      name="name-payment-participation"
-                     data-parsley-minlength="2"
             
             
                      data-parsley-required=""
             
             
                      placeholder="Анатолий"
+            
             
             
               >
@@ -1905,15 +1895,14 @@
                 <span class="gl__input-mark-required"></span>
               <input type="text"
                      class="gl__input "
-                     data-parsley-minlength="2"
                      name="middle-name-payment-participation"
-                     data-parsley-minlength="2"
             
             
                      data-parsley-required=""
             
             
                      placeholder="Иванович"
+            
             
             
               >
@@ -1937,15 +1926,14 @@
                 <span class="gl__input-mark-required"></span>
               <input type="text"
                      class="gl__input "
-                     data-parsley-minlength="2"
                      name="messenger-payment-participation"
-                     data-parsley-minlength="2"
             
             
                      data-parsley-required=""
             
             
                      placeholder="info@gmail.com"
+            
             
             
               >
@@ -1969,15 +1957,14 @@
                 <span class="gl__input-mark-required"></span>
               <input type="text"
                      class="gl__input "
-                     data-parsley-minlength="2"
                      name="post-payment-participation"
-                     data-parsley-minlength="2"
             
             
                      data-parsley-required=""
             
             
                      placeholder="Укажите должность"
+            
             
             
               >
@@ -2001,15 +1988,14 @@
                 <span class="gl__input-mark-required"></span>
               <input type="text"
                      class="gl__input "
-                     data-parsley-minlength="2"
                      name="company-name-payment-participation"
-                     data-parsley-minlength="2"
             
             
                      data-parsley-required=""
             
             
                      placeholder="Название"
+            
             
             
               >
@@ -2033,15 +2019,14 @@
                 <span class="gl__input-mark-required"></span>
               <input type="text"
                      class="gl__input "
-                     data-parsley-minlength="2"
                      name="company-details-payment-participation"
-                     data-parsley-minlength="2"
             
             
                      data-parsley-required=""
             
             
                      placeholder="Укажите должность"
+            
             
             
               >
@@ -2213,15 +2198,14 @@
                   <span class="gl__input-mark-required"></span>
                 <input type="text"
                        class="gl__input "
-                       data-parsley-minlength="2"
                        name="name-to-book"
-                       data-parsley-minlength="2"
               
               
                        data-parsley-required=""
               
               
                        placeholder="Анатолий"
+              
               
               
                 >
@@ -2245,15 +2229,14 @@
                   <span class="gl__input-mark-required"></span>
                 <input type="text"
                        class="gl__input "
-                       data-parsley-minlength="2"
                        name="surname-to-book"
-                       data-parsley-minlength="2"
               
               
                        data-parsley-required=""
               
               
                        placeholder="Иванов"
+              
               
               
                 >
@@ -2277,15 +2260,14 @@
                   <span class="gl__input-mark-required"></span>
                 <input type="text"
                        class="gl__input "
-                       data-parsley-minlength="2"
                        name="place-work-to-book"
-                       data-parsley-minlength="2"
               
               
                        data-parsley-required=""
               
               
                        placeholder="Место работы"
+              
               
               
                 >
@@ -2309,9 +2291,7 @@
                   <span class="gl__input-mark-required"></span>
                 <input type="email"
                        class="gl__input "
-                       data-parsley-minlength="2"
                        name="email-to-book"
-                       data-parsley-minlength="2"
               
               
                        data-parsley-required=""
@@ -2321,6 +2301,7 @@
               
               
                        data-parsley-type="email"
+              
                 >
               
               </label>
@@ -2342,15 +2323,14 @@
                   <span class="gl__input-mark-required"></span>
                 <input type="tel"
                        class="gl__input js-phone-input"
-                       data-parsley-minlength="2"
                        name="phone-to-book"
-                       data-parsley-minlength="2"
               
               
                        data-parsley-required=""
               
               
                        placeholder="+7(888)888-88-88"
+              
               
               
                 >

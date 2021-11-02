@@ -1,0 +1,324 @@
+{{#extend "layout"}}
+  {{#content "main"}}
+
+    <section class="auth-page" id="auth-host">
+      <div class="gl__page-content">
+        <div class="auth-page__content-wrapper">
+          <div class="auth-page__content mod-show js-auth-content">
+            <form data-need-validation data-parsley-validate data-parsley-focus="none" class="gl__form">
+              <div class="auth-page__title">
+                Авторизация
+              </div>
+
+              <ul class="modal__inputs-list">
+                <li class="gl__input-container">
+                  <div class="gl__input-title">Телефон или E-mail</div>
+                  {{> controls/input-main
+                    required=true
+                    inputType="text"
+                    name="contact"
+                    type=type
+                    placeholder="Введите телефон или E-mail"
+                    isContacts=true
+                  }}
+                </li>
+                <li class="gl__input-container">
+                  <div class="gl__input-title">Пароль</div>
+                  {{> controls/input-main
+                    required=true
+                    inputType="password"
+                    name="password"
+                    type=type
+                    placeholder="Введите пароль"
+                    id="password-auth"
+                    isPassword=true
+                  }}
+                </li>
+              </ul>
+
+              <div class="gl__radio-input-container mod-hide">
+                <div class="gl__checkbox-item">
+                  <div class="gl__form-radio-wrapper">
+                    {{> controls/input-radio-checkbox
+                      required="true"
+                      name="agreement-processing"
+                      type=type
+                      inputType="checkbox"
+                      inputCaption="Я подтверждаю свое согласие на"
+                      inputCaptionLink="обработку персональных данных"
+                    }}
+                  </div>
+                </div>
+                <div class="gl__checkbox-item">
+                  <div class="gl__form-radio-wrapper">
+                    {{> controls/input-radio-checkbox
+                      required="true"
+                      name="agreement-processing-policy"
+                      type=type
+                      inputType="checkbox"
+                      inputCaption="Я подтверждаю свое согласие с"
+                      inputCaptionLink="политикой обработки персональных данных"
+                    }}
+                  </div>
+                </div>
+                <div class="gl__checkbox-item">
+                  <div class="gl__form-radio-wrapper">
+                    {{> controls/input-radio-checkbox
+                      required="true"
+                      name="agreement-processing-terms-contract"
+                      type=type
+                      inputType="checkbox"
+                      inputCaption="Я подтверждаю свое согласие с"
+                      inputCaptionLink="условиями договора оказания услуг"
+                    }}
+                  </div>
+                </div>
+              </div>
+
+              <div class="gl__error-block js-error-block">
+                <img src="img/old/img/error-form.svg" alt="" class="gl__error-icon">
+                <div class="gl__error-content">
+                  Ошибка
+                </div>
+              </div>
+
+              <button type="submit"
+                      class="gl__btn-submit js-btn-submit modal__btn-submit gl__main-btn mod-long mod-no-shadow mod-small">
+                Войти
+              </button>
+            </form>
+
+            <div class="modal__proposal">
+              Еще нет аккаунта?
+              <button type="submit" class="modal__proposal-link js-toggle-registr">
+                Зарегистрироваться
+              </button>
+            </div>
+
+            <div class="modal-auth__social-wrapper">
+              <div class="modal-auth__social-title-wrapper">
+                <div class="modal-auth__social-title-line"></div>
+                <div class="modal-auth__social-title">или войти через</div>
+              </div>
+
+              <ul class="modal-auth__social-list">
+                <li class="modal-auth__social-item">
+                  <a href="" class="modal-auth__social-link">
+                    <img src="img/social/google.svg" alt="" class="modal-auth__social-image">
+                  </a>
+                </li>
+                <li class="modal-auth__social-item">
+                  <a href="" class="modal-auth__social-link">
+                    <img src="img/social/fb.svg" alt="" class="modal-auth__social-image">
+                  </a>
+                </li>
+                <li class="modal-auth__social-item">
+                  <a href="" class="modal-auth__social-link">
+                    <img src="img/social/vk.svg" alt="" class="modal-auth__social-image">
+                  </a>
+                </li>
+                <li class="modal-auth__social-item">
+                  <a href="" class="modal-auth__social-link">
+                    <img src="img/social/yandex.svg" alt="" class="modal-auth__social-image">
+                  </a>
+                </li>
+                <li class="modal-auth__social-item">
+                  <a href="" class="modal-auth__social-link">
+                    <img src="img/social/mail.svg" alt="" class="modal-auth__social-image">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="auth-page__content js-auth-content">
+            <form data-need-validation data-parsley-validate data-parsley-focus="none" class="gl__form">
+              <div class="auth-page__title">
+                Регистрация
+              </div>
+
+              <ul class="modal__inputs-list">
+                <li class="gl__input-container">
+                  <div class="gl__input-title">Телефон или E-mail</div>
+                  {{> controls/input-main
+                    required=true
+                    inputType="text"
+                    name="contact"
+                    type=type
+                    placeholder="Введите телефон или E-mail"
+                    isContacts=true
+                  }}
+                </li>
+                <li class="gl__input-container">
+                  <div class="gl__input-title">Пароль</div>
+                  {{> controls/input-main
+                    required=true
+                    inputType="password"
+                    name="password"
+                    type=type
+                    placeholder="Введите пароль"
+                    id="password-registr"
+                    isPassword=true
+                  }}
+                </li>
+                <li class="gl__input-container">
+                  <div class="gl__input-title">Повторите пароль</div>
+                  {{> controls/input-main
+                    required=true
+                    inputType="password"
+                    name="password-dupl"
+                    type=type
+                    placeholder="Введите пароль"
+                    id="password"
+                    isPassword=true
+                    parsleyEqualto="#password-registr"
+                  }}
+                </li>
+                <li class="gl__input-container">
+                  <button type="submit" class="gl__input-hint-link js-forgo-password">Забыли пароль?</button>
+                </li>
+              </ul>
+
+              <div class="gl__radio-input-container">
+                <div class="gl__checkbox-item">
+                  <div class="gl__form-radio-wrapper">
+                    {{> controls/input-radio-checkbox
+                      required="true"
+                      name="agreement-processing"
+                      type=type
+                      inputType="checkbox"
+                      inputCaption="Я подтверждаю свое согласие на"
+                      inputCaptionLink="обработку персональных данных"
+                    }}
+                  </div>
+                </div>
+                <div class="gl__checkbox-item">
+                  <div class="gl__form-radio-wrapper">
+                    {{> controls/input-radio-checkbox
+                      required="true"
+                      name="agreement-processing-policy"
+                      type=type
+                      inputType="checkbox"
+                      inputCaption="Я подтверждаю свое согласие с"
+                      inputCaptionLink="политикой обработки персональных данных"
+                    }}
+                  </div>
+                </div>
+                <div class="gl__checkbox-item">
+                  <div class="gl__form-radio-wrapper">
+                    {{> controls/input-radio-checkbox
+                      required="true"
+                      name="agreement-processing-terms-contract"
+                      type=type
+                      inputType="checkbox"
+                      inputCaption="Я подтверждаю свое согласие с"
+                      inputCaptionLink="условиями договора оказания услуг"
+                    }}
+                  </div>
+                </div>
+              </div>
+
+              <div class="gl__error-block js-error-block">
+                <img src="img/old/img/error-form.svg" alt="" class="gl__error-icon">
+                <div class="gl__error-content">
+                  Ошибка
+                </div>
+              </div>
+
+              <button type="submit"
+                      class="gl__btn-submit js-btn-submit modal__btn-submit gl__main-btn mod-long mod-no-shadow mod-small">
+                Зарегистрироваться
+              </button>
+            </form>
+
+            <div class="modal__proposal">
+              Уже есть аккаунт?
+              <button type="submit" class="modal__proposal-link js-toggle-auth">
+                Войти
+              </button>
+            </div>
+
+            <div class="modal-auth__social-wrapper">
+              <div class="modal-auth__social-title-wrapper">
+                <div class="modal-auth__social-title-line"></div>
+                <div class="modal-auth__social-title">или войти через</div>
+              </div>
+
+              <ul class="modal-auth__social-list">
+                <li class="modal-auth__social-item">
+                  <a href="" class="modal-auth__social-link">
+                    <img src="img/social/google.svg" alt="" class="modal-auth__social-image">
+                  </a>
+                </li>
+                <li class="modal-auth__social-item">
+                  <a href="" class="modal-auth__social-link">
+                    <img src="img/social/fb.svg" alt="" class="modal-auth__social-image">
+                  </a>
+                </li>
+                <li class="modal-auth__social-item">
+                  <a href="" class="modal-auth__social-link">
+                    <img src="img/social/vk.svg" alt="" class="modal-auth__social-image">
+                  </a>
+                </li>
+                <li class="modal-auth__social-item">
+                  <a href="" class="modal-auth__social-link">
+                    <img src="img/social/yandex.svg" alt="" class="modal-auth__social-image">
+                  </a>
+                </li>
+                <li class="modal-auth__social-item">
+                  <a href="" class="modal-auth__social-link">
+                    <img src="img/social/mail.svg" alt="" class="modal-auth__social-image">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="auth-page__content js-auth-content">
+            <form data-need-validation data-parsley-validate data-parsley-focus="none" class="gl__form">
+              <div class="auth-page__title">
+                Восстановление пароля
+              </div>
+
+              <div class="modal__caption">
+                Для восстановления пароля введите ваш e-mail. На почту придет сообщение с ссылкой для восстановления.
+              </div>
+
+              <ul class="modal__inputs-list">
+                <li class="gl__input-container">
+                  <div class="gl__input-title">E-mail</div>
+                  {{> controls/input-main
+                    required=true
+                    inputType="email"
+                    name="contact"
+                    type=type
+                    placeholder="info@gmail.com"
+                    parsleyType="email"
+                  }}
+                </li>
+              </ul>
+
+              <div class="gl__error-block js-error-block">
+                <img src="img/old/img/error-form.svg" alt="" class="gl__error-icon">
+                <div class="gl__error-content">
+                  Ошибка
+                </div>
+              </div>
+
+              <button type="submit" class="gl__btn-submit js-btn-submit modal__btn-submit gl__main-btn mod-long mod-no-shadow mod-small">
+                Сбросить пароль
+              </button>
+            </form>
+          </div>
+
+          <div class="auth-page__content js-auth-content">
+            <div class="modal__success-text">
+              По адресу <span class="modal__entered-email">info@gmail.com</span> отправлена ссылка для подтверждения
+              электронной почты
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  {{/content}}
+{{/extend}}

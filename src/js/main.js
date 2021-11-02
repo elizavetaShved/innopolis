@@ -27,6 +27,7 @@ import { ProgramPage } from './program-page';
 import initDropDownMenu from './functions/initDropDownMenu';
 import inputSearchInit from './functions/controlsInit/inputSearchInit';
 import timeMask from './functions/timeMask';
+import { AuthComponent } from './components/auth-component';
 
 document.addEventListener('DOMContentLoaded', function () {
   // layout
@@ -56,6 +57,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Программы page
   new ProgramPage();
+
+  // Авторизация page
+  new AuthComponent();
 
   // common
   polyfills();

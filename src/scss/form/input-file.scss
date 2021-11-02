@@ -14,6 +14,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    height: auto;
+
+    .parsley-errors-list {
+      height: 1.6rem;
+      .parsley-required {
+        position: absolute;
+        bottom: -1.6rem;
+        left: 0;
+      }
+    }
 
     &.mod-filled {
       .gl__input {

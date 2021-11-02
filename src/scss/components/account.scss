@@ -205,3 +205,20 @@
     opacity: 0;
   }
 }
+
+.account__form-save-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 1.4rem 3.2rem 1.4rem 2.2rem;
+  background-color: rgba(97, 189, 81, .2);
+  border-radius: 25px;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  white-space: nowrap;
+}
+
+.account__form-save-image {
+  height: 2.4rem;
+  margin-right: 2.2rem;
+}
+

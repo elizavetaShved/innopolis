@@ -5,7 +5,14 @@
   &.parsley-error {
     .choices__inner {
       @extend %input-error;
+      margin-bottom: 1.6rem;
     }
+  }
+
+  .parsley-errors-list {
+    position: absolute;
+    bottom: -1.6rem;
+    left: 0;
   }
 
   &.mod-filter-select {
@@ -53,7 +60,7 @@
     min-height: auto;
 
     @include for-bg-down {
-      padding: .9rem 2rem !important;
+      padding: 1.4rem 2rem !important;
     }
   }
 

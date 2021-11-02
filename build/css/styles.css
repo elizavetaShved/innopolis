@@ -1870,7 +1870,11 @@ button.swiper-pagination-bullet {
     display: none !important; } }
 
 .gl__form .parsley-errors-list {
-  display: none; }
+  color: var(--btn-color);
+  font-size: 1.2rem;
+  line-height: 1;
+  margin-top: 0.4rem;
+  margin-left: 2.2rem; }
   .gl__form .parsley-errors-list + .gl__radio-input-caption {
     color: var(--btn-color); }
 
@@ -1922,12 +1926,12 @@ button.swiper-pagination-bullet {
   border-radius: 3rem !important; }
   @media screen and (max-width: 1024px) {
     .gl__input {
-      padding: 1rem 2rem !important; } }
+      padding: 1.4rem 2rem !important; } }
   .gl__input.mod-textarea {
     height: 15rem !important;
     resize: none;
     border: 2px solid transparent; }
-  .gl__input.mod-search + ul {
+  .gl__input.mod-search + ul:not(.parsley-errors-list) {
     background: var(--pale-secondary-color);
     -webkit-box-shadow: 0 0 1rem rgba(10, 39, 66, 0.1);
             box-shadow: 0 0 1rem rgba(10, 39, 66, 0.1);
@@ -1937,12 +1941,12 @@ button.swiper-pagination-bullet {
     padding: .6rem 0;
     position: absolute;
     z-index: 3; }
-    .gl__input.mod-search + ul li, .gl__input.mod-search + ul .no_result {
+    .gl__input.mod-search + ul:not(.parsley-errors-list) li, .gl__input.mod-search + ul:not(.parsley-errors-list) .no_result {
       font-size: 14px;
       color: var(--main-color);
       padding: 1rem;
       cursor: pointer; }
-      .gl__input.mod-search + ul li:hover, .gl__input.mod-search + ul li[aria-selected=true], .gl__input.mod-search + ul .no_result:hover, .gl__input.mod-search + ul .no_result[aria-selected=true] {
+      .gl__input.mod-search + ul:not(.parsley-errors-list) li:hover, .gl__input.mod-search + ul:not(.parsley-errors-list) li[aria-selected=true], .gl__input.mod-search + ul:not(.parsley-errors-list) .no_result:hover, .gl__input.mod-search + ul:not(.parsley-errors-list) .no_result[aria-selected=true] {
         background: var(--muted-color);
         color: white; }
 
@@ -1963,6 +1967,8 @@ button.swiper-pagination-bullet {
 
 .gl__radio-input-container {
   margin-top: 4rem; }
+  .gl__radio-input-container.mod-hide {
+    display: none; }
   @media screen and (max-width: 1400px) {
     .gl__radio-input-container {
       margin-top: 3rem; } }
@@ -2021,10 +2027,11 @@ button.swiper-pagination-bullet {
 
 .gl__input-password-btn {
   position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  top: 1.5rem;
   right: 2.2rem; }
+  @media screen and (max-width: 1024px) {
+    .gl__input-password-btn {
+      top: 0.8rem; } }
   .gl__input-password-btn.mod-show-password .gl__input-password-btn-image.type-show {
     display: block; }
   .gl__input-password-btn.mod-show-password .gl__input-password-btn-image.type-hide {
@@ -2040,10 +2047,11 @@ button.swiper-pagination-bullet {
 .gl__input-icon {
   position: absolute;
   height: 2.4rem;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  top: 1.4rem;
   right: 2.4rem; }
+  @media screen and (max-width: 1024px) {
+    .gl__input-icon {
+      top: .8rem; } }
 
 .gl__datepicker-container {
   position: relative;
@@ -2140,7 +2148,14 @@ button.swiper-pagination-bullet {
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  height: auto; }
+  .gl__input-wrapper.mod-file .parsley-errors-list {
+    height: 1.6rem; }
+    .gl__input-wrapper.mod-file .parsley-errors-list .parsley-required {
+      position: absolute;
+      bottom: -1.6rem;
+      left: 0; }
   .gl__input-wrapper.mod-file.mod-filled .gl__input {
     background-color: #f0f9ee !important;
     border-color: #b3dfac; }
@@ -2181,6 +2196,10 @@ button.swiper-pagination-bullet {
 .gl__form-radio-wrapper {
   margin-left: -7rem;
   margin-bottom: -2.5rem; }
+  .gl__form-radio-wrapper .parsley-errors-list {
+    margin-top: -1.8rem;
+    margin-bottom: 2rem;
+    margin-left: 10.6rem; }
 
 .gl__radio-checkbox-input-wrapper {
   cursor: pointer;
@@ -2267,6 +2286,12 @@ button.swiper-pagination-bullet {
 .gl__select-container {
   display: inline-block;
   position: relative; }
+  .gl__select-container.parsley-error .choices__inner {
+    margin-bottom: 1.6rem; }
+  .gl__select-container .parsley-errors-list {
+    position: absolute;
+    bottom: -1.6rem;
+    left: 0; }
   .gl__select-container.mod-filter-select {
     margin-left: 1rem;
     margin-bottom: 1rem; }
@@ -2303,7 +2328,7 @@ button.swiper-pagination-bullet {
     min-height: auto; }
     @media screen and (max-width: 1024px) {
       .gl__select-wrapper .choices__inner {
-        padding: .9rem 2rem !important; } }
+        padding: 1.4rem 2rem !important; } }
   .gl__select-wrapper .choices[data-type*=select-one] .choices__inner {
     padding-bottom: 0; }
   .gl__select-wrapper .choices__list--single {
@@ -8337,6 +8362,24 @@ html.remodal-is-locked {
   pointer-events: none;
   opacity: 0; }
 
+.account__form-save-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.4rem 3.2rem 1.4rem 2.2rem;
+  background-color: rgba(97, 189, 81, 0.2);
+  border-radius: 25px;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  white-space: nowrap; }
+
+.account__form-save-image {
+  height: 2.4rem;
+  margin-right: 2.2rem; }
+
 .profile__form-radio-container {
   margin-bottom: 4rem; }
 
@@ -9534,3 +9577,42 @@ html.remodal-is-locked {
 
 .booking-calendar__btn-show-more {
   margin-top: 4rem; }
+
+.auth-page {
+  padding: 5rem 6rem; }
+  @media screen and (max-width: 768px) {
+    .auth-page {
+      padding: 2.6rem 0 3rem; } }
+  .auth-page .gl__input-container {
+    margin-bottom: 2rem; }
+    .auth-page .gl__input-container:last-child {
+      margin-bottom: 0; }
+
+.auth-page__content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.auth-page__content {
+  max-width: 42.6rem; }
+  .auth-page__content:not(.mod-show) {
+    display: none; }
+
+.auth-page__title {
+  font-weight: bold;
+  font-size: 3.6rem;
+  line-height: 4rem;
+  margin-bottom: 6.6rem;
+  text-align: center; }
+  @media screen and (max-width: 768px) {
+    .auth-page__title {
+      font-size: 2.6rem;
+      line-height: 3rem;
+      margin-bottom: 4rem; } }

@@ -15,7 +15,6 @@
   {{/if}}
   <input type="{{inputType}}"
          class="gl__input {{#if isPhone }}js-phone-input{{/if}}{{#if isSearch }}mod-search js-input-search{{/if}}{{#if isTime }}js-time-input{{/if}}"
-         data-parsley-minlength="2"
          name="{{name}}-{{type}}"
     {{#if isSearch }}
          dir="ltr" spellcheck=false autocorrect="off" autocomplete="off" autocapitalize="off"
@@ -24,8 +23,6 @@
     {{/if}}
     {{#if minLength }}
          data-parsley-minlength="{{ minLength }}"
-    {{else}}
-         data-parsley-minlength="2"
     {{/if}}
 
     {{#if maxLength }}
@@ -51,6 +48,10 @@
     {{#if parsleyType }}
          data-parsley-type="{{ parsleyType }}"
     {{/if}}
+
+  {{#if isPassword }}
+         data-parsley-minlength="8"
+  {{/if}}
   >
 
   {{#if isPassword }}

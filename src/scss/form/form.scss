@@ -2,7 +2,11 @@
 
 .gl__form {
   .parsley-errors-list {
-    display: none;
+    color: var(--btn-color);
+    font-size: 1.2rem;
+    line-height: 1;
+    margin-top: 0.4rem;
+    margin-left: 2.2rem;
 
     + .gl__radio-input-caption {
       color: var(--btn-color);
@@ -77,7 +81,7 @@
   border-radius: 3rem !important;
 
   @include for-bg-down {
-    padding: 1rem 2rem !important;
+    padding: 1.4rem 2rem !important;
   }
 
   &.mod-textarea {
@@ -89,24 +93,26 @@
 
   &.mod-search {
     + ul {
-      background: var(--pale-secondary-color);
-      box-shadow: 0 0 1rem rgba(#0a2742, 0.1);
-      border-radius: 16px;
-      margin-top: 1rem;
-      overflow: hidden;
-      padding: .6rem 0;
-      position: absolute;
-      z-index: 3;
+      &:not(.parsley-errors-list) {
+        background: var(--pale-secondary-color);
+        box-shadow: 0 0 1rem rgba(#0a2742, 0.1);
+        border-radius: 16px;
+        margin-top: 1rem;
+        overflow: hidden;
+        padding: .6rem 0;
+        position: absolute;
+        z-index: 3;
 
-      li, .no_result {
-        font-size: 14px;
-        color: var(--main-color);
-        padding: 1rem;
-        cursor: pointer;
+        li, .no_result {
+          font-size: 14px;
+          color: var(--main-color);
+          padding: 1rem;
+          cursor: pointer;
 
-        &:hover, &[aria-selected=true] {
-          background: var(--muted-color);
-          color: white;
+          &:hover, &[aria-selected=true] {
+            background: var(--muted-color);
+            color: white;
+          }
         }
       }
     }
@@ -132,6 +138,10 @@
 
 .gl__radio-input-container {
   margin-top: 4rem;
+
+  &.mod-hide {
+    display: none;
+  }
 
   @include for-fl-down {
     margin-top: 3rem;
@@ -201,9 +211,12 @@
 
 .gl__input-password-btn {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 1.5rem;
   right: 2.2rem;
+
+  @include for-bg-down {
+    top: 0.8rem;
+  }
 
   &.mod-show-password {
     .gl__input-password-btn-image {
@@ -233,7 +246,10 @@
 .gl__input-icon {
   position: absolute;
   height: 2.4rem;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 1.4rem;
   right: 2.4rem;
+
+  @include for-bg-down {
+    top: .8rem;
+  }
 }
