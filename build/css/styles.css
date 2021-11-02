@@ -6385,10 +6385,8 @@ html.remodal-is-locked {
     opacity: .6; }
 
 .partners__link, .partners__link-image {
-  max-height: 3.4rem; }
-  @media screen and (max-width: 768px) {
-    .partners__link, .partners__link-image {
-      max-height: 2.6rem; } }
+  max-height: 4.4rem;
+  max-width: 14rem; }
 
 .partners__link {
   fill: var(--secondary-color);
