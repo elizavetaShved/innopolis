@@ -77,14 +77,18 @@ export class AccountPage {
       const btnNaturalPerson = modal.hostElem.querySelector('.js-natural-person');
       const btnLegalPerson = modal.hostElem.querySelector('.js-legal-person');
 
-      btnNaturalPerson.onclick = () => {
-        modalMoinContentElem.classList.add('mod-hide');
-        modalNaturalContentElem.classList.remove('mod-hide');
+      if (btnNaturalPerson) {
+        btnNaturalPerson.onclick = () => {
+          modalMoinContentElem.classList.add('mod-hide');
+          modalNaturalContentElem.classList.remove('mod-hide');
+        }
       }
 
-      btnLegalPerson.onclick = () => {
-        modalMoinContentElem.classList.add('mod-hide');
-        modalLegalContentElem.classList.remove('mod-hide');
+      if (btnLegalPerson) {
+        btnLegalPerson.onclick = () => {
+          modalMoinContentElem.classList.add('mod-hide');
+          modalLegalContentElem.classList.remove('mod-hide');
+        }
       }
     }
 
