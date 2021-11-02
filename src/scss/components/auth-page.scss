@@ -21,7 +21,11 @@
 }
 
 .auth-page__content {
-  max-width: 42.6rem;
+  width: 42.6rem;
+
+  @include for-xxs-down {
+    width: 100%;
+  }
 
   &:not(.mod-show) {
     display: none;

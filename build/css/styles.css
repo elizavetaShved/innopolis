@@ -9410,7 +9410,10 @@ html.remodal-is-locked {
           align-items: center; }
 
 .auth-page__content {
-  max-width: 42.6rem; }
+  width: 42.6rem; }
+  @media screen and (max-width: 426px) {
+    .auth-page__content {
+      width: 100%; } }
   .auth-page__content:not(.mod-show) {
     display: none; }
 
