@@ -10,6 +10,7 @@
   <a class="hint__link" style="display: block; padding: 6px; font-size: 16px" href="/innopolis/build/contacts.html">Контакты</a>
   <a class="hint__link" style="display: block; padding: 6px; font-size: 16px" href="/innopolis/build/partners.html">Партнёры</a>
   <a class="hint__link" style="display: block; padding: 6px; font-size: 16px" href="/innopolis/build/program.html">Программа</a>
+  <a class="hint__link" style="display: block; padding: 6px; font-size: 16px" href="/innopolis/build/auth.html">Авторизация</a>
 </div>
 </body>
 
