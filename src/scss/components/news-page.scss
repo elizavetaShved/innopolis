@@ -98,6 +98,12 @@
 .news-page__image {
   height: clamp(20.5rem, 50rem, 50.6rem);
   object-fit: contain;
+  max-width: 100%;
+
+  @include for-bg-down {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .news-page__video-wrapper {
@@ -214,7 +220,7 @@
   transition: fill 250ms;
 }
 
-.news-page__image-wrapper, .news-page__news-list, .news-page__text-wrapper, .news-page__video-container, .news-page__slider {
+.news-page__image, .news-page__news-list, .news-page__text-wrapper, .news-page__video-container, .news-page__slider {
   margin-bottom: 6.6rem;
 
   @include for-bg-down {
@@ -234,12 +240,13 @@
   }
 }
 
-.news-page__text-wrapper {
+.news-page__text-wrapper, .about-block__inner {
   a {
+    color: var(--btn-color);
+    text-decoration: underline;
     transition: color 50ms;
 
     &:hover {
-      text-decoration: underline;
       color: var(--secondary-color);
     }
   }

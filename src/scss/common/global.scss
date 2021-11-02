@@ -216,3 +216,11 @@ body {
   }
 }
 
+font.notetext {
+  color: var(--btn-color) !important;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  display: block;
+}
