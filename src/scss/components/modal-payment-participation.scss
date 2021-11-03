@@ -3,9 +3,10 @@
   font-weight: 600;
   font-size: 1.4rem;
   line-height: 1.8rem;
+  margin-top: 2rem;
 
-  & + & {
-    margin-top: 2rem;
+  &:first-child {
+    margin-top: 0;
   }
 }
 

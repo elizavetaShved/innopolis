@@ -7362,9 +7362,10 @@ html.remodal-is-locked {
   padding: 1.6rem;
   font-weight: 600;
   font-size: 1.4rem;
-  line-height: 1.8rem; }
-  .modal-payment-participation__btn + .modal-payment-participation__btn {
-    margin-top: 2rem; }
+  line-height: 1.8rem;
+  margin-top: 2rem; }
+  .modal-payment-participation__btn:first-child {
+    margin-top: 0; }
 
 .modal-payment-participation__natural-person-content {
   display: -webkit-box;
