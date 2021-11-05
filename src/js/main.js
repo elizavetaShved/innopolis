@@ -80,6 +80,9 @@ document.addEventListener('DOMContentLoaded', function () {
   inputSearchInit();
 
   new ModalCookies();
+
+  window.initCalendarPage = new CalendarPage();
+  window.initCalendarPage = selectInit();
 });
 
 window.addEventListener('load', function () {
