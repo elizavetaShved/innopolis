@@ -84,10 +84,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   new ModalCookies();
 
-  window.initCalendarPage = initCalendarPage();
-  window.selectInit = selectInit();
-  window.openNaturalPerson = openNaturalPerson();
-  window.openLegalPerson = openLegalPerson();
+  window.initCalendarPage = initCalendarPage;
+  window.selectInit = selectInit;
+  window.openNaturalPerson = openNaturalPerson;
+  window.openLegalPerson = openLegalPerson;
 });
 
 window.addEventListener('load', function () {
