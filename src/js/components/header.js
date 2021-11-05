@@ -32,14 +32,6 @@ export class Header {
 
     const mobileBox1 = new MobileBox(isOpen, btnBurger);
 
-    if (document.location.href.split('?')[1] && document.location.href.split('?')[1].includes('lang=')) {
-      const currentLangName = document.location.href.split('lang=');
-      const indexCurrentLang = LANG_ARR.findIndex(langModel => currentLangName.includes(langModel.name));
-      this.setLang(indexCurrentLang);
-    } else {
-      this.setLang(0);
-    }
-
     btnBurger.onclick = () => {
       if (!isOpen) {
         mobileBox1.isOpenMobileBox();
@@ -62,30 +54,40 @@ export class Header {
       }
     }
 
-    selectedItemElem.onclick = () => {
-      this.toggleSelect();
-    }
-
-    document.addEventListener('click', e => {
-      if (this.isOpenSelect && !checkExistParent(e.target, this.selectWrapperElem)) {
-        this.toggleSelect();
-      }
-    })
-
-    this.optionSelectElems.forEach(optionElem => {
-      optionElem.onclick = () => {
-        const indexCurrentLang = LANG_ARR.findIndex(langModel => langModel.value === optionElem.innerText);
+    if (this.selectWrapperElem) {
+      if (document.location.href.split('?')[1] && document.location.href.split('?')[1].includes('lang=')) {
+        const currentLangName = document.location.href.split('lang=');
+        const indexCurrentLang = LANG_ARR.findIndex(langModel => currentLangName.includes(langModel.name));
         this.setLang(indexCurrentLang);
-        this.toggleSelect();
-        const langUrlParam = document.location.href.split('lang=')[1];
-        if (langUrlParam) {
-          const nameParam = langUrlParam.split('/')[0] || langUrlParam;
-          document.location.href = document.location.href.replace(`lang=${ nameParam }`, `lang=${ LANG_ARR[indexCurrentLang].name }`)
-        } else {
-          document.location.href += `?lang=${ LANG_ARR[indexCurrentLang].name }`;
-        }
+      } else {
+        this.setLang(0);
       }
-    })
+
+      selectedItemElem.onclick = () => {
+        this.toggleSelect();
+      }
+
+      document.addEventListener('click', e => {
+        if (this.isOpenSelect && !checkExistParent(e.target, this.selectWrapperElem)) {
+          this.toggleSelect();
+        }
+      })
+
+      this.optionSelectElems.forEach(optionElem => {
+        optionElem.onclick = () => {
+          const indexCurrentLang = LANG_ARR.findIndex(langModel => langModel.value === optionElem.innerText);
+          this.setLang(indexCurrentLang);
+          this.toggleSelect();
+          const langUrlParam = document.location.href.split('lang=')[1];
+          if (langUrlParam) {
+            const nameParam = langUrlParam.split('/')[0] || langUrlParam;
+            document.location.href = document.location.href.replace(`lang=${ nameParam }`, `lang=${ LANG_ARR[indexCurrentLang].name }`)
+          } else {
+            document.location.href += `?lang=${ LANG_ARR[indexCurrentLang].name }`;
+          }
+        }
+      })
+    }
   }
 
   toggleSelect() {
