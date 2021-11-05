@@ -28,6 +28,9 @@ import initDropDownMenu from './functions/initDropDownMenu';
 import inputSearchInit from './functions/controlsInit/inputSearchInit';
 import timeMask from './functions/timeMask';
 import { AuthComponent } from './components/auth-component';
+import openNaturalPerson from './functions/initsBackendFunctions/openNaturalPerson';
+import openLegalPerson from './functions/initsBackendFunctions/openLegalPerson';
+import initCalendarPage from './functions/initsBackendFunctions/initCalendarPage';
 
 document.addEventListener('DOMContentLoaded', function () {
   // layout
@@ -81,8 +84,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   new ModalCookies();
 
-  window.initCalendarPage = new CalendarPage();
-  window.initCalendarPage = selectInit();
+  window.initCalendarPage = initCalendarPage();
+  window.selectInit = selectInit();
+  window.openNaturalPerson = openNaturalPerson();
+  window.openLegalPerson = openLegalPerson();
 });
 
 window.addEventListener('load', function () {
