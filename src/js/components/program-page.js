@@ -23,7 +23,7 @@ export class ProgramPage {
     rowsContentElems.forEach(rowContent => {
       const contentElem = rowContent.querySelector('.js-content');
       const speakersElem = rowContent.querySelector('.js-speakers');
-      if (contentElem.offsetHeight < speakersElem.offsetHeight) {
+      if (speakersElem && (contentElem.offsetHeight < speakersElem.offsetHeight)) {
         const btnElem = rowContent.querySelector('.js-drop-menu-btn');
         const menuContainerElem = rowContent.querySelector('.js-drop-menu-container');
         const menuElem = rowContent.querySelector('.js-drop-menu');

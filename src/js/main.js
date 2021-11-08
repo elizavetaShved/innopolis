@@ -23,7 +23,7 @@ import phoneMask from './functions/phoneMask';
 import dateMask from './functions/dateMask';
 import { ModalCookies } from './components/modal-cookies';
 import { ContactPage } from './components/contact-page';
-import { ProgramPage } from './program-page';
+import { ProgramPage } from './components/program-page';
 import initDropDownMenu from './functions/initDropDownMenu';
 import inputSearchInit from './functions/controlsInit/inputSearchInit';
 import timeMask from './functions/timeMask';
@@ -31,6 +31,7 @@ import { AuthComponent } from './components/auth-component';
 import openNaturalPerson from './functions/initsBackendFunctions/openNaturalPerson';
 import openLegalPerson from './functions/initsBackendFunctions/openLegalPerson';
 import initCalendarPage from './functions/initsBackendFunctions/initCalendarPage';
+import initProgramPage from './functions/initsBackendFunctions/initProgramPage';
 
 document.addEventListener('DOMContentLoaded', function () {
   // common
@@ -85,6 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
   new AuthComponent();
 
   window.initCalendarPage = initCalendarPage;
+  window.initProgramPage = initProgramPage;
   window.selectInit = selectInit;
   window.openNaturalPerson = openNaturalPerson;
   window.openLegalPerson = openLegalPerson;
