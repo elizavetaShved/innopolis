@@ -85,6 +85,10 @@
   }
 }
 
+.program-page__table-info-wrapper {
+  height: min-content;
+}
+
 .program-page__table-grey-row {
   background-color: #F0F0F1;
   display: flex;
@@ -183,12 +187,6 @@
   font-weight: 600;
   font-size: 1.2rem;
   line-height: 1.6rem;
-}
-
-.program-page__table-info-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .program-page__table-text-list {

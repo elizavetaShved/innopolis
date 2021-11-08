@@ -33,6 +33,26 @@ import openLegalPerson from './functions/initsBackendFunctions/openLegalPerson';
 import initCalendarPage from './functions/initsBackendFunctions/initCalendarPage';
 
 document.addEventListener('DOMContentLoaded', function () {
+  // common
+  polyfills();
+  detectTouch();
+  customSelects();
+  scrollByAnchor();
+  initDropDownMenu();
+
+  // маски
+  phoneMask();
+  dateMask();
+  timeMask();
+
+  // контролы
+  datepickerInit();
+  selectInit();
+  inputFileInit();
+  inputSearchInit();
+
+  new ModalCookies();
+
   // layout
   new Header();
   new StickyMenu();
@@ -63,26 +83,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Авторизация page
   new AuthComponent();
-
-  // common
-  polyfills();
-  detectTouch();
-  customSelects();
-  scrollByAnchor();
-  initDropDownMenu();
-
-  // маски
-  phoneMask();
-  dateMask();
-  timeMask();
-
-  // контролы
-  datepickerInit();
-  selectInit();
-  inputFileInit();
-  inputSearchInit();
-
-  new ModalCookies();
 
   window.initCalendarPage = initCalendarPage;
   window.selectInit = selectInit;
