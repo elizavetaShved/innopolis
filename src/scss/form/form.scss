@@ -255,11 +255,12 @@
 }
 
 .suggestions-suggestions {
-  border-radius: 20px;
-  border-color: transparent;
-  background-color: var(--pale-secondary-color);
-  padding: 0.8rem 0;
-  margin-top: .8rem;
+  border-radius: 20px !important;
+  border-color: transparent !important;
+  background-color: var(--pale-secondary-color) !important;
+  padding: 0.8rem 0 !important;
+  margin-top: .8rem !important;
+  box-shadow: 0 0 1rem rgba(10, 39, 66, .1) !important;
 }
 
 .suggestions-hint, .suggestions-suggestion {
@@ -276,6 +277,12 @@
     .suggestions-subtext {
       color: white !important;
     }
+  }
+}
+
+.suggestions-value {
+  &:after {
+    content: none !important;
   }
 }
 

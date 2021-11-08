@@ -2062,11 +2062,13 @@ button.swiper-pagination-bullet {
       top: .8rem; } }
 
 .suggestions-suggestions {
-  border-radius: 20px;
-  border-color: transparent;
-  background-color: var(--pale-secondary-color);
-  padding: 0.8rem 0;
-  margin-top: .8rem; }
+  border-radius: 20px !important;
+  border-color: transparent !important;
+  background-color: var(--pale-secondary-color) !important;
+  padding: 0.8rem 0 !important;
+  margin-top: .8rem !important;
+  -webkit-box-shadow: 0 0 1rem rgba(10, 39, 66, 0.1) !important;
+          box-shadow: 0 0 1rem rgba(10, 39, 66, 0.1) !important; }
 
 .suggestions-hint, .suggestions-suggestion {
   padding: .6rem 2.2rem !important;
@@ -2078,6 +2080,9 @@ button.swiper-pagination-bullet {
   color: white !important; }
   .suggestions-suggestion:hover .suggestions-subtext {
     color: white !important; }
+
+.suggestions-value:after {
+  content: none !important; }
 
 .suggestions-promo {
   display: none !important; }
@@ -2187,7 +2192,8 @@ button.swiper-pagination-bullet {
       left: 0; }
   .gl__input-wrapper.mod-file.mod-filled .gl__input {
     background-color: #f0f9ee !important;
-    border-color: #b3dfac; }
+    border-color: #b3dfac;
+    padding-right: 4rem !important; }
   .gl__input-wrapper.mod-file.mod-filled .gl__input-icon {
     display: none; }
   .gl__input-wrapper.mod-file.mod-filled .gl__file-btn-clear {
