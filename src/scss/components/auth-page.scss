@@ -21,7 +21,7 @@
 }
 
 .auth-page__content {
-  width: 42.6rem;
+  width: 43.6rem;
 
   @include for-xxs-down {
     width: 100%;
@@ -43,5 +43,23 @@
     font-size: 2.6rem;
     line-height: 3rem;
     margin-bottom: 4rem;
+  }
+
+  @include for-sm-down {
+    margin-bottom: 2rem;
+    text-align: start;
+  }
+}
+
+.auth-page__notification {
+  margin-bottom: 3.4rem;
+  white-space: initial;
+
+  @include for-md-down {
+    margin-bottom: 2rem;
+  }
+
+  &:not(.mod-show) {
+    display: none;
   }
 }

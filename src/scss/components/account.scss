@@ -215,10 +215,18 @@
   font-size: 1.4rem;
   line-height: 1.8rem;
   white-space: nowrap;
+
+  @include for-md-down {
+    padding: 1rem 2.8rem 1rem 1.8rem;
+  }
 }
 
 .account__form-save-image {
   height: 2.4rem;
   margin-right: 2.2rem;
+
+  @include for-md-down {
+    margin-right: 1.2rem;
+  }
 }
 

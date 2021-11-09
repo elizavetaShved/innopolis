@@ -8216,10 +8216,16 @@ html.remodal-is-locked {
   font-size: 1.4rem;
   line-height: 1.8rem;
   white-space: nowrap; }
+  @media screen and (max-width: 768px) {
+    .account__form-save-wrapper {
+      padding: 1rem 2.8rem 1rem 1.8rem; } }
 
 .account__form-save-image {
   height: 2.4rem;
   margin-right: 2.2rem; }
+  @media screen and (max-width: 768px) {
+    .account__form-save-image {
+      margin-right: 1.2rem; } }
 
 .profile__form-radio-container {
   margin-bottom: 4rem; }
@@ -9441,7 +9447,7 @@ html.remodal-is-locked {
           align-items: center; }
 
 .auth-page__content {
-  width: 42.6rem; }
+  width: 43.6rem; }
   @media screen and (max-width: 426px) {
     .auth-page__content {
       width: 100%; } }
@@ -9459,3 +9465,16 @@ html.remodal-is-locked {
       font-size: 2.6rem;
       line-height: 3rem;
       margin-bottom: 4rem; } }
+  @media screen and (max-width: 560px) {
+    .auth-page__title {
+      margin-bottom: 2rem;
+      text-align: start; } }
+
+.auth-page__notification {
+  margin-bottom: 3.4rem;
+  white-space: initial; }
+  @media screen and (max-width: 768px) {
+    .auth-page__notification {
+      margin-bottom: 2rem; } }
+  .auth-page__notification:not(.mod-show) {
+    display: none; }
