@@ -724,10 +724,15 @@ html.is-locked {
   position: relative;
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
-  height: calc(100vh - (var(--header-height) + var(--stycky-menu-height)));
 
   @include for-bg-down {
     height: auto;
+  }
+}
+
+@media screen and (min-height: 890px) and (min-width: 1200px) {
+  .hero-block {
+    height: calc(100vh - (var(--header-height) + var(--stycky-menu-height)));
   }
 }
 

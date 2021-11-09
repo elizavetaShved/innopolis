@@ -91,7 +91,6 @@ document.addEventListener('DOMContentLoaded', function () {
   window.selectInit = selectInit;
   window.openNaturalPerson = openNaturalPerson;
   window.openLegalPerson = openLegalPerson;
-  window.openPasswordResetNotification = openPasswordResetNotification;
 });
 
 window.addEventListener('load', function () {
