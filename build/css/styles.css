@@ -9479,5 +9479,11 @@ html.remodal-is-locked {
   @media screen and (max-width: 768px) {
     .auth-page__notification {
       margin-bottom: 2rem; } }
-  .auth-page__notification:not(.mod-show) {
-    display: none; }
+
+.auth-page__hint-container {
+  margin-top: 2rem; }
+
+.auth-page__hint-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }

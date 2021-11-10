@@ -58,8 +58,12 @@
   @include for-md-down {
     margin-bottom: 2rem;
   }
+}
 
-  &:not(.mod-show) {
-    display: none;
-  }
+.auth-page__hint-container {
+  margin-top: 2rem;
+}
+
+.auth-page__hint-wrapper {
+  display: flex;
 }

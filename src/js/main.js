@@ -32,7 +32,6 @@ import openNaturalPerson from './functions/initsBackendFunctions/openNaturalPers
 import openLegalPerson from './functions/initsBackendFunctions/openLegalPerson';
 import initCalendarPage from './functions/initsBackendFunctions/initCalendarPage';
 import initProgramPage from './functions/initsBackendFunctions/initProgramPage';
-import openPasswordResetNotification from './functions/initsBackendFunctions/openPasswordResetNotification';
 
 document.addEventListener('DOMContentLoaded', function () {
   // common
