@@ -8933,13 +8933,13 @@ a.contacts__grid-item-value {
     .program-page__table-title-mark {
       margin-left: 0;
       margin-top: 1rem; } }
-  .program-page__table-title-mark.mod-color-1 {
+  .program-page__table-title-mark.type-1 {
     background-color: #6372FF; }
-  .program-page__table-title-mark.mod-color-2 {
+  .program-page__table-title-mark.type-2 {
     background-color: #9681F2; }
-  .program-page__table-title-mark.mod-color-3 {
+  .program-page__table-title-mark.type-3 {
     background-color: #F88C8C; }
-  .program-page__table-title-mark.mod-color-4 {
+  .program-page__table-title-mark.type-4 {
     background-color: #61BD51; }
 
 .program-page__table-geolocation-wrapper {
