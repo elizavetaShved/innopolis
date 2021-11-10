@@ -164,86 +164,107 @@
           Контакты
         </h1>
 
-        <div class="contacts__grid-wrapper">
-          <div class="contacts__grid-item">
-            <div class="contacts__grid-item-caption">
-              место проведения
-            </div>
+        <div class="contacts__content-wrapper">
+          <div class="contacts__row-wrapper">
+            <div class="contacts__row-items mod-full-row">
+              <div class="contacts__item">
+                <div class="contacts__grid-item-caption">
+                  место проведения
+                </div>
 
-            <div class="contacts__grid-item-value">
-              <span class="no-wrap">Университетская улица 1</span>, Иннополис, Республика Татарстан, Россия, 420500
+                <div class="contacts__grid-item-value">
+                  Университетская улица 1, Иннополис, Республика Татарстан, Россия, 420500
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="contacts__grid-item">
-            <div class="contacts__grid-item-caption">
-              почта для свзи
-            </div>
+          <div class="contacts__row-wrapper">
+            <div class="contacts__row-items">
+              <div class="contacts__item">
+                <div class="contacts__grid-item-caption">
+                  Общая почта для связи
+                </div>
 
-            <a href="mailto:did@innopolis.ru" class="contacts__grid-item-value mod-link">
-              did@innopolis.ru
-            </a>
+                <a href="mailto:did@innopolis.ru" class="contacts__grid-item-value">
+                  did@innopolis.ru
+                </a>
+              </div>
+
+              <div class="contacts__item">
+                <div class="contacts__grid-item-caption">
+                  Контактный номер
+                </div>
+
+                <a href="tel:+78005501766" class="contacts__grid-item-value">
+                  8 (800) 550-17-66
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div class="contacts__grid-item">
-            <div class="contacts__grid-item-caption">
-              трансфер и проживание на форуме DID
+          <div class="contacts__row-wrapper">
+            <div class="contacts__row-caption-wrapper">
+              <div class="contacts__row-caption">
+                Забронировать гостиницу
+              </div>
+              <div class="contacts__row-caption-line"></div>
             </div>
 
-            <a href="mailto:travel_did@innopolis.ru" class="contacts__grid-item-value mod-link">
-              travel_did@innopolis.ru
-            </a>
+            <div class="contacts__row-items">
+              <div class="contacts__item">
+                <div class="contacts__grid-item-caption">
+                  Трансфер и проживание на форуме DID
+                </div>
+
+                <a href="mailto:travel_did@innopolis.ru" class="contacts__grid-item-value">
+                  travel_did@innopolis.ru
+                </a>
+              </div>
+
+              <div class="contacts__item">
+                <div class="contacts__grid-item-caption">
+                  Елена Бусыгина
+                </div>
+
+                <a href="tel:+79867139315" class="contacts__grid-item-value">
+                  +7 (986) 713 93-15
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div class="contacts__grid-item">
-            <div class="contacts__grid-item-caption">
-              контактный номер
+          <div class="contacts__row-wrapper">
+            <div class="contacts__row-caption-wrapper">
+              <div class="contacts__row-caption">
+                Забронировать авиабилеты
+              </div>
+              <div class="contacts__row-caption-line"></div>
             </div>
 
-            <a href="tel:+78005501766" class="contacts__grid-item-value mod-link">
-              8 (800) 550-17-66
-            </a>
+            <div class="contacts__row-items">
+              <div class="contacts__item">
+                <div class="contacts__grid-item-caption">
+                  Трансфер и проживание на форуме DID
+                </div>
+
+                <a href="mailto:travel_did@innopolis.ru" class="contacts__grid-item-value">
+                  travel_did@innopolis.ru
+                </a>
+              </div>
+
+              <div class="contacts__item">
+                <div class="contacts__grid-item-caption">
+                  Эльвира Егорова
+                </div>
+
+                <a href="tel:+79872694419" class="contacts__grid-item-value">
+                  +7 (987) 269 44-19
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-
-        <form class="contacts__form-wrapper">
-          <div class="contacts__input-wrapper">
-            <div class="contacts__input-title">подписаться на рассылку новостей</div>
-            <!-- 1) isPassword / isContacts - необходимы для js -->
-            <!-- 2) inputType - html type input -->
-            <!-- 3) required (true/false) - обязательно для заполнения -->
-            <!-- 4) name - name input -->
-            <!-- 5) type - вид родительского компонента, получаем из layout.html. Служит постфиксом для уникальности -->
-            <!-- 6) parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id) -->
-            <!-- 7) id - обычный id, например для первого пароля-->
-            <!-- 8) parsleyType - для валидации (н-р email) -->
-            <!-- 9) minLength - максимально допустимое к-во символов -->
-            <!-- 10) maxLength - максимально допустимое к-во символов -->
-            
-            <label class="gl__input-wrapper  ">
-                <span class="gl__input-mark-required"></span>
-              <input type="email"
-                     class="gl__input "
-                     name="subscribe-"
-            
-            
-                     data-parsley-required=""
-            
-            
-                     placeholder="Электронная почта"
-            
-            
-                     data-parsley-type="email"
-            
-              >
-            
-            </label>
-          </div>
-
-          <div class="contacts__form-btn-wrapper">
-            <button type="button" class="contacts__form-btn gl__main-btn mod-no-shadow js-btn-submit">Подписаться</button>
-          </div>
-        </form>
       </div>
 
       <div class="map" id="map-host">
