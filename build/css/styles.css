@@ -8160,11 +8160,7 @@ html.remodal-is-locked {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 2rem; }
-  .account__form-head.mod-center {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
+  margin-bottom: 4rem; }
   .account__form-head .gl__subtitle {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
@@ -8218,10 +8214,18 @@ html.remodal-is-locked {
   border-radius: 25px;
   font-size: 1.4rem;
   line-height: 1.8rem;
-  white-space: nowrap; }
+  white-space: nowrap;
+  margin-top: 5.6rem;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content; }
   @media screen and (max-width: 768px) {
     .account__form-save-wrapper {
-      padding: 1rem 2.8rem 1rem 1.8rem; } }
+      padding: 1rem 2.8rem 1rem 1.8rem;
+      margin-top: 3rem; } }
+  @media screen and (max-width: 560px) {
+    .account__form-save-wrapper {
+      margin-top: 2rem; } }
 
 .account__form-save-image {
   height: 2.4rem;
@@ -8229,6 +8233,11 @@ html.remodal-is-locked {
   @media screen and (max-width: 768px) {
     .account__form-save-image {
       margin-right: 1.2rem; } }
+
+.account__form-head-subtitle-wrapper {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto; }
 
 .profile__form-radio-container {
   margin-bottom: 4rem; }
@@ -8239,7 +8248,17 @@ html.remodal-is-locked {
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  margin-bottom: 5rem; }
+  @media screen and (min-width: 769px) {
+    .profile__participation-wrapper .gl__subtitle {
+      margin-bottom: 0; } }
+  @media screen and (max-width: 768px) {
+    .profile__participation-wrapper {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
 
 .profile__participation-mark {
   border-radius: 0 25px 25px 25px;
@@ -8388,7 +8407,8 @@ html.remodal-is-locked {
   letter-spacing: 1px; }
   @media screen and (max-width: 768px) {
     .profile__form-btn {
-      max-width: 33rem !important; } }
+      max-width: 33rem !important;
+      margin-top: 3rem; } }
   @media screen and (max-width: 560px) {
     .profile__form-btn {
       max-width: none !important; } }
@@ -8404,17 +8424,17 @@ html.remodal-is-locked {
   color: #737794; }
 
 .profile__error-wrapper {
-  opacity: 0;
   -webkit-transition: opacity 300ms;
   transition: opacity 300ms;
-  margin-left: 4rem; }
-  .profile__error-wrapper.mod-show {
-    opacity: 1; }
+  margin-left: 10rem; }
+  .profile__error-wrapper:not(.mod-show) {
+    display: none; }
   @media screen and (max-width: 768px) {
     .profile__error-wrapper {
       margin-left: 0;
       opacity: 1;
-      display: none; }
+      display: none;
+      margin-top: 3rem; }
       .profile__error-wrapper.mod-show {
         display: block; } }
 
@@ -9475,7 +9495,8 @@ html.remodal-is-locked {
 
 .auth-page__notification {
   margin-bottom: 3.4rem;
-  white-space: initial; }
+  white-space: initial;
+  width: auto; }
   @media screen and (max-width: 768px) {
     .auth-page__notification {
       margin-bottom: 2rem; } }

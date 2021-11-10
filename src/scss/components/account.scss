@@ -156,11 +156,7 @@
 .account__form-head {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2rem;
-
-  &.mod-center {
-    align-items: center;
-  }
+  margin-bottom: 4rem;
 
   .gl__subtitle {
     flex: 0 0 auto;
@@ -215,9 +211,16 @@
   font-size: 1.4rem;
   line-height: 1.8rem;
   white-space: nowrap;
+  margin-top: 5.6rem;
+  width: min-content;
 
   @include for-md-down {
     padding: 1rem 2.8rem 1rem 1.8rem;
+    margin-top: 3rem;
+  }
+
+  @include for-sm-down {
+    margin-top: 2rem;
   }
 }
 
@@ -230,3 +233,6 @@
   }
 }
 
+.account__form-head-subtitle-wrapper {
+  flex: 0 0 auto;
+}

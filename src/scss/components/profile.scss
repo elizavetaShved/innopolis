@@ -5,6 +5,17 @@
 .profile__participation-wrapper {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 5rem;
+
+  .gl__subtitle {
+    @include for-md-up {
+      margin-bottom: 0;
+    }
+  }
+
+  @include for-md-down {
+    flex-direction: column;
+  }
 }
 
 .profile__participation-mark {
@@ -159,7 +170,8 @@
   letter-spacing: 1px;
 
   @include for-md-down {
-    max-width: 33rem !important
+    max-width: 33rem !important;
+    margin-top: 3rem;
   }
 
   @include for-sm-down {
@@ -180,18 +192,18 @@
 }
 
 .profile__error-wrapper {
-  opacity: 0;
   transition: opacity 300ms;
-  margin-left: 4rem;
+  margin-left: 10rem;
 
-  &.mod-show {
-    opacity: 1;
+  &:not(.mod-show) {
+    display: none;
   }
 
   @include for-md-down {
     margin-left: 0;
     opacity: 1;
     display: none;
+    margin-top: 3rem;
 
     &.mod-show {
       display: block;

@@ -54,6 +54,7 @@
 .auth-page__notification {
   margin-bottom: 3.4rem;
   white-space: initial;
+  width: auto;
 
   @include for-md-down {
     margin-bottom: 2rem;
