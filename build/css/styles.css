@@ -6963,7 +6963,6 @@ html.remodal-is-locked {
 .program__filter-checkbox-content {
   font-weight: 600;
   font-size: 1.4rem;
-  white-space: nowrap;
   background-size: 1.8rem 1.8rem;
   -webkit-transition: background-color 350ms, color 350ms, background-image 100ms;
   transition: background-color 350ms, color 350ms, background-image 100ms;
@@ -7018,6 +7017,7 @@ html.remodal-is-locked {
 
 @media (max-width: 768px) {
   .program__content-item {
+    display: grid;
     grid-template-columns: 50px 1fr;
     grid-gap: 4rem 1.0rem;
     padding-top: 4.8rem;
@@ -7156,8 +7156,14 @@ html.remodal-is-locked {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 0;
-      -ms-flex: 0 1;
-          flex: 0 1; }
+      -ms-flex: 0 1 30rem;
+          flex: 0 1 30rem; }
+
+@media (max-width: 1024px) {
+  .program__content-author-wrapper {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 26rem;
+            flex: 0 1 26rem; } }
 
 .program__content-author-image-wrapper {
   width: 7.4rem;
