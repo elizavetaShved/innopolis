@@ -7137,6 +7137,9 @@ html.remodal-is-locked {
   background-position: top left;
   background-size: 1.6rem; }
 
+.program__content-info-geo:last-child {
+  margin-bottom: 0; }
+
 @media (max-width: 768px) {
   .program__content-info-geo {
     margin-right: 0;
