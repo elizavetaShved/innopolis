@@ -8515,6 +8515,10 @@ html.remodal-is-locked {
       margin-left: 3rem; } }
   .media__video-bnt:hover {
     text-decoration: underline; }
+  .media__video-bnt:disabled {
+    color: var(--main-color);
+    pointer-events: none;
+    opacity: .4; }
 
 .media__video-btn-img {
   height: 1.8rem;

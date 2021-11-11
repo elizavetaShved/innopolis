@@ -26,6 +26,12 @@
   &:hover {
     text-decoration: underline;
   }
+
+  &:disabled {
+    color: var(--main-color);
+    pointer-events: none;
+    opacity: .4;
+  }
 }
 
 .media__video-btn-img {
