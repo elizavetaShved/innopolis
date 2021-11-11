@@ -32,6 +32,7 @@ import openNaturalPerson from './functions/initsBackendFunctions/openNaturalPers
 import openLegalPerson from './functions/initsBackendFunctions/openLegalPerson';
 import initCalendarPage from './functions/initsBackendFunctions/initCalendarPage';
 import initProgramPage from './functions/initsBackendFunctions/initProgramPage';
+import { ChangePasswordComponent } from './components/change-password-component';
 
 document.addEventListener('DOMContentLoaded', function () {
   // common
@@ -84,6 +85,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Авторизация page
   new AuthComponent();
+
+  // Смена пароля page
+  new ChangePasswordComponent();
 
   window.initCalendarPage = initCalendarPage;
   window.initProgramPage = initProgramPage;
