@@ -8282,7 +8282,9 @@ html.remodal-is-locked {
   text-align: center;
   height: -webkit-min-content;
   height: -moz-min-content;
-  height: min-content; }
+  height: min-content;
+  -webkit-transition: background-color 250ms;
+  transition: background-color 250ms; }
   .profile__participation-mark.mod-no-start {
     background-color: var(--btn-color); }
   .profile__participation-mark.mod-in-progress {
@@ -8293,7 +8295,11 @@ html.remodal-is-locked {
     display: none; }
   .profile__participation-mark:disabled {
     background-color: #302463;
-    pointer-events: none; }
+    pointer-events: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
 
 .profile__form-inputs-list {
   display: grid;

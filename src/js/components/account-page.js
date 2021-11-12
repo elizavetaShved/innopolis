@@ -50,6 +50,8 @@ export class AccountPage {
 
     const btnsLocation = this.hostElem.querySelectorAll('.js-open-modal-location');
 
+    const participationCheckboxes = document.getElementsByName('participation-account');
+
     setTimeout(() => {
       this.checkDirections(false);
     }, 3000)
@@ -144,6 +146,16 @@ export class AccountPage {
         modal.isOpen();
         const modalLocationTitle = modal.hostElem.querySelector('.js-modal-location-title');
         modalLocationTitle.innerText = `${ btn.getAttribute('data-auditorium') }`;
+      }
+    })
+
+    participationCheckboxes.forEach(checkbox => {
+      checkbox.onchange = () => {
+        if (checkbox.value === 'online') {
+          btnPaymentParticipation.setAttribute('disabled', true);
+        } else if (checkbox.value === 'offline') {
+          btnPaymentParticipation.removeAttribute('disabled');
+        }
       }
     })
 

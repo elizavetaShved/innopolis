@@ -2,6 +2,9 @@
   <input type="{{ inputType }}"
          class="gl__radio-checkbox-input"
          name="{{name}}-{{type}}"
+    {{#if value }}
+         value="{{ this.value }}"
+    {{/if}}
     {{#if isChecked }}
          checked
     {{/if}}

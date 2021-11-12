@@ -30,6 +30,7 @@
   color: #fff;
   text-align: center;
   height: min-content;
+  transition: background-color 250ms;
 
   &.mod-no-start {
     background-color: var(--btn-color);
@@ -50,6 +51,7 @@
   &:disabled {
     background-color: #302463;
     pointer-events: none;
+    user-select: none;
   }
 }
 
