@@ -180,17 +180,17 @@
               Участие в форуме
             </h2>
         
-            <button type="button" class="profile__participation-mark mod-no-start mod-show" id="btn-payment-participation">
+            <button type="button" class="profile__participation-mark mod-no-start mod-show" id="btn-payment-participation" disabled>
               Оплатить участие
             </button>
         
-            <div class="profile__participation-mark mod-in-progress">
+            <button class="profile__participation-mark mod-in-progress">
               Оплата в обработке
-            </div>
+            </button>
         
-            <div class="profile__participation-mark mod-end">
+            <button class="profile__participation-mark mod-end">
               Оплачено
-            </div>
+            </button>
           </div>
         
           <form data-need-validation data-parsley-validate data-parsley-focus="none"
@@ -731,7 +731,7 @@
         
             <ul class="profile__form-inputs-list">
               <li class="gl__input-container">
-                <div class="gl__input-title mod-small">Дата приезда</div>
+                <div class="gl__input-title mod-small">Дата прибытия</div>
                 <!--
                 dateTypeBirth - для ДР совершеннолетние
                 dateTypeFuture - для будущей даты
@@ -765,7 +765,7 @@
                 </label>
               </li>
               <li class="gl__input-container">
-                <div class="gl__input-title mod-small">Время приезда</div>
+                <div class="gl__input-title mod-small">Время прибытия</div>
                 <!-- 1) isPassword / isContacts - необходимы для js -->
                 <!-- 2) inputType - html type input -->
                 <!-- 3) required (true/false) - обязательно для заполнения -->
@@ -785,7 +785,7 @@
                 
                 
                 
-                         placeholder="08:00"
+                         placeholder="время, указанное в билете"
                 
                 
                 
@@ -814,7 +814,7 @@
                 
                 
                 
-                         placeholder="08:00"
+                         placeholder="время, указанное в билете"
                 
                 
                          data-parsley-type="text"

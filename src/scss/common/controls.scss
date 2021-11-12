@@ -33,13 +33,13 @@
   justify-content: center;
   max-width: 20.0rem;
 
+  &:hover {
+    background-color: #ff2977;
+  }
+
   &:disabled {
     background-color: var(--disabled-color);
     pointer-events: none;
-  }
-
-  &:hover {
-    background-color: #ff2977;
   }
 
   &.mod-big {

@@ -100,17 +100,17 @@
     padding: 1rem;
   }
 
+  &:hover {
+    .news__navigate-navigate-btn {
+      fill: var(--secondary-color);
+    }
+  }
+
   &:disabled {
     pointer-events: none;
 
     .news__navigate-navigate-btn {
       fill: var(--disabled-color);
-    }
-  }
-
-  &:hover {
-    .news__navigate-navigate-btn {
-      fill: var(--secondary-color);
     }
   }
 }

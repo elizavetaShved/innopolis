@@ -114,11 +114,11 @@
       -ms-flex-pack: center;
           justify-content: center;
   max-width: 20.0rem; }
+  .gl__main-btn:hover {
+    background-color: #ff2977; }
   .gl__main-btn:disabled {
     background-color: var(--disabled-color);
     pointer-events: none; }
-  .gl__main-btn:hover {
-    background-color: #ff2977; }
   .gl__main-btn.mod-big {
     font-size: 2.4rem;
     padding: 3.4rem 6.0rem;
@@ -6115,12 +6115,12 @@ html.remodal-is-locked {
   @media screen and (max-width: 560px) {
     .news__navigate-navigate-btn-wrapper {
       padding: 1rem; } }
+  .news__navigate-navigate-btn-wrapper:hover .news__navigate-navigate-btn {
+    fill: var(--secondary-color); }
   .news__navigate-navigate-btn-wrapper:disabled {
     pointer-events: none; }
     .news__navigate-navigate-btn-wrapper:disabled .news__navigate-navigate-btn {
       fill: var(--disabled-color); }
-  .news__navigate-navigate-btn-wrapper:hover .news__navigate-navigate-btn {
-    fill: var(--secondary-color); }
 
 .news__navigate-navigate-btn {
   width: 5.6rem;
@@ -8291,6 +8291,9 @@ html.remodal-is-locked {
     background-color: #61BD51; }
   .profile__participation-mark:not(.mod-show) {
     display: none; }
+  .profile__participation-mark:disabled {
+    background-color: #302463;
+    pointer-events: none; }
 
 .profile__form-inputs-list {
   display: grid;

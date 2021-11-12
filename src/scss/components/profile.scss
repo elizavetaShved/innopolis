@@ -46,6 +46,11 @@
   &:not(.mod-show) {
     display: none;
   }
+
+  &:disabled {
+    background-color: #302463;
+    pointer-events: none;
+  }
 }
 
 .profile__form-inputs-list {
