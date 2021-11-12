@@ -20,16 +20,28 @@ export class ProgramPage {
       modalFilter.classList.remove('mod-show')
     }
 
-    rowsContentElems.forEach(rowContent => {
+    rowsContentElems.forEach((rowContent, i) => {
       const contentElem = rowContent.querySelector('.js-content');
       const speakersElem = rowContent.querySelector('.js-speakers');
+      const menuContainerElem = rowContent.querySelector('.js-drop-menu-container');
+
+      menuContainerElem.classList.add('default-reset-style');
+
+      if (i === 1) {
+        console.log(contentElem.offsetHeight)
+        console.log(contentElem)
+        console.log(speakersElem.offsetHeight)
+      }
       if (speakersElem && (contentElem.offsetHeight < speakersElem.offsetHeight)) {
         const btnElem = rowContent.querySelector('.js-drop-menu-btn');
-        const menuContainerElem = rowContent.querySelector('.js-drop-menu-container');
         const menuElem = rowContent.querySelector('.js-drop-menu');
 
         this.onOpen(btnElem, menuContainerElem, menuElem);
       }
+
+      setTimeout(() => {
+        menuContainerElem.classList.remove('default-reset-style');
+      }, 400)
     })
   }
 

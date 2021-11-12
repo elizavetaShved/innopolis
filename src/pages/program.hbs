@@ -98,13 +98,13 @@
                     </div>
                   </div>
                 </div>
-                <div class="program-page__table-row-item program-page__table-info-wrapper js-content">
-                  <div>
+                <div class="program-page__table-row-item program-page__table-info-wrapper">
+                  <div class="js-content">
                     <div class="program-page__table-title">
                       {{ this.info.title }}
                     </div>
 
-                    <div class="js-drop-menu-container gl__drop-menu-container">
+                    <div class="program-page__menu-container js-drop-menu-container gl__drop-menu-container">
                       <ul class="program-page__table-text-list js-drop-menu">
                         {{#each this.info.text }}
                           <li class="program-page__table-text-item">
@@ -124,8 +124,8 @@
                   </div>
                 </div>
 
-                <div class="program-page__table-row-item js-speakers">
-                  <ul class="program-page__table-speakers-list">
+                <div class="program-page__table-row-item">
+                  <ul class="program-page__table-speakers-list js-speakers">
                     {{#each speakersList }}
                       <li class="program-page__table-speaker-wrapper">
                         {{#if this.img }}

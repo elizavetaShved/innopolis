@@ -242,3 +242,9 @@
     margin-bottom: 0;
   }
 }
+
+.program-page__menu-container {
+  &.default-reset-style {
+    max-height: none;
+  }
+}
