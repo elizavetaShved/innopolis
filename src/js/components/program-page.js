@@ -28,9 +28,6 @@ export class ProgramPage {
       menuContainerElem.classList.add('default-reset-style');
 
       if (i === 1) {
-        console.log(contentElem.offsetHeight)
-        console.log(contentElem)
-        console.log(speakersElem.offsetHeight)
       }
       if (speakersElem && (contentElem.offsetHeight < speakersElem.offsetHeight)) {
         const btnElem = rowContent.querySelector('.js-drop-menu-btn');
