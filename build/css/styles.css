@@ -8943,7 +8943,6 @@ a.contacts__grid-item-value {
   font-size: 1.2rem;
   line-height: 1.6rem;
   color: #fff;
-  margin-left: 3.2rem;
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
@@ -8963,6 +8962,8 @@ a.contacts__grid-item-value {
     background-color: #F88C8C; }
   .program-page__table-title-mark.type-4 {
     background-color: #61BD51; }
+  .program-page__table-title-mark.type-5 {
+    background-color: #8dcedb; }
 
 .program-page__table-geolocation-wrapper {
   display: -webkit-box;

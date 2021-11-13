@@ -147,7 +147,7 @@
   font-size: 1.2rem;
   line-height: 1.6rem;
   color: #fff;
-  margin-left: 3.2rem;
+  //margin-left: 3.2rem;
   height: min-content;
   width: min-content;
   white-space: nowrap;
@@ -171,6 +171,10 @@
 
   &.type-4 {
     background-color: #61BD51;
+  }
+
+  &.type-5 {
+    background-color: #8dcedb;
   }
 }
 

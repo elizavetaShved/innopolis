@@ -151,10 +151,10 @@ export class AccountPage {
 
     participationCheckboxes.forEach(checkbox => {
       checkbox.onchange = () => {
-        if (checkbox.value === '5') {
-          btnPaymentParticipation.setAttribute('disabled', true);
-        } else if (checkbox.value === '4') {
+        if (checkbox.value === '4') {
           btnPaymentParticipation.removeAttribute('disabled');
+        } else {
+          btnPaymentParticipation.setAttribute('disabled', true);
         }
       }
     })
