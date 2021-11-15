@@ -7814,29 +7814,7 @@ html.remodal-is-locked {
   display: -ms-flexbox;
   display: flex; }
 
-.pagination__radio-wrapper:first-child .pagination__radio-content {
-  border-radius: 0 0 0 2.8rem;
-  border-left: .2rem solid #000;
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important; }
-
-.pagination__radio-wrapper:last-child .pagination__radio-content {
-  border-radius: 0 28px 28px 0; }
-
-.pagination__radio-wrapper:hover .pagination__radio-content {
-  background-color: var(--btn-color-muted);
-  color: #fff; }
-
-.pagination__radio {
-  display: none; }
-  .pagination__radio:checked + .pagination__radio-content {
-    background-color: var(--btn-color);
-    border-color: transparent;
-    -webkit-box-shadow: -2px 0px 0px 0px var(--btn-color);
-            box-shadow: -2px 0px 0px 0px var(--btn-color);
-    color: #fff; }
-
-.pagination__radio-content {
+.pagination__link {
   padding: 1.8rem 2.4rem;
   background-color: #fff;
   color: #000;
@@ -7853,15 +7831,31 @@ html.remodal-is-locked {
       -ms-user-select: none;
           user-select: none;
   display: block; }
+  .pagination__link.checked {
+    background-color: var(--btn-color);
+    border-color: transparent !important;
+    -webkit-box-shadow: -2px 0px 0px 0px var(--btn-color);
+            box-shadow: -2px 0px 0px 0px var(--btn-color);
+    color: #fff; }
+  .pagination__link:first-child {
+    border-radius: 0 0 0 2.8rem;
+    border-left: .2rem solid #000;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important; }
+  .pagination__link:last-child {
+    border-radius: 0 28px 28px 0; }
+  .pagination__link:hover {
+    background-color: var(--btn-color-muted);
+    color: #fff; }
   @media screen and (max-width: 768px) {
-    .pagination__radio-content {
+    .pagination__link {
       padding: 1.6rem 2.2rem; } }
   @media screen and (max-width: 560px) {
-    .pagination__radio-content {
+    .pagination__link {
       padding: 1.4rem 1.8rem;
       font-weight: normal; } }
   @media screen and (max-width: 426px) {
-    .pagination__radio-content {
+    .pagination__link {
       padding: 1rem 1.6rem; } }
 
 @media screen and (min-width: 1401px) {
