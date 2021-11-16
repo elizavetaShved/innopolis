@@ -39,5 +39,16 @@
       "auditorium": "400",
       "index": 9
     }
+  ],
+  "topCalendar": [
+    {
+      "auditorium": "201",
+      "index": 1,
+      "qwe": true
+    },
+    {
+      "auditorium": "304",
+      "index": 2
+    }
   ]
 }

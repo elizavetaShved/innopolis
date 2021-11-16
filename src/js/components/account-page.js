@@ -145,7 +145,9 @@ export class AccountPage {
         const modal = new Modal('location', true);
         modal.isOpen();
         const modalLocationTitle = modal.hostElem.querySelector('.js-modal-location-title');
+        const modalMapImage = modal.hostElem.querySelector('.js-modal-map-image');
         modalLocationTitle.innerText = `${ btn.getAttribute('data-auditorium') }`;
+        modalMapImage.setAttribute('src', btn.getAttribute('data-map-image'))
       }
     })
 

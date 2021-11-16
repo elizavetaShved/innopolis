@@ -9277,7 +9277,12 @@ a.contacts__grid-item-value {
   font-style: normal;
   font-size: 1.6rem;
   line-height: 2rem;
-  font-weight: 600; }
+  font-weight: 600;
+  -webkit-transition: color 250ms, border-bottom-color 250ms;
+  transition: color 250ms, border-bottom-color 250ms; }
+  .booking-calendar__tbody-cell-control-large:hover {
+    color: var(--btn-color-muted) !important;
+    border-bottom-color: var(--btn-color-muted); }
 
 .booking-calendar__tbody-slots-wrapper {
   position: absolute;
