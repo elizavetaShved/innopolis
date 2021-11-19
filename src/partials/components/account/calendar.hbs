@@ -279,21 +279,21 @@
                   <div class="booking-calendar__tbody-slots-btns-list">
                     <label class="booking-calendar__tbody-slots-btn-wrapper">
                       <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date"
-                             name="slots-btn-{{ this.index }}" checked value="2 декабря">
+                             name="slots-btn-{{ this.index }}" checked value="2 декабря" data-times="1">
                       <span class="booking-calendar__tbody-slots-btn-content">
                       2 декабря
                     </span>
                     </label>
                     <label class="booking-calendar__tbody-slots-btn-wrapper">
                       <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date"
-                             name="slots-btn-{{ this.index }}" value="3 декабря">
+                             name="slots-btn-{{ this.index }}" value="3 декабря" data-times="2">
                       <span class="booking-calendar__tbody-slots-btn-content">
                       3 декабря
                     </span>
                     </label>
                     <label class="booking-calendar__tbody-slots-btn-wrapper">
                       <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date"
-                             name="slots-btn-{{ this.index }}" value="4 декабря">
+                             name="slots-btn-{{ this.index }}" value="4 декабря" data-times="3">
                       <span class="booking-calendar__tbody-slots-btn-content">
                       4 декабря
                     </span>
@@ -322,7 +322,7 @@
                   </ul>
                 </div>
 
-                <div class="booking-calendar__tbody-slots-times-list">
+                <div class="booking-calendar__tbody-slots-times-list mod-show js-calendar-list-times" data-times="1">
                   {{> account/teme-checkbox time="10:00 - 10:30" isAvailable=true }}
                   {{> account/teme-checkbox time="10:30 - 11:00" isAvailable=true }}
                   {{> account/teme-checkbox time="11:00 - 11:30" isOccupied=true }}
@@ -337,6 +337,18 @@
                   {{> account/teme-checkbox time="16:00 - 16:30" isOccupied=true }}
                   {{> account/teme-checkbox time="16:30 - 17:00" isAvailable=true }}
                   {{> account/teme-checkbox time="17:00 - 17:30" isOccupied=true }}
+                </div>
+
+                <div class="booking-calendar__tbody-slots-times-list js-calendar-list-times" data-times="2">
+                  {{> account/teme-checkbox time="10:00 - 10:30" isAvailable=true }}
+                  {{> account/teme-checkbox time="16:00 - 16:30" isOccupied=true }}
+                  {{> account/teme-checkbox time="16:30 - 17:00" isAvailable=true }}
+                  {{> account/teme-checkbox time="17:00 - 17:30" isOccupied=true }}
+                </div>
+
+                <div class="booking-calendar__tbody-slots-times-list js-calendar-list-times" data-times="3">
+                  {{> account/teme-checkbox time="15:30 - 15:00" isOccupied=true }}
+                  {{> account/teme-checkbox time="16:00 - 16:30" isOccupied=true }}
                 </div>
 
                 <div class="booking-calendar__error js-error-time">

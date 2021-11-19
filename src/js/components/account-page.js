@@ -112,6 +112,18 @@ export class AccountPage {
     calendarDateInputs.forEach(input => {
       input.onchange = () => {
         calendarSlotTextDateElem[indexCurrentSlotContainer].innerText = `${ input.value }, `;
+        const calendarContentElems = calendarSlotsElems[indexCurrentSlotContainer].querySelectorAll('.js-calendar-list-times');
+
+        calendarContentElems.forEach(elem => {
+          console.log(input.getAttribute('data-times'))
+          console.log(elem.getAttribute('data-times'))
+          console.log('_______')
+          if (elem.getAttribute('data-times') === input.getAttribute('data-times')) {
+            elem.classList.add('mod-show');
+          } else {
+            elem.classList.remove('mod-show');
+          }
+        })
       }
     })
 

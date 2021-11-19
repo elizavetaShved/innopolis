@@ -1665,21 +1665,21 @@
                           <div class="booking-calendar__tbody-slots-btns-list">
                             <label class="booking-calendar__tbody-slots-btn-wrapper">
                               <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date"
-                                     name="slots-btn-1" checked value="2 декабря">
+                                     name="slots-btn-1" checked value="2 декабря" data-times="1">
                               <span class="booking-calendar__tbody-slots-btn-content">
                               2 декабря
                             </span>
                             </label>
                             <label class="booking-calendar__tbody-slots-btn-wrapper">
                               <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date"
-                                     name="slots-btn-1" value="3 декабря">
+                                     name="slots-btn-1" value="3 декабря" data-times="2">
                               <span class="booking-calendar__tbody-slots-btn-content">
                               3 декабря
                             </span>
                             </label>
                             <label class="booking-calendar__tbody-slots-btn-wrapper">
                               <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date"
-                                     name="slots-btn-1" value="4 декабря">
+                                     name="slots-btn-1" value="4 декабря" data-times="3">
                               <span class="booking-calendar__tbody-slots-btn-content">
                               4 декабря
                             </span>
@@ -1708,7 +1708,7 @@
                           </ul>
                         </div>
         
-                        <div class="booking-calendar__tbody-slots-times-list">
+                        <div class="booking-calendar__tbody-slots-times-list mod-show js-calendar-list-times" data-times="1">
                           <li class="booking-calendar__tbody-slots-time-container">
                             <label class="booking-calendar__tbody-slots-time-wrapper">
                               <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
@@ -1916,6 +1916,102 @@
                                 mod-occupied"
                               >
                                 17:00 - 17:30
+                              </span>
+                            </label>
+                          </li>
+                        </div>
+        
+                        <div class="booking-calendar__tbody-slots-times-list js-calendar-list-times" data-times="2">
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     
+                                     name="calendar-slots-time"
+                                     value="10:00 - 10:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                mod-available
+                                "
+                              >
+                                10:00 - 10:30
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="16:00 - 16:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                16:00 - 16:30
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     
+                                     name="calendar-slots-time"
+                                     value="16:30 - 17:00"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                mod-available
+                                "
+                              >
+                                16:30 - 17:00
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="17:00 - 17:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                17:00 - 17:30
+                              </span>
+                            </label>
+                          </li>
+                        </div>
+        
+                        <div class="booking-calendar__tbody-slots-times-list js-calendar-list-times" data-times="3">
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="15:30 - 15:00"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                15:30 - 15:00
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="16:00 - 16:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                16:00 - 16:30
                               </span>
                             </label>
                           </li>
@@ -2002,21 +2098,21 @@
                           <div class="booking-calendar__tbody-slots-btns-list">
                             <label class="booking-calendar__tbody-slots-btn-wrapper">
                               <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date"
-                                     name="slots-btn-2" checked value="2 декабря">
+                                     name="slots-btn-2" checked value="2 декабря" data-times="1">
                               <span class="booking-calendar__tbody-slots-btn-content">
                               2 декабря
                             </span>
                             </label>
                             <label class="booking-calendar__tbody-slots-btn-wrapper">
                               <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date"
-                                     name="slots-btn-2" value="3 декабря">
+                                     name="slots-btn-2" value="3 декабря" data-times="2">
                               <span class="booking-calendar__tbody-slots-btn-content">
                               3 декабря
                             </span>
                             </label>
                             <label class="booking-calendar__tbody-slots-btn-wrapper">
                               <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date"
-                                     name="slots-btn-2" value="4 декабря">
+                                     name="slots-btn-2" value="4 декабря" data-times="3">
                               <span class="booking-calendar__tbody-slots-btn-content">
                               4 декабря
                             </span>
@@ -2045,7 +2141,7 @@
                           </ul>
                         </div>
         
-                        <div class="booking-calendar__tbody-slots-times-list">
+                        <div class="booking-calendar__tbody-slots-times-list mod-show js-calendar-list-times" data-times="1">
                           <li class="booking-calendar__tbody-slots-time-container">
                             <label class="booking-calendar__tbody-slots-time-wrapper">
                               <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
@@ -2253,6 +2349,102 @@
                                 mod-occupied"
                               >
                                 17:00 - 17:30
+                              </span>
+                            </label>
+                          </li>
+                        </div>
+        
+                        <div class="booking-calendar__tbody-slots-times-list js-calendar-list-times" data-times="2">
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     
+                                     name="calendar-slots-time"
+                                     value="10:00 - 10:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                mod-available
+                                "
+                              >
+                                10:00 - 10:30
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="16:00 - 16:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                16:00 - 16:30
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     
+                                     name="calendar-slots-time"
+                                     value="16:30 - 17:00"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                mod-available
+                                "
+                              >
+                                16:30 - 17:00
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="17:00 - 17:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                17:00 - 17:30
+                              </span>
+                            </label>
+                          </li>
+                        </div>
+        
+                        <div class="booking-calendar__tbody-slots-times-list js-calendar-list-times" data-times="3">
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="15:30 - 15:00"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                15:30 - 15:00
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="16:00 - 16:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                16:00 - 16:30
                               </span>
                             </label>
                           </li>
@@ -2339,21 +2531,21 @@
                           <div class="booking-calendar__tbody-slots-btns-list">
                             <label class="booking-calendar__tbody-slots-btn-wrapper">
                               <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date"
-                                     name="slots-btn-3" checked value="2 декабря">
+                                     name="slots-btn-3" checked value="2 декабря" data-times="1">
                               <span class="booking-calendar__tbody-slots-btn-content">
                               2 декабря
                             </span>
                             </label>
                             <label class="booking-calendar__tbody-slots-btn-wrapper">
                               <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date"
-                                     name="slots-btn-3" value="3 декабря">
+                                     name="slots-btn-3" value="3 декабря" data-times="2">
                               <span class="booking-calendar__tbody-slots-btn-content">
                               3 декабря
                             </span>
                             </label>
                             <label class="booking-calendar__tbody-slots-btn-wrapper">
                               <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date"
-                                     name="slots-btn-3" value="4 декабря">
+                                     name="slots-btn-3" value="4 декабря" data-times="3">
                               <span class="booking-calendar__tbody-slots-btn-content">
                               4 декабря
                             </span>
@@ -2382,7 +2574,7 @@
                           </ul>
                         </div>
         
-                        <div class="booking-calendar__tbody-slots-times-list">
+                        <div class="booking-calendar__tbody-slots-times-list mod-show js-calendar-list-times" data-times="1">
                           <li class="booking-calendar__tbody-slots-time-container">
                             <label class="booking-calendar__tbody-slots-time-wrapper">
                               <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
@@ -2590,6 +2782,102 @@
                                 mod-occupied"
                               >
                                 17:00 - 17:30
+                              </span>
+                            </label>
+                          </li>
+                        </div>
+        
+                        <div class="booking-calendar__tbody-slots-times-list js-calendar-list-times" data-times="2">
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     
+                                     name="calendar-slots-time"
+                                     value="10:00 - 10:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                mod-available
+                                "
+                              >
+                                10:00 - 10:30
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="16:00 - 16:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                16:00 - 16:30
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     
+                                     name="calendar-slots-time"
+                                     value="16:30 - 17:00"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                mod-available
+                                "
+                              >
+                                16:30 - 17:00
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="17:00 - 17:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                17:00 - 17:30
+                              </span>
+                            </label>
+                          </li>
+                        </div>
+        
+                        <div class="booking-calendar__tbody-slots-times-list js-calendar-list-times" data-times="3">
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="15:30 - 15:00"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                15:30 - 15:00
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="16:00 - 16:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                16:00 - 16:30
                               </span>
                             </label>
                           </li>
@@ -2676,21 +2964,21 @@
                           <div class="booking-calendar__tbody-slots-btns-list">
                             <label class="booking-calendar__tbody-slots-btn-wrapper">
                               <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date"
-                                     name="slots-btn-4" checked value="2 декабря">
+                                     name="slots-btn-4" checked value="2 декабря" data-times="1">
                               <span class="booking-calendar__tbody-slots-btn-content">
                               2 декабря
                             </span>
                             </label>
                             <label class="booking-calendar__tbody-slots-btn-wrapper">
                               <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date"
-                                     name="slots-btn-4" value="3 декабря">
+                                     name="slots-btn-4" value="3 декабря" data-times="2">
                               <span class="booking-calendar__tbody-slots-btn-content">
                               3 декабря
                             </span>
                             </label>
                             <label class="booking-calendar__tbody-slots-btn-wrapper">
                               <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date"
-                                     name="slots-btn-4" value="4 декабря">
+                                     name="slots-btn-4" value="4 декабря" data-times="3">
                               <span class="booking-calendar__tbody-slots-btn-content">
                               4 декабря
                             </span>
@@ -2719,7 +3007,7 @@
                           </ul>
                         </div>
         
-                        <div class="booking-calendar__tbody-slots-times-list">
+                        <div class="booking-calendar__tbody-slots-times-list mod-show js-calendar-list-times" data-times="1">
                           <li class="booking-calendar__tbody-slots-time-container">
                             <label class="booking-calendar__tbody-slots-time-wrapper">
                               <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
@@ -2927,6 +3215,102 @@
                                 mod-occupied"
                               >
                                 17:00 - 17:30
+                              </span>
+                            </label>
+                          </li>
+                        </div>
+        
+                        <div class="booking-calendar__tbody-slots-times-list js-calendar-list-times" data-times="2">
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     
+                                     name="calendar-slots-time"
+                                     value="10:00 - 10:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                mod-available
+                                "
+                              >
+                                10:00 - 10:30
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="16:00 - 16:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                16:00 - 16:30
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     
+                                     name="calendar-slots-time"
+                                     value="16:30 - 17:00"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                mod-available
+                                "
+                              >
+                                16:30 - 17:00
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="17:00 - 17:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                17:00 - 17:30
+                              </span>
+                            </label>
+                          </li>
+                        </div>
+        
+                        <div class="booking-calendar__tbody-slots-times-list js-calendar-list-times" data-times="3">
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="15:30 - 15:00"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                15:30 - 15:00
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="16:00 - 16:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                16:00 - 16:30
                               </span>
                             </label>
                           </li>
@@ -3013,21 +3397,21 @@
                           <div class="booking-calendar__tbody-slots-btns-list">
                             <label class="booking-calendar__tbody-slots-btn-wrapper">
                               <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date"
-                                     name="slots-btn-5" checked value="2 декабря">
+                                     name="slots-btn-5" checked value="2 декабря" data-times="1">
                               <span class="booking-calendar__tbody-slots-btn-content">
                               2 декабря
                             </span>
                             </label>
                             <label class="booking-calendar__tbody-slots-btn-wrapper">
                               <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date"
-                                     name="slots-btn-5" value="3 декабря">
+                                     name="slots-btn-5" value="3 декабря" data-times="2">
                               <span class="booking-calendar__tbody-slots-btn-content">
                               3 декабря
                             </span>
                             </label>
                             <label class="booking-calendar__tbody-slots-btn-wrapper">
                               <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date"
-                                     name="slots-btn-5" value="4 декабря">
+                                     name="slots-btn-5" value="4 декабря" data-times="3">
                               <span class="booking-calendar__tbody-slots-btn-content">
                               4 декабря
                             </span>
@@ -3056,7 +3440,7 @@
                           </ul>
                         </div>
         
-                        <div class="booking-calendar__tbody-slots-times-list">
+                        <div class="booking-calendar__tbody-slots-times-list mod-show js-calendar-list-times" data-times="1">
                           <li class="booking-calendar__tbody-slots-time-container">
                             <label class="booking-calendar__tbody-slots-time-wrapper">
                               <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
@@ -3264,6 +3648,102 @@
                                 mod-occupied"
                               >
                                 17:00 - 17:30
+                              </span>
+                            </label>
+                          </li>
+                        </div>
+        
+                        <div class="booking-calendar__tbody-slots-times-list js-calendar-list-times" data-times="2">
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     
+                                     name="calendar-slots-time"
+                                     value="10:00 - 10:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                mod-available
+                                "
+                              >
+                                10:00 - 10:30
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="16:00 - 16:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                16:00 - 16:30
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     
+                                     name="calendar-slots-time"
+                                     value="16:30 - 17:00"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                mod-available
+                                "
+                              >
+                                16:30 - 17:00
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="17:00 - 17:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                17:00 - 17:30
+                              </span>
+                            </label>
+                          </li>
+                        </div>
+        
+                        <div class="booking-calendar__tbody-slots-times-list js-calendar-list-times" data-times="3">
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="15:30 - 15:00"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                15:30 - 15:00
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="16:00 - 16:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                16:00 - 16:30
                               </span>
                             </label>
                           </li>
@@ -3350,21 +3830,21 @@
                           <div class="booking-calendar__tbody-slots-btns-list">
                             <label class="booking-calendar__tbody-slots-btn-wrapper">
                               <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date"
-                                     name="slots-btn-6" checked value="2 декабря">
+                                     name="slots-btn-6" checked value="2 декабря" data-times="1">
                               <span class="booking-calendar__tbody-slots-btn-content">
                               2 декабря
                             </span>
                             </label>
                             <label class="booking-calendar__tbody-slots-btn-wrapper">
                               <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date"
-                                     name="slots-btn-6" value="3 декабря">
+                                     name="slots-btn-6" value="3 декабря" data-times="2">
                               <span class="booking-calendar__tbody-slots-btn-content">
                               3 декабря
                             </span>
                             </label>
                             <label class="booking-calendar__tbody-slots-btn-wrapper">
                               <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date"
-                                     name="slots-btn-6" value="4 декабря">
+                                     name="slots-btn-6" value="4 декабря" data-times="3">
                               <span class="booking-calendar__tbody-slots-btn-content">
                               4 декабря
                             </span>
@@ -3393,7 +3873,7 @@
                           </ul>
                         </div>
         
-                        <div class="booking-calendar__tbody-slots-times-list">
+                        <div class="booking-calendar__tbody-slots-times-list mod-show js-calendar-list-times" data-times="1">
                           <li class="booking-calendar__tbody-slots-time-container">
                             <label class="booking-calendar__tbody-slots-time-wrapper">
                               <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
@@ -3601,6 +4081,102 @@
                                 mod-occupied"
                               >
                                 17:00 - 17:30
+                              </span>
+                            </label>
+                          </li>
+                        </div>
+        
+                        <div class="booking-calendar__tbody-slots-times-list js-calendar-list-times" data-times="2">
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     
+                                     name="calendar-slots-time"
+                                     value="10:00 - 10:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                mod-available
+                                "
+                              >
+                                10:00 - 10:30
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="16:00 - 16:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                16:00 - 16:30
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     
+                                     name="calendar-slots-time"
+                                     value="16:30 - 17:00"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                mod-available
+                                "
+                              >
+                                16:30 - 17:00
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="17:00 - 17:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                17:00 - 17:30
+                              </span>
+                            </label>
+                          </li>
+                        </div>
+        
+                        <div class="booking-calendar__tbody-slots-times-list js-calendar-list-times" data-times="3">
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="15:30 - 15:00"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                15:30 - 15:00
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="16:00 - 16:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                16:00 - 16:30
                               </span>
                             </label>
                           </li>
@@ -3687,21 +4263,21 @@
                           <div class="booking-calendar__tbody-slots-btns-list">
                             <label class="booking-calendar__tbody-slots-btn-wrapper">
                               <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date"
-                                     name="slots-btn-7" checked value="2 декабря">
+                                     name="slots-btn-7" checked value="2 декабря" data-times="1">
                               <span class="booking-calendar__tbody-slots-btn-content">
                               2 декабря
                             </span>
                             </label>
                             <label class="booking-calendar__tbody-slots-btn-wrapper">
                               <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date"
-                                     name="slots-btn-7" value="3 декабря">
+                                     name="slots-btn-7" value="3 декабря" data-times="2">
                               <span class="booking-calendar__tbody-slots-btn-content">
                               3 декабря
                             </span>
                             </label>
                             <label class="booking-calendar__tbody-slots-btn-wrapper">
                               <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date"
-                                     name="slots-btn-7" value="4 декабря">
+                                     name="slots-btn-7" value="4 декабря" data-times="3">
                               <span class="booking-calendar__tbody-slots-btn-content">
                               4 декабря
                             </span>
@@ -3730,7 +4306,7 @@
                           </ul>
                         </div>
         
-                        <div class="booking-calendar__tbody-slots-times-list">
+                        <div class="booking-calendar__tbody-slots-times-list mod-show js-calendar-list-times" data-times="1">
                           <li class="booking-calendar__tbody-slots-time-container">
                             <label class="booking-calendar__tbody-slots-time-wrapper">
                               <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
@@ -3938,6 +4514,102 @@
                                 mod-occupied"
                               >
                                 17:00 - 17:30
+                              </span>
+                            </label>
+                          </li>
+                        </div>
+        
+                        <div class="booking-calendar__tbody-slots-times-list js-calendar-list-times" data-times="2">
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     
+                                     name="calendar-slots-time"
+                                     value="10:00 - 10:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                mod-available
+                                "
+                              >
+                                10:00 - 10:30
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="16:00 - 16:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                16:00 - 16:30
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     
+                                     name="calendar-slots-time"
+                                     value="16:30 - 17:00"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                mod-available
+                                "
+                              >
+                                16:30 - 17:00
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="17:00 - 17:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                17:00 - 17:30
+                              </span>
+                            </label>
+                          </li>
+                        </div>
+        
+                        <div class="booking-calendar__tbody-slots-times-list js-calendar-list-times" data-times="3">
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="15:30 - 15:00"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                15:30 - 15:00
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="16:00 - 16:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                16:00 - 16:30
                               </span>
                             </label>
                           </li>
@@ -4024,21 +4696,21 @@
                           <div class="booking-calendar__tbody-slots-btns-list">
                             <label class="booking-calendar__tbody-slots-btn-wrapper">
                               <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date"
-                                     name="slots-btn-8" checked value="2 декабря">
+                                     name="slots-btn-8" checked value="2 декабря" data-times="1">
                               <span class="booking-calendar__tbody-slots-btn-content">
                               2 декабря
                             </span>
                             </label>
                             <label class="booking-calendar__tbody-slots-btn-wrapper">
                               <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date"
-                                     name="slots-btn-8" value="3 декабря">
+                                     name="slots-btn-8" value="3 декабря" data-times="2">
                               <span class="booking-calendar__tbody-slots-btn-content">
                               3 декабря
                             </span>
                             </label>
                             <label class="booking-calendar__tbody-slots-btn-wrapper">
                               <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date"
-                                     name="slots-btn-8" value="4 декабря">
+                                     name="slots-btn-8" value="4 декабря" data-times="3">
                               <span class="booking-calendar__tbody-slots-btn-content">
                               4 декабря
                             </span>
@@ -4067,7 +4739,7 @@
                           </ul>
                         </div>
         
-                        <div class="booking-calendar__tbody-slots-times-list">
+                        <div class="booking-calendar__tbody-slots-times-list mod-show js-calendar-list-times" data-times="1">
                           <li class="booking-calendar__tbody-slots-time-container">
                             <label class="booking-calendar__tbody-slots-time-wrapper">
                               <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
@@ -4275,6 +4947,102 @@
                                 mod-occupied"
                               >
                                 17:00 - 17:30
+                              </span>
+                            </label>
+                          </li>
+                        </div>
+        
+                        <div class="booking-calendar__tbody-slots-times-list js-calendar-list-times" data-times="2">
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     
+                                     name="calendar-slots-time"
+                                     value="10:00 - 10:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                mod-available
+                                "
+                              >
+                                10:00 - 10:30
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="16:00 - 16:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                16:00 - 16:30
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     
+                                     name="calendar-slots-time"
+                                     value="16:30 - 17:00"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                mod-available
+                                "
+                              >
+                                16:30 - 17:00
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="17:00 - 17:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                17:00 - 17:30
+                              </span>
+                            </label>
+                          </li>
+                        </div>
+        
+                        <div class="booking-calendar__tbody-slots-times-list js-calendar-list-times" data-times="3">
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="15:30 - 15:00"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                15:30 - 15:00
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="16:00 - 16:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                16:00 - 16:30
                               </span>
                             </label>
                           </li>
@@ -4361,21 +5129,21 @@
                           <div class="booking-calendar__tbody-slots-btns-list">
                             <label class="booking-calendar__tbody-slots-btn-wrapper">
                               <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date"
-                                     name="slots-btn-9" checked value="2 декабря">
+                                     name="slots-btn-9" checked value="2 декабря" data-times="1">
                               <span class="booking-calendar__tbody-slots-btn-content">
                               2 декабря
                             </span>
                             </label>
                             <label class="booking-calendar__tbody-slots-btn-wrapper">
                               <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date"
-                                     name="slots-btn-9" value="3 декабря">
+                                     name="slots-btn-9" value="3 декабря" data-times="2">
                               <span class="booking-calendar__tbody-slots-btn-content">
                               3 декабря
                             </span>
                             </label>
                             <label class="booking-calendar__tbody-slots-btn-wrapper">
                               <input type="radio" class="booking-calendar__tbody-slots-btn js-calendar-input-date"
-                                     name="slots-btn-9" value="4 декабря">
+                                     name="slots-btn-9" value="4 декабря" data-times="3">
                               <span class="booking-calendar__tbody-slots-btn-content">
                               4 декабря
                             </span>
@@ -4404,7 +5172,7 @@
                           </ul>
                         </div>
         
-                        <div class="booking-calendar__tbody-slots-times-list">
+                        <div class="booking-calendar__tbody-slots-times-list mod-show js-calendar-list-times" data-times="1">
                           <li class="booking-calendar__tbody-slots-time-container">
                             <label class="booking-calendar__tbody-slots-time-wrapper">
                               <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
@@ -4612,6 +5380,102 @@
                                 mod-occupied"
                               >
                                 17:00 - 17:30
+                              </span>
+                            </label>
+                          </li>
+                        </div>
+        
+                        <div class="booking-calendar__tbody-slots-times-list js-calendar-list-times" data-times="2">
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     
+                                     name="calendar-slots-time"
+                                     value="10:00 - 10:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                mod-available
+                                "
+                              >
+                                10:00 - 10:30
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="16:00 - 16:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                16:00 - 16:30
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     
+                                     name="calendar-slots-time"
+                                     value="16:30 - 17:00"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                mod-available
+                                "
+                              >
+                                16:30 - 17:00
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="17:00 - 17:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                17:00 - 17:30
+                              </span>
+                            </label>
+                          </li>
+                        </div>
+        
+                        <div class="booking-calendar__tbody-slots-times-list js-calendar-list-times" data-times="3">
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="15:30 - 15:00"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                15:30 - 15:00
+                              </span>
+                            </label>
+                          </li>
+                          <li class="booking-calendar__tbody-slots-time-container">
+                            <label class="booking-calendar__tbody-slots-time-wrapper">
+                              <input type="checkbox" class="booking-calendar__tbody-slots-time-input js-calendar-time-btn"
+                                     disabled
+                                     name="calendar-slots-time"
+                                     value="16:00 - 16:30"
+                              >
+                              <span class="booking-calendar__tbody-slots-time-content
+                                
+                                mod-occupied"
+                              >
+                                16:00 - 16:30
                               </span>
                             </label>
                           </li>

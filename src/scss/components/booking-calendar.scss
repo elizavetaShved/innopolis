@@ -319,6 +319,10 @@
   display: grid;
   grid-template-columns: repeat(8, minmax(0, 1fr));
   grid-gap: 2px;
+
+  &:not(.mod-show) {
+    display: none;
+  }
 }
 
 .booking-calendar__tbody-slots-time-wrapper {
