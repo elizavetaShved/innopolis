@@ -41,24 +41,29 @@ export default function initDropDownMenu() {
 
     const checkDropMenu = () => {
       linksTitleElements.forEach((btn, i) => {
-        const customMinHeightMenu = menuElements[i].getAttribute('data-drop-menu-min');
-        if (!customMinHeightMenu || (customMinHeightMenu && menuElements[i].clientHeight > +customMinHeightMenu)) {
-          btn.classList.remove('mod-hide');
-          btn.onclick = () => {
-            if (btn.className.includes('mod-open')) {
-              onClose(btn, menuContainerElements[i]);
-            } else {
-              if (!btn.className.includes('js-drop-menu-leave-open')) {
-                linksTitleElements.map((elem, idx) => {
-                  onClose(elem, menuContainerElements[idx]);
-                });
-              }
-              onOpen(btn, menuContainerElements[i], menuElements[i]);
-            }
+
+        setTimeout(() => {
+          const isSemiOpening = menuElements[i].hasAttribute('data-semi-opening');
+          if (isSemiOpening) {
           }
-        } else {
-          btn.classList.add('mod-hide');
-        }
+          if (!isSemiOpening || (isSemiOpening && (menuElements[i].clientHeight - menuContainerElements[i].clientHeight) > 1)) {
+            btn.classList.remove('mod-hide');
+            btn.onclick = () => {
+              if (btn.className.includes('mod-open')) {
+                onClose(btn, menuContainerElements[i]);
+              } else {
+                if (!btn.className.includes('js-drop-menu-leave-open')) {
+                  linksTitleElements.map((elem, idx) => {
+                    onClose(elem, menuContainerElements[idx]);
+                  });
+                }
+                onOpen(btn, menuContainerElements[i], menuElements[i]);
+              }
+            }
+          } else {
+            btn.classList.add('mod-hide');
+          }
+        })
       });
     }
 

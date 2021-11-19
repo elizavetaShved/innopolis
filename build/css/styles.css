@@ -9242,27 +9242,28 @@ a.contacts__grid-item-value {
   font-weight: normal; }
 
 .booking-calendar__drop-menu-container:not(.mod-open) {
-  max-height: 2.6rem !important; }
+  max-height: 3rem !important; }
 
 .booking-calendar__drop-menu-container.mod-open .booking-calendar__tbody-cell-mark-item {
   background-color: var(--secondary-color);
   color: #fff; }
 
 .booking-calendar__tbody-cell-mark-list {
-  margin: -2px 0;
-  padding-bottom: 3px;
+  padding: 0;
   margin-right: 2rem;
   max-width: 50rem;
   min-width: 28rem; }
 
-.booking-calendar__tbody-cell-mark-item {
+.booking-calendar__tbody-cell-mark-item-wrapper {
   display: inline-block;
+  margin: 2px 0; }
+
+.booking-calendar__tbody-cell-mark-item {
   padding: .4rem .8rem;
   background-color: #F0F0F1;
   border-radius: 30px;
   font-size: 1.2rem;
   line-height: 1.6rem;
-  margin: 2px 0;
   font-weight: normal;
   -webkit-transition: background-color 300ms, color 300ms;
   transition: background-color 300ms, color 300ms; }
