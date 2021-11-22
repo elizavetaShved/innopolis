@@ -149,11 +149,11 @@
         <div class="account__menu-container">
           <div class="account__menu-wrapper">
             <label class="account__menu-radio-wrapper">
-              <input type="radio" name="account-menu" class="account__menu-radio"  value="profile">
+              <input type="radio" name="account-menu" class="account__menu-radio" checked value="profile">
               <span class="account__menu-radio-content">Профиль</span>
             </label>
             <label class="account__menu-radio-wrapper">
-              <input type="radio" name="account-menu" class="account__menu-radio" checked value="calendar">
+              <input type="radio" name="account-menu" class="account__menu-radio" value="calendar">
               <span class="account__menu-radio-content">Календарь бронирования</span>
             </label>
             <label class="account__menu-radio-wrapper">
@@ -631,28 +631,30 @@
                   </label>
                 </div>
               </li>
-              <li class="gl__input-container js-disappearing-field-university profile__disappearing-field">
-                <div class="gl__input-title mod-small"></div>
-                <div class="gl__select-container " id="university-type-account">
-                  <label class="gl__select-wrapper">
-                    <select class="gl__select js-select"
-                            data-parsley-class-handler="#university-type-account"
-                            name="university-type-account"
-                    >
-                      <option class="gl__select-option" placeholder value="">Вуз</option>
-                      <option class="gl__select-option" value="Отрасль. Образование">Отрасль. Образование</option>
-                      <option class="gl__select-option" value="Отрасль. Здравоохранение">Отрасль. Здравоохранение</option>
-                      <option class="gl__select-option" value="Отрасль. Сельское хозяйство">Отрасль. Сельское хозяйство</option>
-                      <option class="gl__select-option" value="Отрасль. Городское хозяйство">Отрасль. Городское хозяйство</option>
-                      <option class="gl__select-option" value="Отрасль.Финансовые услуги">Отрасль.Финансовые услуги</option>
-                      <option class="gl__select-option" value="Отрасль.Добывающая промышленность">Отрасль.Добывающая промышленность</option>
-                      <option class="gl__select-option" value="Отрасль..Энергетическая инфраструктура">Отрасль..Энергетическая инфраструктура</option>
-                      <option class="gl__select-option" value="Транспортная инфраструктура">Транспортная инфраструктура</option>
-                      <option class="gl__select-option" value="Информационно-коммуникационные технологии">Информационно-коммуникационные технологии</option>
-                      <option class="gl__select-option" value="Отрасль.Строительство">Отрасль.Строительство</option>
-                      <option class="gl__select-option" value="Обрабатывающая промышленность">Обрабатывающая промышленность</option>
-                    </select>
-                  </label>
+              <li class="profile__item-right js-disappearing-field-university profile__disappearing-field">
+                <div class="gl__input-container">
+                  <div class="gl__input-title mod-small"></div>
+                  <div class="gl__select-container " id="university-type-account">
+                    <label class="gl__select-wrapper">
+                      <select class="gl__select js-select"
+                              data-parsley-class-handler="#university-type-account"
+                              name="university-type-account"
+                      >
+                        <option class="gl__select-option" placeholder value="">Вуз</option>
+                        <option class="gl__select-option" value="Отрасль. Образование">Отрасль. Образование</option>
+                        <option class="gl__select-option" value="Отрасль. Здравоохранение">Отрасль. Здравоохранение</option>
+                        <option class="gl__select-option" value="Отрасль. Сельское хозяйство">Отрасль. Сельское хозяйство</option>
+                        <option class="gl__select-option" value="Отрасль. Городское хозяйство">Отрасль. Городское хозяйство</option>
+                        <option class="gl__select-option" value="Отрасль.Финансовые услуги">Отрасль.Финансовые услуги</option>
+                        <option class="gl__select-option" value="Отрасль.Добывающая промышленность">Отрасль.Добывающая промышленность</option>
+                        <option class="gl__select-option" value="Отрасль..Энергетическая инфраструктура">Отрасль..Энергетическая инфраструктура</option>
+                        <option class="gl__select-option" value="Транспортная инфраструктура">Транспортная инфраструктура</option>
+                        <option class="gl__select-option" value="Информационно-коммуникационные технологии">Информационно-коммуникационные технологии</option>
+                        <option class="gl__select-option" value="Отрасль.Строительство">Отрасль.Строительство</option>
+                        <option class="gl__select-option" value="Обрабатывающая промышленность">Обрабатывающая промышленность</option>
+                      </select>
+                    </label>
+                  </div>
                 </div>
               </li>
             </ul>
@@ -1018,7 +1020,7 @@
                   </label>
                 </div>
               </li>
-              <li class="profile__form-radio-container">
+              <li>
                 <div class="profile__form-radio-input-title">
                   Нужен трансфер при прибытии в Казань (только до аккредитованных гостиниц и площадок форума)
                 </div>
@@ -1049,7 +1051,8 @@
                   </label>
                 </div>
               </li>
-              <li class="profile__form-radio-container js-arrival-transfer gl__checkbox-radio-container" id="need-transfer-departure-account">
+              <li class="js-arrival-transfer gl__checkbox-radio-container"
+                  id="need-transfer-departure-account">
                 <div class="profile__form-radio-input-title">
                   Нужен трансфер для отъезда из Казани (только от аккредитованных гостиниц и площадок форума)
                   <span class="gl__input-mark-required"></span>
@@ -1088,79 +1091,82 @@
                   </label>
                 </div>
               </li>
-              <li></li>
-              <li class="gl__input-container js-disappearing-field-date-arrival profile__disappearing-field">
-                <div class="gl__input-title mod-small">Дата отъезда</div>
-                <div class="gl__select-container " id="departure-date-account">
-                  <label class="gl__select-wrapper">
-                    <select class="gl__select js-select"
-                            data-parsley-class-handler="#departure-date-account"
-                            name="departure-date-account"
-                    >
-                      <option class="gl__select-option" placeholder value="">Выберите</option>
-                      <option class="gl__select-option" value="2 декабря">2 декабря</option>
-                      <option class="gl__select-option" value="3 декабря">3 декабря</option>
-                      <option class="gl__select-option" value="4 декабря">4 декабря</option>
-                      <option class="gl__select-option" value="5 декабря">5 декабря</option>
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                    </select>
-                  </label>
+              <li class="profile__item-right js-disappearing-field-date-arrival profile__disappearing-field">
+                <div class="gl__input-container">
+                  <div class="gl__input-title mod-small">Дата отъезда</div>
+                  <div class="gl__select-container " id="departure-date-account">
+                    <label class="gl__select-wrapper">
+                      <select class="gl__select js-select"
+                              data-parsley-class-handler="#departure-date-account"
+                              name="departure-date-account"
+                      >
+                        <option class="gl__select-option" placeholder value="">Выберите</option>
+                        <option class="gl__select-option" value="2 декабря">2 декабря</option>
+                        <option class="gl__select-option" value="3 декабря">3 декабря</option>
+                        <option class="gl__select-option" value="4 декабря">4 декабря</option>
+                        <option class="gl__select-option" value="5 декабря">5 декабря</option>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                      </select>
+                    </label>
+                  </div>
                 </div>
               </li>
-              <li></li>
-              <li class="gl__input-container js-disappearing-places-1 profile__disappearing-field">
-                <div class="gl__input-title mod-small">Выбирете место подачи трансфера</div>
-                <div class="gl__select-container " id="place-submission-1-account">
-                  <label class="gl__select-wrapper">
-                    <select class="gl__select js-select"
-                            data-parsley-class-handler="#place-submission-1-account"
-                            name="place-submission-1-account"
-                    >
-                      <option class="gl__select-option" placeholder value="">Выберите</option>
-                      <option class="gl__select-option" value="ГК «Свияжские холмы», отель «Дежавю»">ГК «Свияжские холмы», отель «Дежавю»</option>
-                      <option class="gl__select-option" value="ГК «Свияжские холмы», отель «Маяк»">ГК «Свияжские холмы», отель «Маяк»</option>
-                      <option class="gl__select-option" value="Прощадка проведения форума: ГК «Свияжские холмы», Гранд Холл">Прощадка проведения форума: ГК «Свияжские холмы», Гранд Холл</option>
-                      <option class="gl__select-option" value="Прощадка проведения форума: Университет Иннополис">Прощадка проведения форума: Университет Иннополис</option>
-                      <option class="gl__select-option" value="Прощадка проведения форума: ArtSpase, г.Иннополис">Прощадка проведения форума: ArtSpase, г.Иннополис</option>
-                      
-                      
-                      
-                      
-                      
-                      
-                    </select>
-                  </label>
+              <li class="profile__item-right js-disappearing-places-1 profile__disappearing-field">
+                <div class="gl__input-container">
+                  <div class="gl__input-title mod-small">Выбирете место подачи трансфера</div>
+                  <div class="gl__select-container " id="place-submission-1-account">
+                    <label class="gl__select-wrapper">
+                      <select class="gl__select js-select"
+                              data-parsley-class-handler="#place-submission-1-account"
+                              name="place-submission-1-account"
+                      >
+                        <option class="gl__select-option" placeholder value="">Выберите</option>
+                        <option class="gl__select-option" value="ГК «Свияжские холмы», отель «Дежавю»">ГК «Свияжские холмы», отель «Дежавю»</option>
+                        <option class="gl__select-option" value="ГК «Свияжские холмы», отель «Маяк»">ГК «Свияжские холмы», отель «Маяк»</option>
+                        <option class="gl__select-option" value="Прощадка проведения форума: ГК «Свияжские холмы», Гранд Холл">Прощадка проведения форума: ГК «Свияжские холмы», Гранд Холл</option>
+                        <option class="gl__select-option" value="Прощадка проведения форума: Университет Иннополис">Прощадка проведения форума: Университет Иннополис</option>
+                        <option class="gl__select-option" value="Прощадка проведения форума: ArtSpase, г.Иннополис">Прощадка проведения форума: ArtSpase, г.Иннополис</option>
+                        
+                        
+                        
+                        
+                        
+                        
+                      </select>
+                    </label>
+                  </div>
                 </div>
               </li>
-              <li></li>
-              <li class="gl__input-container js-disappearing-places-2 profile__disappearing-field">
-                <div class="gl__input-title mod-small">Выбирете место подачи трансфера</div>
-                <div class="gl__select-container " id="place-submission-2-account">
-                  <label class="gl__select-wrapper">
-                    <select class="gl__select js-select"
-                            data-parsley-class-handler="#place-submission-2-account"
-                            name="place-submission-2-account"
-                    >
-                      <option class="gl__select-option" placeholder value="">Выберите</option>
-                      <option class="gl__select-option" value="Korston Kazan Hotel">Korston Kazan Hotel</option>
-                      <option class="gl__select-option" value="Courtyard by Mar">Courtyard by Mar</option>
-                      <option class="gl__select-option" value="Ramada Kazan City Centre 4">Ramada Kazan City Centre 4</option>
-                      <option class="gl__select-option" value="Гранд отель Казань 4">Гранд отель Казань 4</option>
-                      <option class="gl__select-option" value="Шаляпин Палас Отель 4">Шаляпин Палас Отель 4</option>
-                      <option class="gl__select-option" value="Отель LUCIANO 5">Отель LUCIANO 5</option>
-                      <option class="gl__select-option" value="ГК «Свияжские холмы», отель «Дежавю»">ГК «Свияжские холмы», отель «Дежавю»</option>
-                      <option class="gl__select-option" value="ГК «Свияжские холмы», отель «Маяк»">ГК «Свияжские холмы», отель «Маяк»</option>
-                      
-                      
-                      
-                    </select>
-                  </label>
+              <li class="profile__item-right js-disappearing-places-2 profile__disappearing-field">
+                <div class="gl__input-container">
+                  <div class="gl__input-title mod-small">Выбирете место подачи трансфера</div>
+                  <div class="gl__select-container " id="place-submission-2-account">
+                    <label class="gl__select-wrapper">
+                      <select class="gl__select js-select"
+                              data-parsley-class-handler="#place-submission-2-account"
+                              name="place-submission-2-account"
+                      >
+                        <option class="gl__select-option" placeholder value="">Выберите</option>
+                        <option class="gl__select-option" value="Korston Kazan Hotel">Korston Kazan Hotel</option>
+                        <option class="gl__select-option" value="Courtyard by Mar">Courtyard by Mar</option>
+                        <option class="gl__select-option" value="Ramada Kazan City Centre 4">Ramada Kazan City Centre 4</option>
+                        <option class="gl__select-option" value="Гранд отель Казань 4">Гранд отель Казань 4</option>
+                        <option class="gl__select-option" value="Шаляпин Палас Отель 4">Шаляпин Палас Отель 4</option>
+                        <option class="gl__select-option" value="Отель LUCIANO 5">Отель LUCIANO 5</option>
+                        <option class="gl__select-option" value="ГК «Свияжские холмы», отель «Дежавю»">ГК «Свияжские холмы», отель «Дежавю»</option>
+                        <option class="gl__select-option" value="ГК «Свияжские холмы», отель «Маяк»">ГК «Свияжские холмы», отель «Маяк»</option>
+                        
+                        
+                        
+                      </select>
+                    </label>
+                  </div>
                 </div>
               </li>
             </ul>

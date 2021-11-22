@@ -8338,6 +8338,17 @@ html.remodal-is-locked {
     .profile__form-inputs-list {
       grid-gap: 2.5rem; } }
 
+.profile__item-right {
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem 5.8rem; }
+  .profile__item-right .gl__input-container {
+    grid-column: 2; }
+  @media screen and (max-width: 560px) {
+    .profile__item-right {
+      grid-gap: 2.5rem; } }
+
 .profile__type-organization {
   grid-row: 3 / 5;
   grid-column: 2 / 3;
@@ -8496,16 +8507,8 @@ html.remodal-is-locked {
   left: 2rem;
   height: 2.4rem; }
 
-.profile__disappearing-field {
-  -webkit-transition: max-height 300ms;
-  transition: max-height 300ms;
-  max-height: 10rem; }
-  .profile__disappearing-field:not(.mod-show) {
-    max-height: 0;
-    overflow: hidden; }
-    @media screen and (max-width: 960px) {
-      .profile__disappearing-field:not(.mod-show) {
-        display: none; } }
+.profile__disappearing-field:not(.mod-show) {
+  display: none; }
 
 .profile__form-container {
   padding: 6rem 0; }
