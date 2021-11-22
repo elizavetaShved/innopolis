@@ -143,7 +143,16 @@ export class AccountPage {
     calendarTimeInputs.forEach(input => {
       input.onchange = () => {
         errorTimeElem[indexCurrentSlotContainer].classList.remove('mod-show');
-        calendarSlotTextTimeElem[indexCurrentSlotContainer].innerText = `— ${ input.value }`;
+        const timeTextElem = calendarSlotTextTimeElem[indexCurrentSlotContainer];
+
+        if (timeTextElem.innerText) {
+          timeTextElem.innerText += `; ${ input.value }`;
+          const timesAttributeValue = timeTextElem.getAttribute('data-times');
+          timeTextElem.setAttribute('data-times', `${ timesAttributeValue }, ${ input.value }`);
+        } else {
+          timeTextElem.innerText = `— ${ input.value }`;
+          timeTextElem.setAttribute('data-times', input.value);
+        }
       }
     })
 
@@ -155,10 +164,12 @@ export class AccountPage {
           const modalSlotTextDateElem = modal.hostElem.querySelector('.js-calendar-slots-text-date');
           const modalSlotTextAuditoriumElem = modal.hostElem.querySelector('.js-calendar-slots-text-auditorium');
           const modalSlotTextTimeElem = modal.hostElem.querySelector('.js-calendar-slots-text-time');
+          const inputValuesTimeElem = modal.hostElem.querySelector('.js-calendar-value-dates');
 
           modalSlotTextDateElem.innerText = calendarSlotTextDateElem[indexCurrentSlotContainer].innerText;
           modalSlotTextAuditoriumElem.innerText = calendarSlotTextAuditoriumElem[indexCurrentSlotContainer].innerText;
           modalSlotTextTimeElem.innerText = calendarSlotTextTimeElem[indexCurrentSlotContainer].innerText;
+          inputValuesTimeElem.value = calendarSlotTextTimeElem[indexCurrentSlotContainer].getAttribute('data-times');
         } else {
           errorTimeElem[indexCurrentSlotContainer].classList.add('mod-show');
         }
