@@ -137,8 +137,6 @@
           inputType="file"
           name="pcr-test"
           type="account"
-          placeholder="info@gmail.com"
-          parsleyType="email"
         }}
       </li>
       <li class="gl__input-container">
@@ -152,17 +150,14 @@
           parsleyType="email"
         }}
       </li>
-      <li class="gl__input-container js-profile-direction">
-        <div class="gl__input-title mod-small">Направление</div>
-        {{> controls/select
-          required=true
-          placeholder="Которое интересно посетить на форуме"
-          name="direction"
+      <li class="gl__input-container">
+        <div class="gl__input-title mod-small">Сертификат вакцинации <span class="mark">*</span></div>
+        {{> controls/input-file
+          inputType="file"
+          name="vaccination"
           type="account"
-          option1="Кибербезопасность" option2="Цифра в культуре" option3="Цифровая трансформация регионо" option4="Российская цифровая индустрия" option5="Цифровые кадры для индустрии" option6="Медиа-акселератор" option7="Вузы" option8="Стартапы"
         }}
       </li>
-
       <li class="gl__input-container">
         <div class="gl__input-title mod-small">Город</div>
         {{> controls/select
@@ -173,7 +168,16 @@
           option1="Город 1" option2="Город 2" option3="Город 3" option4="Город 4" option5="Город 5"
         }}
       </li>
-
+      <li class="gl__input-container js-profile-direction">
+        <div class="gl__input-title mod-small">Направление</div>
+        {{> controls/select
+          required=true
+          placeholder="Которое интересно посетить на форуме"
+          name="direction"
+          type="account"
+          option1="Кибербезопасность" option2="Цифра в культуре" option3="Цифровая трансформация регионо" option4="Российская цифровая индустрия" option5="Цифровые кадры для индустрии" option6="Медиа-акселератор" option7="Вузы" option8="Стартапы"
+        }}
+      </li>
       <li class="gl__input-container js-disappearing-field-university profile__disappearing-field">
         <div class="gl__input-title mod-small"></div>
         {{> controls/select

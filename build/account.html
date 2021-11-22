@@ -562,33 +562,23 @@
                 
                 </label>
               </li>
-              <li class="gl__input-container js-profile-direction">
-                <div class="gl__input-title mod-small">Направление</div>
-                <div class="gl__select-container " id="direction-account">
-                  <label class="gl__select-wrapper">
-                      <span class="gl__input-mark-required"></span>
-                    <select class="gl__select js-select"
-                            data-parsley-class-handler="#direction-account"
-                            name="direction-account"
-                            data-parsley-required="" data-parsley-trigger="change"
-                    >
-                      <option class="gl__select-option" placeholder value="">Которое интересно посетить на форуме</option>
-                      <option class="gl__select-option" value="Кибербезопасность">Кибербезопасность</option>
-                      <option class="gl__select-option" value="Цифра в культуре">Цифра в культуре</option>
-                      <option class="gl__select-option" value="Цифровая трансформация регионо">Цифровая трансформация регионо</option>
-                      <option class="gl__select-option" value="Российская цифровая индустрия">Российская цифровая индустрия</option>
-                      <option class="gl__select-option" value="Цифровые кадры для индустрии">Цифровые кадры для индустрии</option>
-                      <option class="gl__select-option" value="Медиа-акселератор">Медиа-акселератор</option>
-                      <option class="gl__select-option" value="Вузы">Вузы</option>
-                      <option class="gl__select-option" value="Стартапы">Стартапы</option>
-                      
-                      
-                      
-                    </select>
-                  </label>
-                </div>
+              <li class="gl__input-container">
+                <div class="gl__input-title mod-small">Сертификат вакцинации <span class="mark">*</span></div>
+                <label class="gl__input-wrapper mod-file">
+                  <input type="file"
+                         class="gl__input-file js-input-file"
+                         name="vaccination-account"
+                  >
+                  <span class="gl__input mod-file js-input-file-content">PDF файл, не более 2 мб</span>
+                  <img src="img/form/download.svg" alt="" class="gl__input-icon">
+                
+                  <button type="button" class="gl__file-btn-clear js-btn-clear-file">
+                    <svg width="12" height="12" aria-hidden="true" class="gl__file-input-icon-clear">
+                      <use xlink:href="#close"></use>
+                    </svg>
+                  </button>
+                </label>
               </li>
-        
               <li class="gl__input-container">
                 <div class="gl__input-title mod-small">Город</div>
                 <div class="gl__select-container " id="city-account">
@@ -615,7 +605,32 @@
                   </label>
                 </div>
               </li>
-        
+              <li class="gl__input-container js-profile-direction">
+                <div class="gl__input-title mod-small">Направление</div>
+                <div class="gl__select-container " id="direction-account">
+                  <label class="gl__select-wrapper">
+                      <span class="gl__input-mark-required"></span>
+                    <select class="gl__select js-select"
+                            data-parsley-class-handler="#direction-account"
+                            name="direction-account"
+                            data-parsley-required="" data-parsley-trigger="change"
+                    >
+                      <option class="gl__select-option" placeholder value="">Которое интересно посетить на форуме</option>
+                      <option class="gl__select-option" value="Кибербезопасность">Кибербезопасность</option>
+                      <option class="gl__select-option" value="Цифра в культуре">Цифра в культуре</option>
+                      <option class="gl__select-option" value="Цифровая трансформация регионо">Цифровая трансформация регионо</option>
+                      <option class="gl__select-option" value="Российская цифровая индустрия">Российская цифровая индустрия</option>
+                      <option class="gl__select-option" value="Цифровые кадры для индустрии">Цифровые кадры для индустрии</option>
+                      <option class="gl__select-option" value="Медиа-акселератор">Медиа-акселератор</option>
+                      <option class="gl__select-option" value="Вузы">Вузы</option>
+                      <option class="gl__select-option" value="Стартапы">Стартапы</option>
+                      
+                      
+                      
+                    </select>
+                  </label>
+                </div>
+              </li>
               <li class="gl__input-container js-disappearing-field-university profile__disappearing-field">
                 <div class="gl__input-title mod-small"></div>
                 <div class="gl__select-container " id="university-type-account">
