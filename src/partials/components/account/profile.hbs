@@ -152,7 +152,7 @@
           parsleyType="email"
         }}
       </li>
-      <li class="gl__input-container profile__direction">
+      <li class="gl__input-container js-profile-direction">
         <div class="gl__input-title mod-small">Направление</div>
         {{> controls/select
           required=true
@@ -174,7 +174,7 @@
         }}
       </li>
 
-      <li class="gl__input-container profile__university-type">
+      <li class="gl__input-container js-disappearing-field-university profile__disappearing-field">
         <div class="gl__input-title mod-small"></div>
         {{> controls/select
           placeholder="Вуз"
@@ -249,7 +249,7 @@
           dateTypeFuture=true
           name="arrival-date"
           type="account"
-          placeholder="дд.мм.гг"
+          placeholder="по билету"
         }}
       </li>
       <li class="gl__input-container">
@@ -258,7 +258,7 @@
           dateTypeFuture=true
           name="departure-date"
           type="account"
-          placeholder="дд.мм.гг"
+          placeholder="по билету"
         }}
       </li>
       <li class="gl__input-container">
@@ -320,28 +320,6 @@
           placeholder="Укажите"
         }}
       </li>
-      <li class="profile__form-radio-container">
-        <div class="profile__form-radio-input-title">
-          Нужен трансфер при прибытии в Казань (только до аккредитованных гостиниц и площадок форума)
-        </div>
-        <div class="gl__form-radio-wrapper">
-          {{> controls/input-radio-checkbox name="date-transfer" type="account" inputType="checkbox" additionClass="mod-inline" inputCaption="2 декабря" }}
-          {{> controls/input-radio-checkbox name="date-transfer" type="account" inputType="checkbox" additionClass="mod-inline" inputCaption="3 декабря" }}
-          {{> controls/input-radio-checkbox name="date-transfer" type="account" inputType="checkbox" additionClass="mod-inline" inputCaption="4 декабря" }}
-          {{> controls/input-radio-checkbox name="date-transfer" type="account" inputType="checkbox" additionClass="mod-inline" inputCaption="Трансфер не нужен" }}
-        </div>
-      </li>
-      <li class="profile__form-radio-container">
-        <div class="profile__form-radio-input-title">
-          Нужен трансфер для отъезда из Казани (только от аккредитованных гостиниц и площадок форума)
-        </div>
-        <div class="gl__form-radio-wrapper">
-          {{> controls/input-radio-checkbox name="date-transfer-2" type="account" inputType="checkbox" additionClass="mod-inline" inputCaption="2 декабря" }}
-          {{> controls/input-radio-checkbox name="date-transfer-2" type="account" inputType="checkbox" additionClass="mod-inline" inputCaption="3 декабря" }}
-          {{> controls/input-radio-checkbox name="date-transfer-2" type="account" inputType="checkbox" additionClass="mod-inline" inputCaption="4 декабря" }}
-          {{> controls/input-radio-checkbox name="date-transfer-2" type="account" inputType="checkbox" additionClass="mod-inline" inputCaption="Трансфер не нужен" }}
-        </div>
-      </li>
       <li class="gl__input-container">
         <div class="gl__input-title mod-small">После прибытия поеду сразу в</div>
         {{> controls/select
@@ -358,6 +336,58 @@
           name="place-residence"
           type="account"
           option1="Место проживания 1" option2="Место проживания 2" option3="Место проживания 3"
+        }}
+      </li>
+      <li class="profile__form-radio-container">
+        <div class="profile__form-radio-input-title">
+          Нужен трансфер при прибытии в Казань (только до аккредитованных гостиниц и площадок форума)
+        </div>
+        <div class="gl__form-radio-wrapper mod-column">
+          {{> controls/input-radio-checkbox name="need-transfer-arrival" type="account" inputType="radio" additionClass="mod-inline" inputCaption="Нужен" }}
+          {{> controls/input-radio-checkbox name="need-transfer-arrival" type="account" inputType="radio" additionClass="mod-inline" inputCaption="Не нужен" }}
+        </div>
+      </li>
+      <li class="profile__form-radio-container js-arrival-transfer gl__checkbox-radio-container" id="need-transfer-departure-account">
+        <div class="profile__form-radio-input-title">
+          Нужен трансфер для отъезда из Казани (только от аккредитованных гостиниц и площадок форума)
+          <span class="gl__input-mark-required"></span>
+        </div>
+        <div class="gl__checkbox-radio-container-custom-error">
+          Заполните все оябзательные поля
+        </div>
+        <div class="gl__form-radio-wrapper mod-column">
+          {{> controls/input-radio-checkbox required=true name="need-transfer-departure" type="account" inputType="radio" additionClass="mod-inline" inputCaption="Нужен" value="need" }}
+          {{> controls/input-radio-checkbox required=true name="need-transfer-departure" type="account" inputType="radio" additionClass="mod-inline" inputCaption="Не нужен" value="not-needed" }}
+        </div>
+      </li>
+      <li></li>
+      <li class="gl__input-container js-disappearing-field-date-arrival profile__disappearing-field">
+        <div class="gl__input-title mod-small">Дата отъезда</div>
+        {{> controls/select
+          placeholder="Выберите"
+          name="departure-date"
+          type="account"
+          option1="2 декабря" option2="3 декабря" option3="4 декабря" option4="5 декабря"
+        }}
+      </li>
+      <li></li>
+      <li class="gl__input-container js-disappearing-places-1 profile__disappearing-field">
+        <div class="gl__input-title mod-small">Выбирете место подачи трансфера</div>
+        {{> controls/select
+          placeholder="Выберите"
+          name="place-submission-1"
+          type="account"
+          option1="ГК «Свияжские холмы», отель «Дежавю»" option2="ГК «Свияжские холмы», отель «Маяк»" option3="Прощадка проведения форума: ГК «Свияжские холмы», Гранд Холл" option4="Прощадка проведения форума: Университет Иннополис" option5="Прощадка проведения форума: ArtSpase, г.Иннополис"
+        }}
+      </li>
+      <li></li>
+      <li class="gl__input-container js-disappearing-places-2 profile__disappearing-field">
+        <div class="gl__input-title mod-small">Выбирете место подачи трансфера</div>
+        {{> controls/select
+          placeholder="Выберите"
+          name="place-submission-2"
+          type="account"
+          option1="Korston Kazan Hotel" option2="Courtyard by Mar" option3="Ramada Kazan City Centre 4" option4="Гранд отель Казань 4" option5="Шаляпин Палас Отель 4" option6="Отель LUCIANO 5" option7="ГК «Свияжские холмы», отель «Дежавю»" option8="ГК «Свияжские холмы», отель «Маяк»"
         }}
       </li>
     </ul>

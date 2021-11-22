@@ -1,3 +1,31 @@
+.gl__checkbox-radio-container {
+  position: relative;
+
+  &.parsley-error {
+    padding-bottom: -0.8rem;
+
+    .gl__radio-checkbox-input-content {
+      border: 2px solid var(--btn-color);
+    }
+
+    .gl__checkbox-radio-container-custom-error {
+      display: block;
+    }
+  }
+}
+
+.gl__checkbox-radio-container-custom-error {
+  color: var(--btn-color);
+  font-size: 1.2rem;
+  line-height: 1;
+  margin-top: 0.4rem;
+  display: none;
+  position: absolute;
+  bottom: -0.8rem;
+  left: 0;
+  transform: translateY(100%);
+}
+
 .gl__select-width-checkbox-wrapper {
   z-index: 1;
 }

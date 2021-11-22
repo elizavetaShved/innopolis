@@ -240,11 +240,13 @@
   height: 2.4rem;
 }
 
-.profile__university-type {
-  transition: opacity 300ms;
+.profile__disappearing-field {
+  transition: max-height 300ms;
+  max-height: 10rem;
 
   &:not(.mod-show) {
-    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
 
     @include for-lg-down {
       display: none;
@@ -273,4 +275,9 @@
   line-height: 1.3;
   color: var(--main-color);
   margin-bottom: 2.6rem;
+
+  .gl__input-mark-required {
+    left: -1.2rem;
+    top: 0.4rem;
+  }
 }

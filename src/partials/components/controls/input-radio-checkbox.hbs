@@ -2,6 +2,7 @@
   <input type="{{ inputType }}"
          class="gl__radio-checkbox-input"
          name="{{name}}-{{type}}"
+         data-parsley-class-handler="#{{ name }}-{{type}}"
     {{#if value }}
          value="{{ this.value }}"
     {{/if}}

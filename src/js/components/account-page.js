@@ -8,22 +8,26 @@ export class AccountPage {
 
   directionSelectWrapper;
   directionSelect;
-  universitySelectWrapper;
-  universitySelect;
   markRequiredElem;
-  universityMarkRequiredElem;
+
+  departureDateSelectWrapper;
+  departureDateSelect;
+
+  arrivalTransferWrapper;
+  arrivalTransferRadios;
 
   constructor() {
     this.hostElem = document.querySelector('#account-host');
     if (!this.hostElem) return;
 
-    this.directionSelectWrapper = this.hostElem.querySelector('.profile__direction');
+    this.directionSelectWrapper = this.hostElem.querySelector('.js-profile-direction');
     this.directionSelect = this.directionSelectWrapper.querySelector('.gl__select');
 
-    this.universitySelectWrapper = this.hostElem.querySelector('.profile__university-type');
-    this.universitySelect = this.universitySelectWrapper.querySelector('.gl__select');
-    this.universitySelectWrapperElem = this.universitySelectWrapper.querySelector('.gl__select-wrapper');
-    this.universitySelectElem = this.universitySelectWrapper.querySelector('.gl__select');
+    this.departureDateSelectWrapper = this.hostElem.querySelector('.js-disappearing-field-date-arrival');
+    this.departureDateSelect = this.departureDateSelectWrapper.querySelector('.gl__select');
+
+    this.arrivalTransferWrapper = this.hostElem.querySelector('.js-arrival-transfer');
+    this.arrivalTransferRadios = this.arrivalTransferWrapper.querySelectorAll('.gl__radio-checkbox-input');
 
     const menuRadioValue = this.hostElem.querySelectorAll('.account__menu-radio');
     this.accountComponent = Array.from(this.hostElem.querySelectorAll('.account__component'));
@@ -54,10 +58,22 @@ export class AccountPage {
 
     setTimeout(() => {
       this.checkDirections(false);
-    }, 3000)
+      this.checkArrivalTransfer();
+      this.checkDepartureDate(false);
+    }, 300)
 
     this.directionSelect.onchange = () => {
       this.checkDirections(true);
+    }
+
+    this.arrivalTransferRadios.forEach(elem => {
+      elem.onchange = () => {
+        this.checkArrivalTransfer(elem);
+      }
+    })
+
+    this.departureDateSelect.onchange = () => {
+      this.checkDepartureDate(true);
     }
 
     menuRadioValue.forEach((radioElem, index) => {
@@ -115,9 +131,6 @@ export class AccountPage {
         const calendarContentElems = calendarSlotsElems[indexCurrentSlotContainer].querySelectorAll('.js-calendar-list-times');
 
         calendarContentElems.forEach(elem => {
-          console.log(input.getAttribute('data-times'))
-          console.log(elem.getAttribute('data-times'))
-          console.log('_______')
           if (elem.getAttribute('data-times') === input.getAttribute('data-times')) {
             elem.classList.add('mod-show');
           } else {
@@ -206,23 +219,68 @@ export class AccountPage {
   checkDirections(isChange) {
     // todo косытль, потому что value - id, которое мб разным
     const optionValue = this.directionSelect.querySelectorAll('option')[0];
+    const universitySelectContainerElem = this.hostElem.querySelector('.js-disappearing-field-university');
     if (this.directionSelect.innerText === 'Вузы' || optionValue.innerText === 'Вузы') {
-      this.universitySelectWrapper.classList.add('mod-show');
-      // добавить валидацию для нового селекта
-      this.universityMarkRequiredElem = document.createElement('div');
-      this.universityMarkRequiredElem.classList.add('gl__input-mark-required');
-      this.universitySelectWrapperElem.prepend(this.universityMarkRequiredElem);
-      this.universitySelectElem.setAttribute('data-parsley-required', '');
-      this.universitySelectElem.setAttribute('data-parsley-trigger', 'change');
+      this.addDisappearingField(universitySelectContainerElem, true);
     } else {
-      this.universitySelectWrapper.classList.remove('mod-show');
-      // this.universitySelect.value = null;
-      if (isChange) {
-        // убрать валидацию с селекта
-        // this.universityMarkRequiredElem.remove();
-        this.universitySelectElem.removeAttribute('data-parsley-required');
-        this.universitySelectElem.removeAttribute('data-parsley-trigger');
-      }
+      this.removeDisappearingField(universitySelectContainerElem, isChange);
+    }
+  }
+
+  checkArrivalTransfer(input) {
+    const dateArrivalSelectContainerElem = this.hostElem.querySelector('.js-disappearing-field-date-arrival');
+    if (input && input.value === 'need') {
+      this.addDisappearingField(dateArrivalSelectContainerElem, true);
+      this.checkDepartureDate();
+    } else if (input && input.value === 'not-needed') {
+      const place1Elem = this.hostElem.querySelector('.js-disappearing-places-1');
+      const place2Elem = this.hostElem.querySelector('.js-disappearing-places-2');
+      this.removeDisappearingField(dateArrivalSelectContainerElem);
+      this.removeDisappearingField(place1Elem, true);
+      this.removeDisappearingField(place2Elem, true);
+    }
+  }
+
+  checkDepartureDate(isChange) {
+    const optionValue = this.departureDateSelect.querySelectorAll('option')[0];
+    const place1Elem = this.hostElem.querySelector('.js-disappearing-places-1');
+    const place2Elem = this.hostElem.querySelector('.js-disappearing-places-2');
+    if (this.departureDateSelect.innerText === '2 декабря' || optionValue.innerText === '2 декабря' ||
+      this.departureDateSelect.innerText === '3 декабря' || optionValue.innerText === '3 декабря' ||
+      this.departureDateSelect.innerText === '4 декабря' || optionValue.innerText === '4 декабря') {
+      this.addDisappearingField(place1Elem, true);
+    } else {
+      this.removeDisappearingField(place1Elem, isChange);
+    }
+
+    if (this.departureDateSelect.innerText === '5 декабря' || optionValue.innerText === '5 декабря') {
+      this.addDisappearingField(place2Elem, true);
+    } else {
+      this.removeDisappearingField(place2Elem, isChange);
+    }
+  }
+
+  addDisappearingField(fieldElem, isRequired) {
+    fieldElem.classList.add('mod-show');
+    // добавить валидацию для нового селекта
+    if (isRequired) {
+      const markRequiredElem = document.createElement('div');
+      const selectWrapperElem = fieldElem.querySelector('.gl__select-wrapper');
+      const selectElem = fieldElem.querySelector('.gl__select');
+      markRequiredElem.classList.add('gl__input-mark-required');
+      selectWrapperElem.prepend(markRequiredElem);
+      selectElem.setAttribute('data-parsley-required', '');
+      selectElem.setAttribute('data-parsley-trigger', 'change');
+    }
+  }
+
+  removeDisappearingField(fieldElem, isChange) {
+    fieldElem.classList.remove('mod-show');
+    if (isChange) {
+      // убрать валидацию с селекта
+      const selectElem = fieldElem.querySelector('.gl__select');
+      selectElem.removeAttribute('data-parsley-required');
+      selectElem.removeAttribute('data-parsley-trigger');
     }
   }
 }

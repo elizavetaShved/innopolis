@@ -2,10 +2,16 @@
   margin-left: -7rem;
   margin-bottom: -2.5rem;
 
+  &.mod-column {
+    display: inline-flex;
+    flex-direction: column;
+  }
+
   .parsley-errors-list {
-    margin-top: -1.8rem;
-    margin-bottom: 2rem;
-    margin-left: 10.6rem;
+    //margin-top: -1.8rem;
+    //margin-bottom: 2rem;
+    //margin-left: 10.6rem;
+    display: none;
   }
 }
 
