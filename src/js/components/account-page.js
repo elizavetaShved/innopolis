@@ -240,10 +240,10 @@ export class AccountPage {
 
   checkArrivalTransfer(input) {
     const dateArrivalSelectContainerElem = this.hostElem.querySelector('.js-disappearing-field-date-arrival');
-    if (input && input.value === 'need') {
+    if (input && input.getAttribute('data-value') === 'need' ) {
       this.addDisappearingField(dateArrivalSelectContainerElem, true);
       this.checkDepartureDate();
-    } else if (input && input.value === 'not-needed') {
+    } else if (input && input.getAttribute('data-value') === 'not-needed') {
       const place1Elem = this.hostElem.querySelector('.js-disappearing-places-1');
       const place2Elem = this.hostElem.querySelector('.js-disappearing-places-2');
       this.removeDisappearingField(dateArrivalSelectContainerElem);
