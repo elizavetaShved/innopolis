@@ -33,6 +33,7 @@ import openLegalPerson from './functions/initsBackendFunctions/openLegalPerson';
 import initCalendarPage from './functions/initsBackendFunctions/initCalendarPage';
 import initProgramPage from './functions/initsBackendFunctions/initProgramPage';
 import { ChangePasswordComponent } from './components/change-password-component';
+import { AccountProfile } from './components/account-profile';
 
 document.addEventListener('DOMContentLoaded', function () {
   // common
