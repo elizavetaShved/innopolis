@@ -50,5 +50,77 @@
       "auditorium": "304",
       "index": 2
     }
+  ],
+  "departureDateOptions": [
+    {
+      "text": "2 декабря",
+      "date": "type-1"
+    },
+    {
+      "text": "3 декабря",
+      "date": "type-1"
+    },
+    {
+      "text": "4 декабря",
+      "date": "type-1"
+    },
+    {
+      "text": "5 декабря",
+      "date": "type-2"
+    }
+  ],
+  "placeSubmissionOptions": [
+    {
+      "text": "ГК «Свияжские холмы», отель «Дежавю»",
+      "date": "type-1"
+    },
+    {
+      "text": "ГК «Свияжские холмы», отель «Маяк»",
+      "date": "type-1"
+    },
+    {
+      "text": "Прощадка проведения форума: ГК «Свияжские холмы», Гранд Холл",
+      "date": "type-1"
+    },
+    {
+      "text": "Прощадка проведения форума: Университет Иннополис",
+      "date": "type-1"
+    },
+    {
+      "text": "Прощадка проведения форума: ArtSpase, г.Иннополис",
+      "date": "type-1"
+    },
+    {
+      "text": "Korston Kazan Hotel",
+      "date": "type-2"
+    },
+    {
+      "text": "Courtyard by Mar",
+      "date": "type-2"
+    },
+    {
+      "text": "Ramada Kazan City Centre 4",
+      "date": "type-2"
+    },
+    {
+      "text": "Гранд отель Казань 4",
+      "date": "type-2"
+    },
+    {
+      "text": "Шаляпин Палас Отель 4",
+      "date": "type-2"
+    },
+    {
+      "text": "Отель LUCIANO 5",
+      "date": "type-2"
+    },
+    {
+      "text": "ГК «Свияжские холмы», отель «Дежавю»",
+      "date": "type-2"
+    },
+    {
+      "text": "ГК «Свияжские холмы», отель «Маяк»",
+      "date": "type-2"
+    }
   ]
 }

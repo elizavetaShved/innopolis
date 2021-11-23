@@ -1,0 +1,19 @@
+<div class="gl__select-container" id="{{ name }}-{{type}}">
+  <label class="gl__select-wrapper">
+    {{#if required }}
+      <span class="gl__input-mark-required"></span>
+    {{/if}}
+    <select class="gl__select js-multi-select"
+            data-parsley-class-handler="#{{ name }}-{{type}}"
+            name="{{ name }}-{{type}}"
+      {{#if required }}
+            data-parsley-required="" data-parsley-trigger="change"
+      {{/if}}
+    >
+      <option class="gl__select-option" placeholder value="">{{ placeholder }}</option>
+      {{#each optionsArr }}
+          <option class="gl__select-option" value="{{ this.text }}" data-date="{{ this.date }}">{{ this.text }}</option>
+      {{/each}}
+    </select>
+  </label>
+</div>

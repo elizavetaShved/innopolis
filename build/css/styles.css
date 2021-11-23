@@ -2437,6 +2437,8 @@ button.swiper-pagination-bullet {
     color: var(--main-color); }
   .gl__select-wrapper .choices__item.choices__item--choice {
     color: var(--main-color); }
+  .gl__select-wrapper .choices__item.mod-hide {
+    display: none; }
 
 .gl__checkbox-radio-container {
   position: relative; }

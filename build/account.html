@@ -1094,76 +1094,45 @@
               <li class="profile__item-right js-disappearing-field-date-arrival profile__disappearing-field">
                 <div class="gl__input-container">
                   <div class="gl__input-title mod-small">Дата отъезда</div>
-                  <div class="gl__select-container " id="departure-date-account">
+                  <div class="gl__select-container" id="departure-date-account">
                     <label class="gl__select-wrapper">
-                      <select class="gl__select js-select"
+                      <select class="gl__select js-multi-select"
                               data-parsley-class-handler="#departure-date-account"
                               name="departure-date-account"
                       >
                         <option class="gl__select-option" placeholder value="">Выберите</option>
-                        <option class="gl__select-option" value="2 декабря">2 декабря</option>
-                        <option class="gl__select-option" value="3 декабря">3 декабря</option>
-                        <option class="gl__select-option" value="4 декабря">4 декабря</option>
-                        <option class="gl__select-option" value="5 декабря">5 декабря</option>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
+                            <option class="gl__select-option" value="2 декабря" data-date="type-1">2 декабря</option>
+                            <option class="gl__select-option" value="3 декабря" data-date="type-1">3 декабря</option>
+                            <option class="gl__select-option" value="4 декабря" data-date="type-1">4 декабря</option>
+                            <option class="gl__select-option" value="5 декабря" data-date="type-2">5 декабря</option>
                       </select>
                     </label>
                   </div>
                 </div>
               </li>
-              <li class="profile__item-right js-disappearing-places-1 profile__disappearing-field">
+              <li class="profile__item-right js-disappearing-places profile__disappearing-field">
                 <div class="gl__input-container">
                   <div class="gl__input-title mod-small">Выбирете место подачи трансфера</div>
-                  <div class="gl__select-container " id="place-submission-1-account">
+                  <div class="gl__select-container" id="place-submission-account">
                     <label class="gl__select-wrapper">
-                      <select class="gl__select js-select"
-                              data-parsley-class-handler="#place-submission-1-account"
-                              name="place-submission-1-account"
+                      <select class="gl__select js-multi-select"
+                              data-parsley-class-handler="#place-submission-account"
+                              name="place-submission-account"
                       >
                         <option class="gl__select-option" placeholder value="">Выберите</option>
-                        <option class="gl__select-option" value="ГК «Свияжские холмы», отель «Дежавю»">ГК «Свияжские холмы», отель «Дежавю»</option>
-                        <option class="gl__select-option" value="ГК «Свияжские холмы», отель «Маяк»">ГК «Свияжские холмы», отель «Маяк»</option>
-                        <option class="gl__select-option" value="Прощадка проведения форума: ГК «Свияжские холмы», Гранд Холл">Прощадка проведения форума: ГК «Свияжские холмы», Гранд Холл</option>
-                        <option class="gl__select-option" value="Прощадка проведения форума: Университет Иннополис">Прощадка проведения форума: Университет Иннополис</option>
-                        <option class="gl__select-option" value="Прощадка проведения форума: ArtSpase, г.Иннополис">Прощадка проведения форума: ArtSpase, г.Иннополис</option>
-                        
-                        
-                        
-                        
-                        
-                        
-                      </select>
-                    </label>
-                  </div>
-                </div>
-              </li>
-              <li class="profile__item-right js-disappearing-places-2 profile__disappearing-field">
-                <div class="gl__input-container">
-                  <div class="gl__input-title mod-small">Выбирете место подачи трансфера</div>
-                  <div class="gl__select-container " id="place-submission-2-account">
-                    <label class="gl__select-wrapper">
-                      <select class="gl__select js-select"
-                              data-parsley-class-handler="#place-submission-2-account"
-                              name="place-submission-2-account"
-                      >
-                        <option class="gl__select-option" placeholder value="">Выберите</option>
-                        <option class="gl__select-option" value="Korston Kazan Hotel">Korston Kazan Hotel</option>
-                        <option class="gl__select-option" value="Courtyard by Mar">Courtyard by Mar</option>
-                        <option class="gl__select-option" value="Ramada Kazan City Centre 4">Ramada Kazan City Centre 4</option>
-                        <option class="gl__select-option" value="Гранд отель Казань 4">Гранд отель Казань 4</option>
-                        <option class="gl__select-option" value="Шаляпин Палас Отель 4">Шаляпин Палас Отель 4</option>
-                        <option class="gl__select-option" value="Отель LUCIANO 5">Отель LUCIANO 5</option>
-                        <option class="gl__select-option" value="ГК «Свияжские холмы», отель «Дежавю»">ГК «Свияжские холмы», отель «Дежавю»</option>
-                        <option class="gl__select-option" value="ГК «Свияжские холмы», отель «Маяк»">ГК «Свияжские холмы», отель «Маяк»</option>
-                        
-                        
-                        
+                            <option class="gl__select-option" value="ГК «Свияжские холмы», отель «Дежавю»" data-date="type-1">ГК «Свияжские холмы», отель «Дежавю»</option>
+                            <option class="gl__select-option" value="ГК «Свияжские холмы», отель «Маяк»" data-date="type-1">ГК «Свияжские холмы», отель «Маяк»</option>
+                            <option class="gl__select-option" value="Прощадка проведения форума: ГК «Свияжские холмы», Гранд Холл" data-date="type-1">Прощадка проведения форума: ГК «Свияжские холмы», Гранд Холл</option>
+                            <option class="gl__select-option" value="Прощадка проведения форума: Университет Иннополис" data-date="type-1">Прощадка проведения форума: Университет Иннополис</option>
+                            <option class="gl__select-option" value="Прощадка проведения форума: ArtSpase, г.Иннополис" data-date="type-1">Прощадка проведения форума: ArtSpase, г.Иннополис</option>
+                            <option class="gl__select-option" value="Korston Kazan Hotel" data-date="type-2">Korston Kazan Hotel</option>
+                            <option class="gl__select-option" value="Courtyard by Mar" data-date="type-2">Courtyard by Mar</option>
+                            <option class="gl__select-option" value="Ramada Kazan City Centre 4" data-date="type-2">Ramada Kazan City Centre 4</option>
+                            <option class="gl__select-option" value="Гранд отель Казань 4" data-date="type-2">Гранд отель Казань 4</option>
+                            <option class="gl__select-option" value="Шаляпин Палас Отель 4" data-date="type-2">Шаляпин Палас Отель 4</option>
+                            <option class="gl__select-option" value="Отель LUCIANO 5" data-date="type-2">Отель LUCIANO 5</option>
+                            <option class="gl__select-option" value="ГК «Свияжские холмы», отель «Дежавю»" data-date="type-2">ГК «Свияжские холмы», отель «Дежавю»</option>
+                            <option class="gl__select-option" value="ГК «Свияжские холмы», отель «Маяк»" data-date="type-2">ГК «Свияжские холмы», отель «Маяк»</option>
                       </select>
                     </label>
                   </div>

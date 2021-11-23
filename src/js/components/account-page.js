@@ -1,6 +1,7 @@
 import { Form } from './common/form';
 import { Modal } from './common/modal';
 import { checkExistParent } from '../functions/checkExistParent';
+import Choices from 'choices.js';
 
 export class AccountPage {
   hostElem;
@@ -15,6 +16,12 @@ export class AccountPage {
 
   arrivalTransferWrapper;
   arrivalTransferRadios;
+
+  selectPlaces;
+  placesChoicesOptions;
+
+  datesArr;
+  placesArr;
 
   constructor() {
     this.hostElem = document.querySelector('#account-host');
@@ -55,6 +62,52 @@ export class AccountPage {
     const btnsLocation = this.hostElem.querySelectorAll('.js-open-modal-location');
 
     const participationCheckboxes = document.getElementsByName('participation-account');
+
+    this.selectPlaces = this.hostElem.querySelector('#place-submission-account');
+
+    this.datesArr = [];
+    this.placesArr = [];
+
+    const selectDates = this.hostElem.querySelector('#departure-date-account');
+    if (selectDates) {
+      const optionsList = selectDates.querySelectorAll('.gl__select-option');
+      optionsList.forEach(option => {
+        this.datesArr.push({
+          type: option.getAttribute('data-date'),
+          text: option.innerText
+        })
+      })
+    }
+
+
+    if (this.selectPlaces) {
+      const optionsList = this.selectPlaces.querySelectorAll('.gl__select-option');
+      optionsList.forEach(option => {
+        this.placesArr.push({
+          type: option.getAttribute('data-date'),
+          text: option.innerText
+        })
+      })
+    }
+
+    const selectElems = document.querySelectorAll('.js-multi-select');
+
+    selectElems.forEach(selectElem => {
+      const choicesInstance = new Choices(selectElem, {
+        searchEnabled: false,
+        itemSelectText: '',
+        shouldSort: false,
+      })
+
+      const onChoiceSelected = () => {
+        $(choicesInstance.passedElement.element).parsley().validate();
+      }
+
+      choicesInstance.passedElement.element.addEventListener('addItem', onChoiceSelected, false);
+    })
+
+
+    this.placesChoicesOptions = Array.from(this.selectPlaces.querySelectorAll('.choices__item'));
 
     setTimeout(() => {
       this.checkDirections(false);
@@ -240,34 +293,39 @@ export class AccountPage {
 
   checkArrivalTransfer(input) {
     const dateArrivalSelectContainerElem = this.hostElem.querySelector('.js-disappearing-field-date-arrival');
-    if (input && input.getAttribute('data-value') === 'need' ) {
+    if (input && input.getAttribute('data-value') === 'need') {
       this.addDisappearingField(dateArrivalSelectContainerElem, true);
       this.checkDepartureDate();
     } else if (input && input.getAttribute('data-value') === 'not-needed') {
-      const place1Elem = this.hostElem.querySelector('.js-disappearing-places-1');
-      const place2Elem = this.hostElem.querySelector('.js-disappearing-places-2');
+      const placeElem = this.hostElem.querySelector('.js-disappearing-places');
       this.removeDisappearingField(dateArrivalSelectContainerElem);
-      this.removeDisappearingField(place1Elem, true);
-      this.removeDisappearingField(place2Elem, true);
+      this.removeDisappearingField(placeElem, true);
     }
   }
 
   checkDepartureDate(isChange) {
     const optionValue = this.departureDateSelect.querySelectorAll('option')[0];
-    const place1Elem = this.hostElem.querySelector('.js-disappearing-places-1');
-    const place2Elem = this.hostElem.querySelector('.js-disappearing-places-2');
-    if (this.departureDateSelect.innerText === '2 декабря' || optionValue.innerText === '2 декабря' ||
-      this.departureDateSelect.innerText === '3 декабря' || optionValue.innerText === '3 декабря' ||
-      this.departureDateSelect.innerText === '4 декабря' || optionValue.innerText === '4 декабря') {
-      this.addDisappearingField(place1Elem, true);
-    } else {
-      this.removeDisappearingField(place1Elem, isChange);
-    }
+    const placeElem = this.hostElem.querySelector('.js-disappearing-places');
 
-    if (this.departureDateSelect.innerText === '5 декабря' || optionValue.innerText === '5 декабря') {
-      this.addDisappearingField(place2Elem, true);
+    let optionType;
+
+    this.datesArr.forEach(date => {
+      if (this.departureDateSelect.innerText === date.text || optionValue.innerText === date.text) {
+        optionType = date.type;
+      }
+    })
+
+    if (optionType) {
+      this.addDisappearingField(placeElem, true);
+      this.placesArr.forEach((elem, index) => {
+        if (elem.type && elem.type === optionType) {
+          this.placesChoicesOptions[index + 1].classList.remove('mod-hide');
+        } else {
+          this.placesChoicesOptions[index + 1].classList.add('mod-hide');
+        }
+      })
     } else {
-      this.removeDisappearingField(place2Elem, isChange);
+      this.removeDisappearingField(placeElem, isChange);
     }
   }
 

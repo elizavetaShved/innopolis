@@ -370,33 +370,22 @@
       <li class="profile__item-right js-disappearing-field-date-arrival profile__disappearing-field">
         <div class="gl__input-container">
           <div class="gl__input-title mod-small">Дата отъезда</div>
-          {{> controls/select
+          {{> controls/multi-select
             placeholder="Выберите"
             name="departure-date"
             type="account"
-            option1="2 декабря" option2="3 декабря" option3="4 декабря" option4="5 декабря"
+            optionsArr=departureDateOptions
           }}
         </div>
       </li>
-      <li class="profile__item-right js-disappearing-places-1 profile__disappearing-field">
+      <li class="profile__item-right js-disappearing-places profile__disappearing-field">
         <div class="gl__input-container">
           <div class="gl__input-title mod-small">Выбирете место подачи трансфера</div>
-          {{> controls/select
+          {{> controls/multi-select
             placeholder="Выберите"
-            name="place-submission-1"
+            name="place-submission"
             type="account"
-            option1="ГК «Свияжские холмы», отель «Дежавю»" option2="ГК «Свияжские холмы», отель «Маяк»" option3="Прощадка проведения форума: ГК «Свияжские холмы», Гранд Холл" option4="Прощадка проведения форума: Университет Иннополис" option5="Прощадка проведения форума: ArtSpase, г.Иннополис"
-          }}
-        </div>
-      </li>
-      <li class="profile__item-right js-disappearing-places-2 profile__disappearing-field">
-        <div class="gl__input-container">
-          <div class="gl__input-title mod-small">Выбирете место подачи трансфера</div>
-          {{> controls/select
-            placeholder="Выберите"
-            name="place-submission-2"
-            type="account"
-            option1="Korston Kazan Hotel" option2="Courtyard by Mar" option3="Ramada Kazan City Centre 4" option4="Гранд отель Казань 4" option5="Шаляпин Палас Отель 4" option6="Отель LUCIANO 5" option7="ГК «Свияжские холмы», отель «Дежавю»" option8="ГК «Свияжские холмы», отель «Маяк»"
+            optionsArr=placeSubmissionOptions
           }}
         </div>
       </li>

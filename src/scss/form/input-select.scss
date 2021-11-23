@@ -165,5 +165,9 @@
     &.choices__item--choice {
       color: var(--main-color);
     }
+
+    &.mod-hide {
+      display: none;
+    }
   }
 }
