@@ -78,17 +78,15 @@
 }
 
 .profile__item-right {
-  grid-column: 1 / 3;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2rem 5.8rem;
+  @include for-lg-up {
+    grid-column: 1 / 3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem 5.8rem;
 
-  .gl__input-container {
-    grid-column: 2;
-  }
-
-  @include for-sm-down {
-    grid-gap: 2.5rem;
+    .gl__input-container {
+      grid-column: 2;
+    }
   }
 }
 
@@ -158,6 +156,15 @@
   &.mod-grey {
     color: #737794;
     font-style: italic;
+  }
+}
+
+.profile__submit-block-hint-caption-wrapper {
+  margin-right: 2rem;
+
+  @include for-sm-down {
+    margin-right: 0;
+    margin-bottom: 2rem;
   }
 }
 
@@ -283,8 +290,16 @@
   color: var(--main-color);
   margin-bottom: 2.6rem;
 
+  @include for-lg-down {
+    padding-left: 2rem;
+  }
+
   .gl__input-mark-required {
     left: -1.2rem;
     top: 0.4rem;
+
+    @include for-lg-down {
+      left: 0;
+    }
   }
 }

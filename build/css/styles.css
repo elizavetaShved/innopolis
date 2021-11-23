@@ -8342,16 +8342,14 @@ html.remodal-is-locked {
     .profile__form-inputs-list {
       grid-gap: 2.5rem; } }
 
-.profile__item-right {
-  grid-column: 1 / 3;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2rem 5.8rem; }
-  .profile__item-right .gl__input-container {
-    grid-column: 2; }
-  @media screen and (max-width: 560px) {
-    .profile__item-right {
-      grid-gap: 2.5rem; } }
+@media screen and (min-width: 961px) {
+  .profile__item-right {
+    grid-column: 1 / 3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem 5.8rem; }
+    .profile__item-right .gl__input-container {
+      grid-column: 2; } }
 
 .profile__type-organization {
   grid-row: 3 / 5;
@@ -8429,6 +8427,13 @@ html.remodal-is-locked {
   .profile__submit-block-hint-caption.mod-grey {
     color: #737794;
     font-style: italic; }
+
+.profile__submit-block-hint-caption-wrapper {
+  margin-right: 2rem; }
+  @media screen and (max-width: 560px) {
+    .profile__submit-block-hint-caption-wrapper {
+      margin-right: 0;
+      margin-bottom: 2rem; } }
 
 .profile__submit-block-hint-caption-mark {
   color: var(--btn-color); }
@@ -8528,9 +8533,15 @@ html.remodal-is-locked {
   line-height: 1.3;
   color: var(--main-color);
   margin-bottom: 2.6rem; }
+  @media screen and (max-width: 960px) {
+    .profile__form-radio-input-title {
+      padding-left: 2rem; } }
   .profile__form-radio-input-title .gl__input-mark-required {
     left: -1.2rem;
     top: 0.4rem; }
+    @media screen and (max-width: 960px) {
+      .profile__form-radio-input-title .gl__input-mark-required {
+        left: 0; } }
 
 .media__item-main-content {
   display: grid;

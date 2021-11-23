@@ -19,6 +19,10 @@ export class AccountProfile {
   datesArr;
   placesArr;
 
+  choicesSelectPlace;
+
+  placeCurrentOptionType;
+
   constructor() {
     this.hostElem = document.querySelector('.profile');
 
@@ -49,6 +53,10 @@ export class AccountProfile {
           text: option.innerText
         })
       })
+
+      const selectElems = selectDates.querySelector('.js-multi-select');
+
+      this.choicesInit(false, selectElems)
     }
 
     if (this.selectPlaces) {
@@ -59,23 +67,11 @@ export class AccountProfile {
           text: option.innerText
         })
       })
+
+      const selectElems = this.selectPlaces.querySelector('.js-multi-select');
+
+      this.choicesInit(true, selectElems)
     }
-
-    const selectElems = document.querySelectorAll('.js-multi-select');
-
-    selectElems.forEach(selectElem => {
-      const choicesInstance = new Choices(selectElem, {
-        searchEnabled: false,
-        itemSelectText: '',
-        shouldSort: false,
-      })
-
-      const onChoiceSelected = () => {
-        $(choicesInstance.passedElement.element).parsley().validate();
-      }
-
-      choicesInstance.passedElement.element.addEventListener('addItem', onChoiceSelected, false);
-    })
 
 
     this.placesChoicesOptions = Array.from(this.selectPlaces.querySelectorAll('.choices__item'));
@@ -100,41 +96,71 @@ export class AccountProfile {
       this.checkDepartureDate(true);
     }
 
-    btnPaymentParticipation.onclick = () => {
-      const modal = new Modal('payment-participation', false);
-      modal.isOpen();
+    if (btnPaymentParticipation) {
+      btnPaymentParticipation.onclick = () => {
+        const modal = new Modal('payment-participation', false);
+        modal.isOpen();
 
-      // распределение по кнопкам модалки
-      const modalMoinContentElem = modal.hostElem.querySelector('.js-main-content');
-      const modalNaturalContentElem = modal.hostElem.querySelector('.js-natural-person-content');
-      const modalLegalContentElem = modal.hostElem.querySelector('.js-legal-person-content');
-      const btnNaturalPerson = modal.hostElem.querySelector('.js-natural-person');
-      const btnLegalPerson = modal.hostElem.querySelector('.js-legal-person');
+        // распределение по кнопкам модалки
+        const modalMoinContentElem = modal.hostElem.querySelector('.js-main-content');
+        const modalNaturalContentElem = modal.hostElem.querySelector('.js-natural-person-content');
+        const modalLegalContentElem = modal.hostElem.querySelector('.js-legal-person-content');
+        const btnNaturalPerson = modal.hostElem.querySelector('.js-natural-person');
+        const btnLegalPerson = modal.hostElem.querySelector('.js-legal-person');
 
-      if (btnNaturalPerson) {
-        btnNaturalPerson.onclick = () => {
-          modalMoinContentElem.classList.add('mod-hide');
-          modalNaturalContentElem.classList.remove('mod-hide');
+        if (btnNaturalPerson) {
+          btnNaturalPerson.onclick = () => {
+            modalMoinContentElem.classList.add('mod-hide');
+            modalNaturalContentElem.classList.remove('mod-hide');
+          }
         }
-      }
 
-      if (btnLegalPerson) {
-        btnLegalPerson.onclick = () => {
-          modalMoinContentElem.classList.add('mod-hide');
-          modalLegalContentElem.classList.remove('mod-hide');
+        if (btnLegalPerson) {
+          btnLegalPerson.onclick = () => {
+            modalMoinContentElem.classList.add('mod-hide');
+            modalLegalContentElem.classList.remove('mod-hide');
+          }
         }
-      }
+      };
+
+      participationCheckboxes.forEach(checkbox => {
+        checkbox.onchange = () => {
+          if (checkbox.value === '4') {
+            btnPaymentParticipation.removeAttribute('disabled');
+          } else {
+            btnPaymentParticipation.setAttribute('disabled', true);
+          }
+        }
+      })
     }
+  }
 
-    participationCheckboxes.forEach(checkbox => {
-      checkbox.onchange = () => {
-        if (checkbox.value === '4') {
-          btnPaymentParticipation.removeAttribute('disabled');
-        } else {
-          btnPaymentParticipation.setAttribute('disabled', true);
-        }
+  choicesInit(isChoicesSelectPlace, selectElem) {
+    if (isChoicesSelectPlace) {
+      this.choicesSelectPlace = new Choices(selectElem, {
+        searchEnabled: false,
+        itemSelectText: '',
+        shouldSort: false,
+      })
+
+      const onChoiceSelected = () => {
+        $(this.choicesSelectPlace.passedElement.element).parsley().validate();
       }
-    })
+
+      this.choicesSelectPlace.passedElement.element.addEventListener('addItem', onChoiceSelected, false);
+    } else {
+      const choicesInstance = new Choices(selectElem, {
+        searchEnabled: false,
+        itemSelectText: '',
+        shouldSort: false,
+      });
+
+      const onChoiceSelected = () => {
+        $(choicesInstance.passedElement.element).parsley().validate();
+      }
+
+      choicesInstance.passedElement.element.addEventListener('addItem', onChoiceSelected, false);
+    }
   }
 
   checkDirections(isChange) {
@@ -164,18 +190,19 @@ export class AccountProfile {
     const optionValue = this.departureDateSelect.querySelectorAll('option')[0];
     const placeElem = this.hostElem.querySelector('.js-disappearing-places');
 
-    let optionType;
-
     this.datesArr.forEach(date => {
       if (this.departureDateSelect.innerText === date.text || optionValue.innerText === date.text) {
-        optionType = date.type;
+        if (this.placeCurrentOptionType && this.placeCurrentOptionType !== date.type) {
+          this.choicesSelectPlace.setValue(['']);
+        }
+        this.placeCurrentOptionType = date.type;
       }
     })
 
-    if (optionType) {
+    if (this.placeCurrentOptionType) {
       this.addDisappearingField(placeElem, true);
       this.placesArr.forEach((elem, index) => {
-        if (elem.type && elem.type === optionType) {
+        if (elem.type && elem.type === this.placeCurrentOptionType) {
           this.placesChoicesOptions[index + 1].classList.remove('mod-hide');
         } else {
           this.placesChoicesOptions[index + 1].classList.add('mod-hide');
