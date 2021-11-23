@@ -52,6 +52,12 @@
       }
     }
   }
+
+  &[type='radio'] {
+    + .gl__radio-checkbox-input-content {
+      border-radius: 100%;
+    }
+  }
 }
 
 .gl__radio-checkbox-input-text {

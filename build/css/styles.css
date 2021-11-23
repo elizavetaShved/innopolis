@@ -2270,6 +2270,8 @@ button.swiper-pagination-bullet {
   display: none; }
   .gl__radio-checkbox-input:checked + .gl__radio-checkbox-input-content:before {
     opacity: 1; }
+  .gl__radio-checkbox-input[type='radio'] + .gl__radio-checkbox-input-content {
+    border-radius: 100%; }
 
 .gl__radio-checkbox-input-text {
   font-size: 1.4rem;

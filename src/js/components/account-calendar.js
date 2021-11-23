@@ -55,17 +55,36 @@ export class AccountCalendar {
 
     calendarTimeInputs.forEach(input => {
       input.onchange = () => {
-        errorTimeElem[indexCurrentSlotContainer].classList.remove('mod-show');
-        const timeTextElem = calendarSlotTextTimeElem[indexCurrentSlotContainer];
+        const inputValue = input.getAttribute('data-value');
 
-        if (timeTextElem.innerText) {
-          timeTextElem.innerText += `; ${ input.value }`;
-          const timesAttributeValue = timeTextElem.getAttribute('data-times');
-          timeTextElem.setAttribute('data-times', `${ timesAttributeValue }, ${ input.value }`);
+        const timeTextElem = calendarSlotTextTimeElem[indexCurrentSlotContainer];
+        if (input.checked) {
+          errorTimeElem[indexCurrentSlotContainer].classList.remove('mod-show');
+
+          if (timeTextElem.innerText) {
+            timeTextElem.innerText += `; ${ inputValue }`;
+          } else {
+            timeTextElem.innerText = `— ${ inputValue }`;
+            timeTextElem.setAttribute('data-times', `${ inputValue }; `);
+          }
         } else {
-          timeTextElem.innerText = `— ${ input.value }`;
-          timeTextElem.setAttribute('data-times', input.value);
+          if (!calendarSlotTextTimeElem[indexCurrentSlotContainer].innerText) {
+            errorTimeElem[indexCurrentSlotContainer].classList.add('mod-show');
+          }
+
+          const newStrTime = timeTextElem.innerText
+            .split(`— ${ inputValue }; `).join('')
+            .split(`— ${ inputValue }`).join('')
+            .split(`; ${ inputValue }`).join('');
+          timeTextElem.innerText = `${ newStrTime }`;
         }
+
+        let attributeStr = timeTextElem.innerText.split(`;`).join(',');
+        if (attributeStr.includes('— ')) {
+          attributeStr = attributeStr.split('— ')[1]
+        }
+
+        timeTextElem.setAttribute('data-times', attributeStr);
       }
     })
 
