@@ -26,6 +26,7 @@
   overflow: auto;
   max-height: 100vh;
   margin-top: 3rem;
+  min-height: 30rem;
 
   @include for-md-down {
     padding: 3rem 2rem;
@@ -110,10 +111,9 @@
 .modal__success-text-wrapper {
   flex-direction: column;
   align-items: flex-end;
-  display: none;
 
-  &.mod-show {
-    display: flex;
+  &:not(.mod-show) {
+    display: none;
   }
 }
 
@@ -135,6 +135,13 @@
   @include for-xxs-down {
     font-size: 1.6rem;
   }
+}
+
+.modal__success-time {
+  font-size: 2.2rem;
+  line-height: 1.6;
+  color: var(--main-color);
+  margin-top: 2rem;
 }
 
 .modal__proposal {

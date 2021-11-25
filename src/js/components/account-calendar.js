@@ -59,7 +59,8 @@ export class AccountCalendar {
 
         const timeTextElem = calendarSlotTextTimeElem[indexCurrentSlotContainer];
         if (input.checked) {
-          errorTimeElem[indexCurrentSlotContainer].classList.remove('mod-show');
+          openModalBtns[indexCurrentSlotContainer].removeAttribute('disabled');
+          // errorTimeElem[indexCurrentSlotContainer].classList.remove('mod-show');
 
           if (timeTextElem.innerText) {
             timeTextElem.innerText += `; ${ inputValue }`;
@@ -68,15 +69,16 @@ export class AccountCalendar {
             timeTextElem.setAttribute('data-times', `${ inputValue }; `);
           }
         } else {
-          if (!calendarSlotTextTimeElem[indexCurrentSlotContainer].innerText) {
-            errorTimeElem[indexCurrentSlotContainer].classList.add('mod-show');
-          }
-
           const newStrTime = timeTextElem.innerText
             .split(`— ${ inputValue }; `).join('')
             .split(`— ${ inputValue }`).join('')
             .split(`; ${ inputValue }`).join('');
           timeTextElem.innerText = `${ newStrTime }`;
+
+          if (!calendarSlotTextTimeElem[indexCurrentSlotContainer].innerText) {
+            openModalBtns[indexCurrentSlotContainer].setAttribute('disabled', true);
+            // errorTimeElem[indexCurrentSlotContainer].classList.add('mod-show');
+          }
         }
 
         let attributeStr = timeTextElem.innerText.split(`;`).join(',');
@@ -90,21 +92,25 @@ export class AccountCalendar {
 
     openModalBtns.forEach(btn => {
       btn.onclick = () => {
-        if (calendarSlotTextTimeElem[indexCurrentSlotContainer].innerText) {
-          const modal = new Modal('to-book', false);
-          modal.isOpen();
-          const modalSlotTextDateElem = modal.hostElem.querySelector('.js-calendar-slots-text-date');
-          const modalSlotTextAuditoriumElem = modal.hostElem.querySelector('.js-calendar-slots-text-auditorium');
-          const modalSlotTextTimeElem = modal.hostElem.querySelector('.js-calendar-slots-text-time');
-          const inputValuesTimeElem = modal.hostElem.querySelector('.js-calendar-value-dates');
+        window.calendarDateText = calendarSlotTextDateElem[indexCurrentSlotContainer].innerText;
+        window.calendarAuditoriumText = calendarSlotTextAuditoriumElem[indexCurrentSlotContainer].innerText;
+        window.calendarTimeText = calendarSlotTextTimeElem[indexCurrentSlotContainer];
 
-          modalSlotTextDateElem.innerText = calendarSlotTextDateElem[indexCurrentSlotContainer].innerText;
-          modalSlotTextAuditoriumElem.innerText = calendarSlotTextAuditoriumElem[indexCurrentSlotContainer].innerText;
-          modalSlotTextTimeElem.innerText = calendarSlotTextTimeElem[indexCurrentSlotContainer].innerText;
-          inputValuesTimeElem.value = calendarSlotTextTimeElem[indexCurrentSlotContainer].getAttribute('data-times');
-        } else {
-          errorTimeElem[indexCurrentSlotContainer].classList.add('mod-show');
-        }
+        // if (calendarSlotTextTimeElem[indexCurrentSlotContainer].innerText) {
+        //   const modal = new Modal('to-book', false);
+        //   modal.isOpen();
+        //   const modalSlotTextDateElem = modal.hostElem.querySelector('.js-calendar-slots-text-date');
+        //   const modalSlotTextAuditoriumElem = modal.hostElem.querySelector('.js-calendar-slots-text-auditorium');
+        //   const modalSlotTextTimeElem = modal.hostElem.querySelector('.js-calendar-slots-text-time');
+        //   const inputValuesTimeElem = modal.hostElem.querySelector('.js-calendar-value-dates');
+        //
+        //   modalSlotTextDateElem.innerText = calendarSlotTextDateElem[indexCurrentSlotContainer].innerText;
+        //   modalSlotTextAuditoriumElem.innerText = calendarSlotTextAuditoriumElem[indexCurrentSlotContainer].innerText;
+        //   modalSlotTextTimeElem.innerText = calendarSlotTextTimeElem[indexCurrentSlotContainer].innerText;
+        //   inputValuesTimeElem.value = calendarSlotTextTimeElem[indexCurrentSlotContainer].getAttribute('data-times');
+        // } else {
+        //   errorTimeElem[indexCurrentSlotContainer].classList.add('mod-show');
+        // }
       }
     })
 

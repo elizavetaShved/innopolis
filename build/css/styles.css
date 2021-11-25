@@ -2759,7 +2759,8 @@ button.swiper-pagination-bullet {
   z-index: 100;
   overflow: auto;
   max-height: 100vh;
-  margin-top: 3rem; }
+  margin-top: 3rem;
+  min-height: 30rem; }
   @media screen and (max-width: 768px) {
     .modal__container {
       padding: 3rem 2rem;
@@ -2839,12 +2840,9 @@ button.swiper-pagination-bullet {
           flex-direction: column;
   -webkit-box-align: end;
       -ms-flex-align: end;
-          align-items: flex-end;
-  display: none; }
-  .modal__success-text-wrapper.mod-show {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
+          align-items: flex-end; }
+  .modal__success-text-wrapper:not(.mod-show) {
+    display: none; }
 
 .modal__success-text {
   font-weight: bold;
@@ -2861,6 +2859,12 @@ button.swiper-pagination-bullet {
   @media screen and (max-width: 426px) {
     .modal__success-text {
       font-size: 1.6rem; } }
+
+.modal__success-time {
+  font-size: 2.2rem;
+  line-height: 1.6;
+  color: var(--main-color);
+  margin-top: 2rem; }
 
 .modal__proposal {
   text-align: center;

@@ -33,7 +33,7 @@ import openLegalPerson from './functions/initsBackendFunctions/openLegalPerson';
 import initCalendarPage from './functions/initsBackendFunctions/initCalendarPage';
 import initProgramPage from './functions/initsBackendFunctions/initProgramPage';
 import { ChangePasswordComponent } from './components/change-password-component';
-import { AccountProfile } from './components/account-profile';
+import { openSuccessfullyBookedTime } from './functions/initsBackendFunctions/openSuccessfullyBookedTime';
 
 document.addEventListener('DOMContentLoaded', function () {
   // common
@@ -95,6 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
   window.selectInit = selectInit;
   window.openNaturalPerson = openNaturalPerson;
   window.openLegalPerson = openLegalPerson;
+  window.openSuccessfullyBookedTime = openSuccessfullyBookedTime;
 });
 
 window.addEventListener('load', function () {
