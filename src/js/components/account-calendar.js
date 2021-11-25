@@ -29,7 +29,7 @@ export class AccountCalendar {
           if (indexBtn === indexElem) {
             elem.classList.add('mod-show');
             indexCurrentSlotContainer = indexElem;
-            calendarSlotTextDateElem[indexCurrentSlotContainer].innerText = `${ calendarDateInputs[0].value }, `;
+            calendarSlotTextDateElem[indexCurrentSlotContainer].innerText = `${ calendarDateInputs[0].getAttribute('data-times') }, `;
             calendarSlotTextAuditoriumElem[indexCurrentSlotContainer].innerText = `Аудитория ${ elem.getAttribute('data-auditorium') }`;
           } else {
             elem.classList.remove('mod-show');
@@ -40,10 +40,12 @@ export class AccountCalendar {
 
     calendarDateInputs.forEach(input => {
       input.onchange = () => {
-        calendarSlotTextDateElem[indexCurrentSlotContainer].innerText = `${ input.value }, `;
+        calendarSlotTextDateElem[indexCurrentSlotContainer].innerText = `${ input.getAttribute('data-times') }, `;
         const calendarContentElems = calendarSlotsElems[indexCurrentSlotContainer].querySelectorAll('.js-calendar-list-times');
 
         calendarContentElems.forEach(elem => {
+          console.log(elem.getAttribute('data-times'))
+          console.log(input.getAttribute('data-times'))
           if (elem.getAttribute('data-times') === input.getAttribute('data-times')) {
             elem.classList.add('mod-show');
           } else {

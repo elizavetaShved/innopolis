@@ -6,13 +6,15 @@ export class Modal {
   modalContainer;
   isOpenModal = false;
   bodyElem;
+  reloadWhenClose;
 
-  constructor(type, isNoForm) {
+  constructor(type, isNoForm, reloadWhenClose) {
     this.checkDocumentClick = this.checkDocumentClick.bind(this);
     this.hostElem = document.querySelector(`#modal-${ type }-host`);
     this.bodyElem = document.querySelector('body');
     this.modalContainer = this.hostElem.querySelector('.modal__container');
     const closeBtns = this.hostElem.querySelectorAll('.modal__close-btn');
+    this.reloadWhenClose = reloadWhenClose;
 
     const proposalLinkElems = this.hostElem.querySelectorAll('.modal__proposal-link');
     const recoverPasswordBtn = this.hostElem.querySelector('.gl__input-hint-link');
@@ -72,5 +74,9 @@ export class Modal {
     this.bodyElem.classList.remove('mod-no-scroll');
 
     document.removeEventListener('click', this.checkDocumentClick);
+
+    if (this.reloadWhenClose) {
+      window.location.reload();
+    }
   }
 }
