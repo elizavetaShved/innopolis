@@ -252,3 +252,8 @@
     max-height: none;
   }
 }
+
+.program-page__modal-filter {
+  @extend %modal;
+  background-color: #fff;
+}

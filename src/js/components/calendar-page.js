@@ -27,11 +27,11 @@ export class CalendarPage {
     })
 
     btnOpenFilter.onclick = () => {
-      modalFilter.classList.add('mod-show')
+      modalFilter.classList.add('mod-show');
     }
 
     btnCloseFilter.onclick = () => {
-      modalFilter.classList.remove('mod-show')
+      modalFilter.classList.remove('mod-show');
     }
   }
 }

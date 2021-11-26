@@ -1780,7 +1780,7 @@ button.swiper-pagination-bullet {
       -ms-flex-direction: column;
           flex-direction: column; }
 
-.modal, .calendar__modal-filter {
+.modal, .calendar__modal-filter, .program-page__modal-filter {
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -1790,7 +1790,7 @@ button.swiper-pagination-bullet {
   opacity: 0;
   -webkit-transition: 400ms opacity;
   transition: 400ms opacity; }
-  .mod-show.modal, .mod-show.calendar__modal-filter {
+  .mod-show.modal, .mod-show.calendar__modal-filter, .mod-show.program-page__modal-filter {
     opacity: 1;
     z-index: 1000;
     top: 0;
@@ -2702,7 +2702,7 @@ button.swiper-pagination-bullet {
   .gl__xxs-hide {
     display: none !important; } }
 
-.modal, .calendar__modal-filter {
+.modal, .calendar__modal-filter, .program-page__modal-filter {
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -2712,7 +2712,7 @@ button.swiper-pagination-bullet {
   opacity: 0;
   -webkit-transition: 400ms opacity;
   transition: 400ms opacity; }
-  .mod-show.modal, .mod-show.calendar__modal-filter {
+  .mod-show.modal, .mod-show.calendar__modal-filter, .mod-show.program-page__modal-filter {
     opacity: 1;
     z-index: 1000;
     top: 0;
@@ -8677,7 +8677,7 @@ html.remodal-is-locked {
   .gl__xxs-hide {
     display: none !important; } }
 
-.modal, .calendar__modal-filter {
+.modal, .calendar__modal-filter, .program-page__modal-filter {
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -8687,7 +8687,7 @@ html.remodal-is-locked {
   opacity: 0;
   -webkit-transition: 400ms opacity;
   transition: 400ms opacity; }
-  .mod-show.modal, .mod-show.calendar__modal-filter {
+  .mod-show.modal, .mod-show.calendar__modal-filter, .mod-show.program-page__modal-filter {
     opacity: 1;
     z-index: 1000;
     top: 0;
@@ -9085,6 +9085,9 @@ a.contacts__grid-item-value {
 
 .program-page__menu-container.default-reset-style {
   max-height: none; }
+
+.program-page__modal-filter {
+  background-color: #fff; }
 
 .filters__header-wrapper {
   display: -webkit-box;

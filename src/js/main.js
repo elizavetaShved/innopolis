@@ -34,6 +34,7 @@ import initCalendarPage from './functions/initsBackendFunctions/initCalendarPage
 import initProgramPage from './functions/initsBackendFunctions/initProgramPage';
 import { ChangePasswordComponent } from './components/change-password-component';
 import { openSuccessfullyBookedTime } from './functions/initsBackendFunctions/openSuccessfullyBookedTime';
+import openProgramModalFilter from './functions/initsBackendFunctions/openProgramModalFilter';
 
 document.addEventListener('DOMContentLoaded', function () {
   // common
@@ -96,6 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
   window.openNaturalPerson = openNaturalPerson;
   window.openLegalPerson = openLegalPerson;
   window.openSuccessfullyBookedTime = openSuccessfullyBookedTime;
+  window.openProgramModalFilter = openProgramModalFilter;
 });
 
 window.addEventListener('load', function () {
