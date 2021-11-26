@@ -10,8 +10,6 @@ export class ProgramPage {
     const btnCloseFilter = this.hostElem.querySelector('.js-modal-filter-close');
     const modalFilter = document.querySelector('.js-modal-filter');
 
-    const rowsContentElems = document.querySelectorAll('.js-row-content');
-
     btnOpenFilter.onclick = () => {
       modalFilter.classList.add('mod-show')
     }
@@ -19,6 +17,8 @@ export class ProgramPage {
     btnCloseFilter.onclick = () => {
       modalFilter.classList.remove('mod-show')
     }
+
+    const rowsContentElems = document.querySelectorAll('.js-row-content');
 
     rowsContentElems.forEach(rowContent => {
       const contentElem = rowContent.querySelector('.js-content');
