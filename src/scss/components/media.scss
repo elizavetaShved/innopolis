@@ -1,11 +1,15 @@
 .media__item-main-content {
   display: grid;
   grid-template-columns: 6fr 1fr;
-  grid-gap: 4.2rem 2rem;
+  grid-gap: 3.2rem 2rem;
 
   @include for-sm-down {
     grid-template-columns: 1fr;
     grid-gap: 2rem;
+  }
+
+  .program__content-info-btn-show {
+    margin-bottom: 0;
   }
 }
 

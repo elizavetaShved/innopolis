@@ -8550,11 +8550,13 @@ html.remodal-is-locked {
 .media__item-main-content {
   display: grid;
   grid-template-columns: 6fr 1fr;
-  grid-gap: 4.2rem 2rem; }
+  grid-gap: 3.2rem 2rem; }
   @media screen and (max-width: 560px) {
     .media__item-main-content {
       grid-template-columns: 1fr;
       grid-gap: 2rem; } }
+  .media__item-main-content .program__content-info-btn-show {
+    margin-bottom: 0; }
 
 .media__video-link {
   display: -webkit-inline-box;
