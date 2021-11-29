@@ -7510,16 +7510,10 @@ html.remodal-is-locked {
   line-height: 4rem; }
 
 .modal-location__map-wrapper {
-  width: 100%;
-  height: 30.6rem;
-  position: relative; }
+  width: 100%; }
 
 .modal-location__map {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover; }
 
