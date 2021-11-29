@@ -92,18 +92,24 @@ export class AccountProfile {
       this.checkDepartureDate(false);
     }, 300)
 
-    this.directionSelect.onchange = () => {
-      this.checkDirections(true);
+    if (this.directionSelect) {
+      this.directionSelect.onchange = () => {
+        this.checkDirections(true);
+      }
     }
 
-    this.arrivalTransferRadios.forEach(elem => {
-      elem.onchange = () => {
-        this.checkArrivalTransfer(elem);
-      }
-    })
+    if (this.arrivalTransferRadios) {
+      this.arrivalTransferRadios.forEach(elem => {
+        elem.onchange = () => {
+          this.checkArrivalTransfer(elem);
+        }
+      })
+    }
 
-    this.departureDateSelect.onchange = () => {
-      this.checkDepartureDate(true);
+    if (this.departureDateSelect) {
+      this.departureDateSelect.onchange = () => {
+        this.checkDepartureDate(true);
+      }
     }
 
     if (btnPaymentParticipation) {
@@ -175,13 +181,15 @@ export class AccountProfile {
 
   checkDirections(isChange) {
     // todo косытль, потому что value - id, которое мб разным
-    const optionValue = this.directionSelect.querySelectorAll('option')[0];
-    const universitySelectContainerElem = this.hostElem.querySelector('.js-disappearing-field-university');
-    if (this.directionSelect.innerText === 'Вузы' || optionValue.innerText === 'Вузы' ||
-      this.directionSelect.innerText === 'Universities' || optionValue.innerText === 'Universities') {
-      this.addDisappearingField(universitySelectContainerElem, true);
-    } else {
-      this.removeDisappearingField(universitySelectContainerElem, isChange);
+    if (this.directionSelect) {
+      const optionValue = this.directionSelect.querySelectorAll('option')[0];
+      const universitySelectContainerElem = this.hostElem.querySelector('.js-disappearing-field-university');
+      if (this.directionSelect.innerText === 'Вузы' || optionValue.innerText === 'Вузы' ||
+        this.directionSelect.innerText === 'Universities' || optionValue.innerText === 'Universities') {
+        this.addDisappearingField(universitySelectContainerElem, true);
+      } else {
+        this.removeDisappearingField(universitySelectContainerElem, isChange);
+      }
     }
   }
 
@@ -198,29 +206,32 @@ export class AccountProfile {
   }
 
   checkDepartureDate(isChange) {
-    const optionValue = this.departureDateSelect.querySelectorAll('option')[0];
-    const placeElem = this.hostElem.querySelector('.js-disappearing-places');
+    if (this.departureDateSelect) {
+      const optionValue = this.departureDateSelect.querySelectorAll('option')[0];
 
-    this.datesArr.forEach(date => {
-      if (this.departureDateSelect.innerText === date.text || optionValue.innerText === date.text) {
-        if (this.placeCurrentOptionType && this.placeCurrentOptionType !== date.type) {
-          this.choicesSelectPlace.setValue(['']);
-        }
-        this.placeCurrentOptionType = date.type;
-      }
-    })
+      const placeElem = this.hostElem.querySelector('.js-disappearing-places');
 
-    if (this.placeCurrentOptionType) {
-      this.addDisappearingField(placeElem, true);
-      this.placesArr.forEach((elem, index) => {
-        if (elem.type && elem.type === this.placeCurrentOptionType) {
-          this.placesChoicesOptions[index + 1].classList.remove('mod-hide');
-        } else {
-          this.placesChoicesOptions[index + 1].classList.add('mod-hide');
+      this.datesArr.forEach(date => {
+        if (this.departureDateSelect.innerText === date.text || optionValue.innerText === date.text) {
+          if (this.placeCurrentOptionType && this.placeCurrentOptionType !== date.type) {
+            this.choicesSelectPlace.setValue(['']);
+          }
+          this.placeCurrentOptionType = date.type;
         }
       })
-    } else {
-      this.removeDisappearingField(placeElem, isChange);
+
+      if (this.placeCurrentOptionType) {
+        this.addDisappearingField(placeElem, true);
+        this.placesArr.forEach((elem, index) => {
+          if (elem.type && elem.type === this.placeCurrentOptionType) {
+            this.placesChoicesOptions[index + 1].classList.remove('mod-hide');
+          } else {
+            this.placesChoicesOptions[index + 1].classList.add('mod-hide');
+          }
+        })
+      } else {
+        this.removeDisappearingField(placeElem, isChange);
+      }
     }
   }
 
