@@ -26,14 +26,22 @@ export class AccountProfile {
   constructor() {
     this.hostElem = document.querySelector('.profile');
 
+    if(!this.hostElem) return;
+
     this.directionSelectWrapper = this.hostElem.querySelector('.js-profile-direction');
-    this.directionSelect = this.directionSelectWrapper.querySelector('.gl__select');
+    if (this.directionSelectWrapper) {
+      this.directionSelect = this.directionSelectWrapper.querySelector('.gl__select');
+    }
 
     this.departureDateSelectWrapper = this.hostElem.querySelector('.js-disappearing-field-date-arrival');
-    this.departureDateSelect = this.departureDateSelectWrapper.querySelector('.gl__select');
+    if (this.departureDateSelectWrapper) {
+      this.departureDateSelect = this.departureDateSelectWrapper.querySelector('.gl__select');
+    }
 
     this.arrivalTransferWrapper = this.hostElem.querySelector('.js-arrival-transfer');
-    this.arrivalTransferRadios = this.arrivalTransferWrapper.querySelectorAll('.gl__radio-checkbox-input');
+    if (this.arrivalTransferWrapper) {
+      this.arrivalTransferRadios = this.arrivalTransferWrapper.querySelectorAll('.gl__radio-checkbox-input');
+    }
 
     const btnPaymentParticipation = this.hostElem.querySelector('#btn-payment-participation');
 
@@ -51,7 +59,7 @@ export class AccountProfile {
         this.datesArr.push({
           type: option.getAttribute('data-date'),
           text: option.innerText
-        })
+        });
       })
 
       const selectElems = selectDates.querySelector('.js-multi-select');
@@ -74,7 +82,9 @@ export class AccountProfile {
     }
 
 
-    this.placesChoicesOptions = Array.from(this.selectPlaces.querySelectorAll('.choices__item'));
+    if (this.selectPlaces) {
+      this.placesChoicesOptions = Array.from(this.selectPlaces.querySelectorAll('.choices__item'));
+    }
 
     setTimeout(() => {
       this.checkDirections(false);
