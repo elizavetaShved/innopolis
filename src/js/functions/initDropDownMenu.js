@@ -44,8 +44,6 @@ export default function initDropDownMenu() {
 
         setTimeout(() => {
           const isSemiOpening = menuElements[i].hasAttribute('data-semi-opening');
-          if (isSemiOpening) {
-          }
           if (!isSemiOpening || (isSemiOpening && (menuElements[i].clientHeight - menuContainerElements[i].clientHeight) > 1)) {
             btn.classList.remove('mod-hide');
             btn.onclick = () => {

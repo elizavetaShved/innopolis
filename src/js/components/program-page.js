@@ -44,7 +44,7 @@ export class ProgramPage {
 
   onOpen(btnElem, menuContainerElem, menuElem) {
     btnElem.classList.add('mod-hide');
-
+    btnElem.classList.add('mod-open');
     const btnContent = btnElem.querySelectorAll('.js-drop-menu-btn-content');
     if (btnContent.length) {
       btnContent[0].classList.remove('mod-show');
