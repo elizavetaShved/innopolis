@@ -167,7 +167,8 @@ export class AccountProfile {
     // todo косытль, потому что value - id, которое мб разным
     const optionValue = this.directionSelect.querySelectorAll('option')[0];
     const universitySelectContainerElem = this.hostElem.querySelector('.js-disappearing-field-university');
-    if (this.directionSelect.innerText === 'Вузы' || optionValue.innerText === 'Вузы') {
+    if (this.directionSelect.innerText === 'Вузы' || optionValue.innerText === 'Вузы' ||
+      this.directionSelect.innerText === 'Universities' || optionValue.innerText === 'Universities') {
       this.addDisappearingField(universitySelectContainerElem, true);
     } else {
       this.removeDisappearingField(universitySelectContainerElem, isChange);

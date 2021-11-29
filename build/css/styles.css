@@ -3286,6 +3286,10 @@ button.swiper-pagination-bullet {
     border-top: 5px solid #000; }
   .header.mod-light .header__lang-select {
     color: #000; }
+  .header.mod-light .header__lang-select-wrapper.mod-show .header__lang-select {
+    color: #fff; }
+    .header.mod-light .header__lang-select-wrapper.mod-show .header__lang-select:before {
+      border-top-color: #fff; }
   .header.mod-light .header__eyes-icon {
     fill: #000; }
 
@@ -3647,7 +3651,7 @@ button.swiper-pagination-bullet {
   height: var(--stycky-menu-height);
   position: sticky;
   top: 0;
-  z-index: 1000; }
+  z-index: 999; }
   .sticky-menu.mod-scroll {
     background-color: #292C3F; }
     .sticky-menu.mod-scroll.mod-light {

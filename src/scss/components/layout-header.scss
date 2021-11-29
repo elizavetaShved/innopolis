@@ -47,6 +47,18 @@
       color: #000;
     }
 
+    .header__lang-select-wrapper {
+      &.mod-show {
+        .header__lang-select {
+          color: #fff;
+
+          &:before {
+            border-top-color: #fff;
+          }
+        }
+      }
+    }
+
     .header__eyes-icon {
       fill: #000;
     }
