@@ -23,8 +23,7 @@ export class ProgramComponent {
       const btnShowMore = blockElem.querySelector('.js-btn-more');
       const linkRollUp = blockElem.querySelector('.js-btn-hide');
       const itemList = Array.from(blockElem.querySelectorAll('.program__content-item'));
-
-      new ShowMoreItem(btnShowMore, linkRollUp, itemList, 10, 5);
+      new ShowMoreItem(blockElem, btnShowMore, linkRollUp, itemList, 10, 5);
     })
 
     btsOpenDescription.forEach((btn, index) => {
@@ -52,9 +51,9 @@ export class ProgramComponent {
     })
 
     checkboxFilterElems.forEach(checkbox => {
-      checkbox.onchange = () => {
+      checkbox.addEventListener('change', () => {
         this.onFilterContent();
-      }
+      })
     })
   }
 
@@ -75,35 +74,39 @@ export class ProgramComponent {
   onFilterContent() {
     const checkedNames = [...this.form['program-filter']].filter(checkbox => checkbox.checked).map(checkbox => checkbox.value);
 
-    this.contentElems = this.contentBlockElems[this.indexCurrentContent].querySelectorAll('.program__content-item');
+    this.contentBlockElems.forEach(contentBlockItem => {
+      this.contentElems = contentBlockItem.querySelectorAll('.program__content-item');
 
-    let lastElem;
-    if (checkedNames.length) {
-      this.contentElems.forEach(elem => {
-        let isShowElem = false;
-        checkedNames.forEach(checkedName => {
-          if (elem.className.includes(checkedName)) {
-            isShowElem = true;
+      let lastElem;
+      if (checkedNames.length) {
+        this.contentElems.forEach(elem => {
+          let isShowElem = false;
+          checkedNames.forEach(checkedName => {
+            if (elem.className.includes(checkedName)) {
+              isShowElem = true;
+            }
+          })
+
+          if (isShowElem) {
+            elem.classList.remove('mod-hide-by-filter');
+            lastElem = elem;
+          } else {
+            elem.classList.add('mod-hide-by-filter');
           }
-        })
 
-        if (isShowElem) {
-          elem.classList.remove('mod-hide');
+          elem.classList.remove('last-of-type');
+        });
+      } else {
+        this.contentElems.forEach(elem => {
+          elem.classList.remove('mod-hide-by-filter');
           lastElem = elem;
-        } else {
-          elem.classList.add('mod-hide');
-        }
+        })
+      }
 
-        elem.classList.remove('last-of-type');
-      });
-    } else {
-      this.contentElems.forEach(elem => {
-        elem.classList.remove('mod-hide');
-        lastElem = elem;
-      })
-    }
-
-    const showItemsArr = Array.from(this.contentElems).filter(item => !item.className.includes('mod-hide'));
-    showItemsArr[showItemsArr.length - 1].classList.add('last-of-type');
+      const showItemsArr = Array.from(this.contentElems).filter(item => !item.className.includes('mod-hide-by-filter'));
+      if (showItemsArr[showItemsArr.length - 1]) {
+        showItemsArr[showItemsArr.length - 1].classList.add('last-of-type');
+      }
+    })
   }
 }

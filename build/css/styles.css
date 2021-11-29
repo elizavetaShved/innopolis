@@ -7044,7 +7044,7 @@ html.remodal-is-locked {
   padding-top: 4.0rem;
   padding-bottom: 4.0rem; }
 
-.program__content-item.mod-hide {
+.program__content-item.mod-hide, .program__content-item.mod-hide-by-filter {
   display: none; }
 
 .program__content-item:not(.mod-show) {

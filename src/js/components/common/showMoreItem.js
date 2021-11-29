@@ -1,20 +1,28 @@
 export class ShowMoreItem {
   btnShowMore;
   linkRollUp;
+  fullItemList;
   itemList;
-  stepOpenedSpeakers;
+  stepOpened;
   initiallyOpenCardCount;
   openingCardCount;
   openingAvailableCount;
   isHideLinkRollUp;
+  blockElem;
 
-  constructor(btnShowMore, linkRollUp, itemList, stepOpenedSpeakers, initiallyOpenCardCount, isHideLinkRollUp) {
+  constructor(blockElem, btnShowMore, linkRollUp, itemList, stepOpened, initiallyOpenCardCount, isHideLinkRollUp) {
+    if (blockElem) {
+      this.blockElem = blockElem;
+    }
     this.btnShowMore = btnShowMore;
     this.linkRollUp = linkRollUp;
-    this.itemList = itemList;
-    this.stepOpenedSpeakers = stepOpenedSpeakers;
+    this.fullItemList = itemList;
+    this.itemList = this.fullItemList;
+    this.stepOpened = stepOpened;
     this.initiallyOpenCardCount = initiallyOpenCardCount;
     this.isHideLinkRollUp = isHideLinkRollUp;
+
+    const checkboxFilterElems = document.querySelectorAll('.program__filter-checkbox');
 
     this.resetToInitial();
 
@@ -27,23 +35,43 @@ export class ShowMoreItem {
               elem.classList.add('mod-show');
             }
           })
-          this.openingCardCount += this.openingAvailableCount;
+          this.openingCardCount += this.itemList.length;
           this.setBtnText();
         }
       }
-    }
+    };
 
     this.linkRollUp.onclick = () => {
       this.resetToInitial();
+    }
+
+    if (this.blockElem && checkboxFilterElems) {
+      checkboxFilterElems.forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+          setTimeout(() => {
+            const contentElems = this.blockElem.querySelectorAll('.program__content-item');
+            this.itemList = Array.from(contentElems).filter(item => {
+              if (!item.className.includes('mod-hide-by-filter')) {
+                return true;
+              }
+            });
+
+            this.itemList.map(item => item.classList.remove('mod-show'))
+            this.resetToInitial();
+          })
+        })
+      })
     }
   }
 
   setBtnText() {
     const fullRemainsCardsCount = this.itemList.length - this.openingCardCount;
-    this.openingAvailableCount = fullRemainsCardsCount >= this.stepOpenedSpeakers ? this.stepOpenedSpeakers : fullRemainsCardsCount;
+    this.openingAvailableCount = fullRemainsCardsCount >= this.stepOpened ? this.stepOpened : fullRemainsCardsCount;
 
-    if (this.openingAvailableCount) {
-      this.btnShowMore.innerHTML = `Показать ещё ${ this.openingAvailableCount }`;
+    if (this.openingAvailableCount > 0) {
+      this.btnShowMore.classList.remove('mod-hide');
+      this.linkRollUp.classList.remove('mod-hide');
+      this.btnShowMore.innerHTML = `Показать ещё ${this.openingAvailableCount}`;
     } else {
       if (this.isHideLinkRollUp) {
         this.btnShowMore.classList.remove('mod-show');
@@ -81,6 +109,7 @@ export class ShowMoreItem {
     } else {
       this.openingCardCount = this.itemList.length;
       this.itemList.map(elem => elem.classList.add('mod-show'));
+      console.log(this.isHideLinkRollUp)
       if (this.isHideLinkRollUp) {
         this.btnShowMore.classList.remove('mod-show');
       } else {

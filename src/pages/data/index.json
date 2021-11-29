@@ -10,6 +10,61 @@
           "time": "12:00"
         },
         {
+          "type": "business",
+          "typeValue": "Бизнес",
+          "time": "12:00"
+        },
+        {
+          "type": "business",
+          "typeValue": "Бизнес",
+          "time": "12:00"
+        },
+        {
+          "type": "business",
+          "typeValue": "Бизнес",
+          "time": "12:00"
+        },
+        {
+          "type": "business",
+          "typeValue": "Бизнес",
+          "time": "12:00"
+        },
+        {
+          "type": "business",
+          "typeValue": "Бизнес",
+          "time": "12:00"
+        },
+        {
+          "type": "business",
+          "typeValue": "Бизнес",
+          "time": "12:00"
+        },
+        {
+          "type": "business",
+          "typeValue": "Бизнес",
+          "time": "12:00"
+        },
+        {
+          "type": "business",
+          "typeValue": "Бизнес",
+          "time": "12:00"
+        },
+        {
+          "type": "business",
+          "typeValue": "Бизнес",
+          "time": "12:00"
+        },
+        {
+          "type": "business",
+          "typeValue": "Бизнес",
+          "time": "12:00"
+        },
+        {
+          "type": "business",
+          "typeValue": "Бизнес",
+          "time": "12:00"
+        },
+        {
           "type": "government",
           "typeValue": "Органы гос. власти",
           "time": "12:05"
@@ -162,41 +217,6 @@
         {
           "type": "startups",
           "typeValue": "Стартапы",
-          "time": "12:00"
-        },
-        {
-          "type": "cultural",
-          "typeValue": "Культурная программа",
-          "time": "12:00"
-        },
-        {
-          "type": "business",
-          "typeValue": "Бизнес",
-          "time": "12:00"
-        },
-        {
-          "type": "government",
-          "typeValue": "Органы гос. власти",
-          "time": "12:00"
-        },
-        {
-          "type": "universities",
-          "typeValue": "Вузы",
-          "time": "12:00"
-        },
-        {
-          "type": "cultural",
-          "typeValue": "Культурная программа",
-          "time": "12:00"
-        },
-        {
-          "type": "startups",
-          "typeValue": "Стартапы",
-          "time": "12:00"
-        },
-        {
-          "type": "cultural",
-          "typeValue": "Культурная программа",
           "time": "12:00"
         }
       ]

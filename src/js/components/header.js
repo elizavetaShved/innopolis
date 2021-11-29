@@ -55,13 +55,13 @@ export class Header {
     }
 
     if (this.selectWrapperElem) {
-      if (document.location.href.split('?')[1] && document.location.href.split('?')[1].includes('lang=')) {
-        const currentLangName = document.location.href.split('lang=');
-        const indexCurrentLang = LANG_ARR.findIndex(langModel => currentLangName.includes(langModel.name));
-        this.setLang(indexCurrentLang);
-      } else {
-        this.setLang(0);
-      }
+      // if (document.location.href.split('?')[1] && document.location.href.split('?')[1].includes('lang=')) {
+      //   const currentLangName = document.location.href.split('lang=');
+      //   const indexCurrentLang = LANG_ARR.findIndex(langModel => currentLangName.includes(langModel.name));
+      //   this.setLang(indexCurrentLang);
+      // } else {
+      //   this.setLang(0);
+      // }
 
       selectedItemElem.onclick = () => {
         this.toggleSelect();

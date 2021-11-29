@@ -217,7 +217,7 @@
 }
 
 .program__content-item {
-  &.mod-hide {
+  &.mod-hide, &.mod-hide-by-filter {
     display: none;
   }
 

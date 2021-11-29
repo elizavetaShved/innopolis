@@ -12,7 +12,7 @@ export class SpeakersComponent {
     const linkRollUp = hostElem.querySelector('.speakers__btn-show-more.speakers__btn-show-more--link');
     const itemList = Array.from(hostElem.querySelectorAll('.speakers__item'));
 
-    new ShowMoreItem(btnShowMore, linkRollUp, itemList, 10, 8,true);
+    new ShowMoreItem(null, btnShowMore, linkRollUp, itemList, 10, 8,true);
 
     // появление облака
     itemWrapper.forEach((elem, i) => {
