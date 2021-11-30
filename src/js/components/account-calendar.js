@@ -44,8 +44,6 @@ export class AccountCalendar {
         const calendarContentElems = calendarSlotsElems[indexCurrentSlotContainer].querySelectorAll('.js-calendar-list-times');
 
         calendarContentElems.forEach(elem => {
-          console.log(elem.getAttribute('data-times'))
-          console.log(input.getAttribute('data-times'))
           if (elem.getAttribute('data-times') === input.getAttribute('data-times')) {
             elem.classList.add('mod-show');
           } else {
