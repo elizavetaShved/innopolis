@@ -9219,8 +9219,9 @@ a.contacts__grid-item-value {
       width: 100%; } }
   .booking-calendar__form-item .gl__select-container {
     width: 100%; }
-  .booking-calendar__form-item.mod-forked-select {
-    width: 16rem; }
+  @media screen and (min-width: 769px) {
+    .booking-calendar__form-item.mod-forked-select {
+      width: 16rem; } }
   .booking-calendar__form-item + .booking-calendar__form-item {
     margin-left: 1rem; }
     @media screen and (max-width: 768px) {
@@ -9361,7 +9362,7 @@ a.contacts__grid-item-value {
   -webkit-box-shadow: 0 10px 30px rgba(48, 34, 107, 0.16);
           box-shadow: 0 10px 30px rgba(48, 34, 107, 0.16);
   width: 100%;
-  z-index: 1;
+  z-index: 100;
   padding: 2.2rem 2rem;
   text-align: start;
   opacity: 100;

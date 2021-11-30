@@ -30,7 +30,9 @@
   }
 
   &.mod-forked-select {
-    width: 16rem;
+    @include for-md-up {
+      width: 16rem;
+    }
   }
 
   & + & {
@@ -228,7 +230,7 @@
   background-color: #FFFFFF;
   box-shadow: 0 10px 30px rgba(48, 34, 107, 0.16);
   width: 100%;
-  z-index: 1;
+  z-index: 100;
   padding: 2.2rem 2rem;
   text-align: start;
   opacity: 100;
