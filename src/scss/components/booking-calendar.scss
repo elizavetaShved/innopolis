@@ -91,15 +91,7 @@
   }
 
   &:last-child, &:nth-last-child(-n+2) {
-    .booking-calendar__tbody-slots-wrapper {
-      bottom: auto;
-      top:0;
-      transform: translateY(-100%);
-    }
-  }
-
-  @include for-md-down {
-    &:nth-last-child(-n+3) {
+    @include for-lg-up {
       .booking-calendar__tbody-slots-wrapper {
         bottom: auto;
         top:0;
@@ -107,6 +99,16 @@
       }
     }
   }
+
+  //@include for-md-down {
+  //  &:nth-last-child(-n+3) {
+  //    .booking-calendar__tbody-slots-wrapper {
+  //      bottom: auto;
+  //      top:0;
+  //      transform: translateY(-100%);
+  //    }
+  //  }
+  //}
 }
 
 .booking-calendar__tbody-cell {
@@ -232,11 +234,12 @@
   opacity: 1;
   transition: opacity 300ms;
 
-  @include for-md-down {
+  @include for-lg-down {
     position: fixed;
     top: 0;
     left: 0;
     bottom: initial;
+    transform: translateY(50%);
   }
 
   &:not(.mod-show) {
@@ -251,16 +254,17 @@
 }
 
 .booking-calendar__tbody-slots-btns-list {
-  margin-right: 2rem;
-  margin-bottom: 2.4rem;
+  margin: -.6rem 1.6rem 1.8rem -.4rem;
+
+  @include for-lg-down {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .booking-calendar__tbody-slots-btn-wrapper {
   display: inline-block;
-
-  & + & {
-    margin-left: .4rem;
-  }
+  margin: 0.6rem 0.4rem;
 }
 
 .booking-calendar__tbody-slots-btn {
@@ -288,12 +292,29 @@
   cursor: pointer;
 }
 
+.booking-calendar__tbody-slots-designations-list {
+  @include for-lg-down {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+  }
+}
+
 .booking-calendar__tbody-slots-designation-item {
   display: inline-flex;
   align-items: center;
 
   & + & {
     margin-left: 3rem;
+  }
+
+  @include for-lg-down {
+    display: flex;
+
+    & + & {
+      margin-left: 0;
+      margin-top: 2rem;
+    }
   }
 }
 
@@ -326,6 +347,10 @@
   display: grid;
   grid-template-columns: repeat(8, minmax(0, 1fr));
   grid-gap: 2px;
+
+  @include for-lg-down {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 
   &:not(.mod-show) {
     display: none;
