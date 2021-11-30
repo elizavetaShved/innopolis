@@ -231,7 +231,7 @@
   z-index: 1;
   padding: 2.2rem 2rem;
   text-align: start;
-  opacity: 1;
+  opacity: 100;
   transition: opacity 300ms;
 
   @include for-lg-down {

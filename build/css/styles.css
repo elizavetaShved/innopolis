@@ -9364,7 +9364,7 @@ a.contacts__grid-item-value {
   z-index: 1;
   padding: 2.2rem 2rem;
   text-align: start;
-  opacity: 1;
+  opacity: 100;
   -webkit-transition: opacity 300ms;
   transition: opacity 300ms; }
   @media screen and (max-width: 960px) {
