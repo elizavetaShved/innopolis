@@ -242,6 +242,8 @@
     left: 0;
     bottom: initial;
     transform: translateY(50%);
+    -webkit-transform: translate3d(0,50%,0);
+    -webkit-perspective: 100;
   }
 
   &:not(.mod-show) {

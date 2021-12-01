@@ -9389,8 +9389,9 @@ a.contacts__grid-item-value {
       top: 0;
       left: 0;
       bottom: initial;
-      -webkit-transform: translateY(50%);
-              transform: translateY(50%); } }
+      transform: translateY(50%);
+      -webkit-transform: translate3d(0, 50%, 0);
+      -webkit-perspective: 100; } }
   .booking-calendar__tbody-slots-wrapper:not(.mod-show) {
     opacity: 0;
     pointer-events: none; }
