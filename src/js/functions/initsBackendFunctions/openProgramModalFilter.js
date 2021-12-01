@@ -1,7 +1,7 @@
 export default function openProgramModalFilter() {
   const hostElem = document.querySelector('#program-page-host');
   const btnOpenFilter = hostElem.querySelector('.js-filter-btn');
-  const btnCloseFilter = hostElem.querySelector('.js-modal-filter-close');
+  const btnCloseFilter = hostElem.querySelectorAll('.js-modal-filter-close');
 
   const modalFilter = document.querySelector('.js-modal-filter');
   const rowsContentElems = document.querySelectorAll('.js-row-content');
@@ -20,9 +20,11 @@ export default function openProgramModalFilter() {
     openModal();
   }
 
-  btnCloseFilter.onclick = () => {
-    hideModal();
-  }
+  btnCloseFilter.forEach(btn => {
+    btn.onclick = () => {
+      modalFilter.classList.remove('mod-show')
+    }
+  })
 
   const onOpen = (btnElem, menuContainerElem, menuElem) => {
     btnElem.classList.add('mod-hide');

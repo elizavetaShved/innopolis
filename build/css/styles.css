@@ -2338,6 +2338,9 @@ button.swiper-pagination-bullet {
   .gl__select-container.mod-filter-select {
     margin-left: 1rem;
     margin-bottom: 1rem; }
+    @media screen and (max-width: 560px) {
+      .gl__select-container.mod-filter-select {
+        margin-left: 0; } }
     .gl__select-container.mod-filter-select .choices__item {
       color: #000; }
     .gl__select-container.mod-filter-select .choices__inner {
@@ -9145,6 +9148,18 @@ a.contacts__grid-item-value {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column; } }
+
+.filters__btn-ok-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+
+.filters__btn-ok {
+  padding: 1.2rem;
+  min-width: 12rem; }
 
 .modal-cookies__wrapper:not(.mod-show) .modal-cookies {
   opacity: 0;

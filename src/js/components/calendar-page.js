@@ -13,7 +13,7 @@ export class CalendarPage {
     const calendarTableElems = this.hostElem.querySelectorAll('.js-table');
 
     const btnOpenFilter = this.hostElem.querySelector('.js-filter-btn');
-    const btnCloseFilter = this.hostElem.querySelector('.js-modal-filter-close');
+    const btnCloseFilter = this.hostElem.querySelectorAll('.js-modal-filter-close');
     const modalFilter = document.querySelector('.js-modal-filter');
 
     new PerfectScrollbar(calendarContent, {
@@ -30,8 +30,10 @@ export class CalendarPage {
       modalFilter.classList.add('mod-show');
     }
 
-    btnCloseFilter.onclick = () => {
-      modalFilter.classList.remove('mod-show');
-    }
+    btnCloseFilter.forEach(btn => {
+      btn.onclick = () => {
+        modalFilter.classList.remove('mod-show');
+      }
+    })
   }
 }
