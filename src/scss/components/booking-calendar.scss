@@ -18,7 +18,7 @@
 }
 
 .booking-calendar__form-item {
-  width: 22rem;
+  widthover: 22rem;
   max-width: 100%;
 
   @include for-md-down {
@@ -49,6 +49,7 @@
   @include for-lg-down {
     width: 100vw;
     overflow: auto;
+    -webkit-overflow-scrolling: touch;
     margin: 0 calc(var(--page-content-padding) * -1);
   }
 }

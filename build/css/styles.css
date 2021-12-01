@@ -9227,7 +9227,7 @@ a.contacts__grid-item-value {
       display: block; } }
 
 .booking-calendar__form-item {
-  width: 22rem;
+  widthover: 22rem;
   max-width: 100%; }
   @media screen and (max-width: 768px) {
     .booking-calendar__form-item {
@@ -9248,6 +9248,7 @@ a.contacts__grid-item-value {
   .booking-calendar__table-container {
     width: 100vw;
     overflow: auto;
+    -webkit-overflow-scrolling: touch;
     margin: 0 calc(var(--page-content-padding) * -1); } }
 
 .booking-calendar__table {
