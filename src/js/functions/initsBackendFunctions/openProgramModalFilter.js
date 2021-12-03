@@ -1,5 +1,11 @@
 export default function openProgramModalFilter() {
-  const hostElem = document.querySelector('#program-page-host');
+  let hostElem;
+  if (document.querySelector('#program-page-host')) {
+    hostElem = document.querySelector('#program-page-host');
+  } else {
+    hostElem = document.querySelector('#calendar-host');
+  }
+
   const btnOpenFilter = hostElem.querySelector('.js-filter-btn');
   const btnCloseFilter = hostElem.querySelectorAll('.js-modal-filter-close');
 
